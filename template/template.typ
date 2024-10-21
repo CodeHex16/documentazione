@@ -4,8 +4,6 @@
   data: [],
   tipo: "interno",
   presenze: (
-    "Matteo Bazzan",
-    "Luca Ribon",
   ),
   contenuto,
 ) = {
