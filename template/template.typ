@@ -3,12 +3,22 @@
   ordine-del-giorno: (),
   data: [],
   tipo: "interno",
+  versione : "0.1.0",
   presenze: (
   ),
   contenuto,
 ) = {
   set text(font: "Noto Sans")
   set text(size: 12pt)
+  show link: underline
+
+  set heading(numbering: "1")
+    show heading: it => [
+      #set align(left)
+      #counter(heading).display(auto)
+      #text(size: 18pt,weight: "extrabold", it.body)
+]
+
 
   grid(
     columns: (1fr, 1fr),
@@ -34,6 +44,8 @@
   // Data
   v(0em)
   text(12pt, weight: "regular", fill: black)[Data: #data] 
+  v(0em)
+  text(12pt, weight: "regular", fill: black)[Versione: #versione] 
   v(2em)
   block(
     //stroke: stroke(paint: gray, thickness: 1pt, dash: "loosely-dashed"),
