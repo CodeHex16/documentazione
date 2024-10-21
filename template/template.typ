@@ -2,6 +2,7 @@
   titolo: "Titolo del verbale",
   ordine-del-giorno: (),
   data: [],
+  ora: [],
   tipo: "interno",
   versione : "0.1.0",
   presenze: (
@@ -43,7 +44,11 @@
   text(16pt, weight: "bold", fill: black)[Verbale di riunione #tipo \ ]
   // Data
   v(0em)
-  text(12pt, weight: "regular", fill: black)[Data: #data] 
+  text(12pt, weight: "regular", fill: black)[Data: #data]
+  // Ora
+  v(0em)
+  text(12pt, weight: "regular", fill: black)[Ora: #ora] 
+  // Versione
   v(0em)
   text(12pt, weight: "regular", fill: black)[Versione: #versione] 
   v(2em)
@@ -66,7 +71,7 @@
   )
 
   // Presenze
-  v(2em)
+  v(0.2em)
   set align(left)
   block(
     radius: 0.5em,
@@ -79,7 +84,7 @@
     ]
   )
 
-  // INDICE
+  // Indice
   pagebreak()
   
   set page(
