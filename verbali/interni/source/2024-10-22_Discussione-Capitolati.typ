@@ -25,4 +25,4 @@ Le preferenze si sono spostate sui seguenti capitolati:
 2. C4 - NearYou: smart custom advertising platform - SyncLab
 3. C2 - Vimar GENIALE - VIMAR
 
-A fine riunione il gruppo ha deciso di scrivere una mail alle due aziende per chiedere domande ed avere più informazioni sull'appalto e progetto.
+A fine riunione il gruppo ha deciso di scrivere una mail alle prime due aziende per chiedere domande ed avere più informazioni sull'appalto e progetto.
