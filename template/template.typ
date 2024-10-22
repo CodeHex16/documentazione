@@ -64,7 +64,8 @@
       #v(0.5em)
       #align(left)[
         #text(12pt, weight: "regular", fill: black, )[
-          #list(tight: false,spacing: auto, .. ordine-del-giorno)
+          #list(tight: false,spacing: auto, .. ordine-del-giorno) 
+          //nota: nel caso l'argomento sia uno, aggiungere un virgola dentro la parentesi senza niente dopo, altrimenti da errore perché pensa sia una string e non una lista
         ]
       ]
     ]
