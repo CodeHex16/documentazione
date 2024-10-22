@@ -1,5 +1,6 @@
 #let verbale(
   titolo: "Titolo del verbale",
+  email: "unipd.codehex16@gmail.com",
   ordine-del-giorno: (),
   data: [],
   ora: [],
@@ -34,11 +35,15 @@
   )
   
   
-  v(2em)
+  v(1em)
   // Titolo
   set align(center)
   text(28pt, weight: "black", fill: black)[#titolo]
 
+  // email
+  v(-1em)
+  set align(center)
+  text(12pt, fill: black)[#email]
   // Sottotitolo
   v(0.5em)
   text(16pt, weight: "bold", fill: black)[Verbale di riunione #tipo \ ]
