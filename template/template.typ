@@ -10,14 +10,8 @@
 ) = {
   set text(font: "Noto Sans")
   set text(size: 12pt)
-  show link: underline
-
-  set heading(numbering: "1")
-    show heading: it => [
-      #set align(left)
-      #counter(heading).display(auto)
-      #text(size: 18pt,weight: "extrabold", it.body)
-]
+  set par(justify: true)
+  show link : set text(font:"Jetbrains Mono");
 
 
   grid(
@@ -28,7 +22,15 @@
     image("images/logo_unipd.svg", height: 6em),
     ), 
     align(right,
-    image("images/logo_extended.jpg", width: 13em)
+    stack(
+      align(center)[
+      #image("images/logo_extended.jpg", width: 13em)
+      #v(0em)
+      #text(size: 10pt, fill: rgb("#424242"),
+      link("mailto:unipd.codehex16@gmail.com"))
+
+      ]
+    )
     )
   )
   
@@ -90,7 +92,7 @@
         columns: (1fr, 1fr),
         align(left)[#image("images/logo.jpg", width: 2em)], align(right)[#titolo], 
       )
-      #line(length: 100%)
+      #line(length: 100%, stroke: 0.5pt)
     ],
     numbering: "I",
     footer: [
@@ -102,17 +104,19 @@
 
 
   show outline.entry.where(level: 1): it => {
-    v(12pt, weak: true)
+    v(1.5em, weak: true)
     strong(it)
   }
   outline(title: [Indice], indent: auto)
 
 
   pagebreak()
-
+  // CONTENUTO 
   set page(numbering: "1")
   set align(left)
   set heading(numbering: "1.")
+  show heading.where(level: 1): set align(center)
+  
   counter(page).update(1)
   contenuto
 }
