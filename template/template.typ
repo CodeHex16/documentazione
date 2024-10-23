@@ -1,7 +1,9 @@
 #let verbale(
   titolo: "Titolo del verbale",
+  email: "unipd.codehex16@gmail.com",
   ordine-del-giorno: (),
   data: [],
+  ora: [],
   tipo: "interno",
   versione : "0.1.0",
   presenze: (
@@ -35,17 +37,25 @@
   )
   
   
-  v(2em)
+  v(1em)
   // Titolo
   set align(center)
   text(28pt, weight: "black", fill: black)[#titolo]
 
+  // email
+  v(-1em)
+  set align(center)
+  text(12pt, fill: black)[#email]
   // Sottotitolo
   v(0.5em)
   text(16pt, weight: "bold", fill: black)[Verbale di riunione #tipo \ ]
   // Data
   v(0em)
-  text(12pt, weight: "regular", fill: black)[Data: #data] 
+  text(12pt, weight: "regular", fill: black)[Data: #data]
+  // Ora
+  v(0em)
+  text(12pt, weight: "regular", fill: black)[Ora: #ora] 
+  // Versione
   v(0em)
   text(12pt, weight: "regular", fill: black)[Versione: #versione] 
   v(2em)
@@ -61,14 +71,15 @@
       #v(0.5em)
       #align(left)[
         #text(12pt, weight: "regular", fill: black, )[
-          #list(tight: false,spacing: auto, .. ordine-del-giorno)
+          #list(tight: false,spacing: auto, .. ordine-del-giorno) 
+          //nota: nel caso l'argomento sia uno, aggiungere un virgola dentro la parentesi senza niente dopo, altrimenti da errore perché pensa sia una string e non una lista
         ]
       ]
     ]
   )
 
   // Presenze
-  v(2em)
+  v(0.2em)
   set align(left)
   block(
     radius: 0.5em,
@@ -81,7 +92,7 @@
     ]
   )
 
-  // INDICE
+  // Indice
   pagebreak()
   
   set page(
