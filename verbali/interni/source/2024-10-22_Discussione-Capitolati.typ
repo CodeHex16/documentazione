@@ -1,23 +1,24 @@
-#import "../../../template/template.typ": *
+#import "../../../template/verbale.typ": *
 
 #show : doc => verbale(
-    titolo: "Incontro per conferme sulla scelta dei capitolati",
+    titolo: "Conferme sulla scelta dei capitolati",
     ordine-del-giorno: ("Seconda discussione sui capitolati",),
     data: [22/10/2024],
     ora: [14:30-15:30],
     tipo: "interno",
     presenze: (
-        "Yi Hao Zhuo - Verificatore - 1h",
-        "Luca Ribon - Verificatore - 1h",
-        "Francesco Fragonas - Verificatore - 1h",
-        "Gabriele Magnelli - Verificatore - 1h",
-        "Filippo Sabbadin - Redattore - 1h",
-        "Luca Rossi - Verificatore - 1h",
+        "Filippo Sabbadin","Redattore","1h",
+        "Yi Hao Zhuo","Verificatore","1h",
+        "Luca Ribon ","Verificatore ","1h",
+        "Francesco Fragonas","Verificatore","1h",
+        "Gabriele Magnelli","Verificatore","1h",
+        "Luca Rossi","Verificatore","1h",
     ),
     doc,
 )
 
 = Seconda discussione sui capitolati
+
 Durante la discussione del 22 Ottobre, sono state rivalutate le scelte sui capitolati, cambiando le preferenze sui capitolati scelti nella riunione precedente.
 
 Le preferenze si sono spostate sui seguenti capitolati:
