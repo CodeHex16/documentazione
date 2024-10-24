@@ -1,4 +1,4 @@
-#import "../template/documenti.typ" : *
+#import "../../template/documenti.typ" : *
 
 
 #show : doc => documento(
