@@ -5,7 +5,7 @@
   data: [],
   ora: [],
   tipo: "interno",
-  versione : "0.1.0",
+  versione : [0.1.0],
   presenze: (
   ),
   contenuto,
