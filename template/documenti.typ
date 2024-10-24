@@ -47,8 +47,6 @@
     stroke: none,
     [*Data*], [#data],
     table.hline(stroke: 0.5pt),
-    [*Ora*], [#ora],
-    table.hline(stroke: 0.5pt),
     [*Versione*], [#versione]
   )
 

@@ -15,5 +15,9 @@
 )
 
 = Valutazione dei capitolati
-
+== Scopo del documento
+Lo scopo del documento 
+#link(
+"https://www.math.unipd.it/~tullio/IS-1/2024/Progetto/Capitolati.html"
+)[Pagina Capitolati]
 == Capitolato scelto
