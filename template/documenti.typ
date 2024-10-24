@@ -2,7 +2,11 @@
   titolo: "Titolo del documento",
   email: "unipd.codehex16@gmail.com",
   data: [],
-  versione : [0.1.0],
+  
+  versioni : (
+    "0.1.0","","","",
+  ),
+
   presenze: (
   ),
   contenuto,
@@ -47,7 +51,25 @@
     stroke: none,
     [*Data*], [#data],
     table.hline(stroke: 0.5pt),
-    [*Versione*], [#versione]
+    [*Versione*], [#versioni.at(0)]
+  )
+
+
+ 
+  block(
+    fill: luma(247),
+    radius: 0.5em,
+    inset: 2em,
+  // Ordine del giorno
+    [
+      #text(14pt, weight: "bold", fill: black)[Sommario]
+      #v(0em)
+      #align(left)[
+        #text(12pt, weight: "regular", fill: black, )[
+          Valutazioni sui capitolati proposti \ con tecnologie richieste e considerazioni
+        ]
+      ]
+    ]
   )
 
 
@@ -64,7 +86,16 @@
         ..presenze
       )
 
-
+  //
+  pagebreak()
+  text(size: 16pt, weight: "black", "Registro delle Versioni")
+  table(
+    columns: (auto,auto,auto,auto),
+    table.header(
+      [*Versione*],[*Data*],[*Autore*],[*Cambiamenti*]
+    ),
+    ..versioni
+  )
   // Indice
   pagebreak()
   
