@@ -27,7 +27,6 @@ jobs:
             
             - name: Install JetBrains Mono font
               run: |
-                mkdir -p $HOME/.local/share/fonts
                 wget https://download.jetbrains.com/fonts/JetBrainsMono-2.242.zip -O /tmp/JetBrainsMono.zip
                 unzip /tmp/JetBrainsMono.zip -d $HOME/.local/share/fonts
                 fc-cache -f -v
