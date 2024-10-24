@@ -21,7 +21,7 @@
     align : horizon,
     
     align(left, 
-    image("images/logo_unipd.svg", height: 6em),
+    image("images/logo_unipd.png", height: 6em),
     ), 
     align(right,
     stack(
