@@ -28,7 +28,7 @@ jobs:
       - name: Find and compile Typst files
         run: |
           find . -name "*.typ" -print0 | while IFS= read -r -d '' file; do
-            typst compile "$file" "${file%.typ}.pdf --font-path $HOME/.local/share/fonts"
+            typst compile "$file" "${file%.typ}.pdf" --font-path $HOME/.local/share/fonts
           done
 
       - name: Upload PDF files
