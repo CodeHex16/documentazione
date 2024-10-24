@@ -1,0 +1,38 @@
+name: Compile Typst docs
+on: [push, workflow_dispatch]
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install typst CLI
+        run: |
+          mkdir -p $HOME/.local/bin
+          echo $HOME/.local/bin >> $GITHUB_PATH
+          wget https://github.com/typst/typst/releases/latest/download/typst-x86_64-unknown-linux-musl.tar.xz -O /tmp/typst-x86_64-unknown-linux-musl.tar.xz
+          tar xf /tmp/typst-x86_64-unknown-linux-musl.tar.xz -C $HOME/.local/bin --strip-components=1 typst-x86_64-unknown-linux-musl/typst
+
+      - name: Install Noto Sans font
+        run: |
+          mkdir -p $HOME/.local/share/fonts
+          wget https://noto-website-2.storage.googleapis.com/pkgs/NotoSans-hinted.zip -O /tmp/NotoSans-hinted.zip
+          unzip /tmp/NotoSans-hinted.zip -d $HOME/.local/share/fonts
+          fc-cache -f -v
+
+      - name: Find and compile Typst files
+        run: |
+          find . -name "*.typ" -print0 | while IFS= read -r -d '' file; do
+            typst compile "$file" "${file%.typ}.pdf --font-path $HOME/.local/share/fonts"
+          done
+
+      - name: Upload PDF files
+        uses: actions/upload-artifact@v4
+        with:
+          name: PDFs
+          path: '**/*.pdf'
