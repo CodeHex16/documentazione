@@ -83,7 +83,7 @@ cloud per automatizzare attività quotidiane che l’utente svolge manualmente.
 === Stack tecnologico
 - Sviluppo in cloud (AWS)
 - Creazione di interfaccia drag & drop
-- Python / C# / TypeScript
+- Python / C\# / TypeScript
 - MongoDB (database)
 - React (interfacce applicative web)
 === Valutazione
