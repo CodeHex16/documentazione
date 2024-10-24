@@ -24,7 +24,7 @@ jobs:
           wget https://noto-website-2.storage.googleapis.com/pkgs/NotoSans-hinted.zip -O /tmp/NotoSans-hinted.zip
           unzip /tmp/NotoSans-hinted.zip -d $HOME/.local/share/fonts
           fc-cache -f -v
-
+      
       - name: Find and compile Typst files
         run: |
           find . -name "*.typ" -print0 | while IFS= read -r -d '' file; do
