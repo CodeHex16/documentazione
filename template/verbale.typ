@@ -1,7 +1,7 @@
 #let verbale(
   titolo: "Titolo del verbale",
   email: "unipd.codehex16@gmail.com",
-  ordine-del-giorno: (),
+  ordine-del-giorno: (""),
   data: [],
   ora: [],
   tipo: "interno",
@@ -67,7 +67,7 @@
       #v(0em)
       #align(left)[
         #text(12pt, weight: "regular", fill: black, )[
-          #list(tight: false,spacing: auto, .. ordine-del-giorno) 
+          #list(tight: false,spacing: auto, ..ordine-del-giorno) 
           //nota: nel caso l'argomento sia uno, aggiungere un virgola dentro la parentesi senza niente dopo, altrimenti da errore perché pensa sia una string e non una lista
         ]
       ]
@@ -127,7 +127,7 @@
   show heading.where(level: 1): set align(center)
   show heading : it => [
     #it
-    #v(1em)
+    #v(0.2em)
   ] 
   
   counter(page).update(1)

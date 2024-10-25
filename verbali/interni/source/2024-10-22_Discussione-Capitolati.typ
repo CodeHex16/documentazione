@@ -14,6 +14,7 @@
         "Francesco Fragonas","Redattore","1h",
         "Gabriele Magnelli","Verificatore","1h",
         "Luca Rossi","Verificatore","1h",
+        "Yi Hao Zhuo","Verificatore","1h",
     ),
     doc,
 )
