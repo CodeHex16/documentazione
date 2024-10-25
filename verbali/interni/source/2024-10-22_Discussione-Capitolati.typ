@@ -9,7 +9,6 @@
     versione: [0.3.0],
     presenze: (
         "Filippo Sabbadin","Redattore","1h",
-        "Yi Hao Zhuo","Verificatore","1h",
         "Luca Ribon","Verificatore ","1h",
         "Francesco Fragonas","Redattore","1h",
         "Gabriele Magnelli","Verificatore","1h",
