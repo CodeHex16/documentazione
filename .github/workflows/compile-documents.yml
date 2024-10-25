@@ -31,6 +31,10 @@ jobs:
                 unzip /tmp/JetBrainsMono.zip -d $HOME/.local/share/fonts
                 fc-cache -f -v
 
+            - name: Remove old PDF files
+              run: |
+                  find . -name "*.pdf" -exec rm {} \;
+
             - name: Find and compile Typst files
               run: |
                   find . -path ./template -prune -o -name "*.typ" -print0 | while IFS= read -r -d '' file; do
