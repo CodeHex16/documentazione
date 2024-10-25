@@ -6,11 +6,11 @@
     data: [22/10/2024],
     ora: [14:30-15:30],
     tipo: "interno",
-    versione: [0.2.0],
+    versione: [0.3.0],
     presenze: (
         "Filippo Sabbadin","Redattore","1h",
         "Yi Hao Zhuo","Verificatore","1h",
-        "Luca Ribon ","Verificatore ","1h",
+        "Luca Ribon","Verificatore ","1h",
         "Francesco Fragonas","Redattore","1h",
         "Gabriele Magnelli","Verificatore","1h",
         "Luca Rossi","Verificatore","1h",
@@ -39,42 +39,18 @@ Durante la discussione sono emersi i seguenti criteri fondamentali per la scelta
 
 
 === Prima preferenza
-
 Capitolato scelto come prima preferenza:
 Capitolato 7 - "*LLM: Assistente Virtuale*" (Azienda: Ergon)
 
-*Motivazioni:*
-
-Il gruppo ha concordato di assegnare la massima priorità al capitolato n. 7, intitolato "LLM: Assistente Virtuale", proposto dall'azienda Ergon. Questo progetto si è distinto per diversi aspetti ritenuti cruciali:
-- La rilevanza del progetto in ambito lavorativo: si tratta di una soluzione che potrebbe essere ampiamente richiesta da diverse aziende, soprattutto nell'ottica di sviluppo di assistenti virtuali e chatbot avanzati.
-- La forte integrazione di intelligenza artificiale, in particolare con l'uso di modelli linguistici di grandi dimensioni (LLM), elemento chiave che soddisfa l’interesse del gruppo per l’IA.
-- La concretezza del progetto, che si presta ad essere applicato in scenari reali e che potrebbe avere un impatto immediato sul mondo aziendale.
-
 === Seconda preferenza
-
 Capitolato scelto come seconda preferenza:
 "*NearYou - Smart custom advertising platform*" (Azienda: Synclab)
 
-*Motivazioni:*
-
-La seconda scelta del gruppo è caduta sul capitolato "NearYou - Smart custom advertising platform", proposto da Synclab. Sebbene la parte di intelligenza artificiale sia meno marcata rispetto alla prima opzione, questo capitolato presenta comunque elementi tecnologici di grande interesse:
-- Tecnologie legate alla personalizzazione della pubblicità e all’analisi dei dati, con un focus su algoritmi di machine learning per ottimizzare campagne pubblicitarie.
-- Potenziale di utilizzo nel marketing digitale, settore in forte espansione, che richiede soluzioni sempre più innovative per raggiungere target specifici.
-- Sfida tecnica interessante, che consentirebbe al gruppo di esplorare nuove aree di sviluppo software, pur mantenendo una certa complessità gestibile.
-
-=== Terza preferenza
-
+=== Terza preferenza        
 Capitolato scelto come terza preferenza:
 "*Vimar GENIALE*" (Azienda: Vimar)
 
-*Motivazioni:*
-
-Infine, come terza scelta, il gruppo ha optato per il capitolato "Vimar GENIALE", presentato da Vimar. Questo progetto si distingue per la sua somiglianza con il capitolato 7, ma con alcune differenze importanti:
-- L'output del sistema non è basato su dati predefiniti, ma viene generato a partire da informazioni estratte direttamente dal sito web di Vimar, il che aggiunge una dimensione dinamica interessante.
-- La presenza di un sistema di risposta intelligente, che sfrutta dati aziendali reali e richiede una forte integrazione con le tecnologie web.
-
 = Comunicazione con l'azienda Ergon Informatica Srl
-
 Al termine della decisione sui capitolati, il gruppo ha concordato di inviare una prima e-mail all'azienda *Ergon Informatica Srl*, in merito al capitolato "LLM: Assistente Virtuale". L'obiettivo della comunicazione era quello di ottenere maggiori informazioni riguardo al progetto e alle tecnologie consigliate per lo sviluppo. 
 
 Sono state poste le seguenti domande:
@@ -86,7 +62,6 @@ Sono state poste le seguenti domande:
 - Vengono fornite delle risorse per poter interagire o hostare i LLM (se necessario), soprattutto in vista di una fase di debugging e/o testing del prodotto?
 
 = Organizzazione degli incontri futuri
-
 Come ultimo punto dell'incontro, il gruppo ha discusso riguardo la *programmazione dei prossimi incontri*. Al fine di semplificare la pianificazione e assicurare la massima disponibilità di tutti i membri, è stato creato un #link("https://docs.google.com/spreadsheets/d/16KMeeW7fNX_SnfywgynXvfblE6J0bMLXzpujRgH2c2Q/edit?gid=0#gid=")[#underline[*documento condiviso su Google Fogli*]]. Questo strumento permette a ciascun membro di aggiornare il proprio calendario all'inizio di ogni settimana, specificando la disponibilità suddivisa per giorni e fasce orarie (mattina, primo pomeriggio, tardo pomeriggio, sera).
 
 Nel dettaglio:
