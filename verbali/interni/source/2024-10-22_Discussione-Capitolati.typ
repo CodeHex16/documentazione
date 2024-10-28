@@ -6,7 +6,11 @@
     data: [22/10/2024],
     ora: [14:30-15:30],
     tipo: "interno",
-    versione: [0.3.0],
+    versioni: (
+      "0.3.0","24/10/2024","Luca Ribon","Correzione errori nel testo",
+      "0.2.0","22/10/2024","Francesco Fragonas","Aggiunta terza preferenza",
+      "0.1.0","22/10/2024","Filippo Sabbadin","Prima stesura",
+    ),
     presenze: (
         "Filippo Sabbadin","Redattore","1h",
         "Luca Ribon","Verificatore ","1h",

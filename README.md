@@ -8,8 +8,7 @@ Documentazione del Gruppo 16 per il Progetto di **Ingegneria del Software** dell
 ## Struttura delle cartelle
 
 ```
-.
-└── documentazione/
+documentazione/
     ├── 📂 template/        # file di template per i documenti/
     │   └── 📂 images/      # assets per i documenti
     ├── 📂 verbali/
@@ -20,4 +19,6 @@ Documentazione del Gruppo 16 per il Progetto di **Ingegneria del Software** dell
     │       ├── 📂 source/
     │       └── 📄 *.pdf
     └── 📂 1 - candidatura
+        ├── 📂 source/
+        └── 📄 *.pdf
 ```

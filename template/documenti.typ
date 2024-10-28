@@ -2,13 +2,15 @@
   titolo: "Titolo del documento",
   email: "unipd.codehex16@gmail.com",
   data: [],
+  sommario: [],
   
   versioni : (
     "0.1.0","","","",
   ),
 
-  presenze: (
+  ruoli: (
   ),
+  
   contenuto,
 ) = {
   set text(font: "Noto Sans")
@@ -66,14 +68,14 @@
       #v(0em)
       #align(left)[
         #text(12pt, weight: "regular", fill: black, )[
-          Valutazioni sui capitolati proposti \ con tecnologie richieste e considerazioni
+          #sommario
         ]
       ]
     ]
   )
 
 
-  // Presenze
+  // Ruoli
   set align(left)
 
   set align(left)
@@ -82,20 +84,22 @@
         stroke: none,
         table.vline(start: 1, x:1, stroke: 0.5pt),
         inset: 10pt,
-        table.header(text(size:14pt)[*Presenze*]),
-        ..presenze
+        table.header(text(size:14pt)[*Ruoli*]),
+        ..ruoli
       )
 
-  //
+  // Versionamento
   pagebreak()
   text(size: 16pt, weight: "black", "Registro delle Versioni")
   table(
     columns: (auto,auto,auto,auto),
+    inset: 10pt,
     table.header(
       [*Versione*],[*Data*],[*Autore*],[*Cambiamenti*]
     ),
     ..versioni
   )
+  
   // Indice
   pagebreak()
   

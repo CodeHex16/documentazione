@@ -5,6 +5,10 @@
     ordine-del-giorno: ("Nome del gruppo", "Logo del gruppo", "Stesura del template per documenti", "Scelta dei canali di comunicazione","Prima discussione sui capitolati"),
     data: [21/10/2024],
     ora: [14:30-16:00],
+    versioni: (
+      "0.2.0","28/10/2024","Matteo Bazzan","Aggiunta Conclusioni",
+      "0.1.0","21/10/2024","Matteo Bazzan","Prima stesura",
+  ),
     tipo: "interno",
     presenze: (
         "Matteo Bazzan","Redattore","1h30m",
@@ -47,4 +51,7 @@ Dopo una prima analisi dei capitolati proposti, il gruppo, tramite un sondaggio 
 2. C6 - _Sistema di gestione di un magazzino distribuito_ - M31
 3. C9 - _BuddyBot_ - azzurrodigitale
 
-Prosegue un'analisi più estesa nel documento  #link("https://github.com/CodeHex16/documentazione/tree/main/verbali/interni")["ValutazioneCapitolati.pdf"].
+Prosegue un'analisi più estesa nel documento  #link("https://github.com/CodeHex16/documentazione/tree/main/verbali/interni/Valutazione-Capitolati.pdf")["Valutazione-Capitolati.pdf"].
+
+= Conclusione
+Il gruppo si accorda per trovarsi il giorno successivo per continuare la discussione sui capitolati e contattare le aziende di maggior interesse per approfondire la comprensione dei capitolati.

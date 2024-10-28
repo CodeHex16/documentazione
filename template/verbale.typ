@@ -5,7 +5,9 @@
   data: [],
   ora: [],
   tipo: "interno",
-  versione : [0.1.0],
+  versioni : (
+    "0.1.0","","","",
+  ),
   presenze: (
   ),
   contenuto,
@@ -54,7 +56,7 @@
     table.hline(stroke: 0.5pt),
     [*Ora*], [#ora],
     table.hline(stroke: 0.5pt),
-    [*Versione*], [#versione]
+    [*Versione*], [#versioni.at(0)]
   )
 
   block(
@@ -88,7 +90,19 @@
         ..presenze
       )
 
-  
+
+  // Versionamento
+  pagebreak()
+  text(size: 16pt, weight: "black", "Registro delle Versioni")
+  table(
+    columns: (auto,auto,auto,auto),
+    inset: 10pt,
+    table.header(
+      [*Versione*],[*Data*],[*Autore*],[*Cambiamenti*]
+    ),
+    ..versioni
+  )
+      
 
   // Indice
   pagebreak()
