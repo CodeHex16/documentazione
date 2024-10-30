@@ -11,8 +11,8 @@
         "0.1.0", "25/10/2024", "Luca Ribon", "Prima stesura",
     ),
     presenze: (
-        "Matteo Bazzan","Redattore","30m",
-        "Luca Ribon","Verificatore","30m",
+        "Matteo Bazzan","Verificatore","30m",
+        "Luca Ribon","Redattore","30m",
         "Francesco Fragonas","Verificatore","30m",
         "Gabriele Magnelli","Verificatore","30m",
         "Filippo Sabbadin","Verificatore","30m",
