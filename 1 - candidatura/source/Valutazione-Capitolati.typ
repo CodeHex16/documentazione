@@ -41,67 +41,68 @@ Le tecnologie necessarie per la realizzazione del progetto sono:
 - *Comunicazione e manipolazione del database* per le quali sono state proposte due opzioni tra cui scegliere in base al modello LLM che utilizzeremo:
   - utilizzare un componente software intermedio (#underline()[middleware]) come ad esempio un file JSON.
   - utilizzare le API standard fornite dalle tecnologie scelte (#underline()[Open Database Connectivity]).
-- *Interfaccia utente* tramite app mobile scegliendo tra il framework #underline()[.NET MAUI] o le #underline()[tecnologie Android native].
+- *Interfaccia utente* tramite app mobile per la quale vengono consiglieti il framework #underline()[.NET MAUI] o le #underline()[tecnologie Android native], anche se è possibile optare per soluzioni web.
 === Valutazione
-Il gruppo ha concordato di assegnare la massima priorità al capitolato n. 7. Questo capitolato si è distinto per diversi aspetti ritenuti cruciali:
-- La rilevanza del progetto in ambito lavorativo: si tratta di una soluzione che potrebbe essere ampiamente richiesta da diverse aziende, soprattutto nell'ottica di sviluppo di assistenti virtuali e chatbot avanzati.
+Il gruppo ha concordato nell'assegnare la massima priorità al capitolato n. 7. Questo capitolato si è distinto per diversi aspetti ritenuti cruciali:
+- La concretezza del progetto, che si presta ad essere applicato in scenari reali.
 - La forte integrazione di intelligenza artificiale, in particolare con l'uso di modelli linguistici di grandi dimensioni (LLM), elemento chiave che soddisfa l’interesse del gruppo per l’IA.
-- La concretezza del progetto, che si presta ad essere applicato in scenari reali e che potrebbe avere un impatto immediato sul mondo aziendale.
-- Il referente dell'azienda inoltre si è dimostrato disponible nel comunicare e risolvere i nostri dubbi fin da subito e l'azienda disponibile a fornire il materiale necessario per lo svolgimento del progetto (compreso un riscontro "diretto" con il team di sviluppo dell'azienda nel caso utilizzassimo .NET MAUI).
+- La rilevanza del progetto in ambito lavorativo: si tratta di una soluzione che potrebbe essere ampiamente richiesta da diverse aziende, soprattutto nell'ottica di sviluppo di assistenti virtuali e chatbot avanzati.
+- Inoltre il referente dell'azienda si è dimostrato disponible nel comunicare e risolvere i nostri dubbi fin da subito e l'azienda disponibile a fornire il materiale necessario per lo svolgimento del progetto (compreso un riscontro "diretto" con il team di sviluppo dell'azienda nel caso si optasse per .NET MAUI).
 
 = Capitolati non scelti
 == C1 - Artificial QI | Zucchetti
 === Descrizione
-L'azienda propone di sviluppare un'applicazione effettuare il ranking di diversi LLM basandosi su dei test che misurano le performance nel rispondere a delle domande predeterminate.
+L'azienda propone di sviluppare un'applicazione per effettuare il ranking di diversi LLM basandosi su dei test che misurano le performance nel rispondere a delle domande predeterminate.
 Il progetto prevede la creazione di un'interfaccia user-friendly per caricare, modificare ed eliminare i dati utilizati per la fase di ranking.
 È previsto anche l'utilizzo di un sistema esterno attraverso una API Rest secondo lo standard OpenAPI 3.1 da usare come esempio di valutazione.
 === Stack tecnologico
 Le tecnologie necessarie per la realizzazione del progetto sono:
-- Utilizzo di LLM
-- Utilizzo di una API Rest secondo lo standard OpenAPI 3.1
-- Uso di un database per l'archiviazione delle domande da fare al modello e risposte da confrontare
+- *LLM*.
+- *API Rest* secondo lo standard *OpenAPI 3.1*.
+- *Database* per l'archiviazione delle domande da fare al modello e risposte da confrontare.
 === Valutazione
 Nonostante l'interesse del gruppo per l'argomento, il capitolato in questione non è stato scelto perché è risultato poco concreto e limitato dal punto di vista di applicazioni nel mondo reale. 
 
 == C2 - Vimar GENIALE | Vimar
 === Descrizione
-Viene proposta la creazione di un chatbot messo a disposizione per 24 ore su 24. L'applicativo web fornisce informazioni sui vari dispositivi forniti dall'azienda, ad esempio può aiutare l'utente durante varie fasi nel processo di installazione di un termostato.
+Viene proposta la creazione di un chatbot messo a disposizione 24 ore su 24. Il chatbot in questione, tramite un applicativo web, fornisce informazioni sui vari dispositivi forniti dall'azienda, ad esempio può aiutare un operatore sul campo nelle varie fasi del processo di installazione di un qualsiasi prodotto Vimar.
 === Stack tecnologico
-- Utilizzo di un modello AI (LLM)
-- Infrastruttura con utilizzo della tecnologia container
-- Infrastruttura Amazon Web Services (opzionale)
+- *LLM*
+- Infrastruttura con utilizzo della tecnologia *container*
+- Infrastruttura *Amazon Web Services* (opzionale)
 === Valutazione
 Questo progetto si distingue per la sua somiglianza con il capitolato 7, ma con alcune differenze importanti:
-- L'output del sistema non è basato su dati predefiniti, ma viene generato a partire da informazioni estratte direttamente dal sito web di Vimar, il che aggiunge una dimensione dinamica interessante.
+- L'output del sistema non è basato su dati predefiniti, ma viene generato a partire da informazioni estratte direttamente dal sito web di Vimar, il che aggiunge una dimensione dinamica rilevante.
 - La presenza di un sistema di risposta intelligente, che sfrutta dati aziendali reali e richiede una forte integrazione con le tecnologie web.
 
 == C3 - Automatizzare le routine digitali tramite l’intelligenza generativa | Var Group
 === Descrizione
 Il progetto prevede lo sviluppo di un servizio ad agenti dove gli utenti possono disegnare localmente un workflow sfruttando le API dei software locali e l’intelligenza artificiale in cloud per automatizzare attività quotidiane che l’utente svolge manualmente.
 === Stack tecnologico
-- Sviluppo in cloud (AWS)
-- Creazione di interfaccia drag & drop
-- Python / C\# / TypeScript
-- MongoDB (database)
-- React (interfacce applicative web)
+- *Sviluppo in cloud* (AWS)
+- Creazione di *interfaccia drag & drop*
+- *Python / C\# / TypeScript*
+- MongoDB (*database*)
+- React (*interfaccia applicative web*)
 === Valutazione
+#highlight(fill: red)[TODO]
 
 
 == C4 - NearYou - Smart custom advertising platform | SyncLab
 === Descrizione
-L'azienda ha proposto di realizzare dei simulatori per creare i dati GPS che simulino i tragitti e posizione attuale degli utenti lungo il percorso in un GPS.
-Il programma prende informazioni dall'utente in base alle attività recent, ed in base a queste informazioni seleziona cosa suggerire all'utente nella mappa, con un messaggio personalizzato.
+#highlight(fill: red)[L'azienda ha proposto di realizzare dei simulatori per creare i dati GPS che simulino i tragitti e posizione attuale degli utenti lungo il percorso in un GPS.
+Il programma prende informazioni dall'utente in base alle attività recent, ed in base a queste informazioni seleziona cosa suggerire all'utente nella mappa, con un messaggio personalizzato.]
 === Stack tecnologico
-- Python per sviluppare il framework per la simulazione dei dati
-- Apache Kafka, HiveMQ, RabbitMQ per disaccoppiare lo stream di informazioni provenienti dai simulatori
-- LLM
-- Database
+- *Python* per sviluppare il framework per la simulazione dei dati
+- *Apache Kafka, HiveMQ, RabbitMQ* per disaccoppiare lo stream di informazioni provenienti dai simulatori
+- *LLM*
+- *Database*
 === Valutazione
-La seconda scelta del gruppo è caduta sul capitolato "NearYou - Smart custom advertising platform", proposto da Synclab. Questo capitolato presenta elementi tecnologici interessanti:
+Questo capitolato presenta elementi tecnologici interessanti:
 - Tecnologie legate alla personalizzazione della pubblicità e all’analisi dei dati, con un focus su algoritmi di machine learning per ottimizzare campagne pubblicitarie.
 - Potenziale di utilizzo nel marketing digitale, settore in forte espansione, che richiede soluzioni sempre più innovative per raggiungere target specifici.
 - Sfida tecnica interessante, che consentirebbe al gruppo di esplorare nuove aree di sviluppo software, pur mantenendo una certa complessità gestibile.
-Tuttavia la parte di intelligenza artificiale è meno marcata rispetto alla prima opzione.
+Tuttavia la parte di intelligenza artificiale è meno marcata rispetto alla prima scelta.
 
 == C5 - 3Dataviz | Sanmarco Informatica
 === Descrizione
