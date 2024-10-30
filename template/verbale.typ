@@ -66,7 +66,6 @@
   // Ordine del giorno
     [
       #text(14pt, weight: "bold", fill: black)[Ordine del giorno]
-      #v(0em)
       #align(left)[
         #text(12pt, weight: "regular", fill: black, )[
           #list(tight: false,spacing: auto, ..ordine-del-giorno) 
@@ -78,14 +77,12 @@
 
   // Presenze
   set align(left)
-
-  set align(left)
   table(
         columns: (auto, auto, auto),
         stroke: none,
         table.vline(start: 1, x:1, stroke: 0.5pt),
         table.vline(start:1, x:2, stroke: 0.5pt),
-        inset: 10pt,
+        inset: 9pt,
         table.header(text(size:14pt)[*Presenze*]),
         ..presenze
       )
@@ -146,4 +143,16 @@
   
   counter(page).update(1)
   contenuto
+
+  if tipo == "esterno" {
+    align(bottom+right, 
+      box()[
+        #align(left,
+          text("Firma referente azienda")
+        )
+        #v(3em)
+        #line(length: 20em)  
+      ]
+    )
+  }
 }

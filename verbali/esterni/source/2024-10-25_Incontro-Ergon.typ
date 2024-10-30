@@ -1,11 +1,15 @@
 #import "../../../template/verbale.typ": *
 
 #show : doc => verbale(
-    titolo: "Primo incontro con il referente dell'azienda Ergon",
-    ordine-del-giorno: ("Quadro generale del progetto","Domande sul progetto","Caso d'uso", "Prospettive per la Comunicazione Futura"),
+    titolo: "Incontro con il referente dell'azienda Ergon",
+    ordine-del-giorno: ("Quadro generale del progetto","Domande sul progetto e caso d'uso", "Prospettive per la Comunicazione Futura"),
     data: [25/10/2024],
     ora: [15:30-16:00],
     tipo: "esterno",
+    versioni: (
+        "0.2.0", "30/10/2024", "Luca Ribon", "Aggiunta firma e modifica titolo",
+        "0.1.0", "25/10/2024", "Luca Ribon", "Prima stesura",
+    ),
     presenze: (
         "Matteo Bazzan","Redattore","30m",
         "Luca Ribon","Verificatore","30m",
