@@ -16,7 +16,8 @@
     sommario: [Valutazioni sui capitolati proposti \ con tecnologie richieste e considerazioni],
     
     versioni : (
-        "0.1.0","24/10/2024","","Prima stesura",
+        "0.2.0","30/10/2024","Luca Ribon","Revisione, correzione errori e aggiunta di parti mancanti",
+        "0.1.0","24/10/2024","Matteo Bazzan","Prima stesura"
     ),
     doc,
 )
@@ -67,9 +68,9 @@ Nonostante l'interesse del gruppo per l'argomento, il capitolato in questione no
 === Descrizione
 Viene proposta la creazione di un chatbot messo a disposizione 24 ore su 24. Il chatbot in questione, tramite un applicativo web, fornisce informazioni sui vari dispositivi forniti dall'azienda, ad esempio può aiutare un operatore sul campo nelle varie fasi del processo di installazione di un qualsiasi prodotto Vimar.
 === Stack tecnologico
-- *LLM*
-- Infrastruttura con utilizzo della tecnologia *container*
-- Infrastruttura *Amazon Web Services* (opzionale)
+- *LLM*.
+- Infrastruttura con utilizzo della tecnologia *container*.
+- Infrastruttura *Amazon Web Services* (opzionale).
 === Valutazione
 Questo progetto si distingue per la sua somiglianza con il capitolato 7, ma con alcune differenze importanti:
 - L'output del sistema non è basato su dati predefiniti, ma viene generato a partire da informazioni estratte direttamente dal sito web di Vimar, il che aggiunge una dimensione dinamica rilevante.
@@ -79,24 +80,31 @@ Questo progetto si distingue per la sua somiglianza con il capitolato 7, ma con 
 === Descrizione
 Il progetto prevede lo sviluppo di un servizio ad agenti dove gli utenti possono disegnare localmente un workflow sfruttando le API dei software locali e l’intelligenza artificiale in cloud per automatizzare attività quotidiane che l’utente svolge manualmente.
 === Stack tecnologico
-- *Sviluppo in cloud* (AWS)
-- Creazione di *interfaccia drag & drop*
-- *Python / C\# / TypeScript*
-- MongoDB (*database*)
-- React (*interfaccia applicative web*)
+- *Generative AI di AWS*.
+- MongoDB (*database*).
+- Sviluppo Agent Windows:
+    - *Python / C\#*.
+    - *React* per le interfaccia applicative web.
+- Sviluppo Agent Apple:
+    - *Swift*.
+    - *Swift UI* per le interfaccia.
+- Creazione di *interfaccia drag & drop*.
+- Sviluppo API Cloud con *Node.js*, *Python*, *TypeScript*.
+
 === Valutazione
-#highlight(fill: red)[TODO]
+Il capitolato in questione presenta un dominio tecnologico molto ampio che potrebbe aver messo in difficoltà alcuni membri del gruppo. Inoltre, il settore di interesse non è stato ritenuto perticolarmente stimolante da parte del gruppo.
 
 
 == C4 - NearYou - Smart custom advertising platform | SyncLab
 === Descrizione
-#highlight(fill: red)[L'azienda ha proposto di realizzare dei simulatori per creare i dati GPS che simulino i tragitti e posizione attuale degli utenti lungo il percorso in un GPS.
-Il programma prende informazioni dall'utente in base alle attività recent, ed in base a queste informazioni seleziona cosa suggerire all'utente nella mappa, con un messaggio personalizzato.]
+L'azienda ha proposto di realizzare un sistema che, in base ai dati ottenuti dalla profilazione degli utenti e alla loro posizione geografica, genera tramite LLM degli annunci dedicati agli utenti.
+Il progetto prevede la realizzazione di un componente software per la generazione dei dati GPS simulati.
+Inoltre è necessaria un'interfaccia composta da una mappa per la visualizzazione degli annunci generati per gli utenti.
 === Stack tecnologico
-- *Python* per sviluppare il framework per la simulazione dei dati
-- *Apache Kafka, HiveMQ, RabbitMQ* per disaccoppiare lo stream di informazioni provenienti dai simulatori
-- *LLM*
-- *Database*
+- *Python* per sviluppare il framework per la simulazione dei dati.
+- *Apache Kafka, HiveMQ, RabbitMQ* per disaccoppiare lo stream di informazioni provenienti dai simulatori.
+- *LLM*.
+- *Database*.
 === Valutazione
 Questo capitolato presenta elementi tecnologici interessanti:
 - Tecnologie legate alla personalizzazione della pubblicità e all’analisi dei dati, con un focus su algoritmi di machine learning per ottimizzare campagne pubblicitarie.
@@ -106,14 +114,14 @@ Tuttavia la parte di intelligenza artificiale è meno marcata rispetto alla prim
 
 == C5 - 3Dataviz | Sanmarco Informatica
 === Descrizione
-L'azienda propone la creazione di grafici 3D per aiutare ad avere una migliore visibilità dei dati e avere un'idea più veloce sulle quantità dei dati.
+L'azienda propone la creazione di grafici 3D per aiutare ad avere una migliore visualizzazione dei dati per rendere più semplice l'interpretazione dei dati rappresentati.
 === Stack tecnologico
 Per la parte 3D del progetto, l'azienda propone l'uso delle seguenti librerie Java:
-- three.js
-- d3js
+- *three.js*.
+- *d3js*.
 Propone anche i seguenti framework frontend:
-- Angular (Google)
-- React (Meta)
+- *Angular*.
+- *React*.
 === Valutazione
 Questo progetto si differenzia dagli altri in quanto richiede di sviluppare un ambiente 3D interattivo in cui l'utente può analizzare e visionare i dati tramite dei grafici.\
 Nonostante l'originalità, soprattutto nelle tecnologie proposte, del progetto, questo non rispecchia gli interessi del gruppo.
@@ -121,42 +129,42 @@ Nonostante l'originalità, soprattutto nelle tecnologie proposte, del progetto, 
 == C6 - Sistema di Gestione di un Magazzino Distribuito | M31
 === Descrizione
 Il capitolato propone un sistema di gestione magazzino che ottimizza le scorte automaticamente, sincronizza i dati in tempo reale tra i magazzini, implementa riassortimenti predittivi tramite machine learning e gestisce i conflitti negli aggiornamenti simultanei.
+Svolge un ruolo importante anche l'alto livello di efficienza richiesto.
 === Stack tecnologico
 Le tecnologie necessarie per la realizzazione del progetto sono:
-- Node.js e Nest.js (usando TypeScript come linguaggio) che verranno impiegati per lo sviluppo dei microservizi, grazie alla loro capacità di creare applicazioni server-side performanti e modulari. 
-- Go potrà essere utilizzato per eventuali componenti ad alte prestazioni, come i servizi di sincronizzazione. 
-- NATS o Apache Kafka per la comunicazione tra i microservizi.
-- Il sistema di orchestrazione e gestione centralizzata sarà ospitato su Google Cloud Platform, che offre servizi cloud affidabili e scalabili in particolare Kubernetes. 
-- Per l’archiviazione dei dati, si farà uso di MongoDB per la memorizzazione di dati non strutturati, mentre PostgreSQL potrà essere impiegato per la persistenza di dati strutturati. 
-- Redis potrà essere utilizzato come sistema di caching per migliorare le prestazioni e ridurre la latenza. 
-- Angular e generalmente SPAs (Single Page Applications) per il frontend, per fornire agli utenti una esperienza il più possibile similare a quella di un’applicazione desktop.
+- *Node.js* e *Nest.js* per lo sviluppo dei microservizi. 
+- *Go* per lo svilupppo di componenti ad alte prestazioni. 
+- *NATS* o *Apache Kafka* per l'interazione tra i microservizi.
+- *Google Cloud Platform* che può fornire anche delle istanze *Kubernetes* per l'hosting dei sistemi di orchestrazione. 
+- *MongoDB* per la memorizzazione di dati non strutturati, mentre *PostgreSQL* potrà essere impiegato per la persistenza di dati strutturati. 
+- *Redis* come sistema di caching. 
+- *Angular* e *SPAs* (Single Page Applications) per il frontend.
 === Valutazione
-Il progetto riguarda lo sviluppo di un sistema di magazzini che gestisca le scorte in modo distribuito minimizzando i tempi di risposta e ottimizzando la distribuzione delle risorse che deve avvenire in maniera sicura ed efficiente.\
-Quindi il progetto richiede l'uso del paradigma distribuito e ciò lo contraddistingue dagli altri progetti proposti, infatti era stato uno dei capitolati inizialmente considerati, ma infine scartato per la presenza di progetti più interessanti.  
+Il progetto richiede l'uso della programmazione distribuita e ciò lo contraddistingue dal punto di vista tecnico, infatti era stato uno dei capitolati inizialmente considerati, ma infine scartato per la presenza di altri progetti più interessanti.  
 
 == C8 - Requirement Tracker Plug-in VSCode | bluewind
 === Descrizione
 Il capitolato propone un plugin di VSCode per il tracciamento automatico dei requisiti nel codice sorgente, con funzionalità di analisi basate su intelligenza artificiale per suggerire miglioramenti sia al codice che ai requisiti, inclusi quelli derivati dalla documentazione hardware. Il sistema è progettato per essere espandibile con nuove funzionalità. 
 === Stack tecnologico
-Per favorire l'estensibilità e la futura evoluzione del plug-in, si incoraggiano le seguenti tecnologie:
-- Visual Studio Code Extension API: per costruire un'architettura modulare, che consenta l'aggiunta di nuove funzionalità in maniera semplice. 
-- API REST: per connettersi a modelli di AI per l'analisi del codice e dei requisiti.
-- Python o Node.js: per l'integrazione con le API AI, con un design flessibile che consenta di aggiungere nuovi linguaggi o componenti senza modifiche significative.
-- Modelli AI pre-addestrati (come GPT o simili): per analisi semantiche, con la possibilità di integrare facilmente nuovi modelli o algoritmi in futuro.
-- Ollama, o una eventuali alternative: per il deployment locale di LLM (opzionale).
+Vengono consigliate le seguenti tecnologie:
+- *Visual Studio Code Extension API* per costruire un'architettura modulare. 
+- *API REST* per connettersi a modelli di AI per l'analisi del codice e dei requisiti.
+- *Python o Node.js* per l'integrazione con le API di AI.
+- *LLM* per analisi semantiche.
+- *Ollama*, o una delle alternative per il deployment locale di LLM (opzionale).
 === Valutazione
 In questo caso il capitolato rispecchia una realtà concreta per un qualsiasi gruppo che lavora ad un progetto di una certa dimensione e che ha bisogno di una conferma, o riscontro, immediata sulle dipendeze del progetto stesso.\
 Nonostante ciò il capitolato non coincide con gli interessi del gruppo.
 
 == C9 - BuddyBot | azzurrodigitale
 === Descrizione
-Il capitolato propone Buddy Bot: una piattaforma web innovativa che funge da assistente virtuale intelligente, progettata per semplificare e ottimizzare la gestione delle informazioni aziendali. Integrando diverse fonti di dati attraverso API di terze parti e sfruttando le più recenti tecnologie di intelligenza artificiale, offre un'esperienza utente intuitiva consultabile attraverso un'interfaccia chat.
+Il capitolato propone la creazione di Buddy Bot una piattaforma web innovativa che funge da assistente virtuale intelligente, progettata per semplificare e ottimizzare la gestione dei dati relativi a progetti aziendali. Integrando diverse fonti di dati attraverso API di terze parti e sfruttando le più recenti tecnologie di intelligenza artificiale, offre un'esperienza utente intuitiva consultabile attraverso un'interfaccia chat.
 === Stack tecnologico
 Le tecnologie necessarie per la realizzazione del progetto sono:
-- OpenAI: motore per le funzionalità di NPL (comprensione del testo e generazione delle risposte).
-- Node/NestJS: framework per lo sviluppo di applicazioni server-side.
-- Langchain: progetto open-source che permette di integrare modelli di AI senza conoscerne i dettagli interni.
-- Spring Boot: framework Java per creare applicazioni standalone e pronte per la produzione.
-- Angular: framework frontend per la costruzione di applicazioni web moderne, dinamiche e scalabili.
+- *OpenAI* per le funzionalità di *NPL* (comprensione del testo e generazione delle risposte).
+- *Node/NestJS*, un framework per lo sviluppo di applicazioni server-side.
+- *Langchain* per integrare modelli di AI in modo versatile.
+- *Spring Boot*, un framework Java per creare applicazioni standalone.
+- *Angular*, un framework frontend per la costruzione di applicazioni web.
 === Valutazione
-Questo è un progetto in cui viene sviluppato un bot che aiuta l'utente assistendolo, proprio per questo è simile ad altri capitolati proposti e in generale non convince appieno per le teconlogie proposte, anche se è stato un progetto preso, inizialmente, in considerazione dal gruppo.
+Questo progetto è simile ad altri capitolati proposti e in generale non convince appieno per le teconlogie proposte, anche se è stato un progetto preso, inizialmente, in considerazione dal gruppo.

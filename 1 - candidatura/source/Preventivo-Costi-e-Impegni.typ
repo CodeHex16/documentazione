@@ -14,7 +14,7 @@
         "Yi Hao Zhuo", "Verificatore"
     ),
     versioni : (
-        "0.1.0","28/10/2024","","Prima stesura",
+        "0.1.0","28/10/2024","Filippo Sabbadin","Prima stesura",
     ),
     doc,
 )
