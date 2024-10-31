@@ -41,14 +41,13 @@ jobs:
                     typst compile --root . "$file" "${file%.typ}.pdf" --font-path $HOME/.local/share/fonts
                   done
 
-            - name: Remove external documents if _ext or _firmato version exists
+            - name: Remove PDF files with same name as _ext or _firmato
               run: |
-                  find . -name "*_ext.pdf" -o -name "*_firmato.pdf" | while IFS= read -r file; do
-                    base="${file%_*}"
-                    if [ -f "${base}.pdf" ]; then
-                    rm "${base}.pdf"
-                    fi
-                  done             
+                find . -name "*_ext.pdf" -o -name "*_firmato.pdf" | while read -r file; do
+                base=$(basename "$file" "_ext.pdf")
+                base=${base%_firmato.pdf}
+                find . -name "${base}.pdf" -exec rm {} \;
+                done
 
             - name: Move PDF files to parent directory
               run: |
