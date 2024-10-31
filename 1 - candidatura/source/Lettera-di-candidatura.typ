@@ -1,7 +1,7 @@
 #import "../../template/lettera.typ" : *
 
 #show : doc => documento(
-    titolo: "Lettera di presentazione",
+    titolo: "Lettera di candidatura",
     data: [31 Ottobre 2024],
     sommario: "Dichiarazione della scelta del capitolato",
     ruoli: (
