@@ -44,8 +44,6 @@
   set align(center)
   par(justify: false)[
     #text(28pt, weight: "black", fill: black, hyphenate: false)[#titolo]
-    
-    #text(16pt, weight: "bold")[#fase]
   ]
 
   align(right+horizon)[

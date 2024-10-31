@@ -31,9 +31,9 @@ jobs:
                 unzip /tmp/JetBrainsMono.zip -d $HOME/.local/share/fonts
                 fc-cache -f -v
 
-            - name: Remove old PDF files
+            - name: Remove old PDF files except for _ext and _firmato
               run: |
-                  find . -name "*.pdf" -exec rm {} \;
+                  find . -name "*.pdf" ! -name "*_ext.pdf" ! -name "*_firmato.pdf" -exec rm {} \;
 
             - name: Find and compile Typst files
               run: |
@@ -41,9 +41,18 @@ jobs:
                     typst compile --root . "$file" "${file%.typ}.pdf" --font-path $HOME/.local/share/fonts
                   done
 
+            - name: Remove external documents if _ext or _firmato version exists
+              run: |
+                  find . -name "*_ext.pdf" -o -name "*_firmato.pdf" | while IFS= read -r file; do
+                    base="${file%_*}"
+                    if [ -f "${base}.pdf" ]; then
+                    rm "${base}.pdf"
+                    fi
+                  done             
+
             - name: Move PDF files to parent directory
               run: |
-                  find . -name "*.pdf" -exec sh -c 'mv "$0" "$(dirname "$0")/../"' {} \;
+                  find . -name "*.pdf" ! -name "*_ext.pdf" ! -name "*_firmato.pdf" -exec sh -c 'mv "$0" "$(dirname "$0")/../"' {} \;
 
             - name: Upload PDF files
               uses: actions/upload-artifact@v4

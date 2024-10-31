@@ -68,7 +68,7 @@ documentazione/
   ),
   "21/10/2024","Interno", link("https://github.com/CodeHex16/documentazione/tree/main/verbali/interni/2024-10-21_Incontro-Iniziale.pdf")[2024-10-21_Incontro-Iniziale.pdf],
   "22/10/2024","Interno", link("https://github.com/CodeHex16/documentazione/tree/main/verbali/interni/2024-10-22_Discussione-Capitolati.pdf")[2024-10-22_Discussione-Capitolati.pdf],
-  "25/10/2024","Esterno", link("https://github.com/CodeHex16/documentazione/tree/main/verbali/esterni/2024-10-25_Incontro-Ergon.pdf")[2024-10-25_Incontro-Ergon.pdf],
+  "25/10/2024","Esterno", link("https://github.com/CodeHex16/documentazione/tree/main/verbali/esterni/2024-10-25_Incontro-Ergon_firmato.pdf")[2024-10-25_Incontro-Ergon_firmato.pdf],
   "28/10/2024","Interno", link("https://github.com/CodeHex16/documentazione/tree/main/verbali/interni/2024-10-28_Revisione-documenti.pdf")[2024-10-28_Revisione-documenti.pdf],
   "31/10/2024","Interno", link("https://github.com/CodeHex16/documentazione/tree/main/verbali/interni/2024-10-31_Lettera-e-Revisione-finale.pdf")[2024-10-31_Lettera-e-Revisione-finale.pdf],
 )
