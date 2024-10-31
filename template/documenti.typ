@@ -27,7 +27,7 @@
     image("images/logo_unipd.png", height: 6em),
     ), 
     align(right,
-    stack(
+    box(
       align(center)[
       #image("images/logo_extended.jpg", width: 13em)
       #v(0em)
@@ -76,7 +76,6 @@
 
 
   // Ruoli
-  set align(left)
 
   set align(left)
   table(

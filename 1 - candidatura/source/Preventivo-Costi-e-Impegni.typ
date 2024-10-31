@@ -7,7 +7,7 @@
     ruoli: (
         "Filippo Sabbadin","Redattore",
         "Matteo Bazzan","Verificatore",
-        "Luca Ribon","Verificatore",
+        "Luca Ribon","Responsabile",
         "Francesco Fragonas","Verificatore",
         "Gabriele Magnelli","Verificatore",
         "Luca Rossi", "Verificatore",
@@ -41,7 +41,7 @@ Ogni membro del gruppo CodeHex16 si impegna a lavorare per un totale di 94 ore d
   "Progettista","25","120","3000",
   "Programmatore","15","180","2700",
   "Verificatore","15","130","1950",
-  "Totale","",[*658 h*],[*13350 €*]
+  "Totale","",[*658 h*],[*€ 13.350*]
 )
 
 == Ore per membro

@@ -6,7 +6,7 @@
     data: [24/10/2024],
     ruoli : (
         "Matteo Bazzan","Redattore",
-        "Luca Ribon","Verificatore" ,
+        "Luca Ribon","Responsabile",
         "Francesco Fragonas","Verificatore",
         "Gabriele Magnelli","Verificatore",
         "Filippo Sabbadin","Verificatore",
@@ -16,6 +16,7 @@
     sommario: [Valutazioni sui capitolati proposti \ con tecnologie richieste e considerazioni],
     
     versioni : (
+        "0.3.0","31/10/2024","Gabriele Magnelli","Revisione, correzione valutazione capitolato C3", 
         "0.2.0","30/10/2024","Luca Ribon","Revisione, correzione errori e aggiunta di parti mancanti",
         "0.1.0","24/10/2024","Matteo Bazzan","Prima stesura"
     ),
@@ -32,7 +33,7 @@ Tutti i capitolati sono consultabili alla pagina
 = Capitolato scelto
 == C7 - Assistente Virtuale | Ergon
 === Descrizione
-Il capitolato propone la realizzazione di un sistema che prevede un interfaccia mobile in formato _chatbot_ che permette all'utente di interagire, tramite linguaggio naturale in forma testuale, con un assistente virtuale.
+Il capitolato propone la realizzazione di un sistema che prevede un'interfaccia mobile in formato _chatbot_ che permette all'utente di interagire, tramite linguaggio naturale in forma testuale, con un assistente virtuale.\
 L'assistente virtuale sfrutta un LLM (Large Language Model) che dovrà essere in grado di rispondere alle richieste poste dall'utente basandosi sul contesto aziendale del fornitore; quest'ultimo viene fornito tramite documenti aziendali in formato .pdf, .docx e .txt.
 === Stack tecnologico
 Le tecnologie necessarie per la realizzazione del progetto sono:
@@ -92,7 +93,8 @@ Il progetto prevede lo sviluppo di un servizio ad agenti dove gli utenti possono
 - Sviluppo API Cloud con *Node.js*, *Python*, *TypeScript*.
 
 === Valutazione
-Il capitolato in questione presenta un dominio tecnologico molto ampio che potrebbe aver messo in difficoltà alcuni membri del gruppo. Inoltre, il settore di interesse non è stato ritenuto perticolarmente stimolante da parte del gruppo.
+Il capitolato in questione presenta un dominio tecnologico molto ampio che potrebbe aver messo in difficoltà alcuni membri del gruppo ed inoltre presenta varie analogie con gli altri capitolati, come il fatto di usare l'IA per assistere l'utente, anche se in questo caso si tratta di organizzare le attività dell'utente invece di rispondere a delle sue necessità immediate.\ Tuttavia, il settore di interesse non è stato ritenuto particolarmente stimolante da parte del gruppo, anche per il fatto che altri capitolati usano tecnologie simili in ambiti più interessanti.
+
 
 
 == C4 - NearYou - Smart custom advertising platform | SyncLab
@@ -158,7 +160,8 @@ Nonostante ciò il capitolato non coincide con gli interessi del gruppo.
 
 == C9 - BuddyBot | azzurrodigitale
 === Descrizione
-Il capitolato propone la creazione di Buddy Bot una piattaforma web innovativa che funge da assistente virtuale intelligente, progettata per semplificare e ottimizzare la gestione dei dati relativi a progetti aziendali. Integrando diverse fonti di dati attraverso API di terze parti e sfruttando le più recenti tecnologie di intelligenza artificiale, offre un'esperienza utente intuitiva consultabile attraverso un'interfaccia chat.
+Il capitolato propone la creazione di Buddy Bot, una piattaforma web innovativa che funge da assistente virtuale intelligente, progettata per semplificare e ottimizzare la gestione dei dati relativi a progetti aziendali. Integrando diverse fonti di dati attraverso API di terze parti e sfruttando le più recenti tecnologie di intelligenza artificiale, offre un'esperienza utente intuitiva consultabile attraverso un'interfaccia chat.
+
 === Stack tecnologico
 Le tecnologie necessarie per la realizzazione del progetto sono:
 - *OpenAI* per le funzionalità di *NPL* (comprensione del testo e generazione delle risposte).

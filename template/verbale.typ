@@ -26,14 +26,14 @@
     image("images/logo_unipd.png", height: 6em),
     ), 
     align(right,
-    stack(
-      align(center)[
-      #image("images/logo_extended.jpg", width: 13em)
-      #v(0em)
-      #text(size: 10pt, fill: rgb("#424242"),
-      link("mailto:unipd.codehex16@gmail.com"))
-      ]
-    )
+      box(
+        align(center)[
+        #image("images/logo_extended.jpg", width: 13em)
+        #v(0em)
+        #text(size: 10pt, fill: rgb("#424242"),
+        link("mailto:unipd.codehex16@gmail.com"))
+        ]
+      )
     )
   )
   

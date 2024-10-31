@@ -13,7 +13,7 @@
     ),
     presenze: (
         "Filippo Sabbadin","Redattore","1h",
-        "Luca Ribon","Verificatore ","1h",
+        "Luca Ribon","Responsabile ","1h",
         "Francesco Fragonas","Redattore","1h",
         "Gabriele Magnelli","Verificatore","1h",
         "Luca Rossi","Verificatore","1h",

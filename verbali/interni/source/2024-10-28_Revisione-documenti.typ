@@ -7,12 +7,12 @@
     ora: [15:00-18:00],
     tipo: "interno",
     versioni: (
-      "0.1.0","28/10/2024","Francesco Fragonas","Prima stesura"
+      "0.1.0","28/10/2024","Matteo Bazzan","Prima stesura"
     ),
     presenze: (
         "Matteo Bazzan","Redattore","3h",
-        "Luca Ribon","Verificatore" ,"3h",
-        "Francesco Fragonas","Redattore","3h",
+        "Luca Ribon","Responsabile" ,"3h",
+        "Francesco Fragonas","Verificatore","3h",
         "Gabriele Magnelli","Verificatore","3h",
         "Filippo Sabbadin","Verificatore","3h",
         "Yi Hao Zhuo","Verificatore","3h",

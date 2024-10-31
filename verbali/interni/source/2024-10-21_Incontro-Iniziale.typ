@@ -12,7 +12,7 @@
     tipo: "interno",
     presenze: (
         "Matteo Bazzan","Redattore","1h30m",
-        "Luca Ribon","Verificatore" ,"1h30m",
+        "Luca Ribon","Responsabile" ,"1h30m",
         "Francesco Fragonas","Verificatore","1h30m",
         "Gabriele Magnelli","Verificatore","1h30m",
         "Filippo Sabbadin","Verificatore","1h30m",

@@ -8,11 +8,11 @@
     tipo: "esterno",
     versioni: (
         "0.2.0", "30/10/2024", "Luca Ribon", "Aggiunta firma e modifica titolo",
-        "0.1.0", "25/10/2024", "Luca Ribon", "Prima stesura",
+        "0.1.0", "25/10/2024", "Matteo Bazzan", "Prima stesura",
     ),
     presenze: (
-        "Matteo Bazzan","Verificatore","30m",
-        "Luca Ribon","Redattore","30m",
+        "Matteo Bazzan","Redattore","30m",
+        "Luca Ribon","Responsabile","30m",
         "Francesco Fragonas","Verificatore","30m",
         "Gabriele Magnelli","Verificatore","30m",
         "Filippo Sabbadin","Verificatore","30m",
