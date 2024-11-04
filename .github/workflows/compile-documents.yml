@@ -83,12 +83,12 @@ jobs:
                   find . -name "*.pdf"
 
                   echo "find filtered"
-                  find . -name "*.pdf" -not -path "./.git/* -not -path "./template/* -not -path "./.github/* -not -path "./codehex16.github.io/*"
+                  find . -name "*.pdf" -not -path "./.git/*" -not -path "./template/*" -not -path "./.github/*" -not -path "./codehex16.github.io/*"
 
             - name: Copia i file PDF compilati nella cartella docs
               run: |
                   mkdir -p codehex16.github.io/docs
-                  find . -name "*.pdf" -not -path "./.git/* -not -path "./template/* -not -path "./.github/* -not -path "./codehex16.github.io/* -exec rsync -R {} codehex16.github.io/docs/ \;"
+                  find . -name "*.pdf" -not -path "./.git/*" -not -path "./template/*" -not -path "./.github/*" -not -path "./codehex16.github.io/* -exec rsync -R {} codehex16.github.io/docs/ \;"
                   cd codehex16.github.io
 
             - name: Commit e push delle modifiche
