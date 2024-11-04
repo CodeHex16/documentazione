@@ -74,7 +74,7 @@ jobs:
               with:
                   repository: codehex16/codehex16.github.io
                   token: ${{ secrets.PAT_TOKEN }}
-                  path: ../codehex16.github.io
+                  path: codehex16.github.io
 
             - name: debug
               run: |
@@ -83,25 +83,21 @@ jobs:
                   find . -name "*.pdf"
 
                   echo "find filtered"
-                  find . -name "*.pdf" -not -path "./.git/*"
-
-                  cd ..
-                  ls -la
-                  find . -name "*.pdf"
+                  find . -name "*.pdf" -not -path "./.git/* -not -path "./template/* -not -path "./.github/* -not -path "./codehex16.github.io/*"
 
             - name: Copia i file PDF compilati nella cartella docs
               run: |
-
                   mkdir -p codehex16.github.io/docs
-                  find documentazione/ -name "*.pdf" -not -path "./.git/*" -exec rsync -R {} codehex16.github.io/docs/ \;
+                  find . -name "*.pdf" -not -path "./.git/* -not -path "./template/* -not -path "./.github/* -not -path "./codehex16.github.io/* -exec rsync -R {} codehex16.github.io/docs/ \;"
+                  cd codehex16.github.io
 
-            # - name: Commit e push delle modifiche
-            #   working-directory: codehex16.github.io
-            #   run: |
-            #     git config --global user.name 'github-actions[bot]'
-            #     git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-            #     git add docs/**/*.pdf
-            #     git commit -m 'Add compiled PDF files to docs/' || echo "No changes to commit"
-            #     git push
-            #   env:
-            #     GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
+            - name: Commit e push delle modifiche
+              working-directory: codehex16.github.io
+              run: |
+                  git config --global user.name 'github-actions[bot]'
+                  git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+                  git add docs/**/*.pdf
+                  git commit -m 'Add compiled PDF files to docs/' || echo "No changes to commit"
+                  git push
+              env:
+                  GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
