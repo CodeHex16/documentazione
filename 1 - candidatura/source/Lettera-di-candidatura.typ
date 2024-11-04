@@ -2,7 +2,7 @@
 
 #show : doc => documento(
     titolo: "Lettera di candidatura",
-    data: [31 Ottobre 2024],
+    data: [04 Novembre 2024],
     sommario: "Dichiarazione della scelta del capitolato",
     ruoli: (
         "Luca Ribon","Responsabile",
@@ -14,8 +14,8 @@
         "Yi Hao Zhuo", "Validatore"
     ),
     versioni : (
-        "0.1.0","31/10/2024","Filippo Sabbadin","Prima stesura",
-        "0.2.0","31/10/2024","","Stesura finale"
+        "0.1.0","31/10/2024","Filippo Sabbadin","Prima stesura", "",
+        "0.2.0","31/10/2024","","Stesura finale", ""
     ),
     doc,
 )
@@ -71,6 +71,7 @@ documentazione/
   "25/10/2024","Esterno", link("https://github.com/CodeHex16/documentazione/tree/main/verbali/esterni/2024-10-25_Incontro-Ergon_firmato.pdf")[2024-10-25_Incontro-Ergon_firmato.pdf],
   "28/10/2024","Interno", link("https://github.com/CodeHex16/documentazione/tree/main/verbali/interni/2024-10-28_Revisione-documenti.pdf")[2024-10-28_Revisione-documenti.pdf],
   "31/10/2024","Interno", link("https://github.com/CodeHex16/documentazione/tree/main/verbali/interni/2024-10-31_Lettera-e-Revisione-finale.pdf")[2024-10-31_Lettera-e-Revisione-finale.pdf],
+  "04/11/2024","Interno", link("https://github.com/CodeHex16/documentazione/tree/main/verbali/interni/2024-11-04_Correzione_candidatura.pdf")[2024-11-04_Correzione_candidatura.pdf],
 )
 
 === Candidatura
@@ -87,5 +88,22 @@ documentazione/
   
 )
 
-In particolare nel documento #link("https://github.com/CodeHex16/documentazione/blob/main/1%20-%20candidatura/Preventivo-Costi-e-Impegni.pdf")[Preventivo-Costi-e-Impegni.pdf] si specifica che il costo totale per ultimare il progetto ammonta a *€13.350* e la data di consegna ultima è il *28/04/2024*.
+In particolare nel documento #link("https://github.com/CodeHex16/documentazione/blob/main/1%20-%20candidatura/Preventivo-Costi-e-Impegni.pdf")[Preventivo-Costi-e-Impegni.pdf] si specifica che il costo totale per ultimare il progetto ammonta a *€12.895* e la data di consegna ultima è il *28/04/2025*.
 
+Di seguito nome, cognome e matricola dei membri del gruppo:
+#table(
+  columns: (1fr, 1fr),
+  inset: 8pt,
+  align: center,
+  fill: (x,y) => if (y== 0) { luma(230) },
+  table.header(
+    [*Nome Cognome*],[*Matricola*], 
+  ),
+  "Luca Ribon", "2075516",
+  "Matteo Bazzan", "2076422",
+  "Filippo Sabbadin", "2010008",
+  "Francesco Fragonas", "2076436",
+  "Gabriele Magnelli", "2075542",
+  "Luca Rossi", "2042374",
+  "Yi Hao Zhuo", "2044939",
+)

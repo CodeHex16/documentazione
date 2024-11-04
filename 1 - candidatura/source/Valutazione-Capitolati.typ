@@ -16,9 +16,9 @@
     sommario: [Valutazioni sui capitolati proposti \ con tecnologie richieste e considerazioni],
     
     versioni : (
-        "0.3.0","31/10/2024","Gabriele Magnelli","Revisione, correzione valutazione capitolato C3", 
-        "0.2.0","30/10/2024","Luca Ribon","Revisione, correzione errori e aggiunta di parti mancanti",
-        "0.1.0","24/10/2024","Matteo Bazzan","Prima stesura"
+        "0.3.0","31/10/2024","Gabriele Magnelli","Revisione, correzione valutazione capitolato C3", "",
+        "0.2.0","30/10/2024","Luca Ribon","Revisione, correzione errori e aggiunta di parti mancanti", "",
+        "0.1.0","24/10/2024","Matteo Bazzan","Prima stesura", ""
     ),
     doc,
 )

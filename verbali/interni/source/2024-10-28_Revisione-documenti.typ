@@ -7,7 +7,7 @@
     ora: [15:00-18:00],
     tipo: "interno",
     versioni: (
-      "0.1.0","28/10/2024","Matteo Bazzan","Prima stesura"
+      "0.1.0","28/10/2024","Matteo Bazzan","","Prima stesura"
     ),
     presenze: (
         "Matteo Bazzan","Redattore","3h",
@@ -43,7 +43,7 @@ Abbiamo iniziato a redigere il documento di preventivo, considerando sia i costi
 
 Inoltre, è stato concordato un periodo di conclusione del progetto, tenendo conto della possibilità di eventuali imprevisti che potrebbero richiedere un prolungamento dell'impegno.
 
-Per facilitare il calcolo dei costi con le relative ore e per avere una data stimata di fine progetto abbiamo creato un #link("https://docs.google.com/spreadsheets/d/16KMeeW7fNX_SnfywgynXvfblE6J0bMLXzpujRgH2c2Q/edit?gid=232675598#gid=232675598",[#underline[*documento su Google Fogli*]]).
+Per facilitare il calcolo dei costi con le relative ore e per avere una data stimata di fine progetto abbiamo creato un #link("https://docs.google.com/spreadsheets/d/16KMeeW7fNX_SnfywgynXvfblE6J0bMLXzpujRgH2c2Q/edit?gid=2000412310#gid=2000412310",[#underline[*documento su Google Fogli*]]).
 
 = Sistema di Tracciamento delle Attività
 
