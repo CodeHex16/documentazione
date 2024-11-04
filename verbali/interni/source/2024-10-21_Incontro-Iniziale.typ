@@ -6,8 +6,8 @@
     data: [21/10/2024],
     ora: [14:30-16:00],
     versioni: (
-      "0.2.0","28/10/2024","Matteo Bazzan","Aggiunta Conclusioni",
-      "0.1.0","21/10/2024","Matteo Bazzan","Prima stesura",
+      "0.2.0","28/10/2024","Matteo Bazzan","","Aggiunta Conclusioni",
+      "0.1.0","21/10/2024","Matteo Bazzan","","Prima stesura",
   ),
     tipo: "interno",
     presenze: (

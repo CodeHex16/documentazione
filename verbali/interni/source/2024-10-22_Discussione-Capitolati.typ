@@ -7,9 +7,9 @@
     ora: [14:30-15:30],
     tipo: "interno",
     versioni: (
-      "0.3.0","24/10/2024","Luca Ribon","Correzione errori nel testo",
-      "0.2.0","22/10/2024","Francesco Fragonas","Aggiunta terza preferenza",
-      "0.1.0","22/10/2024","Filippo Sabbadin","Prima stesura",
+      "0.3.0","24/10/2024","Luca Ribon","","Correzione errori nel testo",
+      "0.2.0","22/10/2024","Francesco Fragonas","","Aggiunta terza preferenza",
+      "0.1.0","22/10/2024","Filippo Sabbadin","","Prima stesura",
     ),
     presenze: (
         "Filippo Sabbadin","Redattore","1h",
@@ -65,7 +65,7 @@ Sono state poste le seguenti domande:
 - Vengono fornite delle risorse per poter interagire o hostare i LLM (se necessario), soprattutto in vista di una fase di debugging e/o testing del prodotto?
 
 = Organizzazione degli incontri futuri
-Come ultimo punto dell'incontro, il gruppo ha discusso riguardo la *programmazione dei prossimi incontri*. Al fine di semplificare la pianificazione e assicurare la massima disponibilità di tutti i membri, è stato creato un #link("https://docs.google.com/spreadsheets/d/16KMeeW7fNX_SnfywgynXvfblE6J0bMLXzpujRgH2c2Q/edit?gid=0#gid=")[#underline[*documento condiviso su Google Fogli*]]. Questo strumento permette a ciascun membro di aggiornare il proprio calendario all'inizio di ogni settimana, specificando la disponibilità suddivisa per giorni e fasce orarie (mattina, primo pomeriggio, tardo pomeriggio, sera).
+Come ultimo punto dell'incontro, il gruppo ha discusso riguardo la *programmazione dei prossimi incontri*. Al fine di semplificare la pianificazione e assicurare la massima disponibilità di tutti i membri, è stato creato un #link("https://docs.google.com/spreadsheets/d/16KMeeW7fNX_SnfywgynXvfblE6J0bMLXzpujRgH2c2Q/edit?gid=982473282#gid=982473282")[#underline[*documento condiviso su Google Fogli*]]. Questo strumento permette a ciascun membro di aggiornare il proprio calendario all'inizio di ogni settimana, specificando la disponibilità suddivisa per giorni e fasce orarie (mattina, primo pomeriggio, tardo pomeriggio, sera).
 
 Nel dettaglio:
 

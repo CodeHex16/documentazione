@@ -7,8 +7,8 @@
     ora: [15:30-16:00],
     tipo: "esterno",
     versioni: (
-        "0.2.0", "30/10/2024", "Luca Ribon", "Aggiunta firma e modifica titolo",
-        "0.1.0", "25/10/2024", "Matteo Bazzan", "Prima stesura",
+        "0.2.0", "30/10/2024", "Luca Ribon", "Aggiunta firma e modifica titolo","",
+        "0.1.0", "25/10/2024", "Matteo Bazzan", "Prima stesura","",
     ),
     presenze: (
         "Matteo Bazzan","Redattore","30m",

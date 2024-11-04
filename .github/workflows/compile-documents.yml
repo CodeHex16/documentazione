@@ -24,12 +24,12 @@ jobs:
                   wget https://noto-website-2.storage.googleapis.com/pkgs/NotoSans-unhinted.zip -O /tmp/NotoSans-unhinted.zip
                   unzip /tmp/NotoSans-unhinted.zip -d $HOME/.local/share/fonts
                   fc-cache -f -v
-            
+
             - name: Install JetBrains Mono font
               run: |
-                wget https://download.jetbrains.com/fonts/JetBrainsMono-2.242.zip -O /tmp/JetBrainsMono.zip
-                unzip /tmp/JetBrainsMono.zip -d $HOME/.local/share/fonts
-                fc-cache -f -v
+                  wget https://download.jetbrains.com/fonts/JetBrainsMono-2.242.zip -O /tmp/JetBrainsMono.zip
+                  unzip /tmp/JetBrainsMono.zip -d $HOME/.local/share/fonts
+                  fc-cache -f -v
 
             - name: Remove old PDF files except for _ext and _firmato
               run: |
@@ -43,11 +43,11 @@ jobs:
 
             - name: Remove PDF files with same name as _ext or _firmato
               run: |
-                find . -name "*_ext.pdf" -o -name "*_firmato.pdf" | while read -r file; do
-                base=$(basename "$file" "_ext.pdf")
-                base=${base%_firmato.pdf}
-                find . -name "${base}.pdf" -exec rm {} \;
-                done
+                  find . -name "*_ext.pdf" -o -name "*_firmato.pdf" | while read -r file; do
+                  base=$(basename "$file" "_ext.pdf")
+                  base=${base%_firmato.pdf}
+                  find . -name "${base}.pdf" -exec rm {} \;
+                  done
 
             - name: Move PDF files to parent directory
               run: |
@@ -68,3 +68,40 @@ jobs:
                   git push
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+            - name: Checkout codehex16.github.io repository
+              uses: actions/checkout@v4
+              with:
+                  repository: codehex16/codehex16.github.io
+                  token: ${{ secrets.PAT_TOKEN }}
+                  path: codehex16.github.io
+
+            - name: File PDF trovati
+              run: |
+                find . -type f -name "*.pdf" \
+                  -not -path "./.git/*" \
+                  -not -path "./template/*" \
+                  -not -path "./.github/*" \
+                  -not -path "./codehex16.github.io/*" \
+                  -print
+
+            - name: Copia i file PDF compilati nella cartella docs mantenendo la struttura
+              run: |
+                mkdir -p codehex16.github.io/docs
+                find . -type f -name "*.pdf" \
+                  -not -path "./.git/*" \
+                  -not -path "./template/*" \
+                  -not -path "./.github/*" \
+                  -not -path "./codehex16.github.io/*" \
+                  -print0 | rsync -av --relative --files-from=- --from0 . codehex16.github.io/docs/
+
+            - name: Commit e push delle modifiche
+              working-directory: codehex16.github.io
+              run: |
+                  git config --global user.name 'github-actions[bot]'
+                  git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+                  git add docs/
+                  git commit -m 'Add compiled PDF files to docs/' || echo "No changes to commit"
+                  git push
+              env:
+                  GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
