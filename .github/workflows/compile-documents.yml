@@ -69,37 +69,32 @@ jobs:
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-            
             - name: Checkout codehex16.github.io repository
               uses: actions/checkout@v4
               with:
-                repository: codehex16/codehex16.github.io
-                token: ${{ secrets.PAT_TOKEN }}
-                path: codehex16.github.io
+                  repository: codehex16/codehex16.github.io
+                  token: ${{ secrets.PAT_TOKEN }}
+                  path: ../codehex16.github.io
 
             - name: debug
               run: |
-                  echo "HERE"
                   pwd
                   ls -la
-                  find . -name "*.pdf" 
-                  echo "HOME"
-                  cd ~
-                  pwd
-                  ls -la
-                  find . -name "*.pdf" 
+                  find . -name "*.pdf"
 
                   echo "find filtered"
-                  find . -name "*.pdf" -not -path "./codehex16.github.io/*" -not -path "./.git/*"
-                  echo "\n\n find filtered 2 \n"
-                  find . -name "*.pdf" -not -path "./codehex16.github.io/*" -not -path "./.git/*" -exec echo {} \;
+                  find . -name "*.pdf" -not -path "./.git/*"
 
+                  cd ..
+                  ls -la
+                  find . -name "*.pdf"
 
-            # - name: Copia i file PDF compilati nella cartella docs
-            #   run: |
-            #     mkdir -p codehex16.github.io/docs
-            #     find . -name "*.pdf" -not -path "./codehex16.github.io/*" -not -path "./.git/*" -exec rsync -R {} codehex16.github.io/docs/ \;
-              
+            - name: Copia i file PDF compilati nella cartella docs
+              run: |
+
+                  mkdir -p codehex16.github.io/docs
+                  find documentazione/ -name "*.pdf" -not -path "./.git/*" -exec rsync -R {} codehex16.github.io/docs/ \;
+
             # - name: Commit e push delle modifiche
             #   working-directory: codehex16.github.io
             #   run: |
