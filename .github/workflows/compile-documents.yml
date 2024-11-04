@@ -75,11 +75,11 @@ jobs:
                   repository: codehex16/codehex16.github.io
                   token: ${{ secrets.PAT_TOKEN}}
                   path: codehex16.github.io
-
+                  
             - name: Copia i file PDF nella cartella docs
               run: |
-                  mkdir -p codehex16.github.io/docs
-                  find . -name "*.pdf" -exec sh -c 'mkdir -p "codehex16.github.io/docs/$(dirname "$0")" && cp "$0" "codehex16.github.io/docs/$0"' {} \;
+                mkdir -p codehex16.github.io/docs
+                find . -name "*.pdf" -exec rsync -R {} codehex16.github.io/docs/ \;
 
             - name: Commit e push delle modifiche
               working-directory: codehex16.github.io
