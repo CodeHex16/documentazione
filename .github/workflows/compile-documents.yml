@@ -67,27 +67,27 @@ jobs:
                   git commit -m 'Add compiled PDF files'
                   git push
               env:
-                  GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
             - name: Checkout codehex16.github.io repository
-              uses: actions/checkout@v3
+              uses: actions/checkout@v4
               with:
-                  repository: codehex16/codehex16.github.io
-                  token: ${{ secrets.PAT_TOKEN}}
-                  path: codehex16.github.io
-                  
-            - name: Copia i file PDF nella cartella docs
+                repository: codehex16/codehex16.github.io
+                token: ${{ secrets.PAT_TOKEN }}
+                path: codehex16.github.io
+              
+            - name: Copia i file PDF compilati nella cartella docs
               run: |
                 mkdir -p codehex16.github.io/docs
-                find . -name "*.pdf" -exec rsync -R {} codehex16.github.io/docs/ \;
-
+                find . -name "*.pdf" -not -path "./codehex16.github.io/*" -not -path "./.git/*" -exec rsync -R {} codehex16.github.io/docs/ \;
+              
             - name: Commit e push delle modifiche
               working-directory: codehex16.github.io
               run: |
-                  git config --global user.name 'github-actions[bot]'
-                  git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-                  git add docs/**/*.pdf
-                  git commit -m 'Add compiled PDF files to docs/' || echo "No changes to commit"
-                  git push
+                git config --global user.name 'github-actions[bot]'
+                git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+                git add docs/**/*.pdf
+                git commit -m 'Add compiled PDF files to docs/' || echo "No changes to commit"
+                git push
               env:
-                  GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
+                GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
