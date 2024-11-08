@@ -14,8 +14,8 @@
         "Yi Hao Zhuo", "Verificatore"
     ),
     versioni : (
-        "0.2.0","04/11/2024","Gabriele Magnelli","Aggiornamenti successivi alle correzioni della prima candidatura","",
-        "0.1.0","28/10/2024","Filippo Sabbadin","Prima stesura","Francesco Fragonas",
+        "0.2.0","04/11/2024","Gabriele Magnelli","Aggiornamenti successivi alle correzioni della prima candidatura","Francesco Fragonas",
+        "0.1.0","28/10/2024","Filippo Sabbadin","Prima stesura","",
     ),
     doc,
 )
