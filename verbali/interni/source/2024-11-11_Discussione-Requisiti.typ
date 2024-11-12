@@ -7,7 +7,8 @@
     ora: [16:30-18:00],
     tipo: "interno",
     versioni: (
-      "0.1.0","08/11/2024","Francesco Fragonas","Prima stesura", "Gabriele Magnelli"
+      "0.2.0","12/11/2024","Filippo Sabbadin","Correzione dei ruoli", "Gabriele Magnelli",
+      "0.1.0","11/11/2024","Filippo Sabbadin","Prima stesura", "Gabriele Magnelli"
     ),
     presenze: (
         "Luca Ribon","Amministratore" ,"1h",
@@ -30,3 +31,4 @@ Dopo aver svolto l'incontro con Ergon, il gruppo ha lavorato alla preparazione d
 - *Stesura dell'analisi dei requisiti*: per avanzare con lo sviluppo, il team avvierà la stesura dell'analisi dei requisiti. In questa fase sarà fondamentale prendere una decisione definitiva sulla tipologia di applicazione da adottare (webapp o applicazione in .NET MAUI) e scegliere il modello di linguaggio (LLM) più adatto per soddisfare i requisiti funzionali richiesti.
 
 - *Definizione delle norme di progetto e del glossario*: il team inizierà anche a redigere le norme di progetto e il glossario per mantenere chiarezza all'interno del gruppo e con l'azienda proponente.
+

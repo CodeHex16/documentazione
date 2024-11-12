@@ -10,9 +10,9 @@
       "0.1.0","08/11/2024","Francesco Fragonas","Prima stesura", "Gabriele Magnelli"
     ),
     presenze: (
-        "Matteo Bazzan","Amministratore","2h20min",
-        "Luca Ribon","Responsabile" ,"2h20min",
-        "Francesco Fragonas", "Redattore", "2h20min",
+        "Matteo Bazzan","Verificatore","2h20min",
+        "Luca Ribon","Amministratore" ,"2h20min",
+        "Francesco Fragonas", "Responsabile", "2h20min",
         "Gabriele Magnelli","Verificatore","2h20min",
         "Filippo Sabbadin","Verificatore","2h",
     ),
