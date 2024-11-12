@@ -7,6 +7,7 @@
     ora: [15:00-18:00],
     tipo: "interno",
     versioni: (
+      "0.1.1","12/11/2024","Filippo Sabbadin","Sistemati link alle issue invertiti", "Matteo Bazzan",
       "0.1.0","12/11/2024","Filippo Sabbadin","Prima stesura", "Matteo Bazzan"
     ),
     presenze: (
@@ -43,6 +44,6 @@ Abbiamo iniziato la stesura dei documenti relativi alla sezione RTB (Requirement
 Oltre alla stesura dei primi documenti per la fase di RTB abbiamo realizzato il documento glossario.pdf, il quale raccoglie tutte le definizioni e significati ai termini specifici utilizzati nel contesto del progetto. L'idea è inoltre quella di realizzare una pagina web dedicata al glossario e mettere per ogni termine specifico nei documenti un collegamento alla relativa definizione.
 
 = Azioni future
-- #issue("25")[*Realizzazione pagina web glossario*]: per una migliore fruibilità dei documenti verrà realizzata una pagina web. In queso modo, cliccando sul termini evidenziati nei documenti, si verrà reindirizzati alla relativa definizione.
-- #issue("20")[*Validazione verbale esterno*]: a seguito dell'ultimo incontro con l'azienda Ergon abbiamo prodotto un verbale, il quale deve essere inviato al referente per una revisione e validazione.
+- #issue("20")[*Realizzazione pagina web glossario*]: per una migliore fruibilità dei documenti verrà realizzata una pagina web. In queso modo, cliccando sul termini evidenziati nei documenti, si verrà reindirizzati alla relativa definizione.
+- #issue("25")[*Validazione verbale esterno*]: a seguito dell'ultimo incontro con l'azienda Ergon abbiamo prodotto un verbale, il quale deve essere inviato al referente per una revisione e validazione.
 - *Continuazione stesura documenti*: prevediamo di continuare la stesura dei diversi documenti in base alle informazioni raccolte durante le lezioni e dopo l'incontro con Ergon.
