@@ -14,18 +14,18 @@
   ]
 }
 
-#let verbale(
-  titolo: "Titolo del verbale",
+#let documento(
+  titolo: "Titolo del documento",
   email: "unipd.codehex16@gmail.com",
-  ordine-del-giorno: (""),
   data: [],
-  ora: [],
-  tipo: "interno",
+  
   versioni : (
     "0.1.0","Data","Autore","Cambiamenti","Verificatore",
   ),
-  presenze: (
+
+  ruoli: (
   ),
+  
   contenuto,
 ) = {
   set text(font: "Noto Sans")
@@ -34,8 +34,6 @@
   show link : set text(font:"Jetbrains Mono");
 
 
-
-  
   grid(
     columns: (1fr, 1fr),
     align : horizon,
@@ -44,72 +42,55 @@
     image("images/logo_unipd.png", height: 6em),
     ), 
     align(right,
-      box(
-        align(center)[
-        #image("images/logo_extended.jpg", width: 13em)
-        #v(0em)
-        #text(size: 10pt, fill: rgb("#424242"),
-        link("mailto:unipd.codehex16@gmail.com"))
-        ]
-      )
+    box(
+      align(center)[
+      #image("images/logo_extended.jpg", width: 13em)
+      #v(0em)
+      #text(size: 10pt, fill: rgb("#424242"),
+      link("mailto:unipd.codehex16@gmail.com"))
+      ]
+    )
     )
   )
   
 
   // Titolo
   set align(center)
-  par(
-    justify: false, 
-    text(28pt, weight: "black", fill: black, hyphenate: false)[#titolo]
-  )
-  // Sottotitolo
-  text(16pt, weight: "bold", fill: black)[Verbale di riunione #tipo \ ]
+  align(horizon)[
+    #par(
+      justify: false, 
+      text(28pt, weight: "black", fill: black, hyphenate: false)[#titolo]
+    )
+  
+    #table(
+      columns: (auto,auto),
+      align: left,
+      inset: 10pt,
+      stroke: none,
+      [*Data*], [#data],
+      table.hline(stroke: 0.5pt),
+      [*Versione*], [#versioni.at(0)]
+    )
+    
+  ]
 
-  table(
-    columns: (auto,auto),
-    align: left,
-    inset: 10pt,
-    stroke: none,
-    [*Data*], [#data],
-    table.hline(stroke: 0.5pt),
-    [*Ora*], [#ora],
-    table.hline(stroke: 0.5pt),
-    [*Versione*], [#versioni.at(0)]
-  )
+  // Ruoli
 
-  block(
-    fill: luma(247),
-    radius: 0.5em,
-    inset: 2em,
-  // Ordine del giorno
-    [
-      #text(14pt, weight: "bold", fill: black)[Ordine del giorno]
-      #align(left)[
-        #text(12pt, weight: "regular", fill: black, )[
-          #list(tight: false,spacing: auto, ..ordine-del-giorno) 
-          //nota: nel caso l'argomento sia uno, aggiungere un virgola dentro la parentesi senza niente dopo, altrimenti da errore perché pensa sia una string e non una lista
-        ]
-      ]
-    ]
-  )
-
-  // Presenze
   set align(left)
-  table(
-        columns: (auto, auto, auto),
-        stroke: none,
-        table.vline(start: 1, x:1, stroke: 0.5pt),
-        table.vline(start:1, x:2, stroke: 0.5pt),
-        inset: 9pt,
-        table.header(text(size:14pt)[*Presenze*]),
-        ..presenze
-      )
-
+  align(bottom)[
+    #table(
+          columns: (auto, auto),
+          stroke: none,
+          table.vline(start: 1, x:1, stroke: 0.5pt),
+          inset: 10pt,
+          table.header(text(size:14pt)[*Ruoli*]),
+          ..ruoli
+        )
+  ]
 
   // Versionamento
   pagebreak()
   text(size: 16pt, weight: "black", "Registro delle Versioni")
-  set table.cell(breakable: true)
   show table.cell : it => [
     #par(justify: false)[
       #text(hyphenate: false, it)
@@ -117,16 +98,16 @@
   ]
 
   table(
+    align: left,
     columns: (auto,auto,auto,auto,auto),
     fill: (x,y) => if (y== 0) { luma(230) },
     inset: 10pt,
     table.header(
       [*Versione*],[*Data*],[*Autore*],[*Cambiamenti*],[*Verificatore*]
     ),
-    ..versioni
+    ..versioni     
   )
-      
-
+  
   // Indice
   pagebreak()
   
@@ -155,30 +136,17 @@
   }
   outline(title: [Indice], indent: auto)
 
-
-  pagebreak()
   // CONTENUTO 
   set page(numbering: "1")
   set align(left)
-  set heading(numbering: "1.")
-  show heading.where(level: 1): set align(center)
-  show heading : it => [
+  set heading(numbering: none)
+  show heading.where(level: 1): it => [
+    #pagebreak()
+    #text(size: 35pt, it)
+  ]
+  show heading : it => [ 
     #it
-    #v(0.2em)
   ] 
-  
   counter(page).update(1)
   contenuto
-
-  if tipo == "esterno" {
-    align(bottom+right, 
-      box()[
-        #align(left,
-          text("Firma referente azienda")
-        )
-        #v(3em)
-        #line(length: 20em)  
-      ]
-    )
-  }
 }

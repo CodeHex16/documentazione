@@ -1,3 +1,19 @@
+#let gloss(body) = {
+  link("https://codehex16.github.io/glossario#"+body.text)[
+    #text(blue, size:12pt, font: "Noto Sans")[#underline[#body]\*]
+  ]
+}
+
+#let issue(number, title) = {
+  show link : it => {
+    set text(font: "Noto Sans")
+    underline(it)
+  }
+  link("https://github.com/CodeHex16/documentazione/issues/"+number)[
+    #title
+  ]
+}
+
 #let documento(
   titolo: "Titolo del documento",
   email: "unipd.codehex16@gmail.com",
@@ -17,7 +33,6 @@
   set text(size: 12pt)
   set par(justify: true, linebreaks: "optimized",first-line-indent:1em)
   show link : set text(font:"Jetbrains Mono");
-
 
   grid(
     columns: (1fr, 1fr),
@@ -90,7 +105,11 @@
   // Versionamento
   pagebreak()
   text(size: 16pt, weight: "black", "Registro delle Versioni")
-  show table.cell : set text(hyphenate: false)
+  show table.cell : it => [
+    #par(justify: false)[
+      #text(hyphenate: false, it)
+    ]
+  ]
   table(
     align: left,
     columns: (auto,auto,auto,auto,auto),
