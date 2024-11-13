@@ -87,22 +87,27 @@ jobs:
 
             - name: File PDF trovati
               run: |
-                find . -type f -name "*.pdf" \
-                  -not -path "./.git/*" \
-                  -not -path "./template/*" \
-                  -not -path "./.github/*" \
-                  -not -path "./codehex16.github.io/*" \
-                  -print
+                  find . -type f -name "*.pdf" \
+                    -not -path "./.git/*" \
+                    -not -path "./template/*" \
+                    -not -path "./.github/*" \
+                    -not -path "./codehex16.github.io/*" \
+                    -print
 
             - name: Copia i file PDF compilati nella cartella docs mantenendo la struttura
               run: |
-                mkdir -p codehex16.github.io/docs
-                find . -type f -name "*.pdf" \
-                  -not -path "./.git/*" \
-                  -not -path "./template/*" \
-                  -not -path "./.github/*" \
-                  -not -path "./codehex16.github.io/*" \
-                  -print0 | rsync -av --relative --files-from=- --from0 . codehex16.github.io/docs/
+                  mkdir -p codehex16.github.io/docs
+                  find . -type f -name "*.pdf" \
+                    -not -path "./.git/*" \
+                    -not -path "./template/*" \
+                    -not -path "./.github/*" \
+                    -not -path "./codehex16.github.io/*" \
+                    -print0 | rsync -av --relative --files-from=- --from0 . codehex16.github.io/docs/
+
+            # Estrae il glossario dal file .typ e lo salva in glossario.txt dal commento //GLOSSARIO in poi
+            - name: glossario.txt per la pagina web
+              run: |
+                  awk '/^\/\/GLOSSARIO/ {flag=1; next} flag' glossario/source/glossario.typ > codehex16.github.io/docs/glossario/glossario.txt
 
             - name: Commit e push delle modifiche
               working-directory: codehex16.github.io

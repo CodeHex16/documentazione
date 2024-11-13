@@ -16,10 +16,11 @@
     sommario: [Analisi dei requisiti del capitolato C7],
     
     versioni : (
-      "0.1.0","12/11/2024","Francesco Fragonas","Prima stesura", ""
+      "0.1.0","12/11/2024","Francesco Fragonas","Prima stesura", "Matteo Bazzan"
     ),
     doc,
 )
+
 = Introduzione
 == Scopo del documento
 Il presente documento descrive in dettaglio i *casi d'uso* e i *requisiti* relativi al progetto "LLM, Assistente Virtuale". Tali specifiche sono state elaborate a partire dall'analisi del capitolato C7, proposto da Ergon, e dagli incontri svolti online e in presenza con l'azienda.
