@@ -1,7 +1,5 @@
 #let gloss(body) = {
-  link("https://codehex16.github.io/glossario#"+body.text)[
-    #text(blue, size:12pt, font: "Noto Sans")[#underline[#body]\*]
-  ]
+  link("https://codehex16.github.io/glossario#"+body.text)[#text(blue, size:12pt, font: "Noto Sans")[#underline[#body]\*]]
 }
 
 #let issue(number, title) = {
