@@ -3,10 +3,11 @@
 #show : doc => verbale(
     titolo: "Inizio stesura documenti RTB",
     ordine-del-giorno: ("Ampliamento GitHub Labels","Stesura documento Analisi dei requisiti"),
-    data: [08/11/2024],
+    data: [12/11/2024],
     ora: [15:00-18:00],
     tipo: "interno",
     versioni: (
+      "0.1.2","13/11/2024","Luca Ribon","Sistemati la data di redazione", "Matteo Bazzan",
       "0.1.1","12/11/2024","Filippo Sabbadin","Sistemati link alle issue invertiti", "Matteo Bazzan",
       "0.1.0","12/11/2024","Filippo Sabbadin","Prima stesura", "Matteo Bazzan"
     ),
