@@ -8,6 +8,19 @@ Documentazione del Gruppo 16 per il Progetto di **Ingegneria del Software** dell
 ## Struttura delle cartelle
 
 ```
-{{tree-dir}}
+documentazione/
+├── /📁 1 - candidatura
+|  └── /📁 source
+├── /📁 2 - RTB
+|  └── /📁 source
+├── /📁 glossario
+|  └── /📁 source
+├── /📁 template
+|  └── /📁 images
+└── /📁 verbali
+   ├── /📁 esterni
+   |  └── /📁 source
+   └── /📁 interni
+      └── /📁 source
 
 ```
