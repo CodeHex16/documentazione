@@ -67,16 +67,39 @@ jobs:
                   name: Documentazione-CodeHex16
                   path: "**/*.pdf"
 
+            - name: Install nodejs and tree-emoji-cli
+              run: |
+                  sudo apt install -y nodejs npm
+                  npm install -g tree-emoji-cli
+            - name: Generate tree structure and update README.md
+              run: |
+                  tree -l 6 -df -o tree.txt --noreport
+                  python3 -c "
+                  tree = ''
+                  with open('tree.txt', 'r') as file:
+                    lines = file.readlines()
+                    lines[1] = 'documentazione/\n'
+                    tree = ''.join(lines)
+
+                  with open('README.md', 'r+') as readme:
+                    content = readme.read()
+                    content = content.replace('{{tree-dir}}', tree.strip())
+                    readme.seek(0)
+                    readme.write(content)
+                  "
+                  cat README.md
+                  rm tree.txt
+
             - name: Commit and push PDF files
               run: |
                   git config --global user.name 'github-actions[bot]'
                   git config --global user.email 'github-actions[bot]@users.noreply.github.com'
                   git pull 
                   git add .
-                  git commit -m 'Add compiled PDF files'
+                  git commit -m 'Add compiled PDF files and update README.md'
                   git push
               env:
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                  GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
 
             - name: Checkout codehex16.github.io repository
               uses: actions/checkout@v4
@@ -84,15 +107,6 @@ jobs:
                   repository: codehex16/codehex16.github.io
                   token: ${{ secrets.PAT_TOKEN }}
                   path: codehex16.github.io
-
-            - name: File PDF trovati
-              run: |
-                  find . -type f -name "*.pdf" \
-                    -not -path "./.git/*" \
-                    -not -path "./template/*" \
-                    -not -path "./.github/*" \
-                    -not -path "./codehex16.github.io/*" \
-                    -print
 
             - name: Copia i file PDF compilati nella cartella docs mantenendo la struttura
               run: |
