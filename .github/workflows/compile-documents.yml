@@ -87,7 +87,7 @@ jobs:
                   # aggiunge commenti per i file di template e immagini e .pdf
                   lines = tree.split('\n')
                   new_content = []
-                  new_content.append('```')
+                  new_content.append('\`\`\`')
                   for line in lines:
                     if 'template' in line:
                       line += '\t\t# file di template per i documenti'
@@ -98,7 +98,7 @@ jobs:
                       new_line = line.replace('/📁 source', '📄 *.pdf')
                       new_content.append(new_line)
                     
-                  new_content.append('```')
+                  new_content.append('\`\`\`')
                   tree = '\n'.join(new_content)        
 
                   with open('README.md', 'r+') as readme:
