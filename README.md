@@ -6,22 +6,27 @@
 Documentazione del Gruppo 16 per il Progetto di **Ingegneria del Software** dell'Università degli Studi di Padova _A.A. 2024-2025_
 
 ## Struttura delle cartelle
-<!-- INIZIO TREE DIRECTORY -->
 ```
+
 documentazione/
 ├── /📁 1 - candidatura
 |  └── /📁 source
+|  └── 📄 *.pdf
 ├── /📁 2 - RTB
 |  └── /📁 source
+|  └── 📄 *.pdf
 ├── /📁 glossario
 |  └── /📁 source
-├── /📁 template
-|  └── /📁 images
+|  └── 📄 *.pdf
+├── /📁 template		# file di template per i documenti
+|  └── /📁 images		# assets per i documenti
 └── /📁 verbali
    ├── /📁 esterni
    |  └── /📁 source
+   |  └── 📄 *.pdf
    └── /📁 interni
       └── /📁 source
+      └── 📄 *.pdf
+
 
 ```
-<!-- FINE TREE DIRECTORY -->
