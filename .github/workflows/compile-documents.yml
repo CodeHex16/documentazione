@@ -95,7 +95,7 @@ jobs:
                       line += '\t\t# assets per i documenti'
                     new_content.append(line)
                     if 'source' in line:
-                      new_line = line.replace('/📁 source', '📄 *.pdf')
+                      new_line = line.replace('📁 source', '📄 *.pdf')
                       new_content.append(new_line)
                     
                   new_content.append('\`\`\`\n')
