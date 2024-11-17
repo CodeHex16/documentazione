@@ -73,7 +73,7 @@ jobs:
                   npm install -g tree-emoji-cli
             - name: Generate tree structure and update README.md
               run: |
-                  tree -l 6 -df -o tree.txt --noreport
+                  tree -l 6 -d -o tree.txt --noreport
                   python3 -c "
                   import re
 
