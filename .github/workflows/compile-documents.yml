@@ -82,12 +82,14 @@ jobs:
                   with open('tree.txt', 'r') as file:
                     lines = file.readlines()
                     lines[1] = 'documentazione/\n'
-                    tree = ''.join(lines) 
+                    tree = ''.join(lines)
+                    tree = tree.strip()
                   print(tree)
                   # aggiunge commenti per i file di template e immagini e .pdf
                   lines = tree.split('\n')
                   new_content = []
-                  new_content.append('\n\`\`\`')
+                  new_content.append('<!-- INIZIO TREE DIRECTORY -->')
+                  new_content.append('\`\`\`')
                   for line in lines:
                     if 'template' in line:
                       line += '\t\t# file di template per i documenti'
@@ -98,7 +100,8 @@ jobs:
                       new_line = line.replace('📁 source', '📄 *.pdf')
                       new_content.append(new_line)
                     
-                  new_content.append('\`\`\`\n')
+                  new_content.append('\`\`\`')
+                  new_content.append('<!-- FINE TREE DIRECTORY -->')
                   tree = '\n'.join(new_content)        
 
                   with open('README.md', 'r+') as readme:
@@ -153,3 +156,4 @@ jobs:
                   git push
               env:
                   GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
+

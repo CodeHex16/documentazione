@@ -6,6 +6,7 @@
 Documentazione del Gruppo 16 per il Progetto di **Ingegneria del Software** dell'Università degli Studi di Padova _A.A. 2024-2025_
 
 ## Struttura delle cartelle
+<!-- INIZIO TREE DIRECTORY -->
 ```
 
 documentazione/
@@ -30,3 +31,4 @@ documentazione/
 
 
 ```
+<!-- FINE TREE DIRECTORY -->
