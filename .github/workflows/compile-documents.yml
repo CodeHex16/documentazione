@@ -104,6 +104,7 @@ jobs:
                   new_content.append('<!-- FINE TREE DIRECTORY -->')
                   tree = '\n'.join(new_content)        
 
+                  print(tree)
                   with open('README.md', 'r+') as readme:
                     content = readme.read()
                     content = re.sub('<!-- INIZIO TREE DIRECTORY -->?(.*?)<!-- FINE TREE DIRECTORY -->', tree.strip(), content, flags=re.DOTALL)

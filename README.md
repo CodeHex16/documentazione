@@ -28,4 +28,4 @@ documentazione/
       └── 📁 source
       └── 📄 *.pdf
 ```
-<!-- FINE TREE DIRECTORY -->EE DIRECTORY -->
+<!-- FINE TREE DIRECTORY -->
