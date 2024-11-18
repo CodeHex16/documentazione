@@ -8,27 +8,24 @@ Documentazione del Gruppo 16 per il Progetto di **Ingegneria del Software** dell
 ## Struttura delle cartelle
 <!-- INIZIO TREE DIRECTORY -->
 ```
-
 documentazione/
-├── /📁 1 - candidatura
-|  └── /📁 source
+├── 📁 1 - candidatura
+|  └── 📁 source
 |  └── 📄 *.pdf
-├── /📁 2 - RTB
-|  └── /📁 source
+├── 📁 2 - RTB
+|  └── 📁 source
 |  └── 📄 *.pdf
-├── /📁 glossario
-|  └── /📁 source
+├── 📁 glossario
+|  └── 📁 source
 |  └── 📄 *.pdf
-├── /📁 template		# file di template per i documenti
-|  └── /📁 images		# assets per i documenti
-└── /📁 verbali
-   ├── /📁 esterni
-   |  └── /📁 source
+├── 📁 template		# file di template per i documenti
+|  └── 📁 images		# assets per i documenti
+└── 📁 verbali
+   ├── 📁 esterni
+   |  └── 📁 source
    |  └── 📄 *.pdf
-   └── /📁 interni
-      └── /📁 source
+   └── 📁 interni
+      └── 📁 source
       └── 📄 *.pdf
-
-
 ```
-<!-- FINE TREE DIRECTORY -->
+<!-- FINE TREE DIRECTORY -->EE DIRECTORY -->
