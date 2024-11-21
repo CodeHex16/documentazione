@@ -67,16 +67,63 @@ jobs:
                   name: Documentazione-CodeHex16
                   path: "**/*.pdf"
 
+            - name: Install nodejs and tree-emoji-cli
+              run: |
+                  sudo apt install -y nodejs npm
+                  npm install -g tree-emoji-cli
+            - name: Generate tree structure and update README.md
+              run: |
+                  tree -l 6 -d -o tree.txt --noreport
+                  python3 -c "
+                  import re
+
+                  tree = ''
+                  # cambia il nome della cartella principale in documentazione/
+                  with open('tree.txt', 'r') as file:
+                    lines = file.readlines()
+                    lines[1] = 'documentazione/\n'
+                    tree = ''.join(lines)
+                    tree = tree.strip()
+                  print(tree)
+                  # aggiunge commenti per i file di template e immagini e .pdf
+                  lines = tree.split('\n')
+                  new_content = []
+                  new_content.append('<!-- INIZIO TREE DIRECTORY -->')
+                  new_content.append('\`\`\`')
+                  for line in lines:
+                    if 'template' in line:
+                      line += '\t\t# file di template per i documenti'
+                    elif 'image' in line:
+                      line += '\t\t# assets per i documenti'
+                    new_content.append(line)
+                    if 'source' in line:
+                      new_line = line.replace('📁 source', '📄 *.pdf')
+                      new_content.append(new_line)
+                    
+                  new_content.append('\`\`\`')
+                  new_content.append('<!-- FINE TREE DIRECTORY -->')
+                  tree = '\n'.join(new_content)        
+
+                  print(tree)
+                  with open('README.md', 'r+') as readme:
+                    content = readme.read()
+                    content = re.sub('<!-- INIZIO TREE DIRECTORY -->?(.*?)<!-- FINE TREE DIRECTORY -->', tree.strip(), content, flags=re.DOTALL)
+                    readme.seek(0)
+                    readme.write(content)
+                  "
+                  cat README.md
+                  rm tree.txt
+
             - name: Commit and push PDF files
               run: |
                   git config --global user.name 'github-actions[bot]'
                   git config --global user.email 'github-actions[bot]@users.noreply.github.com'
                   git pull 
                   git add .
-                  git commit -m 'Add compiled PDF files'
+                  git commit -m 'Add compiled PDF files and update README.md'
                   git push
               env:
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                  GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
 
             - name: Checkout codehex16.github.io repository
               uses: actions/checkout@v4
@@ -84,15 +131,6 @@ jobs:
                   repository: codehex16/codehex16.github.io
                   token: ${{ secrets.PAT_TOKEN }}
                   path: codehex16.github.io
-
-            - name: File PDF trovati
-              run: |
-                  find . -type f -name "*.pdf" \
-                    -not -path "./.git/*" \
-                    -not -path "./template/*" \
-                    -not -path "./.github/*" \
-                    -not -path "./codehex16.github.io/*" \
-                    -print
 
             - name: Copia i file PDF compilati nella cartella docs mantenendo la struttura
               run: |
@@ -119,3 +157,4 @@ jobs:
                   git push
               env:
                   GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
+
