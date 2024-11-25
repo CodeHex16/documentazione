@@ -9,7 +9,6 @@ permissions:
 
 jobs:
     build:
-        if: github.actor != 'github-actions[bot]'
         runs-on: ubuntu-latest
         steps:
             - name: Checkout
@@ -118,7 +117,7 @@ jobs:
                   git config --global user.email 'github-actions[bot]@users.noreply.github.com'
                   git pull 
                   git add .
-                  git commit -m 'Add compiled PDF files and update README.md'
+                  git commit -m 'Add compiled PDF files and update README.md [skip ci]'
                   git push
               env:
                   GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
