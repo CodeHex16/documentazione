@@ -2,7 +2,9 @@ name: Compile Typst docs
 on:
     pull_request_target:
         types:
-            - closed
+            - opened
+            - synchronize
+            - reopened
         branches:
             - main
     push:
