@@ -73,7 +73,7 @@ jobs:
 
             - name: Install nodejs and tree-emoji-cli
               run: |
-                  sudo apt install -y nodejs npm
+                  sudo apt install -y nodejs
                   npm install -g tree-emoji-cli
             - name: Generate tree structure and update README.md
               run: |
@@ -120,7 +120,7 @@ jobs:
 
             - name: Commit and push PDF files
               run: |
-                  git config --globa                  git config --globak
+                  git config --global user.name 'github-actions[bot]'
                   git config --global user.email 'github-actions[bot]@users.noreply.github.com'
                   git pull 
                   git add .
