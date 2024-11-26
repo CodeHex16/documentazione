@@ -32,9 +32,7 @@ Un chatbot è un programma informatico progettato per simulare una conversazione
 = D
 == Discord
 Discord è un'applicazione di chat vocale e testuale progettata per i giocatori. Offre funzionalità avanzate come chat di gruppo, canali vocali, bot personalizzati e molto altro. Discord è ampiamente utilizzato per la comunicazione in tempo reale tra i membri di un team di sviluppo.
-= E
-== Esempio
-esempio
+
 = G
 == Github
 GitHub è una piattaforma di hosting per il controllo versione e la collaborazione nello sviluppo software. Permette agli sviluppatori di gestire e tracciare le modifiche del codice sorgente dei loro progetti, sia privati che open source. GitHub facilita il lavoro in team grazie a funzionalità come il tracciamento delle issue, le pull request, le code review e la gestione delle release. La piattaforma è basata sul sistema di controllo versione Git.
