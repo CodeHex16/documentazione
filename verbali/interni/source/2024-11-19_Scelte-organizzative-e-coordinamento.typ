@@ -7,7 +7,7 @@
     ora: [16:00-18:15],
     tipo: "interno",
     versioni: (
-      "0.1.1", "26/11/2024", "Yi Hao Zhuo", "Aggiunta link glossario", "",
+      "0.1.1", "26/11/2024", "Yi Hao Zhuo", "Aggiunta link glossario", "Luca Rossi",
       "0.1.0","19/11/2024","Luca Ribon","Prima stesura", "Filippo Sabbadin"
     ),
     presenze: (

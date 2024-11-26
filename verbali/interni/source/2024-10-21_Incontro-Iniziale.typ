@@ -6,7 +6,7 @@
     data: [21/10/2024],
     ora: [14:30-16:00],
     versioni: (
-      "0.3.0", "26/11/2024", "Yi Hao Zhuo", "Aggiunta link glossario","",
+      "0.2.1", "26/11/2024", "Yi Hao Zhuo", "Aggiunta link glossario","Luca Rossi",
       "0.2.0","28/10/2024","Matteo Bazzan","Aggiunta Conclusioni","Yi Hao Zhuo",
       "0.1.0","21/10/2024","Matteo Bazzan","Prima stesura","Yi Hao Zhuo",
   ),

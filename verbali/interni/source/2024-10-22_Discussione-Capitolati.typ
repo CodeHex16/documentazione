@@ -7,7 +7,7 @@
     ora: [14:30-15:30],
     tipo: "interno",
     versioni: (
-      "0.4.0","26/11/2024","Yi Hao Zhuo","Aggiunta link glossario","",
+      "0.3.1","26/11/2024","Yi Hao Zhuo","Aggiunta link glossario","Luca Rossi",
       "0.3.0","24/10/2024","Luca Ribon","Correzione errori nel testo","Yi Hao Zhuo",
       "0.2.0","22/10/2024","Francesco Fragonas","Aggiunta terza preferenza","Yi Hao Zhuo",
       "0.1.0","22/10/2024","Filippo Sabbadin","Prima stesura","Yi Hao Zhuo",

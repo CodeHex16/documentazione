@@ -7,7 +7,7 @@
     ora: [16:30-18:00],
     tipo: "interno",
     versioni: (
-      "0.3.0","26/11/2024","Yi Hao Zhuo","Aggiunta link glossario", "",
+      "0.2.1","26/11/2024","Yi Hao Zhuo","Aggiunta link glossario", "Luca Rossi",
       "0.2.0","12/11/2024","Filippo Sabbadin","Correzione dei ruoli", "Gabriele Magnelli",
       "0.1.0","11/11/2024","Filippo Sabbadin","Prima stesura", "Gabriele Magnelli"
     ),

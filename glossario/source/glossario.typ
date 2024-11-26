@@ -13,35 +13,35 @@
         "Yi Hao Zhuo", "Verificatore"
     ),
     versioni : (
-        "0.2.0","26/11/2024","Yi Hao Zhuo","Aggiunta link glossario","",
-        "0.1.0","12/11/2024","Matteo Bazzan","Prima stesura","",
+        "0.2.0","26/11/2024","Yi Hao Zhuo","Aggiunta link glossario","Luca Rossi",
+        "0.1.0","12/11/2024","Matteo Bazzan","Prima stesura","Yi Hao Zhuo",
     ),
     doc,
 )
 // NON CANCELLARE IL COMMENTO NELLA RIGA SUCCESSIVA
 //GLOSSARIO
 = B
-== backlog
+== Backlog
 Il backlog è un insieme di attività, funzionalità o requisiti che devono essere completati durante lo sviluppo di un progetto software. Il backlog è una lista dinamica che può essere aggiornata e modificata nel corso del tempo per rispondere alle esigenze del progetto. Esistono diversi tipi di backlog, tra cui il product backlog, lo sprint backlog e il release backlog, ciascuno con uno scopo specifico all'interno del processo di sviluppo agile.
 
 = C
 == CodeHex16
 CodeHex16 è il nome del gruppo di lavoro.
-== chatbot
+== Chatbot
 Un chatbot è un programma informatico progettato per simulare una conversazione umana attraverso chat o messaggi di testo. I chatbot possono essere utilizzati per rispondere a domande, fornire informazioni, assistere gli utenti e automatizzare processi. I chatbot possono essere implementati su diverse piattaforme, come siti web, applicazioni di messaggistica e social media.
 = D
 == Discord
 Discord è un'applicazione di chat vocale e testuale progettata per i giocatori. Offre funzionalità avanzate come chat di gruppo, canali vocali, bot personalizzati e molto altro. Discord è ampiamente utilizzato per la comunicazione in tempo reale tra i membri di un team di sviluppo.
 = E
-== esempio
+== Esempio
 esempio
 = G
 == Github
 GitHub è una piattaforma di hosting per il controllo versione e la collaborazione nello sviluppo software. Permette agli sviluppatori di gestire e tracciare le modifiche del codice sorgente dei loro progetti, sia privati che open source. GitHub facilita il lavoro in team grazie a funzionalità come il tracciamento delle issue, le pull request, le code review e la gestione delle release. La piattaforma è basata sul sistema di controllo versione Git.
 == Github Issues
 Le GitHub Issues sono uno strumento di tracciamento delle attività disponibile su GitHub. Consentono di creare, assegnare e monitorare le attività da svolgere all'interno di un progetto. Le issue possono essere utilizzate per segnalare bug, richiedere nuove funzionalità, pianificare attività e comunicare con i membri del team. Ogni issue può essere associata a un'etichetta, una milestone, un assegnatario e una descrizione dettagliata.
-== GitHub board
-Il GitHub board è uno strumento di visualizzazione delle attività disponibile su GitHub. Consente di organizzare e monitorare le issue di un progetto in colonne, rappresentando lo stato di avanzamento di ciascuna attività. Le colonne tipiche di un GitHub board sono "To Do", "In Progress" e "Done", ma è possibile personalizzarle in base alle esigenze del team. Il GitHub board facilita la gestione delle attività e la collaborazione tra i membri del team.
+== GitHub Board
+Il GitHub Board è uno strumento di visualizzazione delle attività disponibile su GitHub. Consente di organizzare e monitorare le issue di un progetto in colonne, rappresentando lo stato di avanzamento di ciascuna attività. Le colonne tipiche di un GitHub Board sono "To Do", "In Progress" e "Done", ma è possibile personalizzarle in base alle esigenze del team. Il GitHub Board facilita la gestione delle attività e la collaborazione tra i membri del team.
 == Github Page
 GitHub Page è un servizio offerto da GitHub che consente di creare e pubblicare siti web statici direttamente da un repository GitHub. È possibile utilizzare GitHub Page per ospitare documentazione, pagine personali, blog e progetti open source. GitHub Page supporta l'integrazione con Jekyll, un generatore di siti statici, e offre funzionalità di personalizzazione e hosting gratuito.
 == Github Milestone
@@ -52,7 +52,7 @@ Le GitHub Labels sono etichette utilizzate per categorizzare e identificare le i
 == LLM
 LLM è l'acronimo di "Linguaggio di Markup Leggero". Si tratta di un linguaggio di markup testuale sviluppato appositamente per la stesura di documenti. LLM è stato scelto per la sua semplicità d'uso e la versatilità.
 = M
-== middleware
+== Middleware
 Il middleware è un software che si colloca tra il sistema operativo e le applicazioni, facilitando la comunicazione e lo scambio di dati tra di essi. Il middleware svolge un ruolo fondamentale nell'integrazione di sistemi eterogenei e nella creazione di architetture distribuite. Esistono diversi tipi di middleware, tra cui i message broker, i web server e i database server.
 = N
 == .NET MAUI
@@ -63,7 +63,7 @@ Notion è un'applicazione di produttività che combina strumenti di gestione del
 == ODBC
 ODBC è l'acronimo di "Open Database Connectivity". Si tratta di uno standard che consente alle applicazioni di accedere a database di diversi fornitori utilizzando un'interfaccia standard. ODBC facilita l'accesso ai dati e la loro integrazione tra diverse piattaforme e sistemi di gestione dei database.
 = P
-== practice
+== Practice
 Il termine practice si riferisce a un'attività o un insieme di attività che vengono eseguite regolarmente per migliorare le competenze e le capacità di un individuo o di un team. Le practice possono essere utilizzate per acquisire esperienza, consolidare le conoscenze e sviluppare abilità specifiche in un determinato campo. Le practice possono essere individuali o collettive e possono essere applicate in diversi contesti, come lo sviluppo software, la gestione dei progetti e la formazione.
 = R
 == RTB(Requirements and Technology Baseline)
