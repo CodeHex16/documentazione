@@ -7,9 +7,10 @@
     ora: [14:30-15:30],
     tipo: "interno",
     versioni: (
-      "0.3.0","24/10/2024","Luca Ribon","","Correzione errori nel testo",
-      "0.2.0","22/10/2024","Francesco Fragonas","","Aggiunta terza preferenza",
-      "0.1.0","22/10/2024","Filippo Sabbadin","","Prima stesura",
+      "0.4.0","26/11/2024","Yi Hao Zhuo","Aggiunta link glossario","",
+      "0.3.0","24/10/2024","Luca Ribon","Correzione errori nel testo","Yi Hao Zhuo",
+      "0.2.0","22/10/2024","Francesco Fragonas","Aggiunta terza preferenza","Yi Hao Zhuo",
+      "0.1.0","22/10/2024","Filippo Sabbadin","Prima stesura","Yi Hao Zhuo",
     ),
     presenze: (
         "Filippo Sabbadin","Redattore","1h",
@@ -26,9 +27,9 @@
 
 == Revisione dei capitolati proposti
 
-Nel corso di questo incontro, il gruppo ha effettuato una revisione approfondita dei capitolati disponibili, con l’obiettivo di definire una strategia per la scelta finale del progetto da sviluppare. Nello specifico, si è deciso di riconsiderare le preferenze espresse durante il primo incontro, alla luce delle nuove riflessioni e dei criteri emersi dalla discussione.
+Nel corso di questo incontro, il gruppo ha effettuato una revisione approfondita dei capitolati disponibili, con l'obiettivo di definire una strategia per la scelta finale del progetto da sviluppare. Nello specifico, si è deciso di riconsiderare le preferenze espresse durante il primo incontro, alla luce delle nuove riflessioni e dei criteri emersi dalla discussione.
 
-I capitolati in esame erano complessivamente nove, tra i quali il gruppo ha selezionato tre preferenze principali, ordinate in base a vari fattori, tra cui la presenza di tecnologie innovative (in particolare l'intelligenza artificiale), la rilevanza del progetto nel mercato del lavoro e la fattibilità in termini di competenze richieste.
+I capitolati in esame erano complessivamente nove, tra i quali il gruppo ha selezionato tre preferenze principali, ordinate in base a vari fattori, tra cui la presenza di #gloss[tecnologie innovative] (in particolare l'intelligenza artificiale), la rilevanza del progetto nel mercato del lavoro e la fattibilità in termini di competenze richieste.
 
 == Criteri di selezione
 
@@ -54,14 +55,14 @@ Capitolato scelto come terza preferenza:
 "*Vimar GENIALE*" (Azienda: Vimar)
 
 = Comunicazione con l'azienda Ergon Informatica Srl
-Al termine della decisione sui capitolati, il gruppo ha concordato di inviare una prima e-mail all'azienda *Ergon Informatica Srl*, in merito al capitolato "LLM: Assistente Virtuale". L'obiettivo della comunicazione era quello di ottenere maggiori informazioni riguardo al progetto e alle tecnologie consigliate per lo sviluppo. 
+Al termine della decisione sui capitolati, il gruppo ha concordato di inviare una prima e-mail all'azienda *Ergon Informatica Srl*, in merito al capitolato "#gloss[LLM]: Assistente Virtuale". L'obiettivo della comunicazione era quello di ottenere maggiori informazioni riguardo al progetto e alle tecnologie consigliate per lo sviluppo. 
 
 Sono state poste le seguenti domande:
 
 - Si suppone che per il reperimento dei dati siano supportati almeno i formati .pdf e .txt; ne vengono rischiesti altri? 
 - Che parametri si vogliono rendere configurabili tramite l'interfaccia utente?
 - Citando: _"La piattaforma nel suo complesso, deve tener conto del flusso di interazioni uomo-macchina con i relativi tempi di attesa mantenendo uno stato complessivo sulla conversazione aggiornato."_ ci si riferisce al fatto che l'interazione via chat abbia attese brevi in modo che l'interazione risulti naturale e fluente?
-- Pro e contro nell'uso di fonti dati ODBC o di un middleware per la comunicazione tra database e LLM?
+- Pro e contro nell'uso di fonti dati #gloss[ODBC] o di un #gloss[middleware] per la comunicazione tra database e LLM?
 - Vengono fornite delle risorse per poter interagire o hostare i LLM (se necessario), soprattutto in vista di una fase di debugging e/o testing del prodotto?
 
 = Organizzazione degli incontri futuri

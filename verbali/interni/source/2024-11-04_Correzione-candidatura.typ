@@ -7,6 +7,7 @@
     ora: [14:40-17:20],
     tipo: "interno",
     versioni: (
+      "0.2.0","04/11/2024","Yi Hao Zhuo","Aggiunta link glossario", "",
       "0.1.0","04/11/2024","Francesco Fragonas","Prima stesura", "Gabriele Magnelli"
     ),
     presenze: (
@@ -28,7 +29,7 @@ Il costo totale è stato ridotto da 13.350 a *12.895*, rispettando tutti i requi
 La rotazione dei ruoli seguirà un elenco in ordine alfabetico per l'assegnazione iniziale, con una variazione settimanale dei ruoli in modalità circolare. È prevista la possibilità di modificare la frequenza di rotazione, consentendo inoltre che alcuni membri possano mantenere uno stesso ruolo più a lungo, se necessario, per garantire continuità nello svolgimento delle attività.
 
 == Revisione e miglioramento della GitHub page
-È stato risolto il problema segnalato dei link: ora i file fanno parte della Github Page, quindi è possibile visualizzarli direttamente nel browser in un'altra scheda, senza lo scaricamento automatico, migliorando l’esperienza di navigazione.
+È stato risolto il problema segnalato dei link: ora i file fanno parte della #gloss[Github Page], quindi è possibile visualizzarli direttamente nel browser in un'altra scheda, senza lo scaricamento automatico, migliorando l'esperienza di navigazione.
 
 == Aggiornamento del versionamento dei documenti
 Per ogni modifica, è stato aggiunto il nome del verificatore/i responsabile del controllo del contenuto dei documenti.
@@ -41,8 +42,8 @@ Durante l'incontro sono stati effettuati diversi aggiornamenti e modifiche alla 
 
 - *Ottimizzazione dei costi*: riduzione dei costi totali da 13.350 a 12.895, con una riassegnazione delle ore stabilita sull'importanza di ogni ruolo.
 - *Rotazione dei ruoli*: definizione di una rotazione settimanale per una gestione equilibrata dei ruoli con la possibilità di cambio della frequenza.
-- *Aggiornamento della lettera di presentazione* con una tabella dettagliata dei membri e l’aggiornamento della data di consegna.
-- *Miglioramento della GitHub page* per una visualizzazione diretta dei file nel browser.
+- *Aggiornamento della lettera di presentazione* con una tabella dettagliata dei membri e l'aggiornamento della data di consegna.
+- *Miglioramento della #gloss[GitHub page]* per una visualizzazione diretta dei file nel browser.
 - *Tracciamento delle verifiche sui documenti* per ogni modifica, aggiungendo il nome del verificatore/i.
 
 Durante l'incontro sono stati verificati in modo sincorno i documenti 

@@ -7,7 +7,7 @@
     ora: [15:00-16:30],
     tipo: "interno",
     versioni: (
-      "0.1.0","31/10/2024","Matteo Bazzan","","Prima stesura"
+      "0.1.0","31/10/2024","Matteo Bazzan","Prima stesura","Yi Hao Zhuo",
     ),
     presenze: (
         "Matteo Bazzan","Redattore","1h30min",
