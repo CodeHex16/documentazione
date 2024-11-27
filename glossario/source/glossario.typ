@@ -48,7 +48,7 @@ Le GitHub Milestone sono traguardi temporali utilizzati per organizzare e pianif
 Le GitHub Labels sono etichette utilizzate per categorizzare e identificare le issue all'interno di un progetto su GitHub. Ogni label è associata a un colore e un nome descrittivo che ne indica il significato. Le GitHub Labels possono essere personalizzate in base alle esigenze del team e utilizzate per classificare le issue in base alla loro priorità, al tipo di attività o alla loro natura.
 = L
 == LLM
-LLM è l'acronimo di "Linguaggio di Markup Leggero". Si tratta di un linguaggio di markup testuale sviluppato appositamente per la stesura di documenti. LLM è stato scelto per la sua semplicità d'uso e la versatilità.
+
 = M
 == Middleware
 Il middleware è un software che si colloca tra il sistema operativo e le applicazioni, facilitando la comunicazione e lo scambio di dati tra di essi. Il middleware svolge un ruolo fondamentale nell'integrazione di sistemi eterogenei e nella creazione di architetture distribuite. Esistono diversi tipi di middleware, tra cui i message broker, i web server e i database server.
