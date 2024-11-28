@@ -7,6 +7,7 @@
     ora: [15:00-17:20],
     tipo: "interno",
     versioni: (
+      "0.1.1","26/11/2024","Yi Hao Zhuo","Aggiunta link glossario","Luca Rossi",
       "0.1.0","08/11/2024","Francesco Fragonas","Prima stesura", "Gabriele Magnelli"
     ),
     presenze: (
@@ -23,7 +24,7 @@
 Il gruppo ha dedicato la sessione odierna a un'analisi più approfondita del capitolato per identificare eventuali dubbi e questioni da chiarire con il referente dell'azienda. Sono stati individuati alcuni punti critici che necessitano di ulteriori dettagli e discussione. Questi temi saranno la base di partenza per la stesura dell'analisi dei requisiti, che guiderà le fasi successive dello sviluppo del progetto.
 
 = Definizione formale dello strumento di gestione issue e milestone
-Per una gestione efficace delle attività di sviluppo, il gruppo ha scelto di utilizzare GitHub Issue e GitHub Milestone come strumenti principali di monitoraggio e pianificazione.
+Per una gestione efficace delle attività di sviluppo, il gruppo ha scelto di utilizzare #gloss[GitHub Issue] e #gloss[GitHub Milestone] come strumenti principali di monitoraggio e pianificazione.
 - *GitHub Issue* sarà utilizzato per tracciare e risolvere task, bug e problematiche emergenti.
   Sono state definite le seguenti label per meglio identificare le issue relative alla documentazione:
   - redazione: stesura di documenti
@@ -34,5 +35,5 @@ Per una gestione efficace delle attività di sviluppo, il gruppo ha scelto di ut
 È stato concordato di contattare il referente dell'azienda via email per informarlo formalmente dell'aggiudicazione del progetto e per sottoporre alcuni dubbi emersi durante la riunione, in particolare riguardo alla parte tecnica e alla definizione di requisiti più dettagliati.
 
 = Azioni future
-- Ogni membro del team condurrà un’*analisi individuale delle tecnologie proposte*, esaminando .NET MAUI e la possibilità di costruire una webapp con tecnologie alternative, oltre a valutare modelli di linguaggio LLM proposti nel capitolato, con particolare attenzione a prestazioni, compatibilità con la lingua italiana e conformità ai requisiti del progetto.
-- Il gruppo preparerà un elenco di *domande per il referente aziendale* riguardanti chiarimenti sui requisiti, preferenze tecnologiche, struttura dei dati da elaborare con l’LLM e priorità delle funzionalità richieste.
+- Ogni membro del team condurrà un'*analisi individuale delle tecnologie proposte*, esaminando #gloss[.NET MAUI] e la possibilità di costruire una #gloss[webapp] con tecnologie alternative, oltre a valutare modelli di linguaggio #gloss[LLM] proposti nel capitolato, con particolare attenzione a prestazioni, compatibilità con la lingua italiana e conformità ai requisiti del progetto.
+- Il gruppo preparerà un elenco di *domande per il referente aziendale* riguardanti chiarimenti sui requisiti, preferenze tecnologiche, struttura dei dati da elaborare con l'LLM e priorità delle funzionalità richieste.

@@ -7,6 +7,7 @@
     ora: [16:00-18:15],
     tipo: "interno",
     versioni: (
+      "0.1.1", "26/11/2024", "Yi Hao Zhuo", "Aggiunta link glossario", "Luca Rossi",
       "0.1.0","19/11/2024","Luca Ribon","Prima stesura", "Filippo Sabbadin"
     ),
     presenze: (
@@ -62,7 +63,7 @@ Inoltre è stata creata anche una view *"Miei TODO"* per permettere ad ogni memb
 Vista la complessità del documento si è deciso dedicare del tempo a strutturare in modo migliore il lavoro ad esso dedicato: attualmente è stato stabilita la necessità di *tre analisti*, inoltre sono state individuate le prime attività di analisi per l'attuale sprint suddivise per macro argomento.
 
 = Pagina Notion
-È stata creata una pagina Notion per organizzare le note interne al gruppo che non necessitano di essere formalizzate in un verbale; quest'ultima, ad esempio, include link utili, dubbi da risolvere, note utili per azioni future o comprensione di determinati argomenti.
+È stata creata una pagina #gloss[Notion] per organizzare le note interne al gruppo che non necessitano di essere formalizzate in un verbale; quest'ultima, ad esempio, include link utili, dubbi da risolvere, note utili per azioni future o comprensione di determinati argomenti.
 È stata avanzata anche la proposta di integrare le issue di GitHub nella pagina Notion in modo da poterle anche manipolare, seguiranno valutazioni di fattibilità.
 
 = Azioni future

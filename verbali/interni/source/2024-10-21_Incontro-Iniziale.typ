@@ -6,8 +6,9 @@
     data: [21/10/2024],
     ora: [14:30-16:00],
     versioni: (
-      "0.2.0","28/10/2024","Matteo Bazzan","","Aggiunta Conclusioni",
-      "0.1.0","21/10/2024","Matteo Bazzan","","Prima stesura",
+      "0.2.1", "26/11/2024", "Yi Hao Zhuo", "Aggiunta link glossario","Luca Rossi",
+      "0.2.0","28/10/2024","Matteo Bazzan","Aggiunta Conclusioni","Yi Hao Zhuo",
+      "0.1.0","21/10/2024","Matteo Bazzan","Prima stesura","Yi Hao Zhuo",
   ),
     tipo: "interno",
     presenze: (
@@ -38,12 +39,12 @@ Abbiamo scelto i seguenti loghi
     caption : [ Versione compatta del logo]
 )
 == Stesura del template per i documenti
-È stato scelto il linguaggio Typst per la stesura dei documenti, per la semplicità d'uso e la versatilità.
+È stato scelto il linguaggio #gloss[Typst] per la stesura dei documenti, per la semplicità d'uso e la versatilità.
 == Scelta dei canali di comunicazione
 Abbiamo concordato l'uso di:
-- *Telegram*:  per comunicazioni testuali non ufficiali all'interno del gruppo
-- *Discord*: per le riunioni a distanza di gruppo
-- *GitHub*: per la gestione di documenti, asset e il versionamento dei vari file 
+- *#gloss[Telegram]*:  per comunicazioni testuali non ufficiali all'interno del gruppo
+- *#gloss[Discord]*: per le riunioni a distanza di gruppo
+- *#gloss[GitHub]*: per la gestione di documenti, asset e il versionamento dei vari file 
 
 == Prima discussione sui capitolati
 Dopo una prima analisi dei capitolati proposti, il gruppo, tramite un sondaggio nel gruppo Telegram, ha definito le seguenti preferenze:

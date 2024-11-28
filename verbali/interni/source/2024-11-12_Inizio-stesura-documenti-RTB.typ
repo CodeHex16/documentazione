@@ -7,6 +7,7 @@
     ora: [15:00-18:00],
     tipo: "interno",
     versioni: (
+      "0.1.3","26/11/2024","Yi Hao Zhuo","Aggiunta link glossario", "Luca Rossi",
       "0.1.2","13/11/2024","Luca Ribon","Sistemati la data di redazione", "Matteo Bazzan",
       "0.1.1","12/11/2024","Filippo Sabbadin","Sistemati link alle issue invertiti", "Matteo Bazzan",
       "0.1.0","12/11/2024","Filippo Sabbadin","Prima stesura", "Matteo Bazzan"
@@ -22,7 +23,7 @@
 )
 
 = Decisione sull'utilizzo delle GitHub Labels
-Abbiamo deciso di implementare ulteriori etichette (GitHub Labels) più specifiche per le issue all'interno del repository, al fine di classificare e riconoscere facilmente a quale documento o fase del progetto ciascuna issue è collegata. Questo sistema di labeling permetterà una gestione più ordinata e rapida del workflow, facilitando la tracciabilità delle attività legate a documenti specifici.
+Abbiamo deciso di implementare ulteriori etichette (#gloss[GitHub Labels]) più specifiche per le issue all'interno del repository, al fine di classificare e riconoscere facilmente a quale documento o fase del progetto ciascuna issue è collegata. Questo sistema di labeling permetterà una gestione più ordinata e rapida del #gloss[workflow], facilitando la tracciabilità delle attività legate a documenti specifici.
 \ In particolare sono state implementate le #link("https://github.com/CodeHex16/documentazione/labels", [*#underline[label]*]):
 - Amministrazione
 - Analisi dei requisiti
@@ -35,7 +36,7 @@ Abbiamo deciso di implementare ulteriori etichette (GitHub Labels) più specific
 - Verbali interni
 
 = Inizio stesura documenti RTB
-Abbiamo iniziato la stesura dei documenti relativi alla sezione RTB (Requirements and Technology Baseline), che racchiude tutto ciò che è necessario per la corretta realizzazione del progetto. I documenti che abbiamo prodotto sono:
+Abbiamo iniziato la stesura dei documenti relativi alla sezione #gloss[RTB] (Requirements and Technology Baseline), che racchiude tutto ciò che è necessario per la corretta realizzazione del progetto. I documenti che abbiamo prodotto sono:
 - Analisi dei requisiti
 - Norme di progetto
 - Piano di progetto
