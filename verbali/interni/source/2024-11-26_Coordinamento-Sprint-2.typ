@@ -23,7 +23,7 @@
 Abbiamo discusso brevemente il lavoro svolto durante lo Sprint 1, analizzando le #gloss[task] completate e quelle rimaste in sospeso; successivamente abbiamo aggiornato la rendicontazione delle ore di conseguenza.
 
 = Coordinamento per lo Sprint 2
-Per lo sprint 2 abbiamo definito delle task relative ai documenti Analisi dei Requisiti, #gloss["Glossario"], #gloss["Norme di Progetto"] e #gloss["Piano di Progetto"]. Ognuna di queste è stata assegnata ai membri con il ruolo adatto.
+Per lo sprint 2 abbiamo definito delle task relative ai documenti Analisi dei Requisiti, "#gloss[Glossario]", "#gloss[Norme di Progetto]" e "#gloss[Piano di Progetto]". Ognuna di queste è stata assegnata ai membri con il ruolo adatto.
 
 = Modifiche ai ruoli
 Abbiamo deciso di modificare anticipatamente alcuni dei ruoli dopo aver risolto dei dubbi a riguardo, e tenendo in considerazione anche come sono state affrontate le task passate e le nuove task assegnate.
