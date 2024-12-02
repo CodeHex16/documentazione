@@ -38,7 +38,7 @@ jobs:
 
             - name: Remove old PDF files except for _ext and _firmato
               run: |
-                  find . -name "*.pdf" ! -name "*_ext.pdf" ! -name "*_firmato.pdf" -exec rm {} \;
+                  find . -name "*.pdf" ! -name "*_ext.pdf" ! -name "*_firmato.pdf" -not -path ./diari-di-bordo -exec rm {} \;
 
             - name: Find and compile Typst files
               run: |
@@ -56,7 +56,7 @@ jobs:
 
             - name: Move PDF files to parent directory
               run: |
-                  find . -name "*.pdf" ! -name "*_ext.pdf" ! -name "*_firmato.pdf" -exec sh -c 'mv "$0" "$(dirname "$0")/../"' {} \;
+                  find . -name "*.pdf" ! -name "*_ext.pdf" ! -name "*_firmato.pdf" -not -path ./diari-di-bordo -exec sh -c 'mv "$0" "$(dirname "$0")/../"' {} \;
 
             - name: Upload PDF files
               uses: actions/upload-artifact@v4
