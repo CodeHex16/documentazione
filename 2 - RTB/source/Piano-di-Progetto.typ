@@ -9,14 +9,14 @@
         "Luca Ribon","Redattore",
         "Francesco Fragonas","",
         "Gabriele Magnelli","",
-        "Filippo Sabbadin","",
+        "Filippo Sabbadin","Verificatore",
         "Luca Rossi", "",
         "Yi Hao Zhuo", ""
     ),
     sommario: [],
     
     versioni : (
-      "0.1.0","24/10/2024","Luca Ribon","Definizione della struttura base e definizone delle linee guida per la stesura", ""
+      "0.1.0","24/10/2024","Luca Ribon","Definizione della struttura base e definizone delle linee guida per la stesura", "Filippo Sabbadin"
     ),
     doc,
 )
