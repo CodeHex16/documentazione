@@ -15,6 +15,7 @@ documentazione/
 ├── 📁 2 - RTB
 |  └── 📁 source
 |  └── 📄 *.pdf
+├── 📁 diari-di-bordo
 ├── 📁 glossario
 |  └── 📁 source
 |  └── 📄 *.pdf
