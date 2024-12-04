@@ -58,7 +58,25 @@ https://codehex16.github.io/
 - Repository della documentazione del progetto:
 https://github.com/CodeHex16/documentazione
 
--Glossario:
+- Valutazione capitolati:
+https://codehex16.github.io/docs/1%20-%20candidatura/Valutazione-Capitolati.pdf
+
+- Preventivo costi e impegni:
+https://codehex16.github.io/docs/1%20-%20candidatura/Preventivo-Costi-e-Impegni.pdf
+
+- Analisi dei requisiti:
+https://codehex16.github.io/docs/2%20-%20RTB/Analisi-dei-Requisiti.pdf
+
+- Piano di progetto:
+https://codehex16.github.io/docs/2%20-%20RTB/Piano-di-Progetto.pdf
+
+- Analisi dei rischi
+...
+
+-Piano di qualifica
+...
+
+- Glossario:
 Documento: https://github.com/CodeHex16/documentazione/tree/main/glossario/glossario.pdf
 Pagina web: https://codehex16.github.io/glossario.html
 
