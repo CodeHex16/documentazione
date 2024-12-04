@@ -9,7 +9,7 @@
         "Luca Ribon","",
         "Francesco Fragonas","",
         "Gabriele Magnelli","",
-        "Filippo Sabbadin","Redattore",
+        "Filippo Sabbadin","Redattore, Verificatore",
         "Luca Rossi", "",
         "Yi Hao Zhuo", ""
     ),
@@ -17,8 +17,8 @@
     
     versioni : (
       "0.1.0","12/11/2024","Filippo Sabbadin","Prima stesura", "Gabriele Magnelli",
-      "0.1.1","30/11/2024","Francesco Fragonas","Revisione Introduzione", "",
-      "0.2.0","30/11/2024","Francesco Fragonas","Redazione Processi di accordo", ""
+      "0.1.1","30/11/2024","Francesco Fragonas","Revisione Introduzione", "Filippo Sabbadin",
+      "0.2.0","30/11/2024","Francesco Fragonas","Redazione Processi di accordo", "Filippo Sabbadin"
     ),
     doc,
 )
@@ -57,6 +57,10 @@ https://codehex16.github.io/
 
 - Repository della documentazione del progetto:
 https://github.com/CodeHex16/documentazione
+
+-Glossario:
+Documento: https://github.com/CodeHex16/documentazione/tree/main/glossario/glossario.pdf
+Pagina web: https://codehex16.github.io/glossario.html
 
 = Processi di accordo
 
