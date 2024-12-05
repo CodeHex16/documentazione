@@ -38,6 +38,46 @@ Il fornitore, tramite un'#gloss[interfaccia web] di amministrazione, potrà inse
 
 // Decidere se riportare il preventivo fatto inizialmente o se fare riferimento al documento dedicato; da aggiornare con un resoconto dopo ogni fase
 = Preventivo
+Il preventivo è stato calcolato considerando i costi orari dei diversi ruoli coinvolti e il numero stimato di ore per ciascuno, basandosi su un'analisi dettagliata delle attività necessarie per il progetto. 
+Di seguito sono riportate tabelle riepilogative che mostrano sia il compenso totale che il compenso orario per ogni ruolo, oltre alla distribuzione delle ore tra i membri del team.
+
+== Dettagli Preventivo per Ruoli
+
+#table(
+  columns: (1.5fr, 1fr, 1fr, 1fr),
+  inset: 8pt,
+  align: (x,y) => if(x==0 and y>0 and y< 7) {left} else {center+horizon},
+  fill: (x,y) => if (y== 0 or y == 7) { luma(230) },
+  table.header(
+    [*Ruolo*], [*Costo/Ora*], [*Ora/Ruolo*], [*Totale Ruolo*], 
+  ),
+  "Responsabile","30","63","1890",
+  "Amministratore","20","70","1400",
+  "Analista","25","75","1875",
+  "Progettista","25","119","2975",
+  "Programmatore","15","177","2655",
+  "Verificatore","15","140","2100",
+  "Totale","",[*644 h*],[*€ 12.895*]
+)
+== Distribuzione delle Ore per Membri
+#table(
+  columns: (2fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr),
+  inset: 8pt,
+  align: (x,y) => if(x==0 and y>0) {left} else {center+horizon},
+  fill: (x,y) => if y== 0 or x==7 { luma(230) },
+  table.header(
+    [*Membro*], [*Resp.*], [*Amm.*], [*Anal.*], [*Proget.*], [*Prog.*], [*Verif.*], [*Totale*]
+  ),
+  "Ribon","9","10","11","17","25","20","92",
+  "Bazzan","9","10","11","17","25","20","92",
+  "Fragonas","9","10","11","17","25","20","92",
+  "Magnelli","9","10","11","17","25","20","92",
+  "Sabbadin","9","10","11","17","25","20","92",
+  "Rossi","9","10","10","17","26","20","92",
+  "Zhuo","9","10","10","17","26","20","92",
+)
+
+- *Metodo di calcolo*: i costi orari sono stati stimati sulla base di standard di mercato e di esperienze precedenti. Le ore totali per ogni ruolo sono state calcolate considerando il numero di attività assegnate e il livello di complessità delle stesse.
 
 // Per ogni categoria descrivere i rischi, la probabilità che questi accadano, con che frequenza, le conseguenze e l'importanza di queste conseguenze, dei possibili modi per prevenirli o mitigarli.
 = Analisi dei rischi
