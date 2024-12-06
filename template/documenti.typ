@@ -1,5 +1,10 @@
 #let gloss(body) = {
-  link("https://codehex16.github.io/glossario#"+body.text)[#text(blue, size:12pt, font: "Noto Sans")[#underline[#body]\*]]
+  link("https://codehex16.github.io/glossario#"+toIdCase(body.text))[#text(blue, size:12pt, font: "Noto Sans")[#underline[#body]\*]]
+}
+
+#let toIdCase(str) = {
+  show " ": "-"
+  lower(str)
 }
 
 #let issue(number, title) = {
