@@ -10,6 +10,7 @@ def glossario_terms():
                 term = term.removeprefix("== ").lower()
                 term = term.split("(")[0].strip()
                 gloss_terms.append(term)
+    gloss_terms.sort(key=len, reverse=True)
     return gloss_terms
 
 def replace_terms_in_file(file_path, terms):
@@ -53,7 +54,8 @@ def replace_terms_in_file(file_path, terms):
 
 def search_files():
     gloss_terms = glossario_terms()
-    gloss_terms.sort(key=len, reverse=True)
+    print(gloss_terms)
+    
     skip_dirs = {".git", ".github", "diari-di-bordo", "glossario", "1 - candidatura", "template"}
     for root, dirs, files in os.walk("./../../"):
         print(f"Searching in {root}")
