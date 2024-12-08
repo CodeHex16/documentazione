@@ -40,6 +40,12 @@ jobs:
               run: |
                   find . -name "*.pdf" ! -name "*_ext.pdf" ! -name "*_firmato.pdf" -not -path "./diari-di-bordo/*" -exec rm {} \;
 
+            - name: Aggiungi \#gloss[...] ai termini trovati nei file .typ
+              run: |
+                  cd glossario/source
+                  python glossario.py
+                  cd ../..
+
             - name: Find and compile Typst files
               run: |
                   find . -path ./template -prune -o -name "*.typ" -print0 | while IFS= read -r -d '' file; do
