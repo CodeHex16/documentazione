@@ -22,12 +22,14 @@ def search_files():
                 print(f"Searching in {root, file}")
 
                 file_path = os.path.join(root, file)
-                with open(file_path, "a") as f:
+                file_content = ""
+                with open(file_path, "r") as f:
                     file_content = f.read()
                     for term in gloss_terms:
                         if term in file_content and f"#gloss[ {term} ]" not in file_content:
                             print(f"Found '{term}' in {file}")
                             file_content = file_content.replace(term, f"#gloss[ {term} ]")
+                with open(file_path, "w") as f:
                     f.write(file_content)
 
 search_files()
