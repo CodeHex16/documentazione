@@ -16,6 +16,7 @@
     sommario: [Analisi dei requisiti del capitolato C7],
     
     versioni : (
+      "0.2.0","27/11/2024","Gabriele Magnelli","Aggiunti use case amministratore","",
       "0.1.0","12/11/2024","Francesco Fragonas","Prima stesura", "Matteo Bazzan"
     ),
     doc,
