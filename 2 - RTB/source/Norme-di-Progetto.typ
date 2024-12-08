@@ -16,9 +16,9 @@
     sommario: [Norme di progetto],
     
     versioni : (
-      "0.1.0","12/11/2024","Filippo Sabbadin","Prima stesura", "Gabriele Magnelli",
+      "0.2.0","30/11/2024","Francesco Fragonas","Redazione Processi di accordo", "Filippo Sabbadin",
       "0.1.1","30/11/2024","Francesco Fragonas","Revisione Introduzione", "Filippo Sabbadin",
-      "0.2.0","30/11/2024","Francesco Fragonas","Redazione Processi di accordo", "Filippo Sabbadin"
+      "0.1.0","12/11/2024","Filippo Sabbadin","Prima stesura", "Gabriele Magnelli"
     ),
     doc,
 )
