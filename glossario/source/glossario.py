@@ -1,17 +1,19 @@
 import os
 import re
 
-def glossario_terms():
+def get_glossario_terms():
     gloss_terms = []
     with open("./glossario.typ", "r") as glossarioFile:
         glossario = glossarioFile.read().split("//GLOSSARIO")[1]
         for term in glossario.split("\n"):
             if term.startswith("== "):
-                term = term.removeprefix("== ").lower()
-                term = term.split("(")[0].strip()
+                # Pulizia e formattazione del termine
+                term = (term.removeprefix("== ")
+                       .lower()
+                       .split("(")[0]
+                       .strip())
                 gloss_terms.append(term)
-    gloss_terms.sort(key=len, reverse=True)
-    return gloss_terms
+    return sorted(gloss_terms, key=len, reverse=True)
 
 def replace_terms_in_file(file_path, terms):
     with open(file_path, "r") as f:
@@ -61,7 +63,7 @@ def replace_terms_in_file(file_path, terms):
         f.write(new_content)
 
 def search_files():
-    gloss_terms = glossario_terms()
+    gloss_terms = get_glossario_terms()
     print(gloss_terms)
     
     skip_dirs = {".git", ".github", "diari-di-bordo", "glossario", "1 - candidatura", "template"}
