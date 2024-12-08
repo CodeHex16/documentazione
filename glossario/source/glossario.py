@@ -24,11 +24,19 @@ def replace_terms_in_file(file_path, terms):
     header = file_content[:body_start]
     body = file_content[body_start:]
 
-    for term in terms:
-        # Cerca parole intere, case-insensitive
+    # trova tutti i termini già segnati come #gloss[...]
+    already_glossed = set()
+    gloss_pattern = re.compile(r'#gloss\[(.*?)\]', re.IGNORECASE)
+    for match in gloss_pattern.finditer(body):
+        glossed_term = match.group(1).lower()
+        already_glossed.add(glossed_term)
+
+    # rimuove quelli già segnati
+    terms_to_search = [term for term in terms if term.lower() not in already_glossed]
+
+    for term in terms_to_search:
         pattern = re.compile(r'(?<!#gloss\[)\b(' + re.escape(term) + r')\b(?!\])', re.IGNORECASE)
         
-        # Funzione di sostituzione
         def replacer(match):
             start = match.start()
             line_start = body.rfind('\n', 0, start) + 1
