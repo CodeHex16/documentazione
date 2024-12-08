@@ -8,26 +8,53 @@ def glossario_terms():
         for term in glossario.split("\n"):
             if term.startswith("== "):
                 term = term.removeprefix("== ").lower()
-                # remove (...) content
-                term = term.split("(")[0]
+                term = term.split("(")[0].strip()
                 gloss_terms.append(term)
     return gloss_terms
 
 def replace_terms_in_file(file_path, terms):
-    file_content = ""
     with open(file_path, "r") as f:
         file_content = f.read()
-        for term in terms:
-            pattern = re.compile(r'\b' + re.escape(term) + r'\b', re.IGNORECASE)
-            if re.search(pattern, file_content) and f"#gloss[ {term} ]" not in file_content:
-                print(f"\t+ Found '{term}' in {file_path}")
-                file_content = re.sub(pattern, f"#gloss[{term}]", file_content)
+
+    body_start = file_content.find('\n=')
+    if body_start == -1:
+        return
+
+    header = file_content[:body_start]
+    body = file_content[body_start:]
+
+    for term in terms:
+        # Cerca parole intere, case-insensitive
+        pattern = re.compile(r'(?<!#gloss\[)\b(' + re.escape(term) + r')\b(?!\])', re.IGNORECASE)
+        
+        # Funzione di sostituzione
+        def replacer(match):
+            start = match.start()
+            line_start = body.rfind('\n', 0, start) + 1
+            line_end = body.find('\n', start)
+            if line_end == -1:
+                line_end = len(body)
+            line = body[line_start:line_end]
+            
+            if (line.strip().startswith('=') or 
+                'link' in line or 
+                'https' in line):
+                return match.group(0)
+            
+            return f"#gloss[{match.group(1)}]"
+
+        body, count = re.subn(pattern, replacer, body, count=1)
+        if count > 0:
+            print(f"\t+ Found '{term}' in {file_path}")
+
+    new_content = header + body
     with open(file_path, "w") as f:
-        f.write(file_content)
+        f.write(new_content)
 
 def search_files():
     gloss_terms = glossario_terms()
-    skip_dirs = {".git",".github","diari-di-bordo", "glossario", "1 - candidatura", "template"}
+    gloss_terms.sort(key=len, reverse=True)
+    skip_dirs = {".git", ".github", "diari-di-bordo", "glossario", "1 - candidatura", "template"}
     for root, dirs, files in os.walk("./../../"):
         print(f"Searching in {root}")
         dirs[:] = [d for d in dirs if d not in skip_dirs]
@@ -36,4 +63,5 @@ def search_files():
                 file_path = os.path.join(root, file)
                 replace_terms_in_file(file_path, gloss_terms)
 
-search_files()
+if __name__ == "__main__":
+    search_files()
