@@ -1,4 +1,5 @@
 import os
+import re
 
 def glossario_terms():
     gloss_terms = []
@@ -17,15 +18,16 @@ def replace_terms_in_file(file_path, terms):
     with open(file_path, "r") as f:
         file_content = f.read()
         for term in terms:
-            if term in file_content and f"#gloss[ {term} ]" not in file_content:
-                print(f"Found '{term}' in {file_path}")
-                file_content = file_content.replace(term, f"#gloss[{term}]")
+            pattern = re.compile(r'\b' + re.escape(term) + r'\b', re.IGNORECASE)
+            if re.search(pattern, file_content) and f"#gloss[ {term} ]" not in file_content:
+                print(f"\t+ Found '{term}' in {file_path}")
+                file_content = re.sub(pattern, f"#gloss[{term}]", file_content)
     with open(file_path, "w") as f:
         f.write(file_content)
 
 def search_files():
     gloss_terms = glossario_terms()
-    skip_dirs = {"diari-di-bordo", "glossario", "1 - candidatura", "template"}
+    skip_dirs = {".git",".github","diari-di-bordo", "glossario", "1 - candidatura", "template"}
     for root, dirs, files in os.walk("./../../"):
         print(f"Searching in {root}")
         dirs[:] = [d for d in dirs if d not in skip_dirs]
