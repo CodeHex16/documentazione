@@ -9,9 +9,9 @@
         "Luca Ribon","",
         "Francesco Fragonas","Redattore",
         "Gabriele Magnelli","",
-        "Filippo Sabbadin","",
+        "Filippo Sabbadin","Verificatore",
         "Luca Rossi", "",
-        "Yi Hao Zhuo", ""
+        "Yi Hao Zhuo", "Verificatore"
     ),
     sommario: [Analisi dei requisiti del capitolato C7],
     
