@@ -32,7 +32,7 @@ Nei verbali interni abbiamo aggiunto una tabella dedicata al versionamento, già
 
 == Verbali esterni
 
-Abbiamo inoltre rielaborato il verbale esterno redatto durante l'incontro con l'azienda Ergon Informatica (Capitolato 7 "LLM: Assistente Virtuale"), con l'obiettivo di mettere in evidenza le risposte ricevute dal referente aziendale e ciò che il gruppo ha compreso dalle domande poste. Anche in questo verbale è stata inserita la tabella per il versionamento, coerentemente con quanto fatto per i verbali interni.
+Abbiamo inoltre rielaborato il verbale esterno redatto durante l'incontro con l'azienda Ergon Informatica (Capitolato 7 "#gloss[LLM]: Assistente Virtuale"), con l'obiettivo di mettere in evidenza le risposte ricevute dal referente aziendale e ciò che il gruppo ha compreso dalle domande poste. Anche in questo verbale è stata inserita la tabella per il versionamento, coerentemente con quanto fatto per i verbali interni.
 
 == Documenti di Candidatura
 

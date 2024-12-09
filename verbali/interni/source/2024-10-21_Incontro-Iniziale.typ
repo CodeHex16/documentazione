@@ -23,7 +23,7 @@
 = Riassunto dei contenuti
 == Nome del gruppo
 I partecipanti del gruppo 16 hanno proposto diversi nomi per il gruppo, tra cui:
-- CodeHex16
+- #gloss[CodeHex16]
 - Hex16
 - Based16
 Abbiamo scelto il nome "CodeHex16" proposto da Francesco Fragonas.

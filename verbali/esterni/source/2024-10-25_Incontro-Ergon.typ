@@ -30,12 +30,12 @@ La riunione con il referente di *Ergon* è iniziata descrivendo un quadro genera
 + _Quali formati di documenti neccessari alla costruzione del contesto devono essere supportati?_
     \ I formati principali richiesti sono .txt, .pdf e .docx, e potrebbero essere presenti anche dei file .csv.
 + _Quali parametri si vogliono rendere configurabili tramite l’interfaccia utente?_
-    - Gestione degli utenti: creazione e modifica degli utenti con accesso al chatbot del fornitore
+    - Gestione degli utenti: creazione e modifica degli utenti con accesso al #gloss[chatbot] del fornitore
     - Inserimento di tuple (domanda, risposta) predefinite dal configuratore (prese da un ipotetico FAQ) in modo da ottimizzare il modello in caso venissero chieste domande simili 
 + _Citando il capitolato:_
     \ #quote()[La piattaforma deve tenere conto del   flusso di interazioni uomo-macchina con i relativi tempi di attesa mantenendo uno stato complessivo sulla conversazione aggiornato] \ _ci si riferisce alla necessità di garantire un’interazione naturale con brevi tempi di risposta?_
     \ Nello specifico si intende che, dopo aver posto una domanda, l'utente riceva un feedback visivo (es. “sto scrivendo”) per simulare la presenza di un interlocutore reale.
-+ _Il supporto multilingua da parte dell'LLM è un requisito?_
++ _Il supporto multilingua da parte dell'#gloss[LLM] è un requisito?_
     \ In questo caso il requisito riguarda solo il supporto della lingua italiana, ma è possibile estendere il supporto anche ad altre lingue.
 + _Per quanto riguarda lo sviluppo della parte lato utente, è preferibile utilizzare .NET MAUI come suggerito nel documento, o si può valutare anche una web app?_
     \ Ergon Informatica consiglia .NET MAUI, in quanto è una tecnologia ampiamente utilizzata internamente e per la quale possono fornire supporto diretto. Tuttavia, è consentito sviluppare una web app per la UI, se preferiamo questa opzione; in tal caso, la scelta delle tecnologie sarà a nostra discrezione.

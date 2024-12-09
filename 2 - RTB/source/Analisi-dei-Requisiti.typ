@@ -23,10 +23,10 @@
 
 = Introduzione
 == Scopo del documento
-Il presente documento descrive in dettaglio i *casi d'uso* e i *requisiti* relativi al progetto "LLM, Assistente Virtuale". Tali specifiche sono state elaborate a partire dall'analisi del capitolato C7, proposto da Ergon, e dagli incontri svolti online e in presenza con l'azienda.
+Il presente documento descrive in dettaglio i *casi d'uso* e i *requisiti* relativi al progetto "#gloss[LLM], Assistente Virtuale". Tali specifiche sono state elaborate a partire dall'analisi del capitolato C7, proposto da Ergon, e dagli incontri svolti online e in presenza con l'azienda.
 
 == Scopo del prodotto
-Il software da realizzare consiste in un chatbot avanzato, basato su modelli linguistici (LLM), che un fornitore, ad esempio di bevande o alimenti, può offrire ai propri, i quali possono ottenere in modo semplice e immediato informazioni dettagliate sui prodotti o servizi disponibili, senza la necessità di contattare direttamente l'azienda.
+Il software da realizzare consiste in un #gloss[chatbot] avanzato, basato su modelli linguistici (LLM), che un fornitore, ad esempio di bevande o alimenti, può offrire ai propri, i quali possono ottenere in modo semplice e immediato informazioni dettagliate sui prodotti o servizi disponibili, senza la necessità di contattare direttamente l'azienda.
 
 Il sistema prevede anche un'interfaccia dedicata all'azienda fornitrice, che consente la gestione dei clienti e dei documenti contenenti le informazioni di riferimento. Questi documenti saranno utilizzati dal modello linguistico per generare risposte accurate e personalizzate, garantendo un'esperienza utente ottimale.
 

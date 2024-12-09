@@ -88,7 +88,7 @@ Di seguito sono riportate tabelle riepilogative che mostrano sia il compenso tot
 // Rischi effettivamente incontrati e come sono stati affrontati
 = Difficoltà affrontate
 
-// Spiegare pianificazione del lavoro (sprint da una settimana ecc...), metodo di lavoro, milestone e prodotti al raggiungimento di ogni milestone, cosa è stato fatto nei vari periodi atti al raggiungimento delle milestone
+// Spiegare pianificazione del lavoro (#gloss[sprint] da una settimana ecc...), metodo di lavoro, milestone e prodotti al raggiungimento di ogni milestone, cosa è stato fatto nei vari periodi atti al raggiungimento delle milestone
 = Pianificazione
 == RTB
 // == PB
