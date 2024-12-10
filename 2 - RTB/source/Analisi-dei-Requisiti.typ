@@ -168,7 +168,7 @@ e nella seguente pagina web:
 *Precondizioni:*\
    -L'utente/admin è in possesso e a conoscenza delle proprie credenziali;\
    *Postcondizioni:*\
-   -Il sistema ha ricevuto le credenziali inviate dall’utente/admin, e se sono valide permette l'accesso dell'utente/admin alla webapp e ai suoi servizi;\
+   -Il sistema ha ricevuto le credenziali inviate dall’utente/admin, e se sono valide permette l'accesso dell'utente/admin alla #gloss[webapp] e ai suoi servizi;\
 *Scenario Principale:*\
    -L’utente/admin ha inserito l’indirizzo e-mail e la password al fine di accedere alla webapp;
    -Il sistema riceve la richiesta di accesso e verifica le credenziali ;\
