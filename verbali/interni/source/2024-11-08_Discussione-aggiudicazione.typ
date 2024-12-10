@@ -25,7 +25,7 @@ Il gruppo ha dedicato la sessione odierna a un'analisi più approfondita del cap
 
 = Definizione formale dello strumento di gestione issue e milestone
 Per una gestione efficace delle attività di sviluppo, il gruppo ha scelto di utilizzare #gloss[GitHub Issue] e #gloss[GitHub Milestone] come strumenti principali di monitoraggio e pianificazione.
-- *GitHub Issue* sarà utilizzato per tracciare e risolvere task, bug e problematiche emergenti.
+- *#gloss[GitHub] Issue* sarà utilizzato per tracciare e risolvere task, bug e problematiche emergenti.
   Sono state definite le seguenti label per meglio identificare le issue relative alla documentazione:
   - redazione: stesura di documenti
   - verifica: verifica dei documenti redatti

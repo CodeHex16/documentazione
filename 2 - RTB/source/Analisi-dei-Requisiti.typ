@@ -9,13 +9,14 @@
         "Luca Ribon","",
         "Francesco Fragonas","Redattore",
         "Gabriele Magnelli","",
-        "Filippo Sabbadin","",
+        "Filippo Sabbadin","Verificatore",
         "Luca Rossi", "",
         "Yi Hao Zhuo", ""
     ),
     sommario: [Analisi dei requisiti del capitolato C7],
     
     versioni : (
+      "0.2.0","27/11/2024","Gabriele Magnelli","Aggiunti use case amministratore","Filippo Sabbadin",
       "0.1.0","12/11/2024","Francesco Fragonas","Prima stesura", "Matteo Bazzan"
     ),
     doc,
@@ -23,10 +24,10 @@
 
 = Introduzione
 == Scopo del documento
-Il presente documento descrive in dettaglio i *casi d'uso* e i *requisiti* relativi al progetto "LLM, Assistente Virtuale". Tali specifiche sono state elaborate a partire dall'analisi del capitolato C7, proposto da Ergon, e dagli incontri svolti online e in presenza con l'azienda.
+Il presente documento descrive in dettaglio i *casi d'uso* e i *requisiti* relativi al progetto "#gloss[LLM], Assistente Virtuale". Tali specifiche sono state elaborate a partire dall'analisi del capitolato C7, proposto da Ergon, e dagli incontri svolti online e in presenza con l'azienda.
 
 == Scopo del prodotto
-Il software da realizzare consiste in un chatbot avanzato, basato su modelli linguistici (LLM), che un fornitore, ad esempio di bevande o alimenti, può offrire ai propri, i quali possono ottenere in modo semplice e immediato informazioni dettagliate sui prodotti o servizi disponibili, senza la necessità di contattare direttamente l'azienda.
+Il software da realizzare consiste in un #gloss[chatbot] avanzato, basato su modelli linguistici (LLM), che un fornitore, ad esempio di bevande o alimenti, può offrire ai propri, i quali possono ottenere in modo semplice e immediato informazioni dettagliate sui prodotti o servizi disponibili, senza la necessità di contattare direttamente l'azienda.
 
 Il sistema prevede anche un'interfaccia dedicata all'azienda fornitrice, che consente la gestione dei clienti e dei documenti contenenti le informazioni di riferimento. Questi documenti saranno utilizzati dal modello linguistico per generare risposte accurate e personalizzate, garantendo un'esperienza utente ottimale.
 
@@ -83,5 +84,48 @@ e nella seguente pagina web:
 )
 
 == Riferimenti
+= Use Case
+== UC 1-Registrazione
+*Attori principali*: \
+   -Admin non registrato; \
+*Descrizione*:\
+   -Un admin non registrato vuole registrarsi per interagire   
+    e usufruire dei servizi offerti dalla web app;\
+*Precondizioni:*\
+   -L'admin deve avere una connessione stabile;
+*Postcondizioni*:\
+   -Il sistema conferma all'utente/admin che l'iscrizione è avvenuta      
+    con successo, altrimenti viene restituito un errore   
+    indicando che la registrazione è fallita;\
+*Scenario Principale:*\
+   -L’admin inserisce l’e-mail e l’username scelto;\
+   -Il sistema verifica la correttezza dell’indirizzo e-mail e dell’username. Se sono entrambe corrette registra il nuovo utente/admin ed invia una mail al nuovo utente/admin con la password temporanea che va cambiata al primo login;\
+*Estensioni:*\
+   -Registrazione fallita;\
+   
+=== UC 1.1-Inserimento e-mail
+*Attori principali:*\
+   -Admin non registrato;\
+*Descrizione:*\
+   -Un admin non registrato vuole registrarsi per interagire  
+    e usufruire dei servizi offerti dalla web app;\
+*Precondizioni:*\
+   -L'admin deve avere una connessione stabile e scegliere un username valido;\
+*Postcondizioni:*\
+   -L’admin ha inserito la prima delle due credenziali necessarie alla registrazione: l’indirizzo e-mail;\
+*Scenario Principale:*\
+   -L’admin inserisce, nella richiesta di registrazione, l’indirizzo e-mail;\
+   	
+=== UC 1.2-Inserimento Username
+*Attori principali:*\
+   -Admin non registrato;\
+*Descrizione:*\
+   -Un admin non registrato vuole registrarsi per interagire  
+    e usufruire dei servizi offerti dalla web app;\
+*Precondizioni:*\
+   -L'admin deve avere una connessione stabile e scegliere un username valido;\
+*Postcondizioni:*\
+   -L’admin ha inserito la seconda delle due credenziali necessarie alla registrazione: l’username;\
+*Scenario Principale:*\
+   -L’admin inserisce, nella richiesta di registrazione, l’username;\
 
-= 

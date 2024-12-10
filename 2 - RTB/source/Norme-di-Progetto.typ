@@ -16,9 +16,9 @@
     sommario: [Norme di progetto],
     
     versioni : (
-      "0.1.0","12/11/2024","Filippo Sabbadin","Prima stesura", "Gabriele Magnelli",
+      "0.2.0","30/11/2024","Francesco Fragonas","Redazione Processi di accordo", "Filippo Sabbadin",
       "0.1.1","30/11/2024","Francesco Fragonas","Revisione Introduzione", "Filippo Sabbadin",
-      "0.2.0","30/11/2024","Francesco Fragonas","Redazione Processi di accordo", "Filippo Sabbadin"
+      "0.1.0","12/11/2024","Filippo Sabbadin","Prima stesura", "Gabriele Magnelli"
     ),
     doc,
 )
@@ -26,7 +26,7 @@
 = Introduzione
 
 == Scopo del documento
-Questo documento ha lo scopo di delineare le principali fasi di sviluppo, i ruoli e le responsabilità dei membri del team CodeHex16. Al suo interno, viene fornita una guida completa per tutte le #gloss[Practice] adottate dal gruppo e per il #gloss[Way of Working], garantendo un approccio strutturato e organizzato alle attività collaborative.
+Questo documento ha lo scopo di delineare le principali fasi di sviluppo, i ruoli e le responsabilità dei membri del team #gloss[CodeHex16]. Al suo interno, viene fornita una guida completa per tutte le #gloss[Practice] adottate dal gruppo e per il #gloss[Way of Working], garantendo un approccio strutturato e organizzato alle attività collaborative.
 
 Il documento non si limita a fornire una panoramica iniziale ma si propone come un riferimento dinamico, soggetto a revisioni e aggiornamenti continui. Tale approccio incrementale assicura che il contenuto resti sempre aggiornato rispetto alle esigenze del progetto e alle best practices emergenti, consentendo al gruppo di adattarsi rapidamente a nuovi requisiti o cambiamenti contestuali.
 
@@ -137,13 +137,13 @@ Nel documento #link("")[Piano di Qualifica] ...
 
 Per lo svolgimento del progetto abbiamo utilizzato i seguenti strumenti:
 
-- *Telegram* per la comunicazione all'interno del gruppo
-- *Discord* per i meet interni
+- *#gloss[Telegram]* per la comunicazione all'interno del gruppo
+- *#gloss[Discord]* per i meet interni
 - *Zoom* per i meet esterni con il referente dell'azienda Ergon Informatica
 - *GitHub* per organizzare tutti i documenti e file sorgente del progetto
 - *GitHub Issue* per assegnare task ad ogni membro avendo un rendiconto preciso dei ruoli e delle ore svolte per ogni sprint, con l'assegnazione di label e milestone specifiche
 - *Google Fogli* per organizzare incontri con la compilazione di un calendario settimanale e per fissare le ore svolte avendo una visione generale dell'andamento del progetto
-- *Typst* per la stesura di tutti i documenti e verbali
+- *#gloss[Typst]* per la stesura di tutti i documenti e verbali
 - *Canva* per la realizzazione delle presentazioni per i Diari di Bordo settimanali
-- *Notion* per organizzare appunti e documenti non ufficiali
+- *#gloss[Notion]* per organizzare appunti e documenti non ufficiali
 

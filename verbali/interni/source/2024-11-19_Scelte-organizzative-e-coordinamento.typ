@@ -51,7 +51,7 @@ Inoltre si è deciso di suddividere il periodo di lavoro in *#gloss[sprint]* del
 )
 
 = Miglioramento sistema di issue
-È stata configurata la sezione "Projects" di GitHub per la gestione delle issue, integrando in una view *"Generale"* anche dei dettagli per migliorare la gestione delle attività tramite le issue, in particolare oltre ai campi di default "Assignees", "Labels", "Projects" e "Milestone" si è deciso di aggiungere anche
+È stata configurata la sezione "Projects" di #gloss[GitHub] per la gestione delle issue, integrando in una view *"Generale"* anche dei dettagli per migliorare la gestione delle attività tramite le issue, in particolare oltre ai campi di default "Assignees", "Labels", "Projects" e "Milestone" si è deciso di aggiungere anche
 - *Priorità*: bassa, media, alta
 - *Peso*: indica l'entità del lavoro da svolgere; la scala usata è XS, S, M, L, XL (dal meno al più impegnativo)
 - *Sprint*: indica a quale sprint è associata l'issue
@@ -67,9 +67,9 @@ Vista la complessità del documento si è deciso dedicare del tempo a strutturar
 È stata avanzata anche la proposta di integrare le issue di GitHub nella pagina Notion in modo da poterle anche manipolare, seguiranno valutazioni di fattibilità.
 
 = Azioni future
-- #issue("34")[*Analisi app nativa vs webapp*]: analisi sui vantaggi e svantaggi, e sull'applicabilità dello sviluppare un'applicazione mobile nativa o una webapp.
+- #issue("34")[*Analisi app nativa vs #gloss[webapp]*]: analisi sui vantaggi e svantaggi, e sull'applicabilità dello sviluppare un'applicazione mobile nativa o una webapp.
 - #issue("35")[*Analisi framework frontend per webapp*]: nel caso si utilizzasse una webapp sarà conveniente utilizzare un framework per lo sviluppo dell'interfaccia web.
-- #issue("36")[*Analisi LLM*]: analisi dei vari modelli proposti per individuare quello più corretto per il caso d'uso.
+- #issue("36")[*Analisi #gloss[LLM]*]: analisi dei vari modelli proposti per individuare quello più corretto per il caso d'uso.
 - #issue("37")[*Analisi database SQL*]: analisi dei database SQL presenti nel mercato per individuare quello più corretto per il caso d'uso.
 - #issue("40")[*Aggiunta dei termini dei documenti nel glossario*]: iniziare ad integrare i termini, presenti nei documenti di questo sprint, che lo richiedono nel glossario.
 - #issue("41")[*Integrazione github issue nella pagina notion*]: integrare le issue nella pagina notion.
