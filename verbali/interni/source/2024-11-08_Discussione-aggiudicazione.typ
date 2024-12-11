@@ -21,11 +21,11 @@
 )
 
 = Ulteriore analisi del capitolato
-Il gruppo ha dedicato la sessione odierna a un'analisi più approfondita del capitolato per identificare eventuali dubbi e questioni da chiarire con il referente dell'azienda. Sono stati individuati alcuni punti critici che necessitano di ulteriori dettagli e discussione. Questi temi saranno la base di partenza per la stesura dell'analisi dei requisiti, che guiderà le fasi successive dello sviluppo del progetto.
+Il gruppo ha dedicato la sessione odierna a un'analisi più approfondita del capitolato per identificare eventuali dubbi e questioni da chiarire con il referente dell'azienda. Sono stati individuati alcuni punti critici che necessitano di ulteriori dettagli e discussione. Questi temi saranno la base di partenza per la stesura dell'#gloss[analisi dei requisiti], che guiderà le fasi successive dello sviluppo del progetto.
 
 = Definizione formale dello strumento di gestione issue e milestone
 Per una gestione efficace delle attività di sviluppo, il gruppo ha scelto di utilizzare #gloss[GitHub Issue] e #gloss[GitHub Milestone] come strumenti principali di monitoraggio e pianificazione.
-- *#gloss[GitHub] Issue* sarà utilizzato per tracciare e risolvere task, bug e problematiche emergenti.
+- *#gloss[GitHub] Issue* sarà utilizzato per tracciare e risolvere #gloss[task], bug e problematiche emergenti.
   Sono state definite le seguenti label per meglio identificare le issue relative alla documentazione:
   - redazione: stesura di documenti
   - verifica: verifica dei documenti redatti

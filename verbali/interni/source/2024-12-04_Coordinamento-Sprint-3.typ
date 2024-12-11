@@ -48,5 +48,5 @@ Abbiamo applicato la ruotazione dei ruoli, quindi per i prossimi due sprint (spr
 = Azioni future
 - #issue("83")[*Stesura piano di progetto*]: Continuazione stesura del documento Piano di Progetto;
 - #issue("82")[*Stesura Norme di Progetto*]: Continuazione stesura del documento Norme di Progetto;
-- #issue("81")[*Aggiungere use case nella repo*] e #issue("95")[*Completare introduzione nell'analisi dei requisiti*]: Continuazione stesura del documento Analisi dei Requisiti;
+- #issue("81")[*Aggiungere #gloss[use case] nella repo*] e #issue("95")[*Completare introduzione nell'analisi dei requisiti*]: Continuazione stesura del documento Analisi dei Requisiti;
 - #issue("56")[*Aggiornamento glossario*]: Agggioramento del glossario con i termini usati nei documenti dello sprint 3;

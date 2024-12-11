@@ -33,7 +33,7 @@ Il documento non si limita a fornire una panoramica iniziale ma si propone come 
 
 
 == Scopo del prodotto
-Il progetto prevede lo sviluppo di un #gloss[Chatbot] avanzato, basato su modelli linguistici #gloss[LLM] (Large Language Models), pensato per migliorare la comunicazione tra aziende fornitrici e i loro clienti. Questo assistente virtuale permetterà agli utenti di ottenere rapidamente e in modo intuitivo informazioni dettagliate su prodotti o servizi offerti, eliminando la necessità di contattare direttamente l'azienda.
+Il progetto prevede lo sviluppo di un #gloss[Chatbot] avanzato, basato su modelli linguistici #gloss[LLM] (Large Language Models), pensato per migliorare la comunicazione tra aziende fornitrici e i loro clienti. Questo #gloss[assistente virtuale] permetterà agli utenti di ottenere rapidamente e in modo intuitivo informazioni dettagliate su prodotti o servizi offerti, eliminando la necessità di contattare direttamente l'azienda.
 
 
 Il sistema includerà anche un'interfaccia dedicata per le aziende fornitrici, offrendo strumenti per gestire i clienti e i documenti di riferimento che contengono le informazioni necessarie. Questi documenti saranno utilizzati dal modello linguistico per generare risposte personalizzate e accurate, garantendo un'esperienza utente ottimale. L'intero sistema sarà accessibile tramite una #gloss[Webapp], assicurando una gestione efficiente e una fruizione semplice per tutti gli utenti coinvolti.
@@ -65,10 +65,10 @@ https://codehex16.github.io/docs/1%20-%20candidatura/Valutazione-Capitolati.pdf
 - Preventivo costi e impegni:
 https://codehex16.github.io/docs/1%20-%20candidatura/Preventivo-Costi-e-Impegni.pdf
 
-- Analisi dei requisiti:
+- #gloss[Analisi dei requisiti]:
 https://codehex16.github.io/docs/2%20-%20RTB/Analisi-dei-Requisiti.pdf
 
-- Piano di progetto:
+- #gloss[Piano di progetto]:
 https://codehex16.github.io/docs/2%20-%20RTB/Piano-di-Progetto.pdf
 
 - Analisi dei rischi

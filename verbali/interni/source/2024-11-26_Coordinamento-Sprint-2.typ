@@ -35,7 +35,7 @@ I ruoli aggiornati sono:
 
 = Azioni future
 - #issue("56")[*Aggiornamento glossario*]: Agggioramento del glossario con i termini usati nei documenti dello sprint 2
-- #issue("57")[*Individuazione use case Interfaccia Utente*]: Definizione iniziale degli  use case relativi all'interfaccia utente
+- #issue("57")[*Individuazione #gloss[use case] Interfaccia Utente*]: Definizione iniziale degli  use case relativi all'interfaccia utente
 - #issue("59")[*Descrizione del prodtto*]: Stesura della sezione "Descrizione del prodotto" del documento "Analisi dei Requisiti"
 - #issue("60")[*Individuazione use case Amministratore*]: Definizione iniziale degli use case relativi all'interfaccia amministratore
 - #issue("62")[*Studio del contenuto del documento Norme di Progetto*]: Definizione della struttura e del contenuto del documento "Norme di Progetto"
