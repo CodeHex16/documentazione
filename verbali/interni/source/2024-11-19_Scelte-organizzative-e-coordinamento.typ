@@ -22,7 +22,7 @@
 )
 
 = Formalizzazione numero di versione
-È stato definito un formato standard per la numerazione delle versioni dei documenti: dato un numero di versione 'x.y.z' dove x, y e z sono numeri interi, si ha che
+È stato definito un formato #gloss[standard] per la numerazione delle versioni dei documenti: dato un numero di versione 'x.y.z' dove x, y e z sono numeri interi, si ha che
 - *x* è il numero di versione principale, incrementato ogni qual volta il documento sia terminato e pronto per una revisione
 - *y* è il numero di versione secondaria, incrementato ogni qual volta il documento sia stato modificato in modo significativo
 - *z* è il numero di versione di correzione, incrementato ogni qual volta il documento subisca correzioni minori
@@ -68,8 +68,8 @@ Vista la complessità del documento si è deciso dedicare del tempo a strutturar
 
 = Azioni future
 - #issue("34")[*Analisi app nativa vs #gloss[webapp]*]: analisi sui vantaggi e svantaggi, e sull'applicabilità dello sviluppare un'applicazione mobile nativa o una webapp.
-- #issue("35")[*Analisi framework frontend per webapp*]: nel caso si utilizzasse una webapp sarà conveniente utilizzare un framework per lo sviluppo dell'interfaccia web.
+- #issue("35")[*Analisi framework frontend per webapp*]: nel caso si utilizzasse una webapp sarà conveniente utilizzare un framework per lo sviluppo dell'#gloss[interfaccia web].
 - #issue("36")[*Analisi #gloss[LLM]*]: analisi dei vari modelli proposti per individuare quello più corretto per il caso d'uso.
 - #issue("37")[*Analisi database SQL*]: analisi dei database SQL presenti nel mercato per individuare quello più corretto per il caso d'uso.
-- #issue("40")[*Aggiunta dei termini dei documenti nel glossario*]: iniziare ad integrare i termini, presenti nei documenti di questo sprint, che lo richiedono nel glossario.
+- #issue("40")[*Aggiunta dei termini dei documenti nel #gloss[glossario]*]: iniziare ad integrare i termini, presenti nei documenti di questo sprint, che lo richiedono nel glossario.
 - #issue("41")[*Integrazione github issue nella pagina notion*]: integrare le issue nella pagina notion.

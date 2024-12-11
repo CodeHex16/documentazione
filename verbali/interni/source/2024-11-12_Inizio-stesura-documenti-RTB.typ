@@ -26,11 +26,11 @@
 Abbiamo deciso di implementare ulteriori etichette (#gloss[GitHub Labels]) più specifiche per le issue all'interno del repository, al fine di classificare e riconoscere facilmente a quale documento o fase del progetto ciascuna issue è collegata. Questo sistema di labeling permetterà una gestione più ordinata e rapida del #gloss[workflow], facilitando la tracciabilità delle attività legate a documenti specifici.
 \ In particolare sono state implementate le #link("https://github.com/CodeHex16/documentazione/labels", [*#underline[label]*]):
 - Amministrazione
-- Analisi dei requisiti
+- #gloss[Analisi dei requisiti]
 - Analisi dei rischi
 - Hotfix
-- Norme di Progetto
-- Piano di Progetto
+- #gloss[Norme di Progetto]
+- #gloss[Piano di Progetto]
 - Piano di Qualifica
 - Verbali esterni
 - Verbali interni

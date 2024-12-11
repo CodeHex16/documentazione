@@ -7,6 +7,7 @@
     ora: [16:00-18:00],
     tipo: "interno",
     versioni: (
+      "0.1.1","11/12/2024","Yi Hao Zhuo","Aggiunta link glossario", "Matteo Bazzan",
       "0.1.0","26/11/2024","Luca Ribon","Prima stesura", "Filippo Sabbadin"
     ),
     presenze: (
@@ -20,7 +21,7 @@
 )
 
 = Revisione Sprint 1
-Abbiamo discusso brevemente il lavoro svolto durante lo Sprint 1, analizzando le #gloss[task] completate e quelle rimaste in sospeso; successivamente abbiamo aggiornato la rendicontazione delle ore di conseguenza.
+Abbiamo discusso brevemente il lavoro svolto durante lo  #gloss[Sprint] 1, analizzando le #gloss[task] completate e quelle rimaste in sospeso; successivamente abbiamo aggiornato la rendicontazione delle ore di conseguenza.
 
 = Coordinamento per lo Sprint 2
 Per lo sprint 2 abbiamo definito delle task relative ai documenti "#gloss[Analisi dei Requisiti]", "#gloss[Glossario]", "#gloss[Norme di Progetto]" e "#gloss[Piano di Progetto]". Ognuna di queste è stata assegnata ai membri con il ruolo adatto.
@@ -34,7 +35,7 @@ I ruoli aggiornati sono:
 
 = Azioni future
 - #issue("56")[*Aggiornamento glossario*]: Agggioramento del glossario con i termini usati nei documenti dello sprint 2
-- #issue("57")[*Individuazione use case Interfaccia Utente*]: Definizione iniziale degli  use case relativi all'interfaccia utente
+- #issue("57")[*Individuazione #gloss[use case] Interfaccia Utente*]: Definizione iniziale degli  use case relativi all'interfaccia utente
 - #issue("59")[*Descrizione del prodtto*]: Stesura della sezione "Descrizione del prodotto" del documento "Analisi dei Requisiti"
 - #issue("60")[*Individuazione use case Amministratore*]: Definizione iniziale degli use case relativi all'interfaccia amministratore
 - #issue("62")[*Studio del contenuto del documento Norme di Progetto*]: Definizione della struttura e del contenuto del documento "Norme di Progetto"

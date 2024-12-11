@@ -33,17 +33,17 @@
 
 = Introduzione
 == Scopo del documento
-Il presente documento descrive in dettaglio i *casi d'uso* e i *requisiti* relativi al progetto "#gloss[LLM], Assistente Virtuale". Tali specifiche sono state elaborate a partire dall'analisi del capitolato C7, proposto da Ergon, e dagli incontri svolti online e in presenza con l'azienda.
+Il presente documento descrive in dettaglio i *casi d'uso* e i *requisiti* relativi al progetto "#gloss[LLM], #gloss[Assistente Virtuale]". Tali specifiche sono state elaborate a partire dall'analisi del capitolato C7, proposto da Ergon, e dagli incontri svolti online e in presenza con l'azienda.
 
 == Scopo del prodotto
-Il software da realizzare consiste in un #gloss[chatbot], basato su modelli linguistici (LLM), che un fornitore, ad esempio di bevande o alimenti, può offrire ai propri clienti, i quali possono ottenere in modo semplice e immediato informazioni dettagliate sui prodotti o servizi disponibili, senza la necessità di contattare direttamente il fornitore o di avere una figura professionale dedicata.
+Il software da realizzare consiste in un #gloss[chatbot], basato su modelli linguistici (LLM), che un #gloss[fornitore], ad #gloss[esempio] di bevande o alimenti, può offrire ai propri clienti, i quali possono ottenere in modo semplice e immediato informazioni dettagliate sui prodotti o servizi disponibili, senza la necessità di contattare direttamente il fornitore o di avere una figura professionale dedicata.
 
 Il sistema prevede anche un'interfaccia dedicata all'azienda fornitrice, che consente la gestione dei clienti e dei documenti contenenti le informazioni di riferimento. Questi documenti saranno utilizzati dal modello linguistico per generare risposte accurate e personalizzate, garantendo un'esperienza utente ottimale.
 
 = Descrizione del prodotto
-Il sistema mira a semplificare il flusso informativo tra fornitori e clienti, rendendo l’accesso alle informazioni più rapido e indipendente da intermediari umani.
+Il sistema mira a semplificare il flusso informativo tra fornitori e clienti, rendendo l'accesso alle informazioni più rapido e indipendente da intermediari umani.
 
-Attraverso questa soluzione, le aziende potranno migliorare la produttività interna, ridurre i tempi di risposta alle richieste dei clienti e ottimizzare la gestione dei documenti aziendali. Parallelamente, i clienti beneficeranno di un’esperienza utente fluida e accessibile, con risposte precise e aggiornate a qualsiasi ora.
+Attraverso questa soluzione, le aziende potranno migliorare la produttività interna, ridurre i tempi di risposta alle richieste dei clienti e ottimizzare la gestione dei documenti aziendali. Parallelamente, i clienti beneficeranno di un'esperienza utente fluida e accessibile, con risposte precise e aggiornate a qualsiasi ora.
 
 Il progetto si propone inoltre di dimostrare come tecnologie LLM possano trasformare il modo in cui le aziende gestiscono il servizio clienti, ampliando le possibilità di mercato e rafforzando la fidelizzazione degli utenti.
 
@@ -59,7 +59,7 @@ Il sistema dovrà offrire le seguenti funzionalità principali:
     - Conoscere disponibilità, varianti e caratteristiche tecniche di specifici articoli.
     - Ricevere suggerimenti basati su domande frequenti o richieste precedenti.
   - Ottenere risposte personalizzate, generate utilizzando documenti aziendali archiviati nel sistema.
-  - Fornire feedback sul grado di soddisfazione delle risposte ricevute, per migliorare la qualità del sistema.
+  - Fornire #gloss[feedback] sul grado di soddisfazione delle risposte ricevute, per migliorare la qualità del sistema.
 
 - *Per le aziende:*
   - Gestire clienti e documenti attraverso un'interfaccia di amministrazione user-friendly.
@@ -73,11 +73,11 @@ Il sistema dovrà offrire le seguenti funzionalità principali:
     - Un database per archiviare dati aziendali e documenti.
     - Un modello *LLM* preesistente, selezionato tra le opzioni disponibili (es. *BLOOM*, *llama*, *ChatGPT*, *Claude*, ecc.).
     - API REST per la comunicazione tra il modello e le interfacce utente.
-    - Un’interfaccia grafica per l’interazione tra utenti e chatbot, ottimizzata per dispositivi mobili e web.
+    - Un'interfaccia grafica per l'interazione tra utenti e chatbot, ottimizzata per dispositivi mobili e web.
 
 - *Esecuzione e scalabilità:*
   - Il sistema sarà eseguibile in ambienti containerizzati (es. Docker).
-  - Supporta la scalabilità attraverso l’inizializzazione di nodi stateless, per rispondere a un numero variabile di richieste simultanee.
+  - Supporta la scalabilità attraverso l'inizializzazione di nodi stateless, per rispondere a un numero variabile di richieste simultanee.
 
 == Glossario
 Per facilitare la comprensione di questo documento, viene fornito un glossario che chiarisce il significato dei termini specifici utilizzati nel contesto del progetto. Ogni termine di glossario è contrassegnato con un asterisco "\*" in apice e collegato direttamente alla pagina web del glossario, permettendo così di accedere immediatamente alla definizione completa del termine. 
@@ -154,8 +154,8 @@ Nelle seguenti sezioni verranno descritti tutti i possibili casi d'uso, cioè tu
     con successo, altrimenti viene restituito un errore   
     indicando che la registrazione è fallita;\
 *Scenario Principale:*\
-   -L’admin inserisce l’e-mail e l’username scelto;\
-   -Il sistema verifica la correttezza dell’indirizzo e-mail e dell’username. Se sono entrambe corrette registra il nuovo utente/admin ed invia una mail al nuovo utente/admin con la password temporanea che va cambiata al primo login;\
+   -L'admin inserisce l'e-mail e l'username scelto;\
+   -Il sistema verifica la correttezza dell'indirizzo e-mail e dell'username. Se sono entrambe corrette registra il nuovo utente/admin ed invia una mail al nuovo utente/admin con la password temporanea che va cambiata al primo login;\
 *Estensioni:*\
    -Registrazione fallita;\
    
@@ -168,9 +168,9 @@ Nelle seguenti sezioni verranno descritti tutti i possibili casi d'uso, cioè tu
 *Precondizioni:*\
    -L'admin deve avere una connessione stabile e scegliere un username valido;\
 *Postcondizioni:*\
-   -L’admin ha inserito la prima delle due credenziali necessarie alla registrazione: l’indirizzo e-mail;\
+   -L'admin ha inserito la prima delle due credenziali necessarie alla registrazione: l'indirizzo e-mail;\
 *Scenario Principale:*\
-   -L’admin inserisce, nella richiesta di registrazione, l’indirizzo e-mail;\
+   -L'admin inserisce, nella richiesta di registrazione, l'indirizzo e-mail;\
    	
 === UC 1.2-Inserimento Username
 *Attori principali:*\
@@ -181,9 +181,9 @@ Nelle seguenti sezioni verranno descritti tutti i possibili casi d'uso, cioè tu
 *Precondizioni:*\
    -L'admin deve avere una connessione stabile e scegliere un username valido;\
 *Postcondizioni:*\
-   -L’admin ha inserito la seconda delle due credenziali necessarie alla registrazione: l’username;\
+   -L'admin ha inserito la seconda delle due credenziali necessarie alla registrazione: l'username;\
 *Scenario Principale:*\
-   -L’admin inserisce, nella richiesta di registrazione, l’username;\
+   -L'admin inserisce, nella richiesta di registrazione, l'username;\
 
 == UC 2-Registrazione Fallita
 *Attori principali:*\
@@ -195,8 +195,8 @@ Nelle seguenti sezioni verranno descritti tutti i possibili casi d'uso, cioè tu
 *Postcondizioni:*\
    -Il sistema restituisce un errore indicando che la registrazione è fallita, con alcune informazioni sul perché del fallimento;\
 *Scenario Principale:*\
-   -L’admin ha inserito l’e-mail e l’username scelto;\
-   -Il sistema ha ricevuto le credenziali per la registrazione ma queste non sono valide e pertanto viene inviato all’admin un messaggio d'errore in cui viene specificato che non può essere registrato;\
+   -L'admin ha inserito l'e-mail e l'username scelto;\
+   -Il sistema ha ricevuto le credenziali per la registrazione ma queste non sono valide e pertanto viene inviato all'admin un messaggio d'errore in cui viene specificato che non può essere registrato;\
 
 === UC 2.1.1-Inserimento e-mail già in uso
 *Attori principali:*\
@@ -207,10 +207,10 @@ Nelle seguenti sezioni verranno descritti tutti i possibili casi d'uso, cioè tu
 *Precondizioni:*\
    -L'utente/admin ha inserito le credenziali e inviato al sistema la richiesta di registrazione;\
 *Postcondizioni:*\
-   -Il sistema ha ricevuto le credenziali inviate dall’utente/admin, ma l’e-mail è già registrata nel sistema, quindi invia un messaggio d’errore all’utente;\
+   -Il sistema ha ricevuto le credenziali inviate dall'utente/admin, ma l'e-mail è già registrata nel sistema, quindi invia un messaggio d'errore all'utente;\
 *Scenario Principale:*\
-   -L’utente/admin ha inserito l’indirizzo e-mail e l’username al fine di registrarsi;\
-   -Il sistema invia un messaggio d’errore indicando all’utente che l’e-mail inserita è già in uso nel sistema e il tentativo di registrazione fallisce;\
+   -L'utente/admin ha inserito l'indirizzo e-mail e l'username al fine di registrarsi;\
+   -Il sistema invia un messaggio d'errore indicando all'utente che l'e-mail inserita è già in uso nel sistema e il tentativo di registrazione fallisce;\
 
 === UC 2.1.2-Inserimento e-mail non valida
 *Attori principali:*\
@@ -221,10 +221,10 @@ Nelle seguenti sezioni verranno descritti tutti i possibili casi d'uso, cioè tu
 *Precondizioni:*\
    -L'utente/admin ha inserito le credenziali e inviato al sistema la richiesta di registrazione;\
 *Postcondizioni:*\
-   -Il sistema ha ricevuto le credenziali inviate dall’utente/admin, ma l’e-mail non è valida, quindi invia un messaggio d’errore all’utente;\  
+   -Il sistema ha ricevuto le credenziali inviate dall'utente/admin, ma l'e-mail non è valida, quindi invia un messaggio d'errore all'utente;\  
 *Scenario Principale:*\
-   -L’utente/admin ha inserito l’indirizzo e-mail e l’username al fine di registrarsi;\
-   -Il sistema invia un messaggio d’errore indicando all’utente che l’e-mail inserita non è valida e il tentativo di registrazione fallisce;\
+   -L'utente/admin ha inserito l'indirizzo e-mail e l'username al fine di registrarsi;\
+   -Il sistema invia un messaggio d'errore indicando all'utente che l'e-mail inserita non è valida e il tentativo di registrazione fallisce;\
 
 === UC 2.2.1-Inserimento username già in uso
 *Attori principali:*\
@@ -235,10 +235,10 @@ Nelle seguenti sezioni verranno descritti tutti i possibili casi d'uso, cioè tu
 *Precondizioni:*\
    -L'utente/admin ha inserito le credenziali e inviato al sistema la richiesta di registrazione;\
    *Postcondizioni:*\
-   -Il sistema ha ricevuto le credenziali inviate dall’utente/admin, ma l’username è già registrato nel sistema, quindi invia un messaggio d’errore all’utente;\
+   -Il sistema ha ricevuto le credenziali inviate dall'utente/admin, ma l'username è già registrato nel sistema, quindi invia un messaggio d'errore all'utente;\
 *Scenario Principale:*\
-   -L’utente/admin ha inserito l’indirizzo e-mail e l’username al fine di registrarsi;
-   -Il sistema invia un messaggio d’errore indicando all’utente che l’username inserito è già in uso nel sistema e il tentativo di registrazione fallisce;\
+   -L'utente/admin ha inserito l'indirizzo e-mail e l'username al fine di registrarsi;
+   -Il sistema invia un messaggio d'errore indicando all'utente che l'username inserito è già in uso nel sistema e il tentativo di registrazione fallisce;\
 
 === UC 2.2.2-Inserimento username non valido
 *Attore principale:*\
@@ -249,10 +249,10 @@ Nelle seguenti sezioni verranno descritti tutti i possibili casi d'uso, cioè tu
 *Precondizioni:*\
    -L'utente/admin ha inserito le credenziali e inviato al sistema la richiesta di registrazione;\
    *Postcondizioni:*\
-   -Il sistema ha ricevuto le credenziali inviate dall’utente/admin, ma l’e-mail non è valida, quindi invia un messaggio d’errore all’utente;\
+   -Il sistema ha ricevuto le credenziali inviate dall'utente/admin, ma l'e-mail non è valida, quindi invia un messaggio d'errore all'utente;\
 *Scenario Principale:*\
-   -L’utente/admin ha inserito l’indirizzo e-mail e l’username al fine di registrarsi;
-   -Il sistema invia un messaggio d’errore indicando all’utente che l’e-mail inserita non è valida e il tentativo di registrazione fallisce;\
+   -L'utente/admin ha inserito l'indirizzo e-mail e l'username al fine di registrarsi;
+   -Il sistema invia un messaggio d'errore indicando all'utente che l'e-mail inserita non è valida e il tentativo di registrazione fallisce;\
 
 == Login 
 *Attore principale:*\
@@ -263,9 +263,9 @@ Nelle seguenti sezioni verranno descritti tutti i possibili casi d'uso, cioè tu
 *Precondizioni:*\
    -L'utente/admin è in possesso e a conoscenza delle proprie credenziali;\
    *Postcondizioni:*\
-   -Il sistema ha ricevuto le credenziali inviate dall’utente/admin, e se sono valide permette l'accesso dell'utente/admin alla #gloss[webapp] e ai suoi servizi;\
+   -Il sistema ha ricevuto le credenziali inviate dall'utente/admin, e se sono valide permette l'accesso dell'utente/admin alla #gloss[webapp] e ai suoi servizi;\
 *Scenario Principale:*\
-   -L’utente/admin ha inserito l’indirizzo e-mail e la password al fine di accedere alla webapp;
+   -L'utente/admin ha inserito l'indirizzo e-mail e la password al fine di accedere alla webapp;
    -Il sistema riceve la richiesta di accesso e verifica le credenziali ;\
 *Estensioni:*\
    -Primo login (cambio password temporanea);\
@@ -282,7 +282,7 @@ Nelle seguenti sezioni verranno descritti tutti i possibili casi d'uso, cioè tu
 *Postcondizioni:*\
    -L'utente/admin inserisce la prima delle due credenziali: l'e-mail/username ;\
 *Scenario Principale:*\
-   -L’utente/admin ha inserito l’indirizzo e-mail necessaria per effettuare l'accesso;\
+   -L'utente/admin ha inserito l'indirizzo e-mail necessaria per effettuare l'accesso;\
 
   === Inserimento password
 *Attori principali:*\
@@ -293,9 +293,9 @@ Nelle seguenti sezioni verranno descritti tutti i possibili casi d'uso, cioè tu
 *Precondizioni:*\
    -L'utente/admin deve essere in possesso della password per poter effettuare l'accesso;\
 *Postcondizioni:*\
-   -L’utente/admin ha inserito la seconda delle due credenziali necessarie alla registrazione: la password;\
+   -L'utente/admin ha inserito la seconda delle due credenziali necessarie alla registrazione: la password;\
 *Scenario Principale:*\
-   -L’utente/admin inserisce, nella richiesta di accessi, la password;\
+   -L'utente/admin inserisce, nella richiesta di accessi, la password;\
 
   === Possibilità "Resta connesso"
 *Attori principali:*\
@@ -305,9 +305,9 @@ Nelle seguenti sezioni verranno descritti tutti i possibili casi d'uso, cioè tu
 *Precondizioni:*\
    -L'utente deve essere possedere le credenziali necessarie per l'accesso;\
 *Postcondizioni:*\
-   -L’utente/admin ha inserito le credenziali (che devono essere valide), premuto il pulsante "Resta connesso" ed effettuato il login;\
+   -L'utente/admin ha inserito le credenziali (che devono essere valide), premuto il pulsante "Resta connesso" ed effettuato il login;\
 *Scenario Principale:*\
-   -L’utente/admin inserisce le credenziali, preme il pulsante "Resta connesso" ed effetua il login;\
+   -L'utente/admin inserisce le credenziali, preme il pulsante "Resta connesso" ed effetua il login;\
    -Il sistema riceve la richiesta dell'utente/admin di accedere e se le credenziali sono corrette il login ha successo e il sistema mantiene in memoria le credenziali per un futuro login senza dover richiederle all'utente/admin;\
 
   == Primo Login (cambio password temporanea)
@@ -319,10 +319,10 @@ Nelle seguenti sezioni verranno descritti tutti i possibili casi d'uso, cioè tu
 *Precondizioni:*\
    -L'utente/admin deve essere in possesso dell'e-mail/username e della password temporanea inviatagli, tramite e-mail, alla registrazione;\
 *Postcondizioni:*\
-   -L’utente/admin ha inserito le credenziali necessarie per l'accesso;\
+   -L'utente/admin ha inserito le credenziali necessarie per l'accesso;\
    -L'utente/admin ha efettuato il suo primo accesso alla web app e deve cambiare la password temporanea in una password nuova che però deve essere valida e cioè rispettare delle indicazioni;\
 *Scenario Principale:*\
-   -L’utente/admin effettua l'accesso per la prima volta alla web app;\
+   -L'utente/admin effettua l'accesso per la prima volta alla web app;\
    -L'utente/admin sceglie una nuova password che rispetti le indicazioni fornitegli;\
 *Estensioni:*\
    -Password scelta non valida;\
@@ -335,9 +335,9 @@ Nelle seguenti sezioni verranno descritti tutti i possibili casi d'uso, cioè tu
 *Precondizioni:*\
    -L'utente/admin deve aver effettuato il suo primo accesso;\
 *Postcondizioni:*\
-   -L’utente/admin ha scelto e inserito la sua nuova password che, però, non rispetta le indicazioni fornitegli, quindi dovrà cambiarla;\
+   -L'utente/admin ha scelto e inserito la sua nuova password che, però, non rispetta le indicazioni fornitegli, quindi dovrà cambiarla;\
 *Scenario Principale:*\
-   -L’utente/admin inserisce la password nuova;\
+   -L'utente/admin inserisce la password nuova;\
    -Il sistema verifica la password inserita e la trova non conforme, quindi invia un messaggio d'errore all'utente/admin con la richiesta di scegliere un'altra password valida;\
 
 == Login fallito (e-mail/username e/o password errati)
@@ -350,8 +350,8 @@ Nelle seguenti sezioni verranno descritti tutti i possibili casi d'uso, cioè tu
 *Postcondizioni:*\
    -Il sistema restituisce un errore indicando che il login è fallito;\
 *Scenario Principale:*\
-   -L’utente/admin ha inserito l’e-mail e la password per effettuare il login;\
-   -Il sistema ha ricevuto le credenziali per l'accesso, ma queste non sono valide e pertanto il sistema invia un messaggio d'errore all’utente/admin informandolo che non può accedere alla web app;\
+   -L'utente/admin ha inserito l'e-mail e la password per effettuare il login;\
+   -Il sistema ha ricevuto le credenziali per l'accesso, ma queste non sono valide e pertanto il sistema invia un messaggio d'errore all'utente/admin informandolo che non può accedere alla web app;\
 
 
 == Logout
@@ -364,7 +364,7 @@ Nelle seguenti sezioni verranno descritti tutti i possibili casi d'uso, cioè tu
 *Postcondizioni:*\
    -Il sistema ha ricevuto la richiesta di logout e la effettua;\
 *Scenario Principale:*\
-   -L’utente/admin preme il pulsante di logout;\
+   -L'utente/admin preme il pulsante di logout;\
    -Il sistema riceve la richiesta di logout e disconnette l'utente/admin dal sistema;\
 
 == Accesso alle impostazioni (lo considero un use case ??)
@@ -373,14 +373,14 @@ Nelle seguenti sezioni verranno descritti tutti i possibili casi d'uso, cioè tu
 *Attore principale:*\
    -Utente/Admin registrato;\
 *Descrizione:*\
-   -Un utente/admin registrato vuole cambiare l'e-mail/username a cui è associato il suo account;\
+   -Un utente/admin registrato vuole cambiare l'e-mail/username a cui è associato il suo #gloss[account];\
 *Precondizioni:*\
    -L'utente/admin deve aver effettuato il login;\
    -L'utente/admin deve accedere alle impostazioni e alla sezione "Cambio e-mail/username";\
 *Postcondizioni:*\
    -Il sistema effettua un controllo sulla validità dell'e-mail/username e se valida conferma il cambiamento dell'e-mail/username;\
 *Scenario Principale:*\
-   -L’utente/admin invia la richiesta di cambio e-mail/username inserendo la nuova e-mail/username scelta;\
+   -L'utente/admin invia la richiesta di cambio e-mail/username inserendo la nuova e-mail/username scelta;\
    -Il sistema riceve la richiesta, controlla che l'e-mail/username sia valida e, se lo è, conferma il cambiamento dell'e-mail/username;\
 *Estensioni:*\
    -Cambio e-mail/username fallito (e-mail/username già in uso);\
@@ -397,7 +397,7 @@ Nelle seguenti sezioni verranno descritti tutti i possibili casi d'uso, cioè tu
 *Postcondizioni:*\
    -Il sistema effettua un controllo sulla validità della password e se valida conferma il cambiamento della password;\
 *Scenario Principale:*\
-   -L’utente/admin invia la richiesta di cambio password inserendo la nuova password scelta;\
+   -L'utente/admin invia la richiesta di cambio password inserendo la nuova password scelta;\
    -Il sistema riceve la richiesta, controlla che la password sia valida e se lo è conferma il cambiamento della password;\
 *Estensioni:*\
    -Cambio password fallito (password non valida);\
@@ -414,7 +414,7 @@ Nelle seguenti sezioni verranno descritti tutti i possibili casi d'uso, cioè tu
 *Postcondizioni:*\
     -Il sistema effettua un controllo sulla validità dell'e-mail ricevuta e se valida invia a tale e-mail la password recuperata;\
 *Scenario Principale:*\
-   -L’utente/admin invia la richiesta di recupero password inserendo l'e-mail/username associata al proprio account;\
+   -L'utente/admin invia la richiesta di recupero password inserendo l'e-mail/username associata al proprio account;\
    -Il sistema riceve la richiesta, controlla che l'e-mail/username sia valida e, se lo è, invia alla e-mail la password recuperata;\
 
 == Scrittura e Invio messaggio
@@ -430,7 +430,7 @@ Nelle seguenti sezioni verranno descritti tutti i possibili casi d'uso, cioè tu
 *Postcondizioni:*\
     -L'utente/admin ha scritto e inviato il messaggio al chatbot;\
 *Scenario Principale:*\
-   -L’utente/admin scrive e invia il messaggio al chatbot;\
+   -L'utente/admin scrive e invia il messaggio al chatbot;\
    -Il chatbot riceve il messaggio, lo analizza e procede a rispondere;\
 *Possibili Estensioni/Errori ???*
 
@@ -473,7 +473,7 @@ Nelle seguenti sezioni verranno descritti tutti i possibili casi d'uso, cioè tu
 *Postcondizioni:*\
    -L'utente/admin accede alla sezione "Visualizza storico chat";\
 *Scenario Principale:*\
-   -L’utente/admin ha effettuato il login, ha acceduto alle impostazioni e premuto sul pulsante "Visuallizza storico chat", quindi accede alla sezione corrispondente;\
+   -L'utente/admin ha effettuato il login, ha acceduto alle impostazioni e premuto sul pulsante "Visuallizza storico chat", quindi accede alla sezione corrispondente;\
 
 == Modifica visualizzazione tempo storico chat (da 30 a 60 giorni e simili)
 *Attore principale:*\
@@ -488,7 +488,7 @@ Nelle seguenti sezioni verranno descritti tutti i possibili casi d'uso, cioè tu
 *Postcondizioni:*\
    -L'utente ha modificato il periodo di tempo su cui visualizzare lo storico delle chat avvenute con il chatbot;\
 *Scenario Principale:*\
-   -L’utente/admin ha effettuato il login, ha acceduto alle impostazioni, alla sezione "Visuallizza storico chat" e modificato il periodo di tempo su cui visualizare lo storico delle chat avvenute con il chatbot;\
+   -L'utente/admin ha effettuato il login, ha acceduto alle impostazioni, alla sezione "Visuallizza storico chat" e modificato il periodo di tempo su cui visualizare lo storico delle chat avvenute con il chatbot;\
 
 == Selezione Dark/Light Mode
 *Attore principale:*\
@@ -503,7 +503,7 @@ Nelle seguenti sezioni verranno descritti tutti i possibili casi d'uso, cioè tu
    -L'utente/admin ha scelto una delle opzioni tra "Dark mode" o "Light mode"";\
    -Il sistema ha modificato l'interfaccia con l'opzione scelta dall'utente/admin;\
 *Scenario Principale:*\
-   -L’utente/admin ha effettuato il login, ha acceduto alle impostazioni modificato il colore dell'interfaccia tramite l'opzione "Dark/Light mode";\
+   -L'utente/admin ha effettuato il login, ha acceduto alle impostazioni modificato il colore dell'interfaccia tramite l'opzione "Dark/Light mode";\
 
 == Caricare il proprio logo
 *Attore principale:*\
@@ -518,7 +518,7 @@ Nelle seguenti sezioni verranno descritti tutti i possibili casi d'uso, cioè tu
    -L'utente/admin inserito il proprio logo;\
    -Il sistema ha effettuato un controllo di validità del formato del logo, e se il logo è risultato valido lo ha inserito nell'interfaccia;\
 *Scenario Principale:*\
-   -L’utente/admin ha effettuato il login, ha acceduto alle impostazioni, alla sezione "Carica logo" e inserito il proprio logo;\
+   -L'utente/admin ha effettuato il login, ha acceduto alle impostazioni, alla sezione "Carica logo" e inserito il proprio logo;\
    -Il sistema ha controllato il formato del logo caricato e se conforme lo ha inserito nell'interaccia;\
 *Estensioni*:\
    -Formato logo non valido;\
@@ -533,7 +533,7 @@ Nelle seguenti sezioni verranno descritti tutti i possibili casi d'uso, cioè tu
 *Postcondizioni:*\
    -Il sistema ha effettuato un controllo di validità del formato del logo ed è risultato non valido, quindi viene inviato un messaggio d'errore all'utente/admin\
 *Scenario Principale:*\
-   -L’utente/admin ha caricato il proprio logo;\
+   -L'utente/admin ha caricato il proprio logo;\
    -Il sistema ha controllato il formato del logo caricato ed è risultato non valido quindi ha inviato un messaggio d'errore all'utente/admin;\
 
 == Scegliere palette colori

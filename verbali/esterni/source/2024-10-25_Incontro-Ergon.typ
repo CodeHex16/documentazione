@@ -7,6 +7,7 @@
     ora: [15:30-16:00],
     tipo: "esterno",
     versioni: (
+        "0.2.1", "30/10/2024", "Yi Hao Zhuo", "Correzione della punteggiatura","",
         "0.2.0", "30/10/2024", "Luca Ribon", "Aggiunta firma e modifica titolo","",
         "0.1.0", "25/10/2024", "Matteo Bazzan", "Prima stesura","",
     ),
@@ -29,20 +30,20 @@ La riunione con il referente di *Ergon* è iniziata descrivendo un quadro genera
 
 + _Quali formati di documenti neccessari alla costruzione del contesto devono essere supportati?_
     \ I formati principali richiesti sono .txt, .pdf e .docx, e potrebbero essere presenti anche dei file .csv.
-+ _Quali parametri si vogliono rendere configurabili tramite l’interfaccia utente?_
-    - Gestione degli utenti: creazione e modifica degli utenti con accesso al #gloss[chatbot] del fornitore
++ _Quali parametri si vogliono rendere configurabili tramite l'interfaccia utente?_
+    - Gestione degli utenti: creazione e modifica degli utenti con accesso al #gloss[chatbot] del #gloss[fornitore]
     - Inserimento di tuple (domanda, risposta) predefinite dal configuratore (prese da un ipotetico FAQ) in modo da ottimizzare il modello in caso venissero chieste domande simili 
 + _Citando il capitolato:_
-    \ #quote()[La piattaforma deve tenere conto del   flusso di interazioni uomo-macchina con i relativi tempi di attesa mantenendo uno stato complessivo sulla conversazione aggiornato] \ _ci si riferisce alla necessità di garantire un’interazione naturale con brevi tempi di risposta?_
-    \ Nello specifico si intende che, dopo aver posto una domanda, l'utente riceva un feedback visivo (es. “sto scrivendo”) per simulare la presenza di un interlocutore reale.
+    \ #quote()[La piattaforma deve tenere conto del   flusso di interazioni uomo-macchina con i relativi tempi di attesa mantenendo uno stato complessivo sulla conversazione aggiornato] \ _ci si riferisce alla necessità di garantire un'interazione naturale con brevi tempi di risposta?_
+    \ Nello specifico si intende che, dopo aver posto una domanda, l'utente riceva un #gloss[feedback] visivo (es. “sto scrivendo”) per simulare la presenza di un interlocutore reale.
 + _Il supporto multilingua da parte dell'#gloss[LLM] è un requisito?_
     \ In questo caso il requisito riguarda solo il supporto della lingua italiana, ma è possibile estendere il supporto anche ad altre lingue.
 + _Per quanto riguarda lo sviluppo della parte lato utente, è preferibile utilizzare .NET MAUI come suggerito nel documento, o si può valutare anche una web app?_
     \ Ergon Informatica consiglia .NET MAUI, in quanto è una tecnologia ampiamente utilizzata internamente e per la quale possono fornire supporto diretto. Tuttavia, è consentito sviluppare una web app per la UI, se preferiamo questa opzione; in tal caso, la scelta delle tecnologie sarà a nostra discrezione.
-+ _Saranno messe a disposizione risorse per poter utilizzare i modelli LLM, specialmente per la fase di debugging e testing, come ad esempio delle piattaforme di hosting o dei token (se neccessari)?_
++ _Saranno messe a disposizione risorse per poter utilizzare i modelli LLM, specialmente per la fase di debugging e testing, come ad #gloss[esempio] delle piattaforme di hosting o dei token (se neccessari)?_
     \ Se necessario, Ergon può fornire le risorse necessarie all'utilizzo modelli LLM o per altre esigenze legate a tutta la fase di sviluppo del progetto.
 + _È possibile avere ulteriori dettagli sulle risorse relative a LLM e .NET MAUI che vengono citate nel capitolato?_
-    \ L’azienda conferma la disponibilità a fornire corsi online asincorni su .NET MAUI e sugli LLM (in base ai modelli che considereremo per il progetto, preferibilmente due opzioni principali).
+    \ L'azienda conferma la disponibilità a fornire corsi online asincorni su .NET MAUI e sugli LLM (in base ai modelli che considereremo per il progetto, preferibilmente due opzioni principali).
 + _È necessario raccogliere feedback degli utenti relativi alle risposte restituite dal chatbot?_
     \ Il requisito in questione è opzionale.
 
