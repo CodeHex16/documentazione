@@ -62,7 +62,7 @@ Il sistema dovrà offrire le seguenti funzionalità principali:
 - **Architettura del sistema:**
   - Il sistema sarà composto da:
     - Un database per archiviare dati aziendali e documenti.
-    - Un modello *LLM* preesistente, selezionato tra le opzioni disponibili (es. *BLOOM*, LLama ...).
+    - Un modello *LLM* preesistente, selezionato tra le opzioni disponibili (es. *BLOOM*, *llama*, *ChatGPT*, *Claude*, ecc.).
     - API REST per la comunicazione tra il modello e le interfacce utente.
     - Un’interfaccia grafica per l’interazione tra utenti e chatbot, ottimizzata per dispositivi mobili e web.
 
