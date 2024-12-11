@@ -1,20 +1,21 @@
 #import "../../../template/verbale.typ": *
 
 #show : doc => verbale(
-    titolo: "Coordinamento Sprint 3",
+    titolo: "Coordinamento Sprint 4",
     ordine-del-giorno: ("Revisione Sprint 3", "Coordinamento per lo Sprint 4", "Incontro azienda Ergon", "Revisione ruoli e durata sprint"),
     data: [11/12/2024],
     ora: [15:00-17:30],
     tipo: "interno",
     versioni: (
+      "0.1.1","11/12/2024","Francesco Fragonas","Correzzione titolo e link issue", "",
       "0.1.0","11/12/2024","Francesco Fragonas","Prima stesura", ""
     ),
     presenze: (
-        "Luca Ribon","Verificatore", "2h",
-        "Filippo Sabbadin", "Verificatore", "2h",
-        "Matteo Bazzan", "Verificatore", "2h",
-        "Francesco Fragonas", "Relatore", "2h",
-        "Yi Hao Zhuo", "Verificatore", "2h"
+        "Luca Ribon","Verificatore", "2h30min",
+        "Filippo Sabbadin", "Verificatore", "2h30min",
+        "Matteo Bazzan", "Verificatore", "2h30min",
+        "Francesco Fragonas", "Relatore", "2h30min",
+        "Yi Hao Zhuo", "Verificatore", "2h30min"
     ),
     doc,
 )
@@ -58,7 +59,7 @@ A seguito dell’esperienza maturata durante gli sprint precedenti, il team ha c
 
 = Azioni future
 
-- #issue("1",repo:"proof-of-concept")[*Realizzazione PoC dell'interfaccia web con Svelte*] e #issue("https://github.com/CodeHex16/proof-of-concept/issues/2")[*Vue.js*]: Sviluppo con Svelte e Vue.js per confrontare i due framework in termini di complessità e tempi di sviluppo.
+- #issue("1",repo:"proof-of-concept")[*Realizzazione PoC dell'interfaccia web con Svelte*] e #issue("2",repo:"proof-of-concept")[*Vue.js*]: Sviluppo con Svelte e Vue.js per confrontare i due framework in termini di complessità e tempi di sviluppo.
 - #issue("97")[*Stesura Norme di Progetto*]: Continuazione stesura del documento Norme di Progetto.
 - #issue("98")[*Stesura Verbale esterno*]: Stesura del verbale esterno relativo all'incontro odierno con il referente dell'azienda.
 - #issue("104")[*Definizione Use Case dell'interfaccia cliente*] e #issue("105")[*fornitore*]: Coninuazione della definizione degli Use Case nel documento Analisi dei Requisiti.
