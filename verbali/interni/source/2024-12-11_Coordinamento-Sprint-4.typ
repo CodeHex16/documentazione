@@ -59,8 +59,8 @@ A seguito dell’esperienza maturata durante gli sprint precedenti, il team ha c
 
 = Azioni future
 
-- #issue("1",repo:"proof-of-concept")[*Realizzazione PoC dell'interfaccia web con Svelte*] e #issue("2",repo:"proof-of-concept")[*Vue.js*]: Sviluppo con Svelte e Vue.js per confrontare i due framework in termini di complessità e tempi di sviluppo.
-- #issue("97")[*Stesura Norme di Progetto*]: Continuazione stesura del documento Norme di Progetto.
+- #issue("1",repo:"proof-of-concept")[*Realizzazione PoC dell'#gloss[interfaccia web] con Svelte*] e #issue("2",repo:"proof-of-concept")[*Vue.js*]: Sviluppo con Svelte e Vue.js per confrontare i due framework in termini di complessità e tempi di sviluppo.
+- #issue("97")[*Stesura #gloss[Norme di Progetto]*]: Continuazione stesura del documento Norme di Progetto.
 - #issue("98")[*Stesura Verbale esterno*]: Stesura del verbale esterno relativo all'incontro odierno con il referente dell'azienda.
-- #issue("104")[*Definizione Use Case dell'interfaccia cliente*] e #issue("105")[*fornitore*]: Coninuazione della definizione degli Use Case nel documento Analisi dei Requisiti.
-- #issue("102")[*Aggiornamento Glossario*]: Aggiornamento del glossario sulla base dell'aggiornamento dei documenti.
+- #issue("104")[*Definizione Use Case dell'interfaccia cliente*] e #issue("105")[*#gloss[fornitore]*]: Coninuazione della definizione degli Use Case nel documento Analisi dei Requisiti.
+- #issue("102")[*Aggiornamento #gloss[Glossario]*]: Aggiornamento del glossario sulla base dell'aggiornamento dei documenti.
