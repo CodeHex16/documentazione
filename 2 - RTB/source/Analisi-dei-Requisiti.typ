@@ -16,8 +16,8 @@
     sommario: [Analisi dei requisiti del capitolato C7],
     
     versioni : (
-      "0.1.0","12/11/2024","Francesco Fragonas","Prima stesura", "Matteo Bazzan",
-      "0.2.0","11/12/2024","Filippo Sabbadin","Aggiunti uses cases e indice immagini,""
+      "0.2.0","27/11/2024","Gabriele Magnelli","Aggiunti use case amministratore","Filippo Sabbadin",
+      "0.1.0","12/11/2024","Francesco Fragonas","Prima stesura", "Matteo Bazzan"
     ),
     doc,
 )
@@ -27,9 +27,48 @@
 Il presente documento descrive in dettaglio i *casi d'uso* e i *requisiti* relativi al progetto "#gloss[LLM], Assistente Virtuale". Tali specifiche sono state elaborate a partire dall'analisi del capitolato C7, proposto da Ergon, e dagli incontri svolti online e in presenza con l'azienda.
 
 == Scopo del prodotto
-Il software da realizzare consiste in un #gloss[chatbot] avanzato, basato su modelli linguistici (LLM), che un fornitore, ad esempio di bevande o alimenti, può offrire ai propri, i quali possono ottenere in modo semplice e immediato informazioni dettagliate sui prodotti o servizi disponibili, senza la necessità di contattare direttamente l'azienda.
+Il software da realizzare consiste in un #gloss[chatbot], basato su modelli linguistici (LLM), che un fornitore, ad esempio di bevande o alimenti, può offrire ai propri clienti, i quali possono ottenere in modo semplice e immediato informazioni dettagliate sui prodotti o servizi disponibili, senza la necessità di contattare direttamente il fornitore o di avere una figura professionale dedicata.
 
 Il sistema prevede anche un'interfaccia dedicata all'azienda fornitrice, che consente la gestione dei clienti e dei documenti contenenti le informazioni di riferimento. Questi documenti saranno utilizzati dal modello linguistico per generare risposte accurate e personalizzate, garantendo un'esperienza utente ottimale.
+
+= Descrizione del prodotto
+Il sistema mira a semplificare il flusso informativo tra fornitori e clienti, rendendo l’accesso alle informazioni più rapido e indipendente da intermediari umani.
+
+Attraverso questa soluzione, le aziende potranno migliorare la produttività interna, ridurre i tempi di risposta alle richieste dei clienti e ottimizzare la gestione dei documenti aziendali. Parallelamente, i clienti beneficeranno di un’esperienza utente fluida e accessibile, con risposte precise e aggiornate a qualsiasi ora.
+
+Il progetto si propone inoltre di dimostrare come tecnologie LLM possano trasformare il modo in cui le aziende gestiscono il servizio clienti, ampliando le possibilità di mercato e rafforzando la fidelizzazione degli utenti.
+
+L'integrazione di un'interfaccia di amministrazione offre agli operatori aziendali uno strumento versatile per monitorare e personalizzare il sistema, garantendo il massimo controllo sui contenuti e adattandolo rapidamente ai vari aggiornamenti di catalogo.
+
+== Funzionalità del prodotto e requisiti
+
+Il sistema dovrà offrire le seguenti funzionalità principali:
+
+- **Per i clienti:**
+  - Interrogare il chatbot tramite una piattaforma web per:
+    - Ottenere descrizioni dettagliate di prodotti.
+    - Conoscere disponibilità, varianti e caratteristiche tecniche di specifici articoli.
+    - Ricevere suggerimenti basati su domande frequenti o richieste precedenti.
+  - Ottenere risposte personalizzate, generate utilizzando documenti aziendali archiviati nel sistema.
+  - Fornire feedback sul grado di soddisfazione delle risposte ricevute, per migliorare la qualità del sistema.
+
+- **Per le aziende:**
+  - Gestire clienti e documenti attraverso un'interfaccia di amministrazione user-friendly.
+  - Configurare domande e risposte predefinite come base per il chatbot.
+  - Caricare, aggiornare e mantenere i documenti aziendali utilizzati per il training del modello *LLM*.
+
+== Requisiti tecnici
+
+- **Architettura del sistema:**
+  - Il sistema sarà composto da:
+    - Un database per archiviare dati aziendali e documenti.
+    - Un modello *LLM* preesistente, selezionato tra le opzioni disponibili (es. *BLOOM*, *llama*, *ChatGPT*, *Claude*, ecc.).
+    - API REST per la comunicazione tra il modello e le interfacce utente.
+    - Un’interfaccia grafica per l’interazione tra utenti e chatbot, ottimizzata per dispositivi mobili e web.
+
+- **Esecuzione e scalabilità:**
+  - Il sistema sarà eseguibile in ambienti containerizzati (es. Docker).
+  - Supporta la scalabilità attraverso l’inizializzazione di nodi stateless, per rispondere a un numero variabile di richieste simultanee.
 
 == Glossario
 Per facilitare la comprensione di questo documento, viene fornito un glossario che chiarisce il significato dei termini specifici utilizzati nel contesto del progetto. Ogni termine di glossario è contrassegnato con un asterisco "\*" in apice e collegato direttamente alla pagina web del glossario, permettendo così di accedere immediatamente alla definizione completa del termine. 
@@ -47,14 +86,14 @@ e nella seguente pagina web:
 
 == Riferimenti
 
-*Riferimenti normativi:*
+=== Riferimenti normativi:
 
 - Norme di progetto v1.0.0:
 
 - Capitolato C7 - Assistente Virtuale Ergon:
 https://www.math.unipd.it/~tullio/IS-1/2024/Progetto/C7.pdf
 
-*Riferimenti informativi:*
+=== Riferimenti informativi:
 
 - "Analisi e descrizione delle funzionalità: Use case e relativi diagrammi (UML)":\
 https://www.math.unipd.it/~rcardin/swea/2022/Diagrammi%20Use%20Case.pdf
