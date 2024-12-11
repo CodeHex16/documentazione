@@ -1,5 +1,5 @@
 #import "../../template/documenti.typ" : *
-
+#import "../../template/i-figured.typ"
 
 #show : doc => documento(
     titolo: "Analisi dei Requisiti",
@@ -9,7 +9,7 @@
         "Luca Ribon","",
         "Francesco Fragonas","Redattore",
         "Gabriele Magnelli","",
-        "Filippo Sabbadin","Verificatore",
+        "Filippo Sabbadin","Redattore",
         "Luca Rossi", "",
         "Yi Hao Zhuo", ""
     ),
@@ -21,6 +21,15 @@
     ),
     doc,
 )
+// spaciugo per aggiungere l'indice delle immagini
+#set page(numbering: "I")
+#counter(page).update(3)
+#show heading: i-figured.reset-counters.with(level: 0)
+#show figure: i-figured.show-figure.with(level: 0)
+#i-figured.outline(title: "Lista di immagini")
+#pagebreak()
+#set page(numbering: "1")
+#counter(page).update(1)
 
 = Introduzione
 == Scopo del documento
@@ -44,7 +53,7 @@ L'integrazione di un'interfaccia di amministrazione offre agli operatori azienda
 
 Il sistema dovrà offrire le seguenti funzionalità principali:
 
-- **Per i clienti:**
+- *Per i clienti:*
   - Interrogare il chatbot tramite una piattaforma web per:
     - Ottenere descrizioni dettagliate di prodotti.
     - Conoscere disponibilità, varianti e caratteristiche tecniche di specifici articoli.
@@ -52,21 +61,21 @@ Il sistema dovrà offrire le seguenti funzionalità principali:
   - Ottenere risposte personalizzate, generate utilizzando documenti aziendali archiviati nel sistema.
   - Fornire #gloss[feedback] sul grado di soddisfazione delle risposte ricevute, per migliorare la qualità del sistema.
 
-- **Per le aziende:**
+- *Per le aziende:*
   - Gestire clienti e documenti attraverso un'interfaccia di amministrazione user-friendly.
   - Configurare domande e risposte predefinite come base per il chatbot.
   - Caricare, aggiornare e mantenere i documenti aziendali utilizzati per il training del modello *LLM*.
 
 == Requisiti tecnici
 
-- **Architettura del sistema:**
+- *Architettura del sistema:*
   - Il sistema sarà composto da:
     - Un database per archiviare dati aziendali e documenti.
     - Un modello *LLM* preesistente, selezionato tra le opzioni disponibili (es. *BLOOM*, *llama*, *ChatGPT*, *Claude*, ecc.).
     - API REST per la comunicazione tra il modello e le interfacce utente.
     - Un'interfaccia grafica per l'interazione tra utenti e chatbot, ottimizzata per dispositivi mobili e web.
 
-- **Esecuzione e scalabilità:**
+- *Esecuzione e scalabilità:*
   - Il sistema sarà eseguibile in ambienti containerizzati (es. Docker).
   - Supporta la scalabilità attraverso l'inizializzazione di nodi stateless, per rispondere a un numero variabile di richieste simultanee.
 
@@ -83,9 +92,56 @@ e nella seguente pagina web:
 "https://codehex16.github.io/glossario"
 )
 
+
 == Riferimenti
-= Use Case
+
+=== Riferimenti normativi:
+
+- Norme di progetto v1.0.0:
+
+- Capitolato C7 - Assistente Virtuale Ergon:
+https://www.math.unipd.it/~tullio/IS-1/2024/Progetto/C7.pdf
+
+=== Riferimenti informativi:
+
+- "Analisi e descrizione delle funzionalità: Use case e relativi diagrammi (UML)":\
+https://www.math.unipd.it/~rcardin/swea/2022/Diagrammi%20Use%20Case.pdf
+
+= Descrizione
+
+== Obiettivi del prodotto
+
+Il progetto ha come obiettivo la creazione di una webapp che fornisce un modello di chatbot con cui l’utente può interagire e inviare messaggi per chiedere informazioni sui prodotti forniti.
+Con il chatbot, gli utenti possono ottenere risposte immediate, risparmiare tempo e completare le azioni desiderate senza bisogno di un supporto umano diretto, rendendo l'interazione con la webapp più veloce ed efficiente.
+
+== Funzionalità del prodotto
+
+L’applicazione permette di:
+
+- creare un account dotato di email e password;
+- accedere al proprio account sempre con la coppia email e password scelte durante la registrazione
+- modificare dati dell’utente (es email, password)
+- Scrittura ed invio di messagi
+- Modificare il numero di messaggi recenti visualizzabili
+- modificare il colore principale dell’aplicazione (chiaro o scuro)
+
+== Utenti e caratteristiche
+
+La webapp è rivolta verso ristoratori che vogliono offrire un’assistenza veloce verso i clienti. I ristoratori, dopo essersi registrati, possono inserire, modificare ed eliminare informazioni sui propri prodotti. Gli utenti, registrati o no, possono poi scrivere al chatbot per richiedere queste informazioni.
+
+= Use Cases
+
+== Introduzione
+
+Nelle seguenti sezioni verranno descritti tutti i possibili casi d'uso, cioè tutti i modi in cui gli attori, definiti più avanti, possono interagire con l'applicazione.
+
+== Attori
+
+- Utente non registrato
+- Admin registrato
+
 == UC 1-Registrazione
+#figure(image("../imgs/UC1-Registrazione.png", width: 95%), caption: [UC1 - Registrazione])
 *Attori principali*: \
    -Admin non registrato; \
 *Descrizione*:\
