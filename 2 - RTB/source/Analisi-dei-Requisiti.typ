@@ -27,25 +27,25 @@
 Il presente documento descrive in dettaglio i *casi d'uso* e i *requisiti* relativi al progetto "#gloss[LLM], Assistente Virtuale". Tali specifiche sono state elaborate a partire dall'analisi del capitolato C7, proposto da Ergon, e dagli incontri svolti online e in presenza con l'azienda.
 
 == Scopo del prodotto
-Il software da realizzare consiste in un #gloss[chatbot] avanzato, basato su modelli linguistici (LLM), che un fornitore, ad esempio di bevande o alimenti, può offrire ai propri, i quali possono ottenere in modo semplice e immediato informazioni dettagliate sui prodotti o servizi disponibili, senza la necessità di contattare direttamente l'azienda.
+Il software da realizzare consiste in un #gloss[chatbot], basato su modelli linguistici (LLM), che un fornitore, ad esempio di bevande o alimenti, può offrire ai propri clienti, i quali possono ottenere in modo semplice e immediato informazioni dettagliate sui prodotti o servizi disponibili, senza la necessità di contattare direttamente il fornitore o di avere una figura professionale dedicata.
 
 Il sistema prevede anche un'interfaccia dedicata all'azienda fornitrice, che consente la gestione dei clienti e dei documenti contenenti le informazioni di riferimento. Questi documenti saranno utilizzati dal modello linguistico per generare risposte accurate e personalizzate, garantendo un'esperienza utente ottimale.
 
 = Descrizione del prodotto
-Il sistema mira a semplificare il flusso informativo tra aziende e clienti, rendendo l’accesso alle informazioni più rapido e indipendente da intermediari umani.
+Il sistema mira a semplificare il flusso informativo tra fornitori e clienti, rendendo l’accesso alle informazioni più rapido e indipendente da intermediari umani.
 
 Attraverso questa soluzione, le aziende potranno migliorare la produttività interna, ridurre i tempi di risposta alle richieste dei clienti e ottimizzare la gestione dei documenti aziendali. Parallelamente, i clienti beneficeranno di un’esperienza utente fluida e accessibile, con risposte precise e aggiornate a qualsiasi ora.
 
 Il progetto si propone inoltre di dimostrare come tecnologie LLM possano trasformare il modo in cui le aziende gestiscono il servizio clienti, ampliando le possibilità di mercato e rafforzando la fidelizzazione degli utenti.
 
-L'integrazione di un'interfaccia di amministrazione offre agli operatori aziendali uno strumento versatile per monitorare e personalizzare il sistema, garantendo il massimo controllo sui contenuti e adattandolo rapidamente alle mutevoli esigenze del mercato.
+L'integrazione di un'interfaccia di amministrazione offre agli operatori aziendali uno strumento versatile per monitorare e personalizzare il sistema, garantendo il massimo controllo sui contenuti e adattandolo rapidamente ai vari aggiornamenti di catalogo.
 
 == Funzionalità del prodotto e requisiti
 
 Il sistema dovrà offrire le seguenti funzionalità principali:
 
 - **Per i clienti:**
-  - Interrogare il chatbot tramite una piattaforma mobile o web per:
+  - Interrogare il chatbot tramite una piattaforma web per:
     - Ottenere descrizioni dettagliate di prodotti.
     - Conoscere disponibilità, varianti e caratteristiche tecniche di specifici articoli.
     - Ricevere suggerimenti basati su domande frequenti o richieste precedenti.
@@ -62,7 +62,7 @@ Il sistema dovrà offrire le seguenti funzionalità principali:
 - **Architettura del sistema:**
   - Il sistema sarà composto da:
     - Un database per archiviare dati aziendali e documenti.
-    - Un modello *LLM* preesistente, selezionato tra le opzioni disponibili (es. *BLOOM*, *Falcon*, o *Italia by iGenius*).
+    - Un modello *LLM* preesistente, selezionato tra le opzioni disponibili (es. *BLOOM*, LLama ...).
     - API REST per la comunicazione tra il modello e le interfacce utente.
     - Un’interfaccia grafica per l’interazione tra utenti e chatbot, ottimizzata per dispositivi mobili e web.
 
