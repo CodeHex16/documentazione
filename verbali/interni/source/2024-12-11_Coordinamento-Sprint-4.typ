@@ -7,8 +7,8 @@
     ora: [15:00-17:30],
     tipo: "interno",
     versioni: (
-      "0.1.1","11/12/2024","Francesco Fragonas","Correzzione titolo e link issue", "",
-      "0.1.0","11/12/2024","Francesco Fragonas","Prima stesura", ""
+      "0.1.1","11/12/2024","Francesco Fragonas","Correzione titolo e link issue", "Matteo Bazzan",
+      "0.1.0","11/12/2024","Francesco Fragonas","Prima stesura", "Matteo Bazzan"
     ),
     presenze: (
         "Luca Ribon","Verificatore", "2h30min",
