@@ -9,14 +9,15 @@
         "Luca Ribon","",
         "Francesco Fragonas","Redattore",
         "Gabriele Magnelli","",
-        "Filippo Sabbadin","",
+        "Filippo Sabbadin","Redattore",
         "Luca Rossi", "",
         "Yi Hao Zhuo", ""
     ),
     sommario: [Analisi dei requisiti del capitolato C7],
     
     versioni : (
-      "0.1.0","12/11/2024","Francesco Fragonas","Prima stesura", "Matteo Bazzan"
+      "0.1.0","12/11/2024","Francesco Fragonas","Prima stesura", "Matteo Bazzan",
+      "0.2.0","11/12/2024","Filippo Sabbadin","Aggiunti uses cases e indice immagini,""
     ),
     doc,
 )
