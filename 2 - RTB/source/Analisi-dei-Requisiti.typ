@@ -81,7 +81,7 @@ Il sistema dovrà offrire le seguenti funzionalità principali:
 
 == Glossario
 Per facilitare la comprensione di questo documento, viene fornito un glossario che chiarisce il significato dei termini specifici utilizzati nel contesto del progetto. Ogni termine di glossario è contrassegnato con un asterisco "\*" in apice e collegato direttamente alla pagina web del glossario, permettendo così di accedere immediatamente alla definizione completa del termine. 
-\
+
 Le definizioni sono disponibili nel documento
 #link(
 "https://github.com/CodeHex16/documentazione/tree/main/glossario/glossario.pdf"
