@@ -21,19 +21,19 @@
 )
 
 = Revisione Sprint 3
-Durante la riunione è stato analizzato il lavoro svolto nello *Sprint 3*, con un focus sulle task completate e su quelle attualmente in sviluppo. È stato constatato che tutte le attività sono state avviate, senza alcuna task rimasta non iniziata. Inoltre, è stata aggiornata la rendicontazione delle ore in base al lavoro svolto.
+Durante la riunione è stato analizzato il lavoro svolto nello *Sprint 3*, con un focus sulle #gloss[task] completate e su quelle attualmente in sviluppo. È stato constatato che tutte le attività sono state avviate, senza alcuna task rimasta non iniziata. Inoltre, è stata aggiornata la rendicontazione delle ore in base al lavoro svolto.
 
 = Coordinamento per lo Sprint 4
 Per lo *Sprint 4* sono state definite nuove task sulla base del lavoro già completato. Le attività previste riguardano:
 
-- Proseguimento nella stesura dei documento per l'RTB.
-- Realizzazione del Proof of Concept (PoC) per la parte frontend, testando due tecnologie diverse: Svelte e Vue.js.
+- Proseguimento nella stesura dei documento per l'#gloss[RTB].
+- Realizzazione del Proof of Concept (#gloss[PoC]) per la parte frontend, testando due tecnologie diverse: Svelte e Vue.js.
 
 = Incontro con l'azienda Ergon
-È stato svolto un incontro online con il referente dell’azienda proponente, *Ergon Informatica*, per discutere i seguenti argomenti:
+È stato svolto un incontro online con il referente dell’azienda #gloss[proponente], *Ergon Informatica*, per discutere i seguenti argomenti:
 
-- Chiarimenti sull'utilizzo degli LLM.
-- Definizione della struttura ideale del sistema per delineare meglio gli Use Case per l'Analisi dei Requisiti.
+- Chiarimenti sull'utilizzo degli #gloss[LLM].
+- Definizione della struttura ideale del sistema per delineare meglio gli #gloss[Use Case] per l'#gloss[Analisi dei Requisiti].
 Approfondimenti sulla realizzazione del PoC.
 
 = Revisione ruoli e durata Sprint
