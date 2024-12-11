@@ -1,5 +1,5 @@
 #import "../../template/documenti.typ" : *
-
+#import "../../template/i-figured.typ"
 
 #show : doc => documento(
     titolo: "Analisi dei Requisiti",
@@ -17,10 +17,19 @@
     
     versioni : (
       "0.1.0","12/11/2024","Francesco Fragonas","Prima stesura", "Matteo Bazzan",
-      "0.2.0","11/12/2024","Filippo Sabbadin","Aggiunti uses cases e indice immagini,""
+      "0.2.0","11/12/2024","Filippo Sabbadin","Aggiunti uses cases e indice immagini,"
     ),
     doc,
 )
+// spaciugo per aggiungere l'indice delle immagini
+#set page(numbering: "I")
+#counter(page).update(3)
+#show heading: i-figured.reset-counters.with(level: 0)
+#show figure: i-figured.show-figure.with(level: 0)
+#i-figured.outline(title: "Lista di immagini")
+#pagebreak()
+#set page(numbering: "1")
+#counter(page).update(1)
 
 = Introduzione
 == Scopo del documento
