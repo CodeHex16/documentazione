@@ -16,9 +16,10 @@
     sommario: [Norme di progetto],
     
     versioni : (
-      "0.1.0","12/11/2024","Filippo Sabbadin","Prima stesura", "Gabriele Magnelli",
+      "0.3.0","12/12/2024","Gabriele Magnelli","Redazione sezioni Processi di supporto e Processi organizzativi", "Yi Hao Zhuo",
+      "0.2.0","30/11/2024","Francesco Fragonas","Redazione Processi di accordo", "Filippo Sabbadin",
       "0.1.1","30/11/2024","Francesco Fragonas","Revisione Introduzione", "Filippo Sabbadin",
-      "0.2.0","30/11/2024","Francesco Fragonas","Redazione Processi di accordo", "Filippo Sabbadin"
+      "0.1.0","12/11/2024","Filippo Sabbadin","Prima stesura", "Gabriele Magnelli"
     ),
     doc,
 )
@@ -96,7 +97,7 @@ Il gruppo CodeHex16 manterrà un dialogo attivo e regolare con il Proponente per
 
 1- Scritta (asincrona) utilizzata per comunicazioni di breve durata, condivisione di verbali e materiale informativo e attività di coordinamento;
 
-2- Incontri online (sincrona) utilizzati per chiarimenti sul capitolato, approfondimenti relativi ai casi d'uso e requisiti e feedback sul lavoro svolto.
+2- Incontri online (sincrona) utilizzati per chiarimenti sul capitolato, approfondimenti relativi ai casi d'uso e requisiti e feedback sul lavoro svolto;
 
 
 Il testo è chiaro, ma può essere migliorato leggermente per una maggiore fluidità e precisione:
@@ -137,13 +138,156 @@ Nel documento #link("")[Piano di Qualifica] ...
 
 Per lo svolgimento del progetto abbiamo utilizzato i seguenti strumenti:
 
-- *Telegram* per la comunicazione all'interno del gruppo
-- *Discord* per i meet interni
-- *Zoom* per i meet esterni con il referente dell'azienda Ergon Informatica
-- *GitHub* per organizzare tutti i documenti e file sorgente del progetto
-- *GitHub Issue* per assegnare task ad ogni membro avendo un rendiconto preciso dei ruoli e delle ore svolte per ogni sprint, con l'assegnazione di label e milestone specifiche
-- *Google Fogli* per organizzare incontri con la compilazione di un calendario settimanale e per fissare le ore svolte avendo una visione generale dell'andamento del progetto
-- *Typst* per la stesura di tutti i documenti e verbali
-- *Canva* per la realizzazione delle presentazioni per i Diari di Bordo settimanali
-- *Notion* per organizzare appunti e documenti non ufficiali
+- *Telegram* per la comunicazione all'interno del gruppo;
+- *Discord* per i meet interni;
+- *Zoom* per i meet esterni con il referente dell'azienda Ergon Informatica;
+- *GitHub* per organizzare tutti i documenti e file sorgente del progetto;
+- *GitHub Issue* per assegnare task ad ogni membro avendo un rendiconto preciso dei ruoli e delle ore svolte per ogni sprint, con l'assegnazione di label e milestone specifiche;
+- *Google Fogli* per organizzare incontri con la compilazione di un calendario settimanale e per fissare le ore svolte avendo una visione generale dell'andamento del progetto;
+- *Typst* per la stesura di tutti i documenti e verbali;
+- *Canva* per la realizzazione delle presentazioni per i Diari di Bordo settimanali;
+- *Notion* per organizzare appunti e documenti non ufficiali;
 
+== Sviluppo
+= Processi di supporto
+== Documentazione
+=== Scopo e descrizione
+Lo scopo del processo di documentazione è quello di tracciare e, quindi, rendere immediatamente consultabile ogni attività e processo relativi al progetto.
+Inoltre, saranno riportate le decisioni prese e le norme scelte dal gruppo CodeHex16 che verranno rispettate da tutti i suoi membri al fine di procedere al meglio nello sviluppo del progetto.
+=== Composizione tipografica
+Per la composizione tipografica dei documenti si è deciso di usare #gloss[Typst] per i seguenti motivi:
+- Semplicità d'uso;
+- Sintassi semplice;
+- Compilazione immediata;
+Grazie a Typst si riesce facilmente a creare e mantenere un documento non lasciando il lavoro di controllo grafico al gruppo, infatti si possono scrivere i vari tipi di documenti partendo dai template che si possono trovare nella repository #link("https://github.com/CodeHex16/documentazione")[#underline[*documentazione*]] nella cartella _template_.
+== Struttura dei documenti
+Ci sono diversi tipi di documenti e generalmente sono organizzati nelle seguenti sezioni:
+=== Intestazione
+La prima pagina è l'intestazione del documento ed è composta generalmente dalle seguenti informazioni:
+- *Titolo*: Titolo del documento che è anche il nome del documento;
+- *E-mail*: E-mail del gruppo;
+- *Logo*: Logo del gruppo;
+- *Tipo*: Il verbale può essere di tipo interno o esterno;
+- *Data*: La data in cui il gruppo si è incontrato e/o in cui il documento è stato redatto;
+- *Ora*: L'orario in cui è avvenuto l'incontro di gruppo;
+- *Versione*: La versione corrente del documento;
+- *Ordine del giorno*: L'elenco degli argomenti principali discussi durante l'incontro;
+- *Presenze/Ruoli*: Per ogni membro del gruppo presente durante l'incontro viene registrato il suo nome e cognome, il ruolo svolto  e il tempo per cui è stato presente durante l'incontro;
+=== Registro delle modifiche
+La seconda pagina riguarda il registro modifiche il cui contenuto è organizzato mediante una tabella in cui vengono riportate le seguente informazioni:
+- *Versione*: Indica il numero della versione del documento;
+- *Data*: Data della versione in cui è redatto il documento;
+- *Autore*:Autore di quella versione del documento, cioè il membro del gruppo che ha apportato le modifiche al documento;\
+- *Cambiamenti*:I cambiamenti pricipali di quella versione del documento;\
+- *Verificatore*:Membro del gruppo che ha verificato il documento per quella versione;
+=== Indice
+Nella terza pagina, e se necessario le seguenti, è riservata all'indice del documento che elenca le sezioni di cui è composto i documento.\
+=== Corpo del documento
+Il corpo del documento è suddiviso in capitoli ognuno dei quali può essere diviso in sottocapitoli che a loro volta possono essere suddivisi in altri sottocapitoli.\
+=== Documenti del progetto
+Verranno prodotti i seguenti documenti:
+- *Norme di Progetto*;
+- *Piano di Progetto*;
+- *Analisi dei Requisiti*;
+- *Piano di Qualifica*;
+- *Glossario*;
+- *Verbali esterni*;
+- *Verbali interni*;
+=== Regole stilistiche
+=== Elenchi puntati
+Ogni voce di un elenco puntato finisce con ";".
+=== Formato delle date
+Per le date viene utilizzato lo standard internazionale *ISO 8601* nella forma YYYY-MM-DD in cui:
+- *YYYY*:Indica l'anno con 4 cifre;
+- *MM*: Indica il mese con 2 cifre;
+- *DD*: Indica il giorno con 2 cifre;\
+=== Strumenti
+- *Typst*: Linguaggio per la stesura dei documenti;
+- *Github*: Servizio di hosting per il repository;
+== Gestione della configurazione
+=== Scopo e descrizione
+Il processo di gestione di configurazione identifica le norme adottate dal gruppo per garantire la tracciabilità della documentazione e del codice prodotto durante tutto l'arco di vita del progetto.
+Lo scopo principale è quello di organizzare la procedura di modifica della documentazione e del codice prodotto e di rendere immediatamente consultabili le varie modifiche apportate e i loro autori.
+=== Versionamento
+In generale una versione è del tipo X.Y.Z in cui:
+- *X*: E' il numero di versione principale che viene incrementato ogni qual volta il documento sia terminato e pronto per una revisione;
+- *Y*: E' il numero di versione secondaria che viene incrementato ogni qual volta il documento sia stato modificato in modo significativo;
+- *Z*: E' il numero di versione di correzione, incrementato ogni qual volta il documento subisca correzioni minori;
+In particolare, per i verbali vengono considerati solo i numeri Y e Z per il fatto di essere documenti molto brevi, in cui:
+- *Y*: E' il numero di versione principale che viene incrementato ogni qual volta il documento sia terminato o venga modificato con correzioni importanti;
+- *Z*: E' il numero di versione secondaria che viene incrementato ogni qual volta il documento sia stato modificato con piccole correzioni;
+=== Repository
+==== Struttura della repository documentazione
+Il contenuto pronto e convalidato del repository è presente nel branch main in cui sono presenti tutti i PDF dei documenti prodotti.
+Nel branch main si possono trovare diverse cartelle che servono per organizzare e dividere i vari tipi di documenti e codice, in particolare:
+- In *1-candidatura* si trovano i documenti relativi alla candidatura per la gara d'appalto di dei capitolati;
+- In *2-RTB* si trovano i documenti relativi alla fase di progetto *RTB(Requirement and Technology Baseline)*;
+- In *3-PB* si trovano i documenti relativi alla fase di progetto *PB(Product Baseline)*;
+- In *Glossario* è presente il documento Glossario;
+- In *verbali* sono presenti sia i verbali interni sia quelli esterni in foramto PDF;
+- In *diari-di-bordo* sono presenti tutti i diari di bordo prodotti;
+=== Sincronizzazione
+La sincronizzazione avviene tramite repository condivise su github in cui ogni attività da svolgere è tracciata dat una issue con il/i membro/i assegnato/i a tale issue così da sapere chi la segue o l'ha seguita.
+==== Branch
+Per gestire al meglio le varie issue e i documenti si è deciso di creare dei branch appositi per ogni documento importante come *Norme di Progetto*, *Piano di Progetto*, *Glossario*, *Piano di Qualifica* e *Analisi dei Requisiti*.
+Inoltre, se più membri del gruppo lavorano allo stesso documento allora viene creato un branch per ogni membro con nome il nome del documento e di chi lo sta realizzando. 
+Una volta finito il lavoro da parte di tutti i membri che operano su quel documento, questo viene verificato (tramite pull request) e viene eseguito il merge sul branch main e i branch ausiliari vengono eliminati.
+Altri branch degni di nota fino ad ora sono:
+- *to-be-aproved*: Usato per scrivere e verificare sia i verbali interni sia esterni;
+- *diario-di-bordo*: Utilizzato per scrivere e verificare i diari di bordo;
+==== Pull request
+Per quanto riguarda le pull request si è deciso che per ogni documento redatto viene richiesta la verifica tramite pull request.
+A questo punto i verificatori incaricati (vengono create delle issue per la verifica assegnandole a chi di dovere), tramite questa pull request, eseguono la verifica e se è tutto corretto viene fatto il merge delle modifiche apportate nel main,
+altrimenti il verificatore può correggere direttamente il documento, oppure scrivere un commento con delle indicazioni per le correzioni da svolgere.
+=== Strumenti usati
+- *Git*: Software usato per il controllo della versione dei documenti e del codice;
+- *Github*:Servizio di hosting per progetti sotware usato dal gruppo per coordinarsi sulle operazioni di versionamento e usato come *Issue Tracking System*;
+=== Verifica 
+=== Validazione
+=== Gestione qualità
+== Processi organizzativi
+=== Gestione dei processi
+==== Scopo e descrizione
+Il processo di gestione ha lo scopo di identificare le attività e i compiti che ogni membro del gruppo dovrà eseguire per proseguire nel progetto.
+==== Ruoli 
+I ruoli svolti, a rotazione, dai membri del gruppo sono:
+- *Responsabile*:;
+- *Amministratore*:;
+- *Progettista*:;
+- *Analista*:;
+- *Programmatore*:;
+- *Verificatore*:;
+In particolare ogni membro, in un dato momento, può svolgere un solo ruolo alla volta, ma durante lo sprint un membro può assumere più ruoli.
+==== Ticketing (Issue Tracking System)
+Il gruppo sfrutta l'ITS(Issue Tracking System) offerto da Github per gestire le attività da svolgere , cioè le *Issue*.
+Creare le issue è molto semplice e veloce e una volta create (ogni membro del gruppo può creare una issue), quindi quando viene individuata un'attività specifica da svolgere, questa viene assegnata, in modo coerente, ad un membro del gruppo.
+Quando viene creata una issue, questa sarà composta da:
+- *Titolo*: Il nome della issue che identifica l'attività da svolgere; 
+- *Assegnatario/i*: Il/I membro/i del gruppo a cui è affidata la issue;
+- *Etichetta/e*: Identifica il tipo di issue;
+- *Stato*: Avanzamento della issue;
+- *Priorità* e *Peso*: Identificano l'importanza di svolgere la issue;
+- *Sprint*: Lo sprint in cui questa issue deve, idealmente, essere svolta;
+- *Ruolo*: Identifica il ruolo associato allo svolgimento di tale issue;
+- *Ore*: Il numero di ore impiegate per svolgere la issue;
+- *Repository*: Repository a cui è associata la issue;
+- *Milestone*: Identifica la milestone a cui èassegnata la issue;
+Più in particolare quando viene individuato un compito da svolgere vengono eseguiti i seguenti passi:\
+*1.* Viene individuato il compito da svolgere e viene creata la issue relativa;\
+*2.* La issue viene assegnata ad uno o più membri del gruppo e vengono inserite le informazioni della issue scritte appena sopra.\
+*3.* La issue viene completata e chiusa, oppure se è richiesta la verifica del lavoro svolto allora:\
+*4.* Il verificatore, che ha una issue di verifica parallela, controlla il lavoro svolto e; 
+*4.1.* Se corretto vengono confermate le modifiche e la issue principale e quella del verificatore vengono chiuse;\
+*4.2.* Altrimenti le issue rimangono aperte e il verificatore suggerisce dei cambiamenti e/o correzioni a carico dell'assegnatario, una volta apportate tali modifiche si torna al punto precedente (*4.1*); 
+=== Coordinamento
+==== Comunicazioni 
+Le comunicazioni principali che avvengono durante lo svolgimento del processo sono di due tipi:
+- *Comunicazioni interne*:Il gruppo sfrutta *Telegram* e *Discord* per le comunicazioni principali interne, in particolare Telegram viene usato per messaggi brevi, veloci e informali. Mentre Discord viene usato per discussioni e riunioni a distanza.
+Inoltre, in caso di problemi su Telegram, il gruppo può spostarsi su Discord per comunicare anche in modo non formale;
+- *Comunicazioni esterne*:Per le comunicazioni esterne vengono usate la mail di gruppo *unipd.codehex16* e *Zoom* per chiarire dubbi e porre domande sia al ;
+==== Riunioni 
+==== Verbali
+I verbali redatti sono di due tipi:
+- *Verbali interni*:;
+- *Verbali esterni*:;
+=== Miglioramento
