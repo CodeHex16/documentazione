@@ -34,8 +34,8 @@
   doc,
 )
 = Scopo dell'incontro
-L'incontro con il referente dell'azienda *Ergon* si è svolto per discutere l'implementazione degli LLM e per chiarire
-come strutturare il progetto in modo da definire al meglio gli use case da inserire all'interno dell'Analisi dei
+L'incontro con il referente dell'azienda *Ergon* si è svolto per discutere l'implementazione degli #gloss[LLM] e per chiarire
+come strutturare il progetto in modo da definire al meglio gli #gloss[use case] da inserire all'interno dell'Analisi dei
 Requisiti.
 = Domande poste
 #set enum(numbering: "Q1.", spacing: 1.5em)
@@ -48,7 +48,7 @@ Requisiti.
 + _Un’ipotesi sui numeri relativi alle interazioni con gli LLM? In questo modo, se il numero è importante, il costo può
   essere rilevante per la decisione._\
   \Il numero di utenti che utilizzeranno il software potrebbe andare dai 1.000 fino ai 3.000-4.000. Tuttavia, molti di
-  questi utilizzerebbero il chatbot solo occasionalmente.
+  questi utilizzerebbero il #gloss[chatbot] solo occasionalmente.
 
 + _Ha senso suddividere le conversazioni in chat separate una per ogni “topic”, in modo da isolare i contesti per LLM (come
   fanno Claude o ChatGPT)?_\
@@ -61,7 +61,7 @@ Requisiti.
   software sarebbe più semplice.
 
 + _Si suppone l’esistenza di un amministratore (che controlla sia fornitori che clienti). Cosa e come deve gestire? Oppure
-  bastano solo account fornitore e cliente?_\
+  bastano solo #gloss[account] #gloss[fornitore] e cliente?_\
   \Non è necessario prevedere un amministratore centrale. Ogni fornitore avrà un’istanza del software separata, installata
   e configurata su un server dedicato. Questo elimina la necessità di un amministratore che controlli tutti gli account.
 
@@ -85,13 +85,13 @@ Requisiti.
   \No, per il login sono sufficienti email e password. Uno username sarebbe superfluo e aggiungerebbe un campo ulteriore
   da ricordare per l’utente.
 
-+ _Si preferisce un PoC che integra webapp per la chat e LLM che risponde oppure due componenti separati (uno per l’LLM e
++ _Si preferisce un #gloss[PoC] che integra #gloss[webapp] per la chat e LLM che risponde oppure due componenti separati (uno per l’LLM e
   uno per il frontend)?_\
   \Non ci sono preferenze specifiche. La scelta su come realizzare il PoC può essere fatta in base alle esigenze e
   preferenze del team.
 
 = Materiale
-L’azienda ci fornirà dei dataset di esempio con cui potremo iniziare a sperimentare il passaggio dei documenti all’LLM.
+L’azienda ci fornirà dei dataset di #gloss[esempio] con cui potremo iniziare a sperimentare il passaggio dei documenti all’LLM.
 Questo ci aiuterà a ottimizzare l’utilizzo delle risorse e dei token, garantendo risposte coerenti con il contesto.
 
 = Conclusioni
