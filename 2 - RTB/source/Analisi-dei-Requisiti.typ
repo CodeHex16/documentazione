@@ -438,3 +438,4 @@ Le definizioni sono disponibili nel documento
 == Visualizzare statistiche domanda-risposta
 == Aggiungere utente
 == Eliminazione utente
+== Impostazioni
