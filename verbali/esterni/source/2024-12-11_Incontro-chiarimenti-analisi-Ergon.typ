@@ -91,7 +91,7 @@ Requisiti.
   preferenze del team.
 
 = Materiale
-L’azienda ci fornirà dei dataset di #gloss[esempio] con cui potremo iniziare a sperimentare il passaggio dei documenti all’LLM.
+L’azienda ci fornirà dei dataset di esempio con cui potremo iniziare a sperimentare il passaggio dei documenti all’LLM.
 Questo ci aiuterà a ottimizzare l’utilizzo delle risorse e dei token, garantendo risposte coerenti con il contesto.
 
 = Conclusioni
