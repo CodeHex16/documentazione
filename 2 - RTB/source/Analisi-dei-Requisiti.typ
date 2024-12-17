@@ -163,9 +163,9 @@ più avanti, possono interagire con l'applicazione.
 == Attori
 
 #figure(image("../imgs/attori.png", width: 50%), caption: [Attori])
-- Utente non registrato: sono utenti che non hanno ancora eseguito le procedure di registrazione per gli utenti;
+- #gloss[Utente] non registrato: sono utenti che non hanno ancora eseguito le procedure di registrazione per gli utenti;
 - Utente registrato: chiamati anche solo "utenti";
-- Fornitore: chiamati anche "admin" o "admin registrato", si occupano di gestire la loro istanza del chatbot.
+- #gloss[Fornitore]: chiamati anche "admin" o "admin registrato", si occupano di gestire la loro istanza del chatbot.
 
 == UC 1-Registrazione Utente
 #figure(image("../imgs/uc1-registrazione.png", width: 80%), caption: [UC1 - Registrazione])
@@ -174,7 +174,7 @@ più avanti, possono interagire con l'applicazione.
 *Descrizione*:\
 -Un utente non registrato vuole registrarsi per interagire e usufruire dei servizi offerti dal fornitore;\
 *Precondizioni:*\
--L'utente deve avere una connessione stabile; *Postcondizioni*:\
+-L'utente deve avere una connessione stabile;\ *Postcondizioni*:\
 -Il sistema conferma all'utente che l'iscrizione è avvenuta con successo, altrimenti viene restituito un errore
 indicando che la registrazione è fallita;\
 *Scenario Principale:*\
@@ -197,7 +197,7 @@ una mail al nuovo utente con la password temporanea che va cambiata al primo log
 *Scenario Principale:*\
 -L'utente inserisce, nella richiesta di registrazione, l'indirizzo e-mail;\
 /*
-=== UC 1.2-Inserimento Username
+=== UC 1.2-Creazione Username
 *Attori principali:*\
 -Admin non registrato;\
 *Descrizione:*\
@@ -243,7 +243,7 @@ fallimento;\
 -Il sistema ha ricevuto le credenziali per la registrazione ma queste non sono valide e pertanto viene inviato
 all'utente un messaggio d'errore in cui viene specificato che non può essere registrato;\
 
-=== UC 2.1.1-Inserimento e-mail già in uso
+=== UC 2.1-Inserimento e-mail già in uso
 *Attori principali:*\
 -Utente non registrato; *Descrizione:* -Un utente non registrato vuole registrarsi per interagire e usufruire dei
 servizi offerti dal fornitore;\
@@ -257,7 +257,7 @@ messaggio d'errore all'utente;\
 -Il sistema invia un messaggio d'errore indicando all'utente che l'e-mail inserita è già in uso nel sistema e il
 tentativo di registrazione fallisce;\
 
-=== UC 2.1.2-Inserimento e-mail non valida
+=== UC 2.2-Inserimento e-mail non valida
 *Attori principali:*\
 -Utente non registrato;\
 *Descrizione:*\
@@ -272,7 +272,7 @@ all'utente;\
 -Il sistema invia un messaggio d'errore indicando all'utente che l'e-mail inserita non è valida e il tentativo di
 registrazione fallisce;\
 /*
-=== UC 2.2.1-Inserimento username già in uso
+=== UC 2.3-Inserimento username già in uso
 *Attori principali:*\
 -Utente/Admin non registrato;\
 *Descrizione:*\
@@ -286,7 +286,7 @@ invia un messaggio d'errore all'utente;\
 -L'utente/admin ha inserito l'indirizzo e-mail e l'username al fine di registrarsi; -Il sistema invia un messaggio
 d'errore indicando all'utente che l'username inserito è già in uso nel sistema e il tentativo di registrazione fallisce;\
 
-=== UC 2.2.2-Inserimento username non valido
+=== UC 2.4-Inserimento username non valido
 *Attore principale:*\
 -Utente/Admin non registrato;\
 *Descrizione:*\
