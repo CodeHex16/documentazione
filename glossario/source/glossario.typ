@@ -29,10 +29,12 @@ Il backlog è un insieme di attività, funzionalità o requisiti che devono esse
 CodeHex16 è il nome del gruppo di lavoro.
 == Chatbot
 Un chatbot è un programma informatico progettato per simulare una conversazione umana attraverso chat o messaggi di testo. I chatbot possono essere utilizzati per rispondere a domande, fornire informazioni, assistere gli utenti e automatizzare processi. I chatbot possono essere implementati su diverse piattaforme, come siti web, applicazioni di messaggistica e social media.
+== Color Picker
 = D
 == Discord
 Discord è un'applicazione di chat vocale e testuale progettata per i giocatori. Offre funzionalità avanzate come chat di gruppo, canali vocali, bot personalizzati e molto altro. Discord è ampiamente utilizzato per la comunicazione in tempo reale tra i membri di un team di sviluppo.
-
+= E
+== Esadecimale
 = G
 == Github
 GitHub è una piattaforma di hosting per il controllo versione e la collaborazione nello sviluppo software. Permette agli sviluppatori di gestire e tracciare le modifiche del codice sorgente dei loro progetti, sia privati che open source. GitHub facilita il lavoro in team grazie a funzionalità come il tracciamento delle issue, le pull request, le code review e la gestione delle release. La piattaforma è basata sul sistema di controllo versione Git.

@@ -16,10 +16,10 @@
   "Yi Hao Zhuo",
   "",
 ), sommario: [Analisi dei requisiti del capitolato C7], versioni: (
-  "0.2.0",
+  "",
   "08/12/2024",
   "Luca Ribon",
-  "",
+  "Aggiunta use case amministratore e piccole correzioni", 
   "",
   "0.1.0",
   "12/11/2024",
@@ -62,10 +62,12 @@ pagina web: #link("https://codehex16.github.io/glossario")
 *Precondizioni:*\
 - L'admin deve avere una connessione stabile;\
 *Postcondizioni*:\
-- Il sistema conferma all'utente/admin che l'iscrizione è avvenuta con successo, altrimenti viene restituito un errore indicando che la registrazione è fallita;\
+- Il sistema conferma all'utente/admin che l'iscrizione è avvenuta con successo, altrimenti viene restituito un errore
+  indicando che la registrazione è fallita;\
 *Scenario Principale:*\
 - L’admin inserisce l’e-mail e l’username scelto;\
-- Il sistema verifica la correttezza dell’indirizzo e-mail e dell’username. Se sono entrambe corrette registra il nuovo utente/admin ed invia una mail al nuovo utente/admin con la password temporanea che va cambiata al primo login;\
+- Il sistema verifica la correttezza dell’indirizzo e-mail e dell’username. Se sono entrambe corrette registra il nuovo
+  utente/admin ed invia una mail al nuovo utente/admin con la password temporanea che va cambiata al primo login;\
 *Estensioni:*\
 - Registrazione fallita;\
 
@@ -440,8 +442,9 @@ pagina web: #link("https://codehex16.github.io/glossario")
 - L’utente/admin ha effettuato il login, ha acceduto alle impostazioni modificato il colore dell'interfaccia tramite
   l'opzione "Dark/Light mode";\
 
-== Pannello amministratore
-=== Caricare il proprio logo
+// == Pannello amministratore
+
+== Caricare il proprio logo
 *Attore principale:*\
 - Utente/Admin registrato;\
 *Descrizione:*\
@@ -461,7 +464,7 @@ pagina web: #link("https://codehex16.github.io/glossario")
 - Il sistema ha controllato il formato del logo caricato e se conforme lo ha inserito nell'interaccia;\
 *Estensioni*:\
 - Formato logo non valido;\
-=== Formato logo non valido
+== Formato logo non valido
 *Attore principale:*\
 - Utente/Admin registrato;\
 *Descrizione:*\
@@ -476,12 +479,104 @@ pagina web: #link("https://codehex16.github.io/glossario")
 - L’utente/admin ha caricato il proprio logo;\
 - Il sistema ha controllato il formato del logo caricato ed è risultato non valido quindi ha inviato un messaggio d'errore
   all'utente/admin;\
-=== Selezione palette colori
-*Attore principale:*\
-- Admin autenticato;\
-*Descrizione:*\
-- Un admin autenticato vuole selezionare una palette di colori per personalizzare l'interfaccia della web app;\
+== Selezione palette colori
+*Attore principale:*
+- Fornitore autenticato;
+*Descrizione:*
+- Un fornitore autenticato vuole selezionare una palette di colori per personalizzare l'interfaccia della web app;
+*Precondizioni:*
+- Il fornitore deve aver effettuato il login;
+- Il fornitore deve accedere alla sezione "Palette colori";
+*Postcondizioni:*
+- Il fornitore ha selezionato una palette di colori;
+- Il sistema ha modificato l'interfaccia con la palette di colori scelta il fornitore;
+*Scenario Principale:*
+- Il fornitore completa il login;
+- Il fornitore entra nella sezione "Palette colori";
+- Il fornitore sceglie l'insieme di colori che comporranno la palette tramite un color picker oppure inserendo i codici esadecimali dei colori, se dei colori non vengono scelti vengono mantenuti i colori di della palette precedente;
+- Il fornitore salva le scelte effettuate;
 == Visualizzare statistiche domanda-risposta
-== Aggiungere utente
-== Eliminazione utente
-== Impostazioni
+*Attore principale:*
+- Fornitore autenticato;
+*Descrizione*:
+- Un fornitore autenticato vuole visualizzare le statistiche relative alle interazioni tra clienti e chatbot;
+*Precondizioni*:
+- Il fornitore deve aver effettuato il login;
+- Il fornitore deve accedere alla sezione "Statistiche";
+- Il fornitore deve avere almeno un cliente che ha interagito con il chatbot;
+*Postcondizioni*:
+- Vengono mostrate le statistiche relative alle interazioni tra clienti e chatbot;
+*Scenario Principale*:
+- Il fornitore completa il login;
+- Il fornitore accede alla sezione "Statistiche";
+- Il fornitore visualizza le statistiche relative alle interazioni tra clienti e chatbot, se necessario tramite grafici o tabelle;
+*Estensioni*:
+- Inserimento filtri di visualizzazione;
+== Inserimento filtri di visualizzazione
+*Attore principale:*
+- Fornitore autenticato;
+*Descrizione*
+- Un fornitore autenticato vuole filtrare le statistiche relative alle interazioni tra clienti e chatbot;
+*Precondizioni*
+- Il fornitore deve aver effettuato il login;
+- Il fornitore deve accedere alla sezione "Statistiche";
+- Il fornitore deve avere almeno un cliente che ha interagito con il chatbot;
+*Postcondizioni*
+- Vengono applicati i filtri alle statistiche relative alle interazioni tra clienti e chatbot;
+*Scenario Principale*
+- Il fornitore completa il login;
+- Il fornitore accede alla sezione "Statistiche";
+- Il fornitore inserisce i filtri di visualizzazione desiderati;
+- Il fornitore visualizza le statistiche relative alle interazioni tra clienti e chatbot, filtrate in base ai filtri inseriti;
+== Aggiunta account cliente
+*Attore principale:*
+- Fornitore autenticato;
+*Descrizione*
+- Un fornitore autenticato vuole aggiungere un account per un cliente in modo che quest'ultimo possa accedere al chatbot;
+*Precondizioni*
+- Il fornitore deve aver effettuato il login;
+- Il fornitore deve accedere alla sezione "Gestione account clienti";
+*Postcondizioni*
+- Viene aggiunto un account per un cliente;
+*Scenario Principale*
+- Il fornitore completa il login;
+- Il fornitore accede alla sezione "Gestione account clienti";
+- Il fornitore inserisce i dati del cliente per creare un account;
+- Il fornitore conferma l'aggiunta dell'account;
+*Estensioni*
+- Inserimento di parametri dell'account non validi;
+- Inserimento di un account già esistente;
+== Inserimento di parametri dell'account non validi
+*Attore principale:*
+- Fornitore autenticato;
+*Descrizione*
+- Un fornitore autenticato vuole aggiungere un account per un cliente in modo che quest'ultimo possa accedere al chatbot, ma inserisce dei parametri non validi;
+*Precondizioni*
+- Il fornitore deve aver effettuato il login;
+- Il fornitore deve accedere alla sezione "Gestione account clienti";
+- Il fornitore deve aver inserito dei parametri non validi per l'account;
+*Postcondizioni*
+- Viene visualizzato un messaggio di errore che indica che i parametri inseriti non sono validi;
+- L'inserimento del nuovo account non va a buon fine;
+*Scenario Principale*
+- Il fornitore completa il login;
+- Il fornitore accede alla sezione "Gestione account clienti";
+- Il fornitore inserisce i dati del cliente per creare un account, ma inserisce dei parametri non validi;
+- Il fornitore conferma l'aggiunta dell'account;
+- Il sistema mostra un messaggio di errore il quale indica che i parametri inseriti non sono validi;
+== Eliminazione account cliente
+*Attore principale:*
+- Fornitore autenticato;
+*Descrizione*
+- Un fornitore autenticato vuole eliminare un account di un cliente in modo che quest'ultimo non possa più accedere al chatbot;
+*Precondizioni*
+- Il fornitore deve aver effettuato il login;
+- Il fornitore deve accedere alla sezione "Gestione account clienti";
+*Postcondizioni*
+- Viene eliminato un account di un cliente;
+*Scenario Principale*
+- Il fornitore completa il login;
+- Il fornitore accede alla sezione "Gestione account clienti";
+- Il fornitore seleziona l'account del cliente da eliminare tra una lista di quelli disponibili, oppure usa il bottone di eliminazione relativo ad un account specifico tra quelli visualizzati;
+- Il fornitore conferma l'eliminazione dell'account;
+// TODO: Viene richiesto l'inserimento di una password per confermare l'eliminazione dell'account oppure una conferma più complessa;
