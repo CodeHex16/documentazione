@@ -30,14 +30,16 @@ L'analisi dei requisiti è il processo di raccolta, analisi e definizione dei re
 L'asincronia è un paradigma di programmazione in cui le operazioni vengono eseguite in modo indipendente e non sequenziale. In un sistema asincrono, le operazioni possono essere avviate e completate in momenti diversi, senza dover attendere il completamento di una precedente. L'asincronia è utilizzata per gestire operazioni lunghe, non bloccanti o non deterministiche, migliorando l'efficienza e la reattività del sistema.
 == Assistente virtuale
 Un assistente virtuale è un programma informatico progettato per interagire con gli utenti in modo naturale e conversazionale. Gli assistenti virtuali utilizzano tecnologie di intelligenza artificiale, elaborazione del linguaggio naturale e machine learning per comprendere e rispondere alle richieste degli utenti. Gli assistenti virtuali possono essere utilizzati per fornire informazioni, assistenza, supporto e automatizzare processi in diversi contesti, come il customer service, l'e-commerce e l'assistenza sanitaria.
-
+== API REST
+API REST è un'architettura per la comunicazione tra sistemi software tramite HTTP. Viene utilizzata per esporre e consumare funzionalità di un servizio in modo standardizzato e scalabile.
 = B
 == Backlog
 Il backlog è un insieme di attività, funzionalità o requisiti che devono essere completati durante lo sviluppo di un progetto software. Il backlog è una lista dinamica che può essere aggiornata e modificata nel corso del tempo per rispondere alle esigenze del progetto. Esistono diversi tipi di backlog, tra cui il product backlog, lo sprint backlog e il release backlog, ciascuno con uno scopo specifico all'interno del processo di sviluppo agile.
 
 == Branch
 Un branch è una copia separata del codice sorgente di un progetto software, utilizzata per sviluppare nuove funzionalità, risolvere bug o testare modifiche senza influenzare il codice principale. I branch consentono ai membri del team di lavorare in modo isolato su specifiche attività e di integrare le modifiche nel codice principale tramite pull request. I branch sono una pratica comune nello sviluppo collaborativo e nel controllo versione del codice.
-
+== BLOOM
+(BigScience Large Open-science Open-access Multilingual Language Model) è un modello linguistico di grandi dimensioni open-source sviluppato da BigScience. È progettato per comprendere e generare testo in più di 45 lingue e diversi linguaggi di programmazione. BLOOM è un'alternativa trasparente e accessibile ai modelli linguistici proprietari, basata su tecniche avanzate di intelligenza artificiale e reti neurali.
 = C
 == CodeHex16
 CodeHex16 è il nome del gruppo di lavoro.
@@ -45,9 +47,13 @@ CodeHex16 è il nome del gruppo di lavoro.
 Un chatbot è un programma informatico progettato per simulare una conversazione umana attraverso chat o messaggi di testo. I chatbot possono essere utilizzati per rispondere a domande, fornire informazioni, assistere gli utenti e automatizzare processi. I chatbot possono essere implementati su diverse piattaforme, come siti web, applicazioni di messaggistica e social media.
 == Committente
 Il committente è l'ente o l'organizzazione che commissiona un progetto o un servizio e ne definisce gli obiettivi e i requisiti. Il committente può essere un'azienda, un'istituzione, un'organizzazione non governativa o un individuo che ha interesse a realizzare un progetto specifico. Il committente è responsabile della definizione delle esigenze, del finanziamento e del monitoraggio del progetto.
+== Containerizzazione
+La containerizzazione è il processo di impacchettamento di applicazioni e dipendenze in ambienti isolati chiamati container, garantendo un'esecuzione uniforme su piattaforme diverse.
 = D
 == Discord
 Discord è un'applicazione di chat vocale e testuale progettata per i giocatori. Offre funzionalità avanzate come chat di gruppo, canali vocali, bot personalizzati e molto altro. Discord è ampiamente utilizzato per la comunicazione in tempo reale tra i membri di un team di sviluppo.
+== Docker
+Docker è una tecnologia di containerizzazione che permette di creare, eseguire e gestire applicazioni in ambienti isolati e portabili.
 = F
 == Feedback
 Il feedback è un processo di comunicazione in cui vengono fornite informazioni, opinioni o valutazioni su un determinato argomento o attività. Il feedback può essere positivo o negativo e può essere utilizzato per migliorare le prestazioni, correggere errori, rafforzare comportamenti desiderati o valutare il successo di un progetto. Il feedback è un elemento chiave nel processo di apprendimento, sviluppo e miglioramento continuo.
@@ -71,6 +77,8 @@ Il glossario è un documento che contiene una raccolta di termini specifici util
 = I
 == Interfaccia web
 Un'interfaccia web è un'interfaccia utente basata su web che consente agli utenti di interagire con un'applicazione o un sistema tramite un browser web. Le interfacce web possono includere elementi come pulsanti, menu, form, tabelle e grafici per consentire agli utenti di navigare, inserire dati, visualizzare informazioni e interagire con il sistema. Le interfacce web sono progettate per essere intuitive, responsive e accessibili da diversi dispositivi e piattaforme.
+== Interfaccia Grafica
+Un'interfaccia grafica è una rappresentazione visiva dell'interfaccia utente che consente l'interazione con un sistema tramite elementi come pulsanti, menu e campi di input.
 = L
 == LLM
 Un LLM (Large Language Model) è un modello linguistico di intelligenza artificiale di grandi dimensioni che utilizza tecniche di machine learning per comprendere e generare linguaggio umano. Utilizza modelli basati su reti neurali e tecniche di elaborazione del linguaggio naturale (NLP) per calcolare e generare i loro risultati.
@@ -87,6 +95,8 @@ Il middleware è un software che si colloca tra il sistema operativo e le applic
 Notion è un'applicazione di produttività che combina strumenti di gestione delle attività, note, documenti e database in un'unica piattaforma. Notion offre funzionalità avanzate come la creazione di pagine personalizzate, la collaborazione in tempo reale, l'integrazione con altri servizi e la personalizzazione dell'interfaccia. È ampiamente utilizzato per l'organizzazione del lavoro, la gestione dei progetti e la creazione di contenuti.
 == Norme di Progetto
 Le norme di progetto sono un insieme di regole, procedure e linee guida che definiscono le modalità di svolgimento del lavoro all'interno di un progetto. Le norme di progetto stabiliscono standard di qualità, responsabilità, comunicazione e gestione del progetto, garantendo coerenza, efficienza e collaborazione tra i membri del team. Le norme di progetto sono fondamentali per assicurare il successo e la coerenza del progetto nel tempo.
+== Nodi Stateless
+I nodi stateless non conservano alcuno stato tra richieste successive, migliorando la scalabilità e semplificando la gestione dei sistemi distribuiti.
 = O
 == ODBC
 ODBC è l'acronimo di "Open Database Connectivity". Si tratta di uno standard che consente alle applicazioni di accedere a database di diversi fornitori utilizzando un'interfaccia standard. ODBC facilita l'accesso ai dati e la loro integrazione tra diverse piattaforme e sistemi di gestione dei database.
