@@ -16,6 +16,7 @@
     sommario: [Norme di progetto],
     
     versioni : (
+      "0.4.0","18/12/2024","Gabriele Magnelli","Altre sezioni completate e/o tovate","Yi Hao Zhuo",
       "0.3.0","12/12/2024","Gabriele Magnelli","Redazione sezioni Processi di supporto e Processi organizzativi", "Yi Hao Zhuo",
       "0.2.0","30/11/2024","Francesco Fragonas","Redazione Processi di accordo", "Filippo Sabbadin",
       "0.1.1","30/11/2024","Francesco Fragonas","Revisione Introduzione", "Filippo Sabbadin",
@@ -243,6 +244,8 @@ altrimenti il verificatore può correggere direttamente il documento, oppure scr
 - *Git*: Software usato per il controllo della versione dei documenti e del codice;
 - *Github*:Servizio di hosting per progetti sotware usato dal gruppo per coordinarsi sulle operazioni di versionamento e usato come *Issue Tracking System*;
 === Verifica 
+==== Analisi statica
+==== Analisi dinamica
 === Validazione
 === Gestione qualità
 == Processi organizzativi
@@ -251,12 +254,12 @@ altrimenti il verificatore può correggere direttamente il documento, oppure scr
 Il processo di gestione ha lo scopo di identificare le attività e i compiti che ogni membro del gruppo dovrà eseguire per proseguire nel progetto.
 ==== Ruoli 
 I ruoli svolti, a rotazione, dai membri del gruppo sono:
-- *Responsabile*:;
-- *Amministratore*:;
-- *Progettista*:;
-- *Analista*:;
-- *Programmatore*:;
-- *Verificatore*:;
+- *Responsabile*:(aggiungere dettagli/definizione);
+- *Amministratore*:(aggiungere dettagli/definizione);
+- *Progettista*:(aggiungere dettagli/definizione);
+- *Analista*:(aggiungere dettagli/definizione);
+- *Programmatore*:(aggiungere dettagli/definizione);
+- *Verificatore*:(aggiungere dettagli/definizione);
 In particolare ogni membro, in un dato momento, può svolgere un solo ruolo alla volta, ma durante lo sprint un membro può assumere più ruoli.
 ==== Ticketing (Issue Tracking System)
 Il gruppo sfrutta l'ITS(Issue Tracking System) offerto da Github per gestire le attività da svolgere , cioè le *Issue*.
@@ -280,14 +283,23 @@ Più in particolare quando viene individuato un compito da svolgere vengono eseg
 *4.1.* Se corretto vengono confermate le modifiche e la issue principale e quella del verificatore vengono chiuse;\
 *4.2.* Altrimenti le issue rimangono aperte e il verificatore suggerisce dei cambiamenti e/o correzioni a carico dell'assegnatario, una volta apportate tali modifiche si torna al punto precedente (*4.1*); 
 === Coordinamento
-==== Comunicazioni 
-Le comunicazioni principali che avvengono durante lo svolgimento del processo sono di due tipi:
+==== Comunicazioni e Riunioni
+Le comunicazioni principali che avvengono durante lo svolgimento del progetto sono di due tipi:
 - *Comunicazioni interne*:Il gruppo sfrutta *Telegram* e *Discord* per le comunicazioni principali interne, in particolare Telegram viene usato per messaggi brevi, veloci e informali. Mentre Discord viene usato per discussioni e riunioni a distanza.
 Inoltre, in caso di problemi su Telegram, il gruppo può spostarsi su Discord per comunicare anche in modo non formale;
-- *Comunicazioni esterne*:Per le comunicazioni esterne vengono usate la mail di gruppo *unipd.codehex16* e *Zoom* per chiarire dubbi e porre domande sia al ;
-==== Riunioni 
+- *Comunicazioni esterne*:Per le comunicazioni esterne vengono usate la mail di gruppo *unipd.codehex16gmail.com* e *Zoom* per chiarire dubbi e porre domande;
+Anche le riunioni sono di due tipi:
+- *Riunioni interne*:I membri del gruppo si riuniscono su *Discord* dove si fa il punto della situazione in quel momento e se necessario si introducono nuove attività da svolgere e/o si procede con quelle già indicate;
+- *Riunioni esterne*:I membri del gruppo si riuniscono insieme al proponente, questa riunione di solito è richiesta dal gruppo per trattare problemi/dubbi di una certa importanza al fine di avere una migliore comprensione delle attività da svolgere e procedere con il progetto;ù
+Sarà compito del *Responsabile* riassumere in un *verbale interno* , o un *verbale esterno* quello che si è discusso durante la riunione in questione;
 ==== Verbali
 I verbali redatti sono di due tipi:
-- *Verbali interni*:;
-- *Verbali esterni*:;
+- *Verbali interni*:Questo tipo di verbale è la trascrizione dei punti salienti di una riunione interna e, generalmente, è scritto dal *Responsabile*, l'obiettivo principale è quello di discutere delle attività svolte e delle attività da svolgere;
+- *Verbali esterni*:Questo tipo di verbale è la trascrizione dei punti più importanti riscontrati durante una riunione esterna, il cui obiettivo principale è quello di risolvere dubbi/problemi riscontrati durante l'avanzamento del progetto. Anche questo verbale è, generalmente, redatto dal *Responsabile*;
 === Miglioramento
+== Misure di qualità per il prodotto (forse ancora troppo presto)
+=== Funzionalità
+=== Efficienza
+=== Usabilità
+=== Affidabilità
+=== Manutenibilità
