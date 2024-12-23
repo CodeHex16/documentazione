@@ -30,19 +30,22 @@
 
 = Introduzione
 == Scopo del documento
-Il presente documento descrive in dettaglio i *casi d'uso* e i *requisiti* relativi al progetto "LLM, Assistente
-Virtuale". Tali specifiche sono state elaborate a partire dall'analisi del capitolato C7, proposto da Ergon, e dagli
-incontri svolti online e in presenza con l'azienda.
+Il presente documento descrive in dettaglio i *casi d'uso* e i *requisiti* relativi al progetto "LLM, Assistente Virtuale". Tali specifiche sono state elaborate a partire dall'analisi del capitolato C7, proposto da Ergon, e dagli incontri svolti online e in presenza con l'azienda.
 
 == Scopo del prodotto
-Il software da realizzare consiste in un chatbot, basato su modelli linguistici (LLM), che un fornitore, ad
-esempio di bevande o alimenti, può offrire ai propri clienti, i quali possono ottenere in modo semplice e immediato informazioni
-dettagliate sui prodotti o servizi disponibili, senza la necessità di contattare direttamente un operatore dell'azienda.
+Il software da realizzare consiste in un chatbot, basato su modelli linguistici (LLM), che un fornitore, ad esempio di bevande o alimenti, può offrire ai propri clienti, i quali possono ottenere in modo semplice e immediato informazioni dettagliate sui prodotti o servizi disponibili, senza la necessità di contattare direttamente un operatore dell'azienda.
 
-Il sistema prevede anche un'interfaccia dedicata all'azienda fornitrice, che consente la gestione dei clienti e dei
-documenti contenenti le informazioni di riferimento. Questi documenti saranno utilizzati dal modello linguistico per
-generare risposte accurate e personalizzate, garantendo un'esperienza utente ottimale. 
+Il sistema prevede anche un'interfaccia dedicata all'azienda fornitrice, che consente la gestione dei clienti e dei documenti contenenti le informazioni di riferimento. Questi documenti saranno utilizzati dal modello linguistico per generare risposte accurate e personalizzate, garantendo un'esperienza utente ottimale. 
 Inoltre l'interfaccia del fornitore permette di personalizzare graficamente la propria piattaforma tramite l'inserimento di un logo e la selezione di una palette colori.
+
+// TODO: grafico utenti, con generalizzazione
+=== Attori
+*Amministratore*: rappresenta la persona o il gruppo di persone che si occupa della distribuzione e configurazione del sistema per tutti i fornitori. Gestisce anche gli account dei fornitori.\
+In questo caso va interpretato come l'azienda Ergon Informatica Srl. \
+Questo utente ha accesso ad un'interfaccia web di configurazione del chatbot e di gestione degli account dei clienti.\
+*Cliente*: rappresenta il cliente finale che acquista prodotti dal fornitore e che ha la possibilità di interagire con il chatbot del fornitore per ottenere informazioni sui prodotti o servizi offerti.\
+*Fornitore*: reppresenta l'azienda che fornisce dei prodotti ai propri clienti, ogni fornitore ha una sua istanza di chatbot; è una estensione di Cliente infatti, oltre a poter accedere al proprio chatbot, può anche fornire il contesto tramite dei documenti aziendali o FAQ e personalizzare graficamente l'interfaccia variando logo e palette colori.
+ 
 
 == Glossario
 Per facilitare la comprensione di questo documento, viene fornito un glossario che chiarisce il significato dei termini
@@ -54,6 +57,7 @@ Le definizioni sono disponibili nel documento
 pagina web: #link("https://codehex16.github.io/glossario").
 
 == Riferimenti
+
 = Use Case
 // == Registrazione fornitore
 // *Attori principali*:
@@ -71,14 +75,36 @@ pagina web: #link("https://codehex16.github.io/glossario").
 // - Registrazione fallita;
 == Primo accesso fornitore
 *Attori principali:*
-- Fornitore non registrato;
-// ??? Attori secondari: Amministratore ???
+- Fornitore;
+*Attori secondari:*
+- Amministratore;
 *Descrizione:*
 - Un fornitore vuole accedere per la prima volta alla piattaforma a lui dedicata per gestire il suo chatbot ed eventualmente utilizzarlo;
 *Precondizioni:*
 - La piattaforma è stata correttamente configurata dall'amministratore;
+- Il fornitore non ha mai effettuato l'accesso alla piattaforma;
 - Il fornitore deve essere in possesso delle sue credenziali fornite dall'amministratore della piattaforma;
-
+*Postcondizioni:*
+- Il fornitore ha effettuato il primo accesso alla piattaforma;
+- Il fornitore ha cambiato la password temporanea con una nuova password;
+*Scenario Principale:*
+- L'amministratore:
+  - configura la piattaforma per il fornitore;
+  - condivide le credenziali temporanee per l'accesso alla piattaforma;
+- Il fornitore:
+  - accede alla piattaforma;
+  - inserisce l'indirizzo e-mail e la password temporanea fornitegli dall'amministratore;
+  - se ha inserito le credenziali corrette, aggiorna la password;
+- Il sistema:
+  - riceve le credenziali inserite dal fornitore;
+  - verifica la correttezza delle credenziali;
+  - se le credenziali sono corrette richiede al fornitore di cambiare la password temporanea con una nuova;
+    - reindirizza alla piattaforma;
+  - se le credenziali sono errate, restituisce un errore e permette di reinserirle;
+*Estensioni:*
+- Errore di login;
+ 
+// TODO: == Errore di login
 
 === Inserimento e-mail
 *Attori principali:*
