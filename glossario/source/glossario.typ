@@ -23,6 +23,7 @@
 = B
 == Backlog
 Il backlog è un insieme di attività, funzionalità o requisiti che devono essere completati durante lo sviluppo di un progetto software. Il backlog è una lista dinamica che può essere aggiornata e modificata nel corso del tempo per rispondere alle esigenze del progetto. Esistono diversi tipi di backlog, tra cui il product backlog, lo sprint backlog e il release backlog, ciascuno con uno scopo specifico all'interno del processo di sviluppo agile.
+== Backend
 
 = C
 == CodeHex16
