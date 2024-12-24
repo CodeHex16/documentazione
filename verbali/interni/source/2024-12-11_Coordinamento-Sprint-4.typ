@@ -7,6 +7,7 @@
     ora: [15:00-17:30],
     tipo: "interno",
     versioni: (
+      "0.1.2","24/12/2024","Luca Ribon","Correzione durata sprint",  
       "0.1.1","11/12/2024","Francesco Fragonas","Correzione titolo e link issue", "Matteo Bazzan",
       "0.1.0","11/12/2024","Francesco Fragonas","Prima stesura", "Matteo Bazzan"
     ),
@@ -39,7 +40,7 @@ Approfondimenti sulla realizzazione del PoC.
 = Revisione ruoli e durata Sprint
 A seguito dell’esperienza maturata durante gli sprint precedenti, il team ha concordato sulle seguenti modifiche:
 
-- *Durata degli sprint*: Si passerà da sprint di 1 settimana a sprint di 2 settimane per avere una gestione più efficace delle task più complesse e per una sincronizzazione con la rotazione dei ruoli. Questa modifica sarà applicata a partire dallo Sprint 5.
+- *Durata degli sprint*: Si passerà da sprint di 1 settimana a sprint di 2 settimane per avere una gestione più efficace delle task più complesse e per una sincronizzazione con la rotazione dei ruoli. Questa modifica sarà applicata a partire dallo Sprint 4.
 - *Revisione dei ruoli*: Per favorire lo sviluppo dei PoC, sono state apportate modifiche ai ruoli assegnati per lo Sprint 4:
 #table(
   columns: (1fr, 1fr, 1fr),
