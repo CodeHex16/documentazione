@@ -21,7 +21,7 @@
   "23/12/2024",
   "Luca Ribon",
   "Aggiunti altri use case",
-  """0.2.0",
+  "0.2.0",
   "27/11/2024",
   "Gabriele Magnelli",
   "Aggiunti use case amministratore",
