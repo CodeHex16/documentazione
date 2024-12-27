@@ -1,42 +1,41 @@
-#import "../../template/documenti.typ": *
+#import "../../template/documenti.typ" : *
+#import "../../template/i-figured.typ"
 
-#show: doc => documento(
-  titolo: "Analisi dei Requisiti",
-  data: [12/11/2024],
-  ruoli: (
-    "Matteo Bazzan",
-    "",
-    "Luca Ribon",
-    "",
-    "Francesco Fragonas",
-    "Redattore",
-    "Gabriele Magnelli",
-    "",
-    "Filippo Sabbadin",
-    "",
-    "Luca Rossi",
-    "",
-    "Yi Hao Zhuo",
-    "",
-  ),
-  sommario: [Analisi dei requisiti del capitolato C7],
-  versioni: (
-    "",
-    "08/12/2024",
-    "Luca Ribon",
-    "Aggiunta use case amministratore e piccole correzioni",
-    "",
-    "0.1.0",
-    "12/11/2024",
-    "Francesco Fragonas",
-    "Prima stesura",
-    "Matteo Bazzan",
-  ),
-  doc,
+#show : doc => documento(
+    titolo: "Analisi dei Requisiti",
+    data: [12/11/2024],
+    ruoli : (
+        "Matteo Bazzan","",
+        "Luca Ribon","Redattore",
+        "Francesco Fragonas","Redattore",
+        "Gabriele Magnelli","",
+        "Filippo Sabbadin","Redattore - Verificatore",
+        "Luca Rossi", "",
+        "Yi Hao Zhuo", "Verificatore"
+    ),
+    sommario: [Analisi dei requisiti del capitolato C7],
+    
+    versioni : (
+      "0.3.0","23/12/2024","Luca Ribon","Aggiunti altri use case",""
+      "0.2.0","27/11/2024","Gabriele Magnelli","Aggiunti use case amministratore","Filippo Sabbadin",
+      "0.1.0","12/11/2024","Francesco Fragonas","Prima stesura", "Matteo Bazzan"
+    ),
+    doc,
+
 )
+// spaciugo per aggiungere l'indice delle immagini
+#set page(numbering: "I")
+#counter(page).update(3)
+#show heading: i-figured.reset-counters.with(level: 0)
+#show figure: i-figured.show-figure.with(level: 0)
+#i-figured.outline(title: "Lista di immagini")
+#pagebreak()
+#set page(numbering: "1")
+#counter(page).update(1)
 
 = Introduzione
 == Scopo del documento
+
 Il presente documento descrive in dettaglio i *casi d'uso* e i *requisiti* relativi al progetto "LLM, Assistente
 Virtuale". Tali specifiche sono state elaborate a partire dall'analisi del capitolato C7, proposto da Ergon, e dagli incontri svolti online e in presenza con l'azienda.
 
@@ -45,18 +44,102 @@ Il software da realizzare consiste in un chatbot, basato su modelli linguistici 
 
 Il sistema prevede anche un'interfaccia dedicata all'azienda fornitrice, che consente la gestione dei clienti e dei documenti contenenti le informazioni di riferimento. Questi documenti saranno utilizzati dal modello linguistico per generare risposte accurate e personalizzate, garantendo un'esperienza utente ottimale. Inoltre l'interfaccia del fornitore permette di personalizzare graficamente la propria piattaforma tramite l'inserimento di un logo e la selezione di una palette colori.
 
-// TODO: grafico attori, con generalizzazione
-=== Attori
-*Amministratore*: rappresenta la persona o il gruppo di persone che si occupa della distribuzione e configurazione del sistema per tutti i fornitori. Gestisce anche gli account dei fornitori.\
-In questo caso va interpretato come l'azienda Ergon Informatica Srl.\
-Questo utente ha accesso ad un'interfaccia web di configurazione del chatbot e di gestione degli account dei clienti.\
-*Cliente*: rappresenta il cliente finale che acquista prodotti dal fornitore e che ha la possibilità di interagire con il chatbot del fornitore per ottenere informazioni sui prodotti o servizi offerti.\
-*Fornitore*: reppresenta l'azienda che fornisce dei prodotti ai propri clienti, ogni fornitore ha una sua istanza di chatbot; è una generalizzazione di Cliente infatti, oltre a poter accedere al proprio chatbot, può anche fornire il contesto tramite dei documenti aziendali o FAQ e personalizzare graficamente l'interfaccia variando logo e palette colori. \
-// TODO: capire se tenerlo ->
-*Sistema*: rappresenta il backend del sistema, incluso quello dell'LLM quando viene interrogato.\
+= Descrizione del prodotto
+Il sistema mira a semplificare il flusso informativo tra fornitori e clienti, rendendo l'accesso alle informazioni più rapido e indipendente da intermediari umani.
+
+Attraverso questa soluzione, le aziende potranno migliorare la produttività interna, ridurre i tempi di risposta alle richieste dei clienti e ottimizzare la gestione dei documenti aziendali. Parallelamente, i clienti beneficeranno di un'esperienza utente fluida e accessibile, con risposte precise e aggiornate a qualsiasi ora.
+
+Il progetto si propone inoltre di dimostrare come tecnologie LLM possano trasformare il modo in cui le aziende gestiscono il servizio clienti, ampliando le possibilità di mercato e rafforzando la fidelizzazione degli utenti.
+
+L'integrazione di un'interfaccia di amministrazione offre agli operatori aziendali uno strumento versatile per monitorare e personalizzare il sistema, garantendo il massimo controllo sui contenuti e adattandolo rapidamente ai vari aggiornamenti di catalogo.
+
+== Funzionalità del prodotto e requisiti
+
+Il sistema dovrà offrire le seguenti funzionalità principali:
+
+- *Per i clienti:*
+  - Interrogare il chatbot tramite una piattaforma web per:
+    - Ottenere descrizioni dettagliate di prodotti.
+    - Conoscere disponibilità, varianti e caratteristiche tecniche di specifici articoli.
+    - Ricevere suggerimenti basati su domande frequenti o richieste precedenti.
+  - Ottenere risposte personalizzate, generate utilizzando documenti aziendali archiviati nel sistema.
+  - Fornire #gloss[feedback] sul grado di soddisfazione delle risposte ricevute, per migliorare la qualità del sistema.
+
+- *Per le aziende:*
+  - Gestire clienti e documenti attraverso un'interfaccia di amministrazione user-friendly.
+  - Configurare domande e risposte predefinite come base per il chatbot.
+  - Caricare, aggiornare e mantenere i documenti aziendali utilizzati per il training del modello *LLM*.
+
+== Requisiti tecnici
+
+- *Architettura del sistema:*
+  - Il sistema sarà composto da:
+    - Un database per archiviare dati aziendali e documenti.
+    - Un modello *LLM* preesistente, selezionato tra le opzioni disponibili (es. *BLOOM*, *llama*, *ChatGPT*, *Claude*, ecc.).
+    - API REST per la comunicazione tra il modello e le interfacce utente.
+    - Un'interfaccia grafica per l'interazione tra utenti e chatbot, ottimizzata per dispositivi mobili e web.
+
+- *Esecuzione e scalabilità:*
+  - Il sistema sarà eseguibile in ambienti containerizzati (es. Docker).
+  - Supporta la scalabilità attraverso l'inizializzazione di nodi stateless, per rispondere a un numero variabile di richieste simultanee.
+
+== Glossario
+Per facilitare la comprensione di questo documento, viene fornito un glossario che chiarisce il significato dei termini specifici utilizzati nel contesto del progetto. Ogni termine di glossario è contrassegnato con un asterisco "\*" in apice e collegato direttamente alla pagina web del glossario, permettendo così di accedere immediatamente alla definizione completa del termine. 
+
+Le definizioni sono disponibili nel documento
+#link(
+"https://github.com/CodeHex16/documentazione/tree/main/glossario/glossario.pdf"
+)[Glossario.pdf]
+e nella seguente pagina web:
 
 == Glossario
 Per facilitare la comprensione di questo documento, viene fornito un glossario che chiarisce il significato dei termini specifici utilizzati nel contesto del progetto. Ogni termine di glossario è contrassegnato con un asterisco "\*" in apice e collegato direttamente alla pagina web del glossario, permettendo così di accedere immediatamente alla definizione completa del termine. Le definizioni sono disponibili nel documento #link("https://github.com/CodeHex16/documentazione/tree/main/glossario/glossario.pdf")[Glossario.pdf] e nella seguente pagina web: #link("https://codehex16.github.io/glossario").
+
+
+=== Riferimenti normativi:
+
+- #gloss[Norme di progetto] v1.0.0:
+
+- Capitolato C7 - Assistente Virtuale Ergon:
+https://www.math.unipd.it/~tullio/IS-1/2024/Progetto/C7.pdf
+
+=== Riferimenti informativi:
+
+- "Analisi e descrizione delle funzionalità: #gloss[Use case] e relativi diagrammi (UML)":\
+https://www.math.unipd.it/~rcardin/swea/2022/Diagrammi%20Use%20Case.pdf
+
+= Descrizione
+
+== Obiettivi del prodotto
+
+Il progetto ha come obiettivo la creazione di una webapp che fornisce un modello di chatbot con cui l’utente può interagire e inviare messaggi per chiedere informazioni sui prodotti forniti.
+Con il chatbot, gli utenti possono ottenere risposte immediate, risparmiare tempo e completare le azioni desiderate senza bisogno di un supporto umano diretto, rendendo l'interazione con la webapp più veloce ed efficiente.
+
+== Funzionalità del prodotto
+
+L’applicazione permette di:
+
+- creare un account dotato di email e password;
+- accedere al proprio account sempre con la coppia email e password scelte durante la registrazione
+- modificare dati dell’utente (es email, password)
+- Scrittura ed invio di messagi
+- Modificare il numero di messaggi recenti visualizzabili
+- modificare il colore principale dell’aplicazione (chiaro o scuro)
+
+== Utenti e caratteristiche
+
+La webapp è rivolta verso ristoratori che vogliono offrire un’assistenza veloce verso i clienti. I ristoratori, dopo essersi registrati, possono inserire, modificare ed eliminare informazioni sui propri prodotti. Gli utenti, registrati o no, possono poi scrivere al chatbot per richiedere queste informazioni.
+
+= Use Cases
+
+== Introduzione
+
+Nelle seguenti sezioni verranno descritti tutti i possibili casi d'uso, cioè tutti i modi in cui gli attori, definiti più avanti, possono interagire con l'applicazione.
+
+== Attori
+
+- Utente non registrato
+- Admin registrato
 
 == Riferimenti
 
@@ -152,6 +235,137 @@ Per facilitare la comprensione di questo documento, viene fornito un glossario c
 // - L’utente ha inserito l’indirizzo e-mail e l’username al fine di registrarsi;
 // - Il sistema invia un messaggio d’errore indicando all’utente che l’e-mail inserita è già in uso nel sistema e il
 //   tentativo di registrazione fallisce;
+
+== UC 1-Registrazione
+#figure(image("../imgs/UC1-Registrazione.png", width: 95%), caption: [UC1 - Registrazione])
+*Attori principali*: \
+   -Admin non registrato; \
+*Descrizione*:\
+   -Un admin non registrato vuole registrarsi per interagire   
+    e usufruire dei servizi offerti dalla web app;\
+*Precondizioni:*\
+   -L'admin deve avere una connessione stabile;
+*Postcondizioni*:\
+   -Il sistema conferma all'utente/admin che l'iscrizione è avvenuta      
+    con successo, altrimenti viene restituito un errore   
+    indicando che la registrazione è fallita;\
+*Scenario Principale:*\
+   -L'admin inserisce l'e-mail e l'username scelto;\
+   -Il sistema verifica la correttezza dell'indirizzo e-mail e dell'username. Se sono entrambe corrette registra il nuovo utente/admin ed invia una mail al nuovo utente/admin con la password temporanea che va cambiata al primo login;\
+*Estensioni:*\
+   -Registrazione fallita;\
+   
+=== UC 1.1-Inserimento e-mail
+*Attori principali:*\
+   -Admin non registrato;\
+*Descrizione:*\
+   -Un admin non registrato vuole registrarsi per interagire  
+    e usufruire dei servizi offerti dalla web app;\
+*Precondizioni:*\
+   -L'admin deve avere una connessione stabile e scegliere un username valido;\
+*Postcondizioni:*\
+   -L'admin ha inserito la prima delle due credenziali necessarie alla registrazione: l'indirizzo e-mail;\
+*Scenario Principale:*\
+   -L'admin inserisce, nella richiesta di registrazione, l'indirizzo e-mail;\
+   	
+=== UC 1.2-Inserimento Username
+*Attori principali:*\
+   -Admin non registrato;\
+*Descrizione:*\
+   -Un admin non registrato vuole registrarsi per interagire  
+    e usufruire dei servizi offerti dalla web app;\
+*Precondizioni:*\
+   -L'admin deve avere una connessione stabile e scegliere un username valido;\
+*Postcondizioni:*\
+   -L'admin ha inserito la seconda delle due credenziali necessarie alla registrazione: l'username;\
+*Scenario Principale:*\
+   -L'admin inserisce, nella richiesta di registrazione, l'username;\
+
+== UC 2-Registrazione Fallita
+*Attori principali:*\
+   -Admin non registrato;\
+*Descrizione:*\
+   -Un admin non registrato cercando di registrarsi per interagire e usufruire dei servizi offerti dalla web app non ci è riuscito perché ha fallito cercando di registrarsi con un indirizzo e-mail non valido o un username già in uso o non conforme alle indicazioni;\
+*Precondizioni:*\
+   -L'admin ha cercato di registrarsi ma ha fallito;\
+*Postcondizioni:*\
+   -Il sistema restituisce un errore indicando che la registrazione è fallita, con alcune informazioni sul perché del fallimento;\
+*Scenario Principale:*\
+   -L'admin ha inserito l'e-mail e l'username scelto;\
+   -Il sistema ha ricevuto le credenziali per la registrazione ma queste non sono valide e pertanto viene inviato all'admin un messaggio d'errore in cui viene specificato che non può essere registrato;\
+
+=== UC 2.1.1-Inserimento e-mail già in uso
+*Attori principali:*\
+   -Admin non registrato;
+*Descrizione:*
+   -Un admin non registrato vuole registrarsi per interagire  
+    e usufruire dei servizi offerti dalla web app;\
+*Precondizioni:*\
+   -L'utente/admin ha inserito le credenziali e inviato al sistema la richiesta di registrazione;\
+*Postcondizioni:*\
+   -Il sistema ha ricevuto le credenziali inviate dall'utente/admin, ma l'e-mail è già registrata nel sistema, quindi invia un messaggio d'errore all'utente;\
+*Scenario Principale:*\
+   -L'utente/admin ha inserito l'indirizzo e-mail e l'username al fine di registrarsi;\
+   -Il sistema invia un messaggio d'errore indicando all'utente che l'e-mail inserita è già in uso nel sistema e il tentativo di registrazione fallisce;\
+
+=== UC 2.1.2-Inserimento e-mail non valida
+*Attori principali:*\
+   -Utente/Admin non registrato;\
+*Descrizione:*\
+   -Un utente/admin non registrato vuole registrarsi per interagire  
+    e usufruire dei servizi offerti dalla web app;\
+*Precondizioni:*\
+   -L'utente/admin ha inserito le credenziali e inviato al sistema la richiesta di registrazione;\
+*Postcondizioni:*\
+   -Il sistema ha ricevuto le credenziali inviate dall'utente/admin, ma l'e-mail non è valida, quindi invia un messaggio d'errore all'utente;\  
+*Scenario Principale:*\
+   -L'utente/admin ha inserito l'indirizzo e-mail e l'username al fine di registrarsi;\
+   -Il sistema invia un messaggio d'errore indicando all'utente che l'e-mail inserita non è valida e il tentativo di registrazione fallisce;\
+
+=== UC 2.2.1-Inserimento username già in uso
+*Attori principali:*\
+   -Utente/Admin non registrato;\
+*Descrizione:*\
+   -Un utente/admin non registrato vuole registrarsi per interagire  
+    e usufruire dei servizi offerti dalla web app;\
+*Precondizioni:*\
+   -L'utente/admin ha inserito le credenziali e inviato al sistema la richiesta di registrazione;\
+   *Postcondizioni:*\
+   -Il sistema ha ricevuto le credenziali inviate dall'utente/admin, ma l'username è già registrato nel sistema, quindi invia un messaggio d'errore all'utente;\
+*Scenario Principale:*\
+   -L'utente/admin ha inserito l'indirizzo e-mail e l'username al fine di registrarsi;
+   -Il sistema invia un messaggio d'errore indicando all'utente che l'username inserito è già in uso nel sistema e il tentativo di registrazione fallisce;\
+
+=== UC 2.2.2-Inserimento username non valido
+*Attore principale:*\
+   -Utente/Admin non registrato;\
+*Descrizione:*\
+   -Un utente/admin non registrato vuole registrarsi per interagire  
+    e usufruire dei servizi offerti dalla web app;\
+*Precondizioni:*\
+   -L'utente/admin ha inserito le credenziali e inviato al sistema la richiesta di registrazione;\
+   *Postcondizioni:*\
+   -Il sistema ha ricevuto le credenziali inviate dall'utente/admin, ma l'e-mail non è valida, quindi invia un messaggio d'errore all'utente;\
+*Scenario Principale:*\
+   -L'utente/admin ha inserito l'indirizzo e-mail e l'username al fine di registrarsi;
+   -Il sistema invia un messaggio d'errore indicando all'utente che l'e-mail inserita non è valida e il tentativo di registrazione fallisce;\
+
+== Login 
+*Attore principale:*\
+   -Utente/Admin registrato;\
+*Descrizione:*\
+   -Un utente/admin registrato vuole accedere per interagire  
+    e usufruire dei servizi offerti dalla web app;\
+*Precondizioni:*\
+   -L'utente/admin è in possesso e a conoscenza delle proprie credenziali;\
+   *Postcondizioni:*\
+   -Il sistema ha ricevuto le credenziali inviate dall'utente/admin, e se sono valide permette l'accesso dell'utente/admin alla #gloss[webapp] e ai suoi servizi;\
+*Scenario Principale:*\
+   -L'utente/admin ha inserito l'indirizzo e-mail e la password al fine di accedere alla webapp;
+   -Il sistema riceve la richiesta di accesso e verifica le credenziali ;\
+*Estensioni:*\
+   -Primo login (cambio password temporanea);\
+   -Login fallito;\
 
 // === Inserimento e-mail non valida
 // *Attori principali:*

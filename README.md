@@ -13,6 +13,7 @@ documentazione/
 |  └── 📁 source
 |  └── 📄 *.pdf
 ├── 📁 2 - RTB
+|  ├── 📁 imgs
 |  └── 📁 source
 |  └── 📄 *.pdf
 ├── 📁 diari-di-bordo
@@ -29,5 +30,4 @@ documentazione/
       └── 📁 source
       └── 📄 *.pdf
 ```
-<!-- FINE TREE DIRECTORY -->`
 <!-- FINE TREE DIRECTORY -->

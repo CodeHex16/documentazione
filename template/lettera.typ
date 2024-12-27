@@ -1,16 +1,4 @@
-#let gloss(body) = {
-  link("https://codehex16.github.io/glossario#"+body.text)[#text(blue, size:12pt, font: "Noto Sans")[#underline[#body]\*]]
-}
-
-#let issue(number, title) = {
-  show link : it => {
-    set text(font: "Noto Sans")
-    underline(it)
-  }
-  link("https://github.com/CodeHex16/documentazione/issues/"+number)[
-    #title
-  ]
-}
+#import "./utils.typ" : *
 
 #let documento(
   titolo: "Titolo del documento",

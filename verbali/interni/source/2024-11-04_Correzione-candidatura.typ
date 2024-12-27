@@ -38,7 +38,7 @@ Per ogni modifica, è stato aggiunto il nome del verificatore/i responsabile del
 È stata aggiunta una tabella contentente i nominativi dei membri del gruppo e le rispettive matricole ed è stata corretta la data di consegna prevista.
 
 = Conclusione
-Durante l'incontro sono stati effettuati diversi aggiornamenti e modifiche alla documentazione per la candidatura al Capitolato 7 "LLM: Assistente Virtuale". Le principali azioni intraprese includono:
+Durante l'incontro sono stati effettuati diversi aggiornamenti e modifiche alla documentazione per la candidatura al Capitolato 7 "#gloss[LLM]: #gloss[Assistente Virtuale]". Le principali azioni intraprese includono:
 
 - *Ottimizzazione dei costi*: riduzione dei costi totali da 13.350 a 12.895, con una riassegnazione delle ore stabilita sull'importanza di ogni ruolo.
 - *Rotazione dei ruoli*: definizione di una rotazione settimanale per una gestione equilibrata dei ruoli con la possibilità di cambio della frequenza.
