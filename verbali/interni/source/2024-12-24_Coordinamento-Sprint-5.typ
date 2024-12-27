@@ -43,7 +43,7 @@ Il nome "Suppl-AI" verrà utilizzato in tutta la documentazione ufficiale e nel 
 
 = Revisione ruoli e durata Sprint
 A seguito degli scorsi sprint, il team ha concordato sulle seguenti modifiche:
-- *Rotazione dei ruoli*: Per questo sprint la rotazione dei ruoli non sarà circolare, ma questa volta i ruoli sono stati scelti in base al lavoro precedentemente svolto, in modo da: proseguire più efficacemente nella stesura dei documenti dell'RTB e garantire una migliore qualità del lavoro.
+- *Rotazione dei ruoli*: Per questo sprint la rotazione dei ruoli non sarà circolare, ma questa volta i ruoli sono stati scelti in base al lavoro precedentemente svolto, in modo da proseguire più efficacemente nella stesura dei documenti dell'RTB e garantire una migliore qualità del lavoro.
 - I *nuovi ruoli* per lo Sprint 5 sono:
 #table(
   columns: (1fr, 1fr, 1fr),
