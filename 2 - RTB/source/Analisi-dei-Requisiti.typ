@@ -170,8 +170,6 @@ più avanti, possono interagire con l'applicazione.
 - #gloss[Utente] non registrato: sono utenti che non hanno ancora eseguito le procedure di registrazione per gli utenti;
 - Utente registrato: chiamati anche solo "utenti";
 - #gloss[Fornitore]: chiamati anche "admin" o "admin registrato", si occupano di gestire la loro istanza del chatbot.
-- Utente non registrato
-- Admin registrato
 
 == Riferimenti
 
