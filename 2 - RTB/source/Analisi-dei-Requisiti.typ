@@ -5,19 +5,23 @@
   "Matteo Bazzan",
   "",
   "Luca Ribon",
-  "",
+  "Redattore",
   "Francesco Fragonas",
   "Redattore",
   "Gabriele Magnelli",
   "",
   "Filippo Sabbadin",
-  "Redattore",
+  "Redattore - Verificatore",
   "Luca Rossi",
   "",
   "Yi Hao Zhuo",
-  "",
+  "Verificatore",
 ), sommario: [Analisi dei requisiti del capitolato C7], versioni: (
-  "0.2.0",
+  "0.3.0",
+  "23/12/2024",
+  "Luca Ribon",
+  "Aggiunti altri use case",
+  """0.2.0",
   "27/11/2024",
   "Gabriele Magnelli",
   "Aggiunti use case amministratore",
@@ -52,7 +56,9 @@ fornitore o di avere una figura professionale dedicata.
 
 Il sistema prevede anche un'interfaccia dedicata all'azienda fornitrice, che consente la gestione dei clienti e dei
 documenti contenenti le informazioni di riferimento. Questi documenti saranno utilizzati dal modello linguistico per
-generare risposte accurate e personalizzate, garantendo un'esperienza utente ottimale.
+generare risposte accurate e personalizzate, garantendo un'esperienza utente ottimale. Inoltre l'interfaccia del
+fornitore permette di personalizzare graficamente la propria piattaforma tramite l'inserimento di un logo e la selezione
+di una palette colori.
 
 = Descrizione del prodotto
 Il sistema mira a semplificare il flusso informativo tra fornitori e clienti, rendendo l'accesso alle informazioni più
@@ -113,8 +119,6 @@ e nella seguente pagina web:
 #link("https://codehex16.github.io/glossario")
 
 
-== Riferimenti
-
 === Riferimenti normativi:
 
 - #gloss[Norme di progetto] v1.0.0:
@@ -166,6 +170,105 @@ più avanti, possono interagire con l'applicazione.
 - #gloss[Utente] non registrato: sono utenti che non hanno ancora eseguito le procedure di registrazione per gli utenti;
 - Utente registrato: chiamati anche solo "utenti";
 - #gloss[Fornitore]: chiamati anche "admin" o "admin registrato", si occupano di gestire la loro istanza del chatbot.
+- Utente non registrato
+- Admin registrato
+
+== Riferimenti
+
+= Use Case
+== Login fornitore
+*Attori principali:*
+- Fornitore;
+*Descrizione:*
+- Un fornitore vuole accedere alla piattaforma per la configurazione del proprio chatbot e per interagire con esso;
+*Precondizioni:*
+- Il fornitore è in possesso delle proprie credenziali;
+- Il fornitore ha già effettuato il primo login e cambiato la password temporanea;
+- Il fornitore non è già autenticato;
+*Postcondizioni:*
+- Se il fornitore ha inserito le credenziali corrette, accede alla piattaforma;
+*Scenario Principale:*
+- L’utente/fornitore ha inserito l’indirizzo e-mail e la password al fine di accedere alla webapp;
+- Il sistema riceve la richiesta di accesso e verifica le credenziali;
+*Generalizzazioni*:
+- Primo login fornitore;
+*Estensioni:*
+- Credenziali errate;
+*Inclusioni:*
+- Inserimento e-mail;
+- Inserimento password;
+- Possibilità "Resta connesso";
+
+== Primo login fornitore
+*Attori principali:*
+- Fornitore;
+*Attori secondari:*
+- Amministratore;
+- Sistema;
+*Descrizione:*
+- Un fornitore vuole accedere per la prima volta alla piattaforma a lui dedicata per gestire il suo chatbot ed
+  eventualmente utilizzarlo;
+*Precondizioni:*
+- La piattaforma è stata correttamente configurata dall'amministratore;
+- Il fornitore non ha mai effettuato l'accesso alla piattaforma;
+- Il fornitore deve essere in possesso delle sue credenziali fornite dall'amministratore della piattaforma;
+*Postcondizioni:*
+- Il fornitore ha effettuato il primo accesso alla piattaforma;
+- Il fornitore ha cambiato la password temporanea con una nuova password;
+*Scenario Principale:*
+- L'amministratore:
+  - configura la piattaforma per il fornitore;
+  - condivide le credenziali temporanee per l'accesso alla piattaforma;
+- Il fornitore:
+  - accede alla piattaforma;
+  - inserisce l'indirizzo e-mail e la password temporanea fornitegli dall'amministratore;
+  - se ha inserito le credenziali corrette, aggiorna la password;
+- Il sistema:
+  - riceve le credenziali inserite dal fornitore;
+  - verifica la correttezza delle credenziali;
+  - se le credenziali sono corrette richiede al fornitore di cambiare la password temporanea con una nuova;
+    - reindirizza alla piattaforma;
+  - se le credenziali sono errate, restituisce un errore e permette di reinserirle;
+*Estensioni:*
+- Credenziali errate;
+- Password scelta non valida;
+*Inclusioni:*
+- Inserimento e-mail;
+- Inserimento password;
+- Possibilità "Resta connesso";
+
+=== Credenziali errate
+*Attori principali:*
+- Fornitore;
+- Cliente;
+*Descrizione:*
+- Un utente cercando di compiere il login ha inserito delle credenziali errate;
+*Precondizioni:*
+- Le credenziali associate all'utente esistono nella piattaforma;
+- L'utente ha inserito delle credenziali errate;
+*Postcondizioni:*
+- Il sistema restituisce un errore indicando che la registrazione è fallita, con alcune informazioni sul perché del
+  fallimento;
+*Scenario Principale:*
+- Il fornitore ha inserito l’e-mail e la password;
+- Il sistema ha ricevuto le credenziali per la registrazione ma queste non sono valide, pertanto viene visualizzato un
+  messaggio d'errore;
+
+// Non è necessario gestirla perché l'utente viene creato dall'Amministratore:
+// === Inserimento e-mail già in uso
+// *Attori principali:*
+// - Fornitore non registrato;
+// *Descrizione:*
+// - Un fornitore non registrato vuole registrarsi per interagire e usufruire dei servizi offerti dalla web app;
+// *Precondizioni:*
+// - L'utente ha inserito le credenziali e inviato al sistema la richiesta di registrazione;
+// *Postcondizioni:*
+// - Il sistema ha ricevuto le credenziali inviate dall’utente, ma l’e-mail è già registrata nel sistema, quindi invia un
+//   messaggio d’errore all’utente;
+// *Scenario Principale:*
+// - L’utente ha inserito l’indirizzo e-mail e l’username al fine di registrarsi;
+// - Il sistema invia un messaggio d’errore indicando all’utente che l’e-mail inserita è già in uso nel sistema e il
+//   tentativo di registrazione fallisce;
 
 == UC 1-Registrazione Utente
 #figure(image("../imgs/uc1-registrazione.png", width: 80%), caption: [UC1 - Registrazione])
@@ -318,6 +421,30 @@ richiesta di accesso e verifica le credenziali ;\
 -Primo login (cambio password temporanea);\
 -Login fallito;\
 
+// === Inserimento e-mail non valida
+// *Attori principali:*
+// - Cliente/fornitore non registrato;
+// *Descrizione:*
+// - Un utente non registrato vuole registrarsi per interagire e usufruire dei servizi offerti dalla web app;
+// *Precondizioni:*
+// - L'utente ha inserito le credenziali e inviato al sistema la richiesta di registrazione;
+// *Postcondizioni:*
+// - Il sistema ha ricevuto le credenziali inviate dall’utente, ma l’e-mail non è valida, quindi invia un messaggio d’errore all’utente;
+// *Scenario Principale:*
+// - L’utente ha inserito l’indirizzo e-mail al fine di registrarsi;
+// - Il sistema invia un messaggio d’errore indicando all’utente che l’e-mail inserita non è valida e il tentativo di registrazione fallisce;
+
+=== Inserimento e-mail
+*Attori principali:*
+- Fornitore;
+- Cliente;
+*Descrizione:*
+- Un utente inserisce il suo indirizzo e-mail per effettuare il login;
+*Precondizioni:*
+- L'e-mail dell'utente deve essere presente nel sistema;
+- L'utente deve essere in possesso dell' e-mail a lui associata;
+*Scenario Principale:*
+- L’utente ha inserito l’indirizzo e-mail necessaria per effettuare l'accesso;
 === UC3.1 - Inserimento username/e-mail
 #figure(
   image("../imgs/uc3.1-uc3.2-uc3.3.png", width: 80%),
@@ -334,126 +461,90 @@ richiesta di accesso e verifica le credenziali ;\
 *Scenario Principale:*\
 -L'utente ha inserito l'indirizzo e-mail necessaria per effettuare l'accesso;\
 
-=== UC3.2 - Inserimento password
-*Attori principali:*\
--Utente registrato;\
-*Descrizione:*\
--Un utente registrato vuole accedere per interagire e usufruire dei servizi offerti dalla web app;\
-*Precondizioni:*\
--L'utente deve essere in possesso della password per poter effettuare l'accesso;\
-*Postcondizioni:*\
--L'utente ha inserito la seconda delle due credenziali necessarie alla registrazione: la password;\
-*Scenario Principale:*\
--L'utente inserisce, nella richiesta di accessi, la password;\
+=== Inserimento password
+*Attori principali:*
+- Fornitore;
+- Cliente;
+*Descrizione:*
+- Un utente inserisce la sua password per effettuare il login;
+*Precondizioni:*
+- La password dell'utente deve essere presente nel sistema;
+- L'utente deve essere in possesso della password a lui associata;
+*Scenario Principale:*
+- L’utente ha inserito la password necessaria per effettuare l'accesso
 
-=== UC3.3 Possibilità "Resta connesso"
-*Attori principali:*\
--Utente registrato;\
-*Descrizione:*\
--Un utente registrato vuole mantenere l'accesso attivo al fine di non dover effettuare il login, inserendo le
-credenziali, ogni volta che ha intenzione di accedere alla web app;\
-*Precondizioni:*\
--L'utente deve essere possedere le credenziali necessarie per l'accesso;\
-*Postcondizioni:*\
--L'utente ha inserito le credenziali (che devono essere valide), premuto il pulsante "Resta connesso" ed effettuato il
-login;\
-*Scenario Principale:*\
--L'utente inserisce le credenziali, preme il pulsante "Resta connesso" ed effetua il login;\
--Il sistema riceve la richiesta dell'utente/admin di accedere e se le credenziali sono corrette il login ha successo e
-il sistema mantiene in memoria le credenziali per un futuro login senza dover richiederle all'utente/admin;\
+=== Possibilità "Resta connesso"
+*Attori principali:*
+- Fornitore;
+- Cliente;
+*Descrizione:*
+- Un utente vuole mantenere l'accesso attivo al fine di non dover effettuare il login, inserendo le credenziali, ogni
+  volta che ha intenzione di accedere alla web app;
+*Precondizioni:*
+- Le credenziali dell'utente devono essere presenti nel sistema;
+- L'utente deve essere possedere le credenziali necessarie per l'accesso;
+- L'utente deve inserire le credenziali corrette;
+*Postcondizioni:*
+- È stata salvata la preferenza dell'utente relativa al salvataggio delle credenziali;
+*Scenario Principale:*
+- L’utente inserisce le credenziali
+- Solo se l'utente seleziona l'opzione "Resta connesso", il sistema mantiene in memoria locale le credenziali per un
+  futuro login senza doverle richiedere all'utente;
 
-== UC4 - Login fallito
-*Attori principali:*\
--Utente registrato/Fornitore;\
-*Descrizione:*\
--Un utente registrato/fornitore cerca di effettuare il login per interagire e usufruire dei servizi offerti dalla web
-app non riuscendoci perché ha fallito cercando di accedere con un indirizzo e-mail e/o una password non validi;\
-*Precondizioni:*\
--L'utente/fornitore ha cercato di effettuare il login ma ha fallito;\
-*Postcondizioni:*\
--Il sistema restituisce un errore indicando che il login è fallito;\
-*Scenario Principale:*\
--L'utente/fornitore ha inserito l'e-mail e la password per effettuare il login;\
--Il sistema ha ricevuto le credenziali per l'accesso, ma queste non sono valide e pertanto il sistema invia un messaggio
-d'errore all'utente/admin informandolo che non può accedere alla web app;\
-
-== Primo Login (cambio password temporanea)
-*Attori principali:*\
--Utente/Admin registrato;\
-*Descrizione:*\
--Un utente/admin registrato vuole accedere per la prima volta alla web app per interagire e usufruire dei suoi servizi;\
-*Precondizioni:*\
--L'utente/admin deve essere in possesso dell'e-mail/username e della password temporanea inviatagli, tramite e-mail,
-alla registrazione;\
-*Postcondizioni:*\
--L'utente/admin ha inserito le credenziali necessarie per l'accesso;\
--L'utente/admin ha efettuato il suo primo accesso alla web app e deve cambiare la password temporanea in una password
-nuova che però deve essere valida e cioè rispettare delle indicazioni;\
-*Scenario Principale:*\
--L'utente/admin effettua l'accesso per la prima volta alla web app;\
--L'utente/admin sceglie una nuova password che rispetti le indicazioni fornitegli;\
-*Estensioni:*\
--Password scelta non valida;\
-
+// TODO: rendere coerente con il resto degli use case
 === Password scelta non valida
-*Attori principali:*\
--Utente/Admin registrato;\
-*Descrizione:*\
--Un utente/admin registrato ha effettuato il suo primo accesso e ora deve scegliere una nuova password che sostituisca
-quella temporanea usata per effettuare il primo login;\
-*Precondizioni:*\
--L'utente/admin deve aver effettuato il suo primo accesso;\
-*Postcondizioni:*\
--L'utente/admin ha scelto e inserito la sua nuova password che, però, non rispetta le indicazioni fornitegli, quindi
-dovrà cambiarla;\
-*Scenario Principale:*\
--L'utente/admin inserisce la password nuova;\
--Il sistema verifica la password inserita e la trova non conforme, quindi invia un messaggio d'errore all'utente/admin
-con la richiesta di scegliere un'altra password valida;\
+*Attori principali:*
+- Utente/fornitore registrato;
+*Descrizione:*
+- Un utente/fornitore registrato ha effettuato il suo primo accesso e ora deve scegliere una nuova password che
+  sostituisca quella temporanea usata per effettuare il primo login;
+*Precondizioni:*
+- L'utente/fornitore deve aver effettuato il suo primo accesso;
+*Postcondizioni:*
+- L’utente/fornitore ha scelto e inserito la sua nuova password che, però, non rispetta le indicazioni fornitegli, quindi
+  dovrà cambiarla;
+*Scenario Principale:*
+- L’utente/fornitore inserisce la password nuova;
+- Il sistema verifica la password inserita e la trova non conforme, quindi invia un messaggio d'errore
+  all'utente/fornitore con la richiesta di scegliere un'altra password valida;
 
+// TODO: rendere coerente con il resto degli use case
 == Logout
-*Attore principale:*\
--Utente/fornitore;\
-*Descrizione:*\
--Un utente/fornitore vuole effettuare il logout disconnettendosi dal sistema;\
-*Precondizioni:*\
--L'utente/fornitore vuole disconnettersi dal sistema e per farlo deve premere il pulsante di logout;\
-*Postcondizioni:*\
--Il sistema ha ricevuto la richiesta di logout e la effettua;\
-*Scenario Principale:*\
--L'utente/fornitore preme il pulsante di logout;\
--Il sistema riceve la richiesta di logout e disconnette l'utente/admin dal sistema;\
+*Attori principali:*
+- Utente/fornitore registrato;
+*Descrizione:*
+- Un utente/fornitore registrato vuole effettuare il logout disconnettendosi dal sistema;
+*Precondizioni:*
+- L'utente/fornitore vuole disconnettersi dal sistema e per farlo deve premere il pulsante di logout;
+*Postcondizioni:*
+- Il sistema ha ricevuto la richiesta di logout e la effettua;
+*Scenario Principale:*
+- L’utente/fornitore preme il pulsante di logout;
+- Il sistema riceve la richiesta di logout e disconnette l'utente/fornitore dal sistema;
 
-== Accesso alle impostazioni
-*Attore principale:*\
--Utente/fornitore;\
-*Descrizione:*\
--Un utente/fornitore accede alle impostazioni per poter cambiare e-mail, password o altro;\
-*Precondizioni:*\
--Un utente/fornitore vuole accedere alle impostazioni del proprio account;\
-*Postcondizioni:*\
--L'utente/fornitore sono entrati nella sezione impostazioni;\
-*Scenario Principale:*\
--L'utente/fornitore preme il pulsante per le impostazioni;\
--L-utente/fornitore hanno accesso al menù delle impostazioni;\
+// TODO: == Accesso alle impostazioni (lo considero uno use case ??)
 
-== Cambio e-mail
-*Attore principale:*\
--Utente/fornitore;\
-*Descrizione:*\
--Un utente/fornitore vuole cambiare l'e-mail a cui è associato il suo #gloss[account];\
-*Precondizioni:*\
--L'utente/fornitore deve aver effettuato il login;\
--L'utente/fornitore deve accedere alle impostazioni e alla sezione "Cambio e-mail/username";\
-*Postcondizioni:*\
--Il sistema effettua un controllo sulla validità dell'e-mail e se valida conferma il cambiamento dell'e-mail;\
-*Scenario Principale:*\
--L'utente/fornitore invia la richiesta di cambio e-mail inserendo la nuova e-mail/username scelta;\
--Il sistema riceve la richiesta, controlla che l'e-mail sia valida e, se lo è, conferma il cambiamento dell'e-mail;\
-*Estensioni:*\
--Cambio e-mail fallito (e-mail già in uso);\
--Cambio e-mail fallito (e-mail non valida);\
+// TODO: rendere coerente con il resto degli use case
+== Cambio e-mail/username
+*Attori principali:*
+- Utente/fornitore registrato;
+*Descrizione:*
+- Un utente/fornitore registrato vuole cambiare l'e-mail/username a cui è associato il suo account;
+*Precondizioni:*
+- L'utente/fornitore deve aver effettuato il login;
+- L'utente/fornitore deve accedere alle impostazioni e alla sezione "Cambio e-mail/username";
+*Postcondizioni:*
+- Il sistema effettua un controllo sulla validità dell'e-mail/username e se valida conferma il cambiamento
+  dell'e-mail/username;
+*Scenario Principale:*
+- L’utente/fornitore invia la richiesta di cambio e-mail/username inserendo la nuova e-mail/username scelta;
+- Il sistema riceve la richiesta, controlla che l'e-mail/username sia valida e, se lo è, conferma il cambiamento
+  dell'e-mail/username;
+*Estensioni:*
+- Cambio e-mail/username fallito (e-mail/username già in uso);
+- Cambio e-mail/username fallito (e-mail/username non valida);
 
+// TODO: rendere coerente con il resto degli use case
 == Cambio password
 *Attore principale:*\
 -Utente/fornitore;\
@@ -505,6 +596,7 @@ recuperata;\
 *Possibili Estensioni:*\
 -Errore invio messaggio;\
 
+// TODO: rendere coerente con il resto degli use case
 == Ricezione risposta
 *Attore principale:*\
 -Utente/Admin registrato;\
@@ -606,22 +698,150 @@ logo;\
 -Formato logo non valido;\
 
 == Formato logo non valido
-*Attore principale:*\
--Utente/Admin registrato;\
-*Descrizione:*\
--Un utente/admin registrato ha cercato di caricare il proprio logo tramite l'opzione "Carica logo", ma il logo è in un
-formato non valido/supportato;\
-*Precondizioni:*\
--L'utente/admin ha cercato di caricare il prorio logo, ma ha fallito;\
-*Postcondizioni:*\
--Il sistema ha effettuato un controllo di validità del formato del logo ed è risultato non valido, quindi viene inviato
-un messaggio d'errore all'utente/admin\
-*Scenario Principale:*\
--L'utente/admin ha caricato il proprio logo;\
--Il sistema ha controllato il formato del logo caricato ed è risultato non valido quindi ha inviato un messaggio
-d'errore all'utente/admin;\
+*Attori principali:*
+- Utente/fornitore registrato;
+*Descrizione:*
+- Un utente/fornitore registrato ha cercato di caricare il proprio logo tramite l'opzione "Carica logo", ma il logo è in
+  un formato non valido/supportato;
+*Precondizioni:*
+- L'utente/fornitore ha cercato di caricare il prorio logo, ma ha fallito;
+*Postcondizioni:*
+- Il sistema ha effettuato un controllo di validità del formato del logo ed è risultato non valido, quindi viene inviato
+  un messaggio d'errore all'utente/fornitore;
+*Scenario Principale:*
+- L’utente/fornitore ha caricato il proprio logo;
+- Il sistema ha controllato il formato del logo caricato ed è risultato non valido quindi ha inviato un messaggio d'errore
+  all'utente/fornitore;
 
-== Scegliere palette colori
+== Selezione palette colori
+*Attori principali:*
+- Fornitore;
+*Descrizione:*
+- Un fornitore autenticato vuole selezionare una palette di colori per personalizzare l'interfaccia della web app;
+*Precondizioni:*
+- Il fornitore deve aver effettuato il login;
+- Il fornitore deve accedere alla sezione "Palette colori";
+*Postcondizioni:*
+- Il fornitore ha selezionato una palette di colori;
+- Il sistema ha modificato l'interfaccia con la palette di colori scelta il fornitore;
+*Scenario Principale:*
+- Il fornitore completa il login;
+- Il fornitore entra nella sezione "Palette colori";
+- Il fornitore sceglie l'insieme di colori che comporranno la palette tramite un color picker oppure inserendo i codici
+  esadecimali dei colori, se dei colori non vengono scelti vengono mantenuti i colori di della palette precedente;
+- Il fornitore salva le scelte effettuate;
+
 == Visualizzare statistiche domanda-risposta
-== Aggiungere utente 
-== Eliminazione utente
+*Attori principali:*
+- Fornitore;
+*Descrizione*:
+- Un fornitore autenticato vuole visualizzare le statistiche relative alle interazioni tra clienti e chatbot;
+*Precondizioni*:
+- Il fornitore deve aver effettuato il login;
+- Il fornitore deve accedere alla sezione "Statistiche";
+- Il fornitore deve avere almeno un cliente che ha interagito con il chatbot;
+*Postcondizioni*:
+- Vengono mostrate le statistiche relative alle interazioni tra clienti e chatbot;
+*Scenario Principale*:
+- Il fornitore completa il login;
+- Il fornitore accede alla sezione "Statistiche";
+- Il fornitore visualizza le statistiche relative alle interazioni tra clienti e chatbot, se necessario tramite grafici o
+  tabelle;
+*Estensioni*:
+- Inserimento filtri di visualizzazione;
+=== Inserimento filtri di visualizzazione
+*Attori principali:*
+- Fornitore;
+*Descrizione*
+- Un fornitore autenticato vuole filtrare le statistiche relative alle interazioni tra clienti e chatbot;
+*Precondizioni*
+- Il fornitore deve aver effettuato il login;
+- Il fornitore deve accedere alla sezione "Statistiche";
+- Il fornitore deve avere almeno un cliente che ha interagito con il chatbot;
+*Postcondizioni*
+- Vengono applicati i filtri alle statistiche relative alle interazioni tra clienti e chatbot;
+*Scenario Principale*
+- Il fornitore completa il login;
+- Il fornitore accede alla sezione "Statistiche";
+- Il fornitore inserisce i filtri di visualizzazione desiderati;
+- Il fornitore visualizza le statistiche relative alle interazioni tra clienti e chatbot, filtrate in base ai filtri
+  inseriti;
+
+== Aggiunta account cliente
+*Attori principali:*
+- Fornitore;
+*Descrizione*
+- Un fornitore autenticato vuole aggiungere un account per un cliente in modo che quest'ultimo possa accedere al chatbot;
+*Precondizioni*
+- Il fornitore deve aver effettuato il login;
+- Il fornitore deve accedere alla sezione "Gestione account clienti";
+*Postcondizioni*
+- Viene aggiunto un account per un cliente;
+*Scenario Principale*
+- Il fornitore completa il login;
+- Il fornitore accede alla sezione "Gestione account clienti";
+- Il fornitore inserisce i dati del cliente per creare un account;
+- Il fornitore conferma l'aggiunta dell'account;
+*Estensioni*
+- Inserimento di parametri dell'account non validi;
+- Inserimento di un account già esistente;
+=== Inserimento di parametri dell'account non validi
+*Attori principali:*
+- Fornitore;
+*Descrizione*
+- Un fornitore autenticato vuole aggiungere un account per un cliente in modo che quest'ultimo possa accedere al chatbot,
+  ma inserisce dei parametri non validi;
+*Precondizioni*
+- Il fornitore deve aver effettuato il login;
+- Il fornitore deve accedere alla sezione "Gestione account clienti";
+- Il fornitore deve aver inserito dei parametri non validi per l'account;
+*Postcondizioni*
+- Viene visualizzato un messaggio di errore che indica che i parametri inseriti non sono validi;
+- L'inserimento del nuovo account non va a buon fine;
+*Scenario Principale*
+- Il fornitore completa il login;
+- Il fornitore accede alla sezione "Gestione account clienti";
+- Il fornitore inserisce i dati del cliente per creare un account, ma inserisce dei parametri non validi;
+- Il fornitore conferma l'aggiunta dell'account;
+- Il sistema mostra un messaggio di errore il quale indica che i parametri inseriti non sono validi;
+=== Inserimento di un account già esistente
+*Attori principali:*
+- Fornitore;
+*Descrizione*:
+- Un fornitore autenticato vuole aggiungere un account per un cliente in modo che quest'ultimo possa accedere al chatbot,
+  ma tenta di inserisce un account già esistente;
+*Precondizioni*:
+- Il fornitore deve aver effettuato il login;
+- Il fornitore deve accedere alla sezione "Gestione account clienti";
+- L'account cliente inserito dal fornitore è già esistente;
+*Postcondizioni*:
+- Viene visualizzato un messaggio di errore che indica che l'account inserito è già esistente;
+- L'inserimento del nuovo account non va a buon fine;
+*Scenario Principale*:
+- Il fornitore completa il login;
+- Il fornitore accede alla sezione "Gestione account clienti";
+- Il fornitore inserisce i dati del cliente per creare un account, ma inserisce un account già esistente;
+- Il fornitore conferma l'aggiunta dell'account;
+- Il sistema mostra un messaggio di errore il quale indica che l'account inserito è già esistente;
+
+== Eliminazione dell'account cliente
+*Attori principali:*
+- Fornitore;
+*Descrizione*
+- Un fornitore autenticato vuole eliminare un account di un cliente in modo che quest'ultimo non possa più accedere al
+  chatbot;
+*Precondizioni*
+- Il fornitore deve aver effettuato il login;
+- Il fornitore deve accedere alla sezione "Gestione account clienti";
+*Postcondizioni*
+- Viene eliminato un account di un cliente;
+*Scenario Principale*
+- Il fornitore completa il login;
+- Il fornitore accede alla sezione "Gestione account clienti";
+// Corner case non devono essere gestiti perché i metodi di selezione dell'account da eliminare costringono il fornitore ad eliminare solo account esistenti:
+- Il fornitore seleziona l'account del cliente da eliminare tra una lista di quelli disponibili, oppure usa il bottone di
+  eliminazione relativo ad un account specifico tra quelli visualizzati;
+- Il fornitore conferma l'eliminazione dell'account;
+// TODO: Viene richiesto l'inserimento di una password per confermare l'eliminazione dell'account oppure una conferma più complessa;
+
+// TODO: probabile che manchino altri use case fornitore
