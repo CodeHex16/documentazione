@@ -16,7 +16,7 @@
 ) = {
   set text(font: "Noto Sans")
   set text(size: 12pt)
-  set par(justify: true, linebreaks: "optimized",first-line-indent:1em)
+  set par(justify: true, linebreaks: "optimized")
   show link : set text(font:"Jetbrains Mono");
 
 
