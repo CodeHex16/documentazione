@@ -49,7 +49,8 @@ def replace_terms_in_file(file_path, terms):
             
             if (line.strip().startswith('=') or 
                 'link' in line or 
-                'https' in line):
+                'https' in line or 
+                'issue' in line):
                 return match.group(0)
             
             return f"#gloss[{match.group(1)}]"
