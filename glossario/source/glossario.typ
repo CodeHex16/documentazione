@@ -4,7 +4,7 @@
     titolo: "Glossario",
     data: [12/11/2024],
     ruoli: (
-        "Filippo Sabbadin","Redattore",
+        "Filippo Sabbadin","Verificatore",
         "Matteo Bazzan","Redattore",
         "Luca Ribon","Responsabile",
         "Francesco Fragonas","Verificatore",
@@ -13,7 +13,7 @@
         "Yi Hao Zhuo", "Verificatore"
     ),
     versioni : (
-        "0.4.0","24/12/2024","Matteo Bazzan","Aggiornamento glossario","",
+        "0.4.0","24/12/2024","Matteo Bazzan","Aggiornamento glossario","Filippo Sabbadin",
         "0.3.0","11/12/2024","Yi Hao Zhuo","Aggiornamento glossario","Matteo Bazzan",
         "0.2.0","26/11/2024","Yi Hao Zhuo","Aggiunta link glossario","Luca Rossi",
         "0.1.0","12/11/2024","Matteo Bazzan","Prima stesura","Yi Hao Zhuo",
