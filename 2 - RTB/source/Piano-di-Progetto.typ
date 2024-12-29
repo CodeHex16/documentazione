@@ -129,8 +129,8 @@ Secondo lo standard ISO/IEC 31000:2009, la gestione dei rischi si articola in ci
   [*Descrizione*],[Una comunicazione scarsa o inefficace tra i membri del team o tra team diversi può portare a fraintendimenti, errori e rallentamenti nei tempi di esecuzione],
   [*Probabilità*],[Alta],
   [*Pericolosità*],[Alta],
-  [*Rilevamento*],[Monitoraggio della qualità e frequenza delle riunioni di aggiornamento, analisi dei feedback, misurazione delle performance del team],
-  [*Piano di contingenza*],[Implementare strumenti di comunicazione efficaci (GitHub, Telegram), riunioni regolari di aggiornamento, definire chiaramente i canali di comunicazione]
+  [*Rilevamento*],[Monitoraggio della qualità e frequenza delle riunioni di aggiornamento, analisi dei #gloss[feedback], misurazione delle performance del team],
+  [*Piano di contingenza*],[Implementare strumenti di comunicazione efficaci (#gloss[GitHub], #gloss[Telegram]), riunioni regolari di aggiornamento, definire chiaramente i canali di comunicazione]
 )
 #table(
   columns: (1fr, 2fr),
@@ -161,8 +161,8 @@ Secondo lo standard ISO/IEC 31000:2009, la gestione dei rischi si articola in ci
   [*Descrizione*],[Gli impegni accademici o personali dei membri del team possono interferire con il rispetto delle scadenze del progetto],
   [*Probabilità*],[Media],
   [*Pericolosità*],[Media],
-  [*Rilevamento*],[Monitoraggio delle scadenze tramite meeting regolari e verifica delle disponibilità segnalate su un calendario condiviso in Google Fogli],
-  [*Piano di contingenza*],[Concordare una pianificazione flessibile basata sulle disponibilità indicate. In caso di necessità, ridistribuire le attività o posticipare task meno prioritari]
+  [*Rilevamento*],[Monitoraggio delle scadenze tramite #gloss[meeting] regolari e verifica delle disponibilità segnalate su un calendario condiviso in Google Fogli],
+  [*Piano di contingenza*],[Concordare una pianificazione flessibile basata sulle disponibilità indicate. In caso di necessità, ridistribuire le attività o posticipare #gloss[task] meno prioritari]
 )
 
 == Rischi tecnici
@@ -210,7 +210,7 @@ Secondo lo standard ISO/IEC 31000:2009, la gestione dei rischi si articola in ci
       colspan: 2
     )[*Impegni personali e universitari*]
   ),
-  [*Descrizione*],[Cambiamenti imprevisti richiesti dall'azienda proponente o da nuove esigenze emerse durante il progetto],
+  [*Descrizione*],[Cambiamenti imprevisti richiesti dall'azienda #gloss[proponente] o da nuove esigenze emerse durante il progetto],
   [*Probabilità*],[Alta],
   [*Pericolosità*],[Media],
   [*Rilevamento*],[Segnalazioni da parte del cliente o analisi delle modifiche richieste rispetto al piano iniziale],

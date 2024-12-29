@@ -32,7 +32,7 @@ La riunione con il referente di *Ergon* è iniziata descrivendo un quadro genera
     \ I formati principali richiesti sono .txt, .pdf e .docx, e potrebbero essere presenti anche dei file .csv.
 + _Quali parametri si vogliono rendere configurabili tramite l'interfaccia utente?_
     - Gestione degli utenti: creazione e modifica degli utenti con accesso al #gloss[chatbot] del #gloss[fornitore]
-    - Inserimento di tuple (domanda, risposta) predefinite dal configuratore (prese da un ipotetico FAQ) in modo da ottimizzare il modello in caso venissero chieste domande simili 
+    - Inserimento di tuple (domanda, risposta) predefinite dal configuratore (prese da un ipotetico #gloss[FAQ]) in modo da ottimizzare il modello in caso venissero chieste domande simili 
 + _Citando il capitolato:_
     \ #quote()[La piattaforma deve tenere conto del   flusso di interazioni uomo-macchina con i relativi tempi di attesa mantenendo uno stato complessivo sulla conversazione aggiornato] \ _ci si riferisce alla necessità di garantire un'interazione naturale con brevi tempi di risposta?_
     \ Nello specifico si intende che, dopo aver posto una domanda, l'utente riceva un #gloss[feedback] visivo (es. “sto scrivendo”) per simulare la presenza di un interlocutore reale.

@@ -53,11 +53,11 @@
 = Introduzione
 == Scopo del documento
 
-Il presente documento descrive in dettaglio i *casi d'uso* e i *requisiti* relativi al progetto "LLM, Assistente
+Il presente documento descrive in dettaglio i *casi d'uso* e i *requisiti* relativi al progetto "#gloss[LLM], Assistente
 Virtuale". Tali specifiche sono state elaborate a partire dall'analisi del capitolato C7, proposto da Ergon, e dagli incontri svolti online e in presenza con l'azienda.
 
 == Scopo del prodotto
-Il software da realizzare consiste in un chatbot, basato su modelli linguistici (LLM), che un fornitore, ad esempio dibevande o alimenti, può offrire ai propri clienti, i quali possono ottenere in modo semplice e immediato informazioni dettagliate sui prodotti o servizi disponibili, senza la necessità di contattare direttamente un operatore dell'azienda.
+Il software da realizzare consiste in un #gloss[chatbot], basato su modelli linguistici (LLM), che un #gloss[fornitore], ad esempio dibevande o alimenti, può offrire ai propri clienti, i quali possono ottenere in modo semplice e immediato informazioni dettagliate sui prodotti o servizi disponibili, senza la necessità di contattare direttamente un operatore dell'azienda.
 
 Il sistema prevede anche un'interfaccia dedicata all'azienda fornitrice, che consente la gestione dei clienti e dei documenti contenenti le informazioni di riferimento. Questi documenti saranno utilizzati dal modello linguistico per generare risposte accurate e personalizzate, garantendo un'esperienza utente ottimale. Inoltre l'interfaccia del fornitore permette di personalizzare graficamente la propria piattaforma tramite l'inserimento di un logo e la selezione di una palette colori.
 
@@ -115,7 +115,7 @@ Per facilitare la comprensione di questo documento, viene fornito un glossario c
 
 - #gloss[Norme di progetto] v1.0.0:
 
-- Capitolato C7 - Assistente Virtuale Ergon:
+- Capitolato C7 - #gloss[Assistente Virtuale] Ergon:
 https://www.math.unipd.it/~tullio/IS-1/2024/Progetto/C7.pdf
 
 === Riferimenti informativi:
@@ -134,7 +134,7 @@ Con il chatbot, gli utenti possono ottenere risposte immediate, risparmiare temp
 
 L’applicazione permette di:
 
-- creare un account dotato di email e password;
+- creare un #gloss[account] dotato di email e password;
 - accedere al proprio account sempre con la coppia email e password scelte durante la registrazione
 - modificare dati dell’utente (es email, password)
 - Scrittura ed invio di messagi
@@ -657,7 +657,7 @@ e usufruire dei servizi offerti dalla web app;\
 *Scenario Principale:*
 - Il fornitore completa il login;
 - Il fornitore entra nella sezione "Palette colori";
-- Il fornitore sceglie l'insieme di colori che comporranno la palette tramite un color picker oppure inserendo i codici esadecimali dei colori, se dei colori non vengono scelti vengono mantenuti i colori di della palette precedente;
+- Il fornitore sceglie l'insieme di colori che comporranno la palette tramite un #gloss[color picker] oppure inserendo i codici esadecimali dei colori, se dei colori non vengono scelti vengono mantenuti i colori di della palette precedente;
 - Il fornitore salva le scelte effettuate;
 
 == Visualizzare statistiche domanda-risposta
