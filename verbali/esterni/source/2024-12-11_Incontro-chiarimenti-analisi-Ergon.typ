@@ -1,6 +1,6 @@
 #import "../../../template/verbale.typ": *
 
-#show: doc => verbale(
+#show : doc => verbale(
   titolo: "Incontro di chiarimento e analisi con l'azienda Ergon",
   ordine-del-giorno: (
     "Discussione utilizzo LLM",
