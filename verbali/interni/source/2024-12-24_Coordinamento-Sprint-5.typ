@@ -7,7 +7,7 @@
     ora: [9:00-12:00],
     tipo: "interno",
     versioni: (
-      "0.1.0","24/12/2024","Matteo Bazzan","Prima stesura", ""
+      "0.1.0","24/12/2024","Matteo Bazzan","Prima stesura", "Filippo Sabbadin"
     ),
     presenze: (
         "Matteo Bazzan", "Relatore", "3h",
