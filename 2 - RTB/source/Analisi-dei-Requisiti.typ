@@ -101,27 +101,19 @@ Il sistema dovrà offrire le seguenti funzionalità principali:
   - Supporta la scalabilità attraverso l'inizializzazione di nodi stateless, per rispondere a un numero variabile di richieste simultanee.
 
 == Glossario
-Per facilitare la comprensione di questo documento, viene fornito un glossario che chiarisce il significato dei termini specifici utilizzati nel contesto del progetto. Ogni termine di glossario è contrassegnato con un asterisco "\*" in apice e collegato direttamente alla pagina web del glossario, permettendo così di accedere immediatamente alla definizione completa del termine.
-
-Le definizioni sono disponibili nel documento
-#link("https://github.com/CodeHex16/documentazione/tree/main/glossario/glossario.pdf")[Glossario.pdf]
-e nella seguente pagina web:
-
-== Glossario
 Per facilitare la comprensione di questo documento, viene fornito un glossario che chiarisce il significato dei termini specifici utilizzati nel contesto del progetto. Ogni termine di glossario è contrassegnato con un asterisco "\*" in apice e collegato direttamente alla pagina web del glossario, permettendo così di accedere immediatamente alla definizione completa del termine. Le definizioni sono disponibili nel documento #link("https://github.com/CodeHex16/documentazione/tree/main/glossario/glossario.pdf")[Glossario.pdf] e nella seguente pagina web: #link("https://codehex16.github.io/glossario").
-
 
 === Riferimenti normativi:
 
 - #gloss[Norme di progetto] v1.0.0:
 
 - Capitolato C7 - #gloss[Assistente Virtuale] Ergon:
-https://www.math.unipd.it/~tullio/IS-1/2024/Progetto/C7.pdf
+#link("https://www.math.unipd.it/~tullio/IS-1/2024/Progetto/C7.pdf")
 
 === Riferimenti informativi:
 
 - "Analisi e descrizione delle funzionalità: #gloss[Use case] e relativi diagrammi (UML)":\
-https://www.math.unipd.it/~rcardin/swea/2022/Diagrammi%20Use%20Case.pdf
+#link("https://www.math.unipd.it/~rcardin/swea/2022/Diagrammi%20Use%20Case.pdf")
 
 = Descrizione
 
