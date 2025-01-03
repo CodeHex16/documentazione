@@ -1,4 +1,4 @@
-#import "../../template/glossario-template.typ" : *
+#import "../../template/glossario-template.typ": *
 
 #show : doc => documento(
     titolo: "Glossario",

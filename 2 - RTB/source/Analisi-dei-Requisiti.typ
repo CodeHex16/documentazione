@@ -1,27 +1,44 @@
-#import "../../template/documenti.typ" : *
+#import "../../template/documenti.typ": *
 #import "../../template/i-figured.typ"
 
-#show : doc => documento(
-    titolo: "Analisi dei Requisiti",
-    data: [12/11/2024],
-    ruoli : (
-        "Matteo Bazzan","",
-        "Luca Ribon","Redattore",
-        "Francesco Fragonas","Redattore",
-        "Gabriele Magnelli","",
-        "Filippo Sabbadin","Redattore - Verificatore",
-        "Luca Rossi", "",
-        "Yi Hao Zhuo", "Verificatore"
-    ),
-    sommario: [Analisi dei requisiti del capitolato C7],
-    
-    versioni : (
-      "0.3.0","23/12/2024","Luca Ribon","Aggiunti altri use case",""
-      "0.2.0","27/11/2024","Gabriele Magnelli","Aggiunti use case amministratore","Filippo Sabbadin",
-      "0.1.0","12/11/2024","Francesco Fragonas","Prima stesura", "Matteo Bazzan"
-    ),
-    doc,
-
+#show: doc => documento(
+  titolo: "Analisi dei Requisiti",
+  data: [12/11/2024],
+  ruoli: (
+    "Matteo Bazzan",
+    "",
+    "Luca Ribon",
+    "Redattore",
+    "Francesco Fragonas",
+    "Redattore",
+    "Gabriele Magnelli",
+    "",
+    "Filippo Sabbadin",
+    "Redattore - Verificatore",
+    "Luca Rossi",
+    "",
+    "Yi Hao Zhuo",
+    "Verificatore",
+  ),
+  sommario: [Analisi dei requisiti del capitolato C7],
+  versioni: (
+    "0.3.0",
+    "23/12/2024",
+    "Luca Ribon",
+    "Aggiunti altri use case",
+    "Filippo Sabbadin",
+    "0.2.0",
+    "27/11/2024",
+    "Gabriele Magnelli",
+    "Aggiunti use case amministratore",
+    "Filippo Sabbadin",
+    "0.1.0",
+    "12/11/2024",
+    "Francesco Fragonas",
+    "Prima stesura",
+    "Matteo Bazzan",
+  ),
+  doc,
 )
 // spaciugo per aggiungere l'indice delle immagini
 #set page(numbering: "I")
@@ -36,11 +53,11 @@
 = Introduzione
 == Scopo del documento
 
-Il presente documento descrive in dettaglio i *casi d'uso* e i *requisiti* relativi al progetto "LLM, Assistente
+Il presente documento descrive in dettaglio i *casi d'uso* e i *requisiti* relativi al progetto "#gloss[LLM], Assistente
 Virtuale". Tali specifiche sono state elaborate a partire dall'analisi del capitolato C7, proposto da Ergon, e dagli incontri svolti online e in presenza con l'azienda.
 
 == Scopo del prodotto
-Il software da realizzare consiste in un chatbot, basato su modelli linguistici (LLM), che un fornitore, ad esempio dibevande o alimenti, può offrire ai propri clienti, i quali possono ottenere in modo semplice e immediato informazioni dettagliate sui prodotti o servizi disponibili, senza la necessità di contattare direttamente un operatore dell'azienda.
+Il software da realizzare consiste in un #gloss[chatbot], basato su modelli linguistici (LLM), che un #gloss[fornitore], ad esempio dibevande o alimenti, può offrire ai propri clienti, i quali possono ottenere in modo semplice e immediato informazioni dettagliate sui prodotti o servizi disponibili, senza la necessità di contattare direttamente un operatore dell'azienda.
 
 Il sistema prevede anche un'interfaccia dedicata all'azienda fornitrice, che consente la gestione dei clienti e dei documenti contenenti le informazioni di riferimento. Questi documenti saranno utilizzati dal modello linguistico per generare risposte accurate e personalizzate, garantendo un'esperienza utente ottimale. Inoltre l'interfaccia del fornitore permette di personalizzare graficamente la propria piattaforma tramite l'inserimento di un logo e la selezione di una palette colori.
 
@@ -84,12 +101,10 @@ Il sistema dovrà offrire le seguenti funzionalità principali:
   - Supporta la scalabilità attraverso l'inizializzazione di nodi stateless, per rispondere a un numero variabile di richieste simultanee.
 
 == Glossario
-Per facilitare la comprensione di questo documento, viene fornito un glossario che chiarisce il significato dei termini specifici utilizzati nel contesto del progetto. Ogni termine di glossario è contrassegnato con un asterisco "\*" in apice e collegato direttamente alla pagina web del glossario, permettendo così di accedere immediatamente alla definizione completa del termine. 
+Per facilitare la comprensione di questo documento, viene fornito un glossario che chiarisce il significato dei termini specifici utilizzati nel contesto del progetto. Ogni termine di glossario è contrassegnato con un asterisco "\*" in apice e collegato direttamente alla pagina web del glossario, permettendo così di accedere immediatamente alla definizione completa del termine.
 
 Le definizioni sono disponibili nel documento
-#link(
-"https://github.com/CodeHex16/documentazione/tree/main/glossario/glossario.pdf"
-)[Glossario.pdf]
+#link("https://github.com/CodeHex16/documentazione/tree/main/glossario/glossario.pdf")[Glossario.pdf]
 e nella seguente pagina web:
 
 == Glossario
@@ -100,7 +115,7 @@ Per facilitare la comprensione di questo documento, viene fornito un glossario c
 
 - #gloss[Norme di progetto] v1.0.0:
 
-- Capitolato C7 - Assistente Virtuale Ergon:
+- Capitolato C7 - #gloss[Assistente Virtuale] Ergon:
 https://www.math.unipd.it/~tullio/IS-1/2024/Progetto/C7.pdf
 
 === Riferimenti informativi:
@@ -119,7 +134,7 @@ Con il chatbot, gli utenti possono ottenere risposte immediate, risparmiare temp
 
 L’applicazione permette di:
 
-- creare un account dotato di email e password;
+- creare un #gloss[account] dotato di email e password;
 - accedere al proprio account sempre con la coppia email e password scelte durante la registrazione
 - modificare dati dell’utente (es email, password)
 - Scrittura ed invio di messagi
@@ -239,133 +254,133 @@ Nelle seguenti sezioni verranno descritti tutti i possibili casi d'uso, cioè tu
 == UC 1-Registrazione
 #figure(image("../imgs/UC1-Registrazione.png", width: 95%), caption: [UC1 - Registrazione])
 *Attori principali*: \
-   -Admin non registrato; \
+-Admin non registrato; \
 *Descrizione*:\
-   -Un admin non registrato vuole registrarsi per interagire   
-    e usufruire dei servizi offerti dalla web app;\
+-Un admin non registrato vuole registrarsi per interagire
+e usufruire dei servizi offerti dalla web app;\
 *Precondizioni:*\
-   -L'admin deve avere una connessione stabile;
+-L'admin deve avere una connessione stabile;
 *Postcondizioni*:\
-   -Il sistema conferma all'utente/admin che l'iscrizione è avvenuta      
-    con successo, altrimenti viene restituito un errore   
-    indicando che la registrazione è fallita;\
+-Il sistema conferma all'utente/admin che l'iscrizione è avvenuta
+con successo, altrimenti viene restituito un errore
+indicando che la registrazione è fallita;\
 *Scenario Principale:*\
-   -L'admin inserisce l'e-mail e l'username scelto;\
-   -Il sistema verifica la correttezza dell'indirizzo e-mail e dell'username. Se sono entrambe corrette registra il nuovo utente/admin ed invia una mail al nuovo utente/admin con la password temporanea che va cambiata al primo login;\
+-L'admin inserisce l'e-mail e l'username scelto;\
+-Il sistema verifica la correttezza dell'indirizzo e-mail e dell'username. Se sono entrambe corrette registra il nuovo utente/admin ed invia una mail al nuovo utente/admin con la password temporanea che va cambiata al primo login;\
 *Estensioni:*\
-   -Registrazione fallita;\
-   
+-Registrazione fallita;\
+
 === UC 1.1-Inserimento e-mail
 *Attori principali:*\
-   -Admin non registrato;\
+-Admin non registrato;\
 *Descrizione:*\
-   -Un admin non registrato vuole registrarsi per interagire  
-    e usufruire dei servizi offerti dalla web app;\
+-Un admin non registrato vuole registrarsi per interagire
+e usufruire dei servizi offerti dalla web app;\
 *Precondizioni:*\
-   -L'admin deve avere una connessione stabile e scegliere un username valido;\
+-L'admin deve avere una connessione stabile e scegliere un username valido;\
 *Postcondizioni:*\
-   -L'admin ha inserito la prima delle due credenziali necessarie alla registrazione: l'indirizzo e-mail;\
+-L'admin ha inserito la prima delle due credenziali necessarie alla registrazione: l'indirizzo e-mail;\
 *Scenario Principale:*\
-   -L'admin inserisce, nella richiesta di registrazione, l'indirizzo e-mail;\
-   	
+-L'admin inserisce, nella richiesta di registrazione, l'indirizzo e-mail;\
+
 === UC 1.2-Inserimento Username
 *Attori principali:*\
-   -Admin non registrato;\
+-Admin non registrato;\
 *Descrizione:*\
-   -Un admin non registrato vuole registrarsi per interagire  
-    e usufruire dei servizi offerti dalla web app;\
+-Un admin non registrato vuole registrarsi per interagire
+e usufruire dei servizi offerti dalla web app;\
 *Precondizioni:*\
-   -L'admin deve avere una connessione stabile e scegliere un username valido;\
+-L'admin deve avere una connessione stabile e scegliere un username valido;\
 *Postcondizioni:*\
-   -L'admin ha inserito la seconda delle due credenziali necessarie alla registrazione: l'username;\
+-L'admin ha inserito la seconda delle due credenziali necessarie alla registrazione: l'username;\
 *Scenario Principale:*\
-   -L'admin inserisce, nella richiesta di registrazione, l'username;\
+-L'admin inserisce, nella richiesta di registrazione, l'username;\
 
 == UC 2-Registrazione Fallita
 *Attori principali:*\
-   -Admin non registrato;\
+-Admin non registrato;\
 *Descrizione:*\
-   -Un admin non registrato cercando di registrarsi per interagire e usufruire dei servizi offerti dalla web app non ci è riuscito perché ha fallito cercando di registrarsi con un indirizzo e-mail non valido o un username già in uso o non conforme alle indicazioni;\
+-Un admin non registrato cercando di registrarsi per interagire e usufruire dei servizi offerti dalla web app non ci è riuscito perché ha fallito cercando di registrarsi con un indirizzo e-mail non valido o un username già in uso o non conforme alle indicazioni;\
 *Precondizioni:*\
-   -L'admin ha cercato di registrarsi ma ha fallito;\
+-L'admin ha cercato di registrarsi ma ha fallito;\
 *Postcondizioni:*\
-   -Il sistema restituisce un errore indicando che la registrazione è fallita, con alcune informazioni sul perché del fallimento;\
+-Il sistema restituisce un errore indicando che la registrazione è fallita, con alcune informazioni sul perché del fallimento;\
 *Scenario Principale:*\
-   -L'admin ha inserito l'e-mail e l'username scelto;\
-   -Il sistema ha ricevuto le credenziali per la registrazione ma queste non sono valide e pertanto viene inviato all'admin un messaggio d'errore in cui viene specificato che non può essere registrato;\
+-L'admin ha inserito l'e-mail e l'username scelto;\
+-Il sistema ha ricevuto le credenziali per la registrazione ma queste non sono valide e pertanto viene inviato all'admin un messaggio d'errore in cui viene specificato che non può essere registrato;\
 
 === UC 2.1.1-Inserimento e-mail già in uso
 *Attori principali:*\
-   -Admin non registrato;
+-Admin non registrato;
 *Descrizione:*
-   -Un admin non registrato vuole registrarsi per interagire  
-    e usufruire dei servizi offerti dalla web app;\
+-Un admin non registrato vuole registrarsi per interagire
+e usufruire dei servizi offerti dalla web app;\
 *Precondizioni:*\
-   -L'utente/admin ha inserito le credenziali e inviato al sistema la richiesta di registrazione;\
+-L'utente/admin ha inserito le credenziali e inviato al sistema la richiesta di registrazione;\
 *Postcondizioni:*\
-   -Il sistema ha ricevuto le credenziali inviate dall'utente/admin, ma l'e-mail è già registrata nel sistema, quindi invia un messaggio d'errore all'utente;\
+-Il sistema ha ricevuto le credenziali inviate dall'utente/admin, ma l'e-mail è già registrata nel sistema, quindi invia un messaggio d'errore all'utente;\
 *Scenario Principale:*\
-   -L'utente/admin ha inserito l'indirizzo e-mail e l'username al fine di registrarsi;\
-   -Il sistema invia un messaggio d'errore indicando all'utente che l'e-mail inserita è già in uso nel sistema e il tentativo di registrazione fallisce;\
+-L'utente/admin ha inserito l'indirizzo e-mail e l'username al fine di registrarsi;\
+-Il sistema invia un messaggio d'errore indicando all'utente che l'e-mail inserita è già in uso nel sistema e il tentativo di registrazione fallisce;\
 
 === UC 2.1.2-Inserimento e-mail non valida
 *Attori principali:*\
-   -Utente/Admin non registrato;\
+-Utente/Admin non registrato;\
 *Descrizione:*\
-   -Un utente/admin non registrato vuole registrarsi per interagire  
-    e usufruire dei servizi offerti dalla web app;\
+-Un utente/admin non registrato vuole registrarsi per interagire
+e usufruire dei servizi offerti dalla web app;\
 *Precondizioni:*\
-   -L'utente/admin ha inserito le credenziali e inviato al sistema la richiesta di registrazione;\
+-L'utente/admin ha inserito le credenziali e inviato al sistema la richiesta di registrazione;\
 *Postcondizioni:*\
-   -Il sistema ha ricevuto le credenziali inviate dall'utente/admin, ma l'e-mail non è valida, quindi invia un messaggio d'errore all'utente;\  
+-Il sistema ha ricevuto le credenziali inviate dall'utente/admin, ma l'e-mail non è valida, quindi invia un messaggio d'errore all'utente;\
 *Scenario Principale:*\
-   -L'utente/admin ha inserito l'indirizzo e-mail e l'username al fine di registrarsi;\
-   -Il sistema invia un messaggio d'errore indicando all'utente che l'e-mail inserita non è valida e il tentativo di registrazione fallisce;\
+-L'utente/admin ha inserito l'indirizzo e-mail e l'username al fine di registrarsi;\
+-Il sistema invia un messaggio d'errore indicando all'utente che l'e-mail inserita non è valida e il tentativo di registrazione fallisce;\
 
 === UC 2.2.1-Inserimento username già in uso
 *Attori principali:*\
-   -Utente/Admin non registrato;\
+-Utente/Admin non registrato;\
 *Descrizione:*\
-   -Un utente/admin non registrato vuole registrarsi per interagire  
-    e usufruire dei servizi offerti dalla web app;\
+-Un utente/admin non registrato vuole registrarsi per interagire
+e usufruire dei servizi offerti dalla web app;\
 *Precondizioni:*\
-   -L'utente/admin ha inserito le credenziali e inviato al sistema la richiesta di registrazione;\
-   *Postcondizioni:*\
-   -Il sistema ha ricevuto le credenziali inviate dall'utente/admin, ma l'username è già registrato nel sistema, quindi invia un messaggio d'errore all'utente;\
+-L'utente/admin ha inserito le credenziali e inviato al sistema la richiesta di registrazione;\
+*Postcondizioni:*\
+-Il sistema ha ricevuto le credenziali inviate dall'utente/admin, ma l'username è già registrato nel sistema, quindi invia un messaggio d'errore all'utente;\
 *Scenario Principale:*\
-   -L'utente/admin ha inserito l'indirizzo e-mail e l'username al fine di registrarsi;
-   -Il sistema invia un messaggio d'errore indicando all'utente che l'username inserito è già in uso nel sistema e il tentativo di registrazione fallisce;\
+-L'utente/admin ha inserito l'indirizzo e-mail e l'username al fine di registrarsi;
+-Il sistema invia un messaggio d'errore indicando all'utente che l'username inserito è già in uso nel sistema e il tentativo di registrazione fallisce;\
 
 === UC 2.2.2-Inserimento username non valido
 *Attore principale:*\
-   -Utente/Admin non registrato;\
+-Utente/Admin non registrato;\
 *Descrizione:*\
-   -Un utente/admin non registrato vuole registrarsi per interagire  
-    e usufruire dei servizi offerti dalla web app;\
+-Un utente/admin non registrato vuole registrarsi per interagire
+e usufruire dei servizi offerti dalla web app;\
 *Precondizioni:*\
-   -L'utente/admin ha inserito le credenziali e inviato al sistema la richiesta di registrazione;\
-   *Postcondizioni:*\
-   -Il sistema ha ricevuto le credenziali inviate dall'utente/admin, ma l'e-mail non è valida, quindi invia un messaggio d'errore all'utente;\
+-L'utente/admin ha inserito le credenziali e inviato al sistema la richiesta di registrazione;\
+*Postcondizioni:*\
+-Il sistema ha ricevuto le credenziali inviate dall'utente/admin, ma l'e-mail non è valida, quindi invia un messaggio d'errore all'utente;\
 *Scenario Principale:*\
-   -L'utente/admin ha inserito l'indirizzo e-mail e l'username al fine di registrarsi;
-   -Il sistema invia un messaggio d'errore indicando all'utente che l'e-mail inserita non è valida e il tentativo di registrazione fallisce;\
+-L'utente/admin ha inserito l'indirizzo e-mail e l'username al fine di registrarsi;
+-Il sistema invia un messaggio d'errore indicando all'utente che l'e-mail inserita non è valida e il tentativo di registrazione fallisce;\
 
-== Login 
+== Login
 *Attore principale:*\
-   -Utente/Admin registrato;\
+-Utente/Admin registrato;\
 *Descrizione:*\
-   -Un utente/admin registrato vuole accedere per interagire  
-    e usufruire dei servizi offerti dalla web app;\
+-Un utente/admin registrato vuole accedere per interagire
+e usufruire dei servizi offerti dalla web app;\
 *Precondizioni:*\
-   -L'utente/admin è in possesso e a conoscenza delle proprie credenziali;\
-   *Postcondizioni:*\
-   -Il sistema ha ricevuto le credenziali inviate dall'utente/admin, e se sono valide permette l'accesso dell'utente/admin alla #gloss[webapp] e ai suoi servizi;\
+-L'utente/admin è in possesso e a conoscenza delle proprie credenziali;\
+*Postcondizioni:*\
+-Il sistema ha ricevuto le credenziali inviate dall'utente/admin, e se sono valide permette l'accesso dell'utente/admin alla #gloss[webapp] e ai suoi servizi;\
 *Scenario Principale:*\
-   -L'utente/admin ha inserito l'indirizzo e-mail e la password al fine di accedere alla webapp;
-   -Il sistema riceve la richiesta di accesso e verifica le credenziali ;\
+-L'utente/admin ha inserito l'indirizzo e-mail e la password al fine di accedere alla webapp;
+-Il sistema riceve la richiesta di accesso e verifica le credenziali ;\
 *Estensioni:*\
-   -Primo login (cambio password temporanea);\
-   -Login fallito;\
+-Primo login (cambio password temporanea);\
+-Login fallito;\
 
 // === Inserimento e-mail non valida
 // *Attori principali:*
@@ -642,7 +657,7 @@ Nelle seguenti sezioni verranno descritti tutti i possibili casi d'uso, cioè tu
 *Scenario Principale:*
 - Il fornitore completa il login;
 - Il fornitore entra nella sezione "Palette colori";
-- Il fornitore sceglie l'insieme di colori che comporranno la palette tramite un color picker oppure inserendo i codici esadecimali dei colori, se dei colori non vengono scelti vengono mantenuti i colori di della palette precedente;
+- Il fornitore sceglie l'insieme di colori che comporranno la palette tramite un #gloss[color picker] oppure inserendo i codici esadecimali dei colori, se dei colori non vengono scelti vengono mantenuti i colori di della palette precedente;
 - Il fornitore salva le scelte effettuate;
 
 == Visualizzare statistiche domanda-risposta
