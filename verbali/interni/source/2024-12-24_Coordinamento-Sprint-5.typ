@@ -21,7 +21,7 @@
 )
 
 = Revisione Sprint 4
-Durante la riunione è stato analizzato il lavoro svolto nello *Sprint 4*, in particolare sono stati condivisi i progressi sui documenti Norme di Progetto e Analisi dei Requisiti, sono stati presentati i due POC sviluppati con due framework diversi Svelte e Vue.js.
+Durante la riunione è stato analizzato il lavoro svolto nello *Sprint 4*, in particolare sono stati condivisi i progressi sui documenti #gloss[Norme di Progetto] e #gloss[Analisi dei Requisiti], sono stati presentati i due #gloss[POC] sviluppati con due framework diversi #gloss[Svelte] e #gloss[Vue.js].
 
 = Scelta del framework per la webapp
 Durante lo Sprint 4 è stata condotta un'analisi approfondita tra i framework Vue.js e Svelte/SvelteKit attraverso lo sviluppo di PoC paralleli. In seguito alla presentazione da parte dei due incaricati e averne valutato i risultati, il team ha deciso di adottare Svelte per lo sviluppo della webapp. 
@@ -29,10 +29,10 @@ Durante lo Sprint 4 è stata condotta un'analisi approfondita tra i framework Vu
 La scelta è stata motivata dai seguenti fattori:
 - Compilazione anticipata del codice che risulta in un bundle più leggero e prestazioni runtime migliori, più adatto alle prestazioni solitamente più modeste dei dispositivi mobile.
 - Il nuovo sistema di reattività introdotto in Svelte 5.
-- Sintassi più pulita e vicina al vanilla JavaScript/HTML.
+- Sintassi più pulita e vicina al vanilla #gloss[JavaScript]/#gloss[HTML].
 
 = Definizione del nome per la webapp
-Durante la riunione è stato ufficialmente definito il nome che sarà dato alla webapp del chatbot: *"Suppl-AI"*. 
+Durante la riunione è stato ufficialmente definito il nome che sarà dato alla webapp del #gloss[chatbot]: *"#gloss[Suppl-AI]"*. 
 
 La scelta è stata il risultato di una discussione che ha considerato i seguenti aspetti:
 - La fusione tra il termine "Supply" (fornitura) e "AI" (Artificial Intelligence).
@@ -43,7 +43,7 @@ Il nome "Suppl-AI" verrà utilizzato in tutta la documentazione ufficiale e nel 
 
 = Revisione ruoli e durata Sprint
 A seguito degli scorsi sprint, il team ha concordato sulle seguenti modifiche:
-- *Rotazione dei ruoli*: Per questo sprint la rotazione dei ruoli non sarà circolare, ma questa volta i ruoli sono stati scelti in base al lavoro precedentemente svolto, in modo da proseguire più efficacemente nella stesura dei documenti dell'RTB e garantire una migliore qualità del lavoro.
+- *Rotazione dei ruoli*: Per questo sprint la rotazione dei ruoli non sarà circolare, ma questa volta i ruoli sono stati scelti in base al lavoro precedentemente svolto, in modo da proseguire più efficacemente nella stesura dei documenti dell'#gloss[RTB] e garantire una migliore qualità del lavoro.
 - I *nuovi ruoli* per lo Sprint 5 sono:
 #table(
   columns: (1fr, 1fr, 1fr),

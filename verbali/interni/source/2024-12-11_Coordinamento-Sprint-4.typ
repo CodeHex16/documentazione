@@ -28,7 +28,7 @@ Durante la riunione è stato analizzato il lavoro svolto nello *Sprint 3*, con u
 Per lo *Sprint 4* sono state definite nuove task sulla base del lavoro già completato. Le attività previste riguardano:
 
 - Proseguimento nella stesura dei documento per l'#gloss[RTB].
-- Realizzazione del Proof of Concept (#gloss[PoC]) per la parte frontend, testando due tecnologie diverse: Svelte e Vue.js.
+- Realizzazione del Proof of Concept (#gloss[PoC]) per la parte frontend, testando due tecnologie diverse: #gloss[Svelte] e #gloss[Vue.js].
 
 = Incontro con l'azienda Ergon
 È stato svolto un incontro online con il referente dell’azienda #gloss[proponente], *Ergon Informatica*, per discutere i seguenti argomenti:
