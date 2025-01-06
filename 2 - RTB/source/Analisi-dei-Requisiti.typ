@@ -1,5 +1,3 @@
-// TODO: riodinare gli use case in modo che siano ordinati per funzionalità 
-
 #import "../../template/documenti.typ": *
 #import "../../template/i-figured.typ"
 
