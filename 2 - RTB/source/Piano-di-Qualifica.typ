@@ -18,14 +18,39 @@
   "",
 ), sommario: [], versioni: ("0.1.0", "03/01/2024", "Filippo Sabbadin", "Prima stesura", ""), doc)
 
+// spaciugo per aggiungere l'indice delle immagini
+#set page(numbering: "I")
+#counter(page).update(3)
+#show heading: i-figured.reset-counters.with(level: 0)
+#show figure: i-figured.show-figure.with(level: 0)
+#i-figured.outline(title: "Lista di immagini")
+#i-figured.outline(target-kind: table, title: [Lista di tabelle])
+#set math.equation(numbering: "(1)")
+#outline(target: math.equation, title: [Lista di equazioni])
+#pagebreak()
+#set page(numbering: "1")
+#counter(page).update(1)
+
 = Introduzione e scopo
+== Scopo del documento
+In questo documento vengono dichiarate tutte le metriche che il gruppo CodeHex16 userà per misurare la #gloss[qualità] del
+prodotto e dei processi usati per la realizzazione del progetto.
 
 == Glossario
+Per facilitare la comprensione di questo documento, viene fornito un glossario che chiarisce il significato dei termini
+specifici utilizzati nel contesto del progetto. Ogni termine di glossario è contrassegnato con un asterisco "\*" in
+apice e collegato direttamente alla pagina web del glossario, permettendo così di accedere immediatamente alla
+definizione completa del termine.\
+Le definizioni sono disponibili nel documento
+#link("https://github.com/CodeHex16/documentazione/tree/main/glossario/glossario.pdf")[Glossario.pdf]
+e nella seguente pagina web:
 
 == Versioni e maturità
+Data la natura evolutiva del documento, questa versione potrebbe non rappresentare la versione finale. Il documento
+continuerà a subire modifiche per garantire una maggiore correttezza e chiarezza nel testo per facilitare la
+comprensione e lettura.
 
 == Riferimenti
-
 === Riferimenti normativi
 - Capitolato C7 - LLM : Assistente Virtuale
 #link("https://www.math.unipd.it/~tullio/IS-1/2024/Progetto/C7.pdf")
@@ -41,10 +66,10 @@
 - ISO/IEC 9126:2001 SWE Product Quality;
 - ISO/IEC 14598:1999 SW Product Evaluation;
 - ISO/IEC 25000:2005 SQuaRE: Systems and software Quality;
-- 25010:2011 Quality model;
-- 25020:2019 Quality measurement framework;
-- 25030:2007 Quality requirements;
-- 25040:2011 Quality evaluation;
+- ISO/IEC 25010:2011 Quality model;
+- ISO/IEC 25020:2019 Quality measurement framework;
+- ISO/IEC 25030:2007 Quality requirements;
+- ISO/IEC 25040:2011 Quality evaluation;
 - ISO 9000:2015 (fondamenti e glossario);
 - ISO 9001:2015 (sistema qualità - requisiti);
   - ISO/IEC/IEEE 90003:2018 (versione applicata ai prodotti SW)
@@ -52,7 +77,7 @@
 - ISO/IEC 33020:2019.
 
 = Metriche di qualità
-
+testo\
 == Qualità di processo
 
 === Fornitura
@@ -61,7 +86,7 @@
 
 === Documentazione
 
-#table(
+#figure(caption: [Valori per misurare la qualità della documentazione], table(
   columns: (0.8fr, 2fr, 1.2fr, 1.2fr),
   inset: 8pt,
   align: (x, y) => if (x == 0 and y > 0 and y < 7) { left } else { center + horizon },
@@ -71,11 +96,29 @@
   "Indice di Gulpease",
   "\u{2265}40",
   "\u{2265}60",
-)
-Formula per l'indice di Gulpease:\
-$ 89+((300*"numero di frasi") - (10*"numero di lettere"))/"numero di parole" $\
+  "MPC0000",
+  "Correttezza ortografica",
+  "0",
+  "0",
+))\
+Formula dell'indice di Gulpease:
+$ 89+((300*"numero di frasi") - (10*"numero di lettere"))/"numero di parole" $ <Gulpease>\
 === Verifica
-
+#figure(caption: [Valori per misurare la qualità del processo di verifica], table(
+  columns: (0.8fr, 2fr, 1.2fr, 1.2fr),
+  inset: 8pt,
+  align: (x, y) => if (x == 0 and y > 0 and y < 7) { left } else { center + horizon },
+  fill: (x, y) => if (y == 0) { luma(230) },
+  table.header([*Metrica*], [*Nome*], [*Valore accettabile*], [*Valore ottimo*]),
+  "MPC0000",
+  "Code coverage",
+  "\u{2265}90%",
+  "100%",
+  "MPC0000",
+  "Test superati in percentuale",
+  "100%",
+  "100%",
+))\
 === Gestione della qualità
 
 == Qualità del prodotto
