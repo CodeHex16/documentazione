@@ -1,5 +1,10 @@
 #import "../../template/documenti.typ" : *
 
+#let pseudoheading(body) = {
+  set align(center)
+  set par(justify: false)
+  smallcaps(body)
+}
 
 #show : doc => documento(
     titolo: "Piano di Progetto",
@@ -16,7 +21,8 @@
     sommario: [],
     
     versioni : (
-      "0.3.0","18/12/2024","Francesco Fragonas","Aggiunta sezione analisi dei rischi", "",
+      "0.4.0","05/01/2025","Francesco Fragonas","Aggiunta sezione Pianificazione del lavoro e Periodi di sviluppo", "",
+      "0.3.0","18/12/2024","Francesco Fragonas","Aggiunta sezione analisi dei rischi", "Filippo Sabbadin",
       "0.2.0","05/12/2024","Luca Rossi","Aggiunta sezione preventivo", "Matteo Bazzan",
       "0.1.0","24/10/2024","Luca Ribon","Definizione della struttura base e definizone delle linee guida per la stesura", "Filippo Sabbadin"
     ),
@@ -234,13 +240,196 @@ Secondo lo standard ISO/IEC 31000:2009, la gestione dei rischi si articola in ci
 )
 
 // Rischi effettivamente incontrati e come sono stati affrontati
-= Difficoltà affrontate
+//= Difficoltà affrontate
 
 // Spiegare pianificazione del lavoro (#gloss[sprint] da una settimana ecc...), metodo di lavoro, milestone e prodotti al raggiungimento di ogni milestone, cosa è stato fatto nei vari periodi atti al raggiungimento delle milestone
-= Pianificazione
-== RTB
-// == PB
-// == CA
+= Pianificazione del lavoro
+La *pianificazione del progetto* si basa su un modello iterativo e incrementale, con lo scopo di garantire un monitoraggio continuo del progresso e una gestione efficace delle attività. Abbiamo deciso di suddividere il lavoro in sprint, ognuno dei quali inizia con un incontro per stabilire obiettivi e analizzare eventuali difficoltà, e si conclude con una retrospettiva sul lavoro svolto. Questo approccio ci ha permesso di adattarci rapidamente alle necessità del progetto, mantenendo una visione chiara delle priorità e dei risultati attesi.
+
+== Organizzazione degli sprint
+Gli sprint rappresentano le unità operative fondamentali per il lavoro del gruppo. Inizialmente della durata di una settimana, sono stati successivamente estesi a due settimane per consentire una pianificazione più realistica delle attività.
+Ogni sprint inizia con un incontro di pianificazione durante il quale:
+
+- Si analizzano le task concluse, in lavorazione e non ancora iniziate.
+- Vengono fissati nuovi obiettivi con priorità e peso relativi.
+
+A fine sprint, si tiene una retrospettiva per valutare il progresso, identificare eventuali ostacoli e migliorare il processo di lavoro.
+
+== Gestione delle task
+Le task costituiscono le unità operative elementari del lavoro e vengono gestite tramite una board di GitHub. Ogni task è associata a un responsabile, un peso, una priorità e un ruolo specifico.
+Per monitorare l’efficienza e il tempo impiegato, ogni attività è stata tracciata nel dettaglio, includendo la durata prevista e quella effettiva. Questi dati sono riportati su un foglio Google condiviso, che offre una panoramica in tempo reale dell’avanzamento complessivo del progetto.
+
+Questo approccio consente una chiara distribuzione dei compiti, facilitando il controllo del progresso e l’individuazione di eventuali criticità nel raggiungimento degli obiettivi.
+
+= Periodi di sviluppo
+== Introduzione
+Il progetto è stato suddiviso in tre macroperiodi principali, ciascuno associato a una milestone cruciale:
+
+- *RTB (Requirements and Technology Baseline)*: Focus sull'analisi dei requisiti, sulla definizione delle tecnologie e sulla preparazione di un Proof of Concept (PoC).
+- *PB (Product Baseline)*: Concentrato sull'implementazione delle funzionalità principali e sulla verifica dell'architettura progettata.
+- *CA (Customer Acceptance)*: Dedicato al completamento, alla validazione finale del prodotto e alla consegna al cliente.
+
+Questa suddivisione consente una chiara definizione degli obiettivi di breve e medio termine, facilitando il monitoraggio dell’avanzamento e l’identificazione tempestiva di eventuali criticità.
+
+Ciascun macroperiodo è composto da sprint di durata variabile (inizialmente di una settimana, poi portata a due settimane). Gli sprint rappresentano unità operative chiave, durante le quali vengono svolte attività specifiche con obiettivi ben definiti. Per ogni sprint, il team tiene una riunione iniziale per pianificare le task e una retrospettiva finale per valutare i risultati.
+
+Al termine di ogni macroperiodo, viene effettuata una revisione complessiva del lavoro svolto, analizzando l’aderenza agli obiettivi prefissati e pianificando le attività per la fase successiva.
+
+
+
+== Periodo RTB
+*Periodo*: 18/11/2024 - *IN CORSO*
+
+#pseudoheading[*Obiettivi principali*]
+
+- *Analisi dettagliata dei requisiti*: Identificazione e classificazione dei requisiti funzionali e non funzionali del progetto.
+- *Studio delle tecnologie*: Esplorazione delle tecnologie proposte e valutazione della loro adeguatezza.
+- *Proof of Concept (PoC)*: Realizzazione di una demo iniziale per verificare la fattibilità tecnica del progetto.
+- *Documentazione*: Produzione dei documenti fondamentali, tra cui Analisi dei Requisiti, Glossario, Piano di Progetto e Norme di Progetto.
+
+Durante questo periodo, il team ha lavorato intensamente sulla comprensione delle esigenze del cliente e sulla definizione delle basi tecnologiche. L’obiettivo era garantire che tutte le scelte progettuali e tecniche fossero ben motivate e supportate da un'adeguata analisi preliminare.
+
+=== Sprint 1
+*Intervallo temporale*: 18/11/2024 - 24/11/2024
+
+Durante lo *Sprint 1*, della durata di una settimana, il gruppo si è concentrato principalmente sulla definizione delle tecnologie da utilizzare per il progetto. In seguito a una discussione con l'azienda proponente, sono stati analizzati i requisiti tecnologici, comprese le opzioni per lo sviluppo dell’app e la scelta degli strumenti da impiegare. Sono state inoltre avviate le attività per la stesura del glossario tecnico, con la creazione di una pagina web ad hoc per il glossario stesso.
+
+#pseudoheading[*Attività svolte*]
+
+- *Analisi app nativa vs webapp*: Discussione con l’azienda per valutare la possibilità di sviluppare una webapp invece di un’app nativa, come inizialmente richiesto nel capitolato.
+- *Analisi framework frontend*: Studio dei framework frontend nel caso in cui si decidesse di optare per una webapp.
+- *Analisi LLM*: Valutazione dei modelli linguistici (LLM) disponibili per generare le risposte, con focus su parametri come le lingue supportate e i requisiti di training.
+- *Analisi database SQL*: Confronto tra diversi database SQL per individuare la soluzione più adeguata al caso d'uso del progetto.
+- *Creazione e aggiornamento del Glossario*: Redazione del documento glossario con i termini tecnici fondamentali e creazione della relativa pagina web nel sito, che sarà aggiornata durante il progetto.
+
+#pseudoheading[*Ruoli ricoperti e ore svolte*]
+
+#figure(
+  image("../imgs/sprint1-tabella.png", width: 100%),
+  caption: [
+    Suddivisione oraria per membro e ruolo.
+  ],
+)
+
+#figure(
+  image("../imgs/sprint1-grafico.png", width: 100%),
+  caption: [
+    Suddivisione oraria per ruolo con relativi costi.
+  ],
+)
+
+=== Sprint 2
+*Intervallo temporale*: 25/11/2024 - 01/12/2024
+
+Durante lo *Sprint 2*, il gruppo ha proseguito i lavori avviati nello Sprint 1, concentrandosi principalmente sull’elaborazione dei documenti fondamentali per il progetto. Sono state definite le attività relative ai documenti “Analisi dei Requisiti”, “Glossario”, “Norme di Progetto” e “Piano di Progetto”. Inoltre, si è proceduto con l’aggiornamento dei ruoli dei membri del gruppo, tenendo conto delle necessità del progetto.
+
+#pseudoheading[*Attività svolte*]
+
+- *Aggiornamento del glossario*: Aggiornamento dei termini tecnici utilizzati nei nuovi documenti creati durante lo Sprint 2.
+- *Individuazione use case dell’interfaccia utente*: Definizione preliminare degli use case legati all’interfaccia utente.
+- *Individuazione use case amministratore*: Studio e definizione iniziale degli use case relativi all’interfaccia amministrativa.
+- *Inizio stesura Analisi dei Requisiti*: Redazione della sezione “Descrizione del prodotto” nel documento “Analisi dei Requisiti”.
+- *Studio delle Norme di Progetto*: Analisi e definizione della struttura e dei contenuti principali per il documento “Norme di Progetto”.
+- *Studio del Piano di Progetto*: Analisi e definizione della struttura e dei contenuti principali per il documento “Piano di Progetto”.
+
+#pseudoheading[*Ruoli ricoperti e ore svolte*]
+
+#figure(
+  image("../imgs/sprint2-tabella.png", width: 100%),
+  caption: [
+    Suddivisione oraria per membro e ruolo.
+  ],
+)
+
+#figure(
+  image("../imgs/sprint2-grafico.png", width: 100%),
+  caption: [
+    Suddivisione oraria per ruolo con relativi costi.
+  ],
+)
+
+=== Sprint 3
+*Intervallo temporale*: 02/12/2024 - 08/12/2024
+
+Durante lo *Sprint 3*, il gruppo ha continuato le attività avviate negli sprint precedenti, concentrandosi sul completamento e l’aggiornamento dei principali documenti di progetto. È stata effettuata una rotazione dei ruoli tra i membri del team per migliorare la distribuzione del carico di lavoro e consentire una maggiore flessibilità operativa. Inoltre, sono stati introdotti nuovi branch nel repository per gestire le pull request e mantenere una maggiore coerenza nella collaborazione.
+
+#pseudoheading[*Attività svolte*]
+
+- *Stesura del Piano di Progetto*: Continuazione del documento, con focus sulle sezioni di pianificazione temporale e risorse necessarie.
+- *Stesura delle Norme di Progetto*: Espansione e completamento delle norme per garantire coerenza e standardizzazione durante lo sviluppo.
+- *Stesura dell'Analisi dei Requisiti*: Aggiunta degli use case principali e finalizzazione dell’introduzione al documento.
+- *Aggiornamento del glossario*: Inserimento di nuovi termini emersi durante lo sviluppo dei documenti.
+- *Gestione repository*: Introduzione di branch dedicati per i principali documenti (Analisi dei Requisiti, Norme di Progetto, Piano di Progetto) per una migliore gestione delle pull request.
+
+#pseudoheading[*Ruoli ricoperti e ore svolte*]
+
+#figure(
+  image("../imgs/sprint3-tabella.png", width: 100%),
+  caption: [
+    Suddivisione oraria per membro e ruolo.
+  ],
+)
+
+#figure(
+  image("../imgs/sprint3-grafico.png", width: 100%),
+  caption: [
+    Suddivisione oraria per ruolo con relativi costi.
+  ],
+)
+
+=== Sprint 4
+*Intervallo temporale*: 09/12/2024 - 22/12/2024
+
+Con lo *Sprint 4* il team ha deciso di estendere la durata degli sprint a due settimane per affrontare in modo più efficace task complesse e migliorare la gestione della rotazione dei ruoli. Durante questo sprint, il focus principale è stato la realizzazione del Proof of Concept (PoC) per il frontend, testando due framework diversi, Svelte e Vue.js, e il proseguimento nella stesura dei principali documenti di progetto.
+
+Inoltre è stato svolto un *incontro online* con il referente dell’azienda Ergon Informatica per ottenere chiarimenti essenziali sull’utilizzo degli LLM e sulla struttura del sistema. Questo ha permesso di delineare meglio l’Analisi dei Requisiti e di avviare la pianificazione del Proof of Concept (PoC).
+
+#pseudoheading[*Attività svolte*]
+
+- *Stesura Norme di Progetto*: Continuazione del documento, con un focus sulla definizione di norme per il codice e i processi di sviluppo.
+- *Realizzazione PoC per l’interfaccia web*: Implementazione di un prototipo di interfaccia web utilizzando i framework Svelte e Vue.js, al fine di confrontarne complessità e tempi di sviluppo.
+- *Aggiornamento Glossario*: Revisione e aggiornamento dei termini tecnici sulla base del lavoro svolto nello Sprint 4.
+- *Stesura Verbale Esterno*: Creazione del verbale relativo all’incontro online con l’azienda Ergon Informatica.
+- *Definizione Use Case dell’interfaccia cliente e fornitore*: Proseguimento nella definizione degli use case del sistema, con particolare attenzione alle interfacce cliente e fornitore.
+
+#pseudoheading[*Ruoli ricoperti e ore svolte*]
+
+#figure(
+  image("../imgs/sprint4-tabella.png", width: 100%),
+  caption: [
+    Suddivisione oraria per membro e ruolo.
+  ],
+)
+
+#figure(
+  image("../imgs/sprint4-grafico.png", width: 100%),
+  caption: [
+    Suddivisione oraria per ruolo con relativi costi.
+  ],
+)
+
+== Periodo PB
+*Periodo*: *DA DEFINIRE*
+
+#pseudoheading[*Obiettivi principali*]
+
+- *Progettazione architetturale*: Definizione dell’architettura del sistema e delle scelte di design.
+- *Implementazione delle funzionalità principali*: Sviluppo del prodotto partendo dal Proof of Concept, con particolare attenzione alle funzionalità chiave.
+- *Integrazione delle tecnologie*: Collegamento delle componenti tecnologiche per garantire un sistema coerente.
+- *Documentazione avanzata*: Produzione di Diagrammi delle Classi, Manuale Utente e Manuale Sviluppatore.
+In questo periodo, il team si è concentrato sulla trasformazione del PoC in un prodotto funzionante, implementando le funzionalità principali richieste e validandone il comportamento attraverso test preliminari.
+
+== Periodo CA
+*Periodo*: *DA DEFINIRE*
+
+#pseudoheading[*Obiettivi principali*]
+
+- *Validazione finale del prodotto*: Esecuzione di test conclusivi per garantire che il prodotto soddisfi tutti i requisiti.
+- *Ottimizzazioni finali*: Correzione degli ultimi bug e miglioramento delle prestazioni.
+- *Aggiornamento dei documenti*: Revisione e completamento della documentazione per la consegna finale.
+- *Consegna al cliente*: Preparazione e presentazione del prodotto finale.
+L’obiettivo principale di questo periodo è stato garantire che il prodotto fosse pronto per l’accettazione finale da parte del cliente, con particolare attenzione alla qualità e alla completezza.
+
 
 // Riportare le risorse (immagini, grafici, ecc...) utilizzate per la stesura del documento
 = Risorse e riferimenti
