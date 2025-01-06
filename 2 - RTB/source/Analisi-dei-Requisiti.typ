@@ -117,7 +117,7 @@ https://www.math.unipd.it/~rcardin/swea/2022/Diagrammi%20Use%20Case.pdf")
 
 == Obiettivi del prodotto
 
-Il progetto ha come obiettivo la creazione di una webapp che fornisce un modello di chatbot con cui l’utente può interagire e inviare messaggi per chiedere informazioni sui prodotti forniti.
+Il progetto ha come obiettivo la creazione di una #gloss[webapp] che fornisce un modello di chatbot con cui l’utente può interagire e inviare messaggi per chiedere informazioni sui prodotti forniti.
 Con il chatbot, gli utenti possono ottenere risposte immediate, risparmiare tempo e completare le azioni desiderate senza bisogno di un supporto umano diretto, rendendo l'interazione con la webapp più veloce ed efficiente.
 
 == Funzionalità del prodotto
@@ -145,11 +145,11 @@ Nelle seguenti sezioni verranno descritti tutti i possibili casi d'uso, cioè tu
 == Attori
 *Amministratore*: rappresenta la persona o il gruppo di persone che si occupa della distribuzione e configurazione del sistema per tutti i fornitori. Gestisce anche gli account dei fornitori.\
 In questo caso va interpretato come l'azienda Ergon Informatica Srl.\
-Questo utente ha accesso ad un'interfaccia web di configurazione del chatbot e di gestione degli account dei clienti.\
+Questo utente ha accesso ad un'#gloss[interfaccia web] di configurazione del chatbot e di gestione degli account dei clienti.\
 *Cliente*: rappresenta il cliente finale che acquista prodotti dal fornitore e che ha la possibilità di interagire con il chatbot del fornitore per ottenere informazioni sui prodotti o servizi offerti.\
-*Fornitore*: reppresenta l'azienda che fornisce dei prodotti ai propri clienti, ogni fornitore ha una sua istanza di chatbot; è una generalizzazione di Cliente infatti, oltre a poter accedere al proprio chatbot, può anche fornire il contesto tramite dei documenti aziendali o FAQ e personalizzare graficamente l'interfaccia variando logo e palette colori. \
+*Fornitore*: reppresenta l'azienda che fornisce dei prodotti ai propri clienti, ogni fornitore ha una sua istanza di chatbot; è una generalizzazione di Cliente infatti, oltre a poter accedere al proprio chatbot, può anche fornire il contesto tramite dei documenti aziendali o #gloss[FAQ] e personalizzare graficamente l'interfaccia variando logo e palette colori. \
 // TODO: capire se tenerlo ->
-*Sistema*: rappresenta il backend del sistema, incluso quello dell'LLM quando viene interrogato.\
+*Sistema*: rappresenta il #gloss[backend] del sistema, incluso quello dell'LLM quando viene interrogato.\
 Quando si parla di *utente* si intende un utente generico che compie operazioni accessibili sia ai fornitori che ai clienti.
 
 
