@@ -265,7 +265,7 @@ Questo approccio consente una chiara distribuzione dei compiti, facilitando il c
 == Introduzione
 Il progetto è stato suddiviso in tre macroperiodi principali, ciascuno associato a una milestone cruciale:
 
-- *RTB (Requirements and Technology Baseline)*: Focus sull'analisi dei requisiti, sulla definizione delle tecnologie e sulla preparazione di un Proof of Concept (PoC).
+- *#gloss[RTB] (Requirements and Technology Baseline)*: Focus sull'#gloss[analisi dei requisiti], sulla definizione delle tecnologie e sulla preparazione di un Proof of Concept (#gloss[PoC]).
 - *PB (Product Baseline)*: Concentrato sull'implementazione delle funzionalità principali e sulla verifica dell'architettura progettata.
 - *CA (Customer Acceptance)*: Dedicato al completamento, alla validazione finale del prodotto e alla consegna al cliente.
 
@@ -285,7 +285,7 @@ Al termine di ogni macroperiodo, viene effettuata una revisione complessiva del 
 - *Analisi dettagliata dei requisiti*: Identificazione e classificazione dei requisiti funzionali e non funzionali del progetto.
 - *Studio delle tecnologie*: Esplorazione delle tecnologie proposte e valutazione della loro adeguatezza.
 - *Proof of Concept (PoC)*: Realizzazione di una demo iniziale per verificare la fattibilità tecnica del progetto.
-- *Documentazione*: Produzione dei documenti fondamentali, tra cui Analisi dei Requisiti, Glossario, Piano di Progetto e Norme di Progetto.
+- *Documentazione*: Produzione dei documenti fondamentali, tra cui Analisi dei Requisiti, Glossario, Piano di Progetto e #gloss[Norme di Progetto].
 
 Durante questo periodo, il team ha lavorato intensamente sulla comprensione delle esigenze del cliente e sulla definizione delle basi tecnologiche. L’obiettivo era garantire che tutte le scelte progettuali e tecniche fossero ben motivate e supportate da un'adeguata analisi preliminare.
 
@@ -296,7 +296,7 @@ Durante lo *Sprint 1*, della durata di una settimana, il gruppo si è concentrat
 
 #pseudoheading[*Attività svolte*]
 
-- *Analisi app nativa vs webapp*: Discussione con l’azienda per valutare la possibilità di sviluppare una webapp invece di un’app nativa, come inizialmente richiesto nel capitolato.
+- *Analisi app nativa vs #gloss[webapp]*: Discussione con l’azienda per valutare la possibilità di sviluppare una webapp invece di un’app nativa, come inizialmente richiesto nel capitolato.
 - *Analisi framework frontend*: Studio dei framework frontend nel caso in cui si decidesse di optare per una webapp.
 - *Analisi LLM*: Valutazione dei modelli linguistici (LLM) disponibili per generare le risposte, con focus su parametri come le lingue supportate e i requisiti di training.
 - *Analisi database SQL*: Confronto tra diversi database SQL per individuare la soluzione più adeguata al caso d'uso del progetto.
@@ -326,7 +326,7 @@ Durante lo *Sprint 2*, il gruppo ha proseguito i lavori avviati nello Sprint 1, 
 #pseudoheading[*Attività svolte*]
 
 - *Aggiornamento del glossario*: Aggiornamento dei termini tecnici utilizzati nei nuovi documenti creati durante lo Sprint 2.
-- *Individuazione use case dell’interfaccia utente*: Definizione preliminare degli use case legati all’interfaccia utente.
+- *Individuazione #gloss[use case] dell’interfaccia utente*: Definizione preliminare degli use case legati all’interfaccia utente.
 - *Individuazione use case amministratore*: Studio e definizione iniziale degli use case relativi all’interfaccia amministrativa.
 - *Inizio stesura Analisi dei Requisiti*: Redazione della sezione “Descrizione del prodotto” nel documento “Analisi dei Requisiti”.
 - *Studio delle Norme di Progetto*: Analisi e definizione della struttura e dei contenuti principali per il documento “Norme di Progetto”.
@@ -351,7 +351,7 @@ Durante lo *Sprint 2*, il gruppo ha proseguito i lavori avviati nello Sprint 1, 
 === Sprint 3
 *Intervallo temporale*: 02/12/2024 - 08/12/2024
 
-Durante lo *Sprint 3*, il gruppo ha continuato le attività avviate negli sprint precedenti, concentrandosi sul completamento e l’aggiornamento dei principali documenti di progetto. È stata effettuata una rotazione dei ruoli tra i membri del team per migliorare la distribuzione del carico di lavoro e consentire una maggiore flessibilità operativa. Inoltre, sono stati introdotti nuovi branch nel repository per gestire le pull request e mantenere una maggiore coerenza nella collaborazione.
+Durante lo *Sprint 3*, il gruppo ha continuato le attività avviate negli sprint precedenti, concentrandosi sul completamento e l’aggiornamento dei principali documenti di progetto. È stata effettuata una rotazione dei ruoli tra i membri del team per migliorare la distribuzione del carico di lavoro e consentire una maggiore flessibilità operativa. Inoltre, sono stati introdotti nuovi #gloss[branch] nel repository per gestire le #gloss[pull request] e mantenere una maggiore coerenza nella collaborazione.
 
 #pseudoheading[*Attività svolte*]
 
@@ -380,7 +380,7 @@ Durante lo *Sprint 3*, il gruppo ha continuato le attività avviate negli sprint
 === Sprint 4
 *Intervallo temporale*: 09/12/2024 - 22/12/2024
 
-Con lo *Sprint 4* il team ha deciso di estendere la durata degli sprint a due settimane per affrontare in modo più efficace task complesse e migliorare la gestione della rotazione dei ruoli. Durante questo sprint, il focus principale è stato la realizzazione del Proof of Concept (PoC) per il frontend, testando due framework diversi, Svelte e Vue.js, e il proseguimento nella stesura dei principali documenti di progetto.
+Con lo *Sprint 4* il team ha deciso di estendere la durata degli sprint a due settimane per affrontare in modo più efficace task complesse e migliorare la gestione della rotazione dei ruoli. Durante questo sprint, il focus principale è stato la realizzazione del Proof of Concept (PoC) per il frontend, testando due framework diversi, #gloss[Svelte] e #gloss[Vue.js], e il proseguimento nella stesura dei principali documenti di progetto.
 
 Inoltre è stato svolto un *incontro online* con il referente dell’azienda Ergon Informatica per ottenere chiarimenti essenziali sull’utilizzo degli LLM e sulla struttura del sistema. Questo ha permesso di delineare meglio l’Analisi dei Requisiti e di avviare la pianificazione del Proof of Concept (PoC).
 
