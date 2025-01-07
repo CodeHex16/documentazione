@@ -77,7 +77,7 @@ comprensione e lettura.
 - ISO/IEC 33020:2019.
 
 = Metriche di qualità
-testo\
+
 == Qualità di processo
 
 === Fornitura
