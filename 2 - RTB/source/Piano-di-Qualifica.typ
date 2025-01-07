@@ -81,11 +81,38 @@ testo\
 == Qualità di processo
 
 === Fornitura
+Per il processo di fornitura vengono indicate tutte le scelte operative fatte in fase di sviluppo. L'acronimo usato
+prima dei nomi è MPC: Minimum Predictive Capability. Questa metrica viene usata in Machine Learning per misurare la
+capacità di un modello di generare previsioni precise. Nel nostro caso, l'MPC è il valore minimo da raggiungere per
+essere considerato accettabile.\
+
+- *CC - Completion Cost*
+Costo finale raggiunto alla fine del progetto. Idealmente non deve superare quello estimato durante le fasi iniziali.
+- *EC - Estimated Cost*
+Costo stimato calcolando le ore necessario per lo sviluppo del progetto.
+
+#figure(caption: [Valori per misurare la qualità della fornitura], table(
+  columns: (0.8fr, 2fr, 1.2fr, 1.2fr),
+  inset: 8pt,
+  align: (x, y) => if (x == 0 and y > 0 and y < 7) { left } else { center + horizon },
+  fill: (x, y) => if (y == 0) { luma(230) },
+  table.header([*Metrica*], [*Nome*], [*Valore accettabile*], [*Valore ottimo*]),
+  "MPC-CC",
+  "Completion Cost",
+  "\u{2264}105% EC",
+  "\u{2264}100% EC",
+))\
 
 === Sviluppo
 
 === Documentazione
-
+- *Indice di Gulpease*
+Indica la complessità nella lettura di una frase o documento. Considera come variabili il numero di parole, di frasi e
+di lettere.\
+Formula dell'indice di Gulpease:\
+$ 89+((300*"numero di frasi") - (10*"numero di lettere"))/"numero di parole" $ <Gulpease>\
+- *Correttezza ortografica*
+Indica il numero di errori ortografici presenti nella documentazione.
 #figure(caption: [Valori per misurare la qualità della documentazione], table(
   columns: (0.8fr, 2fr, 1.2fr, 1.2fr),
   inset: 8pt,
@@ -101,9 +128,14 @@ testo\
   "0",
   "0",
 ))\
-Formula dell'indice di Gulpease:
-$ 89+((300*"numero di frasi") - (10*"numero di lettere"))/"numero di parole" $ <Gulpease>\
+
 === Verifica
+- *Code coverage*
+Quantità di codice eseguito durante un test.\
+Viene utilizzato per valutare la qualità dei test e garantire che il codice sia stato adeguatamente testato. Un alto
+livello indica che il codice è stato eseguito in molti contesti e scenari diversi con diverse parti di codice.\
+- *Test superati in percentuale*\
+Indica i test che vengono superati durante i test. Ovviamente tutti i test devono essere superati.\
 #figure(caption: [Valori per misurare la qualità del processo di verifica], table(
   columns: (0.8fr, 2fr, 1.2fr, 1.2fr),
   inset: 8pt,
