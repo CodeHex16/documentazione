@@ -135,11 +135,13 @@ Indica il numero di errori ortografici presenti nella documentazione.
 Quantità di codice eseguito durante un test.\
 Viene utilizzato per valutare la qualità dei test e garantire che il codice sia stato adeguatamente testato. Un alto
 livello indica che il codice è stato eseguito in molti contesti e scenari diversi con diverse parti di codice.\
+In altre parole, indica quanto codice è stato sottoposto ai test.\
 - *Test superati in percentuale*\
 Indica la proporzione di test automatizzati o manuali che sono stati eseguiti con successo rispetto al totale dei test
 previsti. Viene espressa come una percentuale e serve a misurare quanto dell'applicazione in fase di sviluppo è stato
 verificato con successo tramite i test. Una percentuale alta di test superati indica che il sistema è stabile e che la
 maggior parte delle funzionalità funzionano come previsto.\
+In altre parole, indica quanti test sono stati superati.\
 #figure(caption: [Valori per misurare la qualità del processo di verifica], table(
   columns: (0.8fr, 2fr, 1.2fr, 1.2fr),
   inset: 8pt,
