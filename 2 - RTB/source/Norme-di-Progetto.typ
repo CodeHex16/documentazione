@@ -16,7 +16,7 @@
     sommario: [Norme di progetto],
     
     versioni : (
-      "0.4.0","08/01/2025","Gabriele Magnelli","Stesura nuove sezioni, migliorie e correzioni varie","Yi Hao Zhuo",
+      "0.4.0","08/01/2025","Gabriele Magnelli","Stesura nuove sezioni, migliorie e correzioni varie","Filippo Sabbadin",
       "0.3.0","12/12/2024","Gabriele Magnelli","Redazione sezioni Processi di supporto e Processi organizzativi", "Yi Hao Zhuo",
       "0.2.0","30/11/2024","Francesco Fragonas","Redazione Processi di accordo", "Filippo Sabbadin",
       "0.1.1","30/11/2024","Francesco Fragonas","Revisione Introduzione", "Filippo Sabbadin",
