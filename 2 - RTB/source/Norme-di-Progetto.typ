@@ -16,7 +16,7 @@
     sommario: [Norme di progetto],
     
     versioni : (
-      "0.4.0","18/12/2024","Gabriele Magnelli","Altre sezioni completate e/o tovate","Yi Hao Zhuo",
+      "0.4.0","08/01/2025","Gabriele Magnelli","Stesura nuove sezioni, migliorie e correzioni varie","Yi Hao Zhuo",
       "0.3.0","12/12/2024","Gabriele Magnelli","Redazione sezioni Processi di supporto e Processi organizzativi", "Yi Hao Zhuo",
       "0.2.0","30/11/2024","Francesco Fragonas","Redazione Processi di accordo", "Filippo Sabbadin",
       "0.1.1","30/11/2024","Francesco Fragonas","Revisione Introduzione", "Filippo Sabbadin",
@@ -178,9 +178,9 @@ La prima pagina è l'intestazione del documento ed è composta generalmente dall
 La seconda pagina riguarda il registro modifiche il cui contenuto è organizzato mediante una tabella in cui vengono riportate le seguente informazioni:
 - *Versione*: Indica il numero della versione del documento;
 - *Data*: Data della versione in cui è redatto il documento;
-- *Autore*:Autore di quella versione del documento, cioè il membro del gruppo che ha apportato le modifiche al documento;\
-- *Cambiamenti*:I cambiamenti pricipali di quella versione del documento;\
-- *Verificatore*:Membro del gruppo che ha verificato il documento per quella versione;
+- *Autore*: Autore di quella versione del documento, cioè il membro del gruppo che ha apportato le modifiche al documento;\
+- *Cambiamenti*: I cambiamenti pricipali di quella versione del documento;\
+- *Verificatore*: Membro del gruppo che ha verificato il documento per quella versione;
 === Indice
 Nella terza pagina, e se necessario le seguenti, è riservata all'indice del documento che elenca le sezioni di cui è composto i documento.\
 === Corpo del documento
@@ -194,14 +194,13 @@ Verranno prodotti i seguenti documenti:
 - *Glossario*;
 - *Verbali esterni*;
 - *Verbali interni*;
-=== Regole stilistiche
 === Elenchi puntati
 Ogni voce di un elenco puntato finisce con ";".
 === Formato delle date
 Per le date viene utilizzato lo standard internazionale *ISO 8601* nella forma YYYY-MM-DD in cui:
 - *YYYY*:Indica l'anno con 4 cifre;
 - *MM*: Indica il mese con 2 cifre;
-- *DD*: Indica il giorno con 2 cifre;\
+- *DD*: Indica il giorno con 2 cifre;
 === Strumenti
 - *Typst*: Linguaggio per la stesura dei documenti;
 - *Github*: Servizio di hosting per il repository;
@@ -210,7 +209,7 @@ Per le date viene utilizzato lo standard internazionale *ISO 8601* nella forma Y
 Il processo di gestione di configurazione identifica le norme adottate dal gruppo per garantire la tracciabilità della documentazione e del codice prodotto durante tutto l'arco di vita del progetto.
 Lo scopo principale è quello di organizzare la procedura di modifica della documentazione e del codice prodotto e di rendere immediatamente consultabili le varie modifiche apportate e i loro autori.
 === Versionamento
-In generale una versione è del tipo X.Y.Z in cui:
+In generale una versione ha una sintassi del tipo X.Y.Z in cui:
 - *X*: E' il numero di versione principale che viene incrementato ogni qual volta il documento sia terminato e pronto per una revisione;
 - *Y*: E' il numero di versione secondaria che viene incrementato ogni qual volta il documento sia stato modificato in modo significativo;
 - *Z*: E' il numero di versione di correzione, incrementato ogni qual volta il documento subisca correzioni minori;
@@ -228,21 +227,21 @@ Nel branch main si possono trovare diverse cartelle che servono per organizzare 
 - In *verbali* sono presenti sia i verbali interni sia quelli esterni in foramto PDF;
 - In *diari-di-bordo* sono presenti tutti i diari di bordo prodotti;
 === Sincronizzazione
-La sincronizzazione avviene tramite repository condivise su github in cui ogni attività da svolgere è tracciata dat una issue con il/i membro/i assegnato/i a tale issue così da sapere chi la segue o l'ha seguita.
+La sincronizzazione avviene tramite repository condivise su github in cui ogni attività da svolgere è tracciata da una issue con il/i membro/i assegnato/i a tale issue così da sapere sempre chi la segue, o l'ha seguita.
 ==== Branch
-Per gestire al meglio le varie issue e i documenti si è deciso di creare dei branch appositi per ogni documento importante come *Norme di Progetto*, *Piano di Progetto*, *Glossario*, *Piano di Qualifica* e *Analisi dei Requisiti*.
-Inoltre, se più membri del gruppo lavorano allo stesso documento allora viene creato un branch per ogni membro con nome il nome del documento e di chi lo sta realizzando. 
-Una volta finito il lavoro da parte di tutti i membri che operano su quel documento, questo viene verificato (tramite pull request) e viene eseguito il merge sul branch main e i branch ausiliari vengono eliminati.
+Per gestire al meglio le varie issue e la documentazione si è deciso di creare dei branch appositi per ogni documento importante come *Norme di Progetto*, *Piano di Progetto*, *Glossario*, *Piano di Qualifica* e *Analisi dei Requisiti*.
+Inoltre, se più membri del gruppo lavorano allo stesso documento allora viene creato un branch per ogni membro con nome il nome del documento/attività e di chi lo sta svolgendo. 
+Quindi in generale la sintassi del nome di un branch è la seguente: *[Titolo][Nome-Membro][Sprint]*.
+Una volta finito il lavoro da parte di tutti i membri che operano su quel documento, questo viene verificato (tramite pull request) e viene eseguito il merge sul branch main, mentre i branch ausiliari vengono eliminati.
 Altri branch degni di nota fino ad ora sono:
-- *to-be-aproved*: Usato per scrivere e verificare sia i verbali interni sia esterni;
 - *diario-di-bordo*: Utilizzato per scrivere e verificare i diari di bordo;
 ==== Pull request
 Per quanto riguarda le pull request si è deciso che per ogni documento redatto viene richiesta la verifica tramite pull request.
-A questo punto i verificatori incaricati (vengono create delle issue per la verifica assegnandole a chi di dovere), tramite questa pull request, eseguono la verifica e se è tutto corretto viene fatto il merge delle modifiche apportate nel main,
-altrimenti il verificatore può correggere direttamente il documento, oppure scrivere un commento con delle indicazioni per le correzioni da svolgere.
+A questo punto i verificatori incaricati (vengono create delle issue per la verifica assegnandole a chi di dovere), tramite questa pull request, eseguono la verifica e se è tutto corretto viene fatto il merge delle modifiche apportate nel main, altrimenti il verificatore può correggere direttamente il documento, oppure scrivere un commento con delle indicazioni per le correzioni da svolgere.
+In generale, le pull request vengono effettuate quando vi è una modifica interna al repository.
 === Strumenti usati
 - *Git*: Software usato per il controllo della versione dei documenti e del codice;
-- *Github*:Servizio di hosting per progetti sotware usato dal gruppo per coordinarsi sulle operazioni di versionamento e usato come *Issue Tracking System*;
+- *Github*: Servizio di hosting per progetti sotware usato dal gruppo per coordinarsi sulle operazioni di versionamento e usato come *Issue Tracking System*;
 === Verifica 
 ==== Analisi statica
 ==== Analisi dinamica
@@ -254,13 +253,33 @@ altrimenti il verificatore può correggere direttamente il documento, oppure scr
 Il processo di gestione ha lo scopo di identificare le attività e i compiti che ogni membro del gruppo dovrà eseguire per proseguire nel progetto.
 ==== Ruoli 
 I ruoli svolti, a rotazione, dai membri del gruppo sono:
-- *Responsabile*:(aggiungere dettagli/definizione);
-- *Amministratore*:(aggiungere dettagli/definizione);
-- *Progettista*:(aggiungere dettagli/definizione);
-- *Analista*:(aggiungere dettagli/definizione);
-- *Programmatore*:(aggiungere dettagli/definizione);
-- *Verificatore*:(aggiungere dettagli/definizione);
-In particolare ogni membro, in un dato momento, può svolgere un solo ruolo alla volta, ma durante lo sprint un membro può assumere più ruoli.
+1. *Responsabile*: Ha il compito primario di coordinare i membri del gruppo, inoltre deve: 
+- Determinare le attività da svolgere, assegnarle e verificarne l'avanzamento;
+- Gestire i rapporti tra i membri del gruppo e i soggetti esterni;
+- Redigere i verbali sia interni che esterni;
+Il responsabile è una figura che sarà presente durante tutto l'arco del progetto.
+2. *Amministratore*: Ha il compito primario di controllare e gestire l'ambiente di lavoro, inoltre deve:
+- Stabilire gli strumenti necessari da usare durante il progetto;
+- Gestire i processi e risolverne gli eventuali problemi;
+L'amministratore è una figura che sarà presente durante tutto l'arco del progetto.
+3. *Progettista*: Ha lo scopo principale di determinare le scelte realizzative del progetto, in particolare deve:
+- Trovare l'architettura adeguata per gestire il progetto;
+Il progettista è una figura che sarà, principalmente, presente durante la parte di sviluppo del progetto.
+4. *Analista*: Ha il compito principale di trovare i requisiti che il progetto dovrà soddisfare e riportarli nel documento *Analisi dei Requisiti*, quindi deve:
+- Studiare i bisogni dei committenti;
+- Studiare i requisiti definendone la complessità;
+- Scrivere il documento *Analisi dei Requisiti*
+L'analista è una figura che sarà, principalmente, presente durante la prima parte del progetto in cui verrà analizzato e compreso appieno il capitolato. 
+Solo in casi straordinari, cioè se il gruppo dovesse cambiare i requisiti del progetto, allora l'Analista potrebbe.
+5. *Programmatore*: Ha il compito primario di svolgere l'attività di codifica e sviluppare l'architettura individuata dal Progettista, in particolare deve:
+- Scrivere codice mantenibile che rispetti le *Norme di Progetto*;
+- Creare test per la verifica e validazione del codice;
+Il programmatore è una figura che sarà presente durante la parte di sviluppo del progetto.
+6. *Verificatore*: Ha il compito pricipale di controllare e validare la documentazione e il codice prodotto, in particolare deve:
+- Controllare ogni documento a lui assegnato, verificarlo e in caso correggerlo o notificare il redattore, specificare cosa non è corretto e richiederne la correzione;
+- Controllare che tutto ciò che viene prodotto rispetti le *Norme di Progetto*;
+Il Verificatore è una figura che sarà presente durante tutto il progetto.
+In particolare ogni membro, in un dato momento, può svolgere un solo ruolo alla volta, ma durante lo sprint può assumere più ruoli.
 ==== Ticketing (Issue Tracking System)
 Il gruppo sfrutta l'ITS(Issue Tracking System) offerto da Github per gestire le attività da svolgere , cioè le *Issue*.
 Creare le issue è molto semplice e veloce e una volta create (ogni membro del gruppo può creare una issue), quindi quando viene individuata un'attività specifica da svolgere, questa viene assegnata, in modo coerente, ad un membro del gruppo.
@@ -269,7 +288,8 @@ Quando viene creata una issue, questa sarà composta da:
 - *Assegnatario/i*: Il/I membro/i del gruppo a cui è affidata la issue;
 - *Etichetta/e*: Identifica il tipo di issue;
 - *Stato*: Avanzamento della issue;
-- *Priorità* e *Peso*: Identificano l'importanza di svolgere la issue;
+- *Priorità*: Identifica l'importanza di svolgere la issue;
+- *Peso*: Stima del carico di lavoro relativo alla issue;
 - *Sprint*: Lo sprint in cui questa issue deve, idealmente, essere svolta;
 - *Ruolo*: Identifica il ruolo associato allo svolgimento di tale issue;
 - *Ore*: Il numero di ore impiegate per svolgere la issue;
@@ -285,19 +305,22 @@ Più in particolare quando viene individuato un compito da svolgere vengono eseg
 === Coordinamento
 ==== Comunicazioni e Riunioni
 Le comunicazioni principali che avvengono durante lo svolgimento del progetto sono di due tipi:
-- *Comunicazioni interne*:Il gruppo sfrutta *Telegram* e *Discord* per le comunicazioni principali interne, in particolare Telegram viene usato per messaggi brevi, veloci e informali. Mentre Discord viene usato per discussioni e riunioni a distanza.
+- *Comunicazioni interne*: Il gruppo utilizza *Telegram* e *Discord* per le comunicazioni principali interne, in particolare Telegram viene usato per messaggi brevi, veloci e informali, mentre Discord viene usato per discussioni e riunioni a distanza.
 Inoltre, in caso di problemi su Telegram, il gruppo può spostarsi su Discord per comunicare anche in modo non formale;
-- *Comunicazioni esterne*:Per le comunicazioni esterne vengono usate la mail di gruppo *unipd.codehex16gmail.com* e *Zoom* per chiarire dubbi e porre domande;
+- *Comunicazioni esterne*: Per le comunicazioni esterne vengono usate la mail di gruppo *unipd.codehex16\u{0040}gmail.com* e *Zoom* per chiarire dubbi e porre domande;
 Anche le riunioni sono di due tipi:
-- *Riunioni interne*:I membri del gruppo si riuniscono su *Discord* dove si fa il punto della situazione in quel momento e se necessario si introducono nuove attività da svolgere e/o si procede con quelle già indicate;
-- *Riunioni esterne*:I membri del gruppo si riuniscono insieme al proponente, questa riunione di solito è richiesta dal gruppo per trattare problemi/dubbi di una certa importanza al fine di avere una migliore comprensione delle attività da svolgere e procedere con il progetto;ù
+- *Riunioni interne*: I membri del gruppo si riuniscono su *Discord* dove si fa il punto della situazione in quel momento e se necessario si introducono nuove attività da svolgere e/o si procede con quelle già indicate;
+- *Riunioni esterne*: I membri del gruppo si riuniscono insieme al proponente, questa riunione di solito è richiesta dal gruppo per trattare problemi/dubbi di una certa importanza al fine di avere una migliore comprensione delle attività da svolgere e procedere con il progetto;ù
 Sarà compito del *Responsabile* riassumere in un *verbale interno* , o un *verbale esterno* quello che si è discusso durante la riunione in questione;
 ==== Verbali
 I verbali redatti sono di due tipi:
-- *Verbali interni*:Questo tipo di verbale è la trascrizione dei punti salienti di una riunione interna e, generalmente, è scritto dal *Responsabile*, l'obiettivo principale è quello di discutere delle attività svolte e delle attività da svolgere;
-- *Verbali esterni*:Questo tipo di verbale è la trascrizione dei punti più importanti riscontrati durante una riunione esterna, il cui obiettivo principale è quello di risolvere dubbi/problemi riscontrati durante l'avanzamento del progetto. Anche questo verbale è, generalmente, redatto dal *Responsabile*;
+- *Verbali interni*: Questo tipo di verbale è la trascrizione dei punti salienti di una riunione interna e, generalmente, è scritto dal *Responsabile*, l'obiettivo principale è quello di discutere delle attività svolte e delle attività da svolgere, stabilendo quindi nuove issue, se necessario;
+- *Verbali esterni*: Questo tipo di verbale è la trascrizione dei punti più importanti riscontrati durante una riunione esterna, il cui obiettivo principale è quello di risolvere dubbi/problemi riscontrati durante l'avanzamento del progetto. Anche questo verbale è, generalmente, redatto dal *Responsabile*;
+Nel caso in cui il Responsabile non fosse presente durante le riunioni, il verbale corrispondente verrà redatto dall'*Amministratore*, se neanche l'amministratore era presente allora sarà uno dei membri presenti alla riunione che avrà l'incarico di redigere il verbale.
 === Miglioramento
-== Misure di qualità per il prodotto (forse ancora troppo presto)
+==== Scopo e descrizione
+Il miglioramento è un processo sempre attivo che durerà per tutto il progetto il cui obiettivo è quello di controllare e migliorare tutto quello che viene prodotto mantenendo un elevato grado di qualità.
+== Misure di qualità per il prodotto
 === Funzionalità
 === Efficienza
 === Usabilità
