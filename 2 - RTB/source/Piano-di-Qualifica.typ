@@ -33,7 +33,7 @@
 
 = Introduzione e scopo
 == Scopo del documento
-In questo documento vengono dichiarate tutte le metriche che il gruppo CodeHex16 userà per misurare la #gloss[qualità] del
+In questo documento vengono dichiarate tutte le metriche che il gruppo #gloss[CodeHex16] userà per misurare la #gloss[qualità] del
 prodotto e dei processi usati per la realizzazione del progetto.
 
 == Glossario
@@ -53,10 +53,10 @@ comprensione e lettura.
 
 == Riferimenti
 === Riferimenti normativi
-- Capitolato C7 - LLM : Assistente Virtuale
+- Capitolato C7 - #gloss[LLM] : #gloss[Assistente Virtuale]
 #link("https://www.math.unipd.it/~tullio/IS-1/2024/Progetto/C7.pdf")
 
-- Norme di Progetto
+- #gloss[Norme di Progetto]
 === Riferimenti informativi
 - Slide T08:
 
