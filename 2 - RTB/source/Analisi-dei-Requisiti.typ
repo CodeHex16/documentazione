@@ -26,7 +26,7 @@
     "06/01/2025",
     "Luca Ribon",
     "Aggiunti altri use case, corretti alcuni dei precedenti",
-    "",
+    "Filippo Sabbadin",
     "0.3.0",
     "23/12/2024",
     "Luca Ribon",
@@ -56,23 +56,24 @@
 #counter(page).update(1)
 
 = Introduzione
-== Scopo del documento
-Il presente documento descrive in dettaglio i *casi d'uso* e i *requisiti* relativi al progetto "#gloss[LLM], Assistente
-Virtuale". Tali specifiche sono state elaborate a partire dall'analisi del capitolato C7, proposto da Ergon, e dagli incontri svolti online e in presenza con l'azienda.
 
-== Scopo del prodotto
-Il software da realizzare consiste in un #gloss[chatbot], basato su modelli linguistici (LLM), che un #gloss[fornitore], ad esempio dibevande o alimenti, può offrire ai propri clienti, i quali possono ottenere in modo semplice e immediato informazioni dettagliate sui prodotti o servizi disponibili, senza la necessità di contattare direttamente un operatore dell'azienda.
+== Scopo e Descrizione del Prodotto
+Il progetto consiste nella realizzazione di un *chatbot* basato su modelli linguistici (*LLM*) pensato per i **fornitori** di beni, come bevande o alimenti, da offrire ai propri clienti. Questo sistema consente ai clienti di ottenere in modo semplice e immediato informazioni dettagliate sui prodotti o servizi disponibili, senza la necessità di contattare direttamente un operatore dell'azienda.
 
-Il sistema prevede anche un'interfaccia dedicata all'azienda fornitrice, che consente la gestione dei clienti e dei documenti contenenti le informazioni di riferimento. Questi documenti saranno utilizzati dal modello linguistico per generare risposte accurate e personalizzate, garantendo un'esperienza utente ottimale. Inoltre l'interfaccia del fornitore permette di personalizzare graficamente la propria piattaforma tramite l'inserimento di un logo e la selezione di una palette colori.
+Il chatbot si integra con un'interfaccia dedicata al fornitore, che permette di:
 
-= Descrizione del prodotto
-Il sistema mira a semplificare il flusso informativo tra fornitori e clienti, rendendo l'accesso alle informazioni più rapido e indipendente da intermediari umani.
+- Gestire i clienti e i documenti contenenti le informazioni di riferimento utilizzate dal modello linguistico per generare risposte accurate e personalizzate.
+- Personalizzare graficamente la piattaforma tramite l'inserimento del logo aziendale e la selezione di una palette colori.
 
-Attraverso questa soluzione, le aziende potranno migliorare la produttività interna, ridurre i tempi di risposta alle richieste dei clienti e ottimizzare la gestione dei documenti aziendali. Parallelamente, i clienti beneficeranno di un'esperienza utente fluida e accessibile, con risposte precise e aggiornate a qualsiasi ora.
+== Obiettivi del sistema
 
-Il progetto si propone inoltre di dimostrare come tecnologie LLM possano trasformare il modo in cui le aziende gestiscono il servizio clienti, ampliando le possibilità di mercato e rafforzando la fidelizzazione degli utenti.
+- **Semplificazione del flusso informativo**: riduce i tempi di risposta alle richieste dei clienti e rende l'accesso alle informazioni rapido e indipendente da intermediari umani.
+- **Ottimizzazione della produttività aziendale**: semplifica la gestione dei documenti e migliora la produttività interna.
+- **Esperienza utente migliorata**: garantisce risposte precise e aggiornate in qualsiasi momento, offrendo un'interazione fluida e accessibile.
 
-L'integrazione di un'interfaccia di amministrazione offre agli operatori aziendali uno strumento versatile per monitorare e personalizzare il sistema, garantendo il massimo controllo sui contenuti e adattandolo rapidamente ai vari aggiornamenti di catalogo.
+== Benefici
+
+Il progetto vuole dimostrare come le tecnologie *LLM* possano trasformare la gestione del servizio clienti, ampliando le possibilità di mercato e rafforzando la fidelizzazione degli utenti. L'integrazione di un'interfaccia di amministrazione offre agli operatori aziendali uno strumento versatile per monitorare e personalizzare il sistema, garantendo il massimo controllo sui contenuti e una rapida adattabilità agli aggiornamenti di catalogo.
 
 == Funzionalità del prodotto e requisiti
 Il sistema dovrà offrire le seguenti funzionalità principali:
@@ -88,37 +89,18 @@ Il sistema dovrà offrire le seguenti funzionalità principali:
   - Configurare domande e risposte predefinite come base per il chatbot.
   - Caricare, aggiornare e mantenere i documenti aziendali utilizzati per il training del modello *LLM*.
 
-== Requisiti tecnici
-- *Architettura del sistema:*
-  - Il sistema sarà composto da:
-    - Un database per archiviare dati aziendali e documenti.
-    - Un modello *LLM* preesistente, selezionato tra le opzioni disponibili (es. *BLOOM*, *llama*, *ChatGPT*, *Claude*, ecc.).
-    - API REST per la comunicazione tra il modello e le interfacce utente.
-    - Un'interfaccia grafica per l'interazione tra utenti e chatbot, ottimizzata per dispositivi mobili e web.
-- *Esecuzione e scalabilità:*
-  - Il sistema sarà eseguibile in ambienti containerizzati (es. Docker).
-  - Supporta la scalabilità attraverso l'inizializzazione di nodi stateless, per rispondere a un numero variabile di richieste simultanee.
-
 == Glossario
 Per facilitare la comprensione di questo documento, viene fornito un glossario che chiarisce il significato dei termini specifici utilizzati nel contesto del progetto. Ogni termine di glossario è contrassegnato con un asterisco "\*" in apice e collegato direttamente alla pagina web del glossario, permettendo così di accedere immediatamente alla definizione completa del termine. Le definizioni sono disponibili nel documento #link("https://github.com/CodeHex16/documentazione/tree/main/glossario/glossario.pdf")[Glossario.pdf] e nella seguente pagina web: #link("https://codehex16.github.io/glossario").
-
 
 === Riferimenti normativi:
 - #gloss[Norme di progetto] v1.0.0:
 - Capitolato C7 - #gloss[Assistente Virtuale] Ergon:
-#link("https://www.math.unipd.it/~tullio/IS-1/2021/Progetto/C7.pdf")
+
+#link("https://www.math.unipd.it/~tullio/IS-1/2024/Progetto/C7.pdf")
 
 === Riferimenti informativi:
-- "Analisi e descrizione delle funzionalità: #gloss[Use case] e relativi diagrammi (UML)": #link("
-https://www.math.unipd.it/~rcardin/swea/2022/Diagrammi%20Use%20Case.pdf")
-
-
-= Descrizione
-
-== Obiettivi del prodotto
-
-Il progetto ha come obiettivo la creazione di una #gloss[webapp] che fornisce un modello di chatbot con cui l’utente può interagire e inviare messaggi per chiedere informazioni sui prodotti forniti.
-Con il chatbot, gli utenti possono ottenere risposte immediate, risparmiare tempo e completare le azioni desiderate senza bisogno di un supporto umano diretto, rendendo l'interazione con la webapp più veloce ed efficiente.
+- "Analisi e descrizione delle funzionalità: #gloss[Use case] e relativi diagrammi (UML)":\
+#link("https://www.math.unipd.it/~rcardin/swea/2022/Diagrammi%20Use%20Case.pdf")
 
 == Funzionalità del prodotto
 
