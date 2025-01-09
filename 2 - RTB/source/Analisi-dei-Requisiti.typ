@@ -58,9 +58,9 @@
 = Introduzione
 
 == Scopo e Descrizione del Prodotto
-Il progetto consiste nella realizzazione di un *chatbot* basato su modelli linguistici (*LLM*) pensato per i **fornitori** di beni, come bevande o alimenti, da offrire ai propri clienti. Questo sistema consente ai clienti di ottenere in modo semplice e immediato informazioni dettagliate sui prodotti o servizi disponibili, senza la necessità di contattare direttamente un operatore dell'azienda.
+Il progetto consiste nella realizzazione di un *#gloss[chatbot]* basato su modelli linguistici (*#gloss[LLM]*) pensato per i **fornitori** di beni, come bevande o alimenti, da offrire ai propri clienti. Questo sistema consente ai clienti di ottenere in modo semplice e immediato informazioni dettagliate sui prodotti o servizi disponibili, senza la necessità di contattare direttamente un operatore dell'azienda.
 
-Il chatbot si integra con un'interfaccia dedicata al fornitore, che permette di:
+Il chatbot si integra con un'interfaccia dedicata al #gloss[fornitore], che permette di:
 
 - Gestire i clienti e i documenti contenenti le informazioni di riferimento utilizzate dal modello linguistico per generare risposte accurate e personalizzate.
 - Personalizzare graficamente la piattaforma tramite l'inserimento del logo aziendale e la selezione di una palette colori.
@@ -115,7 +115,7 @@ L’applicazione permette di:
 
 == Utenti e caratteristiche
 
-La webapp è rivolta verso ristoratori che vogliono offrire un’assistenza veloce verso i clienti. I ristoratori, dopo essersi registrati, possono inserire, modificare ed eliminare informazioni sui propri prodotti. Gli utenti, registrati o no, possono poi scrivere al chatbot per richiedere queste informazioni.
+La #gloss[webapp] è rivolta verso ristoratori che vogliono offrire un’assistenza veloce verso i clienti. I ristoratori, dopo essersi registrati, possono inserire, modificare ed eliminare informazioni sui propri prodotti. Gli utenti, registrati o no, possono poi scrivere al chatbot per richiedere queste informazioni.
 
 = Use Cases
 
