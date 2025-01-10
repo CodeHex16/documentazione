@@ -18,9 +18,9 @@
   "Verificatore",
 ), sommario: [Analisi dei requisiti del capitolato C7], versioni: (
   "0.5.0",
-  "09/01/2025",
+  "11/01/2025",
   "Filippo Sabbadin",
-  "Aggiunte immagini con i grafici UML",
+  "Corretti use case sul login, aggiunte immagini con i grafici UML",
   "!!!!!!!!!!!!!!!!!!!",
   "0.4.0",
   "06/01/2025",
@@ -162,7 +162,7 @@ clienti.
 
 #figure(image("../imgs/attori.png", width: 70%), caption: "Lista degli attori")
 
-== UC1 - Login fornitore
+== UC1 - Login
 *Attori principali:*
 - Fornitore;
 *Attori secondari:*
@@ -187,12 +187,16 @@ clienti.
 - Inserimento password;
 - Possibilità "Resta connesso";
 
-=== UC1.1 - Inserimento e-mail fornitore
+=== UC1.1 - Inserimento e-mail
 #figure(
   image("../imgs/email-password-fornitore.png", width: 80%),
   caption: "Inserimento e-mail e password fornitore + possibilità 'Resta connesso'",
 )
-=== UC1.2 - Inserimento password fornitore
+=== UC1.2 - Inserimento password
+
+=== UC1.3 - e-mail non valida
+
+=== UC1.4 - password non valida
 
 == UC2 - Primo login fornitore
 *Attori principali:*
@@ -230,7 +234,7 @@ clienti.
 *Inclusioni:*
 - Inserimento password;
 - Possibilità "Resta connesso";
-
+/*
 == UC3 - Login cliente
 *Attori principali:*
 - Cliente;
@@ -262,7 +266,8 @@ clienti.
   caption: "Inserimento e-mail e password cliente + possibilità 'Resta connesso'",
 )
 === UC3.2 - Inserimento password cliente
-== ? Primo login cliente
+*/
+== UC4 - Primo login cliente
 *Attori principali:*
 - Cliente;
 *Attori secondari:*
@@ -335,7 +340,7 @@ clienti.
 - Solo se l'utente seleziona l'opzione "Resta connesso", il sistema mantiene in memoria locale le credenziali per un
   futuro login senza doverle richiedere all'utente;
 
-== Cambio password
+== UC7 - Cambio password
 *Attori principali:*
 - Fornitore/cliente;
 *Attori secondari:*
@@ -355,7 +360,7 @@ clienti.
 - Sistema non raggiungibile;
 - Inserimento password;
 
-== Recupero password
+== UC8 - Recupero password
 *Attori principali:*
 - Fornitore/cliente;
 *Attori secondari:*
@@ -377,7 +382,7 @@ clienti.
 - Sistema non raggiungibile;
 - Inserimento password;
 
-== Logout
+== UC9 - Logout
 *Attori principali:*
 - Forntitore/cliente;
 *Attori secondari:*
@@ -392,7 +397,7 @@ clienti.
 - L’utente preme il pulsante di logout;
 - Il sistema riceve la richiesta di logout e disconnette l'utente dal sistema;
 
-== Visualizzazione delle chat
+== UC10 - Visualizzazione delle chat
 *Attori principali:*
 - Fornitore/cliente;
 *Descrizione:*
@@ -407,7 +412,7 @@ clienti.
 *Estensioni:*
 - Sistema non raggiungibile;
 
-== Scrittura e invio messaggio
+== UC11 - Scrittura e invio messaggio
 *Attori principali:*
 - Fornitore/cliente;
 *Attori secondari:*
@@ -425,7 +430,7 @@ clienti.
 *Estensioni*
 - Sistema non raggiungibile;
 
-== Ricezione risposta
+== UC12 Ricezione risposta
 *Attori principali:*
 - Fornitore/cliente;
 *Attori secondari:*
@@ -443,7 +448,7 @@ clienti.
 *Estensioni:*
 - Sistema non raggiungibile;
 
-== Valutazione risposta
+== UC13 - Valutazione risposta
 *Attori principali:*
 - Fornitore/cliente;
 *Attori secondari:*
@@ -463,7 +468,7 @@ clienti.
 *Estensioni:*
 - Sistema non raggiungibile;
 
-== Selezione Dark/Light Mode
+== UC14 - Selezione Dark/Light Mode
 *Attori principali:*
 - Fornitore/cliente;
 *Attori secondari:*
@@ -482,7 +487,7 @@ clienti.
 //////////////////////////////////////////////////////////////////////////
 // FORNITORE
 //////////////////////////////////////////////////////////////////////////
-== Modifica della durata dello storico delle chat
+== UC15 - Modifica della durata dello storico delle chat
 *Attori principali:*
 - Fornitore;
 *Attore secondario:*
@@ -501,7 +506,7 @@ clienti.
 *Estensioni:*
 - Sistema non raggiungibile;
 
-== Caricare il proprio logo
+== UC16 - Caricare il proprio logo
 *Attori principali:*
 - Fornitore;
 *Attori secondari:*
@@ -520,7 +525,7 @@ clienti.
 *Estensioni*:
 - Formato logo non valido;
 
-=== Formato logo non valido
+== UC17 - Formato logo non valido
 *Attori principali:*
 - Sistema;
 *Attori secondari:*
@@ -537,7 +542,7 @@ clienti.
 - Il sistema riceve il logo caricato dal fornitore e dopo aver verificato che il formato non è valido, invia un messaggio
   d'errore al fornitore;
 
-== Selezione palette colori
+== UC18 - Selezione palette colori
 *Attori principali:*
 - Fornitore;
 *Attori secondari:*
@@ -556,7 +561,7 @@ clienti.
 - Il fornitore salva le scelte effettuate;
 - Il sistema modifica l'interfaccia con i colori scelti dal fornitore;
 
-== Visualizzare statistiche domanda-risposta
+== UC19 - Visualizzare statistiche domanda-risposta
 *Attori principali:*
 - Fornitore;
 *Attori secondari:*
@@ -577,7 +582,7 @@ clienti.
 - Inserimento filtri di visualizzazione;
 - Sistema non raggiungibile;
 
-=== Inserimento filtri di visualizzazione
+== UC20 - Inserimento filtri di visualizzazione
 *Attori principali:*
 - Fornitore;
 *Descrizione*
@@ -592,7 +597,7 @@ clienti.
 - Il fornitore inserisce i filtri di visualizzazione desiderati;
 - Il sistema applica i filtri alle statistiche;
 
-== Aggiunta account cliente
+== UC21 - Aggiunta account cliente
 *Attori principali:*
 - Fornitore;
 *Attori secondari:*
@@ -615,7 +620,7 @@ clienti.
 - Inserimento password;
 - Sistema non raggiungibile;
 
-=== Inserimento di parametri dell'account non validi
+== UC22 - Inserimento di parametri dell'account non validi
 *Attori principali:*
 - Sistema;
 *Attori secondari:*
@@ -632,7 +637,7 @@ clienti.
 - Il sistema riceve i parametri dell'account inseriti dal fornitore, ma questi non sono validi;
 - Il sistema mostra un messaggio di errore il quale indica che i parametri inseriti non sono validi;
 
-=== Inserimento di un account già esistente
+== UC23 - Inserimento di un account già esistente
 * Attori principali:*
 - Sistema;
 * Attori secondari:*
@@ -649,7 +654,7 @@ clienti.
 - Il sistema riceve i parametri dell'account inseriti dal fornitore, ma questo è già presente nel sistema;
 - Il sistema mostra un messaggio di errore il quale indica che l'account inserito è già esistente;
 
-== Eliminazione dell'account cliente
+== UC24 - Eliminazione dell'account cliente
 *Attori principali:*
 - Fornitore;
 *Attori secondari:*
@@ -673,8 +678,8 @@ clienti.
 *Estensioni:*
 - Inserimento password;
 - Sistema non raggiungibile;
-
-== Inserimento password
+/*
+== UC25 - Inserimento password
 *Attori principali:*
 - Fornitore/cliente;
 *Descrizione:*
@@ -686,8 +691,8 @@ clienti.
 - L’utente ha inserito la password necessaria per effettuare l'accesso
 *Estensioni:*
 - Password scelta non valida;
-
-== Password scelta non valida
+*/
+== UC25 - Password scelta non valida
 *Attori principali:*
 - Sistema;
 *Attori secondari:*
@@ -704,7 +709,7 @@ clienti.
 - Il sistema verifica la password inserita e la trova non conforme ai requisiti, quindi invia un messaggio d'errore
   all'utente con la richiesta di scegliere un'altra password valida;
 
-== Sistema non raggiungibile
+== UC26 - Sistema non raggiungibile
 *Attori principali:*
 - Sistema;
 *Descrizione:*
