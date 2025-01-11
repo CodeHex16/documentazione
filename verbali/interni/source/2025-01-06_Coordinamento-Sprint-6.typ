@@ -1,7 +1,7 @@
 #import "../../../template/verbale.typ": *
 
 #show : doc => verbale(
-    titolo: "Coordinamento Sprint 5",
+    titolo: "Coordinamento Sprint 6",
     ordine-del-giorno: ("Revisione Sprint 5", "Coordinamento per lo Sprint 6", "Condivisione progressi documenti RTB","Scelta del modello LLM", "Schedulazione incontro con Ergon"),
     data: [06/01/2025],
     ora: [15:30-18:00],
