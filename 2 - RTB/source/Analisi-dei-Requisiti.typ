@@ -70,11 +70,10 @@ Il chatbot si integra con un'interfaccia dedicata al fornitore, che permette di:
 
 == Obiettivi del sistema
 
-- **Semplificazione del flusso informativo**: riduce i tempi di risposta alle richieste dei clienti e rende l'accesso alle
+- *Semplificazione del flusso informativo*: riduce i tempi di risposta alle richieste dei clienti e rende l'accesso alle
   informazioni rapido e indipendente da intermediari umani.
-- **Ottimizzazione della produttività aziendale**: semplifica la gestione dei documenti e migliora la produttività
-  interna.
-- **Esperienza utente migliorata**: garantisce risposte precise e aggiornate in qualsiasi momento, offrendo un'interazione
+- *Ottimizzazione della produttività aziendale*: semplifica la gestione dei documenti e migliora la produttività interna.
+- *Esperienza utente migliorata*: garantisce risposte precise e aggiornate in qualsiasi momento, offrendo un'interazione
   fluida e accessibile.
 
 == Benefici
