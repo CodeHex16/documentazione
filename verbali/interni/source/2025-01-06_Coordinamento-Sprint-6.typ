@@ -7,7 +7,7 @@
     ora: [15:30-18:00],
     tipo: "interno",
     versioni: (
-      "0.1.0","06/01/2025","Matteo Bazzan","Prima stesura",""
+      "0.1.0","06/01/2025","Matteo Bazzan","Prima stesura","Luca Ribon"
     ),
     presenze: (
         "Matteo Bazzan", "Relatore", "2h30m",
@@ -30,14 +30,14 @@ Durante la riunione è stato analizzato il lavoro svolto nello *Sprint 5*, in pa
 Inoltre è stato condiviso lo studio sui vari LLM in commercio. 
 
 = Scelta del modello LLM
-Durante lo Sprint 5 è stata condotta un’analisi dei modelli LLM disponibili ed è stato deciso di utilizzare *GPT-4o mini* per i primi test. In caso di performance non in linea con i requisiti, si valuterà un modello più performante tra le offerte di OpenAI.
+Durante lo Sprint 5 è stata condotta un’analisi dei modelli LLM disponibili si è deciso di utilizzare *GPT-4o mini* per i primi test. In caso di performance non in linea con i requisiti, si valuterà un modello più performante tra le offerte di OpenAI.
 
 È stato scelto GPT-4o mini perché:
 - *Comprensione*: Fornisce buone capacità di comprensione del linguaggio naturale, utili allo sviluppo di un chatbot.
 - *Costo*: Presenta un costo molto contenuto:
   - \$0.150/1M input tokens
   - \$0.600/1M output tokens
-- *Token*: Ha una finestra di contesto (context window) di 128,000 tokens, sufficiente ad avere contesto sufficiente a rispondere correttamente alle domande poste al chatbot
+- *Token*: Ha una finestra di contesto (context window) di 128,000 tokens, abbastanza per avere contesto sufficiente per rispondere correttamente alle domande poste al chatbot
 - *Velocità*: Fornisce un output speed di 125.1 tokens al secondo, più veloce della media degli altri modelli
 #figure(
   image("../imgs/gpt-4o-mini-pricing.png", width: 75%),
