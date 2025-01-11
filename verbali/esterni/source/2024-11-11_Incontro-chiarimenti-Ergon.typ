@@ -53,7 +53,7 @@ Questa riunione con il referente di *Ergon* è rivolta, interamente, al chiarime
 + _L'LLM deve essere multilingua?_\
   \Non è necessario che l'LLM scelta sia multilingua, ma deve supportare almeno la lingua italiana.
 + _Quale #gloss[middleware] conviene scegliere per la comunicazione tra database e LLM?_\
-  \Dipende, infatti prima bisogna scegliere l'LLM da usare e poi capire quali API offre e adeguarci di conseguenza sulla scelta del middleware.
+  \Dipende, infatti prima bisogna scegliere l'LLM da usare e poi capire quali #gloss[API] offre e adeguarci di conseguenza sulla scelta del middleware.
 + _Come vengono gestiti i dati del'LLM?_\
   \Tutti i dati vengono inseriti in un database SQL, ma i dati su cui l'LLM viene addestrato vengono anche inseriti in un databse vettoriale. 
 = Materiale

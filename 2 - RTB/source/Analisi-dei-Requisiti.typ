@@ -99,7 +99,7 @@ Per facilitare la comprensione di questo documento, viene fornito un glossario c
 #link("https://www.math.unipd.it/~tullio/IS-1/2024/Progetto/C7.pdf")
 
 === Riferimenti informativi:
-- "Analisi e descrizione delle funzionalità: #gloss[Use case] e relativi diagrammi (UML)":\
+- "Analisi e descrizione delle funzionalità: #gloss[Use case] e relativi diagrammi (#gloss[UML])":\
 #link("https://www.math.unipd.it/~rcardin/swea/2022/Diagrammi%20Use%20Case.pdf")
 
 == Funzionalità del prodotto

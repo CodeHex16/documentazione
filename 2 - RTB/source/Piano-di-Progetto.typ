@@ -196,7 +196,7 @@ Secondo lo standard ISO/IEC 31000:2009, la gestione dei rischi si articola in ci
   table.header(
     table.cell(
       colspan: 2
-    )[*Problemi di disponibilità e performance delle API LLM*]
+    )[*Problemi di disponibilità e performance delle #gloss[API] LLM*]
   ),
   [*Descrizione*],[Le API LLM potrebbero andare offline o non soddisfare le aspettative in termini di performance, impattando il funzionamento del sistema],
   [*Probabilità*],[Bassa],

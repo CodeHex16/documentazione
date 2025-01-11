@@ -22,23 +22,23 @@
 
 = Revisione Sprint 5
 Durante la riunione è stato analizzato il lavoro svolto nello *Sprint 5*, in particolare sono stati condivisi i progressi e risolto alcuni dubbi sui seguenti documenti :
-- Analisi dei Requisiti
-- Norme di Progetto
+- #gloss[Analisi dei Requisiti]
+- #gloss[Norme di Progetto]
 - Piano di Qualifica
-- Piano di Progetto
+- #gloss[Piano di Progetto]
 
-Inoltre è stato condiviso lo studio sui vari LLM in commercio. 
+Inoltre è stato condiviso lo studio sui vari #gloss[LLM] in commercio. 
 
 = Scelta del modello LLM
-Durante lo Sprint 5 è stata condotta un’analisi dei modelli LLM disponibili si è deciso di utilizzare *GPT-4o mini* per i primi test. In caso di performance non in linea con i requisiti, si valuterà un modello più performante tra le offerte di OpenAI.
+Durante lo Sprint 5 è stata condotta un’analisi dei modelli LLM disponibili si è deciso di utilizzare *#gloss[GPT-4o mini]* per i primi test. In caso di performance non in linea con i requisiti, si valuterà un modello più performante tra le offerte di #gloss[OpenAI].
 
 È stato scelto GPT-4o mini perché:
-- *Comprensione*: Fornisce buone capacità di comprensione del linguaggio naturale, utili allo sviluppo di un chatbot.
+- *Comprensione*: Fornisce buone capacità di comprensione del linguaggio naturale, utili allo sviluppo di un #gloss[chatbot].
 - *Costo*: Presenta un costo molto contenuto:
-  - \$0.150/1M input tokens
-  - \$0.600/1M output tokens
-- *Token*: Ha una finestra di contesto (context window) di 128,000 tokens, abbastanza per avere contesto sufficiente per rispondere correttamente alle domande poste al chatbot
-- *Velocità*: Fornisce un output speed di 125.1 tokens al secondo, più veloce della media degli altri modelli
+  - \$0.150/1M #gloss[input tokens]
+  - \$0.600/1M #gloss[output tokens]
+- *#gloss[Token]*: Ha una finestra di contesto (#gloss[context window]) di 128,000 tokens, abbastanza per avere contesto sufficiente per rispondere correttamente alle domande poste al chatbot
+- *Velocità*: Fornisce un #gloss[output speed] di 125.1 tokens al secondo, più veloce della media degli altri modelli
 #figure(
   image("../imgs/gpt-4o-mini-pricing.png", width: 75%),
   caption: [
@@ -55,8 +55,8 @@ Durante lo Sprint 5 è stata condotta un’analisi dei modelli LLM disponibili s
 
 = Schedulazione incontro con l'azienda Ergon
 È necessario organizzare un incontro con l'azienda Ergon per:
-- condividere gli use case finora individuati
-- illustrare la scelta del modello LLM e richiedere le credenziali di accesso alla piattaforma di OpenAI, così da avviare i primi test tramite le API.
+- condividere gli #gloss[use case] finora individuati
+- illustrare la scelta del modello LLM e richiedere le credenziali di accesso alla piattaforma di OpenAI, così da avviare i primi test tramite le #gloss[API].
 
 = Coordinamento Sprint 6
 - I *nuovi ruoli* per lo Sprint 6 sono:
