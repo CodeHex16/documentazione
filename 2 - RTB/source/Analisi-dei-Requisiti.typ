@@ -163,40 +163,95 @@ clienti.
 #figure(image("../imgs/attori.png", width: 70%), caption: "Lista degli attori")
 
 == UC1 - Login
+#figure(
+  image("../imgs/login.png", width: 90%),
+  caption: "Inserimento e-mail e password fornitore + possibilità 'Resta connesso'",
+)
 *Attori principali:*
-- Fornitore;
+- Fornitore/Cliente;
 *Attori secondari:*
 - Sistema;
 *Descrizione:*
-- Un fornitore vuole accedere alla piattaforma per la configurazione del proprio chatbot e per interagire con esso;
+- Un utente vuole accedere alla piattaforma per la configurazione del proprio chatbot e per interagire con esso;
 *Precondizioni:*
-- Il fornitore è in possesso delle proprie credenziali;
-- Il fornitore ha già effettuato il primo login e cambiato la password temporanea;
-- Il fornitore non è già autenticato;
+- L'utente è in possesso delle proprie credenziali;
+- L'utente ha già effettuato il primo login e cambiato la password temporanea;
+- L'utente non è già autenticato;
 *Postcondizioni:*
-- Se il fornitore ha inserito le credenziali corrette, accede alla piattaforma;
+- Se l'utente ha inserito le credenziali corrette, accede alla piattaforma;
 *Scenario Principale:*
-- Il fornitore ha inserito l’indirizzo e-mail e la password alla piattaforma dedicata;
-- Il sistema riceve la richiesta di accesso e verifica le credenziali;
+- L'utente ha inserito l’indirizzo e-mail e la password alla piattaforma dedicata;
+- L'utente riceve la richiesta di accesso e verifica le credenziali;
 *Generalizzazioni*:
 - Primo login fornitore;
+- Primo login cliente;
 *Estensioni:*
 - Credenziali errate;
 - Sistema non raggiungibile;
 *Inclusioni:*
+- Inserimento e-mail;
 - Inserimento password;
 - Possibilità "Resta connesso";
 
 === UC1.1 - Inserimento e-mail
 #figure(
-  image("../imgs/email-password-fornitore.png", width: 80%),
+  image("../imgs/inserimento-email-password.png", width: 90%),
   caption: "Inserimento e-mail e password fornitore + possibilità 'Resta connesso'",
 )
+*Attori principali:*
+- Fornitore/Cliente;
+*Attori secondari:*
+- Sistema;
+*Precondizioni:*
+- L'utente deve essere registrato;
+- L'utente deve essere in possesso della sua e-mail;
+*Postcondizioni:*
+- L'utente ha inserito la sua e-mail;
+*Scenario principale:*
+- L'utente inserisce la sua e-mail nella casella che la richiede;
+*Estensioni:*
+- E-mail non valida;
+
 === UC1.2 - Inserimento password
+*Attori principali:*
+- Fornitore/Cliente;
+*Attori secondari:*
+- Sistema;
+*Precondizioni:*
+- L'utente deve essere registrato;
+- L'utente deve essere in possesso della sua password;
+*Postcondizioni:*
+- L'utente ha inserito la sua password;
+*Scenario principale:*
+- L'utente inserisce la sua password nella casella che la richiede;
+*Estensioni:*
+- Password non valida;
 
-=== UC1.3 - e-mail non valida
+=== UC1.3 - E-mail non valida
+*Attori principali:*
+- Fornitore/Cliente;
+*Attori secondari:*
+- Sistema;
+*Precondizioni:*
+- L'utente ha inserito un'e-mail sbagliata;
+*Postcondizioni:*
+- Il sistema notifica l'utente che la mail inserita è sbagliata;
+- L'utente non può effettuare il login;
+*Scenario principale:*
+- L'utente inserisce un'e-mail sbagliata e il sistema dà errore;
 
-=== UC1.4 - password non valida
+=== UC1.4 - Password non valida
+*Attori principali:*
+- Fornitore/Cliente;
+*Attori secondari:*
+- Sistema;
+*Precondizioni:*
+- L'utente ha inserito una password sbagliata o che non rispetta le condizioni;
+*Postcondizioni:*
+- Il sistema notifica l'utente che la password inserita è sbagliata;
+- L'utente non può effettuare il login;
+*Scenario principale:*
+- L'utente inserisce una password sbagliata e il sistema dà errore;
 
 == UC2 - Primo login fornitore
 *Attori principali:*
@@ -341,6 +396,7 @@ clienti.
   futuro login senza doverle richiedere all'utente;
 
 == UC7 - Cambio password
+#figure(image("../imgs/cambio-password.png", width: 80%), caption: "Cambio password")
 *Attori principali:*
 - Fornitore/cliente;
 *Attori secondari:*
@@ -356,9 +412,8 @@ clienti.
 - L’utente invia la richiesta di cambio password inserendo la nuova password scelta;
 - Il sistema riceve la richiesta, controlla che la password sia valida e se lo è conferma il cambiamento della password;
 *Estensioni:*
-- Password scelta non valida;
+- Password non valida;
 - Sistema non raggiungibile;
-- Inserimento password;
 
 == UC8 - Recupero password
 *Attori principali:*
@@ -383,6 +438,7 @@ clienti.
 - Inserimento password;
 
 == UC9 - Logout
+#figure(image("../imgs/logout.png", width: 50%), caption: "Cambio password")
 *Attori principali:*
 - Forntitore/cliente;
 *Attori secondari:*
