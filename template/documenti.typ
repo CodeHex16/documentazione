@@ -141,7 +141,10 @@
   set page(numbering: "1")
   set align(left)
   set heading(numbering: "1.")
-  show heading.where(level: 1): set align(center)
+  show heading.where(level: 1): it => {
+    pagebreak(weak: true)
+    align(center, it)
+  }
   show heading : it => [
     #it
     #v(1em)
