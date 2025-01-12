@@ -395,7 +395,7 @@ clienti.
   futuro login senza doverle richiedere all'utente;
 
 == UC7 - Cambio password
-#figure(image("../imgs/cambio-password.png", width: 80%), caption: "Cambio password")
+#figure(image("../imgs/cambio-password.png", width: 90%), caption: "Cambio password")
 *Attori principali:*
 - Fornitore/cliente;
 *Attori secondari:*
@@ -411,10 +411,12 @@ clienti.
 - L’utente invia la richiesta di cambio password inserendo la nuova password scelta;
 - Il sistema riceve la richiesta, controlla che la password sia valida e se lo è conferma il cambiamento della password;
 *Estensioni:*
+- Inserimento password;
 - Password non valida;
 - Sistema non raggiungibile;
 
 == UC8 - Recupero password
+#figure(image("../imgs/recupero-password.png", width: 80%), caption: "Recupero password")
 *Attori principali:*
 - Fornitore/cliente;
 *Attori secondari:*
@@ -432,12 +434,10 @@ clienti.
 - Il sistema riceve la richiesta, controlla che l'e-mail sia valida e, se lo è, invia alla e-mail le istruzioni per il
   recupero della password;
 *Estensioni:*
-- Credenziali errate;
 - Sistema non raggiungibile;
-- Inserimento password;
 
 == UC9 - Logout
-#figure(image("../imgs/logout.png", width: 50%), caption: "Cambio password")
+#figure(image("../imgs/logout.png", width: 50%), caption: "Logout")
 *Attori principali:*
 - Forntitore/cliente;
 *Attori secondari:*
@@ -453,6 +453,10 @@ clienti.
 - Il sistema riceve la richiesta di logout e disconnette l'utente dal sistema;
 
 == UC10 - Visualizzazione delle chat
+#figure(
+  image("../imgs/visualizzazione-scrittura-messaggio.png", width: 80%),
+  caption: "Visualizzazione ed invio dei messaggi",
+)
 *Attori principali:*
 - Fornitore/cliente;
 *Descrizione:*
@@ -485,7 +489,11 @@ clienti.
 *Estensioni*
 - Sistema non raggiungibile;
 
-== UC12 Ricezione risposta
+== UC12 - Ricezione risposta
+#figure(
+  image("../imgs/ricezione-valutazione-risposta.png", width: 80%),
+  caption: "Visualizzazione ed invio dei messaggi",
+)
 *Attori principali:*
 - Fornitore/cliente;
 *Attori secondari:*
@@ -524,6 +532,7 @@ clienti.
 - Sistema non raggiungibile;
 
 == UC14 - Selezione Dark/Light Mode
+#figure(image("../imgs/dark-light-mode.png", width: 50%), caption: "Selezione modalità chiara/scura")
 *Attori principali:*
 - Fornitore/cliente;
 *Attori secondari:*
@@ -543,6 +552,7 @@ clienti.
 // FORNITORE
 //////////////////////////////////////////////////////////////////////////
 == UC15 - Modifica della durata dello storico delle chat
+#figure(image("../imgs/impostazioni-fornitore.png", width: 90%), caption: "Impostazioni fornitore")
 *Attori principali:*
 - Fornitore;
 *Attore secondario:*
@@ -617,6 +627,10 @@ clienti.
 - Il sistema modifica l'interfaccia con i colori scelti dal fornitore;
 
 == UC19 - Visualizzare statistiche domanda-risposta
+#figure(
+  image("../imgs/statistiche-filtri-fornitore.png", width: 90%),
+  caption: "Visualizzazione statistiche e filtri del fornitore",
+)
 *Attori principali:*
 - Fornitore;
 *Attori secondari:*
@@ -653,6 +667,7 @@ clienti.
 - Il sistema applica i filtri alle statistiche;
 
 == UC21 - Aggiunta account cliente
+#figure(image("../imgs/aggiunta-account-cliente.png", width: 100%), caption: "Aggiunta di un account cliente")
 *Attori principali:*
 - Fornitore;
 *Attori secondari:*
