@@ -409,7 +409,6 @@ clienti.
 - Il sistema riceve la richiesta, controlla che la password sia valida e se lo è conferma il cambiamento della password;
 *Estensioni:*
 - Inserimento password;
-- Password non valida;
 - Sistema non raggiungibile;
 
 == UC8 - Recupero password
@@ -430,6 +429,7 @@ clienti.
 - Il sistema riceve la richiesta, controlla che l'e-mail sia valida e, se lo è, invia alla e-mail le istruzioni per il recupero della password;
 *Estensioni:*
 - Sistema non raggiungibile;
+- Inserimento password;
 
 == UC9 - Logout
 #figure(image("../imgs/logout.png", width: 50%), caption: "Logout")
