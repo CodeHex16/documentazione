@@ -16,7 +16,7 @@ def get_glossario_terms():
     return sorted(gloss_terms, key=len, reverse=True)
 
 def replace_terms_in_file(file_path, terms):
-    with open(file_path, "r") as f:
+    with open(file_path, "r", encoding='utf-8') as f:
         file_content = f.read()
 
     body_start = file_content.find('\n=')
@@ -60,7 +60,7 @@ def replace_terms_in_file(file_path, terms):
             print(f"\t+ Found '{term}' in {file_path}")
 
     new_content = header + body
-    with open(file_path, "w") as f:
+    with open(file_path, "w", encoding='utf-8') as f:
         f.write(new_content)
 
 def search_files():
