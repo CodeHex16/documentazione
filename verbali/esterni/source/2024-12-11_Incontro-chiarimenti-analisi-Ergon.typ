@@ -55,7 +55,7 @@ Requisiti.
   \Sì, potrebbe risultare utile suddividere le conversazioni per topic. Una buona soluzione potrebbe essere assegnare un
   nome automatico alle chat (es: “Chat 1”, “Chat 2”), con possibilità di modifica da parte dell’utente.
 
-+ _Forse sarebbe più economico utilizzare un LLM con API pubbliche (es. Claude o ChatGPT)?_\
++ _Forse sarebbe più economico utilizzare un LLM con #gloss[API] pubbliche (es. Claude o ChatGPT)?_\
   \Sì, utilizzare un LLM con API pubbliche è la soluzione migliore. Questa scelta ridurrebbe i costi dell'infrastruttura
   per l'hosting e permetterebbe una gestione dei costi basata sull'utilizzo. Inoltre, la configurazione iniziale del
   software sarebbe più semplice.
@@ -92,7 +92,7 @@ Requisiti.
 
 = Materiale
 L’azienda ci fornirà dei dataset di esempio con cui potremo iniziare a sperimentare il passaggio dei documenti all’LLM.
-Questo ci aiuterà a ottimizzare l’utilizzo delle risorse e dei token, garantendo risposte coerenti con il contesto.
+Questo ci aiuterà a ottimizzare l’utilizzo delle risorse e dei #gloss[token], garantendo risposte coerenti con il contesto.
 
 = Conclusioni
 L'incontro ha chiarito i principali aspetti legati all'uso degli LLM e alla gestione degli utenti e dei fornitori. Le

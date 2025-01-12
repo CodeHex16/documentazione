@@ -56,12 +56,13 @@
 = Introduzione
 
 == Scopo e Descrizione del Prodotto
+
 Il progetto consiste nella realizzazione di un *chatbot* basato su modelli linguistici (*LLM*) pensato per i *fornitori*
 di beni, come bevande o alimenti, da offrire ai propri clienti. Questo sistema consente ai clienti di ottenere in modo
 semplice e immediato informazioni dettagliate sui prodotti o servizi disponibili, senza la necessità di contattare
 direttamente un operatore dell'azienda.
 
-Il chatbot si integra con un'interfaccia dedicata al fornitore, che permette di:
+Il chatbot si integra con un'interfaccia dedicata al #gloss[fornitore], che permette di:
 
 - Gestire i clienti e i documenti contenenti le informazioni di riferimento utilizzate dal modello linguistico per
   generare risposte accurate e personalizzate.
@@ -113,9 +114,11 @@ nella seguente pagina web: #link("https://codehex16.github.io/glossario").
 
 === Riferimenti informativi:
 - Slide T06 del corso di Ingegneria del software - Analisi dei requisiti:
+
 #link("https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T06.pdf")
 
-- "Analisi e descrizione delle funzionalità: #gloss[Use case] e relativi diagrammi (UML)":\
+- "Analisi e descrizione delle funzionalità: #gloss[Use case] e relativi diagrammi (#gloss[UML])":
+
 #link("https://www.math.unipd.it/~rcardin/swea/2022/Diagrammi%20Use%20Case.pdf")
 
 == Funzionalità del prodotto
@@ -130,7 +133,6 @@ L'applicazione permette di:
 - modificare il colore principale dell'aplicazione (chiaro o scuro)
 
 == Utenti e caratteristiche
-
 La webapp è rivolta verso ristoratori che vogliono offrire un'assistenza veloce verso i clienti. I ristoratori, dopo
 essersi registrati, possono inserire, modificare ed eliminare informazioni sui propri prodotti. Gli utenti, registrati o
 no, possono poi scrivere al chatbot per richiedere queste informazioni.

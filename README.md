@@ -27,6 +27,7 @@ documentazione/
    |  └── 📁 source
    |  └── 📄 *.pdf
    └── 📁 interni
+      ├── 📁 imgs
       └── 📁 source
       └── 📄 *.pdf
 ```
