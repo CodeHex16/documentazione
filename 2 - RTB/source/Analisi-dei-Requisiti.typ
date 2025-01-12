@@ -21,7 +21,7 @@
   "11/01/2025",
   "Filippo Sabbadin",
   "Corretti use case sul login, aggiunte immagini con i grafici UML",
-  "!!!!!!!!!!!!!!!!!!!",
+  "Yi Hao Zhuo",
   "0.4.0",
   "06/01/2025",
   "Luca Ribon",
@@ -120,18 +120,18 @@ nella seguente pagina web: #link("https://codehex16.github.io/glossario").
 
 == Funzionalità del prodotto
 
-L’applicazione permette di:
+L'applicazione permette di:
 
 - creare un #gloss[account] dotato di email e password;
 - accedere al proprio account sempre con la coppia email e password scelte durante la registrazione
-- modificare dati dell’utente (es email, password)
+- modificare dati dell'utente (es email, password)
 - Scrittura ed invio di messagi
 - Modificare il numero di messaggi recenti visualizzabili
-- modificare il colore principale dell’aplicazione (chiaro o scuro)
+- modificare il colore principale dell'aplicazione (chiaro o scuro)
 
 == Utenti e caratteristiche
 
-La webapp è rivolta verso ristoratori che vogliono offrire un’assistenza veloce verso i clienti. I ristoratori, dopo
+La webapp è rivolta verso ristoratori che vogliono offrire un'assistenza veloce verso i clienti. I ristoratori, dopo
 essersi registrati, possono inserire, modificare ed eliminare informazioni sui propri prodotti. Gli utenti, registrati o
 no, possono poi scrivere al chatbot per richiedere queste informazioni.
 
@@ -179,7 +179,7 @@ clienti.
 *Postcondizioni:*
 - Se l'utente ha inserito le credenziali corrette, accede alla piattaforma;
 *Scenario Principale:*
-- L'utente ha inserito l’indirizzo e-mail e la password alla piattaforma dedicata;
+- L'utente ha inserito l'indirizzo e-mail e la password alla piattaforma dedicata;
 - L'utente riceve la richiesta di accesso e verifica le credenziali;
 *Generalizzazioni*:
 - Primo login fornitore;
@@ -192,11 +192,12 @@ clienti.
 - Inserimento password;
 - Possibilità "Resta connesso";
 
-=== UC1.1 - Inserimento e-mail
+\
 #figure(
   image("../imgs/inserimento-email-password.png", width: 90%),
   caption: "Inserimento e-mail e password fornitore + possibilità 'Resta connesso'",
 )
+=== UC1.1 - Inserimento e-mail
 *Attori principali:*
 - Fornitore/Cliente;
 *Attori secondari:*
@@ -275,7 +276,7 @@ clienti.
 - Il fornitore:
   - accede alla piattaforma;
   - inserisce l'indirizzo e-mail e la password temporanea fornitegli dall'amministratore;
-  - se ha inserito le credenziali corrette, aggiorna la password;
+  - se ha inserito le credenziali corrette, chiede di aggiornare la password;
 - Il sistema:
   - riceve le credenziali inserite dal fornitore;
   - verifica la correttezza delle credenziali;
@@ -303,7 +304,7 @@ clienti.
 *Postcondizioni:*
 - Se il cliente ha inserito le credenziali corrette, accede alla piattaforma;
 *Scenario Principale:*
-- Il cliente ha inserito l’indirizzo e-mail e la password al fine di accedere alla webapp;
+- Il cliente ha inserito l'indirizzo e-mail e la password al fine di accedere alla webapp;
 - Il sistema riceve la richiesta di accesso e verifica le credenziali;
 *Generalizzazioni*:
 - Primo login cliente;
@@ -343,7 +344,7 @@ clienti.
 - Il cliente:
   - accede alla piattaforma;
   - inserisce l'indirizzo e-mail e la password temporanea fornitegli dal fornitore;
-  - se ha inserito le credenziali corrette, aggiorna la password;
+  - se ha inserito le credenziali corrette, chiede di aggiornare la password;
 - Il sistema:
   - riceve le credenziali inserite dal cliente;
   - verifica la correttezza delle credenziali;
@@ -367,11 +368,9 @@ clienti.
 *Precondizioni:*
 - Il sistema ha ricevuto le credenziali inserite dall'utente;
 *Postcondizioni:*
-- Il sistema restituisce un errore indicando che la l'operazione è fallita, con alcune informazioni sul perché del
-  fallimento;
+- Il sistema restituisce un errore indicando che la l'operazione è fallita, con alcune informazioni sul perché del fallimento;
 *Scenario Principale:*
-- Il sistema ha ricevuto le credenziali inserite dall'utente ma queste non sono quelle corrette, pertanto viene
-  visualizzato un messaggio d'errore;
+- Il sistema ha ricevuto le credenziali inserite dall'utente ma queste non sono quelle corrette, pertanto viene visualizzato un messaggio d'errore;
 *Estensioni:*
 - Sistema non raggiungibile;
 
@@ -381,8 +380,7 @@ clienti.
 *Attori secondari:*
 - Sistema;
 *Descrizione:*
-- Un utente vuole mantenere l'accesso attivo al fine di non dover effettuare il login, inserendo le credenziali, ogni
-  volta che ha intenzione di accedere alla web app;
+- Un utente vuole mantenere l'accesso attivo al fine di non dover effettuare il login, inserendo le credenziali, ogni volta che ha intenzione di accedere alla web app;
 *Precondizioni:*
 - Le credenziali dell'utente devono essere presenti nel sistema;
 - L'utente deve essere possedere le credenziali necessarie per l'accesso;
@@ -390,9 +388,8 @@ clienti.
 *Postcondizioni:*
 - È stata salvata la preferenza dell'utente relativa al salvataggio delle credenziali;
 *Scenario Principale:*
-- L’utente inserisce le credenziali
-- Solo se l'utente seleziona l'opzione "Resta connesso", il sistema mantiene in memoria locale le credenziali per un
-  futuro login senza doverle richiedere all'utente;
+- L'utente inserisce le credenziali
+- Solo se l'utente seleziona l'opzione "Resta connesso", il sistema mantiene in memoria locale le credenziali per un futuro login senza doverle richiedere all'utente;
 
 == UC7 - Cambio password
 #figure(image("../imgs/cambio-password.png", width: 90%), caption: "Cambio password")
@@ -408,7 +405,7 @@ clienti.
 *Postcondizioni:*
 - Il sistema effettua un controllo sulla validità della password e se valida conferma il cambiamento della password;
 *Scenario Principale:*
-- L’utente invia la richiesta di cambio password inserendo la nuova password scelta;
+- L'utente invia la richiesta di cambio password inserendo la nuova password scelta;
 - Il sistema riceve la richiesta, controlla che la password sia valida e se lo è conferma il cambiamento della password;
 *Estensioni:*
 - Inserimento password;
@@ -424,15 +421,13 @@ clienti.
 *Descrizione:*
 - Un utente vuole recuperare la password del proprio account;
 *Precondizioni:*
-- L'utente deve possedere l'e-mail a cui è associato il suo account e inserirla nella sezione apposita così da poter
-  ricevere tramite e-mail la password associata al suo account;
+- L'utente deve possedere l'e-mail a cui è associato il suo account e inserirla nella sezione apposita così da poter ricevere tramite e-mail la password associata al suo account;
 - L'utente ha premuto il pulsante "Passowrd dimenticata";
 *Postcondizioni:*
 - Il sistema invia le istruzioni per il recupero della password se la mail inserita è valida;
 *Scenario Principale:*
-- L’utente invia la richiesta di recupero password inserendo l'e-mail associata al proprio account;
-- Il sistema riceve la richiesta, controlla che l'e-mail sia valida e, se lo è, invia alla e-mail le istruzioni per il
-  recupero della password;
+- L'utente invia la richiesta di recupero password inserendo l'e-mail associata al proprio account;
+- Il sistema riceve la richiesta, controlla che l'e-mail sia valida e, se lo è, invia alla e-mail le istruzioni per il recupero della password;
 *Estensioni:*
 - Sistema non raggiungibile;
 
@@ -449,9 +444,10 @@ clienti.
 *Postcondizioni:*
 - Il sistema ha ricevuto la richiesta di logout e la effettua;
 *Scenario Principale:*
-- L’utente preme il pulsante di logout;
+- L'utente preme il pulsante di logout;
 - Il sistema riceve la richiesta di logout e disconnette l'utente dal sistema;
 
+// Yihao: la lista de chat non viene mostrato direttamente da pagina principale??
 == UC10 - Visualizzazione delle chat
 #figure(
   image("../imgs/visualizzazione-scrittura-messaggio.png", width: 80%),
@@ -460,14 +456,14 @@ clienti.
 *Attori principali:*
 - Fornitore/cliente;
 *Descrizione:*
-- Un utente vuole visualizzare le delle chat avute con il chatbot;
+- Un utente vuole visualizzare le chat avute con il chatbot;
 *Precondizioni:*
 - L'utente deve aver effettuato il login;
 - L'utente preme sul pulsante "Visualizza chat";
 *Postcondizioni:*
 - L'utente accede alla sezione "Visualizza chat";
 *Scenario Principale:*
-- L’utente preme sul pulsante "Visuallizza chat", quindi accede alla sezione corrispondente;
+- L'utente preme sul pulsante "Visuallizza chat", quindi accede alla sezione corrispondente;
 *Estensioni:*
 - Sistema non raggiungibile;
 
@@ -484,7 +480,7 @@ clienti.
 *Postcondizioni:*
 - L'utente invia il messaggio al chatbot;
 *Scenario Principale:*
-- L’utente scrive e invia il messaggio al chatbot;
+- L'utente scrive e invia il messaggio al chatbot;
 - Il sistema riceve il messaggio, lo analizza e procede a rispondere;
 *Estensioni*
 - Sistema non raggiungibile;
@@ -517,8 +513,7 @@ clienti.
 *Attori secondari:*
 - Sistema;
 *Descrizione:*
-- L'utente ha ricevuto la risposta dal chatbot e vuole dare un feedback su tale risposta tramite l'opzione "Pollice
-  su/giù";
+- L'utente ha ricevuto la risposta dal chatbot e vuole dare un feedback su tale risposta tramite l'opzione "Pollice su/giù";
 *Precondizioni:*
 - L'utente deve aver effettuato il login;
 - L'utente deve aver inviato un messaggio al chatbot;
@@ -565,8 +560,7 @@ clienti.
 *Postcondizioni:*
 - Viene modificato limite di tempo di memorizzazione dello storico;
 *Scenario Principale:*
-- Il fornitore modifica il periodo di tempo su cui visualizare lo storico delle chat avvenute con il chatbot e lo
-  conferma;
+- Il fornitore modifica il periodo di tempo su cui visualizare lo storico delle chat avvenute con il chatbot e lo conferma;
 - Il sistema memorizza la nuova impostazione;
 *Estensioni:*
 - Sistema non raggiungibile;
@@ -582,8 +576,7 @@ clienti.
 - Il fornitore deve aver effettuato il login;
 - Il fornitore deve accedere alle impostazioni
 *Postcondizioni:*
-- Il sistema ha effettuato un controllo di validità del formato del logo, e se il logo è risultato valido lo ha inserito
-  nell'interfaccia;
+- Il sistema ha effettuato un controllo di validità del formato del logo, e se il logo è risultato valido lo ha inserito nell'interfaccia;
 *Scenario Principale:*
 - Il fornitore accede alla sezione "Carica logo" e inserisce il proprio logo;
 - Il sistema controlla il formato del logo caricato e se conforme lo utilizza nell'interaccia;
@@ -596,16 +589,14 @@ clienti.
 *Attori secondari:*
 - Fornitore;
 *Descrizione:*
-- Il fornitore ha cercato di caricare il proprio logo tramite l'opzione "Carica logo", ma il logo è in un formato non
-  valido/supportato;
+- Il fornitore ha cercato di caricare il proprio logo tramite l'opzione "Carica logo", ma il logo è in un formato non valido/supportato;
 *Precondizioni:*
 - Il fornitore ha caricato un logo;
 - Il sistema ha ricevuto il logo caricato;
 *Postcondizioni:*
 - Viene inviato un messaggio d'errore al fornitore;
 *Scenario Principale:*
-- Il sistema riceve il logo caricato dal fornitore e dopo aver verificato che il formato non è valido, invia un messaggio
-  d'errore al fornitore;
+- Il sistema riceve il logo caricato dal fornitore e dopo aver verificato che il formato non è valido, invia un messaggio d'errore al fornitore;
 
 == UC18 - Selezione palette colori
 *Attori principali:*
@@ -621,8 +612,7 @@ clienti.
 - Il sistema ha modificato l'interfaccia con la palette di colori scelta il fornitore;
 *Scenario Principale:*
 - Il fornitore entra nella sezione "Palette colori";
-- Il fornitore sceglie l'insieme di colori che comporranno la palette tramite un #gloss[color picker] oppure inserendo i
-  codici esadecimali dei colori, se dei colori non vengono scelti vengono mantenuti i colori di della palette precedente;
+- Il fornitore sceglie l'insieme di colori che comporranno la palette tramite un #gloss[color picker] oppure inserendo i codici esadecimali dei colori, se dei colori non vengono scelti vengono mantenuti i colori di della palette precedente;
 - Il fornitore salva le scelte effettuate;
 - Il sistema modifica l'interfaccia con i colori scelti dal fornitore;
 
@@ -645,8 +635,7 @@ clienti.
 - Vengono mostrate le statistiche relative alle interazioni tra clienti e chatbot;
 *Scenario Principale*:
 - Il fornitore accede alla sezione "Statistiche";
-- Il sistema mostra le statistiche relative alle interazioni tra clienti e chatbot, se necessario tramite grafici o
-  tabelle;
+- Il sistema mostra le statistiche relative alle interazioni tra clienti e chatbot, se necessario tramite grafici o tabelle;
 *Estensioni*:
 - Inserimento filtri di visualizzazione;
 - Sistema non raggiungibile;
@@ -696,8 +685,7 @@ clienti.
 *Attori secondari:*
 - Fornitore;
 *Descrizione:*
-- Un fornitore autenticato vuole aggiungere un account per un cliente in modo che quest'ultimo possa accedere al chatbot,
-  ma inserisce dei parametri non validi;
+- Un fornitore autenticato vuole aggiungere un account per un cliente in modo che quest'ultimo possa accedere al chatbot, ma inserisce dei parametri non validi;
 *Precondizioni:*
 - Il sistema ha ricevuto i parametri dell'account inseriti dal fornitore;
 *Postcondizioni:*
@@ -713,8 +701,7 @@ clienti.
 * Attori secondari:*
 - Fornitore;
 *Descrizione:*
-- Un fornitore autenticato vuole aggiungere un account per un cliente in modo che quest'ultimo possa accedere al chatbot,
-  ma tenta di inserisce un account già esistente;
+- Un fornitore autenticato vuole aggiungere un account per un cliente in modo che quest'ultimo possa accedere al chatbot, ma tenta di inserisce un account già esistente;
 *Precondizioni:*
 - Il sistema ha ricevuto i parametri dell'account inseriti dal fornitore;
 *Postcondizioni:*
@@ -730,18 +717,14 @@ clienti.
 *Attori secondari:*
 - Sistema;
 *Descrizione*
-- Un fornitore autenticato vuole eliminare un account di un cliente in modo che quest'ultimo non possa più accedere al
-  chatbot.\ In questo caso non vengono gestiti i corner case in cui il fornitore elimina un account non esistente o
-  selezionando credenziali errate, poiché i metodi di selezione dell'account da eliminare costringono il fornitore ad
-  eliminare solo account esistenti;
+- Un fornitore autenticato vuole eliminare un account di un cliente in modo che quest'ultimo non possa più accedere al chatbot. In questo caso non vengono gestiti i corner case in cui il fornitore elimina un account non esistente o selezionando credenziali errate, poiché i metodi di selezione dell'account da eliminare costringono il fornitore ad eliminare solo account esistenti;
 *Precondizioni:*
 - Il fornitore deve aver effettuato il login;
 - Il fornitore deve accedere alla sezione "Gestione account clienti";
 *Postcondizioni:*
 - Viene eliminato un account di un cliente;
 *Scenario Principale:*
-- Il fornitore seleziona l'account del cliente da eliminare tra una lista di quelli disponibili, oppure usa il bottone di
-  eliminazione relativo ad un account specifico tra quelli visualizzati;
+- Il fornitore seleziona l'account del cliente da eliminare tra una lista di quelli disponibili, oppure usa il bottone di eliminazione relativo ad un account specifico tra quelli visualizzati;
 - Viene richiesta la password del fornitore per confermare l'eliminazione;
 - Il fornitore conferma l'eliminazione dell'account;
 - Il sistema elimina l'account del cliente;
@@ -758,7 +741,7 @@ clienti.
 - La password dell'utente deve essere presente nel sistema;
 - L'utente deve essere in possesso della password a lui associata;
 *Scenario Principale:*
-- L’utente ha inserito la password necessaria per effettuare l'accesso
+- L'utente ha inserito la password necessaria per effettuare l'accesso
 *Estensioni:*
 - Password scelta non valida;
 */
