@@ -35,7 +35,7 @@ Il documento non si limita a fornire una panoramica iniziale ma si propone come 
 
 
 == Scopo del prodotto
-Il progetto prevede lo sviluppo di un #gloss[Chatbot] avanzato, basato su modelli linguistici #gloss[LLM] (Large Language Models), pensato per migliorare la comunicazione tra aziende fornitrici e i loro clienti. Questo assistente virtuale permetterà agli utenti di ottenere rapidamente e in modo intuitivo informazioni dettagliate su prodotti o servizi offerti, eliminando la necessità di contattare direttamente l'azienda.
+Il progetto prevede lo sviluppo di un #gloss[Chatbot] avanzato, basato su modelli linguistici #gloss[LLM] (Large Language Models), pensato per migliorare la comunicazione tra aziende fornitrici e i loro clienti. Questo #gloss[assistente virtuale] permetterà agli utenti di ottenere rapidamente e in modo intuitivo informazioni dettagliate su prodotti o servizi offerti, eliminando la necessità di contattare direttamente l'azienda.
 
 Il sistema includerà anche un'interfaccia dedicata per le aziende fornitrici, offrendo strumenti per gestire i clienti e i documenti di riferimento che contengono le informazioni necessarie. Questi documenti saranno utilizzati dal modello linguistico per generare risposte personalizzate e accurate, garantendo un'esperienza utente ottimale. L'intero sistema sarà accessibile tramite una #gloss[Webapp], assicurando una gestione efficiente e una fruizione semplice per tutti gli utenti coinvolti.
 
@@ -140,15 +140,15 @@ Nel documento #link("https://codehex16.github.io/docs/2%20-%20RTB/Piano-di-Quali
 
 Per lo svolgimento del progetto abbiamo utilizzato i seguenti strumenti:
 
-- *Telegram* per la comunicazione all'interno del gruppo;
-- *Discord* per i meet interni;
+- *#gloss[Telegram]* per la comunicazione all'interno del gruppo;
+- *#gloss[Discord]* per i meet interni;
 - *Zoom* per i meet esterni con il referente dell'azienda Ergon Informatica;
 - *GitHub* per organizzare tutti i documenti e file sorgente del progetto;
 - *GitHub Issue* per assegnare task ad ogni membro avendo un rendiconto preciso dei ruoli e delle ore svolte per ogni sprint, con l'assegnazione di label e milestone specifiche;
 - *Google Fogli* per organizzare incontri con la compilazione di un calendario settimanale e per fissare le ore svolte avendo una visione generale dell'andamento del progetto;
 - *Typst* per la stesura di tutti i documenti e verbali;
 - *Canva* per la realizzazione delle presentazioni per i Diari di Bordo settimanali;
-- *Notion* per organizzare appunti e documenti non ufficiali;
+- *#gloss[Notion]* per organizzare appunti e documenti non ufficiali;
 
 == Sviluppo
 = Processi di supporto
@@ -188,7 +188,7 @@ Nella terza pagina, e se necessario le seguenti, è riservata all'indice del doc
 Il corpo del documento è suddiviso in capitoli ognuno dei quali può essere diviso in sottocapitoli che a loro volta possono essere suddivisi in altri sottocapitoli.\
 === Documenti del progetto
 Verranno prodotti i seguenti documenti:
-- *Norme di Progetto*;
+- *#gloss[Norme di Progetto]*;
 - *Piano di Progetto*;
 - *Analisi dei Requisiti*;
 - *Piano di Qualifica*;
@@ -220,7 +220,7 @@ In particolare, per i verbali vengono considerati solo i numeri Y e Z per il fat
 - *Z*: E' il numero di versione secondaria che viene incrementato ogni qual volta il documento sia stato modificato con piccole correzioni;
 === Repository
 ==== Struttura della repository documentazione
-Il contenuto pronto e convalidato del repository è presente nel branch main in cui sono presenti tutti i PDF dei documenti prodotti.
+Il contenuto pronto e convalidato del repository è presente nel #gloss[branch] main in cui sono presenti tutti i PDF dei documenti prodotti.
 Nel branch main si possono trovare diverse cartelle che servono per organizzare e dividere i vari tipi di documenti e codice, in particolare:
 - In *1 - candidatura* si trovano i documenti relativi alla candidatura per la gara d'appalto di dei capitolati;
 - In *2 - RTB* si trovano i documenti relativi alla fase di progetto *RTB(Requirement and Technology Baseline)*;
@@ -235,7 +235,7 @@ La sincronizzazione avviene tramite repository condivise su #link("https://githu
 Per gestire al meglio le varie issue e la documentazione si è deciso di creare dei branch appositi per ogni documento importante come *Norme di Progetto*, *Piano di Progetto*, *Glossario*, *Piano di Qualifica* e *Analisi dei Requisiti*.
 Inoltre, se più membri del gruppo lavorano allo stesso documento allora viene creato un branch per ogni membro con nome il nome del documento/attività e di chi lo sta svolgendo. 
 Quindi in generale la sintassi del nome di un branch è la seguente: *[Titolo]-[Nome-Membro]-[Sprint]*.
-Una volta finito il lavoro da parte di tutti i membri che operano su quel documento, questo viene verificato (tramite pull request) e viene eseguito il merge sul branch main, mentre i branch ausiliari vengono eliminati.
+Una volta finito il lavoro da parte di tutti i membri che operano su quel documento, questo viene verificato (tramite #gloss[pull request]) e viene eseguito il merge sul branch main, mentre i branch ausiliari vengono eliminati.
 Altri branch degni di nota fino ad ora sono:
 - *diario-di-bordo*: Utilizzato per scrivere e verificare i diari di bordo;
 ==== Pull request
