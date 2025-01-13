@@ -1,16 +1,4 @@
-#let gloss(body) = {
-  link("https://codehex16.github.io/glossario#"+body.text)[#text(blue, size:12pt, font: "Noto Sans")[#underline[#body]\*]]
-}
-
-#let issue(number, title) = {
-  show link : it => {
-    set text(font: "Noto Sans")
-    underline(it)
-  }
-  link("https://github.com/CodeHex16/documentazione/issues/"+number)[
-    #title
-  ]
-}
+#import "./utils.typ" : *
 
 #let verbale(
   titolo: "Titolo del verbale",
@@ -28,7 +16,7 @@
 ) = {
   set text(font: "Noto Sans")
   set text(size: 12pt)
-  set par(justify: true, linebreaks: "optimized",first-line-indent:1em)
+  set par(justify: true, linebreaks: "optimized")
   show link : set text(font:"Jetbrains Mono");
 
 

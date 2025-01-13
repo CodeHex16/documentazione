@@ -32,7 +32,7 @@ Nei verbali interni abbiamo aggiunto una tabella dedicata al versionamento, già
 
 == Verbali esterni
 
-Abbiamo inoltre rielaborato il verbale esterno redatto durante l'incontro con l'azienda Ergon Informatica (Capitolato 7 "LLM: Assistente Virtuale"), con l'obiettivo di mettere in evidenza le risposte ricevute dal referente aziendale e ciò che il gruppo ha compreso dalle domande poste. Anche in questo verbale è stata inserita la tabella per il versionamento, coerentemente con quanto fatto per i verbali interni.
+Abbiamo inoltre rielaborato il verbale esterno redatto durante l'incontro con l'azienda Ergon Informatica (Capitolato 7 "#gloss[LLM]: #gloss[Assistente Virtuale]"), con l'obiettivo di mettere in evidenza le risposte ricevute dal referente aziendale e ciò che il gruppo ha compreso dalle domande poste. Anche in questo verbale è stata inserita la tabella per il versionamento, coerentemente con quanto fatto per i verbali interni.
 
 == Documenti di Candidatura
 
@@ -50,4 +50,4 @@ Per facilitare il calcolo dei costi con le relative ore e per avere una data sti
 
 Abbiamo introdotto l'uso delle #gloss[GitHub Issues] come sistema di tracciamento delle attività da assegnare ai membri del gruppo. Questo strumento ci permette di gestire e monitorare le attività in modo efficace, favorendo una chiara suddivisione dei compiti.
 
-Oltre ad aver già creato alcune issue iniziali, abbiamo impostato una prima milestone relativa alla fase di candidatura, in modo da avere una panoramica delle attività necessarie per il completamento di questa fase. Inoltre, abbiamo configurato una #gloss[GitHub board] per visualizzare lo stato di avanzamento delle issue, suddividendole in tre colonne: To Do, In Progress, e Done. Questo sistema ci consente di monitorare facilmente il progresso di ogni attività e di aggiornare lo stato di ciascun task in tempo reale.
+Oltre ad aver già creato alcune issue iniziali, abbiamo impostato una prima milestone relativa alla fase di candidatura, in modo da avere una panoramica delle attività necessarie per il completamento di questa fase. Inoltre, abbiamo configurato una #gloss[GitHub board] per visualizzare lo stato di avanzamento delle issue, suddividendole in tre colonne: To Do, In Progress, e Done. Questo sistema ci consente di monitorare facilmente il progresso di ogni attività e di aggiornare lo stato di ciascun #gloss[task] in tempo reale.

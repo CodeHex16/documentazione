@@ -18,6 +18,7 @@
     versioni : (
       "0.4.0","08/01/2025","Gabriele Magnelli","Stesura nuove sezioni, migliorie e correzioni varie","Yi Hao Zhuo",
       "0.3.0","12/12/2024","Gabriele Magnelli","Redazione sezioni Processi di supporto e Processi organizzativi", "Yi Hao Zhuo",
+      "0.2.1","11/12/2024","Yi Hao Zhuo","Aggiunta link glossario", "Matteo Bazzan",
       "0.2.0","30/11/2024","Francesco Fragonas","Redazione Processi di accordo", "Filippo Sabbadin",
       "0.1.1","30/11/2024","Francesco Fragonas","Revisione Introduzione", "Filippo Sabbadin",
       "0.1.0","12/11/2024","Filippo Sabbadin","Prima stesura", "Gabriele Magnelli"
@@ -28,14 +29,13 @@
 = Introduzione
 
 == Scopo del documento
-Questo documento ha lo scopo di delineare le principali fasi di sviluppo, i ruoli e le responsabilità dei membri del team CodeHex16. Al suo interno, viene fornita una guida completa per tutte le #gloss[Practice] adottate dal gruppo e per il #gloss[Way of Working], garantendo un approccio strutturato e organizzato alle attività collaborative.
+Questo documento ha lo scopo di delineare le principali fasi di sviluppo, i ruoli e le responsabilità dei membri del team #gloss[CodeHex16]. Al suo interno, viene fornita una guida completa per tutte le #gloss[Practice] adottate dal gruppo e per il #gloss[Way of Working], garantendo un approccio strutturato e organizzato alle attività collaborative.
 
 Il documento non si limita a fornire una panoramica iniziale ma si propone come un riferimento dinamico, soggetto a revisioni e aggiornamenti continui. Tale approccio incrementale assicura che il contenuto resti sempre aggiornato rispetto alle esigenze del progetto e alle best practices emergenti, consentendo al gruppo di adattarsi rapidamente a nuovi requisiti o cambiamenti contestuali.
 
 
 == Scopo del prodotto
 Il progetto prevede lo sviluppo di un #gloss[Chatbot] avanzato, basato su modelli linguistici #gloss[LLM] (Large Language Models), pensato per migliorare la comunicazione tra aziende fornitrici e i loro clienti. Questo assistente virtuale permetterà agli utenti di ottenere rapidamente e in modo intuitivo informazioni dettagliate su prodotti o servizi offerti, eliminando la necessità di contattare direttamente l'azienda.
-
 
 Il sistema includerà anche un'interfaccia dedicata per le aziende fornitrici, offrendo strumenti per gestire i clienti e i documenti di riferimento che contengono le informazioni necessarie. Questi documenti saranno utilizzati dal modello linguistico per generare risposte personalizzate e accurate, garantendo un'esperienza utente ottimale. L'intero sistema sarà accessibile tramite una #gloss[Webapp], assicurando una gestione efficiente e una fruizione semplice per tutti gli utenti coinvolti.
 
@@ -66,10 +66,10 @@ https://codehex16.github.io/docs/1%20-%20candidatura/Valutazione-Capitolati.pdf
 - Preventivo costi e impegni:
 https://codehex16.github.io/docs/1%20-%20candidatura/Preventivo-Costi-e-Impegni.pdf
 
-- Analisi dei requisiti:
+- #gloss[Analisi dei requisiti]:
 https://codehex16.github.io/docs/2%20-%20RTB/Analisi-dei-Requisiti.pdf
 
-- Piano di progetto:
+- #gloss[Piano di progetto]:
 https://codehex16.github.io/docs/2%20-%20RTB/Piano-di-Progetto.pdf
 
 - Analisi dei rischi
@@ -96,9 +96,10 @@ Il processo di fornitura è finalizzato a garantire la realizzazione di un prodo
 
 Il gruppo CodeHex16 manterrà un dialogo attivo e regolare con il Proponente per tutta la durata del progetto didattico, con l'obiettivo di raccogliere il maggior numero possibile di #gloss[Feedback] sulla correttezza e qualità del lavoro svolto. La comunicazione si articolerà in due modalità principali:
 
-1- Scritta (asincrona) utilizzata per comunicazioni di breve durata, condivisione di verbali e materiale informativo e attività di coordinamento;
+1- Scritta (#gloss[asincrona]) utilizzata per comunicazioni di breve durata, condivisione di verbali e materiale informativo e attività di coordinamento;
 
-2- Incontri online (sincrona) utilizzati per chiarimenti sul capitolato, approfondimenti relativi ai casi d'uso e requisiti e feedback sul lavoro svolto;
+
+2- Incontri online (#gloss[sincrona]) utilizzati per chiarimenti sul capitolato, approfondimenti relativi ai casi d'uso e requisiti e feedback sul lavoro svolto.
 
 
 Il testo è chiaro, ma può essere migliorato leggermente per una maggiore fluidità e precisione:
@@ -342,3 +343,4 @@ Il miglioramento è un processo sempre attivo che durerà per tutto il progetto 
 === Usabilità
 === Affidabilità
 === Manutenibilità
+

@@ -1,16 +1,4 @@
-#let gloss(body) = {
-  link("https://codehex16.github.io/glossario#"+body.text)[#text(blue, size:12pt, font: "Noto Sans")[#underline[#body]\*]]
-}
-
-#let issue(number, title) = {
-  show link : it => {
-    set text(font: "Noto Sans")
-    underline(it)
-  }
-  link("https://github.com/CodeHex16/documentazione/issues/"+number)[
-    #title
-  ]
-}
+#import "./utils.typ" : *
 
 #let documento(
   titolo: "Titolo del documento",
@@ -153,7 +141,10 @@
   set page(numbering: "1")
   set align(left)
   set heading(numbering: "1.")
-  show heading.where(level: 1): set align(center)
+  show heading.where(level: 1): it => {
+    pagebreak(weak: true)
+    align(center, it)
+  }
   show heading : it => [
     #it
     #v(1em)

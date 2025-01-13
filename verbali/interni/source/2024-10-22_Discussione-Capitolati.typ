@@ -44,7 +44,7 @@ Durante la discussione sono emersi i seguenti criteri fondamentali per la scelta
 
 === Prima preferenza
 Capitolato scelto come prima preferenza:
-Capitolato 7 - "*LLM: Assistente Virtuale*" (Azienda: Ergon)
+Capitolato 7 - "*LLM: #gloss[Assistente Virtuale]*" (Azienda: Ergon)
 
 === Seconda preferenza
 Capitolato scelto come seconda preferenza:
