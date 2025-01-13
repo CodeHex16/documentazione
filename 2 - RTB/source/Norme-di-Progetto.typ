@@ -11,12 +11,12 @@
         "Gabriele Magnelli","",
         "Filippo Sabbadin","Redattore, Verificatore",
         "Luca Rossi", "",
-        "Yi Hao Zhuo", ""
+        "Yi Hao Zhuo", "Verificatore"
     ),
     sommario: [Norme di progetto],
     
     versioni : (
-      "0.4.0","08/01/2025","Gabriele Magnelli","Stesura nuove sezioni, migliorie e correzioni varie","Filippo Sabbadin",
+      "0.4.0","08/01/2025","Gabriele Magnelli","Stesura nuove sezioni, migliorie e correzioni varie","Yi Hao Zhuo",
       "0.3.0","12/12/2024","Gabriele Magnelli","Redazione sezioni Processi di supporto e Processi organizzativi", "Yi Hao Zhuo",
       "0.2.0","30/11/2024","Francesco Fragonas","Redazione Processi di accordo", "Filippo Sabbadin",
       "0.1.1","30/11/2024","Francesco Fragonas","Revisione Introduzione", "Filippo Sabbadin",
@@ -34,10 +34,10 @@ Il documento non si limita a fornire una panoramica iniziale ma si propone come 
 
 
 == Scopo del prodotto
-Il progetto prevede lo sviluppo di un #gloss[Chatbot] avanzato, basato su modelli linguistici #gloss[LLM] (Large Language Models), pensato per migliorare la comunicazione tra aziende fornitrici e i loro clienti. Questo assistente virtuale permetterà agli utenti di ottenere rapidamente e in modo intuitivo informazioni dettagliate su prodotti o servizi offerti, eliminando la necessità di contattare direttamente l’azienda.
+Il progetto prevede lo sviluppo di un #gloss[Chatbot] avanzato, basato su modelli linguistici #gloss[LLM] (Large Language Models), pensato per migliorare la comunicazione tra aziende fornitrici e i loro clienti. Questo assistente virtuale permetterà agli utenti di ottenere rapidamente e in modo intuitivo informazioni dettagliate su prodotti o servizi offerti, eliminando la necessità di contattare direttamente l'azienda.
 
 
-Il sistema includerà anche un’interfaccia dedicata per le aziende fornitrici, offrendo strumenti per gestire i clienti e i documenti di riferimento che contengono le informazioni necessarie. Questi documenti saranno utilizzati dal modello linguistico per generare risposte personalizzate e accurate, garantendo un’esperienza utente ottimale. L'intero sistema sarà accessibile tramite una #gloss[Webapp], assicurando una gestione efficiente e una fruizione semplice per tutti gli utenti coinvolti.
+Il sistema includerà anche un'interfaccia dedicata per le aziende fornitrici, offrendo strumenti per gestire i clienti e i documenti di riferimento che contengono le informazioni necessarie. Questi documenti saranno utilizzati dal modello linguistico per generare risposte personalizzate e accurate, garantendo un'esperienza utente ottimale. L'intero sistema sarà accessibile tramite una #gloss[Webapp], assicurando una gestione efficiente e una fruizione semplice per tutti gli utenti coinvolti.
 
 
 == Glossario
@@ -86,11 +86,11 @@ Pagina web: https://codehex16.github.io/glossario.html
 
 == Processo di fornitura
 
-Il processo di fornitura è strutturato in conformità agli esiti previsti dalla clausola 6.1.2 dello #gloss[Standard] ISO/IEC/IEEE 12207:2017. Tale processo include la definizione di requisiti concordati, l’analisi dei rischi associati, e la pianificazione di tempi e costi. 
+Il processo di fornitura è strutturato in conformità agli esiti previsti dalla clausola 6.1.2 dello #gloss[Standard] ISO/IEC/IEEE 12207:2017. Tale processo include la definizione di requisiti concordati, l'analisi dei rischi associati, e la pianificazione di tempi e costi. 
 
 === Scopo e descrizione
 
-Il processo di fornitura è finalizzato a garantire la realizzazione di un prodotto o servizio che soddisfi i requisiti concordati tra #gloss[Proponente] e #gloss[Committente]. L'accordo tra le parti deve definire in modo chiaro i requisiti, le tempistiche e i costi da rispettare. Prima di stipulare tale accordo, il #gloss[Fornitore] avrà condotto un’analisi dettagliata del progetto proposto, identificando i rischi correlati e stabilendo le linee guida necessarie per gestirli efficacemente.
+Il processo di fornitura è finalizzato a garantire la realizzazione di un prodotto o servizio che soddisfi i requisiti concordati tra #gloss[Proponente] e #gloss[Committente]. L'accordo tra le parti deve definire in modo chiaro i requisiti, le tempistiche e i costi da rispettare. Prima di stipulare tale accordo, il #gloss[Fornitore] avrà condotto un'analisi dettagliata del progetto proposto, identificando i rischi correlati e stabilendo le linee guida necessarie per gestirli efficacemente.
 
 === Rapporti con il  proponente
 
@@ -125,7 +125,7 @@ Nel documento #link("")[Analisi dei Rischi] ...
 
 ==== Analisi dei requisiti
 
-Nel documento #link("https://codehex16.github.io/docs/2%20-%20RTB/Analisi-dei-Requisiti.pdf")[Analisi dei Requisiti], il gruppo ha definito tutti gli #gloss[Use Case] e i requisiti, frutto di un’attenta analisi del capitolato e della comprensione dell’utilizzo finale del progetto. Questa definizione è stata concordata con il referente dell’azienda proponente durante gli incontri svolti.
+Nel documento #link("https://codehex16.github.io/docs/2%20-%20RTB/Analisi-dei-Requisiti.pdf")[Analisi dei Requisiti], il gruppo ha definito tutti gli #gloss[Use Case] e i requisiti, frutto di un'attenta analisi del capitolato e della comprensione dell'utilizzo finale del progetto. Questa definizione è stata concordata con il referente dell'azienda proponente durante gli incontri svolti.
 
 ==== Piano di progetto
 
@@ -133,7 +133,7 @@ Nel documento #link("https://codehex16.github.io/docs/2%20-%20RTB/Piano-di-Proge
 
 ==== Piano di qualifica
 
-Nel documento #link("")[Piano di Qualifica] ...
+Nel documento #link("https://codehex16.github.io/docs/2%20-%20RTB/Piano-di-Qualifica.pdf")[Piano di Qualifica] ...
 
 === Strumenti utilizzati
 
@@ -162,7 +162,7 @@ Per la composizione tipografica dei documenti si è deciso di usare #gloss[Typst
 - Compilazione immediata;
 Grazie a Typst si riesce facilmente a creare e mantenere un documento non lasciando il lavoro di controllo grafico al gruppo, infatti si possono scrivere i vari tipi di documenti partendo dai template che si possono trovare nella repository #link("https://github.com/CodeHex16/documentazione")[#underline[*documentazione*]] nella cartella _template_.
 == Struttura dei documenti
-Ci sono diversi tipi di documenti e generalmente sono organizzati nelle seguenti sezioni:
+Ci sono diversi tipi di documenti e generalmente sono organizzati nelle seguenti sezioni.
 === Intestazione
 La prima pagina è l'intestazione del documento ed è composta generalmente dalle seguenti informazioni:
 - *Titolo*: Titolo del documento che è anche il nome del documento;
@@ -202,6 +202,7 @@ Per le date viene utilizzato lo standard internazionale *ISO 8601* nella forma Y
 - *MM*: Indica il mese con 2 cifre;
 - *DD*: Indica il giorno con 2 cifre;
 === Strumenti
+- *VS Code*: Editor di testo usato per scrivere i documenti;
 - *Typst*: Linguaggio per la stesura dei documenti;
 - *Github*: Servizio di hosting per il repository;
 == Gestione della configurazione
@@ -220,24 +221,39 @@ In particolare, per i verbali vengono considerati solo i numeri Y e Z per il fat
 ==== Struttura della repository documentazione
 Il contenuto pronto e convalidato del repository è presente nel branch main in cui sono presenti tutti i PDF dei documenti prodotti.
 Nel branch main si possono trovare diverse cartelle che servono per organizzare e dividere i vari tipi di documenti e codice, in particolare:
-- In *1-candidatura* si trovano i documenti relativi alla candidatura per la gara d'appalto di dei capitolati;
-- In *2-RTB* si trovano i documenti relativi alla fase di progetto *RTB(Requirement and Technology Baseline)*;
-- In *3-PB* si trovano i documenti relativi alla fase di progetto *PB(Product Baseline)*;
-- In *Glossario* è presente il documento Glossario;
-- In *verbali* sono presenti sia i verbali interni sia quelli esterni in foramto PDF;
+- In *1 - candidatura* si trovano i documenti relativi alla candidatura per la gara d'appalto di dei capitolati;
+- In *2 - RTB* si trovano i documenti relativi alla fase di progetto *RTB(Requirement and Technology Baseline)*;
+- In *3 - PB* si trovano i documenti relativi alla fase di progetto *PB(Product Baseline)*;
 - In *diari-di-bordo* sono presenti tutti i diari di bordo prodotti;
+- In *glossario* è presente il documento Glossario;
+- In *verbali* sono presenti sia i verbali interni sia quelli esterni;
+
 === Sincronizzazione
-La sincronizzazione avviene tramite repository condivise su github in cui ogni attività da svolgere è tracciata da una issue con il/i membro/i assegnato/i a tale issue così da sapere sempre chi la segue, o l'ha seguita.
+La sincronizzazione avviene tramite repository condivise su #link("https://github.com/CodeHex16/")[github] in cui ogni attività da svolgere è tracciata da una issue con il/i membro/i assegnato/i a tale issue così da sapere sempre chi la segue, o l'ha seguita.
 ==== Branch
 Per gestire al meglio le varie issue e la documentazione si è deciso di creare dei branch appositi per ogni documento importante come *Norme di Progetto*, *Piano di Progetto*, *Glossario*, *Piano di Qualifica* e *Analisi dei Requisiti*.
 Inoltre, se più membri del gruppo lavorano allo stesso documento allora viene creato un branch per ogni membro con nome il nome del documento/attività e di chi lo sta svolgendo. 
-Quindi in generale la sintassi del nome di un branch è la seguente: *[Titolo][Nome-Membro][Sprint]*.
+Quindi in generale la sintassi del nome di un branch è la seguente: *[Titolo]-[Nome-Membro]-[Sprint]*.
 Una volta finito il lavoro da parte di tutti i membri che operano su quel documento, questo viene verificato (tramite pull request) e viene eseguito il merge sul branch main, mentre i branch ausiliari vengono eliminati.
 Altri branch degni di nota fino ad ora sono:
 - *diario-di-bordo*: Utilizzato per scrivere e verificare i diari di bordo;
 ==== Pull request
 Per quanto riguarda le pull request si è deciso che per ogni documento redatto viene richiesta la verifica tramite pull request.
-A questo punto i verificatori incaricati (vengono create delle issue per la verifica assegnandole a chi di dovere), tramite questa pull request, eseguono la verifica e se è tutto corretto viene fatto il merge delle modifiche apportate nel main, altrimenti il verificatore può correggere direttamente il documento, oppure scrivere un commento con delle indicazioni per le correzioni da svolgere.
+A questo punto i verificatori incaricati del sprint corrente (vengono create delle issue per la verifica assegnandole a chi di dovere), tramite questa pull request:
++  Esegue il controllo locale
+  ```bash
+  # Clonare il repository
+  git checkout <pr-branch-name> 
+  ```
++ Eseguono la verifica e aggiungere proprio nome nel Registro dell Versioni
++ Se è tutto corretto viene committato
+  ```bash
+  git add .
+  git commit -m "Verifica <pr-branch-name>...."
+  git push origin <pr-branch-name>
+  ```
++ Dopo di che viene fatto il merge delle modifiche apportate nel main sulla pagina Pull Request del Github 
++ Altrimenti il verificatore può correggere direttamente il documento, oppure scrivere un commento con delle indicazioni per le correzioni da svolgere.
 In generale, le pull request vengono effettuate quando vi è una modifica interna al repository.
 === Strumenti usati
 - *Git*: Software usato per il controllo della versione dei documenti e del codice;
@@ -299,7 +315,7 @@ Più in particolare quando viene individuato un compito da svolgere vengono eseg
 *1.* Viene individuato il compito da svolgere e viene creata la issue relativa;\
 *2.* La issue viene assegnata ad uno o più membri del gruppo e vengono inserite le informazioni della issue scritte appena sopra.\
 *3.* La issue viene completata e chiusa, oppure se è richiesta la verifica del lavoro svolto allora:\
-*4.* Il verificatore, che ha una issue di verifica parallela, controlla il lavoro svolto e; 
+*4.* Il verificatore, che ha una issue di verifica parallela, controlla il lavoro svolto e; \
 *4.1.* Se corretto vengono confermate le modifiche e la issue principale e quella del verificatore vengono chiuse;\
 *4.2.* Altrimenti le issue rimangono aperte e il verificatore suggerisce dei cambiamenti e/o correzioni a carico dell'assegnatario, una volta apportate tali modifiche si torna al punto precedente (*4.1*); 
 === Coordinamento
@@ -310,8 +326,8 @@ Inoltre, in caso di problemi su Telegram, il gruppo può spostarsi su Discord pe
 - *Comunicazioni esterne*: Per le comunicazioni esterne vengono usate la mail di gruppo *unipd.codehex16\u{0040}gmail.com* e *Zoom* per chiarire dubbi e porre domande;
 Anche le riunioni sono di due tipi:
 - *Riunioni interne*: I membri del gruppo si riuniscono su *Discord* dove si fa il punto della situazione in quel momento e se necessario si introducono nuove attività da svolgere e/o si procede con quelle già indicate;
-- *Riunioni esterne*: I membri del gruppo si riuniscono insieme al proponente, questa riunione di solito è richiesta dal gruppo per trattare problemi/dubbi di una certa importanza al fine di avere una migliore comprensione delle attività da svolgere e procedere con il progetto;ù
-Sarà compito del *Responsabile* riassumere in un *verbale interno* , o un *verbale esterno* quello che si è discusso durante la riunione in questione;
+- *Riunioni esterne*: I membri del gruppo si riuniscono insieme al proponente, questa riunione di solito è richiesta dal gruppo per trattare problemi/dubbi di una certa importanza al fine di avere una migliore comprensione delle attività da svolgere e procedere con il progetto;
+Sarà compito del *Responsabile* riassumere in un *verbale interno*, o un *verbale esterno* quello che si è discusso durante la riunione in questione;
 ==== Verbali
 I verbali redatti sono di due tipi:
 - *Verbali interni*: Questo tipo di verbale è la trascrizione dei punti salienti di una riunione interna e, generalmente, è scritto dal *Responsabile*, l'obiettivo principale è quello di discutere delle attività svolte e delle attività da svolgere, stabilendo quindi nuove issue, se necessario;
