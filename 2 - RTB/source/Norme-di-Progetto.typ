@@ -27,7 +27,7 @@
     "12/11/2024",
     "Luca Ribon",
     "Correzione del contenuto,
-formattazione e stesura nuove sezioni",
+formattazione e stesura sezione Sviluppo",
     "!!!!!!!!!!!",
     "0.4.0",
     "08/01/2025",
@@ -145,7 +145,7 @@ Nel documento #link("https://codehex16.github.io/docs/2%20-%20RTB/Piano-di-Quali
 Per lo svolgimento del progetto abbiamo utilizzato i seguenti strumenti:
 - *Telegram* per la comunicazione all'interno del gruppo;
 - *Discord* per gli incontri interni;
-- *Zoom* per i incontri esterni con il referente dell'azienda Ergon Informatica;
+- *Zoom* per gli incontri esterni con il referente dell'azienda Ergon Informatica;
 - *GitHub* per organizzare tutti i documenti e file sorgente del progetto tramite un repository;
 - *GitHub Issue* per assegnare task ad ogni membro avendo un rendiconto preciso dei ruoli e delle ore svolte per ogni sprint, con l'assegnazione di label e milestone specifiche;
 - *GitHub Project* per visualizzare in modo più ordinato le issue e i loro dettagli;
