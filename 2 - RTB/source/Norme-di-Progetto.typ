@@ -259,7 +259,7 @@ Il corpo del documento è suddiviso in capitoli ognuno dei quali può essere div
 
 === Documenti del progetto
 Verranno prodotti i seguenti documenti:
-- *Norme di Progetto*;
+- *#gloss[Norme di Progetto]*;
 - *Piano di Progetto*;
 - *Analisi dei Requisiti*;
 - *Piano di Qualifica*;
@@ -277,6 +277,7 @@ Per le date viene utilizzato lo standard internazionale *ISO 8601* nella forma Y
 - *DD*: Indica il giorno con 2 cifre;
 
 === Strumenti
+- *VS Code*: Editor di testo usato per scrivere i documenti;
 - *Typst*: Linguaggio per la stesura dei documenti;
 - *Github*: Servizio di hosting per il repository;
 
@@ -296,18 +297,17 @@ In particolare, per i verbali vengono considerati solo i numeri Y e Z per il fat
 
 === Repository
 ==== Struttura della repository documentazione
-Il contenuto pronto e convalidato del repository è presente nel branch main in cui sono presenti tutti i PDF dei documenti prodotti.
+Il contenuto pronto e convalidato del repository è presente nel #gloss[branch] main in cui sono presenti tutti i PDF dei documenti prodotti.
 Nel branch main si possono trovare diverse cartelle che servono per organizzare e dividere i vari tipi di documenti e codice, in particolare:
-- In *1-candidatura* si trovano i documenti relativi alla candidatura per la gara d'appalto di dei capitolati;
-- In *2-RTB* si trovano i documenti relativi alla fase di progetto *RTB(Requirement and Technology Baseline)*;
-- In *3-PB* si trovano i documenti relativi alla fase di progetto *PB(Product Baseline)*;
-- In *Glossario* è presente il documento Glossario;
-- In *verbali* sono presenti sia i verbali interni sia quelli esterni in foramto PDF;
+- In *1 - candidatura* si trovano i documenti relativi alla candidatura per la gara d'appalto di dei capitolati;
+- In *2 - RTB* si trovano i documenti relativi alla fase di progetto *RTB(Requirement and Technology Baseline)*;
+- In *3 - PB* si trovano i documenti relativi alla fase di progetto *PB(Product Baseline)*;
 - In *diari-di-bordo* sono presenti tutti i diari di bordo prodotti;
+- In *glossario* è presente il documento Glossario;
+- In *verbali* sono presenti sia i verbali interni sia quelli esterni;
 
 === Sincronizzazione
-La sincronizzazione avviene tramite repository condivise su github in cui ogni attività da svolgere è tracciata da una issue con il/i membro/i assegnato/i a tale issue così da sapere sempre chi la segue, o l'ha seguita.
-
+La sincronizzazione avviene tramite repository condivise su #link("https://github.com/CodeHex16/")[github] in cui ogni attività da svolgere è tracciata da una issue con il/i membro/i assegnato/i a tale issue così da sapere sempre chi la segue, o l'ha seguita.
 ==== Branch
 // TODO: branch riguardanti il codice, quando sarà ora
 Per gestire al meglio le varie issue e la documentazione si è deciso di creare dei branch appositi per ogni documento importante come:
@@ -326,6 +326,22 @@ Altri branch degni di nota sono:
 Per quanto riguarda le pull request si è deciso che per ogni documento redatto viene richiesta la verifica tramite pull request.
 A questo punto i verificatori a cui è stata assegnata la issue di verifica di quel documento, tramite questa pull request, eseguono la verifica e se è tutto corretto viene fatto il merge delle modifiche apportate nel main, altrimenti il verificatore può correggere direttamente il documento, oppure scrivere un commento con delle indicazioni per le correzioni da svolgere.
 
+A questo punto i verificatori incaricati del sprint corrente (vengono create delle issue per la verifica assegnandole a chi di dovere), tramite questa pull request:
++  Esegue il controllo locale
+  ```bash
+  # Clonare il repository
+  git checkout <pr-branch-name> 
+  ```
++ Eseguono la verifica e aggiungere proprio nome nel Registro dell Versioni
++ Se è tutto corretto viene committato
+  ```bash
+  git add .
+  git commit -m "Verifica <pr-branch-name>...."
+  git push origin <pr-branch-name>
+  ```
++ Dopo di che viene fatto il merge delle modifiche apportate nel main sulla pagina Pull Request del Github 
++ Altrimenti il verificatore può correggere direttamente il documento, oppure scrivere un commento con delle indicazioni per le correzioni da svolgere.
+In generale, le pull request vengono effettuate quando vi è una modifica interna al repository.
 === Strumenti usati
 - *Git*: Software usato per il controllo della versione dei documenti e del codice;
 - *Github*: Servizio di hosting per progetti sotware usato dal gruppo per coordinarsi sulle operazioni di versionamento e usato come *Issue Tracking System*;
