@@ -21,7 +21,7 @@
     sommario: [],
     
     versioni : (
-      "0.4.0","05/01/2025","Francesco Fragonas","Aggiunta sezione Pianificazione del lavoro e Periodi di sviluppo", "",
+      "0.4.0","05/01/2025","Francesco Fragonas","Aggiunta sezione Pianificazione del lavoro e Periodi di sviluppo", "Yi Hao Zhuo",
       "0.3.0","18/12/2024","Francesco Fragonas","Aggiunta sezione analisi dei rischi", "Filippo Sabbadin",
       "0.2.0","05/12/2024","Luca Rossi","Aggiunta sezione preventivo", "Matteo Bazzan",
       "0.1.0","24/10/2024","Luca Ribon","Definizione della struttura base e definizone delle linee guida per la stesura", "Filippo Sabbadin"
@@ -31,7 +31,7 @@
 
 = Introduzione
 == Glossario
-Nel documento verranno evidenziati diversi termini tramite #gloss[questo stile], questi, se premuti, reindirizzeranno alla definizione del termine nel glossario. In questo modo sarà possibile chiarire i termini tecnici o ambigui.
+Nel documento verranno evidenziati diversi termini tramite #gloss[questo stile], questi, se premuti, reindirizzeranno alla definizione del termine nel #gloss[glossario]. In questo modo sarà possibile chiarire i termini tecnici o ambigui.
 == Scopo del documento
 Il documento #gloss[Piano di Progetto] ha come obbiettivo quello di definire le attività e nello specifico di:
 - pianificare lo svolgimento delle attività
@@ -41,7 +41,7 @@ Il documento #gloss[Piano di Progetto] ha come obbiettivo quello di definire le 
 // Decidere se integrare ulteriori dettagli riguardo al prodotto (stack tecnologico, ...)
 == Scopo del prodotto
 Il prodotto consiste nella creazione di un'interfaccia in stile #gloss[chatbot], accessibile tramite interfaccia mobile, che delle aziende fornitrici possono configurare in modo che l'#gloss[assistente virtuale] conosca il contesto aziendale e possa rispondere alle domande dei clienti del #gloss[fornitore].
-L'assistente virtuale sfrutta un #gloss[LLM] per comprendere il constesto tramite l'analisi dei documenti aziendali.
+L'assistente virtuale sfrutta un #gloss[LLM] per comprendere il contesto tramite l'analisi dei documenti aziendali.
 Il fornitore, tramite un'#gloss[interfaccia web] di amministrazione, potrà inserire i documenti aziendarli, memorizzare delle domande e delle risposte predefinite e gestire gli #gloss[account] dei clienti.
 
 // Decidere se riportare il preventivo fatto inizialmente o se fare riferimento al documento dedicato; da aggiornare con un resoconto dopo ogni fase
@@ -107,7 +107,7 @@ Secondo lo standard ISO/IEC 31000:2009, la gestione dei rischi si articola in ci
 
 2. *Analisi dei rischi*:
   #h(2em)
-  - Valutare la probabilità e l’impatto di ciascun rischio per comprenderne la gravità.
+  - Valutare la probabilità e l'impatto di ciascun rischio per comprenderne la gravità.
 
 3. *Valutazione dei rischi*:
   #h(2em)
@@ -182,7 +182,7 @@ Secondo lo standard ISO/IEC 31000:2009, la gestione dei rischi si articola in ci
       colspan: 2
     )[*Inesperienza*]
   ),
-  [*Descrizione*],[Il team potrebbe non avere l’esperienza necessaria nelle competenze specifiche richieste dal progetto, portando a errori, inefficienze o rallentamenti nel lavoro],
+  [*Descrizione*],[Il team potrebbe non avere l'esperienza necessaria nelle competenze specifiche richieste dal progetto, portando a errori, inefficienze o rallentamenti nel lavoro],
   [*Probabilità*],[Media],
   [*Pericolosità*],[Media],
   [*Rilevamento*],[Valutazione delle competenze iniziali del team, feedback regolari durante il progresso del progetto],
@@ -257,9 +257,9 @@ A fine sprint, si tiene una retrospettiva per valutare il progresso, identificar
 
 == Gestione delle task
 Le task costituiscono le unità operative elementari del lavoro e vengono gestite tramite una board di GitHub. Ogni task è associata a un responsabile, un peso, una priorità e un ruolo specifico.
-Per monitorare l’efficienza e il tempo impiegato, ogni attività è stata tracciata nel dettaglio, includendo la durata prevista e quella effettiva. Questi dati sono riportati su un foglio Google condiviso, che offre una panoramica in tempo reale dell’avanzamento complessivo del progetto.
+Per monitorare l'efficienza e il tempo impiegato, ogni attività è stata tracciata nel dettaglio, includendo la durata prevista e quella effettiva. Questi dati sono riportati su un foglio Google condiviso, che offre una panoramica in tempo reale dell'avanzamento complessivo del progetto.
 
-Questo approccio consente una chiara distribuzione dei compiti, facilitando il controllo del progresso e l’individuazione di eventuali criticità nel raggiungimento degli obiettivi.
+Questo approccio consente una chiara distribuzione dei compiti, facilitando il controllo del progresso e l'individuazione di eventuali criticità nel raggiungimento degli obiettivi.
 
 = Periodi di sviluppo
 == Introduzione
@@ -269,11 +269,11 @@ Il progetto è stato suddiviso in tre macroperiodi principali, ciascuno associat
 - *PB (Product Baseline)*: Concentrato sull'implementazione delle funzionalità principali e sulla verifica dell'architettura progettata.
 - *CA (Customer Acceptance)*: Dedicato al completamento, alla validazione finale del prodotto e alla consegna al cliente.
 
-Questa suddivisione consente una chiara definizione degli obiettivi di breve e medio termine, facilitando il monitoraggio dell’avanzamento e l’identificazione tempestiva di eventuali criticità.
+Questa suddivisione consente una chiara definizione degli obiettivi di breve e medio termine, facilitando il monitoraggio dell'avanzamento e l'identificazione tempestiva di eventuali criticità.
 
 Ciascun macroperiodo è composto da sprint di durata variabile (inizialmente di una settimana, poi portata a due settimane). Gli sprint rappresentano unità operative chiave, durante le quali vengono svolte attività specifiche con obiettivi ben definiti. Per ogni sprint, il team tiene una riunione iniziale per pianificare le task e una retrospettiva finale per valutare i risultati.
 
-Al termine di ogni macroperiodo, viene effettuata una revisione complessiva del lavoro svolto, analizzando l’aderenza agli obiettivi prefissati e pianificando le attività per la fase successiva.
+Al termine di ogni macroperiodo, viene effettuata una revisione complessiva del lavoro svolto, analizzando l'aderenza agli obiettivi prefissati e pianificando le attività per la fase successiva.
 
 
 
@@ -287,16 +287,16 @@ Al termine di ogni macroperiodo, viene effettuata una revisione complessiva del 
 - *Proof of Concept (PoC)*: Realizzazione di una demo iniziale per verificare la fattibilità tecnica del progetto.
 - *Documentazione*: Produzione dei documenti fondamentali, tra cui Analisi dei Requisiti, Glossario, Piano di Progetto e #gloss[Norme di Progetto].
 
-Durante questo periodo, il team ha lavorato intensamente sulla comprensione delle esigenze del cliente e sulla definizione delle basi tecnologiche. L’obiettivo era garantire che tutte le scelte progettuali e tecniche fossero ben motivate e supportate da un'adeguata analisi preliminare.
+Durante questo periodo, il team ha lavorato intensamente sulla comprensione delle esigenze del cliente e sulla definizione delle basi tecnologiche. L'obiettivo era garantire che tutte le scelte progettuali e tecniche fossero ben motivate e supportate da un'adeguata analisi preliminare.
 
 === Sprint 1
 *Intervallo temporale*: 18/11/2024 - 24/11/2024
 
-Durante lo *Sprint 1*, della durata di una settimana, il gruppo si è concentrato principalmente sulla definizione delle tecnologie da utilizzare per il progetto. In seguito a una discussione con l'azienda proponente, sono stati analizzati i requisiti tecnologici, comprese le opzioni per lo sviluppo dell’app e la scelta degli strumenti da impiegare. Sono state inoltre avviate le attività per la stesura del glossario tecnico, con la creazione di una pagina web ad hoc per il glossario stesso.
+Durante lo *Sprint 1*, della durata di una settimana, il gruppo si è concentrato principalmente sulla definizione delle tecnologie da utilizzare per il progetto. In seguito a una discussione con l'azienda proponente, sono stati analizzati i requisiti tecnologici, comprese le opzioni per lo sviluppo dell'app e la scelta degli strumenti da impiegare. Sono state inoltre avviate le attività per la stesura del glossario tecnico, con la creazione di una pagina web ad hoc per il glossario stesso.
 
 #pseudoheading[*Attività svolte*]
 
-- *Analisi app nativa vs #gloss[webapp]*: Discussione con l’azienda per valutare la possibilità di sviluppare una webapp invece di un’app nativa, come inizialmente richiesto nel capitolato.
+- *Analisi app nativa vs #gloss[webapp]*: Discussione con l'azienda per valutare la possibilità di sviluppare una webapp invece di un'app nativa, come inizialmente richiesto nel capitolato.
 - *Analisi framework frontend*: Studio dei framework frontend nel caso in cui si decidesse di optare per una webapp.
 - *Analisi LLM*: Valutazione dei modelli linguistici (LLM) disponibili per generare le risposte, con focus su parametri come le lingue supportate e i requisiti di training.
 - *Analisi database SQL*: Confronto tra diversi database SQL per individuare la soluzione più adeguata al caso d'uso del progetto.
@@ -321,16 +321,16 @@ Durante lo *Sprint 1*, della durata di una settimana, il gruppo si è concentrat
 === Sprint 2
 *Intervallo temporale*: 25/11/2024 - 01/12/2024
 
-Durante lo *Sprint 2*, il gruppo ha proseguito i lavori avviati nello Sprint 1, concentrandosi principalmente sull’elaborazione dei documenti fondamentali per il progetto. Sono state definite le attività relative ai documenti “Analisi dei Requisiti”, “Glossario”, “Norme di Progetto” e “Piano di Progetto”. Inoltre, si è proceduto con l’aggiornamento dei ruoli dei membri del gruppo, tenendo conto delle necessità del progetto.
+Durante lo *Sprint 2*, il gruppo ha proseguito i lavori avviati nello Sprint 1, concentrandosi principalmente sull'elaborazione dei documenti fondamentali per il progetto. Sono state definite le attività relative ai documenti "Analisi dei Requisiti", "Glossario", "Norme di Progetto" e "Piano di Progetto". Inoltre, si è proceduto con l'aggiornamento dei ruoli dei membri del gruppo, tenendo conto delle necessità del progetto.
 
 #pseudoheading[*Attività svolte*]
 
 - *Aggiornamento del glossario*: Aggiornamento dei termini tecnici utilizzati nei nuovi documenti creati durante lo Sprint 2.
-- *Individuazione #gloss[use case] dell’interfaccia utente*: Definizione preliminare degli use case legati all’interfaccia utente.
-- *Individuazione use case amministratore*: Studio e definizione iniziale degli use case relativi all’interfaccia amministrativa.
-- *Inizio stesura Analisi dei Requisiti*: Redazione della sezione “Descrizione del prodotto” nel documento “Analisi dei Requisiti”.
-- *Studio delle Norme di Progetto*: Analisi e definizione della struttura e dei contenuti principali per il documento “Norme di Progetto”.
-- *Studio del Piano di Progetto*: Analisi e definizione della struttura e dei contenuti principali per il documento “Piano di Progetto”.
+- *Individuazione #gloss[use case] dell'interfaccia utente*: Definizione preliminare degli use case legati all'interfaccia utente.
+- *Individuazione use case amministratore*: Studio e definizione iniziale degli use case relativi all'interfaccia amministrativa.
+- *Inizio stesura Analisi dei Requisiti*: Redazione della sezione "Descrizione del prodotto" nel documento "Analisi dei Requisiti".
+- *Studio delle Norme di Progetto*: Analisi e definizione della struttura e dei contenuti principali per il documento "Norme di Progetto".
+- *Studio del Piano di Progetto*: Analisi e definizione della struttura e dei contenuti principali per il documento "Piano di Progetto".
 
 #pseudoheading[*Ruoli ricoperti e ore svolte*]
 
@@ -351,13 +351,13 @@ Durante lo *Sprint 2*, il gruppo ha proseguito i lavori avviati nello Sprint 1, 
 === Sprint 3
 *Intervallo temporale*: 02/12/2024 - 08/12/2024
 
-Durante lo *Sprint 3*, il gruppo ha continuato le attività avviate negli sprint precedenti, concentrandosi sul completamento e l’aggiornamento dei principali documenti di progetto. È stata effettuata una rotazione dei ruoli tra i membri del team per migliorare la distribuzione del carico di lavoro e consentire una maggiore flessibilità operativa. Inoltre, sono stati introdotti nuovi #gloss[branch] nel repository per gestire le #gloss[pull request] e mantenere una maggiore coerenza nella collaborazione.
+Durante lo *Sprint 3*, il gruppo ha continuato le attività avviate negli sprint precedenti, concentrandosi sul completamento e l'aggiornamento dei principali documenti di progetto. È stata effettuata una rotazione dei ruoli tra i membri del team per migliorare la distribuzione del carico di lavoro e consentire una maggiore flessibilità operativa. Inoltre, sono stati introdotti nuovi #gloss[branch] nel repository per gestire le #gloss[pull request] e mantenere una maggiore coerenza nella collaborazione.
 
 #pseudoheading[*Attività svolte*]
 
 - *Stesura del Piano di Progetto*: Continuazione del documento, con focus sulle sezioni di pianificazione temporale e risorse necessarie.
 - *Stesura delle Norme di Progetto*: Espansione e completamento delle norme per garantire coerenza e standardizzazione durante lo sviluppo.
-- *Stesura dell'Analisi dei Requisiti*: Aggiunta degli use case principali e finalizzazione dell’introduzione al documento.
+- *Stesura dell'Analisi dei Requisiti*: Aggiunta degli use case principali e finalizzazione dell'introduzione al documento.
 - *Aggiornamento del glossario*: Inserimento di nuovi termini emersi durante lo sviluppo dei documenti.
 - *Gestione repository*: Introduzione di branch dedicati per i principali documenti (Analisi dei Requisiti, Norme di Progetto, Piano di Progetto) per una migliore gestione delle pull request.
 
@@ -382,15 +382,15 @@ Durante lo *Sprint 3*, il gruppo ha continuato le attività avviate negli sprint
 
 Con lo *Sprint 4* il team ha deciso di estendere la durata degli sprint a due settimane per affrontare in modo più efficace task complesse e migliorare la gestione della rotazione dei ruoli. Durante questo sprint, il focus principale è stato la realizzazione del Proof of Concept (PoC) per il frontend, testando due framework diversi, #gloss[Svelte] e #gloss[Vue.js], e il proseguimento nella stesura dei principali documenti di progetto.
 
-Inoltre è stato svolto un *incontro online* con il referente dell’azienda Ergon Informatica per ottenere chiarimenti essenziali sull’utilizzo degli LLM e sulla struttura del sistema. Questo ha permesso di delineare meglio l’Analisi dei Requisiti e di avviare la pianificazione del Proof of Concept (PoC).
+Inoltre è stato svolto un *incontro online* con il referente dell'azienda Ergon Informatica per ottenere chiarimenti essenziali sull'utilizzo degli LLM e sulla struttura del sistema. Questo ha permesso di delineare meglio l'Analisi dei Requisiti e di avviare la pianificazione del Proof of Concept (PoC).
 
 #pseudoheading[*Attività svolte*]
 
 - *Stesura Norme di Progetto*: Continuazione del documento, con un focus sulla definizione di norme per il codice e i processi di sviluppo.
-- *Realizzazione PoC per l’interfaccia web*: Implementazione di un prototipo di interfaccia web utilizzando i framework Svelte e Vue.js, al fine di confrontarne complessità e tempi di sviluppo.
+- *Realizzazione PoC per l'interfaccia web*: Implementazione di un prototipo di interfaccia web utilizzando i framework Svelte e Vue.js, al fine di confrontarne complessità e tempi di sviluppo.
 - *Aggiornamento Glossario*: Revisione e aggiornamento dei termini tecnici sulla base del lavoro svolto nello Sprint 4.
-- *Stesura Verbale Esterno*: Creazione del verbale relativo all’incontro online con l’azienda Ergon Informatica.
-- *Definizione Use Case dell’interfaccia cliente e fornitore*: Proseguimento nella definizione degli use case del sistema, con particolare attenzione alle interfacce cliente e fornitore.
+- *Stesura Verbale Esterno*: Creazione del verbale relativo all'incontro online con l'azienda Ergon Informatica.
+- *Definizione Use Case dell'interfaccia cliente e fornitore*: Proseguimento nella definizione degli use case del sistema, con particolare attenzione alle interfacce cliente e fornitore.
 
 #pseudoheading[*Ruoli ricoperti e ore svolte*]
 
@@ -413,7 +413,7 @@ Inoltre è stato svolto un *incontro online* con il referente dell’azienda Erg
 
 #pseudoheading[*Obiettivi principali*]
 
-- *Progettazione architetturale*: Definizione dell’architettura del sistema e delle scelte di design.
+- *Progettazione architetturale*: Definizione dell'architettura del sistema e delle scelte di design.
 - *Implementazione delle funzionalità principali*: Sviluppo del prodotto partendo dal Proof of Concept, con particolare attenzione alle funzionalità chiave.
 - *Integrazione delle tecnologie*: Collegamento delle componenti tecnologiche per garantire un sistema coerente.
 - *Documentazione avanzata*: Produzione di Diagrammi delle Classi, Manuale Utente e Manuale Sviluppatore.
@@ -428,7 +428,7 @@ In questo periodo, il team si è concentrato sulla trasformazione del PoC in un 
 - *Ottimizzazioni finali*: Correzione degli ultimi bug e miglioramento delle prestazioni.
 - *Aggiornamento dei documenti*: Revisione e completamento della documentazione per la consegna finale.
 - *Consegna al cliente*: Preparazione e presentazione del prodotto finale.
-L’obiettivo principale di questo periodo è stato garantire che il prodotto fosse pronto per l’accettazione finale da parte del cliente, con particolare attenzione alla qualità e alla completezza.
+L'obiettivo principale di questo periodo è stato garantire che il prodotto fosse pronto per l'accettazione finale da parte del cliente, con particolare attenzione alla qualità e alla completezza.
 
 
 // Riportare le risorse (immagini, grafici, ecc...) utilizzate per la stesura del documento

@@ -68,6 +68,7 @@ Il documento non si limita a fornire una panoramica iniziale ma si propone come 
 == Scopo del prodotto
 Il progetto prevede lo sviluppo di un #gloss[Chatbot] avanzato, basato su modelli linguistici #gloss[LLM] (Large Language Models), pensato per migliorare la comunicazione tra aziende fornitrici e i loro clienti. Questo assistente virtuale permetterà agli utenti di ottenere rapidamente e in modo intuitivo informazioni dettagliate su prodotti o servizi offerti, eliminando la necessità di contattare direttamente l’azienda.
 
+
 Il sistema includerà anche un’interfaccia dedicata per le aziende fornitrici, offrendo strumenti per gestire i clienti e i documenti di riferimento che contengono le informazioni necessarie. Questi documenti saranno utilizzati dal modello linguistico per generare risposte personalizzate e accurate, garantendo un’esperienza utente ottimale. L'intero sistema sarà accessibile tramite una #gloss[Webapp], assicurando una gestione efficiente e una fruizione semplice per tutti gli utenti coinvolti.
 
 == Glossario
@@ -152,7 +153,7 @@ Per lo svolgimento del progetto abbiamo utilizzato i seguenti strumenti:
 - *Google Fogli* per organizzare incontri con la compilazione di un calendario settimanale e per fissare le ore svolte avendo una visione generale dell'andamento del progetto;
 - *Typst* per la stesura di tutti i documenti e verbali;
 - *Canva* per la realizzazione delle presentazioni per i Diari di Bordo settimanali;
-- *Notion* per organizzare appunti e documenti non ufficiali;
+- *#gloss[Notion]* per organizzare appunti e documenti non ufficiali;
 
 == Sviluppo
 Il processo di sviluppo è finalizzato alla realizzazione del prodotto software richiesto dal Proponente, seguendo le specifiche definite nel capitolato d'appalto. Questo processo include tutte le attività necessarie per la creazione del prodotto, dalla progettazione iniziale all'integrazione finale, garantendo che il software soddisfi i requisiti concordati e sia conforme alle aspettative del cliente.
@@ -321,7 +322,6 @@ Quindi in generale la sintassi del nome di un branch è la seguente: *[Titolo]-[
 Una volta finito il lavoro da parte di tutti i membri che operano su quel documento, questo viene verificato (tramite pull request) e viene eseguito il merge sul branch main, mentre i branch ausiliari vengono eliminati appena si ha la sicurezza che questi non sono più necessari.\
 Altri branch degni di nota sono:
 - *diario-di-bordo*: Utilizzato inserire i diari di bordo nel repository;
-
 ==== Pull request
 Per quanto riguarda le pull request si è deciso che per ogni documento redatto viene richiesta la verifica tramite pull request.
 A questo punto i verificatori a cui è stata assegnata la issue di verifica di quel documento, tramite questa pull request, eseguono la verifica e se è tutto corretto viene fatto il merge delle modifiche apportate nel main, altrimenti il verificatore può correggere direttamente il documento, oppure scrivere un commento con delle indicazioni per le correzioni da svolgere.
