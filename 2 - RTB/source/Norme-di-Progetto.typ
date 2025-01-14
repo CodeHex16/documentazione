@@ -8,7 +8,7 @@
     "Matteo Bazzan",
     "",
     "Luca Ribon",
-    "",
+    "Redattore",
     "Francesco Fragonas",
     "",
     "Gabriele Magnelli",
@@ -69,7 +69,6 @@ Il documento non si limita a fornire una panoramica iniziale ma si propone come 
 == Scopo del prodotto
 Il progetto prevede lo sviluppo di un #gloss[Chatbot] avanzato, basato su modelli linguistici #gloss[LLM] (Large Language Models), pensato per migliorare la comunicazione tra aziende fornitrici e i loro clienti. Questo assistente virtuale permetterà agli utenti di ottenere rapidamente e in modo intuitivo informazioni dettagliate su prodotti o servizi offerti, eliminando la necessità di contattare direttamente l’azienda.
 
-
 Il sistema includerà anche un’interfaccia dedicata per le aziende fornitrici, offrendo strumenti per gestire i clienti e i documenti di riferimento che contengono le informazioni necessarie. Questi documenti saranno utilizzati dal modello linguistico per generare risposte personalizzate e accurate, garantendo un’esperienza utente ottimale. L'intero sistema sarà accessibile tramite una #gloss[Webapp], assicurando una gestione efficiente e una fruizione semplice per tutti gli utenti coinvolti.
 
 
@@ -100,16 +99,16 @@ Le definizioni sono disponibili nel documento Glossario.pdf e possono essere con
 
 - Piano di Qualifica: #link("https://codehex16.github.io/docs/2%20-%20RTB/Piano-di-Qualifica.pdf")
 
-- Glossario:
-Documento:
-#link("https://codehex16.github.io/docs/3%20-%20PB/Glossario.pdf")
-Pagina web:
-#link("https://codehex16.github.io/glossario.html")
+- Standard ISO/IEC 12207:1995: #link("https://www.math.unipd.it/~tullio/IS-1/2009/Approfondimenti/ISO_12207-1995.pdf")
 
-= Processi di accordo
-// TODO: defininre processi di accordo
+- Glossario:
+  - Documento: #link("https://codehex16.github.io/docs/3%20-%20PB/Glossario.pdf")
+  - Pagina web: #link("https://codehex16.github.io/glossario.html")
+
+= Processi primari
+
 == Processo di fornitura
-Il processo di fornitura è strutturato in conformità agli esiti previsti dalla clausola 6.1.2 dello #gloss[Standard] ISO/IEC/IEEE 12207:2017. Tale processo include la definizione di requisiti concordati, l’analisi dei rischi associati, e la pianificazione di tempi e costi.
+Il processo di fornitura è strutturato in conformità agli esiti previsti dalla clausola 5.2 dello #gloss[Standard] ISO/IEC 12207:1997. Tale processo include la definizione di requisiti concordati, l’analisi dei rischi associati, e la pianificazione di tempi e costi.
 
 === Scopo e descrizione
 Il processo di fornitura è finalizzato a garantire la realizzazione di un prodotto o servizio che soddisfi i requisiti concordati tra #gloss[Proponente] e #gloss[Committente]. L'accordo tra le parti deve definire in modo chiaro i requisiti, le tempistiche e i costi da rispettare. Prima di stipulare tale accordo, il #gloss[Fornitore] avrà condotto un’analisi dettagliata del progetto proposto, identificando i rischi correlati e stabilendo le linee guida necessarie per gestirli efficacemente.
@@ -117,9 +116,9 @@ Il processo di fornitura è finalizzato a garantire la realizzazione di un prodo
 === Rapporti con il proponente
 Il gruppo CodeHex16 manterrà un dialogo attivo e regolare con il Proponente per tutta la durata del progetto didattico, con l'obiettivo di raccogliere il maggior numero possibile di #gloss[Feedback] sulla correttezza e qualità del lavoro svolto. La comunicazione si articolerà in due modalità principali:
 
-1- Scritta (asincrona) utilizzata per comunicazioni di breve durata, condivisione di verbali e materiale informativo e attività di coordinamento;
+1 - Scritta (asincrona) utilizzata per comunicazioni di breve durata, condivisione di verbali e materiale informativo e attività di coordinamento;
 
-2- Incontri online (sincrona) utilizzati per chiarimenti sul capitolato, approfondimenti relativi ai casi d'uso e requisiti e feedback sul lavoro svolto;
+2 - Incontri online (sincrona) utilizzati per chiarimenti sul capitolato, approfondimenti relativi ai casi d'uso e requisiti e feedback sul lavoro svolto;
 
 Il formato testuale è chiaro, ma ci sono metodi di comunicazione che hanno maggiore fluidità e precisione:
 
@@ -135,8 +134,9 @@ Nel documento #link("https://codehex16.github.io/docs/1%20-%20candidatura/Valuta
 ==== Preventivo dei costi
 Nel documento #link("https://codehex16.github.io/docs/1%20-%20candidatura/Preventivo-Costi-e-Impegni.pdf")[Preventivo Costi e Impegni] è stata stabilita una data di consegna stimata del progetto, definita in accordo con tutti i membri del gruppo. La pianificazione tiene conto degli impegni personali di ciascun membro e prevede una stima delle ore settimanali da dedicare al progetto. Inoltre, dopo aver definito tutti i ruoli, è stata elaborata una tabella con la previsione delle ore che ogni membro deve svolgere per ciascun ruolo, garantendo una rotazione prestabilita per bilanciare equamente il carico di lavoro.
 
-==== Analisi dei requisiti
-Nel documento #link("https://codehex16.github.io/docs/2%20-%20RTB/Analisi-dei-Requisiti.pdf")[Analisi dei Requisiti], il gruppo ha definito tutti gli #gloss[Use Case] e i requisiti, frutto di un’attenta analisi del capitolato e della comprensione dell’utilizzo finale del progetto. Il contenuto di questo documento è stato arricchito grazie alle riflessioni svolte con il referente dell’azienda proponente durante gli incontri svolti.
+// Probabilmente non va messa qui:
+// ==== Analisi dei requisiti
+// Nel documento #link("https://codehex16.github.io/docs/2%20-%20RTB/Analisi-dei-Requisiti.pdf")[Analisi dei Requisiti], il gruppo ha definito tutti gli #gloss[Use Case] e i requisiti, frutto di un’attenta analisi del capitolato e della comprensione dell’utilizzo finale del progetto. Il contenuto di questo documento è stato arricchito grazie alle riflessioni svolte con il referente dell’azienda proponente durante gli incontri svolti.
 
 ==== Piano di progetto
 Nel documento #link("https://codehex16.github.io/docs/2%20-%20RTB/Piano-di-Progetto.pdf")[Piano di Progetto] è stato pianificato l'avanzamento del progetto suddiviso nei 3 periodi chiave (Candidatura, RTB e PB) con una particolare attenzione agli #gloss[Sprint] settimanali effettuati. Per ognuno è stato descritto il lavoro svolto, il rendiconto delle ore e dei costi in base ai ruoli assegnati e le task future previste.
@@ -158,8 +158,46 @@ Per lo svolgimento del progetto abbiamo utilizzato i seguenti strumenti:
 - *Notion* per organizzare appunti e documenti non ufficiali;
 
 == Sviluppo
+// TODO: scrivere aspettative
+Il processo di sviluppo è strutturato basandosi uslla clausola 5.3 dello #gloss[Standard] ISO/IEC 12207:1997. Questo processo include l'analisi, la progettazione, la codifica e testing, e l'integrazione del prodotto software, garantendo che i requisiti concordati siano soddisfatti e che il prodotto finale sia conforme alle aspettative.
+=== Scopo e descrizione
+Il processo di sviluppo è finalizzato alla realizzazione del prodotto software richiesto dal Proponente, seguendo le specifiche definite nel capitolato d'appalto. Questo processo include tutte le attività necessarie per la creazione del prodotto, dalla progettazione iniziale alla consegna finale, garantendo che il software soddisfi i requisiti concordati e sia conforme alle aspettative del cliente.
+==== Analisi dei requisiti
+Il prodotto di questo processo è contenuto nel documento #link("https://codehex16.github.io/docs/2%20-%20RTB/Analisi-dei-Requisiti.pdf")[Analisi dei Requisiti].
+Il processo di sviluppo inizia con l'analisi dei requisiti, durante la quale vengono identificati e definiti i requisiti del sistema.
+I requisiti descrivono:
+- funzionalità richieste;
+- funzionalità di supporto;
+- funzionalità di sicurezza;
+- funzionalità di interfaccia;
+I *casi d'uso* descrivono le interazioni tra il prodotto e gli attori coinvolti, ed aiutano ad individuare ulteriori requisiti.
+Gli attori individuati sono:
+- Amministratore;
+- Cliente;
+- Fornitore;
+- Sistema;
+Ogni use case ha la seguente struttura: 
+- Diagramma del caso d'uso;
+- Attori principali;
+- Attori secondari se presenti;
+- Descrizione;
+- Precondizioni;
+- Postcondizioni;
+- Scenario principale;
+- Generalizzazioni, estensioni e inclusioni, se presenti;
+In questo modo si possono definire in modo dettagliato i requisiti funzionali, di qualità e di vincolo.
+==== Progettazione
+La progettazione del sistema è il processo di definizione dell'architettura del software dal punto di vista logico; in questo fase di decide come soddisfare i requisiti identificati durante l'analisi.
+
+In particolare vanno definiti i componenti software e le loro interazioni, prestando attenzione a manterli separati e indipendenti per garantire una maggiore manutenibilità e scalabilità del sistema; in questo passaggio è importante anche definire le unità architetturali.\
+Inoltre vanno definite le responsabilità che verranno applicate in fase di codifica assicurandosi di mantenere un livello di efficienza e efficacia il più alto possibile.
+L'approccio utilizzato in questa attività sarà sia top-down, per scomporre il problema in sotto-problemi, sia bottom-up, per ragionare sui singoli sotto-problemi e integrali in una soluzione complessiva.
+
+==== Codifica
+In questo processo i Programmatori traducono il design in codice sorgente, inoltre ogni unità sarà documentata e testata per garantire che soddisfi i requisiti definiti in fase di analisi e progettazione.
+Nello specifico la documentazione dovrà prevedere la documentazione dedicata all'utente finale e quella dedicata al manutentore. Inoltre nella documentazione verranno integrati anche i dettagli realtivi al testing eseguito sulle singole unità.
+
 = Processi di supporto
-// TODO: defininre processi di supporto
 == Documentazione
 === Scopo e descrizione
 Lo scopo del processo di documentazione è quello di tracciare e, quindi, rendere immediatamente consultabile ogni attività e processo relativi al progetto.
@@ -266,7 +304,6 @@ A questo punto i verificatori a cui è stata assegnata la issue di verifica di q
 === Validazione
 === Gestione qualità
 == Processi organizzativi
-// TODO: defininre processi organizzativi
 === Gestione dei processi
 ==== Scopo e descrizione
 Il processo di gestione ha lo scopo di identificare le attività e i compiti che ogni membro del gruppo dovrà eseguire per proseguire nel progetto.
