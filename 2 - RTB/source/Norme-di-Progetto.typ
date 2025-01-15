@@ -61,12 +61,12 @@ formattazione e stesura sezione Sviluppo",
 = Introduzione
 
 == Scopo del documento
-Questo documento ha lo scopo di delineare le principali fasi di sviluppo, i ruoli e le responsabilità dei membri del team CodeHex16. Al suo interno, viene fornita una guida completa per tutte le #gloss[Practice] adottate dal gruppo e per il #gloss[Way of Working], garantendo un approccio strutturato e organizzato alle attività collaborative.
+Questo documento ha lo scopo di delineare le principali fasi di sviluppo, i ruoli e le responsabilità dei membri del team #gloss[CodeHex16]. Al suo interno, viene fornita una guida completa per tutte le #gloss[Practice] adottate dal gruppo e per il #gloss[Way of Working], garantendo un approccio strutturato e organizzato alle attività collaborative.
 
 Il documento non si limita a fornire una panoramica iniziale ma si propone come un riferimento dinamico, soggetto a revisioni e aggiornamenti continui. Tale approccio incrementale assicura che il contenuto resti sempre aggiornato rispetto alle esigenze del progetto e alle best practices emergenti, consentendo al gruppo di adattarsi rapidamente a nuovi requisiti o cambiamenti contestuali.
 
 == Scopo del prodotto
-Il progetto prevede lo sviluppo di un #gloss[Chatbot] avanzato, basato su modelli linguistici #gloss[LLM] (Large Language Models), pensato per migliorare la comunicazione tra aziende fornitrici e i loro clienti. Questo assistente virtuale permetterà agli utenti di ottenere rapidamente e in modo intuitivo informazioni dettagliate su prodotti o servizi offerti, eliminando la necessità di contattare direttamente l’azienda.
+Il progetto prevede lo sviluppo di un #gloss[Chatbot] avanzato, basato su modelli linguistici #gloss[LLM] (Large Language Models), pensato per migliorare la comunicazione tra aziende fornitrici e i loro clienti. Questo #gloss[assistente virtuale] permetterà agli utenti di ottenere rapidamente e in modo intuitivo informazioni dettagliate su prodotti o servizi offerti, eliminando la necessità di contattare direttamente l’azienda.
 
 
 Il sistema includerà anche un’interfaccia dedicata per le aziende fornitrici, offrendo strumenti per gestire i clienti e i documenti di riferimento che contengono le informazioni necessarie. Questi documenti saranno utilizzati dal modello linguistico per generare risposte personalizzate e accurate, garantendo un’esperienza utente ottimale. L'intero sistema sarà accessibile tramite una #gloss[Webapp], assicurando una gestione efficiente e una fruizione semplice per tutti gli utenti coinvolti.
@@ -114,9 +114,9 @@ Il processo di fornitura è finalizzato a garantire la realizzazione di un prodo
 === Rapporti con il proponente
 Il gruppo CodeHex16 manterrà un dialogo attivo e regolare con il Proponente per tutta la durata del progetto didattico, con l'obiettivo di raccogliere il maggior numero possibile di #gloss[Feedback] sulla correttezza e qualità del lavoro svolto. La comunicazione si articolerà in due modalità principali:
 
-1 - Scritta (asincrona) utilizzata per comunicazioni di breve durata, condivisione di verbali e materiale informativo e attività di coordinamento;
+1 - Scritta (#gloss[asincrona]) utilizzata per comunicazioni di breve durata, condivisione di verbali e materiale informativo e attività di coordinamento;
 
-2 - Incontri online (sincrona) utilizzati per chiarimenti sul capitolato, approfondimenti relativi ai casi d'uso e requisiti e feedback sul lavoro svolto;
+2 - Incontri online (#gloss[sincrona]) utilizzati per chiarimenti sul capitolato, approfondimenti relativi ai casi d'uso e requisiti e feedback sul lavoro svolto;
 
 Il formato testuale è chiaro, ma ci sono metodi di comunicazione che hanno maggiore fluidità e precisione:
 
@@ -144,8 +144,8 @@ Nel documento #link("https://codehex16.github.io/docs/2%20-%20RTB/Piano-di-Quali
 
 === Strumenti utilizzati
 Per lo svolgimento del progetto abbiamo utilizzato i seguenti strumenti:
-- *Telegram* per la comunicazione all'interno del gruppo;
-- *Discord* per gli incontri interni;
+- *#gloss[Telegram]* per la comunicazione all'interno del gruppo;
+- *#gloss[Discord]* per gli incontri interni;
 - *Zoom* per gli incontri esterni con il referente dell'azienda Ergon Informatica;
 - *GitHub* per organizzare tutti i documenti e file sorgente del progetto tramite un repository;
 - *GitHub Issue* per assegnare task ad ogni membro avendo un rendiconto preciso dei ruoli e delle ore svolte per ogni sprint, con l'assegnazione di label e milestone specifiche;
@@ -199,8 +199,8 @@ Inoltre vanno definite le responsabilità che verranno applicate in fase di codi
 L'approccio utilizzato in questa attività sarà sia top-down, per scomporre il problema in sotto-problemi, sia bottom-up, per ragionare sui singoli sotto-problemi e integrali in una soluzione complessiva.
 
 Al termine di questa attività ci si aspetta di avere un'architettura ben definita che preveda:
-- Backend:
-  - API per l'interazione con l'LLM;
+- #gloss[Backend]:
+  - #gloss[API] per l'interazione con l'LLM;
   - API per l'interazione con il database;
   - beckend per la gestione delle interfacce utente e di configurazione;
 - Frontend:
@@ -319,7 +319,7 @@ Per gestire al meglio le varie issue e la documentazione si è deciso di creare 
 - *Glossario*;
 Inoltre, se più membri del gruppo lavorano allo stesso documento allora viene creato un branch per ogni membro con nome il nome del documento/attività e di chi lo sta svolgendo.
 Quindi in generale la sintassi del nome di un branch è la seguente: *[Titolo]-[Nome-Membro]-[Sprint]*.
-Una volta finito il lavoro da parte di tutti i membri che operano su quel documento, questo viene verificato (tramite pull request) e viene eseguito il merge sul branch main, mentre i branch ausiliari vengono eliminati appena si ha la sicurezza che questi non sono più necessari.\
+Una volta finito il lavoro da parte di tutti i membri che operano su quel documento, questo viene verificato (tramite #gloss[pull request]) e viene eseguito il merge sul branch main, mentre i branch ausiliari vengono eliminati appena si ha la sicurezza che questi non sono più necessari.\
 Altri branch degni di nota sono:
 - *diario-di-bordo*: Utilizzato inserire i diari di bordo nel repository;
 ==== Pull request
