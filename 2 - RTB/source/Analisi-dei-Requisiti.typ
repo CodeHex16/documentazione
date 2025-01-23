@@ -17,6 +17,11 @@
   "Yi Hao Zhuo",
   "Verificatore",
 ), sommario: [Analisi dei requisiti del capitolato C7], versioni: (
+  "0.6.0",
+  "31/01/2025",
+  "Filippo Sabbadin, Luca Ribon",
+  "Aggiunta sezione requisiti, migliorati use case esistenti",
+  "!!VERIFICATORE!!",
   "0.5.0",
   "11/01/2025",
   "Filippo Sabbadin",
@@ -49,6 +54,7 @@
 #show heading: i-figured.reset-counters.with(level: 0)
 #show figure: i-figured.show-figure.with(level: 0)
 #i-figured.outline(title: "Lista di immagini")
+#i-figured.outline(target-kind: table, title: [Lista di tabelle])
 #pagebreak()
 #set page(numbering: "1")
 #counter(page).update(1)
@@ -493,6 +499,10 @@ clienti.
 *Estensioni*
 - Sistema non raggiungibile;
 
+=== UC11.1 - Scrittura messaggio
+=== UC11.2 - Selezione messaggio pre-scritto
+=== UC11.3 - Invio messaggio
+
 == UC12 - Ricezione risposta
 #figure(
   image("../imgs/ricezione-valutazione-risposta.png", width: 80%),
@@ -810,16 +820,77 @@ con:
 //da continuare
 
 == Requisiti funzionali
-#figure(caption: [Requisiti di funzionalità], table(
-  columns: (1.2fr, 2fr, 1.2fr),
-  inset: 8pt,
-  align: center + horizon,
-  fill: (x, y) => if (y == 0) { luma(230) },
-  table.header([*ID Requisito*], [*Descrizione*], [*Fonte*]),
-  "R-01-F",
-  "Descrizione",
-  "UC1",
-  "R-02-F",
-  "",
-  "",
-))
+#show figure: set block(breakable: true)
+#figure(
+  caption: [Requisiti di funzionalità],
+  table(
+    columns: (1.2fr, 2fr, 1.2fr),
+    inset: 8pt,
+    align: center + horizon,
+    fill: (x, y) => if (y == 0) { luma(230) },
+    table.header([*ID Requisito*], [*Descrizione*], [*Fonte*]),
+    "R-01-F",
+    "L'utente deve poter accedere all'applicazione per interagire con questa",
+    "UC1",
+    "R-02-F",
+    "L'utente deve essere in possesso di un indirizzo e-mail già registrato per accedere",
+    "UC1.1",
+    "R-03-F",
+    "L'utente deve essere in possesso di una password valida per accedere",
+    "UC1.2",
+    "R-04-F",
+    "Nel caso l'utente inserisca un indirizzo e-mail non valido, deve ricevere una notifica dall'applicazione che lo notifichi dell'errore",
+    "UC1.3",
+    "R-05-F",
+    "Nel caso l'utente inserisca una password non valida o non corretta, deve ricevere una notifica dall'applicazione che lo notifichi dell'errore",
+    "UC1.4",
+    "R-06-F",
+    "La prima volta che il fornitore deve accedere, deve inserire il suo inidirizzo e-mail con la password fornita dall'amministratore",
+    "UC2",
+    "R-08-F",
+    "La prima volta che il cliente deve accedere, deve inserire il suo inidirizzo e-mail con la password fornita dal fornitore",
+    "UC3",
+    "R-09-F",
+    "Forse ripetitivo....",
+    "UC4 credenziali errate",
+    "R-10-F",
+    "Se l'utente sceglie l'opzione 'Resta connesso' il sistema deve ricordarsi le credenziali al prossimo accesso ed eseguire in automatico l'operazione",
+    "UC5",
+    "R-11-F",
+    "L'applicazione deve fornire la possibilità all'utente di cambiare password, soprattutto dopo il primo login",
+    "UC6",
+    "R-12-F",
+    "L'applicazione deve fornire la possibilità all'utente di recuperare la password nel caso questa venga dimenticata o persa",
+    "UC7",
+    "R-13-F",
+    "",
+    "UC8", //logout
+    "R-14-F",
+    "",
+    "UC9", //vis chat
+    "R-15-F",
+    "",
+    "UC10", //scrittura mess
+    "R-16-F",
+    "",
+    "UC11", //ricezione rispost
+    "R-17-F",
+    "",
+    "UC12", //val risposta
+    "",
+    "",
+    "UC13",
+    "",
+    "",
+    "UC14",
+    "",
+    "",
+    "UC15",
+    "",
+    "",
+    "UC16",
+    "",
+    "",
+    "UC17",
+  ),
+)
