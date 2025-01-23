@@ -57,10 +57,10 @@
 
 == Scopo e Descrizione del Prodotto
 
-Il progetto consiste nella realizzazione di un *#gloss[chatbot]* basato su modelli linguistici (*#gloss[LLM]*) pensato per i *fornitori*
-di beni, come bevande o alimenti, da offrire ai propri clienti. Questo sistema consente ai clienti di ottenere in modo
-semplice e immediato informazioni dettagliate sui prodotti o servizi disponibili, senza la necessità di contattare
-direttamente un operatore dell'azienda.
+Il progetto consiste nella realizzazione di un *#gloss[chatbot]* basato su modelli linguistici (*#gloss[LLM]*) pensato
+per i *fornitori* di beni, come bevande o alimenti, da offrire ai propri clienti. Questo sistema consente ai clienti di
+ottenere in modo semplice e immediato informazioni dettagliate sui prodotti o servizi disponibili, senza la necessità di
+contattare direttamente un operatore dell'azienda.
 
 Il chatbot si integra con un'interfaccia dedicata al #gloss[fornitore], che permette di:
 
@@ -133,9 +133,9 @@ L'applicazione permette di:
 - modificare il colore principale dell'aplicazione (chiaro o scuro)
 
 == Utenti e caratteristiche
-La #gloss[webapp] è rivolta verso ristoratori che vogliono offrire un'assistenza veloce verso i clienti. I ristoratori, dopo
-essersi registrati, possono inserire, modificare ed eliminare informazioni sui propri prodotti. Gli utenti, registrati o
-no, possono poi scrivere al chatbot per richiedere queste informazioni.
+La #gloss[webapp] è rivolta verso ristoratori che vogliono offrire un'assistenza veloce verso i clienti. I ristoratori,
+dopo essersi registrati, possono inserire, modificare ed eliminare informazioni sui propri prodotti. Gli utenti,
+registrati o no, possono poi scrivere al chatbot per richiedere queste informazioni.
 
 = Use Cases
 
@@ -370,9 +370,11 @@ clienti.
 *Precondizioni:*
 - Il sistema ha ricevuto le credenziali inserite dall'utente;
 *Postcondizioni:*
-- Il sistema restituisce un errore indicando che la l'operazione è fallita, con alcune informazioni sul perché del fallimento;
+- Il sistema restituisce un errore indicando che la l'operazione è fallita, con alcune informazioni sul perché del
+  fallimento;
 *Scenario Principale:*
-- Il sistema ha ricevuto le credenziali inserite dall'utente ma queste non sono quelle corrette, pertanto viene visualizzato un messaggio d'errore;
+- Il sistema ha ricevuto le credenziali inserite dall'utente ma queste non sono quelle corrette, pertanto viene
+  visualizzato un messaggio d'errore;
 *Estensioni:*
 - Sistema non raggiungibile;
 
@@ -382,7 +384,8 @@ clienti.
 *Attori secondari:*
 - Sistema;
 *Descrizione:*
-- Un utente vuole mantenere l'accesso attivo al fine di non dover effettuare il login, inserendo le credenziali, ogni volta che ha intenzione di accedere alla web app;
+- Un utente vuole mantenere l'accesso attivo al fine di non dover effettuare il login, inserendo le credenziali, ogni
+  volta che ha intenzione di accedere alla web app;
 *Precondizioni:*
 - Le credenziali dell'utente devono essere presenti nel sistema;
 - L'utente deve essere possedere le credenziali necessarie per l'accesso;
@@ -391,7 +394,8 @@ clienti.
 - È stata salvata la preferenza dell'utente relativa al salvataggio delle credenziali;
 *Scenario Principale:*
 - L'utente inserisce le credenziali
-- Solo se l'utente seleziona l'opzione "Resta connesso", il sistema mantiene in memoria locale le credenziali per un futuro login senza doverle richiedere all'utente;
+- Solo se l'utente seleziona l'opzione "Resta connesso", il sistema mantiene in memoria locale le credenziali per un
+  futuro login senza doverle richiedere all'utente;
 
 == UC7 - Cambio password
 #figure(image("../imgs/cambio-password.png", width: 90%), caption: "Cambio password")
@@ -422,13 +426,15 @@ clienti.
 *Descrizione:*
 - Un utente vuole recuperare la password del proprio account;
 *Precondizioni:*
-- L'utente deve possedere l'e-mail a cui è associato il suo account e inserirla nella sezione apposita così da poter ricevere tramite e-mail la password associata al suo account;
+- L'utente deve possedere l'e-mail a cui è associato il suo account e inserirla nella sezione apposita così da poter
+  ricevere tramite e-mail la password associata al suo account;
 - L'utente ha premuto il pulsante "Passowrd dimenticata";
 *Postcondizioni:*
 - Il sistema invia le istruzioni per il recupero della password se la mail inserita è valida;
 *Scenario Principale:*
 - L'utente invia la richiesta di recupero password inserendo l'e-mail associata al proprio account;
-- Il sistema riceve la richiesta, controlla che l'e-mail sia valida e, se lo è, invia alla e-mail le istruzioni per il recupero della password;
+- Il sistema riceve la richiesta, controlla che l'e-mail sia valida e, se lo è, invia alla e-mail le istruzioni per il
+  recupero della password;
 *Estensioni:*
 - Sistema non raggiungibile;
 - Inserimento password;
@@ -515,7 +521,8 @@ clienti.
 *Attori secondari:*
 - Sistema;
 *Descrizione:*
-- L'utente ha ricevuto la risposta dal chatbot e vuole dare un feedback su tale risposta tramite l'opzione "Pollice su/giù";
+- L'utente ha ricevuto la risposta dal chatbot e vuole dare un feedback su tale risposta tramite l'opzione "Pollice
+  su/giù";
 *Precondizioni:*
 - L'utente deve aver effettuato il login;
 - L'utente deve aver inviato un messaggio al chatbot;
@@ -562,7 +569,8 @@ clienti.
 *Postcondizioni:*
 - Viene modificato limite di tempo di memorizzazione dello storico;
 *Scenario Principale:*
-- Il fornitore modifica il periodo di tempo su cui visualizare lo storico delle chat avvenute con il chatbot e lo conferma;
+- Il fornitore modifica il periodo di tempo su cui visualizare lo storico delle chat avvenute con il chatbot e lo
+  conferma;
 - Il sistema memorizza la nuova impostazione;
 *Estensioni:*
 - Sistema non raggiungibile;
@@ -578,7 +586,8 @@ clienti.
 - Il fornitore deve aver effettuato il login;
 - Il fornitore deve accedere alle impostazioni
 *Postcondizioni:*
-- Il sistema ha effettuato un controllo di validità del formato del logo, e se il logo è risultato valido lo ha inserito nell'interfaccia;
+- Il sistema ha effettuato un controllo di validità del formato del logo, e se il logo è risultato valido lo ha inserito
+  nell'interfaccia;
 *Scenario Principale:*
 - Il fornitore accede alla sezione "Carica logo" e inserisce il proprio logo;
 - Il sistema controlla il formato del logo caricato e se conforme lo utilizza nell'interaccia;
@@ -591,14 +600,16 @@ clienti.
 *Attori secondari:*
 - Fornitore;
 *Descrizione:*
-- Il fornitore ha cercato di caricare il proprio logo tramite l'opzione "Carica logo", ma il logo è in un formato non valido/supportato;
+- Il fornitore ha cercato di caricare il proprio logo tramite l'opzione "Carica logo", ma il logo è in un formato non
+  valido/supportato;
 *Precondizioni:*
 - Il fornitore ha caricato un logo;
 - Il sistema ha ricevuto il logo caricato;
 *Postcondizioni:*
 - Viene inviato un messaggio d'errore al fornitore;
 *Scenario Principale:*
-- Il sistema riceve il logo caricato dal fornitore e dopo aver verificato che il formato non è valido, invia un messaggio d'errore al fornitore;
+- Il sistema riceve il logo caricato dal fornitore e dopo aver verificato che il formato non è valido, invia un messaggio
+  d'errore al fornitore;
 
 == UC18 - Selezione palette colori
 *Attori principali:*
@@ -614,7 +625,8 @@ clienti.
 - Il sistema ha modificato l'interfaccia con la palette di colori scelta il fornitore;
 *Scenario Principale:*
 - Il fornitore entra nella sezione "Palette colori";
-- Il fornitore sceglie l'insieme di colori che comporranno la palette tramite un #gloss[color picker] oppure inserendo i codici esadecimali dei colori, se dei colori non vengono scelti vengono mantenuti i colori di della palette precedente;
+- Il fornitore sceglie l'insieme di colori che comporranno la palette tramite un #gloss[color picker] oppure inserendo i
+  codici esadecimali dei colori, se dei colori non vengono scelti vengono mantenuti i colori di della palette precedente;
 - Il fornitore salva le scelte effettuate;
 - Il sistema modifica l'interfaccia con i colori scelti dal fornitore;
 
@@ -637,7 +649,8 @@ clienti.
 - Vengono mostrate le statistiche relative alle interazioni tra clienti e chatbot;
 *Scenario Principale*:
 - Il fornitore accede alla sezione "Statistiche";
-- Il sistema mostra le statistiche relative alle interazioni tra clienti e chatbot, se necessario tramite grafici o tabelle;
+- Il sistema mostra le statistiche relative alle interazioni tra clienti e chatbot, se necessario tramite grafici o
+  tabelle;
 *Estensioni*:
 - Inserimento filtri di visualizzazione;
 - Sistema non raggiungibile;
@@ -687,7 +700,8 @@ clienti.
 *Attori secondari:*
 - Fornitore;
 *Descrizione:*
-- Un fornitore autenticato vuole aggiungere un account per un cliente in modo che quest'ultimo possa accedere al chatbot, ma inserisce dei parametri non validi;
+- Un fornitore autenticato vuole aggiungere un account per un cliente in modo che quest'ultimo possa accedere al chatbot,
+  ma inserisce dei parametri non validi;
 *Precondizioni:*
 - Il sistema ha ricevuto i parametri dell'account inseriti dal fornitore;
 *Postcondizioni:*
@@ -703,7 +717,8 @@ clienti.
 * Attori secondari:*
 - Fornitore;
 *Descrizione:*
-- Un fornitore autenticato vuole aggiungere un account per un cliente in modo che quest'ultimo possa accedere al chatbot, ma tenta di inserisce un account già esistente;
+- Un fornitore autenticato vuole aggiungere un account per un cliente in modo che quest'ultimo possa accedere al chatbot,
+  ma tenta di inserisce un account già esistente;
 *Precondizioni:*
 - Il sistema ha ricevuto i parametri dell'account inseriti dal fornitore;
 *Postcondizioni:*
@@ -719,14 +734,18 @@ clienti.
 *Attori secondari:*
 - Sistema;
 *Descrizione*
-- Un fornitore autenticato vuole eliminare un account di un cliente in modo che quest'ultimo non possa più accedere al chatbot. In questo caso non vengono gestiti i corner case in cui il fornitore elimina un account non esistente o selezionando credenziali errate, poiché i metodi di selezione dell'account da eliminare costringono il fornitore ad eliminare solo account esistenti;
+- Un fornitore autenticato vuole eliminare un account di un cliente in modo che quest'ultimo non possa più accedere al
+  chatbot. In questo caso non vengono gestiti i corner case in cui il fornitore elimina un account non esistente o
+  selezionando credenziali errate, poiché i metodi di selezione dell'account da eliminare costringono il fornitore ad
+  eliminare solo account esistenti;
 *Precondizioni:*
 - Il fornitore deve aver effettuato il login;
 - Il fornitore deve accedere alla sezione "Gestione account clienti";
 *Postcondizioni:*
 - Viene eliminato un account di un cliente;
 *Scenario Principale:*
-- Il fornitore seleziona l'account del cliente da eliminare tra una lista di quelli disponibili, oppure usa il bottone di eliminazione relativo ad un account specifico tra quelli visualizzati;
+- Il fornitore seleziona l'account del cliente da eliminare tra una lista di quelli disponibili, oppure usa il bottone di
+  eliminazione relativo ad un account specifico tra quelli visualizzati;
 - Viene richiesta la password del fornitore per confermare l'eliminazione;
 - Il fornitore conferma l'eliminazione dell'account;
 - Il sistema elimina l'account del cliente;
@@ -778,5 +797,29 @@ clienti.
   raggiungibile;
 - Il sistema mostra un messaggio d'errore all'utente tramite il client;
 
+= Requisiti
+In questa sezione vengono elencati i requisiti del capitolato, individuati durante la fase di analisi. Ogni #gloss[requisito] viene
+identificato da un codice, scelto in base ai seguenti parametri:
+#align(center, [*R - [numero] - [tipo]*])
+con:
+- *Numero*: numero progressivo composto da due cifre, parte da 01.\
+- *Tipo*: può essere:
+  - *F*: funzionale, indica una funzione del sistema;\
+  - *Q*: qualità, definisce le caratteristiche della qualità del prodotto;\
+  - *V*: vincolo, limiti e restrizioni imposte dal capitolato che bisogna rispettare;\
+//da continuare
 
-// TODO: use case cliente login...
+== Requisiti funzionali
+#figure(caption: [Requisiti di funzionalità], table(
+  columns: (1.2fr, 2fr, 1.2fr),
+  inset: 8pt,
+  align: center + horizon,
+  fill: (x, y) => if (y == 0) { luma(230) },
+  table.header([*ID Requisito*], [*Descrizione*], [*Fonte*]),
+  "R-01-F",
+  "Descrizione",
+  "UC1",
+  "R-02-F",
+  "",
+  "",
+))
