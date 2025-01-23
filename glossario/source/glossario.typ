@@ -5,14 +5,16 @@
     data: [12/11/2024],
     ruoli: (
         "Filippo Sabbadin","Verificatore",
-        "Matteo Bazzan","Redattore",
-        "Luca Ribon","Responsabile",
+        "Matteo Bazzan","Redattore, Verificatore",
+        "Luca Ribon","Verificatore",
         "Francesco Fragonas","Verificatore",
         "Gabriele Magnelli","Verificatore",
-        "Luca Rossi", "Verificatore",
-        "Yi Hao Zhuo", "Verificatore"
+        "Luca Rossi", "Redattore, Verificatore",
+        "Yi Hao Zhuo", "Redattore, Verificatore"
     ),
     versioni : (
+        "0.5.1","24/01/2025","Luca Rossi","Correzioni a seguito della verifica","Ribon Luca",
+        "0.5.0","18/01/2025","Luca Rossi","Aggiornamento glossario","Ribon Luca",
         "0.4.0","24/12/2024","Matteo Bazzan","Aggiornamento glossario","Filippo Sabbadin",
         "0.3.0","11/12/2024","Yi Hao Zhuo","Aggiornamento glossario","Matteo Bazzan",
         "0.2.0","26/11/2024","Yi Hao Zhuo","Aggiunta link glossario","Luca Rossi",
@@ -147,7 +149,9 @@ Uno standard è un insieme di regole, linee guida o specifiche che definiscono u
 == Sincrona
 La sincronia è un paradigma di programmazione in cui le operazioni vengono eseguite in modo sequenziale e sincronizzato. In un sistema sincrono, le operazioni vengono eseguite in modo ordinato e coordinato, garantendo che una operazione venga completata prima che ne inizi un'altra. La sincronia è utilizzata per gestire operazioni che dipendono l'una dall'altra o che richiedono un'elaborazione sequenziale.
 == Suppl-AI
-Nome del nostro prodotto
+Nome del nostro prodotto scelto perché racchiude i concetti di:
+- supply: richiama il target dell’utenza di questa webapp, ovvero fornitori che offrono questo chatbot ai loro clienti;
+- AI: richiama il modello LLM con cui ci si interfaccia tramite chatbot;
 == Svelte
 Framework JavaScript per lo sviluppo di interfacce utente, che consente di scrivere codice reattivo compilato in JavaScript ottimizzato, migliorando le prestazioni delle applicazioni web.
 = T
