@@ -52,8 +52,7 @@ Strumento software per selezionare e gestire colori tramite una tavolozza o valo
 == Committente
 Il committente è l'ente o l'organizzazione che commissiona un progetto o un servizio e ne definisce gli obiettivi e i requisiti. Il committente può essere un'azienda, un'istituzione, un'organizzazione non governativa o un individuo che ha interesse a realizzare un progetto specifico. Il committente è responsabile della definizione delle esigenze, del finanziamento e del monitoraggio del progetto.
 == Context window
-La quantità di informazioni o dati che un sistema può considerare contemporaneamente per prendere decisioni o generare risposte.
-Maximum number of combined input & output tokens. Output tokens commonly have a significantly lower limit (varied by model).
+La quantità massima di token che un modello di linguaggio può elaborare contemporaneamente come input, comprendendo sia il testo di ingresso che il testo generato fino a quel momento. Determina quanto contesto il modello può considerare per generare risposte accurate.
 = D
 == Discord
 Discord è un'applicazione di chat vocale e testuale progettata per i giocatori. Offre funzionalità avanzate come chat di gruppo, canali vocali, bot personalizzati e molto altro. Discord è ampiamente utilizzato per la comunicazione in tempo reale tra i membri di un team di sviluppo.
@@ -126,7 +125,7 @@ Unità di testo generate da un modello di intelligenza artificiale come risposta
 == Piano di Progetto
 Il piano di progetto è un documento che definisce gli obiettivi, le attività, le risorse e la pianificazione temporale di un progetto. Il piano di progetto fornisce una roadmap dettagliata per la realizzazione del progetto, stabilendo le fasi, le milestone, le scadenze e le responsabilità dei membri del team. Il piano di progetto è uno strumento fondamentale per gestire e monitorare l'avanzamento del progetto e garantire il rispetto degli obiettivi prefissati.
 == PoC (Proof of Concept)
-Una dimostrazione pratica che ha lo scopo di verificare la fattibilità o il potenziale di un'idea, concetto o soluzione, spesso utilizzata nelle fasi iniziali di un progetto.
+Una dimostrazione pratica che ha lo scopo di verificare la fattibilità o il potenziale di un'idea, concetto o soluzione. È spesso utilizzata nelle fasi iniziali di un progetto per validare il funzionamento teorico e pratico, incluso il modo in cui diverse componenti del sistema possono integrarsi tra loro per raggiungere l'obiettivo prefissato.
 == Practice
 Il termine practice si riferisce a un'attività o un insieme di attività che vengono eseguite regolarmente per migliorare le competenze e le capacità di un individuo o di un team. Le practice possono essere utilizzate per acquisire esperienza, consolidare le conoscenze e sviluppare abilità specifiche in un determinato campo. Le practice possono essere individuali o collettive e possono essere applicate in diversi contesti, come lo sviluppo software, la gestione dei progetti e la formazione.
 == Proponente
@@ -148,7 +147,7 @@ Uno standard è un insieme di regole, linee guida o specifiche che definiscono u
 == Sincrona
 La sincronia è un paradigma di programmazione in cui le operazioni vengono eseguite in modo sequenziale e sincronizzato. In un sistema sincrono, le operazioni vengono eseguite in modo ordinato e coordinato, garantendo che una operazione venga completata prima che ne inizi un'altra. La sincronia è utilizzata per gestire operazioni che dipendono l'una dall'altra o che richiedono un'elaborazione sequenziale.
 == Suppl-AI
-Sistema o piattaforma basata sull'intelligenza artificiale progettata per supportare e migliorare processi, attività o decisioni in vari ambiti.
+Nome del nostro prodotto
 == Svelte
 Framework JavaScript per lo sviluppo di interfacce utente, che consente di scrivere codice reattivo compilato in JavaScript ottimizzato, migliorando le prestazioni delle applicazioni web.
 = T
