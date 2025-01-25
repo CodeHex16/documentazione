@@ -815,7 +815,8 @@ con:
 - *Numero*: numero progressivo composto da due cifre, parte da 01.\
 - *Tipo*: può essere:
   - *F*: funzionale, indica una funzione del sistema;\
-  - *Q*: qualità, definisce le caratteristiche della qualità del prodotto;\
+  - *Q*: qualità, definisce le caratteristiche della qualità del prodotto, definisce come un sistema deve essere, o come il
+    sistema deve esibirsi, per soddisfare le esigenze dell'utente.\
   - *V*: vincolo, limiti e restrizioni imposte dal capitolato che bisogna rispettare;\
 //da continuare
 
@@ -851,8 +852,19 @@ con:
     "La prima volta che il cliente deve accedere, deve inserire il suo inidirizzo e-mail con la password fornita dal fornitore",
     "UC3",
     "R-09-F",
-    "Forse ripetitivo....",
-    "UC4 credenziali errate",
+    "
+
+
+
+
+                Forse ripetitivo....
+
+
+
+
+
+                ",
+    "UC4",
     "R-10-F",
     "Se l'utente sceglie l'opzione 'Resta connesso' il sistema deve ricordarsi le credenziali al prossimo accesso ed eseguire in automatico l'operazione",
     "UC5",
@@ -863,34 +875,85 @@ con:
     "L'applicazione deve fornire la possibilità all'utente di recuperare la password nel caso questa venga dimenticata o persa",
     "UC7",
     "R-13-F",
-    "",
-    "UC8", //logout
+    "L'applicazione deve fornire la possibilità all'utente di poter uscire dal suo account",
+    "UC8",
     "R-14-F",
-    "",
+    "L'applicazione deve dare la possibilità all'utente di poter vedere la cronologia della chat",
     "UC9", //vis chat
     "R-15-F",
-    "",
+    "L'applicazione deve permettere all'utente di poter scrivere messaggi al chatbot",
     "UC10", //scrittura mess
     "R-16-F",
-    "",
+    "Alla ricezione di un messaggio, il chatbot manda una risposta in base al contenuto del messaggio dell'utente",
     "UC11", //ricezione rispost
     "R-17-F",
-    "",
+    "L'applicazione dà la possibilità all'utente di valutare le risposte ricevute in base alla qualità",
     "UC12", //val risposta
-    "",
-    "",
-    "UC13",
-    "",
-    "",
-    "UC14",
-    "",
-    "",
-    "UC15",
-    "",
-    "",
-    "UC16",
-    "",
-    "",
-    "UC17",
+    "R-18-F",
+    "L'applicazione offre la possibilità all'utente di cambiare il colore principale del sito",
+    "UC13", // dark light
+    "R-19-F",
+    "L'applicazione offre la possibilità al fornitore di poter cambiare la durata dello storico delle chat",
+    "UC14", // durata storico chat
+    "R-20-F",
+    "L'applicazione offre la possibilità al fornitore di poter caricare il proprio logo",
+    "UC15", // carica logo
+    "R-21-F",
+    "Nel caso il logo caricato dal fornitore non sia valido, l'applicazione deve avvisare il fornitore che il logo non è valido",
+    "UC16", // logo non valido
+    "R-22-F",
+    "L'applicazione offre la possibilità al fornitore di cambiare i colori principali della sua chat",
+    "UC17", // palette colori
+    "R-23-F",
+    "L'applicazione deve permettere al fornitore un modo per poter visualizzare le statistiche del chatbot",
+    "UC18", // statistiche domanda risposta
+    "R-24-F",
+    "L'applicazione deve permettere al fornitore la possibilità di filtrare le statistiche relative alle interazioni tra clienti e chatbot",
+    "UC19", // filtri vis
+    "R-25-F",
+    "L'applicazione offre al fornitore la possibilità di aggiungere account clienti",
+    "UC20", // agg account cliente
+    "R-26-F",
+    "Nel caso i parametri inseriti per la registrazione di un cliente siano errati, l'applicazione deve avvisare il fornitore",
+    "UC21", // inserimento par account non validi
+    "R-27-F",
+    "Nel caso il fornitore stia aggiungendo un account cliente già esistente, l'applicazione deve avvisare il fornitore",
+    "UC22", // ins account già esistente
+    "R-28-F",
+    "L'applicazione deve dare la possibilità al fornitore di poter eliminare un account cliente",
+    "UC23", // eliminazione account cliente
+    "R-29-F",
+    "Nel caso la password inserita per un nuovo account cliente non sia valida, l'applicazione deve avvisare il fornitore",
+    "UC24", // password sceta non valida
+    "R-30-F",
+    "Nel caso l'applicazione non sia raggiungibile per vari motivi, l'applicazione o sistema deve avvisare l'utente",
+    "UC25", // sistema non raggiungibile
   ),
 )
+
+== Requisiti di qualità
+
+// NOTA: qua bisogna scrivere requisit piu generali che
+// o sono stabiliti dal capitolato
+// o sono stabiliti da noi
+// la fonte puo essere capitolato o interno
+#show figure: set block(breakable: true)
+#figure(caption: [Requisiti di qualità], table(
+  columns: (1.2fr, 2fr, 1.2fr),
+  inset: 8pt,
+  align: center + horizon,
+  fill: (x, y) => if (y == 0) { luma(230) },
+  table.header([*ID Requisito*], [*Descrizione*], [*Fonte*]),
+  "R-01-Q",
+  "Bisogna consegnare un documento contenente l'analisi dei requisiti con dei grafici UML",
+  "Capitolato",
+  "R-02-Q",
+  "Tutto il codice e documentazione vanno salvati all'interno di una repository ordinata",
+  "Interno",
+  "R-03-Q",
+  "",
+  "",
+  "R-04-Q",
+  "",
+  "",
+))
