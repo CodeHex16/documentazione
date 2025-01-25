@@ -810,7 +810,7 @@ clienti.
 = Requisiti
 In questa sezione vengono elencati i requisiti del capitolato, individuati durante la fase di analisi. Ogni #gloss[requisito] viene
 identificato da un codice, scelto in base ai seguenti parametri:
-#align(center, [*R - [numero] - [tipo]*])
+#align(center, [*R - [numero] - [tipo] - [Priorità]*])
 con:
 - *Numero*: numero progressivo composto da due cifre, parte da 01.\
 - *Tipo*: può essere:
@@ -818,6 +818,9 @@ con:
   - *Q*: qualità, definisce le caratteristiche della qualità del prodotto, definisce come un sistema deve essere, o come il
     sistema deve esibirsi, per soddisfare le esigenze dell'utente.\
   - *V*: vincolo, limiti e restrizioni imposte dal capitolato che bisogna rispettare;\
+- *Priorità*: può essere:
+  - *O*: Obbligatorio
+  - *D*: Desiderabile//era facoltativo prima
 //da continuare
 
 == Requisiti funzionali
@@ -830,102 +833,102 @@ con:
     align: center + horizon,
     fill: (x, y) => if (y == 0) { luma(230) },
     table.header([*ID Requisito*], [*Descrizione*], [*Fonte*]),
-    "R-01-F",
+    "R-01-F-O",
     "L'utente deve poter accedere all'applicazione per interagire con questa",
     "UC1",
-    "R-02-F",
+    "R-02-F-O",
     "L'utente deve essere in possesso di un indirizzo e-mail già registrato per accedere",
     "UC1.1",
-    "R-03-F",
+    "R-03-F-O",
     "L'utente deve essere in possesso di una password valida per accedere",
     "UC1.2",
-    "R-04-F",
+    "R-04-F-D",
     "Nel caso l'utente inserisca un indirizzo e-mail non valido, deve ricevere una notifica dall'applicazione che lo notifichi dell'errore",
     "UC1.3",
-    "R-05-F",
+    "R-05-F-D",
     "Nel caso l'utente inserisca una password non valida o non corretta, deve ricevere una notifica dall'applicazione che lo notifichi dell'errore",
     "UC1.4",
-    "R-06-F",
+    "R-06-F-O",
     "La prima volta che il fornitore deve accedere, deve inserire il suo inidirizzo e-mail con la password fornita dall'amministratore",
     "UC2",
-    "R-08-F",
+    "R-08-F-O",
     "La prima volta che il cliente deve accedere, deve inserire il suo inidirizzo e-mail con la password fornita dal fornitore",
     "UC3",
-    "R-09-F",
+    "R-09-F-D",
     "
 
 
 
 
-                Forse ripetitivo....
+                                                                        Forse ripetitivo....
 
 
 
 
 
-                ",
+                                                                        ",
     "UC4",
-    "R-10-F",
+    "R-10-F-D",
     "Se l'utente sceglie l'opzione 'Resta connesso' il sistema deve ricordarsi le credenziali al prossimo accesso ed eseguire in automatico l'operazione",
     "UC5",
-    "R-11-F",
+    "R-11-F-O",
     "L'applicazione deve fornire la possibilità all'utente di cambiare password, soprattutto dopo il primo login",
     "UC6",
-    "R-12-F",
+    "R-12-F-D",
     "L'applicazione deve fornire la possibilità all'utente di recuperare la password nel caso questa venga dimenticata o persa",
     "UC7",
-    "R-13-F",
+    "R-13-F-O",
     "L'applicazione deve fornire la possibilità all'utente di poter uscire dal suo account",
     "UC8",
-    "R-14-F",
+    "R-14-F-O",
     "L'applicazione deve dare la possibilità all'utente di poter vedere la cronologia della chat",
     "UC9", //vis chat
-    "R-15-F",
+    "R-15-F-O",
     "L'applicazione deve permettere all'utente di poter scrivere messaggi al chatbot",
     "UC10", //scrittura mess
-    "R-16-F",
+    "R-16-F-O",
     "Alla ricezione di un messaggio, il chatbot manda una risposta in base al contenuto del messaggio dell'utente",
     "UC11", //ricezione rispost
-    "R-17-F",
+    "R-17-F-O",
     "L'applicazione dà la possibilità all'utente di valutare le risposte ricevute in base alla qualità",
     "UC12", //val risposta
-    "R-18-F",
+    "R-18-F-D",
     "L'applicazione offre la possibilità all'utente di cambiare il colore principale del sito",
     "UC13", // dark light
-    "R-19-F",
+    "R-19-F-O",
     "L'applicazione offre la possibilità al fornitore di poter cambiare la durata dello storico delle chat",
     "UC14", // durata storico chat
-    "R-20-F",
+    "R-20-F-O",
     "L'applicazione offre la possibilità al fornitore di poter caricare il proprio logo",
     "UC15", // carica logo
-    "R-21-F",
+    "R-21-F-D",
     "Nel caso il logo caricato dal fornitore non sia valido, l'applicazione deve avvisare il fornitore che il logo non è valido",
     "UC16", // logo non valido
-    "R-22-F",
+    "R-22-F-D",
     "L'applicazione offre la possibilità al fornitore di cambiare i colori principali della sua chat",
     "UC17", // palette colori
-    "R-23-F",
+    "R-23-F-D",
     "L'applicazione deve permettere al fornitore un modo per poter visualizzare le statistiche del chatbot",
     "UC18", // statistiche domanda risposta
-    "R-24-F",
+    "R-24-F-D",
     "L'applicazione deve permettere al fornitore la possibilità di filtrare le statistiche relative alle interazioni tra clienti e chatbot",
     "UC19", // filtri vis
-    "R-25-F",
+    "R-25-F-O",
     "L'applicazione offre al fornitore la possibilità di aggiungere account clienti",
     "UC20", // agg account cliente
-    "R-26-F",
+    "R-26-F-D",
     "Nel caso i parametri inseriti per la registrazione di un cliente siano errati, l'applicazione deve avvisare il fornitore",
     "UC21", // inserimento par account non validi
-    "R-27-F",
+    "R-27-F-D",
     "Nel caso il fornitore stia aggiungendo un account cliente già esistente, l'applicazione deve avvisare il fornitore",
     "UC22", // ins account già esistente
-    "R-28-F",
+    "R-28-F-O",
     "L'applicazione deve dare la possibilità al fornitore di poter eliminare un account cliente",
     "UC23", // eliminazione account cliente
-    "R-29-F",
+    "R-29-F-D",
     "Nel caso la password inserita per un nuovo account cliente non sia valida, l'applicazione deve avvisare il fornitore",
     "UC24", // password sceta non valida
-    "R-30-F",
+    "R-30-F-D",
     "Nel caso l'applicazione non sia raggiungibile per vari motivi, l'applicazione o sistema deve avvisare l'utente",
     "UC25", // sistema non raggiungibile
   ),
@@ -944,16 +947,65 @@ con:
   align: center + horizon,
   fill: (x, y) => if (y == 0) { luma(230) },
   table.header([*ID Requisito*], [*Descrizione*], [*Fonte*]),
-  "R-01-Q",
+  "R-01-Q-O",
   "Bisogna consegnare un documento contenente l'analisi dei requisiti con dei grafici UML",
   "Capitolato",
-  "R-02-Q",
+  "R-02-Q-O",
   "Tutto il codice e documentazione vanno salvati all'interno di una repository ordinata",
   "Interno",
   "R-03-Q",
   "",
   "",
-  "R-04-Q",
+))
+
+== Requisiti di vincolo
+
+#show figure: set block(breakable: true)
+#figure(caption: [Requisiti di vincolo], table(
+  columns: (1.2fr, 2fr, 1.2fr),
+  inset: 8pt,
+  align: center + horizon,
+  fill: (x, y) => if (y == 0) { luma(230) },
+  table.header([*ID Requisito*], [*Descrizione*], [*Fonte*]),
+  "R-01-V-O",
+  "Per l'integrazione con il chatbot, verrà utilizzato il linguaggio di programmazione Python",
+  "Capitolato",
+  "R-02-V-O",
+  "Per il frontend viene utilizzato il framework Svelte",
+  "Interno",
+))
+
+== Tracciamento fonti-requisiti
+#show figure: set block(breakable: true)
+#figure(caption: [Tracciamento fonti-requisiti], table(
+  columns: (1.2fr, 2fr, 1.2fr),
+  inset: 8pt,
+  align: center + horizon,
+  fill: (x, y) => if (y == 0) { luma(230) },
+  table.header([*ID Requisito*], [*Descrizione*], [*Fonte*]),
   "",
   "",
+  "",
+))
+== Riepilogo
+#show figure: set block(breakable: true)
+#figure(caption: [Riepilogo], table(
+  columns: (1fr, 0.5fr, 0.5fr, 0.5fr),
+  inset: 8pt,
+  align: center + horizon,
+  fill: (x, y) => if (y == 0) { luma(230) },
+  table.header([*Tipo di requisiti*], [*Obbligatori*], [*Desiderabili*], [*Totale*]),
+  "Funzionali",
+  "",
+  "",
+  "",
+  "Qualità",
+  "",
+  "",
+  "",
+  "Vincolo",
+  "",
+  "",
+  "",
+  "Totale",
 ))
