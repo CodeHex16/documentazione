@@ -412,7 +412,7 @@ Inoltre è stato svolto un *incontro online* con il referente dell'azienda Ergon
 === Sprint 5
 *Intervallo temporale* : 23/12/2024 - 06/01/2025
 
-Con lo *Sprint 5* il team ha scelto in modo definitivo il nome della webapp e sarà: *Suppl-AI* nome scelto dalla fusione delle parole "Supply"(fornitura) e "AI"(Artificial Intelligence) e si è deciso il framework da usare per la parte frontend della webapp, cioè *Svelte*.
+Con lo *Sprint 5* il team ha scelto in modo definitivo il nome della webapp e sarà: *#gloss[Suppl-AI]* nome scelto dalla fusione delle parole "Supply"(fornitura) e "AI"(Artificial Intelligence) e si è deciso il framework da usare per la parte frontend della webapp, cioè *Svelte*.
 
 Inoltre, per essere il più efficiente possibile, il team non ha seguito la rotazione circolare dei ruoli, ma questi sono stati assegnati in base alle attività svolte precedentemente da ogni membro del gruppo. 
 
