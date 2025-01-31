@@ -21,6 +21,7 @@
     sommario: [],
     
     versioni : (
+      "0.5.0","17-01-2025","Gabriele Magnelli","Aggiunto descrizione Sprint 5 e correzione immagine Sprint 4", "Luca Rossi",
       "0.4.0","05/01/2025","Francesco Fragonas","Aggiunta sezione Pianificazione del lavoro e Periodi di sviluppo", "Yi Hao Zhuo",
       "0.3.0","18/12/2024","Francesco Fragonas","Aggiunta sezione analisi dei rischi", "Filippo Sabbadin",
       "0.2.0","05/12/2024","Luca Rossi","Aggiunta sezione preventivo", "Matteo Bazzan",
@@ -403,6 +404,39 @@ Inoltre è stato svolto un *incontro online* con il referente dell'azienda Ergon
 
 #figure(
   image("../imgs/sprint4-grafico.png", width: 100%),
+  caption: [
+    Suddivisione oraria per ruolo con relativi costi.
+  ],
+)
+
+=== Sprint 5
+*Intervallo temporale* : 23/12/2024 - 06/01/2025
+
+Con lo *Sprint 5* il team ha scelto in modo definitivo il nome della webapp e sarà: *Suppl-AI* nome scelto dalla fusione delle parole "Supply"(fornitura) e "AI"(Artificial Intelligence) e si è deciso il framework da usare per la parte frontend della webapp, cioè *Svelte*.
+
+Inoltre, per essere il più efficiente possibile, il team non ha seguito la rotazione circolare dei ruoli, ma questi sono stati assegnati in base alle attività svolte precedentemente da ogni membro del gruppo. 
+
+In generale, durante questo sprint, si è continuata la stesura dei documenti principali del progetto.
+
+#pseudoheading[*Attività svolte*]
+
+- *Stesura Norme di Progetto*: Continuazione della stesura del documento, con un focus sulla definizione dei ruoli;
+- *Stesura Piano di Progetto*: Continuazione della stesura del documento concentrandosi nelle sezioni pianificazione del lavoro e periodi di sviluppo ;
+- *Stesura Piano di Qualifica*: Inizio stesura del documento e in particolare iniziando a definire le metriche di qualità;
+- *Aggiornamento Glossario*: Revisione e aggiornamento dei termini tecnici sulla base del lavoro svolto nello Sprint 5;
+- *Continuazione definizione Use Case dell’interfaccia cliente e fornitore*: Proseguimento nella definizione degli use case del sistema, con particolare attenzione alle interfacce cliente e fornitore;
+
+#pseudoheading[*Ruoli ricoperti e ore svolte*]
+
+#figure(
+  image("../imgs/sprint5-tabella.png", width: 100%),
+  caption: [
+    Suddivisione oraria per membro e ruolo.
+  ],
+)
+
+#figure(
+  image("../imgs/sprint5-grafico.png", width: 100%),
   caption: [
     Suddivisione oraria per ruolo con relativi costi.
   ],
