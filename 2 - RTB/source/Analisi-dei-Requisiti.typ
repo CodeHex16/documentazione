@@ -461,8 +461,8 @@ clienti.
 - L'utente preme il pulsante di logout;
 - Il sistema riceve la richiesta di logout e disconnette l'utente dal sistema;
 
-// Yihao: la lista de chat non viene mostrato direttamente da pagina principale??
-== UC10 - Visualizzazione delle chat
+//Modificato nello sprint 7
+== UC10 - Visualizzazione della lista delle chat
 #figure(
   image("../imgs/visualizzazione-scrittura-messaggio.png", width: 80%),
   caption: "Visualizzazione ed invio dei messaggi",
@@ -473,13 +473,48 @@ clienti.
 - Un utente vuole visualizzare le chat avute con il chatbot;
 *Precondizioni:*
 - L'utente deve aver effettuato il login;
-- L'utente preme sul pulsante "Visualizza chat";
 *Postcondizioni:*
-- L'utente accede alla sezione "Visualizza chat";
+- L'utente visualizza la #gloss[homepage] con la lista delle chat;
 *Scenario Principale:*
-- L'utente preme sul pulsante "Visuallizza chat", quindi accede alla sezione corrispondente;
+- L'utente vede la lista di tutte le chat;
 *Estensioni:*
 - Sistema non raggiungibile;
+
+//Filippo: Use case aggiunti nello sprint 7
+/////////////////////////
+
+== UC10.1 - Creazione di una nuova chat
+*Attori principali:*
+- Fornitore/cliente;
+*Descrizione:*
+- Un utente vuole iniziare una nuova chat o iniziare a scrivere con il chatbot;
+*Precondizioni:*
+- L'utente deve aver effettuato il login;
+- L'utente preme sul pulsante per creare una nuova chat;
+*Postcondizioni:*
+- L'utente crea una nuova chat;
+*Scenario Principale:*
+- L'utente seleziona il tasto per creare una nuova chat nella hompage e crea una nuova chat con un nuovo contesto;
+*Estensioni:*
+- Sistema non raggiungibile;
+
+== UC10.2 - Visualizzazione della chat singola
+*Attori principali:*
+- Fornitore/cliente;
+*Descrizione:*
+- Un utente vuole visualizzare la chat selezionata nello use case precedente;
+*Precondizioni:*
+- L'utente deve aver effettuato il login;
+- L'utente preme sul pulsante "Visualizza chat";
+*Postcondizioni:*
+- L'utente visualizza la chat da lui selezionata;
+*Scenario Principale:*
+- L'utente seleziona la chat dalla homepage e visualizza tutto lo storico della chat;
+*Estensioni:*
+- Sistema non raggiungibile;
+
+//Filippo: Sezione modificata sprint 7
+///////////////////////////////////
 
 == UC11 - Scrittura e invio messaggio
 *Attori principali:*
@@ -498,10 +533,59 @@ clienti.
 - Il sistema riceve il messaggio, lo analizza e procede a rispondere;
 *Estensioni*
 - Sistema non raggiungibile;
+*Inclusioni*
+- Scrittura messaggio;
+- Invio messaggio;
+- Selezione messaggio pre-scritto;
 
 === UC11.1 - Scrittura messaggio
+*Attori principali:*
+- Fornitore/cliente;
+*Attori secondari:*
+- Sistema;
+*Descrizione:*
+- Un utente vuole comunicare con il chatbot;
+*Precondizioni:*
+- L'utente deve aver effettuato il login;
+- L'utente deve accedere alla sezione dedicata alla comunicazione con il chatbot;
+*Postcondizioni:*
+- L'utente scrive il messaggio nella barra apposita;
+*Scenario Principale:*
+- L'utente scrive il messaggio abbastanza comprensibile;
+
 === UC11.2 - Selezione messaggio pre-scritto
+*Attori principali:*
+- Fornitore/cliente;
+*Attori secondari:*
+- Sistema;
+*Descrizione:*
+- Un utente vuole comunicare con il chatbot;
+*Precondizioni:*
+- L'utente deve aver effettuato il login;
+- L'utente deve accedere alla sezione dedicata alla comunicazione con il chatbot;
+*Postcondizioni:*
+- L'utente ha sceglto un messaggio consigliato in base al contesto della chat;
+*Scenario Principale:*
+- L'utente, anziché scrivere un messaggio manualmente, decide di selezionare un messaggio consigliato dall'applicazione,
+  scritto in base al contesto;
+
 === UC11.3 - Invio messaggio
+*Attori principali:*
+- Fornitore/cliente;
+*Attori secondari:*
+- Sistema;
+*Descrizione:*
+- Un utente vuole comunicare con il chatbot;
+*Precondizioni:*
+- L'utente deve aver effettuato il login;
+- L'utente deve accedere alla sezione dedicata alla comunicazione con il chatbot;
+- L'utente deve avere un messaggio pronto da inviare;
+*Postcondizioni:*
+- L'utente ha inviato il messaggio;
+*Scenario Principale:*
+- Dopo aver scritto il messaggio o selezionato uno pre-scritto, l'utente invia il messaggio;
+
+/////////////////////////////////////////
 
 == UC12 - Ricezione risposta
 #figure(
@@ -860,13 +944,13 @@ con:
 
 
 
-                                                                        Forse ripetitivo....
+                                                                            Forse ripetitivo....
 
 
 
 
 
-                                                                        ",
+                                                                            ",
     "UC4",
     "R-10-F-D",
     "Se l'utente sceglie l'opzione 'Resta connesso' il sistema deve ricordarsi le credenziali al prossimo accesso ed eseguire in automatico l'operazione",
@@ -887,48 +971,63 @@ con:
     "L'applicazione deve permettere all'utente di poter scrivere messaggi al chatbot",
     "UC10", //scrittura mess
     "R-16-F-O",
+    "",
+    "UC10.1",
+    "R-17-F-O",
+    "",
+    "UC10.2",
+    "R-18-F-O",
     "Alla ricezione di un messaggio, il chatbot manda una risposta in base al contenuto del messaggio dell'utente",
     "UC11", //ricezione rispost
-    "R-17-F-O",
+    "R-19-F-O",
+    "",
+    "UC11.1",
+    "R-20-F-O",
+    "",
+    "UC11.2",
+    "R-21-F-O",
+    "",
+    "UC11.3",
+    "R-22-F-O",
     "L'applicazione dà la possibilità all'utente di valutare le risposte ricevute in base alla qualità",
     "UC12", //val risposta
-    "R-18-F-D",
+    "R-23-F-D",
     "L'applicazione offre la possibilità all'utente di cambiare il colore principale del sito",
     "UC13", // dark light
-    "R-19-F-O",
+    "R-24-F-O",
     "L'applicazione offre la possibilità al fornitore di poter cambiare la durata dello storico delle chat",
     "UC14", // durata storico chat
-    "R-20-F-O",
+    "R-25-F-O",
     "L'applicazione offre la possibilità al fornitore di poter caricare il proprio logo",
     "UC15", // carica logo
-    "R-21-F-D",
+    "R-26-F-D",
     "Nel caso il logo caricato dal fornitore non sia valido, l'applicazione deve avvisare il fornitore che il logo non è valido",
     "UC16", // logo non valido
-    "R-22-F-D",
+    "R-27-F-D",
     "L'applicazione offre la possibilità al fornitore di cambiare i colori principali della sua chat",
     "UC17", // palette colori
-    "R-23-F-D",
+    "R-28-F-D",
     "L'applicazione deve permettere al fornitore un modo per poter visualizzare le statistiche del chatbot",
     "UC18", // statistiche domanda risposta
-    "R-24-F-D",
+    "R-29-F-D",
     "L'applicazione deve permettere al fornitore la possibilità di filtrare le statistiche relative alle interazioni tra clienti e chatbot",
     "UC19", // filtri vis
-    "R-25-F-O",
+    "R-30-F-O",
     "L'applicazione offre al fornitore la possibilità di aggiungere account clienti",
     "UC20", // agg account cliente
-    "R-26-F-D",
+    "R-31-F-D",
     "Nel caso i parametri inseriti per la registrazione di un cliente siano errati, l'applicazione deve avvisare il fornitore",
     "UC21", // inserimento par account non validi
-    "R-27-F-D",
+    "R-32-F-D",
     "Nel caso il fornitore stia aggiungendo un account cliente già esistente, l'applicazione deve avvisare il fornitore",
     "UC22", // ins account già esistente
-    "R-28-F-O",
+    "R-33-F-O",
     "L'applicazione deve dare la possibilità al fornitore di poter eliminare un account cliente",
     "UC23", // eliminazione account cliente
-    "R-29-F-D",
+    "R-34-F-D",
     "Nel caso la password inserita per un nuovo account cliente non sia valida, l'applicazione deve avvisare il fornitore",
     "UC24", // password sceta non valida
-    "R-30-F-D",
+    "R-35-F-D",
     "Nel caso l'applicazione non sia raggiungibile per vari motivi, l'applicazione o sistema deve avvisare l'utente",
     "UC25", // sistema non raggiungibile
   ),
