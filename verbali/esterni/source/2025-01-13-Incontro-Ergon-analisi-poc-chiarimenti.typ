@@ -10,7 +10,7 @@
   data: [13/01/2025],
   ora: [14:00-14:30],
   tipo: "esterno",
-  versioni: ("0.1.0", "13/01/2025", "Gabriele Magnelli", "Prima stesura", "Luca Rossi", "Verificatore"),
+  versioni: ("0.1.0", "13/01/2025", "Gabriele Magnelli", "Prima stesura", "Luca Rossi"),
   presenze: (
     "Matteo Bazzan",
     "Verificatore",
