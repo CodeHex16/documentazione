@@ -3,8 +3,8 @@
 #show : doc => verbale(
     titolo: "Coordinamento Sprint 7",
     ordine-del-giorno: ("Revisione Sprint 6", "Discussione chiavi API fornite", "Discussione architettura base del PoC", "Discussione struttura del repo","Coordinamento per lo Sprint 7"),
-    data: [06/01/2025],
-    ora: [15:30-18:00],
+    data: [22/01/2025],
+    ora: [15:30-17:30],
     tipo: "interno",
     versioni: (
       "0.1.0","22/01/2025","Matteo Bazzan","Prima stesura",""
