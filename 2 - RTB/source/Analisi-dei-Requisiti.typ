@@ -403,6 +403,25 @@ clienti.
 - Solo se l'utente seleziona l'opzione "Resta connesso", il sistema mantiene in memoria locale le credenziali per un
   futuro login senza doverle richiedere all'utente;
 
+== UC??? - Cambio e-mail
+*Attori principali:*
+- Fornitore/cliente;
+*Attori secondari:*
+- Sistema;
+*Descrizione:*
+- Un utente vuole cambiare l'e-mail del proprio account;
+*Precondizioni:*
+- L'utente deve aver effettuato il login;
+- L'utente deve accedere alle impostazioni e alla sezione "Cambio e-mail";
+*Postcondizioni:*
+- Il sistema effettua un controllo sulla validità della e-mail e se valida conferma il cambiamento
+dell'e-mail; *Scenario Principale:*
+- L'utente invia la richiesta di cambio e-mail inserendo la nuova e-mail scelta;
+- Il sistema riceve la richiesta, controlla che la e-mail sia valida e se lo è conferma il cambiamento della e-mail;
+*Estensioni:*
+- Inserimento e-mail;
+- Sistema non raggiungibile;
+
 == UC7 - Cambio password
 #figure(image("../imgs/cambio-password.png", width: 90%), caption: "Cambio password")
 *Attori principali:*
@@ -510,6 +529,22 @@ clienti.
 - L'utente visualizza la chat da lui selezionata;
 *Scenario Principale:*
 - L'utente seleziona la chat dalla homepage e visualizza tutto lo storico della chat;
+*Estensioni:*
+- Sistema non raggiungibile;
+
+== UC10.3 - Eliminazione di una chat
+*Attori principali:*
+- Fornitore/cliente;
+*Descrizione:*
+- Un utente vuole eliminare una chat nella lista delle chat;
+*Precondizioni:*
+- L'utente deve aver effettuato il login;
+- L'utente preme sul pulsante "Elimina chat";
+*Postcondizioni:*
+- L'utente può più visualizzare la chat eliminata;
+*Scenario Principale:*
+- L'utente seleziona la chat dalla homepage e preme il tasto per eliminarla, la chat poi viene cancellata e non può più
+  essere visualizzata;
 *Estensioni:*
 - Sistema non raggiungibile;
 
@@ -904,22 +939,23 @@ con:
   - *V*: vincolo, limiti e restrizioni imposte dal capitolato che bisogna rispettare;\
 - *Priorità*: può essere:
   - *O*: Obbligatorio
-  - *D*: Desiderabile//era facoltativo prima
-//da continuare
+  - *D*: Desiderabile
 
 == Requisiti funzionali
+//Nota i numeri degli UC potrebbero non essere giusti visto che alcuni sono
+//stati modificati
 #show figure: set block(breakable: true)
 #figure(
   caption: [Requisiti di funzionalità],
   table(
-    columns: (1.2fr, 2fr, 1.2fr),
+    columns: (1fr, 2fr, 1fr),
     inset: 8pt,
     align: center + horizon,
     fill: (x, y) => if (y == 0) { luma(230) },
     table.header([*ID Requisito*], [*Descrizione*], [*Fonte*]),
     "R-01-F-O",
     "L'utente deve poter accedere all'applicazione per interagire con questa",
-    "UC1",
+    "UC1", //login
     "R-02-F-O",
     "L'utente deve essere in possesso di un indirizzo e-mail già registrato per accedere",
     "UC1.1",
@@ -934,60 +970,56 @@ con:
     "UC1.4",
     "R-06-F-O",
     "La prima volta che il fornitore deve accedere, deve inserire il suo inidirizzo e-mail con la password fornita dall'amministratore",
-    "UC2",
+    "UC2", //primo login f
     "R-08-F-O",
     "La prima volta che il cliente deve accedere, deve inserire il suo inidirizzo e-mail con la password fornita dal fornitore",
-    "UC3",
+    "UC3", //primo login c
     "R-09-F-D",
     "
 
+                                                                                Forse ripetitivo, abbiamo già password ed email errate...
 
-
-
-                                                                            Forse ripetitivo....
-
-
-
-
-
-                                                                            ",
-    "UC4",
+                                                                                ",
+    "UC4", // credenziali errate
     "R-10-F-D",
     "Se l'utente sceglie l'opzione 'Resta connesso' il sistema deve ricordarsi le credenziali al prossimo accesso ed eseguire in automatico l'operazione",
-    "UC5",
+    "UC5", // reta connesso
     "R-11-F-O",
     "L'applicazione deve fornire la possibilità all'utente di cambiare password, soprattutto dopo il primo login",
-    "UC6",
+    "UC6", // cambio password
     "R-12-F-D",
     "L'applicazione deve fornire la possibilità all'utente di recuperare la password nel caso questa venga dimenticata o persa",
-    "UC7",
+    "UC7", // recupero password
     "R-13-F-O",
     "L'applicazione deve fornire la possibilità all'utente di poter uscire dal suo account",
-    "UC8",
+    "UC8", // logout
     "R-14-F-O",
-    "L'applicazione deve dare la possibilità all'utente di poter vedere la cronologia della chat",
-    "UC9", //vis chat
+    "L'applicazione deve fare vedere all'utente la lista di tutte le chat con contesto diverso",
+    "", // lista chat
     "R-15-F-O",
-    "L'applicazione deve permettere all'utente di poter scrivere messaggi al chatbot",
-    "UC10", //scrittura mess
+    "L'applicazione deve dare la possibilità all'utente di poter creare una nuova chat per iniziare una nuova conversazione con il bot",
+    "", //creazione chat
     "R-16-F-O",
-    "",
-    "UC10.1",
+    "L'applicazione deve dare la possibilità all'utente di poter vedere la cronologia della singola chat selezionata dalla homepage",
+    "", // vis nuova chat
     "R-17-F-O",
-    "",
-    "UC10.2",
+    "L'applicazione deve dare la possibilità all'utente di poter eliminare una chat",
+    "", // eliminazione chat
     "R-18-F-O",
+    "L'applicazione deve permettere all'utente di poter scrivere messaggi al chatbot",
+    "UC10", //scrittura ed invio mess
+    "R-19-F-O",
+    "L'applicazione deve fornire all'utente un modo per poter scrivere un messaggio",
+    "UC10.1", //scrittura mess
+    "R-20-F-D",
+    "L'applicazione può fornire al cliente un set di messaggi già scritti in base al contesto, pronti ad essere inviati",
+    "UC10.2", // prescritto
+    "R-21-F-O",
+    "L'applicazione deve fornire all'utente un modo per inviare il messaggio scritto o scelto",
+    "UC10.3", // invio messaggio
+    "R-22-F-O",
     "Alla ricezione di un messaggio, il chatbot manda una risposta in base al contenuto del messaggio dell'utente",
     "UC11", //ricezione rispost
-    "R-19-F-O",
-    "",
-    "UC11.1",
-    "R-20-F-O",
-    "",
-    "UC11.2",
-    "R-21-F-O",
-    "",
-    "UC11.3",
     "R-22-F-O",
     "L'applicazione dà la possibilità all'utente di valutare le risposte ricevute in base alla qualità",
     "UC12", //val risposta
@@ -1041,7 +1073,7 @@ con:
 // la fonte puo essere capitolato o interno
 #show figure: set block(breakable: true)
 #figure(caption: [Requisiti di qualità], table(
-  columns: (1.2fr, 2fr, 1.2fr),
+  columns: (1fr, 2fr, 1fr),
   inset: 8pt,
   align: center + horizon,
   fill: (x, y) => if (y == 0) { luma(230) },
@@ -1052,7 +1084,7 @@ con:
   "R-02-Q-O",
   "Tutto il codice e documentazione vanno salvati all'interno di una repository ordinata",
   "Interno",
-  "R-03-Q",
+  "",
   "",
   "",
 ))
@@ -1061,7 +1093,7 @@ con:
 
 #show figure: set block(breakable: true)
 #figure(caption: [Requisiti di vincolo], table(
-  columns: (1.2fr, 2fr, 1.2fr),
+  columns: (1fr, 2fr, 1fr),
   inset: 8pt,
   align: center + horizon,
   fill: (x, y) => if (y == 0) { luma(230) },
@@ -1072,27 +1104,33 @@ con:
   "R-02-V-O",
   "Per il frontend viene utilizzato il framework Svelte",
   "Interno",
+  "R-03-V-O",
+  "Viene utilizzato Postgre per la gestione del database",
+  "Interno",
 ))
 
 == Tracciamento fonti-requisiti
 #show figure: set block(breakable: true)
 #figure(caption: [Tracciamento fonti-requisiti], table(
-  columns: (1.2fr, 2fr, 1.2fr),
+  columns: (0.5fr, 0.5fr),
   inset: 8pt,
   align: center + horizon,
   fill: (x, y) => if (y == 0) { luma(230) },
-  table.header([*ID Requisito*], [*Descrizione*], [*Fonte*]),
-  "",
-  "",
-  "",
+  table.header([*Fonte*], [*Requisito*]),
+  "Capitolato",
+  "R-01-V-O",
+  "Interno",
+  "R-02-V-O\nR-03-V-O",
+  "UC1",
+  "R-01-F-O",
 ))
 == Riepilogo
 #show figure: set block(breakable: true)
 #figure(caption: [Riepilogo], table(
-  columns: (1fr, 0.5fr, 0.5fr, 0.5fr),
+  columns: (0.75fr, 0.5fr, 0.5fr, 0.5fr),
   inset: 8pt,
   align: center + horizon,
-  fill: (x, y) => if (y == 0) { luma(230) },
+  fill: (x, y) => if (y == 0 or y == 4) { luma(230) },
   table.header([*Tipo di requisiti*], [*Obbligatori*], [*Desiderabili*], [*Totale*]),
   "Funzionali",
   "",
