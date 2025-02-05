@@ -25,7 +25,7 @@
     "0.2.0",
     "05/02/2025",
     "Matteo Bazzan",
-    "",
+    "Aggiunta metriche di qualità",
     "",
     "0.1.0",
     "08/01/2024",
