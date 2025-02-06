@@ -163,9 +163,8 @@ chatbot; è una generalizzazione di Cliente infatti, oltre a poter accedere al p
 contesto tramite dei documenti aziendali o #gloss[FAQ] e personalizzare graficamente l'interfaccia variando logo e
 palette colori.\
 // TODO: capire se tenerlo ->
-*Sistema*: rappresenta il #gloss[backend] del sistema, incluso quello dell'LLM quando viene interrogato.\
-Quando si parla di *utente* si intende un utente generico che compie operazioni accessibili sia ai fornitori che ai
-clienti.
+// *Sistema*: rappresenta il #gloss[backend] del sistema, incluso quello dell'LLM quando viene interrogato.\
+Quando si parla di *utente* si intende un utente generico che compie operazioni accessibili sia ai fornitori che ai clienti.
 
 #figure(image("../imgs/attori.png", width: 70%), caption: "Lista degli attori")
 
@@ -176,8 +175,6 @@ clienti.
 )
 *Attori principali:*
 - Fornitore/Cliente;
-*Attori secondari:*
-- Sistema;
 *Descrizione:*
 - Un utente vuole accedere alla piattaforma per la configurazione del proprio chatbot e per interagire con esso;
 *Precondizioni:*
@@ -208,8 +205,6 @@ clienti.
 === UC1.1 - Inserimento e-mail
 *Attori principali:*
 - Fornitore/Cliente;
-*Attori secondari:*
-- Sistema;
 *Precondizioni:*
 - L'utente deve essere registrato;
 - L'utente deve essere in possesso della sua e-mail;
@@ -223,8 +218,6 @@ clienti.
 === UC1.2 - Inserimento password
 *Attori principali:*
 - Fornitore/Cliente;
-*Attori secondari:*
-- Sistema;
 *Precondizioni:*
 - L'utente deve essere registrato;
 - L'utente deve essere in possesso della sua password;
@@ -238,8 +231,6 @@ clienti.
 === UC1.3 - E-mail non valida
 *Attori principali:*
 - Fornitore/Cliente;
-*Attori secondari:*
-- Sistema;
 *Precondizioni:*
 - L'utente ha inserito un'e-mail sbagliata;
 *Postcondizioni:*
@@ -251,8 +242,6 @@ clienti.
 === UC1.4 - Password non valida
 *Attori principali:*
 - Fornitore/Cliente;
-*Attori secondari:*
-- Sistema;
 *Precondizioni:*
 - L'utente ha inserito una password sbagliata o che non rispetta le condizioni;
 *Postcondizioni:*
@@ -266,7 +255,6 @@ clienti.
 - Fornitore;
 *Attori secondari:*
 - Amministratore;
-- Sistema;
 *Descrizione:*
 - Un fornitore vuole accedere per la prima volta alla piattaforma a lui dedicata per gestire il suo chatbot ed
   eventualmente utilizzarlo;
@@ -301,8 +289,6 @@ clienti.
 == UC3 - Login cliente
 *Attori principali:*
 - Cliente;
-*Attori secondari:*
-- Sistema;
 *Descrizione:*
 - Un cliente vuole accedere alla piattaforma per interagire con il chatbot del fornitore;
 *Precondizioni:*
@@ -335,7 +321,6 @@ clienti.
 - Cliente;
 *Attori secondari:*
 - Fornitore;
-- Sistema;
 *Descrizione:*
 - Un cliente vuole accedere per la prima volta alla piattaforma per interagire con il chatbot del fornitore;
 *Precondizioni:*
@@ -368,8 +353,6 @@ clienti.
 
 == UC5 - Credenziali errate
 *Attori principali:*
-- Sistema;
-*Attori secondari:*
 - Fornitore/cliente;
 *Descrizione:*
 - Un utente cercando di compiere il login ha inserito delle credenziali errate;
@@ -387,8 +370,6 @@ clienti.
 == UC6 - Possibilità "Resta connesso"
 *Attori principali:*
 - Fornitore/cliente;
-*Attori secondari:*
-- Sistema;
 *Descrizione:*
 - Un utente vuole mantenere l'accesso attivo al fine di non dover effettuare il login, inserendo le credenziali, ogni
   volta che ha intenzione di accedere alla web app;
@@ -406,8 +387,6 @@ clienti.
 == UC??? - Cambio e-mail
 *Attori principali:*
 - Fornitore/cliente;
-*Attori secondari:*
-- Sistema;
 *Descrizione:*
 - Un utente vuole cambiare l'e-mail del proprio account;
 *Precondizioni:*
@@ -426,8 +405,6 @@ dell'e-mail; *Scenario Principale:*
 #figure(image("../imgs/cambio-password.png", width: 90%), caption: "Cambio password")
 *Attori principali:*
 - Fornitore/cliente;
-*Attori secondari:*
-- Sistema;
 *Descrizione:*
 - Un utente vuole cambiare la password del proprio account;
 *Precondizioni:*
@@ -446,8 +423,6 @@ dell'e-mail; *Scenario Principale:*
 #figure(image("../imgs/recupero-password.png", width: 80%), caption: "Recupero password")
 *Attori principali:*
 - Fornitore/cliente;
-*Attori secondari:*
-- Sistema;
 *Descrizione:*
 - Un utente vuole recuperare la password del proprio account;
 *Precondizioni:*
@@ -468,8 +443,6 @@ dell'e-mail; *Scenario Principale:*
 #figure(image("../imgs/logout.png", width: 50%), caption: "Logout")
 *Attori principali:*
 - Forntitore/cliente;
-*Attori secondari:*
-- Sistema;
 *Descrizione:*
 - Un utente vuole effettuare il logout disconnettendosi dal sistema;
 *Precondizioni:*
@@ -554,8 +527,6 @@ dell'e-mail; *Scenario Principale:*
 == UC11 - Scrittura e invio messaggio
 *Attori principali:*
 - Fornitore/cliente;
-*Attori secondari:*
-- Sistema;
 *Descrizione:*
 - Un utente vuole comunicare con il chatbot;
 *Precondizioni:*
@@ -576,8 +547,6 @@ dell'e-mail; *Scenario Principale:*
 === UC11.1 - Scrittura messaggio
 *Attori principali:*
 - Fornitore/cliente;
-*Attori secondari:*
-- Sistema;
 *Descrizione:*
 - Un utente vuole comunicare con il chatbot;
 *Precondizioni:*
@@ -591,8 +560,6 @@ dell'e-mail; *Scenario Principale:*
 === UC11.2 - Selezione messaggio pre-scritto
 *Attori principali:*
 - Fornitore/cliente;
-*Attori secondari:*
-- Sistema;
 *Descrizione:*
 - Un utente vuole comunicare con il chatbot;
 *Precondizioni:*
@@ -607,8 +574,6 @@ dell'e-mail; *Scenario Principale:*
 === UC11.3 - Invio messaggio
 *Attori principali:*
 - Fornitore/cliente;
-*Attori secondari:*
-- Sistema;
 *Descrizione:*
 - Un utente vuole comunicare con il chatbot;
 *Precondizioni:*
@@ -629,8 +594,6 @@ dell'e-mail; *Scenario Principale:*
 )
 *Attori principali:*
 - Fornitore/cliente;
-*Attori secondari:*
-- Sistema;
 *Descrizione:*
 - Il chatbot ha ricevuto un messaggio, lo ha analizzato e procede fornendo una risposta;
 *Precondizioni:*
@@ -647,8 +610,6 @@ dell'e-mail; *Scenario Principale:*
 == UC13 - Valutazione risposta
 *Attori principali:*
 - Fornitore/cliente;
-*Attori secondari:*
-- Sistema;
 *Descrizione:*
 - L'utente ha ricevuto la risposta dal chatbot e vuole dare un feedback su tale risposta tramite l'opzione "Pollice
   su/giù";
@@ -668,8 +629,6 @@ dell'e-mail; *Scenario Principale:*
 #figure(image("../imgs/dark-light-mode.png", width: 50%), caption: "Selezione modalità chiara/scura")
 *Attori principali:*
 - Fornitore/cliente;
-*Attori secondari:*
-- Sistema;
 *Descrizione:*
 - Un utente vuole modificare il tema dell'interfaccia della web-app tramite l'opzione "Dark/Light mode";
 *Precondizioni:*
@@ -685,8 +644,6 @@ dell'e-mail; *Scenario Principale:*
 #figure(image("../imgs/impostazioni-fornitore.png", width: 90%), caption: "Impostazioni fornitore")
 *Attori principali:*
 - Fornitore;
-*Attore secondario:*
-- Sistema;
 *Descrizione:*
 - Il fornitore vuole cambiare limite massimo di tempo per cui viene salvato lo storico delle chat;
 *Precondizioni:*
@@ -695,8 +652,7 @@ dell'e-mail; *Scenario Principale:*
 *Postcondizioni:*
 - Viene modificato limite di tempo di memorizzazione dello storico;
 *Scenario Principale:*
-- Il fornitore modifica il periodo di tempo su cui visualizare lo storico delle chat avvenute con il chatbot e lo
-  conferma;
+- Il fornitore modifica il periodo di tempo su cui visualizare lo storico delle chat avvenute con il chatbot e lo conferma;
 - Il sistema memorizza la nuova impostazione;
 *Estensioni:*
 - Sistema non raggiungibile;
@@ -704,8 +660,6 @@ dell'e-mail; *Scenario Principale:*
 == UC16 - Caricare il proprio logo
 *Attori principali:*
 - Fornitore;
-*Attori secondari:*
-- Sistema;
 *Descrizione:*
 - Un fornitore vuole caricare il proprio logo per personalizzare l'interfaccia della web-app;
 *Precondizioni:*
@@ -722,8 +676,6 @@ dell'e-mail; *Scenario Principale:*
 
 == UC17 - Formato logo non valido
 *Attori principali:*
-- Sistema;
-*Attori secondari:*
 - Fornitore;
 *Descrizione:*
 - Il fornitore ha cercato di caricare il proprio logo tramite l'opzione "Carica logo", ma il logo è in un formato non
@@ -740,8 +692,6 @@ dell'e-mail; *Scenario Principale:*
 == UC18 - Selezione palette colori
 *Attori principali:*
 - Fornitore;
-*Attori secondari:*
-- Sistema;
 *Descrizione:*
 - Un fornitore vuole selezionare una palette di colori per personalizzare l'interfaccia della web app;
 *Precondizioni:*
@@ -763,8 +713,6 @@ dell'e-mail; *Scenario Principale:*
 )
 *Attori principali:*
 - Fornitore;
-*Attori secondari:*
-- Sistema;
 *Descrizione*:
 - Un fornitore vuole visualizzare le statistiche relative alle interazioni tra clienti e chatbot;
 *Precondizioni*:
@@ -800,8 +748,6 @@ dell'e-mail; *Scenario Principale:*
 #figure(image("../imgs/aggiunta-account-cliente.png", width: 100%), caption: "Aggiunta di un account cliente")
 *Attori principali:*
 - Fornitore;
-*Attori secondari:*
-- Sistema;
 *Descrizione:*
 - Un fornitore autenticato vuole aggiungere un account per un cliente in modo che quest'ultimo possa accedere al chatbot;
 *Precondizioni:*
@@ -822,8 +768,6 @@ dell'e-mail; *Scenario Principale:*
 
 == UC22 - Inserimento di parametri dell'account non validi
 *Attori principali:*
-- Sistema;
-*Attori secondari:*
 - Fornitore;
 *Descrizione:*
 - Un fornitore autenticato vuole aggiungere un account per un cliente in modo che quest'ultimo possa accedere al chatbot,
@@ -839,8 +783,6 @@ dell'e-mail; *Scenario Principale:*
 
 == UC23 - Inserimento di un account già esistente
 * Attori principali:*
-- Sistema;
-* Attori secondari:*
 - Fornitore;
 *Descrizione:*
 - Un fornitore autenticato vuole aggiungere un account per un cliente in modo che quest'ultimo possa accedere al chatbot,
@@ -857,8 +799,6 @@ dell'e-mail; *Scenario Principale:*
 == UC24 - Eliminazione dell'account cliente
 *Attori principali:*
 - Fornitore;
-*Attori secondari:*
-- Sistema;
 *Descrizione*
 - Un fornitore autenticato vuole eliminare un account di un cliente in modo che quest'ultimo non possa più accedere al
   chatbot. In questo caso non vengono gestiti i corner case in cui il fornitore elimina un account non esistente o
@@ -894,8 +834,6 @@ dell'e-mail; *Scenario Principale:*
 */
 == UC25 - Password scelta non valida
 *Attori principali:*
-- Sistema;
-*Attori secondari:*
 - Fornitore/cliente;
 *Descrizione:*
 - Un utente vuole cambiare la propria password ma ne sceglie una non valida;
@@ -911,7 +849,7 @@ dell'e-mail; *Scenario Principale:*
 
 == UC26 - Sistema non raggiungibile
 *Attori principali:*
-- Sistema;
+- Fornitore/cliente;
 *Descrizione:*
 - Il sistema non è raggiungibile;
 *Precondizioni:*
