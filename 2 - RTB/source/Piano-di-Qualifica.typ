@@ -334,3 +334,117 @@ $ ("numero di istruzioni eseguite") / ("numero di istruzioni totali nel codice")
 )
 
 = Metodologie di testing
+== Tipologie di test
+Per garantire la qualità del prodotto, il team CodeHex16 ha deciso di verificare il prodotto attraverso diverse tipologie di test.
+
+
+#figure(
+  caption: [Tipologie di test],
+  table(
+    columns: (auto, auto, auto),
+    inset: 8pt,
+    align: (x, y) => if (x == 0 and y > 0 and y < 7) { left } else { center + horizon },
+    fill: (x, y) => if (y == 0) { luma(230) },
+    table.header([*Tipo di test*], [*Scopo*], [*Strumenti*]),
+    "Test di Unità", "Verificare il corretto funzionamento delle singole componenti", "pytest, vitest",
+    "Test di Integrazione", "Validare l’interazione tra moduli e servizi", "Postman",
+    "Test di Sistema", "Verificare il comportamento end-to-end rispetto ai requisiti funzionali", "Playwright",
+    "Test di Accettazione", "Validare il sistema con il committente/utente finale", "Checklist manuali",
+  ),
+)
+
+Ad ogni test è stato attribuito un codice univoco per identificarlo strutturato nel seguente modo: `[TIPO]-XXX`, dove `XXX` è un numero progressivo.
+
+- Test di Unità: TU-XXX
+- Test di Integrazione: TI-XXX
+- Test di Sistema: TS-XXX
+- Test di Accettazione: TA-XXX
+
+Per ogni test viene specificato lo *stato* di completamento, che può essere:
+- Superato
+- Fallito
+- Non implementato
+
+=== Test di Unità
+I test di unità sono utilizzati per verificare il corretto funzionamento delle singole componenti del software.
+Vengono scritti dai programmatori e sono eseguiti in modo automatico.
+Gli strumenti utilizzati per i test di unità sono `pytest` e `vitest`.
+
+Esempi applicati al progetto:
+
+#figure(
+  caption: [Esempi di unit test],
+  table(
+    columns: (auto, auto, auto),
+    inset: 8pt,
+    align: (x, y) => if (x == 0 and y > 0 and y < 7) { left } else { center + horizon },
+    fill: (x, y) => if (y == 0) { luma(230) },
+    table.header([*Codice*], [*Descrizione*], [*Stato*]),
+    "TU-001", "Verifica del parsing delle credenziali durante il login", "Superato",
+    "TU-002", "Test generazione risposta LLM con input validi/invalidi", "Non implementato",
+    "TU-003", "Controllo formati logo supportati (PNG, JPG, SVG)", "Superato",
+  ),
+)
+
+=== Test di Integrazione
+I test di integrazione sono utilizzati per validare l’interazione tra moduli e servizi.
+Vengono scritti dai programmatori e sono eseguiti in modo automatico.
+Lo strumento utilizzato per i test di integrazione è `Postman`.
+
+Esempi applicati al progetto:
+
+#figure(
+  caption: [Esempi di test di integrazione],
+  table(
+    columns: (auto, auto, auto),
+    inset: 8pt,
+    align: (x, y) => if (x == 0 and y > 0 and y < 7) { left } else { center + horizon },
+    fill: (x, y) => if (y == 0) { luma(230) },
+    table.header([*Codice*], [*Descrizione*], [*Stato*]),
+    "TI-001", "Integrazione modulo autenticazione con database utenti", "Passato",
+    "TI-002", "Comunicazione tra frontend e API di generazione risposte LLM", "Superato",
+    "TI-003", "Verifica sincronizzazione impostazioni tema (dark/light mode) su più dispositivi", "Non Implementato",
+  ),
+)
+
+=== Test di Sistema
+I test di sistema sono utilizzati per verificare il comportamento end-to-end del sistema rispetto ai requisiti funzionali.
+Vengono scritti dagli analisti e sono eseguiti in modo automatico.
+Lo strumento utilizzato per i test di sistema è `Playwright`.
+
+Esempi applicati al progetto:
+
+#figure(
+  caption: [Esempi di test di sistema],
+  table(
+    columns: (auto, auto, auto),
+    inset: 8pt,
+    align: (x, y) => if (x == 0 and y > 0 and y < 7) { left } else { center + horizon },
+    fill: (x, y) => if (y == 0) { luma(230) },
+    table.header([*Codice*], [*Descrizione*], [*Stato*]),
+    "TS-001", "Test completo flusso cliente: Login → Richiesta prodotto → Valutazione risposta", "Non Implementato",
+    "TS-002", "Test gestione fornitori: Aggiunta account → Configurazione chatbot → Caricamento documenti", "Superato",
+    "TS-003", "Test tolleranza ai fallimenti: Simulazione downtime sistema durante l’invio messaggi", "Pianificato",
+  ),
+)
+
+=== Test di Accettazione
+I test di accettazione sono utilizzati per validare il sistema con il committente o l'utente finale. Vengono scritti dagli analisti e sono
+eseguiti in modo manuale.
+Gli strumenti utilizzati per i test di accettazione sono checklist manuali.
+
+Esempi applicati al progetto:
+
+#figure(
+  caption: [Esempi di test di accettazione],
+  table(
+    columns: (auto, auto, auto),
+    inset: 8pt,
+    align: (x, y) => if (x == 0 and y > 0 and y < 7) { left } else { center + horizon },
+    fill: (x, y) => if (y == 0) { luma(230) },
+    table.header([*Codice*], [*Descrizione*], [*Stato*]),
+    "TA-001", "Verifica personalizzazione interfaccia", "Non Implementato",
+    "TA-002", "Validazione accuratezza risposte LLM", "Non Implementato",
+    "TA-003", "Test flusso cliente: Registrazione → Richiesta prodotto → Valutazione risposta", "Non Implementato",
+  ),
+)
