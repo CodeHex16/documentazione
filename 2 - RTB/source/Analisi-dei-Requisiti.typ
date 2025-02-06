@@ -681,9 +681,6 @@ dell'e-mail; *Scenario Principale:*
 - L'utente modifica il tema dell'interfaccia tramite l'opzione "Dark/Light mode";
 - Il sistema modifica il tema dell'interfaccia lato client con l'opzione scelta dall'utente;
 
-//////////////////////////////////////////////////////////////////////////
-// FORNITORE
-//////////////////////////////////////////////////////////////////////////
 == UC15 - Modifica della durata dello storico delle chat
 #figure(image("../imgs/impostazioni-fornitore.png", width: 90%), caption: "Impostazioni fornitore")
 *Attori principali:*
@@ -954,7 +951,7 @@ con:
     fill: (x, y) => if (y == 0) { luma(230) },
     table.header([*ID Requisito*], [*Descrizione*], [*Fonte*]),
     "R-01-F-O",
-    "L'utente deve poter accedere all'applicazione per interagire con questa",
+    "L'utente deve poter accedere all'applicazione",
     "UC1", //login
     "R-02-F-O",
     "L'utente deve essere in possesso di un indirizzo e-mail già registrato per accedere",
@@ -975,15 +972,11 @@ con:
     "La prima volta che il cliente deve accedere, deve inserire il suo inidirizzo e-mail con la password fornita dal fornitore",
     "UC3", //primo login c
     "R-09-F-D",
-    "
-
-                                                                                Forse ripetitivo, abbiamo già password ed email errate...
-
-                                                                                ",
+    "Forse ripetitivo, abbiamo già password ed email errate...",
     "UC4", // credenziali errate
     "R-10-F-D",
     "Se l'utente sceglie l'opzione 'Resta connesso' il sistema deve ricordarsi le credenziali al prossimo accesso ed eseguire in automatico l'operazione",
-    "UC5", // reta connesso
+    "UC5", // resta connesso
     "R-11-F-O",
     "L'applicazione deve fornire la possibilità all'utente di cambiare password, soprattutto dopo il primo login",
     "UC6", // cambio password
@@ -1067,7 +1060,7 @@ con:
 
 == Requisiti di qualità
 
-// NOTA: qua bisogna scrivere requisit piu generali che
+// NOTA: qua bisogna scrivere requisiti piu generali che
 // o sono stabiliti dal capitolato
 // o sono stabiliti da noi
 // la fonte puo essere capitolato o interno
