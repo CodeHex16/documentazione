@@ -1,53 +1,60 @@
 #import "../../template/documenti.typ": *
 #import "../../template/i-figured.typ"
 
-#show: doc => documento(titolo: "Analisi dei Requisiti", data: [12/11/2024], ruoli: (
-  "Matteo Bazzan",
-  "",
-  "Luca Ribon",
-  "Redattore",
-  "Francesco Fragonas",
-  "Redattore",
-  "Gabriele Magnelli",
-  "",
-  "Filippo Sabbadin",
-  "Redattore - Verificatore",
-  "Luca Rossi",
-  "",
-  "Yi Hao Zhuo",
-  "Verificatore",
-), sommario: [Analisi dei requisiti del capitolato C7], versioni: (
-  "0.6.0",
-  "31/01/2025",
-  "Filippo Sabbadin, Luca Ribon",
-  "Aggiunta sezione requisiti, migliorati use case esistenti",
-  "!!VERIFICATORE!!",
-  "0.5.0",
-  "11/01/2025",
-  "Filippo Sabbadin",
-  "Corretti use case sul login, aggiunte immagini con i grafici UML",
-  "Yi Hao Zhuo",
-  "0.4.0",
-  "06/01/2025",
-  "Luca Ribon",
-  "Aggiunti altri use case, corretti alcuni dei precedenti",
-  "Filippo Sabbadin",
-  "0.3.0",
-  "23/12/2024",
-  "Luca Ribon",
-  "Aggiunti altri use case",
-  "Filippo Sabbadin",
-  "0.2.0",
-  "27/11/2024",
-  "Gabriele Magnelli",
-  "Aggiunti use case amministratore",
-  "Filippo Sabbadin",
-  "0.1.0",
-  "12/11/2024",
-  "Francesco Fragonas",
-  "Prima stesura",
-  "Matteo Bazzan",
-), doc)
+#show: doc => documento(
+  titolo: "Analisi dei Requisiti",
+  data: [12/11/2024],
+  ruoli: (
+    "Matteo Bazzan",
+    "",
+    "Luca Ribon",
+    "Redattore",
+    "Francesco Fragonas",
+    "Redattore",
+    "Gabriele Magnelli",
+    "",
+    "Filippo Sabbadin",
+    "Redattore - Verificatore",
+    "Luca Rossi",
+    "",
+    "Yi Hao Zhuo",
+    "Verificatore",
+  ),
+  sommario: [Analisi dei requisiti del capitolato C7],
+  versioni: (
+    "0.6.0",
+    "31/01/2025",
+    "Filippo Sabbadin, Luca Ribon",
+    "Aggiunta sezione requisiti, migliorati use case esistenti",
+    "!!VERIFICATORE!!",
+    "0.5.0",
+    "11/01/2025",
+    "Filippo Sabbadin",
+    "Corretti use case sul login, aggiunte immagini con i grafici UML",
+    "Yi Hao Zhuo",
+    "0.4.0",
+    "06/01/2025",
+    "Luca Ribon",
+    "Aggiunti altri use case, corretti alcuni dei precedenti",
+    "Filippo Sabbadin",
+    "0.3.0",
+    "23/12/2024",
+    "Luca Ribon",
+    "Aggiunti altri use case",
+    "Filippo Sabbadin",
+    "0.2.0",
+    "27/11/2024",
+    "Gabriele Magnelli",
+    "Aggiunti use case amministratore",
+    "Filippo Sabbadin",
+    "0.1.0",
+    "12/11/2024",
+    "Francesco Fragonas",
+    "Prima stesura",
+    "Matteo Bazzan",
+  ),
+  doc,
+)
 // spaciugo per aggiungere l'indice delle immagini
 #set page(numbering: "I")
 #counter(page).update(3)
@@ -393,24 +400,6 @@ Quando si parla di *utente* si intende un utente generico che compie operazioni 
 * Estensioni:*
 - Sistema non raggiungibile;
 
-// * NON PREVISTO, è il nostro identificatore
-// == UC??? - Cambio e-mail
-// *Attori principali:*
-// - Fornitore/cliente;
-// *Descrizione:*
-// - Un utente vuole cambiare l'e-mail del proprio account;
-// *Precondizioni:*
-// - L'utente deve aver effettuato il login;
-// - L'utente deve accedere alle impostazioni e alla sezione "Cambio e-mail";
-// *Postcondizioni:*
-// - Il sistema effettua un controllo sulla validità della e-mail e se valida conferma il cambiamento dell'e-mail;
-// *Scenario Principale:*
-// - L'utente invia la richiesta di cambio e-mail inserendo la nuova e-mail scelta;
-// - Il sistema riceve la richiesta, controlla che la e-mail sia valida e se lo è conferma il cambiamento della e-mail;
-// *Estensioni:*
-// - Inserimento e-mail;
-// - Sistema non raggiungibile;
-
 // TODO: potrebbe essere generalizzazione del cambio password
 == UC7 - Recupero password
 #figure(image("../imgs/recupero-password.png", width: 80%), caption: "Recupero password")
@@ -684,7 +673,7 @@ Quando si parla di *utente* si intende un utente generico che compie operazioni 
 - Il fornitore salva le scelte effettuate;
 - Il sistema modifica l'interfaccia con i colori scelti dal fornitore;
 
-// TODO: sistemare grafico 
+// TODO: sistemare grafico
 == UC24 - Visualizzare statistiche domanda-risposta
 #figure(
   image("../imgs/statistiche-filtri-fornitore.png", width: 90%),
@@ -791,20 +780,6 @@ Quando si parla di *utente* si intende un utente generico che compie operazioni 
 *Estensioni:*
 - Inserimento password;
 - Sistema non raggiungibile;
-/*
-== UC25 - Inserimento password
-*Attori principali:*
-- Fornitore/cliente;
-*Descrizione:*
-- Un utente inserisce la sua password per effettuare il login;
-*Precondizioni:*
-- La password dell'utente deve essere presente nel sistema;
-- L'utente deve essere in possesso della password a lui associata;
-*Scenario Principale:*
-- L'utente ha inserito la password necessaria per effettuare l'accesso
-*Estensioni:*
-- Password scelta non valida;
-*/
 
 == UC30 - Sistema non raggiungibile
 *Attori principali:*
@@ -846,36 +821,32 @@ con:
     align: center + horizon,
     fill: (x, y) => if (y == 0) { luma(230) },
     table.header([*ID Requisito*], [*Descrizione*], [*Fonte*]),
+    // login
     "R-01-F-O",
     "L'utente deve poter accedere all'applicazione",
-    "UC1", //login
+    "UC1, UC1.1, UC1.2",
+    // primo login
     "R-02-F-O",
-    "L'utente deve essere in possesso di un indirizzo e-mail già registrato per accedere",
-    "UC1.1",
+    "Nel caso l'utente accede per la prima volta alla piattaforma deve aggiornare la password temporanea ricevuta",
+    "UC2, UC3, UC4",
+    // modifica password
     "R-03-F-O",
-    "L'utente deve essere in possesso di una password valida per accedere",
-    "UC1.2",
-    "R-04-F-D",
-    "Nel caso l'utente inserisca un indirizzo e-mail non valido, deve ricevere una notifica dall'applicazione che lo notifichi dell'errore",
-    "UC1.3",
+    "L'utente deve poter cambiare la password liberamente",
+    "UC4",
+    // errore login
+    "R-04-F-O",
+    "L'interfaccia di login deve mostrare un errore nel caso in cui ci sia un errore di login",
+    "UC5",
+    // resta connesso
     "R-05-F-D",
-    "Nel caso l'utente inserisca una password non valida o non corretta, deve ricevere una notifica dall'applicazione che lo notifichi dell'errore",
-    "UC1.4",
+    "L'utente deve poter scegliere se la piattaforma deve chiedere le credenziali ad ogni accesso",
+    "UC6",
+    // recupero password
     "R-06-F-O",
-    "La prima volta che il fornitore deve accedere, deve inserire il suo inidirizzo e-mail con la password fornita dall'amministratore",
-    "UC2", //primo login f
-    "R-08-F-O",
-    "La prima volta che il cliente deve accedere, deve inserire il suo inidirizzo e-mail con la password fornita dal fornitore",
-    "UC3", //primo login c
-    "R-09-F-D",
-    "Forse ripetitivo, abbiamo già password ed email errate...",
-    "UC4", // credenziali errate
-    "R-10-F-D",
-    "Se l'utente sceglie l'opzione 'Resta connesso' il sistema deve ricordarsi le credenziali al prossimo accesso ed eseguire in automatico l'operazione",
-    "UC5", // reta connesso
-    "R-11-F-O",
-    "L'applicazione deve fornire la possibilità all'utente di cambiare password, soprattutto dopo il primo login",
-    "UC6", // cambio password
+    "L'utente deve poter recuperare la password nel caso in cui la dimentichi",
+    "UC7, UC4",
+    // TODO:
+    // password scelta non valida
     "R-12-F-D",
     "L'applicazione deve fornire la possibilità all'utente di recuperare la password nel caso questa venga dimenticata o persa",
     "UC7", // recupero password
@@ -961,77 +932,68 @@ con:
 // o sono stabiliti da noi
 // la fonte puo essere capitolato o interno
 #show figure: set block(breakable: true)
-#figure(caption: [Requisiti di qualità], table(
-  columns: (1fr, 2fr, 1fr),
-  inset: 8pt,
-  align: center + horizon,
-  fill: (x, y) => if (y == 0) { luma(230) },
-  table.header([*ID Requisito*], [*Descrizione*], [*Fonte*]),
-  "R-01-Q-O",
-  "Bisogna consegnare un documento contenente l'analisi dei requisiti con dei grafici UML",
-  "Capitolato",
-  "R-02-Q-O",
-  "Tutto il codice e documentazione vanno salvati all'interno di una repository ordinata",
-  "Interno",
-  "",
-  "",
-  "",
-))
+#figure(
+  caption: [Requisiti di qualità],
+  table(
+    columns: (1fr, 2fr, 1fr),
+    inset: 8pt,
+    align: center + horizon,
+    fill: (x, y) => if (y == 0) { luma(230) },
+    table.header([*ID Requisito*], [*Descrizione*], [*Fonte*]),
+    "R-01-Q-O", "Bisogna consegnare un documento contenente l'analisi dei requisiti con dei grafici UML", "Capitolato",
+    "R-02-Q-O", "Tutto il codice e documentazione vanno salvati all'interno di una repository ordinata", "Interno",
+    "", "", "",
+  ),
+)
 
 == Requisiti di vincolo
 
 #show figure: set block(breakable: true)
-#figure(caption: [Requisiti di vincolo], table(
-  columns: (1fr, 2fr, 1fr),
-  inset: 8pt,
-  align: center + horizon,
-  fill: (x, y) => if (y == 0) { luma(230) },
-  table.header([*ID Requisito*], [*Descrizione*], [*Fonte*]),
-  "R-01-V-O",
-  "Per l'integrazione con il chatbot, verrà utilizzato il linguaggio di programmazione Python",
-  "Capitolato",
-  "R-02-V-O",
-  "Per il frontend viene utilizzato il framework Svelte",
-  "Interno",
-  "R-03-V-O",
-  "Viene utilizzato Postgre per la gestione del database",
-  "Interno",
-))
+#figure(
+  caption: [Requisiti di vincolo],
+  table(
+    columns: (1fr, 2fr, 1fr),
+    inset: 8pt,
+    align: center + horizon,
+    fill: (x, y) => if (y == 0) { luma(230) },
+    table.header([*ID Requisito*], [*Descrizione*], [*Fonte*]),
+    "R-01-V-O",
+    "Per l'integrazione con il chatbot, verrà utilizzato il linguaggio di programmazione Python",
+    "Capitolato",
+
+    "R-02-V-O", "Per il frontend viene utilizzato il framework Svelte", "Interno",
+    "R-03-V-O", "Viene utilizzato Postgre per la gestione del database", "Interno",
+  ),
+)
 
 == Tracciamento fonti-requisiti
 #show figure: set block(breakable: true)
-#figure(caption: [Tracciamento fonti-requisiti], table(
-  columns: (0.5fr, 0.5fr),
-  inset: 8pt,
-  align: center + horizon,
-  fill: (x, y) => if (y == 0) { luma(230) },
-  table.header([*Fonte*], [*Requisito*]),
-  "Capitolato",
-  "R-01-V-O",
-  "Interno",
-  "R-02-V-O\nR-03-V-O",
-  "UC1",
-  "R-01-F-O",
-))
+#figure(
+  caption: [Tracciamento fonti-requisiti],
+  table(
+    columns: (0.5fr, 0.5fr),
+    inset: 8pt,
+    align: center + horizon,
+    fill: (x, y) => if (y == 0) { luma(230) },
+    table.header([*Fonte*], [*Requisito*]),
+    "Capitolato", "R-01-V-O",
+    "Interno", "R-02-V-O\nR-03-V-O",
+    "UC1", "R-01-F-O",
+  ),
+)
 == Riepilogo
 #show figure: set block(breakable: true)
-#figure(caption: [Riepilogo], table(
-  columns: (0.75fr, 0.5fr, 0.5fr, 0.5fr),
-  inset: 8pt,
-  align: center + horizon,
-  fill: (x, y) => if (y == 0 or y == 4) { luma(230) },
-  table.header([*Tipo di requisiti*], [*Obbligatori*], [*Desiderabili*], [*Totale*]),
-  "Funzionali",
-  "",
-  "",
-  "",
-  "Qualità",
-  "",
-  "",
-  "",
-  "Vincolo",
-  "",
-  "",
-  "",
-  "Totale",
-))
+#figure(
+  caption: [Riepilogo],
+  table(
+    columns: (0.75fr, 0.5fr, 0.5fr, 0.5fr),
+    inset: 8pt,
+    align: center + horizon,
+    fill: (x, y) => if (y == 0 or y == 4) { luma(230) },
+    table.header([*Tipo di requisiti*], [*Obbligatori*], [*Desiderabili*], [*Totale*]),
+    "Funzionali", "", "", "",
+    "Qualità", "", "", "",
+    "Vincolo", "", "", "",
+    "Totale",
+  ),
+)
