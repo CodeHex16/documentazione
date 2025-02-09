@@ -65,7 +65,7 @@ Durante lo Sprint 5 è stata condotta un’analisi dei modelli LLM disponibili s
   inset: 8pt,
   fill: (x,y) => if (y== 0) { luma(230) },
   table.header(
-    [*Membro*], [*Ruolo Sprint 3*], [*Ruolo Sprint 4*]
+    [*Membro*], [*Ruolo Sprint 5*], [*Ruolo Sprint 6*]
   ),
   "Matteo Bazzan","Progettista","Verificatore",
   "Francesco Fragonas","Responsabile","Progettista",

@@ -50,7 +50,7 @@ A seguito degli scorsi sprint, il team ha concordato sulle seguenti modifiche:
   inset: 8pt,
   fill: (x,y) => if (y== 0) { luma(230) },
   table.header(
-    [*Membro*], [*Ruolo Sprint 3*], [*Ruolo Sprint 4*]
+    [*Membro*], [*Ruolo Sprint 4*], [*Ruolo Sprint 5*]
   ),
   "Matteo Bazzan",  "Programmatore","Progettista",
   "Francesco Fragonas","Verificatore","Responsabile",
