@@ -400,7 +400,6 @@ Quando si parla di *utente* si intende un utente generico che compie operazioni 
 * Estensioni:*
 - Sistema non raggiungibile;
 
-// TODO: potrebbe essere generalizzazione del cambio password
 == UC7 - Recupero password
 #figure(image("../imgs/recupero-password.png", width: 80%), caption: "Recupero password")
 *Attori principali:*
@@ -481,7 +480,6 @@ Quando si parla di *utente* si intende un utente generico che compie operazioni 
 *Estensioni:*
 - Sistema non raggiungibile;
 
-// TODO: da fixare tutti use case chat singola
 == UC12 - Apertura di una chat singola
 *Attori principali:*
 - Fornitore/cliente;
