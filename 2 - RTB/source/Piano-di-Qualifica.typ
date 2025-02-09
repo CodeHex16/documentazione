@@ -8,7 +8,7 @@
     "Matteo Bazzan",
     "Redattore",
     "Luca Ribon",
-    "",
+    "Verficatore",
     "Francesco Fragonas",
     "",
     "Gabriele Magnelli",
@@ -26,7 +26,7 @@
     "05/02/2025",
     "Matteo Bazzan",
     "Aggiunta metriche di qualità",
-    "",
+    "Luca Ribon",
     "0.1.0",
     "08/01/2024",
     "Filippo Sabbadin",
@@ -106,7 +106,7 @@ prima dei nomi è MPC: Minimum Predictive Capability. Questa metrica viene usata
 capacità di un modello di generare previsioni precise. Nel nostro caso, l'MPC è il valore minimo da raggiungere per
 essere considerato accettabile.\
 
-- *CC - Completion Cost*: costo finale raggiunto alla fine del progetto. Idealmente non deve superare quello estimato durante le fasi iniziali.
+- *CC - Completion Cost*: costo finale raggiunto alla fine del progetto. Idealmente non deve superare quello stimato durante le fasi iniziali.
 - *EC - Estimated Cost*: costo stimato calcolando le ore necessarie per lo sviluppo del progetto.
 
 #figure(
@@ -362,6 +362,7 @@ Ad ogni test è stato attribuito un codice univoco per identificarlo strutturato
 
 Per ogni test viene specificato lo *stato* di completamento, che può essere:
 - Superato
+- Pianificato
 - Fallito
 - Non implementato
 
@@ -401,7 +402,7 @@ Esempi applicati al progetto:
     align: (x, y) => if (x == 0 and y > 0 and y < 7) { left } else { center + horizon },
     fill: (x, y) => if (y == 0) { luma(230) },
     table.header([*Codice*], [*Descrizione*], [*Stato*]),
-    "TI-001", "Integrazione modulo autenticazione con database utenti", "Passato",
+    "TI-001", "Integrazione modulo autenticazione con database utenti", "Superato",
     "TI-002", "Comunicazione tra frontend e API di generazione risposte LLM", "Superato",
     "TI-003", "Verifica sincronizzazione impostazioni tema (dark/light mode) su più dispositivi", "Non Implementato",
   ),
