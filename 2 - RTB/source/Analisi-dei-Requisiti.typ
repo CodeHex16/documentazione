@@ -459,7 +459,6 @@ Quando si parla di *utente* si intende un utente generico che compie operazioni 
 - L'utente preme il pulsante di logout;
 - Il sistema riceve la richiesta di logout e disconnette l'utente dal sistema;
 
-//Modificato nello sprint 7
 == UC10 - Visualizzazione della lista delle chat
 #figure(
   image("../imgs/visualizzazione-scrittura-messaggio.png", width: 80%),
@@ -474,25 +473,22 @@ Quando si parla di *utente* si intende un utente generico che compie operazioni 
 *Postcondizioni:*
 - L'utente visualizza la #gloss[homepage] con la lista delle chat;
 *Scenario Principale:*
-- L'utente vede la lista di tutte le chat;
+- L'utente vede la lista di tutte le chat, se non ne ha mai creata una visualizzerà solo quella presente di default;
 *Estensioni:*
 - Sistema non raggiungibile;
-
-//Filippo: Use case aggiunti nello sprint 7
-/////////////////////////
 
 == UC11 - Creazione di una nuova chat
 *Attori principali:*
 - Fornitore/cliente;
 *Descrizione:*
-- Un utente vuole iniziare una nuova chat o iniziare a scrivere con il chatbot;
+- Un utente vuole iniziare una nuova chat;
 *Precondizioni:*
 - L'utente deve aver effettuato il login;
 - L'utente preme sul pulsante per creare una nuova chat;
 *Postcondizioni:*
 - Viene creata una nuova chat;
 *Scenario Principale:*
-- L'utente seleziona il tasto per creare una nuova chat nella hompage e crea una nuova chat con un nuovo contesto;
+- L'utente usa il tasto per creare una nuova chat nella hompage e crea una nuova chat con un nuovo contesto;
 *Estensioni:*
 - Sistema non raggiungibile;
 
@@ -501,79 +497,63 @@ Quando si parla di *utente* si intende un utente generico che compie operazioni 
 *Attori principali:*
 - Fornitore/cliente;
 *Descrizione:*
-- Un utente vuole visualizzare la chat selezionata nello use case precedente;
+- Un utente vuole visualizzare una chat nello specifico;
 *Precondizioni:*
 - L'utente deve aver effettuato il login;
-- L'utente preme sul pulsante "Visualizza chat";
+- L'utente preme sul pulsante "Visualizza chat" di una specifica chat;
 *Postcondizioni:*
 - L'utente visualizza la chat da lui selezionata;
 *Scenario Principale:*
-- L'utente seleziona la chat dalla homepage e visualizza lo chat in una nuova finestra;
+- L'utente visualizza lo chat scelta in una nuova finestra;
 *Estensioni:*
 - Sistema non raggiungibile;
 
-== UC12.1 - Scrittura e invio messaggio
+=== UC13 - Scrittura messaggio
 *Attori principali:*
 - Fornitore/cliente;
 *Descrizione:*
-- Un utente vuole comunicare con il chatbot;
+- Un utente vuole inviare un messaggio al chatbot;
 *Precondizioni:*
 - L'utente deve aver effettuato il login;
-- L'utente deve accedere alla sezione dedicata alla comunicazione con il chatbot;
+- L'utente deve aver aperto una chat specifica;
 *Postcondizioni:*
-- L'utente invia il messaggio al chatbot;
+- L'utente ha scritto il messaggio nella barra apposita;
 *Scenario Principale:*
-- L'utente scrive e invia il messaggio al chatbot;
-- Il sistema riceve il messaggio, lo analizza e procede a rispondere;
-*Estensioni*
-- Sistema non raggiungibile;
-*Inclusioni*
-- Scrittura messaggio;
-- Invio messaggio;
-- Selezione messaggio pre-scritto;
+- L'utente scrive il messaggio;
+*Generalizzazioni:*
+- Scrittura messaggio tramite FAQ;
 
-=== UC11.1 - Scrittura messaggio
+=== UC14 - Scrittura messaggio tramite FAQ
 *Attori principali:*
 - Fornitore/cliente;
 *Descrizione:*
-- Un utente vuole comunicare con il chatbot;
+- Un utente vuole comunicare con il chatbot utilizzando uno dei messaggi preimpostato;
 *Precondizioni:*
 - L'utente deve aver effettuato il login;
-- L'utente deve accedere alla sezione dedicata alla comunicazione con il chatbot;
+- L'utente deve aver aperto una chat specifica;
 *Postcondizioni:*
-- L'utente scrive il messaggio nella barra apposita;
+- L'utente ha scelto un messaggio consigliato in base al contesto della chat;
 *Scenario Principale:*
-- L'utente scrive il messaggio abbastanza comprensibile;
+- L'utente, anziché scrivere un messaggio manualmente, decide di selezionare un messaggio consigliato da quelli preimpostati nell'applicazione;
 
-=== UC11.2 - Selezione messaggio pre-scritto
+=== UC15 - Invio messaggio
 *Attori principali:*
 - Fornitore/cliente;
 *Descrizione:*
-- Un utente vuole comunicare con il chatbot;
+- Un utente vuole inviare il messaggio scritto il chatbot;
 *Precondizioni:*
 - L'utente deve aver effettuato il login;
-- L'utente deve accedere alla sezione dedicata alla comunicazione con il chatbot;
-*Postcondizioni:*
-- L'utente ha sceglto un messaggio consigliato in base al contesto della chat;
-*Scenario Principale:*
-- L'utente, anziché scrivere un messaggio manualmente, decide di selezionare un messaggio consigliato dall'applicazione,
-  scritto in base al contesto;
-
-=== UC11.3 - Invio messaggio
-*Attori principali:*
-- Fornitore/cliente;
-*Descrizione:*
-- Un utente vuole comunicare con il chatbot;
-*Precondizioni:*
-- L'utente deve aver effettuato il login;
-- L'utente deve accedere alla sezione dedicata alla comunicazione con il chatbot;
-- L'utente deve avere un messaggio pronto da inviare;
+- L'utente deve aver aperto una chat specifica;
+- L'utente deve avere inseito il messaggio da inviare;
 *Postcondizioni:*
 - L'utente ha inviato il messaggio;
 *Scenario Principale:*
-- Dopo aver scritto il messaggio o selezionato uno pre-scritto, l'utente invia il messaggio;
+- Dopo aver scritto il messaggio l'utente invia il messaggio;
+*Estensioni:*
+- Sistema non raggiungibile;
 
-== UC12 - Ricezione risposta
+// TODO: sistemare grafico
+== UC16 - Ricezione risposta
 #figure(
   image("../imgs/ricezione-valutazione-risposta.png", width: 80%),
   caption: "Visualizzazione ed invio dei messaggi",
@@ -589,16 +569,15 @@ Quando si parla di *utente* si intende un utente generico che compie operazioni 
 - L'utente ha ricevuto la risposta dal chatbot;
 *Scenario Principale:*
 - Il chatbot ha elaborato e restituito una risposta;
-- La risposta viene mostrata all'utente tramite;
+- La risposta viene mostrata all'utente tramite l'interfaccia della chat specifica;
 *Estensioni:*
 - Sistema non raggiungibile;
 
-== UC13 - Valutazione risposta
+== UC17 - Valutazione risposta
 *Attori principali:*
 - Fornitore/cliente;
 *Descrizione:*
-- L'utente ha ricevuto la risposta dal chatbot e vuole dare un feedback su tale risposta tramite l'opzione "Pollice
-  su/giù";
+- L'utente ha ricevuto la risposta dal chatbot e vuole dare un feedback su tale risposta tramite l'opzione "Pollice su/giù";
 *Precondizioni:*
 - L'utente deve aver effettuato il login;
 - L'utente deve aver inviato un messaggio al chatbot;
@@ -611,22 +590,21 @@ Quando si parla di *utente* si intende un utente generico che compie operazioni 
 *Estensioni:*
 - Sistema non raggiungibile;
 
-== UC13 - Eliminazione di una chat
+== UC18 - Eliminazione di una chat
 *Attori principali:*
 - Fornitore/cliente;
 *Descrizione:*
 - Un utente vuole eliminare una chat nella lista delle chat;
 *Precondizioni:*
 - L'utente deve aver effettuato il login;
-- L'utente preme sul pulsante "Elimina chat";
 *Postcondizioni:*
 - Viene eliminata la chat selezionata;
 *Scenario Principale:*
-- L'utente seleziona la chat dalla homepage e preme il tasto per eliminarla, la chat poi viene cancellata e non può più essere visualizzata;
+- L'utente seleziona la chat dalla homepage e preme il tasto per eliminarla, la chat poi viene cancellata e non è più presente nella piattaforma;
 *Estensioni:*
 - Sistema non raggiungibile;
 
-== UC14 - Selezione Dark/Light Mode
+== UC19 - Selezione Dark/Light Mode
 #figure(image("../imgs/dark-light-mode.png", width: 50%), caption: "Selezione modalità chiara/scura")
 *Attori principali:*
 - Fornitore/cliente;
@@ -641,7 +619,7 @@ Quando si parla di *utente* si intende un utente generico che compie operazioni 
 - L'utente modifica il tema dell'interfaccia tramite l'opzione "Dark/Light mode";
 - Il sistema modifica il tema dell'interfaccia lato client con l'opzione scelta dall'utente;
 
-== UC15 - Modifica della durata dello storico delle chat
+== UC20 - Modifica della durata dello storico delle chat
 #figure(image("../imgs/impostazioni-fornitore.png", width: 90%), caption: "Impostazioni fornitore")
 *Attori principali:*
 - Fornitore;
@@ -658,7 +636,7 @@ Quando si parla di *utente* si intende un utente generico che compie operazioni 
 *Estensioni:*
 - Sistema non raggiungibile;
 
-== UC16 - Caricare il proprio logo
+== UC21 - Caricare il proprio logo
 *Attori principali:*
 - Fornitore;
 *Descrizione:*
@@ -667,15 +645,14 @@ Quando si parla di *utente* si intende un utente generico che compie operazioni 
 - Il fornitore deve aver effettuato il login;
 - Il fornitore deve accedere alle impostazioni
 *Postcondizioni:*
-- Il sistema ha effettuato un controllo di validità del formato del logo, e se il logo è risultato valido lo ha inserito
-  nell'interfaccia;
+- Il sistema ha effettuato un controllo di validità del formato del logo, e se il logo è risultato valido lo ha inserito nell'interfaccia;
 *Scenario Principale:*
 - Il fornitore accede alla sezione "Carica logo" e inserisce il proprio logo;
 - Il sistema controlla il formato del logo caricato e se conforme lo utilizza nell'interaccia;
 *Estensioni*:
 - Formato logo non valido;
 
-== UC17 - Formato logo non valido
+== UC22 - Formato logo non valido
 *Attori principali:*
 - Fornitore;
 *Descrizione:*
@@ -690,7 +667,7 @@ Quando si parla di *utente* si intende un utente generico che compie operazioni 
 - Il sistema riceve il logo caricato dal fornitore e dopo aver verificato che il formato non è valido, invia un messaggio
   d'errore al fornitore;
 
-== UC18 - Selezione palette colori
+== UC23 - Selezione palette colori
 *Attori principali:*
 - Fornitore;
 *Descrizione:*
@@ -707,7 +684,8 @@ Quando si parla di *utente* si intende un utente generico che compie operazioni 
 - Il fornitore salva le scelte effettuate;
 - Il sistema modifica l'interfaccia con i colori scelti dal fornitore;
 
-== UC19 - Visualizzare statistiche domanda-risposta
+// TODO: sistemare grafico 
+== UC24 - Visualizzare statistiche domanda-risposta
 #figure(
   image("../imgs/statistiche-filtri-fornitore.png", width: 90%),
   caption: "Visualizzazione statistiche e filtri del fornitore",
@@ -729,7 +707,7 @@ Quando si parla di *utente* si intende un utente generico che compie operazioni 
 - Inserimento filtri di visualizzazione;
 - Sistema non raggiungibile;
 
-== UC20 - Inserimento filtri di visualizzazione
+== UC25 - Inserimento filtri di visualizzazione
 *Attori principali:*
 - Fornitore;
 *Descrizione*
@@ -744,7 +722,8 @@ Quando si parla di *utente* si intende un utente generico che compie operazioni 
 - Il fornitore inserisce i filtri di visualizzazione desiderati;
 - Il sistema applica i filtri alle statistiche;
 
-== UC21 - Aggiunta account cliente
+// TODO: sistemare grafico
+== UC26 - Aggiunta account cliente
 #figure(image("../imgs/aggiunta-account-cliente.png", width: 100%), caption: "Aggiunta di un account cliente")
 *Attori principali:*
 - Fornitore;
@@ -766,12 +745,11 @@ Quando si parla di *utente* si intende un utente generico che compie operazioni 
 - Inserimento password;
 - Sistema non raggiungibile;
 
-== UC22 - Inserimento di parametri dell'account non validi
+== UC27 - Inserimento di parametri dell'account non validi
 *Attori principali:*
 - Fornitore;
 *Descrizione:*
-- Un fornitore autenticato vuole aggiungere un account per un cliente in modo che quest'ultimo possa accedere al chatbot,
-  ma inserisce dei parametri non validi;
+- Un fornitore autenticato vuole aggiungere un account per un cliente in modo che quest'ultimo possa accedere al chatbot, ma inserisce dei parametri non validi;
 *Precondizioni:*
 - Il sistema ha ricevuto i parametri dell'account inseriti dal fornitore;
 *Postcondizioni:*
@@ -781,12 +759,11 @@ Quando si parla di *utente* si intende un utente generico che compie operazioni 
 - Il sistema riceve i parametri dell'account inseriti dal fornitore, ma questi non sono validi;
 - Il sistema mostra un messaggio di errore il quale indica che i parametri inseriti non sono validi;
 
-== UC23 - Inserimento di un account già esistente
+== UC28 - Inserimento di un account già esistente
 * Attori principali:*
 - Fornitore;
 *Descrizione:*
-- Un fornitore autenticato vuole aggiungere un account per un cliente in modo che quest'ultimo possa accedere al chatbot,
-  ma tenta di inserisce un account già esistente;
+- Un fornitore autenticato vuole aggiungere un account per un cliente in modo che quest'ultimo possa accedere al chatbot, ma tenta di inserisce un account già esistente;
 *Precondizioni:*
 - Il sistema ha ricevuto i parametri dell'account inseriti dal fornitore;
 *Postcondizioni:*
@@ -796,22 +773,18 @@ Quando si parla di *utente* si intende un utente generico che compie operazioni 
 - Il sistema riceve i parametri dell'account inseriti dal fornitore, ma questo è già presente nel sistema;
 - Il sistema mostra un messaggio di errore il quale indica che l'account inserito è già esistente;
 
-== UC24 - Eliminazione dell'account cliente
+== UC29 - Eliminazione dell'account cliente
 *Attori principali:*
 - Fornitore;
 *Descrizione*
-- Un fornitore autenticato vuole eliminare un account di un cliente in modo che quest'ultimo non possa più accedere al
-  chatbot. In questo caso non vengono gestiti i corner case in cui il fornitore elimina un account non esistente o
-  selezionando Visualizzazione errore di login, poiché i metodi di selezione dell'account da eliminare costringono il fornitore ad
-  eliminare solo account esistenti;
+- Un fornitore autenticato vuole eliminare un account di un cliente in modo che quest'ultimo non possa più accedere al chatbot. In questo caso non vengono gestiti i corner case in cui il fornitore elimina un account non esistente o selezionando Visualizzazione errore di login, poiché i metodi di selezione dell'account da eliminare costringono il fornitore ad eliminare solo account esistenti;
 *Precondizioni:*
 - Il fornitore deve aver effettuato il login;
 - Il fornitore deve accedere alla sezione "Gestione account clienti";
 *Postcondizioni:*
 - Viene eliminato un account di un cliente;
 *Scenario Principale:*
-- Il fornitore seleziona l'account del cliente da eliminare tra una lista di quelli disponibili, oppure usa il bottone di
-  eliminazione relativo ad un account specifico tra quelli visualizzati;
+- Il fornitore seleziona l'account del cliente da eliminare tra una lista di quelli disponibili, oppure usa il bottone di eliminazione relativo ad un account specifico tra quelli visualizzati;
 - Viene richiesta la password del fornitore per confermare l'eliminazione;
 - Il fornitore conferma l'eliminazione dell'account;
 - Il sistema elimina l'account del cliente;
@@ -833,7 +806,7 @@ Quando si parla di *utente* si intende un utente generico che compie operazioni 
 - Password scelta non valida;
 */
 
-== UC26 - Sistema non raggiungibile
+== UC30 - Sistema non raggiungibile
 *Attori principali:*
 - Fornitore/cliente;
 *Descrizione:*
@@ -843,8 +816,7 @@ Quando si parla di *utente* si intende un utente generico che compie operazioni 
 *Postcondizioni:*
 - Viene notificato il problema all'utente;
 *Scenario Principale:*
-- L'utente tenta di compiere un'operazione che richiede la comunicazione con il sistema, ma il sistema non è
-  raggiungibile;
+- L'utente tenta di compiere un'operazione che richiede la comunicazione con il sistema, ma il sistema non è raggiungibile;
 - Il sistema mostra un messaggio d'errore all'utente tramite il client;
 
 = Requisiti
