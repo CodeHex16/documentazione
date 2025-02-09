@@ -211,7 +211,7 @@ In altre parole, indica quanti test sono stati superati.\
 
 - *MPD-CC - Code coverage*: indica la percentuale di codice coperto dai test. Un valore alto indica che il codice è stato testato in modo approfondito e che è meno probabile che contenga errori.
 
-- *MPD-BC - Branch coverage*: sottoinsieme di code coverage, indica la percentuale di rami delle condizioni che sono stati eseguiti durante i test. Un valore alto indica che il codice è stato testato in modo approfondito e che è meno probabile che contenga errori.
+- *MPD-BC - #gloss[Branch] coverage*: sottoinsieme di code coverage, indica la percentuale di rami delle condizioni che sono stati eseguiti durante i test. Un valore alto indica che il codice è stato testato in modo approfondito e che è meno probabile che contenga errori.
 
 - *MPD-SC - Statement coverage*: sottoinsieme di code coverage, indica la percentuale di istruzioni che sono state eseguite durante i test. Un valore alto indica che il codice è stato testato in modo approfondito e che è meno probabile che contenga errori. Viene calcolato con la seguente formula:
 $ ("numero di istruzioni eseguite") / ("numero di istruzioni totali nel codice") *100 $
@@ -248,7 +248,7 @@ $ ("numero di istruzioni eseguite") / ("numero di istruzioni totali nel codice")
 
 - *MPD-EUA - Errori utente/azione*: indica il numero di errori commessi dagli utenti durante l'utilizzo del prodotto. Un valore basso indica che il prodotto è intuitivo e facile da usare. Viene calcolato tramite log delle interazioni.
 
-- *MPD-TSR - Task success rate*: indica la percentuale di task completati con successo dagli utenti. Un valore alto indica che il prodotto è facile da usare e che gli utenti riescono a completare le azioni richieste. Viene calcolato con sessioni di test con utenti.
+- *MPD-TSR - #gloss[Task] success rate*: indica la percentuale di task completati con successo dagli utenti. Un valore alto indica che il prodotto è facile da usare e che gli utenti riescono a completare le azioni richieste. Viene calcolato con sessioni di test con utenti.
 
 
 #figure(
@@ -267,7 +267,7 @@ $ ("numero di istruzioni eseguite") / ("numero di istruzioni totali nel codice")
 
 === Efficienza
 
-- *MPD-TRA - Tempo risposta API*: tempo di risposta delle API per il 90% delle richieste. Un valore basso indica che il sistema risponde velocemente alle richieste degli utenti.
+- *MPD-TRA - Tempo risposta #gloss[API]*: tempo di risposta delle API per il 90% delle richieste. Un valore basso indica che il sistema risponde velocemente alle richieste degli utenti.
 
 - *MPD-MP - Memoria processo*: indica l'utilizzo della memoria da parte del sistema. Un valore basso indica che il sistema utilizza in modo efficiente le risorse disponibili.
 
@@ -349,7 +349,7 @@ Per garantire la qualità del prodotto, il team CodeHex16 ha deciso di verificar
     "Test di Unità", "Verificare il corretto funzionamento delle singole componenti", "pytest, vitest",
     "Test di Integrazione", "Validare l’interazione tra moduli e servizi", "Postman",
     "Test di Sistema", "Verificare il comportamento end-to-end rispetto ai requisiti funzionali", "Playwright",
-    "Test di Accettazione", "Validare il sistema con il committente/utente finale", "Checklist manuali",
+    "Test di Accettazione", "Validare il sistema con il #gloss[committente]/utente finale", "Checklist manuali",
   ),
 )
 
@@ -424,7 +424,7 @@ Esempi applicati al progetto:
     fill: (x, y) => if (y == 0) { luma(230) },
     table.header([*Codice*], [*Descrizione*], [*Stato*]),
     "TS-001", "Test completo flusso cliente: Login → Richiesta prodotto → Valutazione risposta", "Non Implementato",
-    "TS-002", "Test gestione fornitori: Aggiunta account → Configurazione chatbot → Caricamento documenti", "Superato",
+    "TS-002", "Test gestione fornitori: Aggiunta #gloss[account] → Configurazione #gloss[chatbot] → Caricamento documenti", "Superato",
     "TS-003", "Test tolleranza ai fallimenti: Simulazione downtime sistema durante l’invio messaggi", "Pianificato",
   ),
 )
