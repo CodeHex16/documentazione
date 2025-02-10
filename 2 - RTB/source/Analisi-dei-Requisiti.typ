@@ -800,6 +800,22 @@ Quando si parla di *utente* si intende un utente generico che compie operazioni 
 - L'utente tenta di compiere un'operazione che richiede la comunicazione con il sistema, ma il sistema non è raggiungibile;
 - Il sistema mostra un messaggio d'errore all'utente tramite il client;
 
+== UC31 - Inserimento documenti aziendali
+*Attori principali:*
+- Fornitore;
+*Descrizione:*
+- Il fornitore vuole caricare dei documenti aziendali nella piattaforma in modo che l'LLM li usi come contesto;
+*Precondizioni:*
+- Il fornitore deve aver effettuato il login;
+- Il fornitore deve essere nella pagina delle impostazioni della piattaforma;
+- I documenti in possesso del fornitore devono essere in un formato supportato dalla piattaforma;
+*Postcondizioni:*
+- I doucmenti scelti dal fornitore vengono caricati nella piattaforma e sono accessibili dall'LLM;
+*Scenario Principale:*
+- Il fornitore accede alla sezione "Gestione documenti aziendali";
+- Il fornitore carica i documenti tramite l'interfaccia;
+- Il sistema riceve i documenti, li formatta e li inserisce nel sistema in modo che siano utilizzabili dall'LLM; 
+
 = Requisiti
 In questa sezione vengono elencati i requisiti del capitolato, individuati durante la fase di analisi. Ogni #gloss[requisito] viene
 identificato da un codice, scelto in base ai seguenti parametri:
@@ -864,15 +880,15 @@ con:
     "UC10",
     // creazione nuova chat 
     "R-10-F-O",
-    "La piattaforma deve dare la possibilità all'utente di poter creare una nuova chat con un constesto pulito",
+    "La piattaforma deve dare la possibilità all'utente di creare una nuova chat con un constesto pulito",
     "UC11",
     // apertura chat singola
     "R-11-F-O",
-    "La piattaforma deve dare la possibilità all'utente di poter aprire una singola chat selezionata dalla homepage",
+    "La piattaforma deve dare la possibilità all'utente di aprire una singola chat selezionata dalla homepage",
     "UC12",
     // eliminazione chat
     "R-12-F-O",
-    "La piattaforma deve dare la possibilità all'utente di poter eliminare una chat dalla lista visualizzata",
+    "La piattaforma deve dare la possibilità all'utente di eliminare una chat dalla lista visualizzata",
     "UC18",
     // scrittura messaggio
     "R-13-F-O",
@@ -896,11 +912,11 @@ con:
     "UC19",
     // modifica durata storico chat 
     "R-18-F-O",
-    "La piattaforma permette al fornitore di poter cambiare la durata dello storico delle chat",
+    "La piattaforma permette al fornitore di cambiare la durata dello storico delle chat",
     "UC20",
     // caricare logo
     "R-19-F-D",
-    "La piattaforma permette al fornitore di poter caricare il proprio logo in modo che sia utilizzato in tutta l'interfaccia",
+    "La piattaforma permette al fornitore di caricare il proprio logo in modo che sia utilizzato in tutta l'interfaccia",
     "UC21",
     // formato logo non valido
     "R-20-F-D",
@@ -912,30 +928,34 @@ con:
     "UC23",
     // statistiche domanda risposta
     "R-22-F-D",
-    "La piattaforma deve permettere al fornitore un modo per poter visualizzare le statistiche relative alle interazioni con il chatbot",
+    "La piattaforma deve permettere al fornitore un modo per visualizzare le statistiche relative alle interazioni con il chatbot",
     "UC24",
     // filtri visualizzazione
     "R-23-F-D",
     "La piattaforma deve permettere al fornitore la possibilità di filtrare le statistiche visualizzate",
     "UC25",
-    // aggiunta account cliente
+    // inserimento documenti aziendali
     "R-24-F-O",
+    "La piattaforma deve permettere al fornitore di inserire documenti aziendali in modo da fornire ulteriore contesto all'chatbot",
+    "UC31",
+    // aggiunta account cliente
+    "R-25-F-O",
     "La piattaforma deve permettere al fornitore di aggiungere account clienti",
     "UC26",
     // inserimento parametri account non validi
-    "R-25-F-O",
+    "R-26-F-O",
     "Nel caso i parametri inseriti per la registrazione di un cliente siano errati, la piattaforma deve avvisare il fornitore tramite un errore",
     "UC27",
     // inserimento account già esistente
-    "R-26-F-O",
+    "R-27-F-O",
     "Nel caso il fornitore stia aggiungendo un account cliente già esistente, La piattaforma deve avvisare il fornitore tramite un errore",
     "UC28",
     // eliminazione account cliente
-    "R-27-F-O",
+    "R-28-F-O",
     "La piattaforma deve dare la possibilità al fornitore di eliminare un account cliente",
     "UC29",
     // sistema non raggiungibile
-    "R-29-F-O",
+    "R-30-F-O",
     "Nel caso il sistema non sia raggiungibile l'interfaccia deve avvisare l'utente tramite un errore esplcitando il problema",
     "UC30",
   ),
