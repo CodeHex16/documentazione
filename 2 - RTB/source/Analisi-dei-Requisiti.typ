@@ -995,7 +995,7 @@ con:
     "Per l'integrazione con il chatbot, verrà utilizzato il linguaggio di programmazione Python",
     "Capitolato",
 
-    "R-02-V-O", "Per il frontend viene utilizzato il framework Svelte", "Interno",
+    "R-02-V-O", "Per il frontend viene utilizzato il framework #gloss[Svelte]", "Interno",
     "R-03-V-O", "Viene utilizzato Postgre per la gestione del database", "Interno",
   ),
 )
