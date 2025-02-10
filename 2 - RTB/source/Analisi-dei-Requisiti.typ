@@ -772,7 +772,7 @@ Quando si parla di *utente* si intende un utente generico che compie operazioni 
 *Attori principali:*
 - Fornitore;
 *Descrizione*
-- Un fornitore autenticato vuole eliminare un account di un cliente in modo che quest'ultimo non possa più accedere al chatbot. In questo caso non vengono gestiti i corner case in cui il fornitore elimina un account non esistente o selezionando Visualizzazione errore di login, poiché i metodi di selezione dell'account da eliminare costringono il fornitore ad eliminare solo account esistenti;
+- Un fornitore autenticato vuole eliminare un account di un cliente in modo che quest'ultimo non possa più accedere al chatbot. In questo caso non vengono gestiti i corner case in cui il fornitore elimina un account non esistente o selezionando credenziali errate, poiché i metodi di selezione dell'account da eliminare costringono il fornitore ad eliminare solo account esistenti;
 *Precondizioni:*
 - Il fornitore deve aver effettuato il login;
 - Il fornitore deve accedere alla sezione "Gestione account clienti";
@@ -814,7 +814,22 @@ Quando si parla di *utente* si intende un utente generico che compie operazioni 
 *Scenario Principale:*
 - Il fornitore accede alla sezione "Gestione documenti aziendali";
 - Il fornitore carica i documenti tramite l'interfaccia;
-- Il sistema riceve i documenti, li formatta e li inserisce nel sistema in modo che siano utilizzabili dall'LLM; 
+- Il sistema riceve i documenti, li formatta e li inserisce nel sistema in modo che siano utilizzabili dall'LLM;
+
+== UC32 - Aggiunta delle FAQ
+*Attori principali:*
+- Fornitore;
+*Descrizione:*
+- Il fornitore vuole aggiungere delle FAQ nella piattaforma in modo che il cliente possa usarle per ricevere risposte più precise e veloci;
+*Precondizioni:*
+- Il fornitore deve aver effettuato il login;
+- Il fornitore deve essere nella pagina delle impostazioni della piattaforma;
+*Postcondizioni:*
+- Le FAQ scelte dal fornitore vengono inserite nella piattaforma;
+*Scenario Principale:*
+- Il fornitore accede alla sezione "Gestione FAQ";
+- Il fornitore inserisce le FAQ tramite dei campi appositi nell'interfaccia;
+- Il sistema riceve le FAQ, le formatta e le inserisce nel sistema in modo che siano utilizzabili dall'LLM;
 
 = Requisiti
 In questa sezione vengono elencati i requisiti del capitolato, individuati durante la fase di analisi. Ogni #gloss[requisito] viene
@@ -938,20 +953,24 @@ con:
     "R-24-F-O",
     "La piattaforma deve permettere al fornitore di inserire documenti aziendali in modo da fornire ulteriore contesto all'chatbot",
     "UC31",
-    // aggiunta account cliente
+    // aggiunta FAQ
     "R-25-F-O",
+    "La piattaforma deve permettere al fornitore di aggiungere delle domande preimpostate utilizzabili dal cliente",
+    "UC32",
+    // aggiunta account cliente
+    "R-26-F-O",
     "La piattaforma deve permettere al fornitore di aggiungere account clienti",
     "UC26",
     // inserimento parametri account non validi
-    "R-26-F-O",
+    "R-27-F-O",
     "Nel caso i parametri inseriti per la registrazione di un cliente siano errati, la piattaforma deve avvisare il fornitore tramite un errore",
     "UC27",
     // inserimento account già esistente
-    "R-27-F-O",
+    "R-28-F-O",
     "Nel caso il fornitore stia aggiungendo un account cliente già esistente, La piattaforma deve avvisare il fornitore tramite un errore",
     "UC28",
     // eliminazione account cliente
-    "R-28-F-O",
+    "R-29-F-O",
     "La piattaforma deve dare la possibilità al fornitore di eliminare un account cliente",
     "UC29",
     // sistema non raggiungibile
