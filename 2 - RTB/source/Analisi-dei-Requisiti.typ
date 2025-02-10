@@ -26,12 +26,12 @@
     "07/02/2025",
     "Luca Ribon, Filippo Sabbadin",
     "Aggiunti requisiti funzionali",
-    "!!VERIFICATORE!!",
+    "Francesco Fragonas",
     "0.6.0",
     "31/01/2025",
     "Filippo Sabbadin, Luca Ribon",
     "Aggiunta sezione requisiti, migliorati use case esistenti",
-    "!!VERIFICATORE!!",
+    "Francesco Fragonas",
     "0.5.0",
     "11/01/2025",
     "Filippo Sabbadin",
@@ -164,9 +164,9 @@ Nelle seguenti sezioni verranno descritti tutti i possibili casi d'uso, cioè tu
 == Attori
 *Amministratore*: rappresenta la persona o il gruppo di persone che si occupa della distribuzione e configurazione del sistema per tutti i fornitori. Gestisce anche gli account dei fornitori.\
 In questo caso va interpretato come l'azienda Ergon Informatica Srl.\
-Questo utente ha accesso ad un'#gloss[interfaccia web] di configurazione del chatbot e di gestione degli account dei clienti.\
 *Cliente*: rappresenta il cliente finale che acquista prodotti dal fornitore e che ha la possibilità di interagire con il chatbot del fornitore per ottenere informazioni sui prodotti o servizi offerti.\
 *Fornitore*: reppresenta l'azienda che fornisce dei prodotti ai propri clienti, ogni fornitore ha una sua istanza di chatbot; è una generalizzazione di Cliente infatti, oltre a poter accedere al proprio chatbot, può anche fornire il contesto tramite dei documenti aziendali o #gloss[FAQ] e personalizzare graficamente l'interfaccia variando logo e palette colori.\
+Questo utente ha accesso ad un'#gloss[interfaccia web] di configurazione del chatbot e di gestione degli account dei clienti.\
 // TODO: capire se tenerlo ->
 // *Sistema*: rappresenta il #gloss[backend] del sistema, incluso quello dell'LLM quando viene interrogato.\
 Quando si parla di *utente* si intende un utente generico che compie operazioni accessibili sia ai fornitori che ai clienti.
@@ -499,7 +499,7 @@ Quando si parla di *utente* si intende un utente generico che compie operazioni 
 *Postcondizioni:*
 - L'utente visualizza la chat da lui selezionata;
 *Scenario Principale:*
-- L'utente visualizza lo chat scelta in una nuova finestra;
+- L'utente visualizza la chat scelta in una nuova finestra;
 *Estensioni:*
 - Sistema non raggiungibile;
 
@@ -522,7 +522,7 @@ Quando si parla di *utente* si intende un utente generico che compie operazioni 
 *Attori principali:*
 - Fornitore/cliente;
 *Descrizione:*
-- Un utente vuole comunicare con il chatbot utilizzando uno dei messaggi preimpostato;
+- Un utente vuole comunicare con il chatbot utilizzando uno dei messaggi preimpostati;
 *Precondizioni:*
 - L'utente deve aver effettuato il login;
 - L'utente deve aver aperto una chat specifica;
@@ -535,11 +535,11 @@ Quando si parla di *utente* si intende un utente generico che compie operazioni 
 *Attori principali:*
 - Fornitore/cliente;
 *Descrizione:*
-- Un utente vuole inviare il messaggio scritto il chatbot;
+- Un utente vuole inviare il messaggio scritto al chatbot;
 *Precondizioni:*
 - L'utente deve aver effettuato il login;
 - L'utente deve aver aperto una chat specifica;
-- L'utente deve avere inseito il messaggio da inviare;
+- L'utente deve avere inserito il messaggio da inviare;
 *Postcondizioni:*
 - L'utente ha inviato il messaggio;
 *Scenario Principale:*
