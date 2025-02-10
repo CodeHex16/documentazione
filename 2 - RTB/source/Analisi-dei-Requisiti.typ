@@ -22,6 +22,11 @@
   ),
   sommario: [Analisi dei requisiti del capitolato C7],
   versioni: (
+    "0.7.0",
+    "07/02/2025",
+    "Luca Ribon, Filippo Sabbadin",
+    "Aggiunti requisiti funzionali",
+    "!!VERIFICATORE!!",
     "0.6.0",
     "31/01/2025",
     "Filippo Sabbadin, Luca Ribon",
@@ -170,10 +175,10 @@ Quando si parla di *utente* si intende un utente generico che compie operazioni 
 
 == UC1 - Login
 // TODO: rifare grafico
-#figure(
-  image("../imgs/login.png", width: 90%),
-  caption: "Inserimento e-mail e password fornitore + possibilità 'Resta connesso'",
-)
+// #figure(
+//   image("../imgs/login.png", width: 90%),
+//   caption: "Inserimento e-mail e password fornitore + possibilità 'Resta connesso'",
+// )
 *Attori principali:*
 - Fornitore/Cliente;
 *Descrizione:*
@@ -198,10 +203,10 @@ Quando si parla di *utente* si intende un utente generico che compie operazioni 
 - Possibilità "Resta connesso";
 
 // TODO: rifare grafico
-#figure(
-  image("../imgs/inserimento-email-password.png", width: 90%),
-  caption: "Inserimento e-mail e password fornitore + possibilità 'Resta connesso'",
-)
+// #figure(
+//   image("../imgs/inserimento-email-password.png", width: 90%),
+//   caption: "Inserimento e-mail e password fornitore + possibilità 'Resta connesso'",
+// )
 
 === UC1.1 - Inserimento e-mail
 *Attori principali:*
@@ -347,7 +352,7 @@ Quando si parla di *utente* si intende un utente generico che compie operazioni 
 // È uno use case a parte perché sarà anche quello usato per modificare la password dell'utente
 // TODO: rifare grafico
 == UC4 - Modifica password
-#figure(image("../imgs/cambio-password.png", width: 90%), caption: "Modifica password")
+//#figure(image("../imgs/cambio-password.png", width: 90%), caption: "Modifica password")
 *Attori principali:*
 - Fornitore/cliente;
 *Descrizione:*
@@ -400,8 +405,9 @@ Quando si parla di *utente* si intende un utente generico che compie operazioni 
 * Estensioni:*
 - Sistema non raggiungibile;
 
+// TODO: rifare grafico
 == UC7 - Recupero password
-#figure(image("../imgs/recupero-password.png", width: 80%), caption: "Recupero password")
+//#figure(image("../imgs/recupero-password.png", width: 80%), caption: "Recupero password")
 *Attori principali:*
 - Fornitore/cliente;
 *Descrizione:*
@@ -433,8 +439,9 @@ Quando si parla di *utente* si intende un utente generico che compie operazioni 
 - Il sistema riceve la password inserita dall'utente;
 - Il sistema verifica la password inserita e la trova non conforme ai requisiti, quindi invia un messaggio d'errore all'utente con la richiesta di scegliere un'altra password valida;
 
+// TODO: rifare grafico
 == UC9 - Logout
-#figure(image("../imgs/logout.png", width: 50%), caption: "Logout")
+// #figure(image("../imgs/logout.png", width: 50%), caption: "Logout")
 *Attori principali:*
 - Forntitore/cliente;
 *Descrizione:*
@@ -447,11 +454,12 @@ Quando si parla di *utente* si intende un utente generico che compie operazioni 
 - L'utente preme il pulsante di logout;
 - Il sistema riceve la richiesta di logout e disconnette l'utente dal sistema;
 
+// TODO: rifare grafico
 == UC10 - Visualizzazione della lista delle chat
-#figure(
-  image("../imgs/visualizzazione-scrittura-messaggio.png", width: 80%),
-  caption: "Visualizzazione ed invio dei messaggi",
-)
+// #figure(
+//   image("../imgs/visualizzazione-scrittura-messaggio.png", width: 80%),
+//   caption: "Visualizzazione ed invio dei messaggi",
+// )
 *Attori principali:*
 - Fornitore/cliente;
 *Descrizione:*
@@ -495,7 +503,7 @@ Quando si parla di *utente* si intende un utente generico che compie operazioni 
 *Estensioni:*
 - Sistema non raggiungibile;
 
-=== UC13 - Scrittura messaggio
+== UC13 - Scrittura messaggio
 *Attori principali:*
 - Fornitore/cliente;
 *Descrizione:*
@@ -510,7 +518,7 @@ Quando si parla di *utente* si intende un utente generico che compie operazioni 
 *Generalizzazioni:*
 - Scrittura messaggio tramite FAQ;
 
-=== UC14 - Scrittura messaggio tramite FAQ
+== UC14 - Scrittura messaggio tramite FAQ
 *Attori principali:*
 - Fornitore/cliente;
 *Descrizione:*
@@ -523,7 +531,7 @@ Quando si parla di *utente* si intende un utente generico che compie operazioni 
 *Scenario Principale:*
 - L'utente, anziché scrivere un messaggio manualmente, decide di selezionare un messaggio consigliato da quelli preimpostati nell'applicazione;
 
-=== UC15 - Invio messaggio
+== UC15 - Invio messaggio
 *Attori principali:*
 - Fornitore/cliente;
 *Descrizione:*
@@ -541,10 +549,10 @@ Quando si parla di *utente* si intende un utente generico che compie operazioni 
 
 // TODO: sistemare grafico
 == UC16 - Ricezione risposta
-#figure(
-  image("../imgs/ricezione-valutazione-risposta.png", width: 80%),
-  caption: "Visualizzazione ed invio dei messaggi",
-)
+// #figure(
+//   image("../imgs/ricezione-valutazione-risposta.png", width: 80%),
+//   caption: "Visualizzazione ed invio dei messaggi",
+// )
 *Attori principali:*
 - Fornitore/cliente;
 *Descrizione:*
@@ -673,10 +681,10 @@ Quando si parla di *utente* si intende un utente generico che compie operazioni 
 
 // TODO: sistemare grafico
 == UC24 - Visualizzare statistiche domanda-risposta
-#figure(
-  image("../imgs/statistiche-filtri-fornitore.png", width: 90%),
-  caption: "Visualizzazione statistiche e filtri del fornitore",
-)
+// #figure(
+//   image("../imgs/statistiche-filtri-fornitore.png", width: 90%),
+//   caption: "Visualizzazione statistiche e filtri del fornitore",
+// )
 *Attori principali:*
 - Fornitore;
 *Descrizione*:
@@ -711,7 +719,7 @@ Quando si parla di *utente* si intende un utente generico che compie operazioni 
 
 // TODO: sistemare grafico
 == UC26 - Aggiunta account cliente
-#figure(image("../imgs/aggiunta-account-cliente.png", width: 100%), caption: "Aggiunta di un account cliente")
+//#figure(image("../imgs/aggiunta-account-cliente.png", width: 100%), caption: "Aggiunta di un account cliente")
 *Attori principali:*
 - Fornitore;
 *Descrizione:*
@@ -808,8 +816,6 @@ con:
   - *D*: Desiderabile
 
 == Requisiti funzionali
-//Nota i numeri degli UC potrebbero non essere giusti visto che alcuni sono
-//stati modificati
 #show figure: set block(breakable: true)
 #figure(
   caption: [Requisiti di funzionalità],
@@ -821,7 +827,7 @@ con:
     table.header([*ID Requisito*], [*Descrizione*], [*Fonte*]),
     // login
     "R-01-F-O",
-    "L'utente deve poter accedere all'applicazione",
+    "L'utente deve poter accedere alla piattaforma",
     "UC1, UC1.1, UC1.2",
     // primo login
     "R-02-F-O",
@@ -835,96 +841,107 @@ con:
     "R-04-F-O",
     "L'interfaccia di login deve mostrare un errore nel caso in cui ci sia un errore di login",
     "UC5",
+    // TODO: fixare l'a capo nella tabella
     // resta connesso
     "R-05-F-D",
-    "L'utente deve poter scegliere se la piattaforma deve chiedere le credenziali ad ogni accesso",
+    "L'utente deve poter scegliere se reinserire le credenziali ad ogni accesso o se farle memorizzare alla piattaforma anche dopo il termine della sessione",
     "UC6",
     // recupero password
     "R-06-F-O",
     "L'utente deve poter recuperare la password nel caso in cui la dimentichi",
     "UC7, UC4",
-    // TODO:
     // password scelta non valida
-    "R-12-F-D",
-    "L'applicazione deve fornire la possibilità all'utente di recuperare la password nel caso questa venga dimenticata o persa",
-    "UC7", // recupero password
+    "R-07-F-O",
+    "L'interfaccia deve mostrare un errore nel caso in cui la password scelta dall'utente non rispetti il formato richiesto",
+    "UC8",
+    // logout
+    "R-08-F-O",
+    "La piattaforma deve fornire la possibilità all'utente di uscire dal proprio account",
+    "UC9",
+    // visualizzazione lista chat
+    "R-09-F-O",
+    "La piattaforma deve fare permettere all'utente di vedere la lista di tutte le sue chat",
+    "UC10",
+    // creazione nuova chat 
+    "R-10-F-O",
+    "La piattaforma deve dare la possibilità all'utente di poter creare una nuova chat con un constesto pulito",
+    "UC11",
+    // apertura chat singola
+    "R-11-F-O",
+    "La piattaforma deve dare la possibilità all'utente di poter aprire una singola chat selezionata dalla homepage",
+    "UC12",
+    // eliminazione chat
+    "R-12-F-O",
+    "La piattaforma deve dare la possibilità all'utente di poter eliminare una chat dalla lista visualizzata",
+    "UC18",
+    // scrittura messaggio
     "R-13-F-O",
-    "L'applicazione deve fornire la possibilità all'utente di poter uscire dal suo account",
-    "UC8", // logout
+    "La piattaforma deve permettere all'utente di scrivere messaggi e inviarli al chatbot",
+    "UC13, UC15",
+    // scrittura messaggio tramite FAQ
     "R-14-F-O",
-    "L'applicazione deve fare vedere all'utente la lista di tutte le chat con contesto diverso",
-    "", // lista chat
+    "La piattaforma deve permettere all'utente di scrivere messaggi tramite FAQ",
+    "UC14",
+    // ricezione risposta
     "R-15-F-O",
-    "L'applicazione deve dare la possibilità all'utente di poter creare una nuova chat per iniziare una nuova conversazione con il bot",
-    "", //creazione chat
+    "La piattaforma deve permettere all'utente di visualizzare le risposte elaborate dal chatbot",
+    "UC16",
+    // valutazione risposta
     "R-16-F-O",
-    "L'applicazione deve dare la possibilità all'utente di poter vedere la cronologia della singola chat selezionata dalla homepage",
-    "", // vis nuova chat
-    "R-17-F-O",
-    "L'applicazione deve dare la possibilità all'utente di poter eliminare una chat",
-    "", // eliminazione chat
+    "La piattaforma deve permettere all'utente di valutare le risposte ricevute dal chatbot",
+    "UC17",
+    // dark/light mode
+    "R-17-F-D",
+    "La piattaforma permette all'utente di cambiare il tema dell'interfaccia",
+    "UC19",
+    // modifica durata storico chat 
     "R-18-F-O",
-    "L'applicazione deve permettere all'utente di poter scrivere messaggi al chatbot",
-    "UC10", //scrittura ed invio mess
-    "R-19-F-O",
-    "L'applicazione deve fornire all'utente un modo per poter scrivere un messaggio",
-    "UC10.1", //scrittura mess
+    "La piattaforma permette al fornitore di poter cambiare la durata dello storico delle chat",
+    "UC20",
+    // caricare logo
+    "R-19-F-D",
+    "La piattaforma permette al fornitore di poter caricare il proprio logo in modo che sia utilizzato in tutta l'interfaccia",
+    "UC21",
+    // formato logo non valido
     "R-20-F-D",
-    "L'applicazione può fornire al cliente un set di messaggi già scritti in base al contesto, pronti ad essere inviati",
-    "UC10.2", // prescritto
-    "R-21-F-O",
-    "L'applicazione deve fornire all'utente un modo per inviare il messaggio scritto o scelto",
-    "UC10.3", // invio messaggio
-    "R-22-F-O",
-    "Alla ricezione di un messaggio, il chatbot manda una risposta in base al contenuto del messaggio dell'utente",
-    "UC11", //ricezione rispost
-    "R-22-F-O",
-    "L'applicazione dà la possibilità all'utente di valutare le risposte ricevute in base alla qualità",
-    "UC12", //val risposta
+    "Nel caso il logo caricato dal fornitore non sia valido, la piattaforma deve avvisare il fornitore che il logo non è valido",
+    "UC22",
+    // palette colori
+    "R-21-F-D",
+    "La piattaforma permette al fornitore di cambiare i colori principali dell'interfaccia anche per i clienti",
+    "UC23",
+    // statistiche domanda risposta
+    "R-22-F-D",
+    "La piattaforma deve permettere al fornitore un modo per poter visualizzare le statistiche relative alle interazioni con il chatbot",
+    "UC24",
+    // filtri visualizzazione
     "R-23-F-D",
-    "L'applicazione offre la possibilità all'utente di cambiare il colore principale del sito",
-    "UC13", // dark light
+    "La piattaforma deve permettere al fornitore la possibilità di filtrare le statistiche visualizzate",
+    "UC25",
+    // aggiunta account cliente
     "R-24-F-O",
-    "L'applicazione offre la possibilità al fornitore di poter cambiare la durata dello storico delle chat",
-    "UC14", // durata storico chat
+    "La piattaforma deve permettere al fornitore di aggiungere account clienti",
+    "UC26",
+    // inserimento parametri account non validi
     "R-25-F-O",
-    "L'applicazione offre la possibilità al fornitore di poter caricare il proprio logo",
-    "UC15", // carica logo
-    "R-26-F-D",
-    "Nel caso il logo caricato dal fornitore non sia valido, l'applicazione deve avvisare il fornitore che il logo non è valido",
-    "UC16", // logo non valido
-    "R-27-F-D",
-    "L'applicazione offre la possibilità al fornitore di cambiare i colori principali della sua chat",
-    "UC17", // palette colori
-    "R-28-F-D",
-    "L'applicazione deve permettere al fornitore un modo per poter visualizzare le statistiche del chatbot",
-    "UC18", // statistiche domanda risposta
-    "R-29-F-D",
-    "L'applicazione deve permettere al fornitore la possibilità di filtrare le statistiche relative alle interazioni tra clienti e chatbot",
-    "UC19", // filtri vis
-    "R-30-F-O",
-    "L'applicazione offre al fornitore la possibilità di aggiungere account clienti",
-    "UC20", // agg account cliente
-    "R-31-F-D",
-    "Nel caso i parametri inseriti per la registrazione di un cliente siano errati, l'applicazione deve avvisare il fornitore",
-    "UC21", // inserimento par account non validi
-    "R-32-F-D",
-    "Nel caso il fornitore stia aggiungendo un account cliente già esistente, l'applicazione deve avvisare il fornitore",
-    "UC22", // ins account già esistente
-    "R-33-F-O",
-    "L'applicazione deve dare la possibilità al fornitore di poter eliminare un account cliente",
-    "UC23", // eliminazione account cliente
-    "R-34-F-D",
-    "Nel caso la password inserita per un nuovo account cliente non sia valida, l'applicazione deve avvisare il fornitore",
-    "UC24", // password sceta non valida
-    "R-35-F-D",
-    "Nel caso l'applicazione non sia raggiungibile per vari motivi, l'applicazione o sistema deve avvisare l'utente",
-    "UC25", // sistema non raggiungibile
+    "Nel caso i parametri inseriti per la registrazione di un cliente siano errati, la piattaforma deve avvisare il fornitore tramite un errore",
+    "UC27",
+    // inserimento account già esistente
+    "R-26-F-O",
+    "Nel caso il fornitore stia aggiungendo un account cliente già esistente, La piattaforma deve avvisare il fornitore tramite un errore",
+    "UC28",
+    // eliminazione account cliente
+    "R-27-F-O",
+    "La piattaforma deve dare la possibilità al fornitore di eliminare un account cliente",
+    "UC29",
+    // sistema non raggiungibile
+    "R-29-F-O",
+    "Nel caso il sistema non sia raggiungibile l'interfaccia deve avvisare l'utente tramite un errore esplcitando il problema",
+    "UC30",
   ),
 )
 
 == Requisiti di qualità
-
 // NOTA: qua bisogna scrivere requisitii piu generali che
 // o sono stabiliti dal capitolato
 // o sono stabiliti da noi
@@ -945,7 +962,6 @@ con:
 )
 
 == Requisiti di vincolo
-
 #show figure: set block(breakable: true)
 #figure(
   caption: [Requisiti di vincolo],
