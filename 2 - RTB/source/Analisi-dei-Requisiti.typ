@@ -22,6 +22,11 @@
   ),
   sommario: [Analisi dei requisiti del capitolato C7],
   versioni: (
+    "0.7.1",
+    "10/02/2025",
+    "Luca Ribon",
+    "Aggiunto use case mancante e corretti typo",
+    "!!VERIFICATORE!!",
     "0.7.0",
     "07/02/2025",
     "Luca Ribon, Filippo Sabbadin",
