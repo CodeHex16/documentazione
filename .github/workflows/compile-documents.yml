@@ -16,10 +16,10 @@ jobs:
             - name: Checkout repository
               uses: actions/checkout@v4
               with:
-                  ssh-key: ${{ secrets.DEPLOY_KEY }} 
+                  ssh-key: ${{ secrets.DEPLOY_KEY }}
 
             - name: Setup Typst
-              uses: typst-community/setup-typst@v4 
+              uses: typst-community/setup-typst@v4
 
             - name: Cache fonts
               id: cache-fonts
@@ -40,7 +40,7 @@ jobs:
                   unzip /tmp/JetBrainsMono.zip -d ~/.local/share/fonts
                   fc-cache -f -v
 
-            - name: Clean old PDFs 
+            - name: Clean old PDFs
               run: |
                   find . -name "*.pdf" ! -name "*_ext.pdf" ! -name "*_firmato.pdf" -not -path "./diari-di-bordo/*" -delete
 
@@ -50,7 +50,7 @@ jobs:
                   python glossario.py
                   cd ../..
 
-            - name: Compile Typst documents 
+            - name: Compile Typst documents
               run: |
                   find . -path ./template -prune -o -name "*.typ" -print0 | while IFS= read -r -d '' file; do
                     output="${file%.typ}.pdf"
@@ -71,20 +71,20 @@ jobs:
                       fi
                   done
 
-            - name: Move PDFs to parent 
+            - name: Move PDFs to parent
               run: |
                   find . -name "*.pdf" ! -name "*_ext.pdf" ! -name "*_firmato.pdf" -not -path "./diari-di-bordo/*" -exec sh -c 'mv "$0" "$(dirname "$0")/../"' {} \;
 
-            - name: List all PDF files 
+            - name: List all PDF files
               run: find . -name "*.pdf" ! -name "*_ext.pdf" ! -name "*_firmato.pdf" -not -path "./diari-di-bordo/*"
 
-            - name: Upload PDF artifacts 
+            - name: Upload PDF artifacts
               uses: actions/upload-artifact@v4
               with:
                   name: Documentazione-CodeHex16
                   path: "**/*.pdf"
 
-            - name: Install tree-emoji-cli 
+            - name: Install tree-emoji-cli
               run: npm install -g tree-emoji-cli
 
             - name: Update README with directory tree # Generazione tree e update README.md
@@ -127,7 +127,7 @@ jobs:
                   cat README.md
                   rm tree.txt
 
-            - name: Commit and push PDFs and README 
+            - name: Commit and push PDFs and README
               run: |
                   git config --global user.name 'github-actions[bot]'
                   git config --global user.email 'github-actions[bot]@users.noreply.github.com'
@@ -145,7 +145,7 @@ jobs:
                   token: ${{ secrets.PAT_TOKEN }}
                   path: codehex16.github.io
 
-            - name: Copy PDFs to docs folder 
+            - name: Copy PDFs to docs folder
               run: |
                   mkdir -p codehex16.github.io/docs
                   find . -type f -name "*.pdf" \
@@ -157,6 +157,30 @@ jobs:
 
             - name: Extract glossario.txt # Estrazione glossario.txt
               run: awk '/^\/\/GLOSSARIO/ {flag=1; next} flag' glossario/source/glossario.typ > codehex16.github.io/docs/glossario/glossario.txt
+
+            - name: Generate structure of file in JSON (alternative using Python)
+              run: |
+                  python3 -c "
+                  import os
+                  import json
+
+                  def dir_to_dict(path):
+                      result = {"name": os.path.basename(path)}
+                      if os.path.isdir(path):
+                          result["type"] = "directory"
+                          result["children"] = [dir_to_dict(os.path.join(path, x)) for x in os.listdir(path)]
+                      else:
+                          result["type"] = "file"
+                          result["size"] = os.path.getsize(path) # Aggiungi la dimensione del file
+                       return result
+
+                  directory_path = "codehex16.github.io/docs"
+                  output = dir_to_dict(directory_path)
+                  print(json.dumps(output, indent=2))
+
+                  with open("codehex16.github.io/docs/structure.json", "w") as f:
+                       json.dump(dir_to_dict("codehex16.github.io/docs"), f, indent=2)  
+                  "
 
             - name: Commit and push to codehex16.github.io # Commit e push repo codehex16.github.io
               working-directory: codehex16.github.io
