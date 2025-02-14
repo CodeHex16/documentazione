@@ -72,12 +72,6 @@ jobs:
                   name: Documentazione-CodeHex16
                   path: "**/*.pdf"
 
-            - name: Setup Node.js 
-              uses: actions/setup-node@v4
-              with:
-                  node-version: lts/* 
-                  cache: "npm"
-
             - name: Install tree-emoji-cli 
               run: npm install -g tree-emoji-cli
 
