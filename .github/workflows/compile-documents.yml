@@ -160,27 +160,27 @@ jobs:
 
             - name: Generate structure of file in JSON
               run: |
-                  python3 -c "
-                  import os
-                  import json
+                python3 -c "
+                import os
+                import json
 
-                  def dir_to_dict(path):
-                      result = {"name": os.path.basename(path)}
-                      if os.path.isdir(path):
-                          result["type"] = "directory"
-                          result["children"] = [dir_to_dict(os.path.join(path, x)) for x in os.listdir(path)]
-                      else:
-                          result["type"] = "file"
-                          result["size"] = os.path.getsize(path) # Aggiungi la dimensione del file
-                       return result
+                def dir_to_dict(path):
+                    result = {"name": os.path.basename(path)}
+                    if os.path.isdir(path):
+                        result["type"] = "directory"
+                        result["children"] = [dir_to_dict(os.path.join(path, x)) for x in os.listdir(path)]
+                    else:
+                        result["type"] = "file"
+                        result["size"] = os.path.getsize(path) # Aggiungi la dimensione del file
+                    return result
 
-                  directory_path = "codehex16.github.io/docs"
-                  output = dir_to_dict(directory_path)
-                  print(json.dumps(output, indent=2))
+                directory_path = "codehex16.github.io/docs"
+                output = dir_to_dict(directory_path)
+                print(json.dumps(output, indent=2))
 
-                  with open("codehex16.github.io/docs/structure.json", "w") as f:
-                       json.dump(dir_to_dict("codehex16.github.io/docs"), f, indent=2) 
-                  "
+                with open("codehex16.github.io/docs/structure.json", "w") as f:
+                     json.dump(dir_to_dict("codehex16.github.io/docs"), f, indent=2) 
+                "
 
             - name: Commit and push to codehex16.github.io # Commit e push repo codehex16.github.io
               working-directory: codehex16.github.io
