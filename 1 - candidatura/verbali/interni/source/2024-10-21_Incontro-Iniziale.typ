@@ -30,12 +30,12 @@ Abbiamo scelto il nome "CodeHex16" proposto da Francesco Fragonas.
 == Logo del gruppo
 Abbiamo scelto i seguenti loghi
 #figure(
-    image("../../../template/images/logo_extended.jpg", width: 10em),
+    image("../../../../template/images/logo_extended.jpg", width: 10em),
     caption : [ Versione estesa del logo]
 )
 
 #figure(
-    image("../../../template/images/logo.jpg", width: 3em),
+    image("../../../../template/images/logo.jpg", width: 3em),
     caption : [ Versione compatta del logo]
 )
 == Stesura del template per i documenti
