@@ -442,16 +442,39 @@ In generale, durante questo sprint, si è continuata la stesura dei documenti pr
   ],
 )
 
-== Periodo PB
-*Periodo*: *DA DEFINIRE*
+=== Sprint 6
+*Intervallo temporale*: 07/01/2025 - 11/02/2025
 
-#pseudoheading[*Obiettivi principali*]
+Con lo *Sprint 6*, il team ha proseguito nella stesura della documentazione principale del progetto, concentrandosi in particolare su: Norme di Progetto, Piano di Qualifica e Glossario. 
+Inoltre, sono stati integrati i diagrammi UML nell'Analisi dei Requisiti.
 
-- *Progettazione architetturale*: Definizione dell'architettura del sistema e delle scelte di design.
-- *Implementazione delle funzionalità principali*: Sviluppo del prodotto partendo dal Proof of Concept, con particolare attenzione alle funzionalità chiave.
-- *Integrazione delle tecnologie*: Collegamento delle componenti tecnologiche per garantire un sistema coerente.
-- *Documentazione avanzata*: Produzione di Diagrammi delle Classi, Manuale Utente e Manuale Sviluppatore.
-In questo periodo, il team si è concentrato sulla trasformazione del PoC in un prodotto funzionante, implementando le funzionalità principali richieste e validandone il comportamento attraverso test preliminari.
+Un punto chiave di questo sprint è stato l’incontro con il proponente, durante il quale il team ha vberificato la completezza degli Use Case e presentato la scelta dell’LLM
+
+#pseudoheading[*Attività svolte*]
+
+- *Stesura Norme di Progetto*: Continuazione della stesura del documento, con ulteriore dettaglio sulla gestione delle revisioni e degli standard adottati.
+- *Stesura Piano di Qualifica*: Approfondimento delle metriche di qualità e inizio definizione delle procedure di verifica e validazione.
+- *Aggiornamento Glossario*: Integrazione di nuovi termini tecnici emersi durante l’analisi dei requisiti e il confronto con il proponente.
+- *Integrazione Diagrammi UML nell'Analisi dei Requisiti*: Aggiunta dei diagrammi per supportare la comprensione delle funzionalità chiave del sistema.
+- *Verifica degli Use Case*: Revisione della completezza degli *Use Case* in collaborazione con il proponente, con particolare attenzione all’interfaccia cliente e fornitore.
+- *Scelta dell’LLM*: Discussione e decisione definitiva sul modello linguistico da integrare nel progetto.
+- *PoCChino del Front-End*: Prima dimostrazione del Proof of Concept del frontend al proponente.
+
+#pseudoheading[*Ruoli ricoperti e ore svolte*]
+
+#figure(
+  image("../imgs/sprint6-tabella.png", width: 100%),
+  caption: [
+    Suddivisione oraria per membro e ruolo.
+  ],
+)
+
+#figure(
+  image("../imgs/sprint6-grafico.png", width: 100%),
+  caption: [
+    Suddivisione oraria per ruolo con relativi costi.
+  ],
+)
 
 == Periodo CA
 *Periodo*: *DA DEFINIRE*
