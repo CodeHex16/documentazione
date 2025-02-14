@@ -159,6 +159,7 @@ jobs:
               run: awk '/^\/\/GLOSSARIO/ {flag=1; next} flag' glossario/source/glossario.typ > codehex16.github.io/docs/glossario/glossario.txt
 
             - name: Generate structure of file in JSON
+              working-directory: codehex16.github.io
               run: |
                 python3 -c "
                 import os
@@ -174,12 +175,12 @@ jobs:
                         result["size"] = os.path.getsize(path) # Aggiungi la dimensione del file
                     return result
 
-                directory_path = "codehex16.github.io/docs"
+                directory_path = "docs"
                 output = dir_to_dict(directory_path)
                 print(json.dumps(output, indent=2))
 
-                with open("codehex16.github.io/docs/structure.json", "w") as f:
-                     json.dump(dir_to_dict("codehex16.github.io/docs"), f, indent=2) 
+                with open("docs/structure.json", "w") as f:
+                     json.dump(dir_to_dict(directory_path), f, indent=2) 
                 "
 
             - name: Commit and push to codehex16.github.io # Commit e push repo codehex16.github.io
