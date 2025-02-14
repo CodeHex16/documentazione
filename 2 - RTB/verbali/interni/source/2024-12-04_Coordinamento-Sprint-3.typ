@@ -1,23 +1,42 @@
-#import "../../../template/verbale.typ": *
+#import "../../../../template/verbale.typ": *
 
-#show : doc => verbale(
-    titolo: "Coordinamento Sprint 3",
-    ordine-del-giorno: ("Revisione Sprint 2", "Coordinamento per lo Sprint 3", "Ruotazione dei ruoli"),
-    data: [04/12/2024],
-    ora: [16:30-18:30],
-    tipo: "interno",
-    versioni: (
-      "0.1.1","11/12/2024","Yi Hao Zhuo","Aggiunta link glossario", "Matteo Bazzan",
-      "0.1.0","04/12/2024","Gabriele Magnelli","Prima stesura", "Matteo Bazzan"
-    ),
-    presenze: (
-        "Luca Ribon","Verificatore", "2h",
-        "Filippo Sabbadin", "Verificatore", "2h",
-        "Matteo Bazzan", "Verificatore", "2h",
-        "Gabriele Magnelli", "Relatore", "2h",
-        "Yi Hao Zhuo", "Verificatore", "2h"
-    ),
-    doc,
+
+#show: doc => verbale(
+  titolo: "Coordinamento Sprint 3",
+  ordine-del-giorno: ("Revisione Sprint 2", "Coordinamento per lo Sprint 3", "Ruotazione dei ruoli"),
+  data: [04/12/2024],
+  ora: [16:30-18:30],
+  tipo: "interno",
+  versioni: (
+    "0.1.1",
+    "11/12/2024",
+    "Yi Hao Zhuo",
+    "Aggiunta link glossario",
+    "Matteo Bazzan",
+    "0.1.0",
+    "04/12/2024",
+    "Gabriele Magnelli",
+    "Prima stesura",
+    "Matteo Bazzan",
+  ),
+  presenze: (
+    "Luca Ribon",
+    "Verificatore",
+    "2h",
+    "Filippo Sabbadin",
+    "Verificatore",
+    "2h",
+    "Matteo Bazzan",
+    "Verificatore",
+    "2h",
+    "Gabriele Magnelli",
+    "Relatore",
+    "2h",
+    "Yi Hao Zhuo",
+    "Verificatore",
+    "2h",
+  ),
+  doc,
 )
 
 = Revisione Sprint 2
@@ -32,17 +51,19 @@ Abbiamo applicato la ruotazione dei ruoli, quindi per i prossimi due sprint (spr
 #table(
   columns: (1fr, 1fr),
   inset: 8pt,
-  fill: (x,y) => if (y== 0) { luma(230) },
+  fill: (x, y) => if (y == 0) { luma(230) },
   table.header(
-    [*Membro*], [*Ruolo*], 
+    [*Membro*],
+    [*Ruolo*],
   ),
+
   "Matteo Bazzan", "Verificatore",
-  "Francesco Fragonas",	"Analista",
+  "Francesco Fragonas", "Analista",
   "Gabriele Magnelli", "Amministratore",
-  "Luca Ribon",	"Analista",
-  "Luca Rossi",	"Responsabile",
-  "Filippo Sabbadin",	"Analista",
-  "Yi Hao Zhuo",	"Verificatore"
+  "Luca Ribon", "Analista",
+  "Luca Rossi", "Responsabile",
+  "Filippo Sabbadin", "Analista",
+  "Yi Hao Zhuo", "Verificatore",
 )
 
 = Azioni future

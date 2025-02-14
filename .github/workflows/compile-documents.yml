@@ -1,4 +1,5 @@
 name: Compile Typst docs
+
 on:
     push:
         branches:
@@ -10,90 +11,93 @@ permissions:
 jobs:
     build:
         runs-on: ubuntu-latest
+
         steps:
-            - name: Checkout
+            - name: Checkout repository
               uses: actions/checkout@v4
               with:
-                  ssh-key: ${{secrets.DEPLOY_KEY}}
+                  ssh-key: ${{ secrets.DEPLOY_KEY }} 
 
-            - name: Install typst CLI
-              run: |
-                  mkdir -p $HOME/.local/bin
-                  echo $HOME/.local/bin >> $GITHUB_PATH
-                  wget https://github.com/typst/typst/releases/latest/download/typst-x86_64-unknown-linux-musl.tar.xz -O /tmp/typst-x86_64-unknown-linux-musl.tar.xz
-                  tar xf /tmp/typst-x86_64-unknown-linux-musl.tar.xz -C $HOME/.local/bin --strip-components=1 typst-x86_64-unknown-linux-musl/typst
+            - name: Setup Typst
+              uses: typst-community/setup-typst@v4 
 
-            - name: Install Noto Sans font
+            - name: Cache fonts
+              uses: actions/cache@v4
+              with:
+                  path: ~/.local/share/fonts
+                  key: fonts-${{ runner.os }}-noto-jetbrains
+                  restore-keys: |
+                      fonts-${{ runner.os }}-
+
+            - name: Install fonts
               run: |
-                  mkdir -p $HOME/.local/share/fonts
+                  mkdir -p ~/.local/share/fonts
                   wget https://noto-website-2.storage.googleapis.com/pkgs/NotoSans-unhinted.zip -O /tmp/NotoSans-unhinted.zip
-                  unzip /tmp/NotoSans-unhinted.zip -d $HOME/.local/share/fonts
-                  fc-cache -f -v
-
-            - name: Install JetBrains Mono font
-              run: |
+                  unzip /tmp/NotoSans-unhinted.zip -d ~/.local/share/fonts
                   wget https://download.jetbrains.com/fonts/JetBrainsMono-2.242.zip -O /tmp/JetBrainsMono.zip
-                  unzip /tmp/JetBrainsMono.zip -d $HOME/.local/share/fonts
+                  unzip /tmp/JetBrainsMono.zip -d ~/.local/share/fonts
                   fc-cache -f -v
 
-            - name: Remove old PDF files except for _ext and _firmato
+            - name: Clean old PDFs 
               run: |
-                  find . -name "*.pdf" ! -name "*_ext.pdf" ! -name "*_firmato.pdf" -not -path "./diari-di-bordo/*" -exec rm {} \;
+                  find . -name "*.pdf" ! -name "*_ext.pdf" ! -name "*_firmato.pdf" -not -path "./diari-di-bordo/*" -delete
 
-            - name: Aggiungi \#gloss[...] ai termini trovati nei file .typ
+            - name: Process Glossario # Esecuzione script glossario
               run: |
                   cd glossario/source
                   python glossario.py
                   cd ../..
 
-            - name: Find and compile Typst files
+            - name: Compile Typst documents 
               run: |
                   find . -path ./template -prune -o -name "*.typ" -print0 | while IFS= read -r -d '' file; do
-                    typst compile --root . "$file" "${file%.typ}.pdf" --font-path $HOME/.local/share/fonts
+                    typst compile --root . "$file" "${file%.typ}.pdf" --font-path ~/.local/share/fonts
                   done
 
-            - name: Remove PDF files with same name as _ext or _firmato
+            - name: Remove redundant PDFs 
               run: |
-                  find . -name "*_ext.pdf" -o -name "*_firmato.pdf" | while read -r file; do
-                  base=$(basename "$file" "_ext.pdf")
-                  base=${base%_firmato.pdf}
-                  find . -name "${base}.pdf" -exec rm {} \;
+                  find . \( -name "*_ext.pdf" -o -name "*_firmato.pdf" \) -print0 | while IFS= read -r -d '' file; do
+                    base=$(basename "$file" "_ext.pdf")
+                    base=${base%_firmato.pdf}
+                    find . -name "${base}.pdf" -delete
                   done
 
-            - name: Move PDF files to parent directory
+            - name: Move PDFs to parent 
               run: |
-                  find . -name "*.pdf" ! -name "*_ext.pdf" ! -name "*_firmato.pdf" -not -path "./diari-di-bordo/*" -exec sh -c 'mv "$0" "$(dirname "$0")/../"' {} \;
+                  find . -name "*.pdf" ! -name "*_ext.pdf" ! -name "*_firmato.pdf" -not -path "./diari-di-bordo/*" -exec mv {} ../ \;
 
-            - name: Upload PDF files
+            - name: Upload PDF artifacts 
               uses: actions/upload-artifact@v4
               with:
                   name: Documentazione-CodeHex16
                   path: "**/*.pdf"
 
-            - name: Install nodejs and tree-emoji-cli
-              run: |
-                  sudo apt install -y nodejs
-                  npm install -g tree-emoji-cli
-            - name: Generate tree structure and update README.md
+            - name: Setup Node.js 
+              uses: actions/setup-node@v4
+              with:
+                  node-version: lts/* 
+                  cache: "npm"
+
+            - name: Install tree-emoji-cli 
+              run: npm install -g tree-emoji-cli
+
+            - name: Update README with directory tree # Generazione tree e update README.md
               run: |
                   tree -l 6 -d -o tree.txt --noreport
                   python3 -c "
                   import re
 
                   tree = ''
-                  # cambia il nome della cartella principale in documentazione/
                   with open('tree.txt', 'r') as file:
                     lines = file.readlines()
-                    lines[1] = 'documentazione/\n'
+                    lines[1] = 'documentazione/\n' # Modifica il nome della cartella principale
                     tree = ''.join(lines)
                     tree = tree.strip()
-                  print(tree)
-                  # aggiunge commenti per i file di template e immagini e .pdf
-                  lines = tree.split('\n')
+
                   new_content = []
                   new_content.append('<!-- INIZIO TREE DIRECTORY -->')
                   new_content.append('\`\`\`')
-                  for line in lines:
+                  for line in tree.split('\n'):
                     if 'template' in line:
                       line += '\t\t# file di template per i documenti'
                     elif 'image' in line:
@@ -102,7 +106,7 @@ jobs:
                     if 'source' in line:
                       new_line = line.replace('📁 source', '📄 *.pdf')
                       new_content.append(new_line)
-                    
+
                   new_content.append('\`\`\`')
                   new_content.append('<!-- FINE TREE DIRECTORY -->')
                   tree = '\n'.join(new_content)        
@@ -117,25 +121,25 @@ jobs:
                   cat README.md
                   rm tree.txt
 
-            - name: Commit and push PDF files
+            - name: Commit and push PDFs and README 
               run: |
                   git config --global user.name 'github-actions[bot]'
                   git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-                  git pull 
+                  git pull
                   git add .
-                  git commit -m 'Add compiled PDF files and update README.md [skip ci]'
+                  git commit -m 'Add compiled PDF files and update README.md [skip ci]' || echo "No changes to commit" # Evita errori se non ci sono modifiche
                   git push
               env:
                   GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
 
-            - name: Checkout codehex16.github.io repository
+            - name: Checkout codehex16.github.io repo # Checkout repo codehex16.github.io
               uses: actions/checkout@v4
               with:
                   repository: codehex16/codehex16.github.io
                   token: ${{ secrets.PAT_TOKEN }}
                   path: codehex16.github.io
 
-            - name: Copia i file PDF compilati nella cartella docs mantenendo la struttura
+            - name: Copy PDFs to docs folder 
               run: |
                   mkdir -p codehex16.github.io/docs
                   find . -type f -name "*.pdf" \
@@ -143,14 +147,12 @@ jobs:
                     -not -path "./template/*" \
                     -not -path "./.github/*" \
                     -not -path "./codehex16.github.io/*" \
-                    -print0 | rsync -av --relative --files-from=- --from0 . codehex16.github.io/docs/
+                    -exec rsync -av --relative {} codehex16.github.io/docs/ \;
 
-            # Estrae il glossario dal file .typ e lo salva in glossario.txt dal commento //GLOSSARIO in poi
-            - name: glossario.txt per la pagina web
-              run: |
-                  awk '/^\/\/GLOSSARIO/ {flag=1; next} flag' glossario/source/glossario.typ > codehex16.github.io/docs/glossario/glossario.txt
+            - name: Extract glossario.txt # Estrazione glossario.txt
+              run: awk '/^\/\/GLOSSARIO/ {flag=1; next} flag' glossario/source/glossario.typ > codehex16.github.io/docs/glossario/glossario.txt
 
-            - name: Commit e push delle modifiche
+            - name: Commit and push to codehex16.github.io # Commit e push repo codehex16.github.io
               working-directory: codehex16.github.io
               run: |
                   git config --global user.name 'github-actions[bot]'
