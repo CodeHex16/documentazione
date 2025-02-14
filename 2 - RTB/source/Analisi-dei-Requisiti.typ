@@ -518,6 +518,7 @@ Questo utente ha accesso ad un'#gloss[interfaccia web] di configurazione del cha
 *Estensioni:*
 - Sistema non raggiungibile;
 
+// TODO: limitare la lunghezza del messaggio
 == UC13 - Scrittura messaggio
 *Attori principali:*
 - Fornitore/cliente;
@@ -758,6 +759,7 @@ Questo utente ha accesso ad un'#gloss[interfaccia web] di configurazione del cha
 - Sistema non raggiungibile;
 
 // TODO: usare degli use case che controllano il formato
+// TODO: inserimento utente già esistente
 == UC27 - Inserimento di parametri dell'account non validi
 *Attori principali:*
 - Fornitore;
@@ -821,6 +823,7 @@ Questo utente ha accesso ad un'#gloss[interfaccia web] di configurazione del cha
 
 // TODO: use case invio richiesta con dati mancanti o errati
 
+// TODO: visualizzazione, modifica ed eliminazione documento
 // TODO: use case formato documento non supportato, magari posso riusare quello usato anche per il logo
 == UC31 - Inserimento documenti aziendali
 *Attori principali:*
@@ -838,6 +841,7 @@ Questo utente ha accesso ad un'#gloss[interfaccia web] di configurazione del cha
 - Il fornitore carica i documenti tramite l'interfaccia;
 - Il sistema riceve i documenti, li formatta e li inserisce nel sistema in modo che siano utilizzabili dall'LLM;
 
+// TODO: visualizzazione, modifica e eliminazione FAQ
 // TODO: estensione faq vuota con lo use case invio richiesta con dati mancanti o errati
 == UC32 - Aggiunta delle FAQ
 *Attori principali:*
