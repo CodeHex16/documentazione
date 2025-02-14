@@ -161,10 +161,9 @@ jobs:
             - name: Generate structure of file in JSON
               working-directory: codehex16.github.io
               run: |
-                python3 -c "
+                python3 -c '
                 import os
                 import json
-
                 def dir_to_dict(path):
                     result = {"name": os.path.basename(path)}
                     if os.path.isdir(path):
@@ -174,14 +173,12 @@ jobs:
                         result["type"] = "file"
                         result["size"] = os.path.getsize(path) # Aggiungi la dimensione del file
                     return result
-
                 directory_path = "docs"
                 output = dir_to_dict(directory_path)
                 print(json.dumps(output, indent=2))
-
                 with open("docs/structure.json", "w") as f:
-                     json.dump(dir_to_dict(directory_path), f, indent=2) 
-                "
+                    json.dump(dir_to_dict(directory_path), f, indent=2) 
+                '
 
             - name: Commit and push to codehex16.github.io # Commit e push repo codehex16.github.io
               working-directory: codehex16.github.io
