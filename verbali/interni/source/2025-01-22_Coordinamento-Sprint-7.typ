@@ -20,24 +20,24 @@
 )
 
 = Revisione Sprint 6
-Durante la riunione è stato analizzato il lavoro svolto nello *Sprint 6*, e dato l'elevato numero di task non concluse (a causa del periodo di sessione) abbiamo deciso di ri-schedularle al prossimo sprint.
+Durante la riunione è stato analizzato il lavoro svolto nello *Sprint 6*, e dato l'elevato numero di #gloss[task] non concluse (a causa del periodo di sessione) abbiamo deciso di ri-schedularle al prossimo sprint.
 
 = Discussione chiavi API di OpenAI
-L'azienda Ergon ha fornito le chiavi API per l'utilizzo dei modelli LLM di OpenAI. Sono state condivise le credenziali per l'accesso alla piattaforma con tutti i membri del gruppo, ed è stato spiegato come utilizzarle per effettuare le prime prove.
+L'azienda Ergon ha fornito le chiavi API per l'utilizzo dei modelli #gloss[LLM] di OpenAI. Sono state condivise le credenziali per l'accesso alla piattaforma con tutti i membri del gruppo, ed è stato spiegato come utilizzarle per effettuare le prime prove.
 
 = Discussione architettura base del PoC e struttura del Repository
 Abbiamo pensato di strutturare il PoC in quattro parti principali:
-- *Suppl-AI*: la webapp che ospiterà il chatbot
+- *#gloss[Suppl-AI]*: la #gloss[webapp] che ospiterà il #gloss[chatbot]
 - *Suppl-Admin*: la webapp per gli amministratori che permetterà di gestire il chatbot, caricare documenti e creare il profilo degli utenti che utilizzeranno il chatbot
 - *Database API*: il server che si occuperà di gestire le richieste del frontend
-- *LLM Backend*: il server che si occuperà di gestire le richieste al modello LLM
+- *LLM #gloss[Backend]*: il server che si occuperà di gestire le richieste al modello LLM
 
-Sono state create nuove repository su GitHub per ospitare i codici sorgente di questi componenti.
+Sono state create nuove repository su #gloss[GitHub] per ospitare i codici sorgente di questi componenti.
 
 = Coordinamento Sprint 7
 È stato deciso che lo Sprint 7 avrà una durata di 3 settimane per permettere di completare le task non concluse nello Sprint 6, e per permettere ai membri del gruppo di concentrasi sugli esami rimanenti.
 
-È stato deciso anche di aumentare il numero di analisti per permettere di completare le task di analisi rimaste indietro e fissare un incontro con il Prof. Cardin per discutere dell'analisi dei requisiti.
+È stato deciso anche di aumentare il numero di analisti per permettere di completare le task di analisi rimaste indietro e fissare un incontro con il Prof. Cardin per discutere dell'#gloss[analisi dei requisiti].
 
 - I *nuovi ruoli* per lo Sprint 7 sono:
 #table(
