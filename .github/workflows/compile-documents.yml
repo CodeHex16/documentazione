@@ -51,15 +51,17 @@ jobs:
             - name: Compile Typst documents 
               run: |
                   find . -path ./template -prune -o -name "*.typ" -print0 | while IFS= read -r -d '' file; do
-                    typst compile --root . "$file" "${file%.typ}.pdf" --font-path ~/.local/share/fonts
+                    output="${file%.typ}.pdf"
+                    echo "Compilando: $file -> $output"
+                    typst compile --root . "$file" "$output" --font-path ~/.local/share/fonts
                   done
 
-            - name: Remove redundant PDFs 
+            - name: Remove PDF files with same name as _ext or _firmato
               run: |
-                  find . \( -name "*_ext.pdf" -o -name "*_firmato.pdf" \) -print0 | while IFS= read -r -d '' file; do
-                    base=$(basename "$file" "_ext.pdf")
-                    base=${base%_firmato.pdf}
-                    find . -name "${base}.pdf" -delete
+                  find . -name "*_ext.pdf" -o -name "*_firmato.pdf" | while read -r file; do
+                  base=$(basename "$file" "_ext.pdf")
+                  base=${base%_firmato.pdf}
+                  find . -name "${base}.pdf" -exec rm {} \;
                   done
 
             - name: Move PDFs to parent 
