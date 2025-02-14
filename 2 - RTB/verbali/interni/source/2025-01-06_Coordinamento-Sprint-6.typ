@@ -1,23 +1,46 @@
-#import "../../../template/verbale.typ": *
+#import "../../../../template/verbale.typ": *
 
-#show : doc => verbale(
-    titolo: "Coordinamento Sprint 6",
-    ordine-del-giorno: ("Revisione Sprint 5", "Coordinamento per lo Sprint 6", "Condivisione progressi documenti RTB","Scelta del modello LLM", "Schedulazione incontro con Ergon"),
-    data: [06/01/2025],
-    ora: [15:30-18:00],
-    tipo: "interno",
-    versioni: (
-      "0.1.0","06/01/2025","Matteo Bazzan","Prima stesura","Luca Ribon"
-    ),
-    presenze: (
-        "Matteo Bazzan", "Relatore", "2h30m",
-        "Luca Ribon","Verificatore", "2h30m",
-        "Filippo Sabbadin", "Verificatore", "2h",
-        "Francesco Fragonas", "Verificatore", "2h",
-        "Yi Hao Zhuo", "Verificatore", "2h30m",
-        "Luca Rossi", "Verificatore", "1h",
-    ),
-    doc,
+
+#show: doc => verbale(
+  titolo: "Coordinamento Sprint 6",
+  ordine-del-giorno: (
+    "Revisione Sprint 5",
+    "Coordinamento per lo Sprint 6",
+    "Condivisione progressi documenti RTB",
+    "Scelta del modello LLM",
+    "Schedulazione incontro con Ergon",
+  ),
+  data: [06/01/2025],
+  ora: [15:30-18:00],
+  tipo: "interno",
+  versioni: (
+    "0.1.0",
+    "06/01/2025",
+    "Matteo Bazzan",
+    "Prima stesura",
+    "Luca Ribon",
+  ),
+  presenze: (
+    "Matteo Bazzan",
+    "Relatore",
+    "2h30m",
+    "Luca Ribon",
+    "Verificatore",
+    "2h30m",
+    "Filippo Sabbadin",
+    "Verificatore",
+    "2h",
+    "Francesco Fragonas",
+    "Verificatore",
+    "2h",
+    "Yi Hao Zhuo",
+    "Verificatore",
+    "2h30m",
+    "Luca Rossi",
+    "Verificatore",
+    "1h",
+  ),
+  doc,
 )
 
 = Revisione Sprint 5
@@ -27,7 +50,7 @@ Durante la riunione è stato analizzato il lavoro svolto nello *Sprint 5*, in pa
 - Piano di Qualifica
 - #gloss[Piano di Progetto]
 
-Inoltre è stato condiviso lo studio sui vari #gloss[LLM] in commercio. 
+Inoltre è stato condiviso lo studio sui vari #gloss[LLM] in commercio.
 
 = Scelta del modello LLM
 Durante lo Sprint 5 è stata condotta un’analisi dei modelli LLM disponibili si è deciso di utilizzare *#gloss[GPT-4o mini]* per i primi test. In caso di performance non in linea con i requisiti, si valuterà un modello più performante tra le offerte di #gloss[OpenAI].
@@ -63,21 +86,24 @@ Durante lo Sprint 5 è stata condotta un’analisi dei modelli LLM disponibili s
 #table(
   columns: (1fr, 1fr, 1fr),
   inset: 8pt,
-  fill: (x,y) => if (y== 0) { luma(230) },
+  fill: (x, y) => if (y == 0) { luma(230) },
   table.header(
-    [*Membro*], [*Ruolo Sprint 5*], [*Ruolo Sprint 6*]
+    [*Membro*],
+    [*Ruolo Sprint 5*],
+    [*Ruolo Sprint 6*],
   ),
-  "Matteo Bazzan","Progettista","Verificatore",
-  "Francesco Fragonas","Responsabile","Progettista",
-  "Gabriele Magnelli","Amministratore","Responsabile",
-  "Luca Ribon","Analista","Amministratore",
-  "Luca Rossi","Analista","Verificatore",
-  "Filippo Sabbadin","Verificatore","Analista",
-  "Yi Hao Zhuo","Verificatore","Verificatore"
+
+  "Matteo Bazzan", "Progettista", "Verificatore",
+  "Francesco Fragonas", "Responsabile", "Progettista",
+  "Gabriele Magnelli", "Amministratore", "Responsabile",
+  "Luca Ribon", "Analista", "Amministratore",
+  "Luca Rossi", "Analista", "Verificatore",
+  "Filippo Sabbadin", "Verificatore", "Analista",
+  "Yi Hao Zhuo", "Verificatore", "Verificatore",
 )
 
 = Azioni future
-- Incontro con l'azienda Ergon 
+- Incontro con l'azienda Ergon
 - #issue("133")[*Aggiornamento Glossario*]
 - #issue("149")[*Sisteamare paginazione template typst*]
 - #issue("150")[*Creazione diagrammi UML per gli Use Case*]

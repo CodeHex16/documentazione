@@ -1,24 +1,51 @@
-#import "../../../template/verbale.typ": *
+#import "../../../../template/verbale.typ": *
 
-#show : doc => verbale(
-    titolo: "Coordinamento Sprint 4",
-    ordine-del-giorno: ("Revisione Sprint 3", "Coordinamento per lo Sprint 4", "Incontro azienda Ergon", "Revisione ruoli e durata sprint"),
-    data: [11/12/2024],
-    ora: [15:00-17:30],
-    tipo: "interno",
-    versioni: (
-      "0.1.2","24/12/2024","Luca Ribon","Correzione durata sprint",  
-      "0.1.1","11/12/2024","Francesco Fragonas","Correzione titolo e link issue", "Matteo Bazzan",
-      "0.1.0","11/12/2024","Francesco Fragonas","Prima stesura", "Matteo Bazzan"
-    ),
-    presenze: (
-        "Luca Ribon","Verificatore", "2h30min",
-        "Filippo Sabbadin", "Verificatore", "2h30min",
-        "Matteo Bazzan", "Verificatore", "2h30min",
-        "Francesco Fragonas", "Relatore", "2h30min",
-        "Yi Hao Zhuo", "Verificatore", "2h30min"
-    ),
-    doc,
+
+#show: doc => verbale(
+  titolo: "Coordinamento Sprint 4",
+  ordine-del-giorno: (
+    "Revisione Sprint 3",
+    "Coordinamento per lo Sprint 4",
+    "Incontro azienda Ergon",
+    "Revisione ruoli e durata sprint",
+  ),
+  data: [11/12/2024],
+  ora: [15:00-17:30],
+  tipo: "interno",
+  versioni: (
+    "0.1.2",
+    "24/12/2024",
+    "Luca Ribon",
+    "Correzione durata sprint",
+    "0.1.1",
+    "11/12/2024",
+    "Francesco Fragonas",
+    "Correzione titolo e link issue",
+    "Matteo Bazzan",
+    "0.1.0",
+    "11/12/2024",
+    "Francesco Fragonas",
+    "Prima stesura",
+    "Matteo Bazzan",
+  ),
+  presenze: (
+    "Luca Ribon",
+    "Verificatore",
+    "2h30min",
+    "Filippo Sabbadin",
+    "Verificatore",
+    "2h30min",
+    "Matteo Bazzan",
+    "Verificatore",
+    "2h30min",
+    "Francesco Fragonas",
+    "Relatore",
+    "2h30min",
+    "Yi Hao Zhuo",
+    "Verificatore",
+    "2h30min",
+  ),
+  doc,
 )
 
 = Revisione Sprint 3
@@ -45,17 +72,20 @@ A seguito dell’esperienza maturata durante gli sprint precedenti, il team ha c
 #table(
   columns: (1fr, 1fr, 1fr),
   inset: 8pt,
-  fill: (x,y) => if (y== 0) { luma(230) },
+  fill: (x, y) => if (y == 0) { luma(230) },
   table.header(
-    [*Membro*], [*Ruolo Sprint 3*], [*Ruolo Sprint 4*]
+    [*Membro*],
+    [*Ruolo Sprint 3*],
+    [*Ruolo Sprint 4*],
   ),
+
   "Matteo Bazzan", "Verificatore", "Programmatore",
-  "Francesco Fragonas",	"Analista", "Verificatore",
+  "Francesco Fragonas", "Analista", "Verificatore",
   "Gabriele Magnelli", "Amministratore", "Amministratore",
-  "Luca Ribon",	"Analista", "Analista",
-  "Luca Rossi",	"Responsabile", "Responsabile",
-  "Filippo Sabbadin",	"Analista", "Analista",
-  "Yi Hao Zhuo",	"Verificatore", "Programmatore"
+  "Luca Ribon", "Analista", "Analista",
+  "Luca Rossi", "Responsabile", "Responsabile",
+  "Filippo Sabbadin", "Analista", "Analista",
+  "Yi Hao Zhuo", "Verificatore", "Programmatore",
 )
 
 = Azioni future

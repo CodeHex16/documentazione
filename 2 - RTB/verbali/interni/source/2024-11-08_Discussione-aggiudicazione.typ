@@ -1,23 +1,42 @@
-#import "../../../template/verbale.typ": *
+#import "../../../../template/verbale.typ": *
 
-#show : doc => verbale(
-    titolo: "Discussione successiva all'aggiudicazione",
-    ordine-del-giorno: ("Ulteriore analisi del capitolato", "Gestione issue e milestone", "Comunicazione con Proponente"),
-    data: [08/11/2024],
-    ora: [15:00-17:20],
-    tipo: "interno",
-    versioni: (
-      "0.1.1","26/11/2024","Yi Hao Zhuo","Aggiunta link glossario","Luca Rossi",
-      "0.1.0","08/11/2024","Francesco Fragonas","Prima stesura", "Gabriele Magnelli"
-    ),
-    presenze: (
-        "Matteo Bazzan","Verificatore","2h20min",
-        "Luca Ribon","Amministratore" ,"2h20min",
-        "Francesco Fragonas", "Responsabile", "2h20min",
-        "Gabriele Magnelli","Verificatore","2h20min",
-        "Filippo Sabbadin","Verificatore","2h",
-    ),
-    doc,
+
+#show: doc => verbale(
+  titolo: "Discussione successiva all'aggiudicazione",
+  ordine-del-giorno: ("Ulteriore analisi del capitolato", "Gestione issue e milestone", "Comunicazione con Proponente"),
+  data: [08/11/2024],
+  ora: [15:00-17:20],
+  tipo: "interno",
+  versioni: (
+    "0.1.1",
+    "26/11/2024",
+    "Yi Hao Zhuo",
+    "Aggiunta link glossario",
+    "Luca Rossi",
+    "0.1.0",
+    "08/11/2024",
+    "Francesco Fragonas",
+    "Prima stesura",
+    "Gabriele Magnelli",
+  ),
+  presenze: (
+    "Matteo Bazzan",
+    "Verificatore",
+    "2h20min",
+    "Luca Ribon",
+    "Amministratore",
+    "2h20min",
+    "Francesco Fragonas",
+    "Responsabile",
+    "2h20min",
+    "Gabriele Magnelli",
+    "Verificatore",
+    "2h20min",
+    "Filippo Sabbadin",
+    "Verificatore",
+    "2h",
+  ),
+  doc,
 )
 
 = Ulteriore analisi del capitolato

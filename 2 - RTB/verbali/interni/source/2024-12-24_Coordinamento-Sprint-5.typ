@@ -1,30 +1,53 @@
-#import "../../../template/verbale.typ": *
+#import "../../../../template/verbale.typ": *
 
-#show : doc => verbale(
-    titolo: "Coordinamento Sprint 5",
-    ordine-del-giorno: ("Revisione Sprint 4", "Coordinamento per lo Sprint 5", "Condivisione progressi documenti RTB","Scelta framework per webapp", "Nome della webapp"),
-    data: [24/12/2024],
-    ora: [9:00-12:00],
-    tipo: "interno",
-    versioni: (
-      "0.1.0","24/12/2024","Matteo Bazzan","Prima stesura", "Filippo Sabbadin"
-    ),
-    presenze: (
-        "Matteo Bazzan", "Relatore", "3h",
-        "Luca Ribon","Verificatore", "3h",
-        "Filippo Sabbadin", "Verificatore", "3h",
-        "Francesco Fragonas", "Verificatore", "3h",
-        "Yi Hao Zhuo", "Verificatore", "3h",
-        "Gabriele Magnelli", "Verificatore", "3h",
-    ),
-    doc,
+
+#show: doc => verbale(
+  titolo: "Coordinamento Sprint 5",
+  ordine-del-giorno: (
+    "Revisione Sprint 4",
+    "Coordinamento per lo Sprint 5",
+    "Condivisione progressi documenti RTB",
+    "Scelta framework per webapp",
+    "Nome della webapp",
+  ),
+  data: [24/12/2024],
+  ora: [9:00-12:00],
+  tipo: "interno",
+  versioni: (
+    "0.1.0",
+    "24/12/2024",
+    "Matteo Bazzan",
+    "Prima stesura",
+    "Filippo Sabbadin",
+  ),
+  presenze: (
+    "Matteo Bazzan",
+    "Relatore",
+    "3h",
+    "Luca Ribon",
+    "Verificatore",
+    "3h",
+    "Filippo Sabbadin",
+    "Verificatore",
+    "3h",
+    "Francesco Fragonas",
+    "Verificatore",
+    "3h",
+    "Yi Hao Zhuo",
+    "Verificatore",
+    "3h",
+    "Gabriele Magnelli",
+    "Verificatore",
+    "3h",
+  ),
+  doc,
 )
 
 = Revisione Sprint 4
 Durante la riunione è stato analizzato il lavoro svolto nello *Sprint 4*, in particolare sono stati condivisi i progressi sui documenti #gloss[Norme di Progetto] e #gloss[Analisi dei Requisiti], sono stati presentati i due #gloss[POC] sviluppati con due framework diversi #gloss[Svelte] e #gloss[Vue.js].
 
 = Scelta del framework per la webapp
-Durante lo Sprint 4 è stata condotta un'analisi approfondita tra i framework Vue.js e Svelte/SvelteKit attraverso lo sviluppo di PoC paralleli. In seguito alla presentazione da parte dei due incaricati e averne valutato i risultati, il team ha deciso di adottare Svelte per lo sviluppo della webapp. 
+Durante lo Sprint 4 è stata condotta un'analisi approfondita tra i framework Vue.js e Svelte/SvelteKit attraverso lo sviluppo di PoC paralleli. In seguito alla presentazione da parte dei due incaricati e averne valutato i risultati, il team ha deciso di adottare Svelte per lo sviluppo della webapp.
 
 La scelta è stata motivata dai seguenti fattori:
 - Compilazione anticipata del codice che risulta in un bundle più leggero e prestazioni runtime migliori, più adatto alle prestazioni solitamente più modeste dei dispositivi mobile.
@@ -32,7 +55,7 @@ La scelta è stata motivata dai seguenti fattori:
 - Sintassi più pulita e vicina al vanilla #gloss[JavaScript]/#gloss[HTML].
 
 = Definizione del nome per la webapp
-Durante la riunione è stato ufficialmente definito il nome che sarà dato alla webapp del #gloss[chatbot]: *"#gloss[Suppl-AI]"*. 
+Durante la riunione è stato ufficialmente definito il nome che sarà dato alla webapp del #gloss[chatbot]: *"#gloss[Suppl-AI]"*.
 
 La scelta è stata il risultato di una discussione che ha considerato i seguenti aspetti:
 - La fusione tra il termine "Supply" (fornitura) e "AI" (Artificial Intelligence).
@@ -48,17 +71,20 @@ A seguito degli scorsi sprint, il team ha concordato sulle seguenti modifiche:
 #table(
   columns: (1fr, 1fr, 1fr),
   inset: 8pt,
-  fill: (x,y) => if (y== 0) { luma(230) },
+  fill: (x, y) => if (y == 0) { luma(230) },
   table.header(
-    [*Membro*], [*Ruolo Sprint 4*], [*Ruolo Sprint 5*]
+    [*Membro*],
+    [*Ruolo Sprint 4*],
+    [*Ruolo Sprint 5*],
   ),
-  "Matteo Bazzan",  "Programmatore","Progettista",
-  "Francesco Fragonas","Verificatore","Responsabile",
-  "Gabriele Magnelli",  "Amministratore","Amministratore",
-  "Luca Ribon",	"Analista","Analista",
-  "Luca Rossi",	"Responsabile","Analista",
-  "Filippo Sabbadin", "Analista","Verificatore",
-  "Yi Hao Zhuo",	"Programmatore","Verificatore",
+
+  "Matteo Bazzan", "Programmatore", "Progettista",
+  "Francesco Fragonas", "Verificatore", "Responsabile",
+  "Gabriele Magnelli", "Amministratore", "Amministratore",
+  "Luca Ribon", "Analista", "Analista",
+  "Luca Rossi", "Responsabile", "Analista",
+  "Filippo Sabbadin", "Analista", "Verificatore",
+  "Yi Hao Zhuo", "Programmatore", "Verificatore",
 )
 
 = Azioni future

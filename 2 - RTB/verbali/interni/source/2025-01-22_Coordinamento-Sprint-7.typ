@@ -1,22 +1,43 @@
-#import "../../../template/verbale.typ": *
+#import "../../../../template/verbale.typ": *
 
-#show : doc => verbale(
-    titolo: "Coordinamento Sprint 7",
-    ordine-del-giorno: ("Revisione Sprint 6", "Discussione chiavi API fornite", "Discussione architettura base del PoC", "Discussione struttura del repo","Coordinamento per lo Sprint 7"),
-    data: [22/01/2025],
-    ora: [15:30-17:30],
-    tipo: "interno",
-    versioni: (
-      "0.1.0","22/01/2025","Matteo Bazzan","Prima stesura","Filippo Sabbadin"
-    ),
-    presenze: (
-        "Matteo Bazzan", "Relatore", "2h",
-        "Luca Ribon","Verificatore", "2h",
-        "Filippo Sabbadin", "Verificatore", "2h",
-        "Francesco Fragonas", "Verificatore", "2h",
-        "Yi Hao Zhuo", "Verificatore", "2h",
-    ),
-    doc,
+
+#show: doc => verbale(
+  titolo: "Coordinamento Sprint 7",
+  ordine-del-giorno: (
+    "Revisione Sprint 6",
+    "Discussione chiavi API fornite",
+    "Discussione architettura base del PoC",
+    "Discussione struttura del repo",
+    "Coordinamento per lo Sprint 7",
+  ),
+  data: [22/01/2025],
+  ora: [15:30-17:30],
+  tipo: "interno",
+  versioni: (
+    "0.1.0",
+    "22/01/2025",
+    "Matteo Bazzan",
+    "Prima stesura",
+    "Filippo Sabbadin",
+  ),
+  presenze: (
+    "Matteo Bazzan",
+    "Relatore",
+    "2h",
+    "Luca Ribon",
+    "Verificatore",
+    "2h",
+    "Filippo Sabbadin",
+    "Verificatore",
+    "2h",
+    "Francesco Fragonas",
+    "Verificatore",
+    "2h",
+    "Yi Hao Zhuo",
+    "Verificatore",
+    "2h",
+  ),
+  doc,
 )
 
 = Revisione Sprint 6
@@ -43,17 +64,20 @@ Sono state create nuove repository su #gloss[GitHub] per ospitare i codici sorge
 #table(
   columns: (1fr, 1fr, 1fr),
   inset: 8pt,
-  fill: (x,y) => if (y== 0) { luma(230) },
+  fill: (x, y) => if (y == 0) { luma(230) },
   table.header(
-    [*Membro*], [*Ruolo Sprint 6*], [*Ruolo Sprint 7*]
+    [*Membro*],
+    [*Ruolo Sprint 6*],
+    [*Ruolo Sprint 7*],
   ),
-  "Matteo Bazzan","Verificatore","Verificatore",
-  "Francesco Fragonas","Progettista","Programmatore",
-  "Gabriele Magnelli","Responsabile","Amministratore",
-  "Luca Ribon","Amministratore","Analista",
-  "Luca Rossi","Verificatore","Responsabile",
-  "Filippo Sabbadin","Analista","Analista",
-  "Yi Hao Zhuo","Verificatore","Programmatore"
+
+  "Matteo Bazzan", "Verificatore", "Verificatore",
+  "Francesco Fragonas", "Progettista", "Programmatore",
+  "Gabriele Magnelli", "Responsabile", "Amministratore",
+  "Luca Ribon", "Amministratore", "Analista",
+  "Luca Rossi", "Verificatore", "Responsabile",
+  "Filippo Sabbadin", "Analista", "Analista",
+  "Yi Hao Zhuo", "Verificatore", "Programmatore",
 )
 
 = Azioni future

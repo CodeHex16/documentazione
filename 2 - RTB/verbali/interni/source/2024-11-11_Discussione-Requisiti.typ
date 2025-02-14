@@ -1,25 +1,50 @@
-#import "../../../template/verbale.typ": *
+#import "../../../../template/verbale.typ": *
 
-#show : doc => verbale(
-    titolo: "Discussione sui requisiti",
-    ordine-del-giorno: ("Discussione incontro Ergon","Preparazione secondo diario di bordo"),
-    data: [08/11/2024],
-    ora: [16:30-18:00],
-    tipo: "interno",
-    versioni: (
-      "0.2.1","26/11/2024","Yi Hao Zhuo","Aggiunta link glossario", "Luca Rossi",
-      "0.2.0","12/11/2024","Filippo Sabbadin","Correzione dei ruoli", "Gabriele Magnelli",
-      "0.1.0","11/11/2024","Filippo Sabbadin","Prima stesura", "Gabriele Magnelli"
-    ),
-    presenze: (
-        "Luca Ribon","Amministratore" ,"1h",
-        "Francesco Fragonas", "Responsabile", "1h30min",
-        "Filippo Sabbadin","Redattore","1h30min",
-        "Matteo Bazzan","Verificatore","1h30min",
-        "Gabriele Magnelli","Verificatore","1h30min",
-        "Yi Hao Zhuo","Verificatore","1h30min"
-    ),
-    doc,
+
+#show: doc => verbale(
+  titolo: "Discussione sui requisiti",
+  ordine-del-giorno: ("Discussione incontro Ergon", "Preparazione secondo diario di bordo"),
+  data: [08/11/2024],
+  ora: [16:30-18:00],
+  tipo: "interno",
+  versioni: (
+    "0.2.1",
+    "26/11/2024",
+    "Yi Hao Zhuo",
+    "Aggiunta link glossario",
+    "Luca Rossi",
+    "0.2.0",
+    "12/11/2024",
+    "Filippo Sabbadin",
+    "Correzione dei ruoli",
+    "Gabriele Magnelli",
+    "0.1.0",
+    "11/11/2024",
+    "Filippo Sabbadin",
+    "Prima stesura",
+    "Gabriele Magnelli",
+  ),
+  presenze: (
+    "Luca Ribon",
+    "Amministratore",
+    "1h",
+    "Francesco Fragonas",
+    "Responsabile",
+    "1h30min",
+    "Filippo Sabbadin",
+    "Redattore",
+    "1h30min",
+    "Matteo Bazzan",
+    "Verificatore",
+    "1h30min",
+    "Gabriele Magnelli",
+    "Verificatore",
+    "1h30min",
+    "Yi Hao Zhuo",
+    "Verificatore",
+    "1h30min",
+  ),
+  doc,
 )
 
 = Discussione incontro con Ergon

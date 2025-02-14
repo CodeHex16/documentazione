@@ -1,25 +1,52 @@
-#import "../../../template/verbale.typ": *
+#import "../../../../template/verbale.typ": *
 
-#show : doc => verbale(
-    titolo: "Inizio stesura documenti RTB",
-    ordine-del-giorno: ("Ampliamento GitHub Labels","Stesura documento Analisi dei requisiti"),
-    data: [12/11/2024],
-    ora: [15:00-18:00],
-    tipo: "interno",
-    versioni: (
-      "0.1.3","26/11/2024","Yi Hao Zhuo","Aggiunta link glossario", "Luca Rossi",
-      "0.1.2","13/11/2024","Luca Ribon","Sistemati la data di redazione", "Matteo Bazzan",
-      "0.1.1","12/11/2024","Filippo Sabbadin","Sistemati link alle issue invertiti", "Matteo Bazzan",
-      "0.1.0","12/11/2024","Filippo Sabbadin","Prima stesura", "Matteo Bazzan"
-    ),
-    presenze: (
-        "Luca Ribon","Amministratore" ,"3h",
-        "Francesco Fragonas", "Responsabile", "3h",
-        "Filippo Sabbadin","Redattore","3h",
-        "Matteo Bazzan","Verificatore","3h",
-        "Gabriele Magnelli","Verificatore","2h30min"
-    ),
-    doc,
+
+#show: doc => verbale(
+  titolo: "Inizio stesura documenti RTB",
+  ordine-del-giorno: ("Ampliamento GitHub Labels", "Stesura documento Analisi dei requisiti"),
+  data: [12/11/2024],
+  ora: [15:00-18:00],
+  tipo: "interno",
+  versioni: (
+    "0.1.3",
+    "26/11/2024",
+    "Yi Hao Zhuo",
+    "Aggiunta link glossario",
+    "Luca Rossi",
+    "0.1.2",
+    "13/11/2024",
+    "Luca Ribon",
+    "Sistemati la data di redazione",
+    "Matteo Bazzan",
+    "0.1.1",
+    "12/11/2024",
+    "Filippo Sabbadin",
+    "Sistemati link alle issue invertiti",
+    "Matteo Bazzan",
+    "0.1.0",
+    "12/11/2024",
+    "Filippo Sabbadin",
+    "Prima stesura",
+    "Matteo Bazzan",
+  ),
+  presenze: (
+    "Luca Ribon",
+    "Amministratore",
+    "3h",
+    "Francesco Fragonas",
+    "Responsabile",
+    "3h",
+    "Filippo Sabbadin",
+    "Redattore",
+    "3h",
+    "Matteo Bazzan",
+    "Verificatore",
+    "3h",
+    "Gabriele Magnelli",
+    "Verificatore",
+    "2h30min",
+  ),
+  doc,
 )
 
 = Decisione sull'utilizzo delle GitHub Labels

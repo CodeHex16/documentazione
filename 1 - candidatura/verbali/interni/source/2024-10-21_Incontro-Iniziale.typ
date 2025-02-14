@@ -1,4 +1,4 @@
-#import "../../../template/verbale.typ": *
+#import "../../../../template/verbale.typ": *
 
 #show : doc => verbale(
     titolo: "Incontro conoscitivo iniziale",

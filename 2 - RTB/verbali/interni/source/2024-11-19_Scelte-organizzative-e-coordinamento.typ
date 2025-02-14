@@ -1,24 +1,51 @@
-#import "../../../template/verbale.typ": *
+#import "../../../../template/verbale.typ": *
 
-#show : doc => verbale(
-    titolo: "Scelte organizzative e coordinamento",
-    ordine-del-giorno: ("Formalizzazione numero di versione","Modifica alla rotazione dei ruoli", "Miglioramento sistema di issue", "Coordinamento sull'analisi dei requisiti", "Pagina Notion"),
-    data: [19/11/2024],
-    ora: [16:00-18:15],
-    tipo: "interno",
-    versioni: (
-      "0.1.1", "26/11/2024", "Yi Hao Zhuo", "Aggiunta link glossario", "Luca Rossi",
-      "0.1.0","19/11/2024","Luca Ribon","Prima stesura", "Filippo Sabbadin"
-    ),
-    presenze: (
-        "Luca Ribon","Relatore", "2h15m",
-        "Francesco Fragonas", "Verificatore", "2h",
-        "Filippo Sabbadin", "Verificatore", "2h",
-        "Matteo Bazzan", "Verificatore", "2h15m",
-        "Gabriele Magnelli", "Verificatore", "1h",
-        "Yi Hao Zhuo", "Verificatore", "2h15min"
-    ),
-    doc,
+
+#show: doc => verbale(
+  titolo: "Scelte organizzative e coordinamento",
+  ordine-del-giorno: (
+    "Formalizzazione numero di versione",
+    "Modifica alla rotazione dei ruoli",
+    "Miglioramento sistema di issue",
+    "Coordinamento sull'analisi dei requisiti",
+    "Pagina Notion",
+  ),
+  data: [19/11/2024],
+  ora: [16:00-18:15],
+  tipo: "interno",
+  versioni: (
+    "0.1.1",
+    "26/11/2024",
+    "Yi Hao Zhuo",
+    "Aggiunta link glossario",
+    "Luca Rossi",
+    "0.1.0",
+    "19/11/2024",
+    "Luca Ribon",
+    "Prima stesura",
+    "Filippo Sabbadin",
+  ),
+  presenze: (
+    "Luca Ribon",
+    "Relatore",
+    "2h15m",
+    "Francesco Fragonas",
+    "Verificatore",
+    "2h",
+    "Filippo Sabbadin",
+    "Verificatore",
+    "2h",
+    "Matteo Bazzan",
+    "Verificatore",
+    "2h15m",
+    "Gabriele Magnelli",
+    "Verificatore",
+    "1h",
+    "Yi Hao Zhuo",
+    "Verificatore",
+    "2h15min",
+  ),
+  doc,
 )
 
 = Formalizzazione numero di versione
@@ -31,23 +58,25 @@ Per tutti gli altri documenti invece il formato scelto sarà quello esposto prec
 
 = Modifica alla rotazione dei ruoli
 Si è deciso di rivedere la rotazione dei ruoli che è passata da una frequenza di una settimana a *due settimane*.
-Inoltre si è deciso di suddividere il periodo di lavoro in *#gloss[sprint]* della durata di una settimana; questi vengono preceduti da uno #gloss[sprint planning], dove si definiscono gli elementi del #gloss[backlog], e seguiti da uno #gloss[sprint review], dove si valutano i risultati ottenuti e si decide se validarlo. 
+Inoltre si è deciso di suddividere il periodo di lavoro in *#gloss[sprint]* della durata di una settimana; questi vengono preceduti da uno #gloss[sprint planning], dove si definiscono gli elementi del #gloss[backlog], e seguiti da uno #gloss[sprint review], dove si valutano i risultati ottenuti e si decide se validarlo.
 == Aggiornamento ruoli
-È stata applicata la prima rotazione dei ruoli, nello specifico i ruoli aggiornati sono: 
+È stata applicata la prima rotazione dei ruoli, nello specifico i ruoli aggiornati sono:
 #table(
   columns: (1fr, 1fr),
   inset: 8pt,
-  fill: (x,y) => if (y== 0) { luma(230) },
+  fill: (x, y) => if (y == 0) { luma(230) },
   table.header(
-    [*Membro*], [*Ruolo*], 
+    [*Membro*],
+    [*Ruolo*],
   ),
+
   "Matteo Bazzan", "Analista",
-  "Francesco Fragonas",	"Progettista",
+  "Francesco Fragonas", "Progettista",
   "Gabriele Magnelli", "Analista",
-  "Luca Ribon",	"Responsabile",
-  "Luca Rossi",	"Verificatore",
-  "Filippo Sabbadin",	"Verificatore",
-  "Yi Hao Zhuo",	"Amministratore"
+  "Luca Ribon", "Responsabile",
+  "Luca Rossi", "Verificatore",
+  "Filippo Sabbadin", "Verificatore",
+  "Yi Hao Zhuo", "Amministratore",
 )
 
 = Miglioramento sistema di issue
