@@ -73,7 +73,10 @@ jobs:
 
             - name: Move PDFs to parent 
               run: |
-                  find . -name "*.pdf" ! -name "*_ext.pdf" ! -name "*_firmato.pdf" -not -path "./diari-di-bordo/*" -exec mv {} ../ \;
+                  find . -name "*.pdf" ! -name "*_ext.pdf" ! -name "*_firmato.pdf" -not -path "./diari-di-bordo/*" -exec sh -c 'mv "$0" "$(dirname "$0")/../"' {} \;
+
+            - name: List all PDF files 
+              run: find . -name "*.pdf" ! -name "*_ext.pdf" ! -name "*_firmato.pdf" -not -path "./diari-di-bordo/*"
 
             - name: Upload PDF artifacts 
               uses: actions/upload-artifact@v4
@@ -130,7 +133,7 @@ jobs:
                   git config --global user.email 'github-actions[bot]@users.noreply.github.com'
                   git pull
                   git add .
-                  git commit -m 'Add compiled PDF files and update README.md [skip ci]' || echo "No changes to commit" # Evita errori se non ci sono modifiche
+                  git commit -m 'Add compiled PDF files and update README.md [skip ci]'
                   git push
               env:
                   GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
