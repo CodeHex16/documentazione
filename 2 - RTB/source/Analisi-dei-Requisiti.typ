@@ -166,18 +166,21 @@ registrati o no, possono poi scrivere al chatbot per richiedere queste informazi
 
 Nelle seguenti sezioni verranno descritti tutti i possibili casi d'uso, cioè tutti i modi in cui gli attori, definiti più avanti, possono interagire con l'applicazione.
 
+// TODO: aggiungere utente non loggato
 == Attori
 *Amministratore*: rappresenta la persona o il gruppo di persone che si occupa della distribuzione e configurazione del sistema per tutti i fornitori. Gestisce anche gli account dei fornitori.\
 In questo caso va interpretato come l'azienda Ergon Informatica Srl.\
 *Cliente*: rappresenta il cliente finale che acquista prodotti dal fornitore e che ha la possibilità di interagire con il chatbot del fornitore per ottenere informazioni sui prodotti o servizi offerti.\
 *Fornitore*: reppresenta l'azienda che fornisce dei prodotti ai propri clienti, ogni fornitore ha una sua istanza di chatbot; è una generalizzazione di Cliente infatti, oltre a poter accedere al proprio chatbot, può anche fornire il contesto tramite dei documenti aziendali o #gloss[FAQ] e personalizzare graficamente l'interfaccia variando logo e palette colori.\
 Questo utente ha accesso ad un'#gloss[interfaccia web] di configurazione del chatbot e di gestione degli account dei clienti.\
+*Utente* si intende un utente che non ha ancora completato l'autenticazione.
 // TODO: capire se tenerlo ->
 // *Sistema*: rappresenta il #gloss[backend] del sistema, incluso quello dell'LLM quando viene interrogato.\
-Quando si parla di *utente* si intende un utente generico che compie operazioni accessibili sia ai fornitori che ai clienti.
 
 #figure(image("../imgs/attori.png", width: 30%), caption: "Lista degli attori")
 
+// TODO: mettere nei login utente non loggato
+// TODO: usare degli use case che controllano il formato delle credenziali
 == UC1 - Login
 // TODO: rifare grafico
 // #figure(
@@ -356,6 +359,7 @@ Quando si parla di *utente* si intende un utente generico che compie operazioni 
 
 // È uno use case a parte perché sarà anche quello usato per modificare la password dell'utente
 // TODO: rifare grafico
+// TODO: richiesta password vecchia
 == UC4 - Modifica password
 //#figure(image("../imgs/cambio-password.png", width: 90%), caption: "Modifica password")
 *Attori principali:*
@@ -375,6 +379,7 @@ Quando si parla di *utente* si intende un utente generico che compie operazioni 
 - Password scelta non valida;
 - Sistema non raggiungibile;
 
+// TODO: separare in due use case
 == UC5 - Visualizzazione errore di login
 *Attori principali:*
 - Fornitore/cliente;
@@ -392,6 +397,7 @@ Quando si parla di *utente* si intende un utente generico che compie operazioni 
 - Sistema non raggiungibile;
 
 // TODO: mettere come condition "l'utente ha selezionato l'opzione 'Resta connesso'"
+// TODO: mettere utente non loggato
 == UC6 - Possibilità "Resta connesso"
 *Attori principali:*
 - Fornitore/cliente;
@@ -411,6 +417,7 @@ Quando si parla di *utente* si intende un utente generico che compie operazioni 
 - Sistema non raggiungibile;
 
 // TODO: rifare grafico
+// TODO: non va incluso il modifica password perché in questo caso non conosce la password vecchia
 == UC7 - Recupero password
 //#figure(image("../imgs/recupero-password.png", width: 80%), caption: "Recupero password")
 *Attori principali:*
@@ -430,6 +437,7 @@ Quando si parla di *utente* si intende un utente generico che compie operazioni 
 *Inclusioni:*
 - Modifica password;
 
+// TODO: errore che va bene per tutti gli inserimenti password
 == UC8 - Password scelta non valida
 *Attori principali:*
 - Fornitore/cliente;
@@ -458,6 +466,8 @@ Quando si parla di *utente* si intende un utente generico che compie operazioni 
 *Scenario Principale:*
 - L'utente preme il pulsante di logout;
 - Il sistema riceve la richiesta di logout e disconnette l'utente dal sistema;
+
+// TODO: mettere come attore solo il cliente viesto che fornitore li eredita essendo generalizzazione (va fatto in alcuni, controllare quali)
 
 // TODO: rifare grafico
 == UC10 - Visualizzazione della lista delle chat
@@ -523,6 +533,7 @@ Quando si parla di *utente* si intende un utente generico che compie operazioni 
 *Generalizzazioni:*
 - Scrittura messaggio tramite FAQ;
 
+//TODO: le faq in certi casi vengono suggerite automaticamente
 == UC14 - Scrittura messaggio tramite FAQ
 *Attori principali:*
 - Fornitore/cliente;
@@ -590,6 +601,7 @@ Quando si parla di *utente* si intende un utente generico che compie operazioni 
 *Estensioni:*
 - Sistema non raggiungibile;
 
+// TODO: integrare anche use case eliminazione chat non esistente per questioni di sicurezza in modo che visualizzi l'errore a frontend
 == UC18 - Eliminazione di una chat
 *Attori principali:*
 - Fornitore/cliente;
@@ -667,6 +679,7 @@ Quando si parla di *utente* si intende un utente generico che compie operazioni 
 - Il sistema riceve il logo caricato dal fornitore e dopo aver verificato che il formato non è valido, invia un messaggio
   d'errore al fornitore;
 
+// TODO: scrivere che i colori non sono di tutti gli elementi di tutta la piattaforma ma si possono scegliere solo un colore primario e secondario che verranno usati come accent nella piattaforma
 == UC23 - Selezione palette colori
 *Attori principali:*
 - Fornitore;
@@ -742,9 +755,9 @@ Quando si parla di *utente* si intende un utente generico che compie operazioni 
 *Estensioni:*
 - Inserimento di parametri dell'account non validi;
 - Inserimento di un account già esistente;
-- Inserimento password;
 - Sistema non raggiungibile;
 
+// TODO: usare degli use case che controllano il formato
 == UC27 - Inserimento di parametri dell'account non validi
 *Attori principali:*
 - Fornitore;
@@ -773,6 +786,7 @@ Quando si parla di *utente* si intende un utente generico che compie operazioni 
 - Il sistema riceve i parametri dell'account inseriti dal fornitore, ma questo è già presente nel sistema;
 - Il sistema mostra un messaggio di errore il quale indica che l'account inserito è già esistente;
 
+// TODO: eliminazione account non esistente
 == UC29 - Eliminazione dell'account cliente
 *Attori principali:*
 - Fornitore;
@@ -805,6 +819,9 @@ Quando si parla di *utente* si intende un utente generico che compie operazioni 
 - L'utente tenta di compiere un'operazione che richiede la comunicazione con il sistema, ma il sistema non è raggiungibile;
 - Il sistema mostra un messaggio d'errore all'utente tramite il client;
 
+// TODO: use case invio richiesta con dati mancanti o errati
+
+// TODO: use case formato documento non supportato, magari posso riusare quello usato anche per il logo
 == UC31 - Inserimento documenti aziendali
 *Attori principali:*
 - Fornitore;
@@ -821,6 +838,7 @@ Quando si parla di *utente* si intende un utente generico che compie operazioni 
 - Il fornitore carica i documenti tramite l'interfaccia;
 - Il sistema riceve i documenti, li formatta e li inserisce nel sistema in modo che siano utilizzabili dall'LLM;
 
+// TODO: estensione faq vuota con lo use case invio richiesta con dati mancanti o errati
 == UC32 - Aggiunta delle FAQ
 *Attori principali:*
 - Fornitore;
