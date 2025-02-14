@@ -158,7 +158,7 @@ jobs:
             - name: Extract glossario.txt # Estrazione glossario.txt
               run: awk '/^\/\/GLOSSARIO/ {flag=1; next} flag' glossario/source/glossario.typ > codehex16.github.io/docs/glossario/glossario.txt
 
-            - name: Generate structure of file in JSON (alternative using Python)
+            - name: Generate structure of file in JSON
               run: |
                   python3 -c "
                   import os
@@ -179,7 +179,7 @@ jobs:
                   print(json.dumps(output, indent=2))
 
                   with open("codehex16.github.io/docs/structure.json", "w") as f:
-                       json.dump(dir_to_dict("codehex16.github.io/docs"), f, indent=2)  
+                       json.dump(dir_to_dict("codehex16.github.io/docs"), f, indent=2) 
                   "
 
             - name: Commit and push to codehex16.github.io # Commit e push repo codehex16.github.io
