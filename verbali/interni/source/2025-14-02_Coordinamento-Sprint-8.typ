@@ -2,12 +2,7 @@
 
 #show : doc => verbale(
   titolo: "Coordinamento Sprint 8",
-  ordine-del-giorno: (
-    "Revisione Sprint 7",
-    "Coordinamento per lo Sprint 8",
-    "Condivisione progressi documenti RTB",
-    "Discussione sulla scelta del Database",
-  ),
+  ordine-del-giorno: ("Revisione Sprint 7", "Coordinamento per lo Sprint 8", "Condivisione progressi documenti RTB",),
   data: [14/02/2025],
   ora: [9:00-13:00],
   tipo: "interno",
@@ -38,9 +33,6 @@ particolare, il grupp si è concentrato sul documento #gloss[Analisi dei Requisi
 Cardin. Inoltre, sono stati controllati i documenti #gloss[Piano di Progetto], #gloss[Norme di Progetto] e si è deciso
 di portare a termine il #gloss[Piano di Qualifica] entro questo sprint. Infine è stato controllato lo stato del #gloss[PoC] con
 chiarimenti di dubbi sulla struttura di esso all'interno del gruppo.
-
-= Discussione sulla scelta del Database
-
 
 = Revisione ruoli e durata Sprint
 A seguito degli scorsi sprint, il team ha concordato sulle seguenti modifiche:
