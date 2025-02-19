@@ -18,20 +18,48 @@
     "Verificatore",
     "20m",
     "Gabriele Magnelli",
-    "Redattore",
+    "Verificatore",
     "20m",
     "Filippo Sabbadin",
-    "Verificatore",
+    "Redattore",
+    "20m",
+    "",
+    "",
+    "",
+    "Prof. Riccardo Cardin",
+    "",
     "20m",
   ),
   doc,
 )
+
 = Scopo dell'incontro
+Durante l'incontro con il Professor Cardin si è discusso della correttezza degli Use Case scelti e sono stati chiariti i
+dubbi sull'Analisi dei requisiti. Durante l'incontro sono state poste le seguenti domande.
 
 = Domande poste
 #set enum(numbering: "Q1.", spacing: 1.5em)
 
-+ _Domanda_\
-  \Risposta
++ _Fornitore può essere generalizzazione di Cliente?_\
+  \Si, questo significa che qualsiasi azione eseguita dal cliente, può essere eseguita anche dal fornitore.
+
++_Pre e post condizioni sono necessarie? in molti casi sono ridondanti._\
+\Si, sono necessarie. Una descrive qualcosa che avviene prima, l'altra qualcosa dopo, non si sovrappongono.
+
++_Il sistema va considerato come attore?_\
+\No, il sistema non è un attore.
+
++_Nel recupero password è giusto dire che modifica password è estensione anche se in recupero password è presente un
+passagio intermedio non gestito dalla nostra piattaforma (il fatto che l’utente legga la mail e apra il link di
+recupero)?_\
+\Con questa domanda, si è raggiunta la conclusione di dover comprendere meglio cosa modellare.
+
++_Va bene fare degli use case generici che vengono usati sia per fornitore che per cliente? Nel diagramma come vanno
+messi
+gli attori in questo caso?_\
+\Necessario un attore per i casi dove non è stato fatto ancora l'accesso.
 
 = Conclusioni
+Durante l'incontro, il professore ha dato uno sguardo al documento dell'analisi dei requisiti e ha consigliato al gruppo
+di ultimare i disegni con i grafici UML, chiarire che l'attore fornitore è generalizzazione di cliente e di rendere i
+requisiti più atomici e specifici.
