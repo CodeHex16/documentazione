@@ -72,15 +72,9 @@ A seguito degli scorsi sprint, il team ha concordato sulle seguenti modifiche:
 - #issue("204")[*Togliere la tabella versionamento dai verbali*].
 - #issue("205")[*Aggiunta sprint 7 al piano di progetto*].
 - #issue("209")[*Stesura del verbale interno 2025-02-14*].
-- #issue("212")[*Verifica del verbale interno 2025-02-14*].
 - #issue("213")[*Aggiungere cruscotto delle metriche nel piano di qualifica*].
 - #issue("1")[*PoC database*].
 - #issue("2")[*Continuazione PoC LLM*].
-- #issue("4")[*Aggiustare link interno*].
-- #issue("206")[*Verifica sprint 7 nel piano di progetto*].
-- #issue("208")[*Verifica use case e requisiti nell'adr*].
-- #issue("210")[*Verifica verbale interno 2025-02-14*].
-- #issue("214")[*Verifica cruscotto delle metriche in piano di qualifica*].
+- #issue("4")[*Sistemare i link interni del sito web*].
 - #issue("215")[*Conclusioni piano di qualifica*].
-- #issue("216")[*Verifica conclusioni piano di qualifica*].
 - #issue("217")[*Continuare norme di progetto*].
