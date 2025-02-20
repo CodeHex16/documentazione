@@ -6,7 +6,7 @@
   data: [14/02/2025],
   ora: [9:00-13:00],
   tipo: "interno",
-  versioni: ("0.1.0", "14/02/2025", "Filippo Sabbadin", "Prima stesura", ""),
+  versioni: ("0.1.0", "14/02/2025", "Filippo Sabbadin", "Prima stesura", "Ribon Luca"),
   presenze: (
     "Matteo Bazzan",
     "Verificatore",
@@ -29,7 +29,7 @@
 
 = Revisione Sprint 7
 Durante la riunione è stato analizzato il lavoro svolto nello *Sprint 6* e lo stato attuale dei documenti. In
-particolare, il grupp si è concentrato sul documento #gloss[Analisi dei Requisiti], a seguito dell'incontro con il prof.
+particolare, il gruppo si è concentrato sul documento #gloss[Analisi dei Requisiti], a seguito dell'incontro con il prof.
 Cardin. Inoltre, sono stati controllati i documenti #gloss[Piano di Progetto], #gloss[Norme di Progetto] e si è deciso
 di portare a termine il #gloss[Piano di Qualifica] entro questo sprint. Infine è stato controllato lo stato del #gloss[PoC] con
 chiarimenti di dubbi sulla struttura di esso all'interno del gruppo.
