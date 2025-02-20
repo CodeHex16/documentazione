@@ -6,7 +6,7 @@
   data: [14/02/2025],
   ora: [8:40-9:00],
   tipo: "esterno",
-  versioni: ("0.1.0", "14/02/2025", "Filippo Sabbadin", "Prima stesura", ""),
+  versioni: ("0.1.0", "14/02/2025", "Filippo Sabbadin", "Prima stesura", "Ribon Luca"),
   presenze: (
     "Matteo Bazzan",
     "Verificatore",
