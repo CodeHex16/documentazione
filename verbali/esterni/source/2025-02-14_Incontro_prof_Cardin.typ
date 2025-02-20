@@ -34,15 +34,15 @@
 )
 
 = Scopo dell'incontro
-Durante l'incontro con il Professor Cardin si è discusso della correttezza degli Use Case scelti e sono stati chiariti i
-dubbi sull'Analisi dei requisiti. Durante l'incontro sono state poste le seguenti domande.
+Durante l'incontro con il Professor Cardin si è discusso della correttezza degli #gloss[Use Case] scelti e sono stati chiariti i
+dubbi sull'#gloss[Analisi dei requisiti]. Durante l'incontro sono state poste le seguenti domande.
 
 = Domande poste
 #set enum(numbering: "Q1.", spacing: 1.5em)
 
 + _Fornitore può essere generalizzazione di Cliente?_
 
-  Si, questo significa che qualsiasi azione eseguita dal cliente, può essere eseguita anche dal fornitore.
+  Si, questo significa che qualsiasi azione eseguita dal cliente, può essere eseguita anche dal #gloss[fornitore].
 
 + _Pre e post condizioni sono necessarie? in molti casi sono ridondanti._
 
@@ -65,5 +65,5 @@ gli attori in questo caso?_
 
 = Conclusioni
 Durante l'incontro, il professore ha dato uno sguardo al documento dell'analisi dei requisiti e ha consigliato al gruppo
-di ultimare i disegni con i grafici UML, chiarire che l'attore fornitore è generalizzazione di cliente e di rendere i
+di ultimare i disegni con i grafici #gloss[UML], chiarire che l'attore fornitore è generalizzazione di cliente e di rendere i
 requisiti più atomici e specifici.
