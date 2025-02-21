@@ -38,11 +38,4 @@ documentazione/
 └── 📁 template		# file di template per i documenti
    └── 📁 images		# assets per i documenti
 ```
-<!-- FINE TREE DIRECTORY -->─ 📁 esterni
-   |  └── 📁 source
-   |  └── 📄 *.pdf
-   └── 📁 interni
-      └── 📁 source
-      └── 📄 *.pdf
-```
 <!-- FINE TREE DIRECTORY -->
