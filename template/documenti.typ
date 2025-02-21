@@ -93,17 +93,17 @@
   pagebreak()
   text(size: 16pt, weight: "black", "Registro delle Versioni")
   show table.cell : it => [
-    #par(justify: false)[
-      #text(hyphenate: false, it)
-    ]
+    #set par(justify: false)
+    #text(hyphenate: false, it)
   ]
+
   table(
     align: left,
     columns: (auto,auto,auto,auto,auto),
     fill: (x,y) => if (y== 0) { luma(230) },
     inset: 10pt,
     table.header(
-      [*Versione*],[*Data*],[*Autore*],[*Cambiamenti*],[*Verificatore*]
+      "Versione","*Data*","*Autore*","*Cambiamenti*","*Verificatore*"
     ),
     ..versioni     
   )
