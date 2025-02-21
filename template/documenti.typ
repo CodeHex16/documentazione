@@ -103,7 +103,7 @@
     fill: (x,y) => if (y== 0) { luma(230) },
     inset: 10pt,
     table.header(
-      "Versione","*Data*","*Autore*","*Cambiamenti*","*Verificatore*"
+      [*Versione*],[*Data*],[*Autore*],[*Cambiamenti*],[*Verificatore*]
     ),
     ..versioni     
   )
