@@ -21,6 +21,7 @@
     sommario: [],
     
     versioni : (
+      "0.6.0","14-02-2025","Luca Rossi","Aggiunta descrizione Sprint 6", "Luca Ribon",
       "0.5.0","17-01-2025","Gabriele Magnelli","Aggiunto descrizione Sprint 5 e correzione immagine Sprint 4", "Luca Rossi",
       "0.4.0","05/01/2025","Francesco Fragonas","Aggiunta sezione Pianificazione del lavoro e Periodi di sviluppo", "Yi Hao Zhuo",
       "0.3.0","18/12/2024","Francesco Fragonas","Aggiunta sezione analisi dei rischi", "Filippo Sabbadin",
@@ -443,22 +444,21 @@ In generale, durante questo sprint, si è continuata la stesura dei documenti pr
 )
 
 === Sprint 6
-*Intervallo temporale*: 07/01/2025 - 11/02/2025
 
-Con lo *Sprint 6*, il team ha proseguito nella stesura della documentazione principale del progetto, concentrandosi in particolare su: Norme di Progetto, Piano di Qualifica e Glossario. 
-Inoltre, sono stati integrati i diagrammi UML nell'Analisi dei Requisiti.
 
-Un punto chiave di questo sprint è stato l’incontro con il proponente, durante il quale il team ha vberificato la completezza degli Use Case e presentato la scelta dell’LLM
+*Intervallo temporale*: 07/01/2025 - 20/01/2025
+
+Con lo *Sprint 6*, il team ha proseguito nella stesura della documentazione principale del progetto. 
+Inoltre, sono stati integrati i diagrammi UML degli use case.
+
+Un punto chiave di questo sprint è stato l’incontro con il proponente, durante il quale il team ha verificato la completezza degli Use Case e presentato la scelta dell’LLM
 
 #pseudoheading[*Attività svolte*]
 
 - *Stesura Norme di Progetto*: Continuazione della stesura del documento, con ulteriore dettaglio sulla gestione delle revisioni e degli standard adottati.
-- *Stesura Piano di Qualifica*: Approfondimento delle metriche di qualità e inizio definizione delle procedure di verifica e validazione.
-- *Aggiornamento Glossario*: Integrazione di nuovi termini tecnici emersi durante l’analisi dei requisiti e il confronto con il proponente.
-- *Integrazione Diagrammi UML nell'Analisi dei Requisiti*: Aggiunta dei diagrammi per supportare la comprensione delle funzionalità chiave del sistema.
-- *Verifica degli Use Case*: Revisione della completezza degli *Use Case* in collaborazione con il proponente, con particolare attenzione all’interfaccia cliente e fornitore.
+- *Aggiornamento Glossario*: Integrazione di nuovi termini tecnici sorti durante la stesura dei documenti.
+- *Integrazione Diagrammi UML degli use case*: Aggiunta dei diagrammi per supportare la comprensione delle funzionalità chiave del sistema.
 - *Scelta dell’LLM*: Discussione e decisione definitiva sul modello linguistico da integrare nel progetto.
-- *PoCChino del Front-End*: Prima dimostrazione del Proof of Concept del frontend al proponente.
 
 #pseudoheading[*Ruoli ricoperti e ore svolte*]
 
@@ -475,6 +475,10 @@ Un punto chiave di questo sprint è stato l’incontro con il proponente, durant
     Suddivisione oraria per ruolo con relativi costi.
   ],
 )
+
+== Periodo PB
+*Periodo*: *DA DEFINIRE*
+
 
 == Periodo CA
 *Periodo*: *DA DEFINIRE*
