@@ -449,7 +449,7 @@ In generale, durante questo sprint, si è continuata la stesura dei documenti pr
 *Intervallo temporale*: 07/01/2025 - 20/01/2025
 
 Con lo *Sprint 6*, il team ha proseguito nella stesura della documentazione principale del progetto. 
-Inoltre, sono stati integrati i diagrammi UML degli use case.
+Inoltre, sono stati integrati i diagrammi #gloss[UML] degli use case.
 
 Un punto chiave di questo sprint è stato l’incontro con il proponente, durante il quale il team ha verificato la completezza degli Use Case e presentato la scelta dell’LLM
 
