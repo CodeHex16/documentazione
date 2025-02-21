@@ -98,9 +98,8 @@
   // text(size: 16pt, weight: "black", "Registro delle Versioni")
   // set table.cell(breakable: true)
   // show table.cell : it => [
-  //   #par(justify: false)[
-  //     #text(hyphenate: false, it)
-  //   ]
+  //   #set par(justify: false)
+  //   #text(hyphenate: false, it)
   // ]
 
   // table(
