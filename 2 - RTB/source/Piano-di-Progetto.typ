@@ -21,6 +21,7 @@
     sommario: [],
     
     versioni : (
+      "0.6.0","14-02-2025","Luca Rossi","Aggiunta descrizione Sprint 6", "Luca Ribon",
       "0.5.0","17-01-2025","Gabriele Magnelli","Aggiunto descrizione Sprint 5 e correzione immagine Sprint 4", "Luca Rossi",
       "0.4.0","05/01/2025","Francesco Fragonas","Aggiunta sezione Pianificazione del lavoro e Periodi di sviluppo", "Yi Hao Zhuo",
       "0.3.0","18/12/2024","Francesco Fragonas","Aggiunta sezione analisi dei rischi", "Filippo Sabbadin",
@@ -442,16 +443,42 @@ In generale, durante questo sprint, si è continuata la stesura dei documenti pr
   ],
 )
 
+=== Sprint 6
+
+
+*Intervallo temporale*: 07/01/2025 - 20/01/2025
+
+Con lo *Sprint 6*, il team ha proseguito nella stesura della documentazione principale del progetto. 
+Inoltre, sono stati integrati i diagrammi UML degli use case.
+
+Un punto chiave di questo sprint è stato l’incontro con il proponente, durante il quale il team ha verificato la completezza degli Use Case e presentato la scelta dell’LLM
+
+#pseudoheading[*Attività svolte*]
+
+- *Stesura Norme di Progetto*: Continuazione della stesura del documento, con ulteriore dettaglio sulla gestione delle revisioni e degli standard adottati.
+- *Aggiornamento Glossario*: Integrazione di nuovi termini tecnici sorti durante la stesura dei documenti.
+- *Integrazione Diagrammi UML degli use case*: Aggiunta dei diagrammi per supportare la comprensione delle funzionalità chiave del sistema.
+- *Scelta dell’LLM*: Discussione e decisione definitiva sul modello linguistico da integrare nel progetto.
+
+#pseudoheading[*Ruoli ricoperti e ore svolte*]
+
+#figure(
+  image("../imgs/sprint6-tabella.png", width: 100%),
+  caption: [
+    Suddivisione oraria per membro e ruolo.
+  ],
+)
+
+#figure(
+  image("../imgs/sprint6-grafico.png", width: 100%),
+  caption: [
+    Suddivisione oraria per ruolo con relativi costi.
+  ],
+)
+
 == Periodo PB
 *Periodo*: *DA DEFINIRE*
 
-#pseudoheading[*Obiettivi principali*]
-
-- *Progettazione architetturale*: Definizione dell'architettura del sistema e delle scelte di design.
-- *Implementazione delle funzionalità principali*: Sviluppo del prodotto partendo dal Proof of Concept, con particolare attenzione alle funzionalità chiave.
-- *Integrazione delle tecnologie*: Collegamento delle componenti tecnologiche per garantire un sistema coerente.
-- *Documentazione avanzata*: Produzione di Diagrammi delle Classi, Manuale Utente e Manuale Sviluppatore.
-In questo periodo, il team si è concentrato sulla trasformazione del PoC in un prodotto funzionante, implementando le funzionalità principali richieste e validandone il comportamento attraverso test preliminari.
 
 == Periodo CA
 *Periodo*: *DA DEFINIRE*
