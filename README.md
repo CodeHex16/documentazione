@@ -35,10 +35,10 @@ documentazione/
 ├── 📁 glossario
 |  └── 📁 source
 |  └── 📄 *.pdf
-├── 📁 template		# file di template per i documenti
-|  └── 📁 images		# assets per i documenti
-└── 📁 verbali
-   ├── 📁 esterni
+└── 📁 template		# file di template per i documenti
+   └── 📁 images		# assets per i documenti
+```
+<!-- FINE TREE DIRECTORY -->─ 📁 esterni
    |  └── 📁 source
    |  └── 📄 *.pdf
    └── 📁 interni
