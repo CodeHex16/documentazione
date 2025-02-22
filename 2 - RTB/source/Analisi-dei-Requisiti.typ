@@ -166,16 +166,13 @@ registrati o no, possono poi scrivere al chatbot per richiedere queste informazi
 
 Nelle seguenti sezioni verranno descritti tutti i possibili casi d'uso, cioè tutti i modi in cui gli attori, definiti più avanti, possono interagire con l'applicazione.
 
-// TODO: aggiungere utente non loggato
 == Attori
 *Amministratore*: rappresenta la persona o il gruppo di persone che si occupa della distribuzione e configurazione del sistema per tutti i fornitori. Gestisce anche gli account dei fornitori.\
 In questo caso va interpretato come l'azienda Ergon Informatica Srl.\
 *Cliente*: rappresenta il cliente finale che acquista prodotti dal fornitore e che ha la possibilità di interagire con il chatbot del fornitore per ottenere informazioni sui prodotti o servizi offerti.\
-*Fornitore*: reppresenta l'azienda che fornisce dei prodotti ai propri clienti, ogni fornitore ha una sua istanza di chatbot; è una generalizzazione di Cliente infatti, oltre a poter accedere al proprio chatbot, può anche fornire il contesto tramite dei documenti aziendali o #gloss[FAQ] e personalizzare graficamente l'interfaccia variando logo e palette colori.\
+*Fornitore*: rappresenta l'azienda che fornisce dei prodotti ai propri clienti, ogni fornitore ha una sua istanza di chatbot; è una generalizzazione di Cliente infatti, oltre a poter accedere al proprio chatbot, può anche fornire il contesto tramite dei documenti aziendali o #gloss[FAQ], personalizzare graficamente l'interfaccia variando logo e palette colori.\
 Questo utente ha accesso ad un'#gloss[interfaccia web] di configurazione del chatbot e di gestione degli account dei clienti.\
-*Utente* si intende un utente che non ha ancora completato l'autenticazione.
-// TODO: capire se tenerlo ->
-// *Sistema*: rappresenta il #gloss[backend] del sistema, incluso quello dell'LLM quando viene interrogato.\
+*Utente non autenticato*: rappresenta un utente generico che non ha ancora completato l'autenticazione.
 
 #figure(image("../imgs/attori.png", width: 30%), caption: "Lista degli attori")
 
@@ -183,14 +180,14 @@ Questo utente ha accesso ad un'#gloss[interfaccia web] di configurazione del cha
 // TODO: usare degli use case che controllano il formato delle credenziali
 == UC1 - Login
 // TODO: rifare grafico
-// #figure(
-//   image("../imgs/login.png", width: 90%),
-//   caption: "Inserimento e-mail e password fornitore + possibilità 'Resta connesso'",
-// )
+#figure(
+  image("../imgs/login.png", width: 90%),
+  caption: "Inserimento e-mail e password fornitore + possibilità 'Resta connesso'",
+)
 *Attori principali:*
-- Fornitore/Cliente;
+- Utente non autenticato;
 *Descrizione:*
-- Un utente vuole accedere alla piattaforma per la configurazione del proprio chatbot e per interagire con esso;
+- Un utente non autenticato vuole accedere alla piattaforma per la configurazione del proprio chatbot e per interagire con esso;
 *Precondizioni:*
 - L'utente è in possesso delle proprie credenziali;
 - L'utente ha già effettuato il primo login e cambiato la password temporanea;
@@ -201,7 +198,6 @@ Questo utente ha accesso ad un'#gloss[interfaccia web] di configurazione del cha
 - L'utente inserisce l'indirizzo e-mail e la password nei campi dedicati;
 - Il sistema riceve la richiesta di accesso e verifica le credenziali, se sono corrette reindirizza alla homepage;
 *Estensioni:*
-- Visualizzazione errore di login;
 - Sistema non raggiungibile;
 - Primo login fornitore;
 - Primo login cliente;
@@ -211,67 +207,75 @@ Questo utente ha accesso ad un'#gloss[interfaccia web] di configurazione del cha
 - Possibilità "Resta connesso";
 
 // TODO: rifare grafico
-// #figure(
-//   image("../imgs/inserimento-email-password.png", width: 90%),
-//   caption: "Inserimento e-mail e password fornitore + possibilità 'Resta connesso'",
-// )
+#figure(
+  image("../imgs/inserimento-email-password.png", width: 90%),
+  caption: "Inserimento e-mail e password fornitore + possibilità 'Resta connesso'",
+)
 
-=== UC1.1 - Inserimento e-mail
+// TODO: probabilmente numerazione su un solo livello (tipo UC99 e non 1.99)
+=== UC?? - Inserimento e-mail
 *Attori principali:*
-- Fornitore/Cliente;
+- Utente non autenticato;
+*Descrizione:*
+- Un utente non autenticato inserisce l'e-mail associata al suo account;
 *Precondizioni:*
-- L'utente deve essere registrato;
+- Le credenziali dell'utente sono state correttamente inserite;
 - L'utente deve essere in possesso della sua e-mail;
 *Postcondizioni:*
 - L'utente ha inserito la sua e-mail;
 *Scenario principale:*
 - L'utente inserisce la sua e-mail nel campo dedicato;
-// *Estensioni:*
-// - E-mail non valida;
+*Estensioni:*
+- E-mail non valida;
 
-=== UC1.2 - Inserimento password
+=== UC?? - Inserimento password
 *Attori principali:*
-- Fornitore/Cliente;
+- Utente non autenticato;
+*Descrizione:*
+- Un utente non autenticato inserisce la password associata al suo account;
 *Precondizioni:*
-- L'utente deve essere registrato;
+- Le credenziali dell'utente sono state correttamente inserite;
 - L'utente deve essere in possesso della sua password;
 *Postcondizioni:*
 - L'utente ha inserito la sua password;
 *Scenario principale:*
 - L'utente inserisce la sua password nel campo dedicato;
-// *Estensioni:*
-// - Password non valida;
+*Estensioni:*
+- Password non valida;
 
-// === UC1.3 - E-mail non valida
-// *Attori principali:*
-// - Fornitore/Cliente;
-// *Precondizioni:*
-// - L'utente ha inserito un'e-mail sbagliata;
-// *Postcondizioni:*
-// - Il sistema notifica l'utente che la mail inserita è sbagliata;
-// - L'utente non può effettuare il login;
-// *Scenario principale:*
-// - L'utente inserisce un'e-mail sbagliata e il sistema dà errore;
+=== UC?? - E-mail non valida
+*Attori principali:*
+- Utente non autenticato;
+*Descrizione:*
+- Un utente non autenticato ha inserito un'e-mail errata;
+*Precondizioni:*
+- L'utente ha inserito un'e-mail non presente nel sistema o che non rispetta il formato corretto;
+*Postcondizioni:*
+- Il sistema notifica l'utente che la mail inserita è sbagliata;
+- Il login non va a buon fine;
+*Scenario principale:*
+- L'utente inserisce un'e-mail sbagliata e il sistema restituisce errore;
 
-// === UC1.4 - Password non valida
-// *Attori principali:*
-// - Fornitore/Cliente;
-// *Precondizioni:*
-// - L'utente ha inserito una password sbagliata o che non rispetta le condizioni;
-// *Postcondizioni:*
-// - Il sistema notifica l'utente che la password inserita è sbagliata;
-// - L'utente non può effettuare il login;
-// *Scenario principale:*
-// - L'utente inserisce una password sbagliata e il sistema dà errore;
+=== UC?? - Password non valida
+*Attori principali:*
+- Utente non autenticato;
+*Descrizione:*
+- Un utente non autenticato ha inserito una password errata;
+*Precondizioni:*
+- L'utente ha inserito una password sbagliata o che non rispetta il formato richiesto;
+*Postcondizioni:*
+- Il sistema notifica l'utente che la password inserita è sbagliata;
+- Il login non va a buon fine;
+*Scenario principale:*
+- L'utente inserisce una password sbagliata e il sistema restituisce errore;
 
 == UC2 - Primo login fornitore
 *Attori principali:*
-- Fornitore;
+- Utente non autenticato;
 *Attori secondari:*
 - Amministratore;
 *Descrizione:*
-- Un fornitore vuole accedere per la prima volta alla piattaforma a lui dedicata per gestire il suo chatbot ed
-  eventualmente utilizzarlo;
+- Un utente non autenticato vuole accedere per la prima volta alla piattaforma tramite delle credenziali fornitore per gestire il suo chatbot ed eventualmente utilizzarlo;
 *Precondizioni:*
 - La piattaforma è stata correttamente configurata dall'amministratore;
 - Il fornitore non ha mai effettuato l'accesso alla piattaforma;
@@ -293,38 +297,16 @@ Questo utente ha accesso ad un'#gloss[interfaccia web] di configurazione del cha
     - reindirizza alla piattaforma;
   - se le credenziali sono errate, restituisce un errore e permette di reinserirle;
 *Estensioni:*
-- Visualizzazione errore di login;
 - Sistema non raggiungibile;
 *Inclusioni:*
+- Inserimento e-mail;
+- Inserimento password;
 - Modifica password;
 - Possibilità "Resta connesso";
 
-// == UC3 - Login cliente
-// *Attori principali:*
-// - Cliente;
-// *Descrizione:*
-// - Un cliente vuole accedere alla piattaforma per interagire con il chatbot del fornitore;
-// *Precondizioni:*
-// - Il cliente è in possesso delle proprie credenziali;
-// - Il cliente ha già effettuato il primo login e cambiato la password temporanea;
-// - Il cliente non è già autenticato;
-// *Postcondizioni:*
-// - Se il cliente ha inserito le credenziali corrette, accede alla piattaforma;
-// *Scenario Principale:*
-// - Il cliente ha inserito l'indirizzo e-mail e la password al fine di accedere alla webapp;
-// - Il sistema riceve la richiesta di accesso e verifica le credenziali;
-// *Generalizzazioni*:
-// - Primo login cliente;
-// *Estensioni:*
-// - Visualizzazione errore di login;
-// - Sistema non raggiungibile;
-// *Inclusioni:*
-// - Inserimento password;
-// - Possibilità "Resta connesso";
-
 == UC3 - Primo login cliente
 *Attori principali:*
-- Cliente;
+- Utente non autenticato;
 *Attori secondari:*
 - Fornitore;
 *Descrizione:*
@@ -351,56 +333,39 @@ Questo utente ha accesso ad un'#gloss[interfaccia web] di configurazione del cha
     - reindirizza alla piattaforma;
   - se le credenziali sono errate, restituisce un errore e permette di reinserirle;
 *Estensioni:*
-- Visualizzazione errore di login;
 - Sistema non raggiungibile;
 *Inclusioni:*
+- Inserimento e-mail;
+- Inserimento password;
 - Modifica password;
 - Possibilità "Resta connesso";
 
 // È uno use case a parte perché sarà anche quello usato per modificare la password dell'utente
 // TODO: rifare grafico
-// TODO: richiesta password vecchia
 == UC4 - Modifica password
-//#figure(image("../imgs/cambio-password.png", width: 90%), caption: "Modifica password")
+#figure(image("../imgs/cambio-password.png", width: 90%), caption: "Modifica password")
 *Attori principali:*
-- Fornitore/cliente;
+- Utente non autenticato;
 *Descrizione:*
 - Un utente deve cambiare la password del proprio account;
 *Precondizioni:*
-- Le credenziali dell'utente sono state corretamente inserite dal fornitore;
+- Le credenziali dell'utente sono state corretamente inserite nel sistema;
 - L'utente deve essersi autenticato con le credenziali corrette;
 *Postcondizioni:*
-- Il sistema ha ricevuto la richiesta di cambio password e se valida effettua il cambiamento della password;
+- Il sistema ha ricevuto la richiesta di cambio password e, se questa è valida, effettua il cambiamento della password;
 *Scenario Principale:*
 - All'utente viene mostrato un form per inserire la nuova password;
 - L'utente inserisce la nuova password;
-- Il sistema riceve la richiesta di cambio password e la effettua;
-*Estensioni:*
-- Password scelta non valida;
-- Sistema non raggiungibile;
-
-// TODO: separare in due use case
-== UC5 - Visualizzazione errore di login
-*Attori principali:*
-- Fornitore/cliente;
-*Descrizione:*
-- Un utente cercando di compiere il login ha inserito delle credenziali errate, quindi viene visualizzato un errore;
-*Precondizioni:*
-- Le credenziali del cliente sono state corretamente inserite registrate nel sistema;
-- Il cliente deve essere in possesso delle credenziali corrette;
-- Il sistema ha ricevuto le credenziali inserite dall'utente;
-*Postcondizioni:*
-- Il sistema restituisce un errore indicando che la l'operazione è fallita, con alcune informazioni sul perché del fallimento;
-*Scenario Principale:*
-- Il sistema ha ricevuto le credenziali inserite dall'utente ma queste non sono corrette, pertanto viene visualizzato un messaggio d'errore;
+- Il sistema riceve la richiesta di cambio password e, se è valida, la effettua;
 *Estensioni:*
 - Sistema non raggiungibile;
+*Inclusioni:*
+- Inserimento password;
 
 // TODO: mettere come condition "l'utente ha selezionato l'opzione 'Resta connesso'"
-// TODO: mettere utente non loggato
 == UC6 - Possibilità "Resta connesso"
 *Attori principali:*
-- Fornitore/cliente;
+- Utente non autenticato;
 *Descrizione:*
 - Un utente vuole mantenere l'accesso attivo al fine di non dover effettuare il login, inserendo le credenziali, ogni volta che ha intenzione di accedere alla web app;
 *Precondizioni:*
@@ -413,7 +378,7 @@ Questo utente ha accesso ad un'#gloss[interfaccia web] di configurazione del cha
 *Scenario Principale:*
 - L'utente inserisce le credenziali;
 - Il sistema mantiene in memoria locale le credenziali per un futuro login senza doverle richiedere all'utente;
-* Estensioni:*
+*Estensioni:*
 - Sistema non raggiungibile;
 
 // TODO: rifare grafico
@@ -437,20 +402,20 @@ Questo utente ha accesso ad un'#gloss[interfaccia web] di configurazione del cha
 *Inclusioni:*
 - Modifica password;
 
-// TODO: errore che va bene per tutti gli inserimenti password
-== UC8 - Password scelta non valida
-*Attori principali:*
-- Fornitore/cliente;
-*Descrizione:*
-- Un utente vuole cambiare la propria password ma ne sceglie una non valida;
-*Precondizioni:*
-- L'utente deve aver effettuato il suo primo accesso;
-- Il sistema deve aver ricevuto una password inserita dall'utente che è errata;
-*Postcondizioni:*
-- Se la password scelta dall'utente non è valida, il sistema invia un messaggio d'errore all'utente;
-*Scenario Principale:*
-- Il sistema riceve la password inserita dall'utente;
-- Il sistema verifica la password inserita e la trova non conforme ai requisiti, quindi invia un messaggio d'errore all'utente con la richiesta di scegliere un'altra password valida;
+// // TODO: errore che va bene per tutti gli inserimenti password
+// == UC8 - Password scelta non valida
+// *Attori principali:*
+// - Fornitore/cliente;
+// *Descrizione:*
+// - Un utente vuole cambiare la propria password ma ne sceglie una non valida;
+// *Precondizioni:*
+// - L'utente deve aver effettuato il suo primo accesso;
+// - Il sistema deve aver ricevuto una password inserita dall'utente che è errata;
+// *Postcondizioni:*
+// - Se la password scelta dall'utente non è valida, il sistema invia un messaggio d'errore all'utente;
+// *Scenario Principale:*
+// - Il sistema riceve la password inserita dall'utente;
+// - Il sistema verifica la password inserita e la trova non conforme ai requisiti, quindi invia un messaggio d'errore all'utente con la richiesta di scegliere un'altra password valida;
 
 // TODO: rifare grafico
 == UC9 - Logout
