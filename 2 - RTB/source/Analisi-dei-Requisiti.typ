@@ -404,7 +404,6 @@ Questo utente ha accesso ad un'#gloss[interfaccia web] di configurazione del cha
 *Scenario principale:*
 - L'utente inserisce una password sbagliata e il sistema restituisce errore;
 
-// // TODO: errore che va bene per tutti gli inserimenti password
 // == UC8 - Password scelta non valida
 // *Attori principali:*
 // - Utente non autenticato;
@@ -994,7 +993,6 @@ con:
     "R-04-F-O",
     "Sia utente che fornitore devono poter cambiare la password liberamente",
     "UC4 - Riunioni interne",
-    // TODO: fixare l'a capo nella tabella
     // resta connesso
     "R-05-F-D",
     "L'utente non autenticato deve poter scegliere se reinserire le credenziali ad ogni accesso o se farle memorizzare alla piattaforma anche dopo il termine della sessione",
