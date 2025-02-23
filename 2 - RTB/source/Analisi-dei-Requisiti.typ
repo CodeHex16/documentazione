@@ -30,7 +30,7 @@
     "0.7.1",
     "10/02/2025",
     "Luca Ribon",
-    "Aggiunti use case mancante e corretti typo",
+    "Aggiunti use case mancanti e corretti typo",
     "Filippo Sabbadin",
     "0.7.0",
     "07/02/2025",
