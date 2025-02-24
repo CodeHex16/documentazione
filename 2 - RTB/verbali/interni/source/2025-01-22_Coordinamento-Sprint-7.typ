@@ -50,7 +50,7 @@ L'azienda Ergon ha fornito le chiavi API per l'utilizzo dei modelli #gloss[LLM] 
 Abbiamo pensato di strutturare il PoC in quattro parti principali:
 - *#gloss[Suppl-AI]*: la #gloss[webapp] che ospiterà il #gloss[chatbot]
 - *Suppl-Admin*: la webapp per gli amministratori che permetterà di gestire il chatbot, caricare documenti e creare il profilo degli utenti che utilizzeranno il chatbot
-- *Database API*: il server che si occuperà di gestire le richieste del frontend
+- *Database API*: il server che si occuperà di gestire le richieste del #gloss[frontend]
 - *LLM #gloss[Backend]*: il server che si occuperà di gestire le richieste al modello LLM
 
 Sono state create nuove repository su #gloss[GitHub] per ospitare i codici sorgente di questi componenti.

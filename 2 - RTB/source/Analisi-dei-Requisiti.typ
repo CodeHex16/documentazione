@@ -117,7 +117,7 @@ Il sistema dovrà offrire le seguenti funzionalità principali:
   - Ottenere risposte personalizzate, generate utilizzando documenti aziendali archiviati nel sistema.
   - Fornire #gloss[feedback] sul grado di soddisfazione delle risposte ricevute, per migliorare la qualità del sistema.
 - *Per le aziende:*
-  - Gestire clienti e documenti attraverso un'interfaccia di amministrazione user-friendly.
+  - Gestire clienti e documenti attraverso un'interfaccia di amministrazione #gloss[user-friendly].
   - Configurare domande e risposte predefinite come base per il chatbot.
   - Caricare, aggiornare e mantenere i documenti aziendali utilizzati per il training del modello *LLM*.
 
@@ -406,7 +406,7 @@ Quando si parla di *utente* si intende un utente generico che compie operazioni 
 - È stata salvata la preferenza dell'utente relativa al salvataggio delle credenziali;
 *Scenario Principale:*
 - L'utente inserisce le credenziali;
-- Il sistema mantiene in memoria locale le credenziali per un futuro login senza doverle richiedere all'utente;
+- Il sistema mantiene in #gloss[memoria locale] le credenziali per un futuro login senza doverle richiedere all'utente;
 * Estensioni:*
 - Sistema non raggiungibile;
 

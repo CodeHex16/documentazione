@@ -28,7 +28,7 @@ Questa riunione con il referente di *Ergon* è rivolta, interamente, al chiarime
 
 +  _L'interfaccia mobile è destinata sia ad iOS che ad Android?_
   \ La piattaforma fondamentale è Android, ma meglio se supporta entrambi;  fondamentale che sia responsive e intuitiva da utilizzare.
-+ _Dobbiamo usare un particolare framework per la parte di frontend web?_\
++ _Dobbiamo usare un particolare framework per la parte di #gloss[frontend] web?_\
   \No, la scelta è libera, alcuni esempi potrebbero essere Blazor o React.
 + _E' necessario un login?_\
   \Sì, è necessaria un'autenticazione all'avvio della #gloss[webapp].
@@ -55,6 +55,6 @@ Questa riunione con il referente di *Ergon* è rivolta, interamente, al chiarime
 + _Quale #gloss[middleware] conviene scegliere per la comunicazione tra database e LLM?_\
   \Dipende, infatti prima bisogna scegliere l'LLM da usare e poi capire quali #gloss[API] offre e adeguarci di conseguenza sulla scelta del middleware.
 + _Come vengono gestiti i dati del'LLM?_\
-  \Tutti i dati vengono inseriti in un database SQL, ma i dati su cui l'LLM viene addestrato vengono anche inseriti in un databse vettoriale. 
+  \Tutti i dati vengono inseriti in un database #gloss[SQL], ma i dati su cui l'LLM viene addestrato vengono anche inseriti in un databse vettoriale. 
 = Materiale
 Infine, l'azienda ci potrà fornire del materiale didattico di approfondimento, in particolare per gli LLM in generale e per dei modelli più specifici una volta che avremo scelto i vari strumenti da usare per il progetto.

@@ -86,7 +86,7 @@ Requisiti.
   da ricordare per l’utente.
 
 + _Si preferisce un #gloss[PoC] che integra #gloss[webapp] per la chat e LLM che risponde oppure due componenti separati (uno per l’LLM e
-  uno per il frontend)?_\
+  uno per il #gloss[frontend])?_\
   \Non ci sono preferenze specifiche. La scelta su come realizzare il PoC può essere fatta in base alle esigenze e
   preferenze del team.
 
