@@ -499,6 +499,7 @@ clienti.\
 - Sistema non raggiungibile;
 
 == UC16 - Scrittura messaggio
+#figure(image("../imgs/scrittura-messaggio.png", width: 100%), caption: "Scrittura messaggio")
 *Attori principali:*
 - Cliente;
 *Descrizione:*
@@ -547,6 +548,7 @@ clienti.\
   suggerirle all'utente; 
 
 == UC18 - Invio messaggio
+#figure(image("../imgs/invio-messaggio.png", width: 100%), caption: "Invio messaggio")
 *Attori principali:*
 - Cliente;
 *Descrizione:*
@@ -565,8 +567,8 @@ clienti.\
 
 == UC19 - Ricezione risposta
 #figure(
-  image("../imgs/ricezione-valutazione-risposta.png", width: 80%),
-  caption: "Visualizzazione ed invio dei messaggi",
+  image("../imgs/ricezione-valutazione-risposta.png", width: 90%),
+  caption: "Ricezione e valutazione della risposta",
 )
 *Attori principali:*
 - Cliente;
@@ -604,6 +606,7 @@ clienti.\
 - Sistema non raggiungibile;
 
 == UC21 - Eliminazione di una chat
+#figure(image("../imgs/eliminazione-chat.png", width: 80%), caption: "Eliminazione di una chat")
 *Attori principali:*
 - Cliente;
 *Descrizione:*
@@ -620,7 +623,7 @@ clienti.\
 - Sistema non raggiungibile;
 
 == UC22 - Selezione Dark/Light Mode
-#figure(image("../imgs/dark-light-mode.png", width: 50%), caption: "Selezione modalità chiara/scura")
+#figure(image("../imgs/selezione-dark-light.png", width: 50%), caption: "Selezione modalità chiara/scura")
 *Attori principali:*
 - Cliente;
 *Descrizione:*
