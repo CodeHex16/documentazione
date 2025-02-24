@@ -116,8 +116,8 @@ Acronimo di "HyperText Markup Language", è un linguaggio di markup utilizzato p
 Unità di testo elaborate da un modello di intelligenza artificiale, includono parole, caratteri o simboli che costituiscono l'input fornito.
 == Interfaccia web
 Un'interfaccia web è un'interfaccia utente basata su web che consente agli utenti di interagire con un'applicazione o un sistema tramite un browser web. Le interfacce web possono includere elementi come pulsanti, menu, form, tabelle e grafici per consentire agli utenti di navigare, inserire dati, visualizzare informazioni e interagire con il sistema. Le interfacce web sono progettate per essere intuitive, responsive e accessibili da diversi dispositivi e piattaforme.
-== ITS (Issue Tracking System)
-Un sistema di tracciamento delle issue è uno strumento software utilizzato per registrare, monitorare e gestire le issue all'interno di un progetto. Gli ITS consentono di creare, assegnare, commentare e risolvere le issue in modo collaborativo e organizzato. Gli ITS sono utilizzati per tenere traccia dei problemi, dei bug, delle richieste di funzionalità e delle attività all'interno di un progetto e facilitano la comunicazione e la collaborazione tra i membri del team.
+== ITS
+Un Issue Tracking System o sistema di tracciamento delle issue è uno strumento software utilizzato per registrare, monitorare e gestire le issue all'interno di un progetto. Gli ITS consentono di creare, assegnare, commentare e risolvere le issue in modo collaborativo e organizzato. Gli ITS sono utilizzati per tenere traccia dei problemi, dei bug, delle richieste di funzionalità e delle attività all'interno di un progetto e facilitano la comunicazione e la collaborazione tra i membri del team.
 
 = J 
 == JavaScript
