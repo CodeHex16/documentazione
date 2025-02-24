@@ -25,7 +25,7 @@
     "0.8.0",
     "20/02/2025",
     "Luca Ribon",
-    "Corretti e aggiunti use case e requisiti a seguito della riunione con il Prof. Cardin",
+    "Corretti e aggiunti use case e requisiti a seguito della riunione con il Prof. Cardin; revisione generale del documento",
     "",
     "0.7.1",
     "10/02/2025",
