@@ -674,6 +674,7 @@ clienti.\
 - Sistema non raggiungibile;
 
 == UC25 - Selezione palette colori
+#figure(image("../imgs/selezione-palette.png", width: 90%), caption: "Selezione palette colori")
 *Attori principali:*
 - Fornitore;
 *Descrizione:*
@@ -695,10 +696,9 @@ clienti.\
 - Invio richiesta con dati mancanti o errati;
 - Sistema non raggiungibile;
 
-// TODO: sistemare grafico
 == UC26 - Visualizzare statistiche domanda-risposta
 #figure(
-  image("../imgs/statistiche-filtri-fornitore.png", width: 90%),
+  image("../imgs/filtri-statistiche.png", width: 90%),
   caption: "Visualizzazione statistiche e filtri del fornitore",
 )
 *Attori principali:*
