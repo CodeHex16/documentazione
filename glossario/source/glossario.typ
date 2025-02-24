@@ -51,7 +51,7 @@ Un branch è una copia separata del codice sorgente di un progetto software, uti
 == Brainstorming
 Il brainstorming è una tecnica di generazione di idee che coinvolge un gruppo di persone nella discussione e nella condivisione di pensieri, suggerimenti e soluzioni su un determinato argomento. Il brainstorming è utilizzato per stimolare la creatività, favorire la collaborazione e generare nuove idee attraverso l'associazione libera di concetti e la valutazione collettiva delle proposte. Il brainstorming può essere utilizzato per risolvere problemi, pianificare progetti, generare innovazione e promuovere la partecipazione attiva dei partecipanti.
 
-= 
+= C
 == CA(Customer Acceptance)
 CA è l'acronimo di "Customer Acceptance". Si tratta di una fase del processo di sviluppo software in cui il cliente valuta e accetta il prodotto finale consegnato dal fornitore. Durante la fase di CA, il cliente verifica che il prodotto soddisfi i requisiti concordati, risolva i problemi identificati e sia pronto per l'utilizzo effettivo. Il CA rappresenta un momento critico nel ciclo di vita del progetto e segna il completamento e l'accettazione del lavoro da parte del cliente.
 == Candidatura
@@ -60,8 +60,8 @@ La candidatura è il processo attraverso il quale un individuo o un'organizzazio
 Un chatbot è un programma informatico progettato per simulare una conversazione umana attraverso chat o messaggi di testo. I chatbot possono essere utilizzati per rispondere a domande, fornire informazioni, assistere gli utenti e automatizzare processi. I chatbot possono essere implementati su diverse piattaforme, come siti web, applicazioni di messaggistica e social media.
 == CodeHex16
 CodeHex16 è il nome del gruppo di lavoro.
-== Codice Esadecimali
-Sistema numerico in base 16 che utilizza i simboli 0-9 e le lettere A-F per rappresentare i valori.
+== Codice Esadecimale
+Sistema numerico in base 16 che utilizza i numeri 0-9 per rappresentare i valori da 0 a 9 e le lettere A-F per rappresentare i valori da 10 a 15.
 == Codice Sorgente
 Il codice sorgente è il testo scritto in un linguaggio di programmazione che costituisce le istruzioni e le regole per il funzionamento di un software. Il codice sorgente viene scritto dagli sviluppatori e tradotto in codice eseguibile dal computer attraverso un processo chiamato compilazione. Il codice sorgente è la base per la creazione, la manutenzione e l'estensione di un software e può essere modificato, condiviso e distribuito tra gli sviluppatori.
 == Color Picker
@@ -87,8 +87,6 @@ Il feedback è un processo di comunicazione in cui vengono fornite informazioni,
 Il fornitore è l'ente o l'organizzazione che fornisce beni o servizi a un committente in base a un contratto o un accordo. Il fornitore può essere un'azienda, un'istituzione, un'organizzazione non governativa o un individuo che offre prodotti o servizi specifici. Il fornitore è responsabile della realizzazione e della consegna dei beni o servizi richiesti dal committente.
 == FAQ
 Acronimo di "Frequently Asked Questions", indica una raccolta di domande e risposte frequenti su un determinato argomento.
-== Fraintendimenti
-I fraintendimenti sono errori di interpretazione o di comprensione che possono verificarsi durante la comunicazione tra individui o gruppi. I fraintendimenti possono deriv
 == Frontend
 Parte di un sistema software che gestisce l'interfaccia utente e le interazioni visibili all'utente finale.
 = G
@@ -134,7 +132,7 @@ Il branch principale è il branch principale di un repository Git, che contiene 
 == Meeting
 Un incontro formale o informale tra due o più persone per discutere, condividere informazioni, prendere decisioni o risolvere problemi. I meeting possono essere organizzati in vari formati, come riunioni fisiche, virtuali o ibride, e hanno l'obiettivo di favorire la collaborazione e la comunicazione tra i partecipanti.
 == Memoria Locale
-La memoria locale è lo spazio di archiviazione temporaneo disponibile su un dispositivo o un sistema informatico per memorizzare dati, file e informazioni. In nostro contesto riguarda la memoria locale del browser, che consente di memorizzare dati in modo persistente tra le sessioni e di accedere rapidamente alle informazioni senza doverle scaricare nuovamente da Internet.
+La memoria locale è lo spazio di archiviazione temporaneo disponibile su un dispositivo o un sistema informatico per memorizzare dati, file e informazioni. In nostro contesto ci si riferisce principalmente alla memoria locale del browser, che consente di memorizzare dati in modo persistente tra le sessioni e di accedere rapidamente alle informazioni senza doverle scaricare nuovamente da Internet.
 == Middleware
 Il middleware è un software che si colloca tra il sistema operativo e le applicazioni, facilitando la comunicazione e lo scambio di dati tra di essi. Il middleware svolge un ruolo fondamentale nell'integrazione di sistemi eterogenei e nella creazione di architetture distribuite. Esistono diversi tipi di middleware, tra cui i message broker, i web server e i database server.
 == MPC(Minimum Predictive Capability)
@@ -162,7 +160,7 @@ PB è l'acronimo di "Product Baseline". Si tratta di una fase del processo di sv
 Il piano di progetto è un documento che definisce gli obiettivi, le attività, le risorse e la pianificazione temporale di un progetto. Il piano di progetto fornisce una roadmap dettagliata per la realizzazione del progetto, stabilendo le fasi, le milestone, le scadenze e le responsabilità dei membri del team. Il piano di progetto è uno strumento fondamentale per gestire e monitorare l'avanzamento del progetto e garantire il rispetto degli obiettivi prefissati.
 == PoC (Proof of Concept)
 Una dimostrazione pratica che ha lo scopo di verificare la fattibilità o il potenziale di un'idea, concetto o soluzione. È spesso utilizzata nelle fasi iniziali di un progetto per validare il funzionamento teorico e pratico, incluso il modo in cui diverse componenti del sistema possono integrarsi tra loro per raggiungere l'obiettivo prefissato.
-== Postgre
+== Postgres
 PostgreSQL, spesso abbreviato in Postgres, è un sistema di gestione di database relazionali (RDBMS) open source e gratuito. È noto per la sua affidabilità, scalabilità e conformità agli standard SQL.
 == Practice
 Il termine practice si riferisce a un'attività o un insieme di attività che vengono eseguite regolarmente per migliorare le competenze e le capacità di un individuo o di un team. Le practice possono essere utilizzate per acquisire esperienza, consolidare le conoscenze e sviluppare abilità specifiche in un determinato campo. Le practice possono essere individuali o collettive e possono essere applicate in diversi contesti, come lo sviluppo software, la gestione dei progetti e la formazione.
