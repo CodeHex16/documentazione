@@ -329,7 +329,7 @@ clienti.\
 // TODO: rifare grafico
 // non va incluso il modifica password perché in questo caso non si conosce la password vecchia
 == UC6 - Recupero password
-#figure(image("../imgs/recupero-password.png", width: 80%), caption: "Recupero password")
+#figure(image("../imgs/recupero-password.png", width: 90%), caption: "Recupero password")
 *Attori principali:*
 - Utente non autenticato;
 *Descrizione:*
@@ -437,10 +437,7 @@ clienti.\
 
 // TODO: rifare grafico
 == UC12 - Visualizzazione della lista delle chat
-#figure(
-  image("../imgs/visualizzazione-scrittura-messaggio.png", width: 80%),
-  caption: "Visualizzazione ed invio dei messaggi",
-)
+#figure(image("../imgs/lista-chat.png", width: 100%), caption: "Schermata delle chat")
 *Attori principali:*
 - Cliente;
 *Descrizione:*
@@ -470,6 +467,7 @@ clienti.\
 - Sistema non raggiungibile;
 
 == UC14 - Modifica titolo di una chat
+#figure(image("../imgs/modifica-titolo-chat.png", width: 100%), caption: "Modifica titolo chat")
 *Attori principali:*
 - Cliente;
 *Descrizione:*
