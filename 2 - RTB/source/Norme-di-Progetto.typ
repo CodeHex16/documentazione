@@ -28,7 +28,7 @@
     "Luca Ribon",
     "Correzione del contenuto,
 formattazione e stesura sezione Sviluppo",
-    "!!!!!!!!!!!",
+    "Luca Rossi",
     "0.4.0",
     "08/01/2025",
     "Gabriele Magnelli",
@@ -195,21 +195,21 @@ In questo modo si possono definire in modo dettagliato i requisiti funzionali, d
 La progettazione del sistema è il l'attività di definizione dell'architettura del software dal punto di vista logico; in questo fase di decide come soddisfare i requisiti identificati durante l'analisi.
 
 In particolare vanno definiti i componenti software e le loro interazioni, prestando attenzione a manterli separati e indipendenti per garantire una maggiore manutenibilità e scalabilità del sistema; in questo passaggio è importante anche definire le unità architetturali.\
-Inoltre vanno definite le responsabilità che verranno applicate in fase di codifica assicurandosi di mantenere un livello di efficienza e efficacia il più alto possibile.
-L'approccio utilizzato in questa attività sarà sia top-down, per scomporre il problema in sotto-problemi, sia bottom-up, per ragionare sui singoli sotto-problemi e integrali in una soluzione complessiva.
+Inoltre vanno definite le responsabilità che verranno applicate in fase di codifica assicurandosi di mantenere un livello di #gloss[efficienza] e #gloss[efficacia] il più alto possibile.
+L'approccio utilizzato in questa attività sarà sia #gloss[top-down], per scomporre il problema in sotto-problemi, sia #gloss[bottom-up], per ragionare sui singoli sotto-problemi e integrali in una soluzione complessiva.
 
 Al termine di questa attività ci si aspetta di avere un'architettura ben definita che preveda:
 - #gloss[Backend]:
   - #gloss[API] per l'interazione con l'LLM;
   - API per l'interazione con il database;
   - beckend per la gestione delle interfacce utente e di configurazione;
-- Frontend:
+- #gloss[Frontend]:
   - Interfaccia utente per il cliente;
   - Interfaccia per il fornitore;
 - Database;
 
 ==== Codifica e Testing
-In questa attività i Programmatori traducono l'output della Progettazione in codice sorgente, in modo da integrare ogni unità prevista dall'architettura.
+In questa attività i Programmatori traducono l'output della Progettazione in #gloss[codice sorgente], in modo da integrare ogni unità prevista dall'architettura.
 Inoltre ogni unità sarà documentata e testata per garantire che soddisfi i requisiti definiti in fase di analisi e progettazione.
 Nello specifico la documentazione dovrà prevedere la documentazione dedicata all'utente finale e quella dedicata al manutentore. Inoltre nella documentazione verranno integrati anche i dettagli realtivi al testing eseguito sulle singole unità.
 
@@ -387,7 +387,7 @@ I ruoli svolti, a rotazione, dai membri del gruppo sono:
 Ogni membro, in un dato momento, può svolgere un solo ruolo alla volta, ma durante lo sprint può assumere più ruoli.
 
 ==== Ticketing (Issue Tracking System)
-Il gruppo sfrutta l'ITS(Issue Tracking System) offerto da Github per gestire le attività da svolgere, cioè le *Issue*.
+Il gruppo sfrutta l'Issue Tracking System offerto da Github per gestire le attività da svolgere, cioè le *Issue*.
 Creare le issue è molto semplice e veloce; quando viene individuata un'attività specifica da svolgere viene creata una issue e viene assegnata, in modo coerente, ad un membro del gruppo.
 Quando viene creata una issue, questa sarà composta da:
 - *Titolo*: Il nome della issue che identifica l'attività da svolgere;

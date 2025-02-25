@@ -21,6 +21,7 @@
     sommario: [],
     
     versioni : (
+      "0.6.0","14-02-2025","Luca Rossi","Aggiunta descrizione Sprint 6", "Luca Ribon",
       "0.5.0","17-01-2025","Gabriele Magnelli","Aggiunto descrizione Sprint 5 e correzione immagine Sprint 4", "Luca Rossi",
       "0.4.0","05/01/2025","Francesco Fragonas","Aggiunta sezione Pianificazione del lavoro e Periodi di sviluppo", "Yi Hao Zhuo",
       "0.3.0","18/12/2024","Francesco Fragonas","Aggiunta sezione analisi dei rischi", "Filippo Sabbadin",
@@ -95,7 +96,7 @@ Questa sezione del Piano di Progetto ha lo scopo di identificare, analizzare e g
 
 L'approccio adottato prevede l'identificazione delle principali categorie di rischio, la valutazione del grado di pericolosità e la definizione di azioni preventive e piani di mitigazione per affrontare eventuali criticità. Le categorie principali considerate includono:
 
-- *Rischi organizzativi*: problemi legati a pianificazione, gestione delle risorse, comunicazione e rispetto di tempi o budget.
+- *Rischi organizzativi*: problemi legati a pianificazione, gestione delle risorse, comunicazione e rispetto di tempi o #gloss[budget].
 - *Rischi tecnici*: difficoltà con strumenti, tecnologie, integrazioni o imprevisti hardware/software.
 - *Rischi di analisi e progettazione*: errori nella comprensione dei requisiti, specifiche poco chiare o cambiamenti significativi durante il progetto.
 
@@ -104,7 +105,7 @@ Secondo lo standard ISO/IEC 31000:2009, la gestione dei rischi si articola in ci
 1. *Identificazione dei rischi*:
   #h(2em)
   - Riconoscere le fonti di rischio, le aree di impatto e le cause che potrebbero influenzare gli obiettivi del progetto.
-  - Utilizzare attività di brainstorming per generare un elenco completo dei rischi potenziali e valutare le circostanze che potrebbero determinare il loro verificarsi.
+  - Utilizzare attività di #gloss[brainstorming] per generare un elenco completo dei rischi potenziali e valutare le circostanze che potrebbero determinare il loro verificarsi.
 
 2. *Analisi dei rischi*:
   #h(2em)
@@ -258,7 +259,7 @@ A fine sprint, si tiene una retrospettiva per valutare il progresso, identificar
 
 == Gestione delle task
 Le task costituiscono le unità operative elementari del lavoro e vengono gestite tramite una board di GitHub. Ogni task è associata a un responsabile, un peso, una priorità e un ruolo specifico.
-Per monitorare l'efficienza e il tempo impiegato, ogni attività è stata tracciata nel dettaglio, includendo la durata prevista e quella effettiva. Questi dati sono riportati su un foglio Google condiviso, che offre una panoramica in tempo reale dell'avanzamento complessivo del progetto.
+Per monitorare l'#gloss[efficienza] e il tempo impiegato, ogni attività è stata tracciata nel dettaglio, includendo la durata prevista e quella effettiva. Questi dati sono riportati su un foglio Google condiviso, che offre una panoramica in tempo reale dell'avanzamento complessivo del progetto.
 
 Questo approccio consente una chiara distribuzione dei compiti, facilitando il controllo del progresso e l'individuazione di eventuali criticità nel raggiungimento degli obiettivi.
 
@@ -267,8 +268,8 @@ Questo approccio consente una chiara distribuzione dei compiti, facilitando il c
 Il progetto è stato suddiviso in tre macroperiodi principali, ciascuno associato a una milestone cruciale:
 
 - *#gloss[RTB] (Requirements and Technology Baseline)*: Focus sull'#gloss[analisi dei requisiti], sulla definizione delle tecnologie e sulla preparazione di un Proof of Concept (#gloss[PoC]).
-- *PB (Product Baseline)*: Concentrato sull'implementazione delle funzionalità principali e sulla verifica dell'architettura progettata.
-- *CA (Customer Acceptance)*: Dedicato al completamento, alla validazione finale del prodotto e alla consegna al cliente.
+- *#gloss[PB] (Product Baseline)*: Concentrato sull'implementazione delle funzionalità principali e sulla verifica dell'architettura progettata.
+- *#gloss[CA] (Customer Acceptance)*: Dedicato al completamento, alla validazione finale del prodotto e alla consegna al cliente.
 
 Questa suddivisione consente una chiara definizione degli obiettivi di breve e medio termine, facilitando il monitoraggio dell'avanzamento e l'identificazione tempestiva di eventuali criticità.
 
@@ -298,9 +299,9 @@ Durante lo *Sprint 1*, della durata di una settimana, il gruppo si è concentrat
 #pseudoheading[*Attività svolte*]
 
 - *Analisi app nativa vs #gloss[webapp]*: Discussione con l'azienda per valutare la possibilità di sviluppare una webapp invece di un'app nativa, come inizialmente richiesto nel capitolato.
-- *Analisi framework frontend*: Studio dei framework frontend nel caso in cui si decidesse di optare per una webapp.
+- *Analisi framework #gloss[frontend]*: Studio dei framework frontend nel caso in cui si decidesse di optare per una webapp.
 - *Analisi LLM*: Valutazione dei modelli linguistici (LLM) disponibili per generare le risposte, con focus su parametri come le lingue supportate e i requisiti di training.
-- *Analisi database SQL*: Confronto tra diversi database SQL per individuare la soluzione più adeguata al caso d'uso del progetto.
+- *Analisi database #gloss[SQL]*: Confronto tra diversi database SQL per individuare la soluzione più adeguata al caso d'uso del progetto.
 - *Creazione e aggiornamento del Glossario*: Redazione del documento glossario con i termini tecnici fondamentali e creazione della relativa pagina web nel sito, che sarà aggiornata durante il progetto.
 
 #pseudoheading[*Ruoli ricoperti e ore svolte*]
@@ -442,16 +443,42 @@ In generale, durante questo sprint, si è continuata la stesura dei documenti pr
   ],
 )
 
+=== Sprint 6
+
+
+*Intervallo temporale*: 07/01/2025 - 20/01/2025
+
+Con lo *Sprint 6*, il team ha proseguito nella stesura della documentazione principale del progetto. 
+Inoltre, sono stati integrati i diagrammi #gloss[UML] degli use case.
+
+Un punto chiave di questo sprint è stato l’incontro con il proponente, durante il quale il team ha verificato la completezza degli Use Case e presentato la scelta dell’LLM
+
+#pseudoheading[*Attività svolte*]
+
+- *Stesura Norme di Progetto*: Continuazione della stesura del documento, con ulteriore dettaglio sulla gestione delle revisioni e degli standard adottati.
+- *Aggiornamento Glossario*: Integrazione di nuovi termini tecnici sorti durante la stesura dei documenti.
+- *Integrazione Diagrammi UML degli use case*: Aggiunta dei diagrammi per supportare la comprensione delle funzionalità chiave del sistema.
+- *Scelta dell’LLM*: Discussione e decisione definitiva sul modello linguistico da integrare nel progetto.
+
+#pseudoheading[*Ruoli ricoperti e ore svolte*]
+
+#figure(
+  image("../imgs/sprint6-tabella.png", width: 100%),
+  caption: [
+    Suddivisione oraria per membro e ruolo.
+  ],
+)
+
+#figure(
+  image("../imgs/sprint6-grafico.png", width: 100%),
+  caption: [
+    Suddivisione oraria per ruolo con relativi costi.
+  ],
+)
+
 == Periodo PB
 *Periodo*: *DA DEFINIRE*
 
-#pseudoheading[*Obiettivi principali*]
-
-- *Progettazione architetturale*: Definizione dell'architettura del sistema e delle scelte di design.
-- *Implementazione delle funzionalità principali*: Sviluppo del prodotto partendo dal Proof of Concept, con particolare attenzione alle funzionalità chiave.
-- *Integrazione delle tecnologie*: Collegamento delle componenti tecnologiche per garantire un sistema coerente.
-- *Documentazione avanzata*: Produzione di Diagrammi delle Classi, Manuale Utente e Manuale Sviluppatore.
-In questo periodo, il team si è concentrato sulla trasformazione del PoC in un prodotto funzionante, implementando le funzionalità principali richieste e validandone il comportamento attraverso test preliminari.
 
 == Periodo CA
 *Periodo*: *DA DEFINIRE*

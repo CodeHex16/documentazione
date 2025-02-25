@@ -111,9 +111,9 @@ Il sistema dovrà offrire le seguenti funzionalità principali:
     - Ottenere risposte personalizzate, generate utilizzando documenti aziendali archiviati nel sistema e il constesto della chat;
   - Fornire #gloss[feedback] sul grado di soddisfazione delle risposte ricevute, per migliorare la qualità del sistema.
 - *Per le aziende:*
-  - Gestire clienti attraverso un'interfaccia di amministrazione;
-  - Caricare e gestire i documenti aziendali utilizzati per dare contesto al modello *LLM*;
-  - Configurare domande e risposte predefinite utilizzabili per comunicare con il chatbot.
+  - Gestire clienti e documenti attraverso un'interfaccia di amministrazione #gloss[user-friendly].
+  - Configurare domande e risposte predefinite come base per il chatbot.
+  - Caricare, aggiornare e mantenere i documenti aziendali utilizzati per il training del modello *LLM*.
 
 == Glossario
 Per facilitare la comprensione di questo documento, viene fornito un glossario che chiarisce il significato dei termini

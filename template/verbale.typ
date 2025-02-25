@@ -94,24 +94,23 @@
 
 
   // Versionamento
-  pagebreak()
-  text(size: 16pt, weight: "black", "Registro delle Versioni")
-  set table.cell(breakable: true)
-  show table.cell : it => [
-    #par(justify: false)[
-      #text(hyphenate: false, it)
-    ]
-  ]
+  // pagebreak()
+  // text(size: 16pt, weight: "black", "Registro delle Versioni")
+  // set table.cell(breakable: true)
+  // show table.cell : it => [
+  //   #set par(justify: false)
+  //   #text(hyphenate: false, it)
+  // ]
 
-  table(
-    columns: (auto,auto,auto,auto,auto),
-    fill: (x,y) => if (y== 0) { luma(230) },
-    inset: 10pt,
-    table.header(
-      [*Versione*],[*Data*],[*Autore*],[*Cambiamenti*],[*Verificatore*]
-    ),
-    ..versioni
-  )
+  // table(
+  //   columns: (auto,auto,auto,auto,auto),
+  //   fill: (x,y) => if (y== 0) { luma(230) },
+  //   inset: 10pt,
+  //   table.header(
+  //     [*Versione*],[*Data*],[*Autore*],[*Cambiamenti*],[*Verificatore*]
+  //   ),
+  //   ..versioni
+  // )
       
 
   // Indice
