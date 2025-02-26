@@ -23,6 +23,11 @@
   sommario: [Norme di progetto],
 
   versioni: (
+    "0.6.0",
+    "26/02/2025",
+    "Gabriele Magnelli",
+    "Conclusa sezione verifica",
+    "",
     "0.5.0",
     "12/11/2024",
     "Luca Ribon",
@@ -79,29 +84,30 @@ Le definizioni sono disponibili nel documento Glossario.pdf e possono essere con
 #link("https://github.com/CodeHex16/documentazione/tree/main/glossario/glossario.pdf")[Glossario.pdf]
 
 == Riferimenti
-- Capitolato C7 - Assistente Virtuale Ergon: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Progetto/C7.pdf")
+=== Riferimenti normativi
+- Capitolato C7 - Assistente Virtuale Ergon: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Progetto/C7.pdf");
+=== Riferimenti informativi
+- Sito del gruppo CodeHex16: #link("https://codehex16.github.io/");
 
-- Sito del gruppo CodeHex16: #link("https://codehex16.github.io/")
+- Repository della documentazione del progetto: #link("https://github.com/CodeHex16/documentazione");
 
-- Repository della documentazione del progetto: #link("https://github.com/CodeHex16/documentazione")
+- Valutazione capitolati: #link("https://codehex16.github.io/docs/1%20-%20candidatura/Valutazione-Capitolati.pdf");
 
-- Valutazione capitolati: #link("https://codehex16.github.io/docs/1%20-%20candidatura/Valutazione-Capitolati.pdf")
+- Preventivo costi e impegni: #link("https://codehex16.github.io/docs/1%20-%20candidatura/Preventivo-Costi-e-Impegni.pdf");
 
-- Preventivo costi e impegni: #link("https://codehex16.github.io/docs/1%20-%20candidatura/Preventivo-Costi-e-Impegni.pdf")
+- Analisi dei requisiti: #link("https://codehex16.github.io/docs/2%20-%20RTB/Analisi-dei-Requisiti.pdf");
 
-- Analisi dei requisiti: #link("https://codehex16.github.io/docs/2%20-%20RTB/Analisi-dei-Requisiti.pdf")
+- Piano di progetto: #link("https://codehex16.github.io/docs/2%20-%20RTB/Piano-di-Progetto.pdf");
 
-- Piano di progetto: #link("https://codehex16.github.io/docs/2%20-%20RTB/Piano-di-Progetto.pdf")
+- Analisi dei rischi: #link("https://codehex16.github.io/docs/2%20-%20PB/Analisi-dei-Rischi.pdf");
 
-- Analisi dei rischi: #link("https://codehex16.github.io/docs/2%20-%20PB/Analisi-dei-Rischi.pdf")
+- Piano di Qualifica: #link("https://codehex16.github.io/docs/2%20-%20RTB/Piano-di-Qualifica.pdf");
 
-- Piano di Qualifica: #link("https://codehex16.github.io/docs/2%20-%20RTB/Piano-di-Qualifica.pdf")
-
-- Standard ISO/IEC 12207:1995: #link("https://www.math.unipd.it/~tullio/IS-1/2009/Approfondimenti/ISO_12207-1995.pdf")
+- Standard ISO/IEC 12207:1995: #link("https://www.math.unipd.it/~tullio/IS-1/2009/Approfondimenti/ISO_12207-1995.pdf");
 
 - Glossario:
-  - Documento: #link("https://codehex16.github.io/docs/3%20-%20PB/Glossario.pdf")
-  - Pagina web: #link("https://codehex16.github.io/glossario.html")
+  - Documento: #link("https://codehex16.github.io/docs/3%20-%20PB/Glossario.pdf");
+  - Pagina web: #link("https://codehex16.github.io/glossario.html");
 
 = Processi primari
 
@@ -195,21 +201,21 @@ In questo modo si possono definire in modo dettagliato i requisiti funzionali, d
 La progettazione del sistema è il l'attività di definizione dell'architettura del software dal punto di vista logico; in questo fase di decide come soddisfare i requisiti identificati durante l'analisi.
 
 In particolare vanno definiti i componenti software e le loro interazioni, prestando attenzione a manterli separati e indipendenti per garantire una maggiore manutenibilità e scalabilità del sistema; in questo passaggio è importante anche definire le unità architetturali.\
-Inoltre vanno definite le responsabilità che verranno applicate in fase di codifica assicurandosi di mantenere un livello di #gloss[efficienza] e #gloss[efficacia] il più alto possibile.
-L'approccio utilizzato in questa attività sarà sia #gloss[top-down], per scomporre il problema in sotto-problemi, sia #gloss[bottom-up], per ragionare sui singoli sotto-problemi e integrali in una soluzione complessiva.
+Inoltre vanno definite le responsabilità che verranno applicate in fase di codifica assicurandosi di mantenere un livello di efficienza e efficacia il più alto possibile.
+L'approccio utilizzato in questa attività sarà sia top-down, per scomporre il problema in sotto-problemi, sia bottom-up, per ragionare sui singoli sotto-problemi e integrali in una soluzione complessiva.
 
 Al termine di questa attività ci si aspetta di avere un'architettura ben definita che preveda:
 - #gloss[Backend]:
   - #gloss[API] per l'interazione con l'LLM;
   - API per l'interazione con il database;
   - beckend per la gestione delle interfacce utente e di configurazione;
-- #gloss[Frontend]:
+- Frontend:
   - Interfaccia utente per il cliente;
   - Interfaccia per il fornitore;
 - Database;
 
 ==== Codifica e Testing
-In questa attività i Programmatori traducono l'output della Progettazione in #gloss[codice sorgente], in modo da integrare ogni unità prevista dall'architettura.
+In questa attività i Programmatori traducono l'output della Progettazione in codice sorgente, in modo da integrare ogni unità prevista dall'architettura.
 Inoltre ogni unità sarà documentata e testata per garantire che soddisfi i requisiti definiti in fase di analisi e progettazione.
 Nello specifico la documentazione dovrà prevedere la documentazione dedicata all'utente finale e quella dedicata al manutentore. Inoltre nella documentazione verranno integrati anche i dettagli realtivi al testing eseguito sulle singole unità.
 
@@ -270,6 +276,10 @@ Verranno prodotti i seguenti documenti:
 
 === Elenchi puntati
 Ogni voce di un elenco puntato finisce con ";".
+
+=== Immagini use case
+Per produrre i diagrammi uml degli use case il team ha usato il seguente sito : #link("https://app.diagrams.net/#G1kdbwjlMBb1ySHratfEgKb-PqIMNOqlVq#%7B%22pageId%22%3A%22Q5CIVrjjWraXMqxVwAuv%22%7D")[app.diagrams.net].
+Successivamente vengono inseriti nei documenti opportuni come immagini.
 
 === Formato delle date
 Per le date viene utilizzato lo standard internazionale *ISO 8601* nella forma YYYY-MM-DD in cui:
@@ -347,10 +357,43 @@ In generale, le pull request vengono effettuate quando vi è una modifica intern
 - *Github*: Servizio di hosting per progetti sotware usato dal gruppo per coordinarsi sulle operazioni di versionamento e usato come *Issue Tracking System*;
 
 === Verifica
+==== Scopo e descrizione
+La verifica è un processo affidato ai verificatori e inizia quando la fase iniziale di progettazione viene avviata. Questo processo ha come obiettivo quello di garantire un certo grado di qualità di tutto quello che viene prodotto dal gruppo (documentazione, codice sorgente, test, ecc..) e di conformità rispetto alle aspettative. Quindi tramite tecniche di analisi e test tale processo mira a stabilire se ciò che viene prodotto dal team soddisfa i requisiti richiesti. Il documento che rispecchia questo processo è il *Piano di Qualifica* e definisce gli obiettivi da raggiungere, i criteri di accettazione e i metodi che verranno usati per eseguire la verifica in modo completo ed efficiente.
 ==== Analisi statica
+L'analisi statica è un tipo di verifica che non richiede l'esecuzione del prodotto e ha come obiettivo la revisione critica del codice e della documentazione al fine di garantire conformità ai vincoli, assenza di difetti e presenza delle funzionalità e proprietà richieste. Questo tipo di analisi adotta, tipicamente, due metodi di lettura: l'*inspection* e il *walkthrough*.
+L'inspection, preferibile al walkthrough per velocità ed efficienza, consente di individuare tempestivamente potenziali difetti, errori e problemi. Il walkthrough mette in collaborazione il verificatore con l'autore del prodotto preso in analisi e ne prevede una lettura a pettine. 
 ==== Analisi dinamica
+L'analisi dinamica è un tipo di verifica che richiede l'esecuzione del sistema e delle sue componenti così da individuare difetti, problemi ed errori nel funzionamento al fine di garantire un certo grado di qualità nel prodotto finale.
+Il gruppo per garantire tutto ciò utilizzerà un insieme di test ripetibili e automatizzati, anche se sarà necessario l'uso di test manuali. Tali test si suddividono nei seguenti tipi.
+===== Test
+====== Test di unità
+I test di unità sono test effettuati su singole componenti autonome del sistema e tali test possono essere:
+- *Test funzionali* che verificano che l'output prodotto sia uguale a quello atteso;
+- *Test strutturali*  che verificano tutti i possibili cammini del codice;
+====== Test di sistema
+I test di sistema sono impiegati per verificare il corretto funzionamento del sistema e, in particolare, che tutti i requisiti richiesti siano soddisfatti.
+====== Test di integrazione
+I test d'integrazione verificano la corretta integrazione tra le varie componenti del sistema che sono già state testate singolarmente tramite i test di unità.
+E' possibile seguire due approcci per i test d'integrazione:
+- *Bottom up*: si testano per prime le componenti che hanno meno dipendenze e maggior valore interno, cioè quelle più nascoste all'utente;
+- *Top down*: si testano per prime le componenti che hanno il maggior numero di dipendenze e maggiormente visibili da parte dell'utente così da avere disponibilità immediata di tali componenti;
+====== Test di regressione
+I test di regressione vengono impiegati per assicurare che la correzione o la modifica delle componenti non causi problemi al livello di sistema. 
+Tali test sono necessari per garantire che le modifiche non compromettano le funzionalità già testate e funzionanti evitando, quindi, la comparsa di regressioni nel sistema.
+====== Test di accettazione
+I test di accettazione devono essere eseguiti insieme al committente al fine di verificare che il prodotto finale rispetti tutti i requisiti richiesti.
 === Validazione
+La validazione è la verifica ultima per garantire che il prodotto sia in linea con le aspettative e che rispetti i requisiti richiesti e per questo è una fase molto importante nello sviluppo del progetto.
+Questo processo segue il processo di verifica e si sofferma su alcuni aspetti quali:
+- Il prodotto finale deve funzionare correttamente e essere conforme con la logica di progettazione;
+- Il prodotto deve essere soddisfare completamente i requisiti specificati;
+- Il prodotto deve essere intuitivo e di facile compresione e utilizzo, cioè deve essere usabile;
+- Il prodotto deve essere efficace nel soddisfare le necessità del cliente;
 === Gestione qualità
+==== Scopo e descrizione
+Il processo di gestione della qualità ha come obiettivo quello di garantire che il software, la documentazione e tutto ciò che il team produce sia conforme ai requisiti di qualità specificati e richiesti. Processi utili a garantire un certo grado di qualità sono, sicuramente, i processi di verifica e validazione.
+Gli obiettivi e gli standard di qualità richiesti e che devono essere soddisfatti sono indicati nel documento *Piano di Qualifica*.
+
 == Processi organizzativi
 === Gestione dei processi
 ==== Scopo e descrizione
@@ -387,7 +430,7 @@ I ruoli svolti, a rotazione, dai membri del gruppo sono:
 Ogni membro, in un dato momento, può svolgere un solo ruolo alla volta, ma durante lo sprint può assumere più ruoli.
 
 ==== Ticketing (Issue Tracking System)
-Il gruppo sfrutta l'Issue Tracking System offerto da Github per gestire le attività da svolgere, cioè le *Issue*.
+Il gruppo sfrutta l'ITS(Issue Tracking System) offerto da Github per gestire le attività da svolgere, cioè le *Issue*.
 Creare le issue è molto semplice e veloce; quando viene individuata un'attività specifica da svolgere viene creata una issue e viene assegnata, in modo coerente, ad un membro del gruppo.
 Quando viene creata una issue, questa sarà composta da:
 - *Titolo*: Il nome della issue che identifica l'attività da svolgere;
@@ -431,12 +474,5 @@ Nel caso in cui il Responsabile non fosse presente durante le riunioni, il verba
 
 === Miglioramento
 ==== Scopo e descrizione
-Il miglioramento è un processo sempre attivo che durerà per tutto il progetto il cui 
-obiettivo è quello di controllare e migliorare tutto quello che viene prodotto mantenendo un elevato grado di qualità.
-
-== Misure di qualità per il prodotto
-=== Funzionalità
-=== Efficienza
-=== Usabilità
-=== Affidabilità
-=== Manutenibilità
+Il miglioramento è un processo sempre attivo che durerà per tutto il progetto il cui obiettivo è quello di controllare e migliorare tutto quello che viene prodotto mantenendo un elevato grado di qualità.
+In particolare si cerca e si cercherà di ruotare ruoli, identificare attività idonee ai membri del gruppo così da risolvere il maggiorn numero di problemi che si potrebbero venire a creare e/o colamre tempestivamente eventuali lacune mantenendo il lavoro del team elastico e flessibile. 
