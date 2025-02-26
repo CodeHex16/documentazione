@@ -148,7 +148,7 @@ nella seguente pagina web: #link("https://codehex16.github.io/glossario").
 Nelle seguenti sezioni verranno descritti tutti i possibili casi d'uso, cioè tutti i modi in cui gli attori, definiti più avanti, possono interagire con l'applicazione.
 
 == Attori
-*Amministratore*: rappresenta la persona o il gruppo di persone che si occupa della distribuzione e configurazione del sistema per tutti i fornitori. Gestisce anche gli account dei fornitori.\
+*Amministratore*: rappresenta la persona o il gruppo di persone che si occupa della distribuzione e configurazione del sistema per tutti i fornitori. Gestisce anche gli #gloss[account] dei fornitori.\
 In questo caso va interpretato come l'azienda Ergon Informatica Srl.\
 *Cliente*: rappresenta il cliente finale che acquista prodotti dal fornitore e che ha la possibilità di interagire con il chatbot del fornitore per ottenere informazioni sui prodotti o servizi offerti.\
 *Fornitore*: rappresenta l'azienda che fornisce dei prodotti ai propri clienti, ogni fornitore ha una sua istanza di chatbot; è una generalizzazione di Cliente infatti, oltre a poter accedere al proprio chatbot, può anche fornire il contesto tramite dei documenti aziendali o #gloss[FAQ], personalizzare graficamente l'interfaccia variando logo e palette colori.\
@@ -940,7 +940,7 @@ con:
   - *Q*: requisito di qualità, definisce le caratteristiche della qualità del prodotto, come un sistema deve essere o come il sistema deve esibirsi, per soddisfare le esigenze dell'utente;
   - *V*: requisito di vincolo, ovvero limiti e restrizioni imposte dal capitolato;
 - *Priorità*: può essere
-  - *O*: Obbligatorio, viene richiesto dal proponente ed è necessario per considerare il prodotto completo;
+  - *O*: Obbligatorio, viene richiesto dal #gloss[proponente] ed è necessario per considerare il prodotto completo;
   - *D*: Desiderabile, non è strettamente necessario ma è valore aggiunto;
 
 == Requisiti funzionali
