@@ -623,6 +623,6 @@ adottata.
     "Fine primo periodo",
     "Typst",
     "Verso il revisionamento per RTB, la nuova versione di Typst 0.13 ha causato dei problemi nel compilare le tabelle. Queste venivano schiacciate e venivano visualizzate come una singola linea",
-    "",
+    "Nella nuova versione è stato modificato un tag usato per creare le tabelle nei documenti, è bastato aggiungere un altro tag insieme a quello usato",
   ),
 )
