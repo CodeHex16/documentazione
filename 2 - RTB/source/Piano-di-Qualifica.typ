@@ -557,7 +557,8 @@ Esempi applicati al progetto:
 == Introduzione
 In questa sezione vengono riportati tutti i problemi riscontrati dal gruppo durante lo svolgimento del progetto. Per
 ogni problema viene indicato il periodo in cui è stato riscontrato, la descrizione del problema, l'azione correttiva
-adottata.//#show figure: set block(breakable: true)
+adottata.
+#show figure: set block(breakable: true)
 == Valutazione sull'organizzazione, pianificazione e incontri
 
 #figure(
@@ -569,8 +570,11 @@ adottata.//#show figure: set block(breakable: true)
     fill: (x, y) => if (y == 0) { luma(230) },
     table.header([*Periodo*], [*Problema*], [*Azione correttiva*]),
     "Tutto il progetto",
-    "Risultato molto difficile organizzare incontri dove fossero presenti tutti i membri del gruppo, per questioni di lavoro, orari, impegni personali, ed esami durante la sessione invernale.",
-    "Il gruppo ha deciso di organizzare incontri settimanali fissi, nel caso alcuni membri non erano presenti, questi venivano informati sulle decisioni prese durante un incontro tramite messaggi su Telegram.",
+    "È risultato molto difficile organizzare incontri dove fossero presenti tutti i membri del gruppo, per questioni di lavoro, orari, impegni personali, ed esami durante la sessione invernale",
+    "Il gruppo ha deciso di organizzare incontri settimanali fissi, nel caso alcuni membri non erano presenti, questi venivano informati sulle decisioni prese durante un incontro tramite messaggi su Telegram",
+    "Tutto il progetto",
+    "È risultato difficile cercare di rimanere entro i limiti di tempo e budget assegnati ad ogni ruolo",
+    "Per organizzarsi al meglio, il gruppo ha deciso di tenere un tabella su Google Sheets che tiene conto delle ore individuali e totali di ogni ruolo",
   ),
 )
 
@@ -579,14 +583,23 @@ adottata.//#show figure: set block(breakable: true)
 #figure(
   caption: "Valutazione sui ruoli",
   table(
-    columns: (0.5fr, 1fr, 1fr),
+    columns: (0.5fr, 0.8fr, 1fr, 1fr),
     inset: 8pt,
     align: center + horizon,
     fill: (x, y) => if (y == 0) { luma(230) },
-    table.header([*Periodo*], [*Problema*], [*Azione correttiva*]),
+    table.header([*Periodo*], [*Ruolo*], [*Problema*], [*Azione correttiva*]),
     "Inizio progetto",
-    "Il gruppo ha riscontrato difficoltà nel capire i compiti assegnati a ciascun ruolo, e come eseguire la rotazione.",
-    "",
+    "Tutti",
+    "Il gruppo ha riscontrato difficoltà nel capire i compiti assegnati a ciascun ruolo, e come eseguire la rotazione",
+    "È stato deciso di organizzare la rotazione dei ruoli durante ogni incontro a fine sprint e assegnarli in base ai compiti dati.",
+    "Inizio progetto",
+    "Verificatore",
+    "Non è stata posta molta importanza sul ruolo di verificatore",
+    "Si è deciso di caricare ogni cambiamento alla repository attraverso una pull request, il verificatore aveva ruolo di approvarla",
+    "Tutto il progetto",
+    "Responsabile Amministratore",
+    "È risultata poco chiara la differenza tra i ruoli di responsabile e amministratore",
+    "I ruoli di responsabile e amministratore venivano dichiarati ad ogni riunone insieme agli altri ruoli, e venivano chiariti i singoli compiti da eseguire. Questi erano basati su quanto imparato dal corso di Ingegneria del Software",
   ),
 )
 == Valutazione sugli strumenti
@@ -594,22 +607,34 @@ adottata.//#show figure: set block(breakable: true)
 #figure(
   caption: "Valutazione sugli strumenti utilizzati",
   table(
-    columns: (0.5fr, 1fr, 1fr),
+    columns: (0.5fr, 0.8fr, 1fr, 1fr),
     inset: 8pt,
     align: center + horizon,
     fill: (x, y) => if (y == 0) { luma(230) },
-    table.header([*Periodo*], [*Problema*], [*Azione correttiva*]),
+    table.header([*Periodo*], [*Strumento*], [*Problema*], [*Azione correttiva*]),
     "Inizio progetto",
+    "Git, GitHub",
     "Il gruppo ha riscontrato difficoltà nell'utilizzo di GitHub.",
-    "Il gruppo ha deciso di spiegare le modalità di utilizzo di GitHub durante un incontro, spiegando come gestire le issue, gestione dei branch e pull request.",
+    "Il gruppo ha deciso di spiegare le modalità di utilizzo di GitHub durante un incontro, spiegando come gestire le issue, gestione dei branch e pull request",
     "PoC",
-    "Molti strumenti scelti usano il linguaggio di programmazione Python. Questo linguaggio non è mai stato usato da molti membri del gruppo e ha causato delle difficoltà.",
-    "",
+    "Python",
+    "Molti strumenti scelti usano il linguaggio di programmazione Python. Questo linguaggio non è mai stato usato da molti membri del gruppo e ha causato delle difficoltà",
+    "Sono state richieste delle ore aggiuntive a ogni persona per imparare o rivedere le basi del linguaggio Python",
     "PoC",
-    "Il gruppo, non conoscendo le funzionalità della LLM scelta, ha avuto difficoltà nel capire il suo corretto funzionamento.",
-    "",
+    "GPT-4o mini",
+    "Non conoscendo le funzionalità della LLM scelta, il gruppo ha avuto difficoltà nel capire il suo corretto funzionamento",
+    "Sono state richieste delle ore aggiuntive a ogni persona per imparare e capire le basi della LLM scelta",
     "Fine primo periodo",
-    "Verso il revisionamento per RTB, la nuova versione di Typst 0.13 ha causato dei problemi nel compilare le tabelle. Queste venivano schiacciate e venivano visualizzate come una singola linea.",
+    "Typst",
+    "Verso il revisionamento per RTB, la nuova versione di Typst 0.13 ha causato dei problemi nel compilare le tabelle. Queste venivano schiacciate e venivano visualizzate come una singola linea",
+    "",
+    "PoC",
+    "Svelte",
+    "",
+    "",
+    "PoC",
+    "MongoDB",
+    "",
     "",
   ),
 )
