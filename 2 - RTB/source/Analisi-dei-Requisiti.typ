@@ -177,9 +177,10 @@ contesto tramite dei documenti aziendali o #gloss[FAQ], personalizzare graficame
 palette colori.\
 Questo utente ha accesso ad un'#gloss[interfaccia web] di configurazione del chatbot e di gestione degli account dei
 clienti.\
-*Utente non autenticato*: rappresenta un utente generico che non ha ancora completato l'autenticazione.\ 
+*Utente non autenticato*: chiamato anche "utente non registrato" rappresenta un utente generico che non ha ancora
+completato l'autenticazione.\ 
 
-#figure(image("../imgs/attori.png", width: 50%), caption: "Lista degli attori")
+#figure(image("../imgs/attori.png", width: 70%), caption: "Lista degli attori")
 
 == UC1 - Login
 #figure(image("../imgs/login-cliente.png", width: 80%), caption: "Login Cliente")
