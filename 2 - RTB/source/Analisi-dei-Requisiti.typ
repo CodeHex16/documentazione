@@ -18,10 +18,10 @@
   "Verificatore",
 ), sommario: [Analisi dei requisiti del capitolato C7], versioni: (
   "0.9.0",
-  "!!!!!!!!!!!!!!!",
+  "21/02/2025",
   "Filippo Sabbadin",
   "Aggiunti grafici use case e corretti alcuni errori",
-  "!!!!!!!!!!!!!!!!!",
+  "Matteo Bazzan",
   "0.8.0",
   "20/02/2025",
   "Luca Ribon",
