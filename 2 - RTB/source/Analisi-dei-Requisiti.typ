@@ -77,34 +77,45 @@
 = Introduzione
 
 == Scopo e Descrizione del Prodotto
-Il progetto consiste nella realizzazione di un *#gloss[chatbot]* basato su modelli linguistici (*#gloss[LLM]*) pensato per i *fornitori* di beni, come bevande o alimenti, da offrire ai propri clienti. Questo sistema consente ai clienti di ottenere in modo semplice e immediato informazioni dettagliate sui prodotti o servizi disponibili, senza la necessità di contattare direttamente un operatore dell'azienda.
+
+Il progetto consiste nella realizzazione di un *#gloss[chatbot]* basato su modelli linguistici (*#gloss[LLM]*) pensato
+per i *fornitori* di beni, come bevande o alimenti, da offrire ai propri clienti. Questo sistema consente ai clienti di
+ottenere in modo semplice e immediato informazioni dettagliate sui prodotti o servizi disponibili, senza la necessità di
+contattare direttamente un operatore dell'azienda.
 
 Il chatbot si integra con un'interfaccia dedicata al #gloss[fornitore], che permette di:
 
-- Gestire i clienti e i documenti contenenti le informazioni di riferimento utilizzate dal modello linguistico per generare risposte accurate e personalizzate.
-- Personalizzare graficamente la piattaforma tramite l'inserimento del logo aziendale e la selezione di una palette colori.
+- Gestire i clienti e i documenti contenenti le informazioni di riferimento utilizzate dal modello linguistico per
+  generare risposte accurate e personalizzate.
+- Personalizzare graficamente la piattaforma tramite l'inserimento del logo aziendale e la selezione di una palette
+  colori.
 
 == Obiettivi del sistema
+
 - *Semplificazione del flusso informativo*: riduce i tempi di risposta alle richieste dei clienti e rende l'accesso alle
   informazioni rapido e indipendente da intermediari umani.
-- *Ottimizzazione della produttività aziendale*: automatizza la gestione delle richieste di informazioni, permettendo agli operatori di concentrarsi su attività di maggiore valore aggiunto.
-- *Esperienza utente migliorata*: garantisce risposte precise e aggiornate in qualsiasi momento, offrendo un'interazione fluida e accessibile.
+- *Ottimizzazione della produttività aziendale*: semplifica la gestione dei documenti e migliora la produttività interna.
+- *Esperienza utente migliorata*: garantisce risposte precise e aggiornate in qualsiasi momento, offrendo un'interazione
+  fluida e accessibile.
 
-== Utenti
-*Azienda fornitrice:* rappresenta l'azienda che fornisce beni o servizi ai propri clienti. Questo utente ha accesso a un'interfaccia web per la configurazione del chatbot e la gestione dei clienti oltre ad un interfaccia equivalente a quella del cliente per comunicare con il chatbot.
-*Cliente:* rappresenta il cliente finale che acquista i prodotti dal fornitore. Questo utente può interagire con il chatbot per ottenere informazioni sui prodotti o servizi offerti. 
+== Benefici
 
-== Funzionalità del prodotto
+Il progetto vuole dimostrare come le tecnologie *LLM* possano trasformare la gestione del servizio clienti, ampliando le
+possibilità di mercato e rafforzando la fidelizzazione degli utenti. L'integrazione di un'interfaccia di amministrazione
+offre agli operatori aziendali uno strumento versatile per monitorare e personalizzare il sistema, garantendo il massimo
+controllo sui contenuti e una rapida adattabilità agli aggiornamenti di catalogo.
+
+== Funzionalità del prodotto e requisiti
 Il sistema dovrà offrire le seguenti funzionalità principali:
 - *Per i clienti:*
   - Interrogare il chatbot tramite una piattaforma web per:
-    - Ottenere descrizioni dettagliate di prodotti;
-    - Conoscere disponibilità, varianti e caratteristiche tecniche di specifici articoli;
-    - Ricevere suggerimenti basati su domande frequenti;
-    - Ottenere risposte personalizzate, generate utilizzando documenti aziendali archiviati nel sistema e il constesto della chat;
+    - Ottenere descrizioni dettagliate di prodotti.
+    - Conoscere disponibilità, varianti e caratteristiche tecniche di specifici articoli.
+    - Ricevere suggerimenti basati su domande frequenti o richieste precedenti.
+  - Ottenere risposte personalizzate, generate utilizzando documenti aziendali archiviati nel sistema.
   - Fornire #gloss[feedback] sul grado di soddisfazione delle risposte ricevute, per migliorare la qualità del sistema.
 - *Per le aziende:*
-  - Gestire clienti e documenti attraverso un'interfaccia di amministrazione #gloss[user-friendly].
+  - Gestire clienti e documenti attraverso un'interfaccia di amministrazione user-friendly.
   - Configurare domande e risposte predefinite come base per il chatbot.
   - Caricare, aggiornare e mantenere i documenti aziendali utilizzati per il training del modello *LLM*.
 
@@ -115,24 +126,37 @@ apice e collegato direttamente alla pagina web del glossario, permettendo così 
 definizione completa del termine. Le definizioni sono disponibili nel documento #link("https://github.com/CodeHex16/documentazione/tree/main/glossario/glossario.pdf")[Glossario.pdf] e
 nella seguente pagina web: #link("https://codehex16.github.io/glossario").
 
-== Riferimenti
 === Riferimenti normativi:
-- #gloss[Norme di progetto] v1.0.0:
-#link("https://codehex16.github.io/docs/2%20-%20RTB/Norme-di-Progetto.pdf")
+- #gloss[Norme di progetto] v1.0.0
 
 - Capitolato C7 - #gloss[Assistente Virtuale] Ergon:
+
 #link("https://www.math.unipd.it/~tullio/IS-1/2024/Progetto/C7.pdf")
 
 === Riferimenti informativi:
-- Slide T05 del corso di Ingegneria del software - #gloss[Analisi dei requisiti]:
-#link("https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T05.pdf")
+- Slide T06 del corso di Ingegneria del software - #gloss[Analisi dei requisiti]:
+
+#link("https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T06.pdf")
 
 - "Analisi e descrizione delle funzionalità: #gloss[Use case] e relativi diagrammi (#gloss[UML])":
+
 #link("https://www.math.unipd.it/~rcardin/swea/2022/Diagrammi%20Use%20Case.pdf")
 
-- Glossario:
-#link("https://codehex16.github.io/glossario")
+== Funzionalità del prodotto
 
+L'applicazione permette di:
+
+- creare un #gloss[account] dotato di e-mail e password;
+- accedere al proprio account sempre con la coppia e-mail e password scelte durante la registrazione
+- modificare dati dell'utente (es e-mail, password)
+- Scrittura ed invio di messagi
+- Modificare il numero di messaggi recenti visualizzabili
+- modificare il colore principale dell'aplicazione (chiaro o scuro)
+
+== Utenti e caratteristiche
+La #gloss[webapp] è rivolta verso ristoratori che vogliono offrire un'assistenza veloce verso i clienti. I ristoratori,
+dopo essersi registrati, possono inserire, modificare ed eliminare informazioni sui propri prodotti. Gli utenti,
+registrati o no, possono poi scrivere al chatbot per richiedere queste informazioni.
 
 = Use Cases
 
@@ -142,7 +166,8 @@ Nelle seguenti sezioni verranno descritti tutti i possibili casi d'uso, cioè tu
 più avanti, possono interagire con l'applicazione.
 
 == Attori
-*Amministratore*: rappresenta la persona o il gruppo di persone che si occupa della distribuzione e configurazione del sistema per tutti i fornitori. Gestisce anche gli #gloss[account] dei fornitori.\
+*Amministratore*: rappresenta la persona o il gruppo di persone che si occupa della distribuzione e configurazione del
+sistema per tutti i fornitori. Gestisce anche gli account dei fornitori.\
 In questo caso va interpretato come l'azienda Ergon Informatica Srl.\
 *Cliente*: rappresenta il cliente finale che acquista prodotti dal fornitore e che ha la possibilità di interagire con
 il chatbot del fornitore per ottenere informazioni sui prodotti o servizi offerti.\
@@ -974,13 +999,14 @@ In questa sezione vengono elencati i requisiti del capitolato, individuati duran
 identificato da un codice, scelto in base ai seguenti parametri:
 #align(center, [*R - [numero] - [tipo] - [Priorità]*])
 con:
-- *Numero*: numero progressivo che identifica il requisito, parte da 01.
+- *Numero*: numero progressivo composto da due cifre, parte da 01.
 - *Tipo*: può essere
   - *F*: requisito funzionale, indica una funzionalità del sistema;
-  - *Q*: requisito di qualità, definisce le caratteristiche della qualità del prodotto, come un sistema deve essere o come il sistema deve esibirsi, per soddisfare le esigenze dell'utente;
-  - *V*: requisito di vincolo, ovvero limiti e restrizioni imposte dal capitolato;
+  - *Q*: requisito di qualità, definisce le caratteristiche della qualità del prodotto, come un sistema deve essere o come
+    il sistema deve esibirsi, per soddisfare le esigenze dell'utente;
+  - *V*: requisito di vincolo, limiti e restrizioni imposte dal capitolato;
 - *Priorità*: può essere
-  - *O*: Obbligatorio, viene richiesto dal #gloss[proponente] ed è necessario per considerare il prodotto completo;
+  - *O*: Obbligatorio, viene richiesto dal proponente ed è necessario per considerare il prodotto completo;
   - *D*: Desiderabile, non è strettamente necessario ma è valore aggiunto;
 
 == Requisiti funzionali
@@ -1014,7 +1040,7 @@ con:
     "L'utente non autenticato deve poter scegliere se reinserire le credenziali ad ogni accesso o se farle memorizzare alla piattaforma anche dopo il termine della sessione",
     "UC5 - Riunioni interne",
     // recupero password
-    "R-06-F-O",
+    "R-06-F-D",
     "L'utente non autenticato deve poter recuperare la password nel caso in cui la dimentichi",
     "UC6 - Riunioni interne",
     // errore email
@@ -1056,7 +1082,7 @@ con:
     // scrittura messaggio tramite FAQ
     "R-16-F-O",
     "Sia cliente che fornitore devono avere la possibilità di scrivere messaggi tramite FAQ preimpostate dal fornitore; se possibile il chatbot suggerirà delle FAQ utili in base al contesto",
-    "UC17 - Capitolato, Riunioni esterne",
+    "UC17 - Riunioni esterne, Riunioni interne",
     // invio messaggio
     "R-17-F-O",
     "Sia cliente che fornitore per comunicare con il chatbot devono poter trasmettere il messaggio scritto",
@@ -1066,16 +1092,16 @@ con:
     "Sia cliente che fornitore devono ricevere la risposta elaborata dal chatbot in seguito all'invio di un messaggio; durante l'elaborazione della risposta l'utente deve ricevere un feedback che indica l'elaborazione della risposta",
     "UC19 - Capitolato",
     // valutazione risposta
-    "R-19-F-O",
+    "R-19-F-D",
     "Il cliente deve avere la possibilità di valutare la risposta ricevuta dal chatbot tramite l'opzione 'Pollice su/giù'",
-    "UC20 - Capitolato, riunione esterna",
+    "UC20 - Riunione esterna",
     // eliminazione chat
     "R-20-F-O",
     "Sia cliente che fornitore devono avere la possibilità di eliminare una chat presente nella lista di tutte le chat",
     "UC21 - Riunioni interne",
     // dark/light mode
     "R-21-F-D",
-    "L'utente deve avere la possibilità di scegliere tra tema scuro e tema chiaro dell'interfaccia",
+    "L'utente deve avere la possibilità di cambiare il tema dell'interfaccia",
     "UC22 - Riunioni interne",
     // modifica durata storico chat
     "R-22-F-O",
@@ -1135,11 +1161,11 @@ con:
     "UC36 - Riunioni interne",
     // modifica FAQ
     "R-36-F-O",
-    "Il fornitore deve avere la possibilità di modificare le domande preimpostate già inserite nella piattaforma",
+    "Il fornitore deve avere la possibilità di modificare una delle domande preimpostate già inserite nella piattaforma",
     "UC37 - Riunioni interne",
     // eliminazione FAQ
     "R-37-F-O",
-    "Il fornitore deve avere la possibilità di eliminare le domande preimpostate dalla piattaforma solo dopo aver autorizzato l'eliminazione tramite la propria password",
+    "Il fornitore deve avere la possibilità di eliminare una domanda preimpostata dalla piattaforma solo dopo aver autorizzato l'eliminazione tramite la propria password",
     "UC38 - Riunioni interne",
     // sistema non raggiungibile
     "R-38-F-O",
@@ -1158,57 +1184,61 @@ con:
 // o sono stabiliti da noi
 // la fonte puo essere capitolato o interno
 #show figure: set block(breakable: true)
-#figure(
-  caption: [Requisiti di qualità],
-  table(
-    columns: (1fr, 2fr, 1fr),
-    inset: 8pt,
-    align: center + horizon,
-    fill: (x, y) => if (y == 0) { luma(230) },
-    table.header([*ID Requisito*], [*Descrizione*], [*Fonte*]),
-    "R-01-Q-O", "È richiesta la presentazione della documentazione che descrive la progettazione architetturale", "Capitolato",
-    "R-02-Q-O", "È richiesta la presentazione della documentazione che presenta le tecnologie utilizzate", "Capitolato",
-    "R-03-Q-O", "È richiesta la presentazione della documentazione che descrive la progettazione della base di dati", "Capitolato",
-    "R-04-Q-O", "È richiesta la presentazione della documentazione che descrive l'implementazione del sistema di raccomandazione utilizzato con LLM", "Capitolato",
-    "R-05-Q-O", "Tutte le attività del progetto devono essere svolte rispettando le Norme di Progetto", "Riunione interna",
-  ),
-)
+#figure(caption: [Requisiti di qualità], table(
+  columns: (1fr, 2fr, 1fr),
+  inset: 8pt,
+  align: center + horizon,
+  fill: (x, y) => if (y == 0) { luma(230) },
+  table.header([*ID Requisito*], [*Descrizione*], [*Fonte*]),
+  "R-01-Q-O",
+  "Bisogna consegnare un documento contenente l'analisi dei requisiti con dei grafici UML",
+  "Capitolato",
+  "R-02-Q-O",
+  "Tutto il codice e documentazione vanno salvati all'interno di una repository ordinata",
+  "Interno",
+  "",
+  "",
+  "",
+))
 
 == Requisiti di vincolo
 #show figure: set block(breakable: true)
-#figure(
-  caption: [Requisiti di vincolo],
-  table(
-    columns: (1fr, 2fr, 1fr),
-    inset: 8pt,
-    align: center + horizon,
-    fill: (x, y) => if (y == 0) { luma(230) },
-    table.header([*ID Requisito*], [*Descrizione*], [*Fonte*]),
-    "R-01-V-O",
-    "L'interfaccia dedicata al cliente deve essere fruibile da dispositivi mobile e user friendly",
-    "Capitolato",
-    "R-02-V-O",
-    "L'interfaccia di configurazione del fornitore deve essere un'interfaccia web",
-    "Capitolato",
-    "R-03-V-O",
-    "Tutto il codice e la documentazione vanno salvati all'interno di un repository pubblico",
-    "Capitolato",
-  ),
-)
+#figure(caption: [Requisiti di vincolo], table(
+  columns: (1fr, 2fr, 1fr),
+  inset: 8pt,
+  align: center + horizon,
+  fill: (x, y) => if (y == 0) { luma(230) },
+  table.header([*ID Requisito*], [*Descrizione*], [*Fonte*]),
+  "R-01-V-O",
+  "Per l'integrazione con il chatbot, verrà utilizzato il linguaggio di programmazione Python",
+  "Capitolato",
+  "R-02-V-O",
+  "Per il frontend viene utilizzato il framework #gloss[Svelte]",
+  "Interno",
+  "R-03-V-O",
+  "Viene utilizzato Postgre per la gestione del database",
+  "Interno",
+))
 
 == Riepilogo
 #show figure: set block(breakable: true)
-#figure(
-  caption: [Riepilogo],
-  table(
-    columns: (0.75fr, 0.5fr, 0.5fr, 0.5fr),
-    inset: 8pt,
-    align: center + horizon,
-    fill: (x, y) => if (y == 0 or y == 4) { luma(230) },
-    table.header([*Tipo di requisiti*], [*Obbligatori*], [*Desiderabili*], [*Totale*]),
-    "Funzionali", "32", "7", "39",
-    "Qualità", "5", "0", "5",
-    "Vincolo", "3", "0", "3",
-    "Totale", "40", "7", "47",
-  ),
-)
+#figure(caption: [Riepilogo], table(
+  columns: (0.75fr, 0.5fr, 0.5fr, 0.5fr),
+  inset: 8pt,
+  align: center + horizon,
+  fill: (x, y) => if (y == 0 or y == 4) { luma(230) },
+  table.header([*Tipo di requisiti*], [*Obbligatori*], [*Desiderabili*], [*Totale*]),
+  "Funzionali",
+  "",
+  "",
+  "",
+  "Qualità",
+  "",
+  "",
+  "",
+  "Vincolo",
+  "",
+  "",
+  "",
+  "Totale",
+))
