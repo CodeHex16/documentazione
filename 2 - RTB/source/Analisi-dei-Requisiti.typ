@@ -21,7 +21,7 @@
   "20/02/2025",
   "Luca Ribon",
   "Corretti e aggiunti use case e requisiti a seguito della riunione con il Prof. Cardin",
-  "",
+  "Francesco Fragonas",
   "0.7.1",
   "10/02/2025",
   "Luca Ribon",
