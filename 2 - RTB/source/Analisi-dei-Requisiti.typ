@@ -867,7 +867,7 @@ completato l'autenticazione.\
 - Sistema non raggiungibile;
 
 == UC35 - Aggiunta delle FAQ
-#figure(image("../imgs/aggiunta-faq.png", width: 50%), caption: "Aggiunta delle FAQ")
+#figure(image("../imgs/aggiunta-faq.png", width: 90%), caption: "Aggiunta delle FAQ")
 *Attori principali:*
 - Fornitore;
 *Descrizione:*
