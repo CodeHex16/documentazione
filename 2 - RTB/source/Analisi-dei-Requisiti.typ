@@ -17,6 +17,11 @@
   "Yi Hao Zhuo",
   "Verificatore",
 ), sommario: [Analisi dei requisiti del capitolato C7], versioni: (
+  "0.9.0",
+  "!!!!!!!!!!!!!!!",
+  "Filippo Sabbadin",
+  "Aggiunti grafici use case e corretti alcuni errori",
+  "!!!!!!!!!!!!!!!!!",
   "0.8.0",
   "20/02/2025",
   "Luca Ribon",
@@ -158,8 +163,10 @@ completato l'autenticazione.\
 #figure(image("../imgs/attori.png", width: 70%), caption: "Lista degli attori")
 
 == UC1 - Login
-#figure(image("../imgs/login-cliente.png", width: 80%), caption: "Login Cliente")
-#figure(image("../imgs/login-fornitore.png", width: 80%), caption: "Login Fornitore")
+#figure(
+  image("../imgs/inserimento-email-password.png", width: 90%),
+  caption: "Login",
+)
 *Attori principali:*
 - Utente non autenticato;
 *Descrizione:*
@@ -183,12 +190,9 @@ completato l'autenticazione.\
 - Inserimento password;
 - Possibilità "Resta connesso";
 
-#figure(
-  image("../imgs/inserimento-email-password.png", width: 90%),
-  caption: "Inserimento e-mail e password + possibilità 'Resta connesso'",
-)
 
 == UC2 - Primo login fornitore
+#figure(image("../imgs/login-fornitore.png", width: 80%), caption: "Primo login Fornitore")
 *Attori principali:*
 - Utente non autenticato;
 *Attori secondari:*
@@ -225,6 +229,7 @@ completato l'autenticazione.\
 - Modifica password;
 
 == UC3 - Primo login cliente
+#figure(image("../imgs/login-cliente.png", width: 80%), caption: "Primo login Cliente")
 *Attori principali:*
 - Utente non autenticato;
 *Attori secondari:*
@@ -261,9 +266,8 @@ completato l'autenticazione.\
 - Modifica password;
 
 // È uno use case a parte perché sarà anche quello usato per modificare la password dell'utente
-// TODO: rifare grafico
 == UC4 - Modifica password
-#figure(image("../imgs/cambio-password.png", width: 90%), caption: "Modifica password")
+#figure(image("../imgs/modifica-password.png", width: 90%), caption: "Modifica password")
 *Attori principali:*
 - Utente non autenticato/cliente;
 *Descrizione:*
@@ -282,7 +286,6 @@ completato l'autenticazione.\
 *Inclusioni:*
 - Inserimento password;
 
-// TODO grafico: mettere come condition "l'utente ha selezionato l'opzione 'Resta connesso'"
 == UC5 - Possibilità "Resta connesso"
 *Attori principali:*
 - Utente non autenticato;
@@ -302,7 +305,6 @@ completato l'autenticazione.\
 *Estensioni:*
 - Sistema non raggiungibile;
 
-// TODO: rifare grafico
 // non va incluso il modifica password perché in questo caso non si conosce la password vecchia
 == UC6 - Recupero password
 #figure(image("../imgs/recupero-password.png", width: 90%), caption: "Recupero password")
@@ -394,7 +396,6 @@ completato l'autenticazione.\
 // - Il sistema riceve la password inserita dall'utente;
 // - Il sistema verifica la password inserita e la trova non conforme ai requisiti, quindi invia un messaggio d'errore all'utente con la richiesta di scegliere un'altra password valida;
 
-// TODO: rifare grafico
 == UC11 - Logout
 #figure(image("../imgs/logout.png", width: 50%), caption: "Logout")
 *Attori principali:*
@@ -411,7 +412,6 @@ completato l'autenticazione.\
 *Estensioni:*
 - Sistema non raggiungibile;
 
-// TODO: rifare grafico
 == UC12 - Visualizzazione della lista delle chat
 #figure(image("../imgs/lista-chat.png", width: 100%), caption: "Schermata delle chat")
 *Attori principali:*
@@ -710,7 +710,6 @@ completato l'autenticazione.\
 - Il fornitore inserisce i filtri di visualizzazione desiderati;
 - Il sistema applica i filtri alle statistiche;
 
-// TODO: sistemare grafico
 == UC28 - Aggiunta account cliente
 #figure(image("../imgs/aggiunta-account-cliente.png", width: 90%), caption: "Aggiunta di un account cliente")
 *Attori principali:*
@@ -883,6 +882,9 @@ completato l'autenticazione.\
 - Il fornitore accede alla sezione "Gestione FAQ";
 - Il fornitore inserisce le FAQ tramite dei campi appositi nell'interfaccia;
 - Il sistema riceve le FAQ, le formatta e le inserisce nel sistema in modo che siano utilizzabili dall'LLM;
+*Estensioni:*
+- Invio richiesta con dati mancanti o errati;
+- Sistema non raggiungibile;
 
 == UC36 - Visualizzazione delle FAQ
 #figure(image("../imgs/visualizzazione-faq.png", width: 90%), caption: "Visualizzazione delle FAQ")
