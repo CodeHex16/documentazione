@@ -1,75 +1,68 @@
 #import "../../template/documenti.typ": *
 #import "../../template/i-figured.typ"
 
-#show: doc => documento(
-  titolo: "Analisi dei Requisiti",
-  data: [12/11/2024],
-  ruoli: (
-    "Matteo Bazzan",
-    "Verificatore",
-    "Luca Ribon",
-    "Redattore",
-    "Francesco Fragonas",
-    "Redattore - Verificatore",
-    "Gabriele Magnelli",
-    "Redattore",
-    "Filippo Sabbadin",
-    "Redattore - Verificatore",
-    "Luca Rossi",
-    "",
-    "Yi Hao Zhuo",
-    "Verificatore",
-  ),
-  sommario: [Analisi dei requisiti del capitolato C7],
-  versioni: (
-    "0.8.0",
-    "20/02/2025",
-    "Luca Ribon",
-    "Corretti e aggiunti use case e requisiti a seguito della riunione con il Prof. Cardin; revisione generale del documento",
-    "",
-    "0.7.1",
-    "10/02/2025",
-    "Luca Ribon",
-    "Aggiunti use case mancanti e corretti typo",
-    "Filippo Sabbadin",
-    "0.7.0",
-    "07/02/2025",
-    "Luca Ribon, Filippo Sabbadin",
-    "Aggiunti requisiti funzionali",
-    "Francesco Fragonas",
-    "0.6.0",
-    "31/01/2025",
-    "Filippo Sabbadin, Luca Ribon",
-    "Aggiunta sezione requisiti, migliorati use case esistenti",
-    "Francesco Fragonas",
-    "0.5.0",
-    "11/01/2025",
-    "Filippo Sabbadin",
-    "Corretti use case sul login, aggiunte immagini con i grafici UML",
-    "Yi Hao Zhuo",
-    "0.4.0",
-    "06/01/2025",
-    "Luca Ribon",
-    "Aggiunti use case, corretti alcuni dei precedenti",
-    "Filippo Sabbadin",
-    "0.3.0",
-    "23/12/2024",
-    "Luca Ribon",
-    "Aggiunti use case",
-    "Filippo Sabbadin",
-    "0.2.0",
-    "27/11/2024",
-    "Gabriele Magnelli",
-    "Aggiunti use case",
-    "Filippo Sabbadin",
-    "0.1.0",
-    "12/11/2024",
-    "Francesco Fragonas",
-    "Prima stesura",
-    "Matteo Bazzan",
-  ),
-  doc,
-)
+#show: doc => documento(titolo: "Analisi dei Requisiti", data: [12/11/2024], ruoli: (
+  "Matteo Bazzan",
+  "Verificatore",
+  "Luca Ribon",
+  "Redattore",
+  "Francesco Fragonas",
+  "Redattore - Verificatore",
+  "Gabriele Magnelli",
+  "Redattore",
+  "Filippo Sabbadin",
+  "Redattore - Verificatore",
+  "Luca Rossi",
+  "",
+  "Yi Hao Zhuo",
+  "Verificatore",
+), sommario: [Analisi dei requisiti del capitolato C7], versioni: (
+  "0.8.0",
+  "20/02/2025",
+  "Luca Ribon",
+  "Corretti e aggiunti use case e requisiti a seguito della riunione con il Prof. Cardin",
+  "Francesco Fragonas",
+  "0.7.1",
+  "10/02/2025",
+  "Luca Ribon",
+  "Aggiunti use case mancanti e corretti typo",
+  "Filippo Sabbadin",
+  "0.7.0",
+  "07/02/2025",
+  "Luca Ribon, Filippo Sabbadin",
+  "Aggiunti requisiti funzionali",
+  "Francesco Fragonas",
+  "0.6.0",
+  "31/01/2025",
+  "Filippo Sabbadin, Luca Ribon",
+  "Aggiunta sezione requisiti, migliorati use case esistenti",
+  "Francesco Fragonas",
+  "0.5.0",
+  "11/01/2025",
+  "Filippo Sabbadin",
+  "Corretti use case sul login, aggiunte immagini con i grafici UML",
+  "Yi Hao Zhuo",
+  "0.4.0",
+  "06/01/2025",
+  "Luca Ribon",
+  "Aggiunti use case, corretti alcuni dei precedenti",
+  "Filippo Sabbadin",
+  "0.3.0",
+  "23/12/2024",
+  "Luca Ribon",
+  "Aggiunti use case",
+  "Filippo Sabbadin",
+  "0.2.0",
+  "27/11/2024",
+  "Gabriele Magnelli",
+  "Aggiunti use case",
+  "Filippo Sabbadin",
+  "0.1.0",
+  "12/11/2024",
+  "Francesco Fragonas",
+  "Prima stesura",
+  "Matteo Bazzan",
+), doc)
 // spaciugo per aggiungere l'indice delle immagini
 #set page(numbering: "I")
 #counter(page).update(3)
@@ -145,28 +138,33 @@ nella seguente pagina web: #link("https://codehex16.github.io/glossario").
 
 == Introduzione
 
-Nelle seguenti sezioni verranno descritti tutti i possibili casi d'uso, cioè tutti i modi in cui gli attori, definiti più avanti, possono interagire con l'applicazione.
+Nelle seguenti sezioni verranno descritti tutti i possibili casi d'uso, cioè tutti i modi in cui gli attori, definiti
+più avanti, possono interagire con l'applicazione.
 
 == Attori
 *Amministratore*: rappresenta la persona o il gruppo di persone che si occupa della distribuzione e configurazione del sistema per tutti i fornitori. Gestisce anche gli #gloss[account] dei fornitori.\
 In questo caso va interpretato come l'azienda Ergon Informatica Srl.\
-*Cliente*: rappresenta il cliente finale che acquista prodotti dal fornitore e che ha la possibilità di interagire con il chatbot del fornitore per ottenere informazioni sui prodotti o servizi offerti.\
-*Fornitore*: rappresenta l'azienda che fornisce dei prodotti ai propri clienti, ogni fornitore ha una sua istanza di chatbot; è una generalizzazione di Cliente infatti, oltre a poter accedere al proprio chatbot, può anche fornire il contesto tramite dei documenti aziendali o #gloss[FAQ], personalizzare graficamente l'interfaccia variando logo e palette colori.\
-Questo utente ha accesso ad un'#gloss[interfaccia web] di configurazione del chatbot e di gestione degli account dei clienti.\
-*Utente non autenticato*: rappresenta un utente generico che non ha ancora completato l'autenticazione.\ 
+*Cliente*: rappresenta il cliente finale che acquista prodotti dal fornitore e che ha la possibilità di interagire con
+il chatbot del fornitore per ottenere informazioni sui prodotti o servizi offerti.\
+*Fornitore*: rappresenta l'azienda che fornisce dei prodotti ai propri clienti, ogni fornitore ha una sua istanza di
+chatbot; è una generalizzazione di Cliente infatti, oltre a poter accedere al proprio chatbot, può anche fornire il
+contesto tramite dei documenti aziendali o #gloss[FAQ], personalizzare graficamente l'interfaccia variando logo e
+palette colori.\
+Questo utente ha accesso ad un'#gloss[interfaccia web] di configurazione del chatbot e di gestione degli account dei
+clienti.\
+*Utente non autenticato*: chiamato anche "utente non registrato" rappresenta un utente generico che non ha ancora
+completato l'autenticazione.\ 
 
-#figure(image("../imgs/attori.png", width: 30%), caption: "Lista degli attori")
+#figure(image("../imgs/attori.png", width: 70%), caption: "Lista degli attori")
 
 == UC1 - Login
-// TODO: rifare grafico
-#figure(
-  image("../imgs/login.png", width: 90%),
-  caption: "Inserimento e-mail e password fornitore + possibilità 'Resta connesso'",
-)
+#figure(image("../imgs/login-cliente.png", width: 80%), caption: "Login Cliente")
+#figure(image("../imgs/login-fornitore.png", width: 80%), caption: "Login Fornitore")
 *Attori principali:*
 - Utente non autenticato;
 *Descrizione:*
-- Un utente non autenticato vuole accedere alla piattaforma per la configurazione del proprio chatbot e per interagire con esso;
+- Un utente non autenticato vuole accedere alla piattaforma per la configurazione del proprio chatbot e per interagire con
+  esso;
 *Precondizioni:*
 - L'utente è in possesso delle proprie credenziali;
 - L'utente ha già effettuato il primo login e cambiato la password temporanea;
@@ -185,10 +183,9 @@ Questo utente ha accesso ad un'#gloss[interfaccia web] di configurazione del cha
 - Inserimento password;
 - Possibilità "Resta connesso";
 
-// TODO: rifare grafico
 #figure(
   image("../imgs/inserimento-email-password.png", width: 90%),
-  caption: "Inserimento e-mail e password fornitore + possibilità 'Resta connesso'",
+  caption: "Inserimento e-mail e password + possibilità 'Resta connesso'",
 )
 
 == UC2 - Primo login fornitore
@@ -197,7 +194,8 @@ Questo utente ha accesso ad un'#gloss[interfaccia web] di configurazione del cha
 *Attori secondari:*
 - Amministratore;
 *Descrizione:*
-- Un utente non autenticato vuole accedere per la prima volta alla piattaforma tramite delle credenziali fornitore per gestire il suo chatbot ed eventualmente utilizzarlo;
+- Un utente non autenticato vuole accedere per la prima volta alla piattaforma tramite delle credenziali fornitore per
+  gestire il suo chatbot ed eventualmente utilizzarlo;
 *Precondizioni:*
 - La piattaforma è stata correttamente configurata dall'amministratore;
 - Il fornitore non ha mai effettuato l'accesso alla piattaforma;
@@ -289,7 +287,8 @@ Questo utente ha accesso ad un'#gloss[interfaccia web] di configurazione del cha
 *Attori principali:*
 - Utente non autenticato;
 *Descrizione:*
-- Un utente vuole mantenere l'accesso attivo al fine di non dover effettuare il login, inserendo le credenziali, ogni volta che ha intenzione di accedere alla web app;
+- Un utente vuole mantenere l'accesso attivo al fine di non dover effettuare il login, inserendo le credenziali, ogni
+  volta che ha intenzione di accedere alla web app;
 *Precondizioni:*
 - L'utente ha selezionato l'opzione "Resta connesso";
 - Le credenziali dell'utente devono essere presenti nel sistema;
@@ -306,7 +305,7 @@ Questo utente ha accesso ad un'#gloss[interfaccia web] di configurazione del cha
 // TODO: rifare grafico
 // non va incluso il modifica password perché in questo caso non si conosce la password vecchia
 == UC6 - Recupero password
-#figure(image("../imgs/recupero-password.png", width: 80%), caption: "Recupero password")
+#figure(image("../imgs/recupero-password.png", width: 90%), caption: "Recupero password")
 *Attori principali:*
 - Utente non autenticato;
 *Descrizione:*
@@ -318,7 +317,8 @@ Questo utente ha accesso ad un'#gloss[interfaccia web] di configurazione del cha
 - Il sistema invia le istruzioni per il recupero della password se l'e-mail inserita è valida;
 *Scenario Principale:*
 - L'utente invia la richiesta di recupero password inserendo l'e-mail associata al proprio account;
-- Il sistema riceve la richiesta, controlla che l'e-mail sia valida e, se lo è, invia all'e-mail le istruzioni per il recupero della password;
+- Il sistema riceve la richiesta, controlla che l'e-mail sia valida e, se lo è, invia all'e-mail le istruzioni per il
+  recupero della password;
 *Estensioni:*
 - Sistema non raggiungibile;
 *Inclusioni:*
@@ -413,10 +413,7 @@ Questo utente ha accesso ad un'#gloss[interfaccia web] di configurazione del cha
 
 // TODO: rifare grafico
 == UC12 - Visualizzazione della lista delle chat
-#figure(
-  image("../imgs/visualizzazione-scrittura-messaggio.png", width: 80%),
-  caption: "Visualizzazione ed invio dei messaggi",
-)
+#figure(image("../imgs/lista-chat.png", width: 100%), caption: "Schermata delle chat")
 *Attori principali:*
 - Cliente;
 *Descrizione:*
@@ -446,6 +443,7 @@ Questo utente ha accesso ad un'#gloss[interfaccia web] di configurazione del cha
 - Sistema non raggiungibile;
 
 == UC14 - Modifica titolo di una chat
+#figure(image("../imgs/modifica-titolo-chat.png", width: 100%), caption: "Modifica titolo chat")
 *Attori principali:*
 - Cliente;
 *Descrizione:*
@@ -477,6 +475,7 @@ Questo utente ha accesso ad un'#gloss[interfaccia web] di configurazione del cha
 - Sistema non raggiungibile;
 
 == UC16 - Scrittura messaggio
+#figure(image("../imgs/scrittura-messaggio.png", width: 100%), caption: "Scrittura messaggio")
 *Attori principali:*
 - Cliente;
 *Descrizione:*
@@ -520,9 +519,12 @@ Questo utente ha accesso ad un'#gloss[interfaccia web] di configurazione del cha
 *Postcondizioni:*
 - L'utente ha scritto un messaggio utilizzando una delle domande preimpostati;
 *Scenario Principale:*
-- L'utente, anziché scrivere un messaggio manualmente, decide di utilizzare un messaggio tra quelli preimpostati nell'applicazione; nel caso in cui l'LLM individua delle FAQ utili nel constesto della chat sarà il chatbot stesso a suggerirle all'utente; 
+- L'utente, anziché scrivere un messaggio manualmente, decide di utilizzare un messaggio tra quelli preimpostati
+  nell'applicazione; nel caso in cui l'LLM individua delle FAQ utili nel constesto della chat sarà il chatbot stesso a
+  suggerirle all'utente; 
 
 == UC18 - Invio messaggio
+#figure(image("../imgs/invio-messaggio.png", width: 100%), caption: "Invio messaggio")
 *Attori principali:*
 - Cliente;
 *Descrizione:*
@@ -541,8 +543,8 @@ Questo utente ha accesso ad un'#gloss[interfaccia web] di configurazione del cha
 
 == UC19 - Ricezione risposta
 #figure(
-  image("../imgs/ricezione-valutazione-risposta.png", width: 80%),
-  caption: "Visualizzazione ed invio dei messaggi",
+  image("../imgs/ricezione-valutazione-risposta.png", width: 90%),
+  caption: "Ricezione e valutazione della risposta",
 )
 *Attori principali:*
 - Cliente;
@@ -554,7 +556,8 @@ Questo utente ha accesso ad un'#gloss[interfaccia web] di configurazione del cha
 *Postcondizioni:*
 - L'utente ha ricevuto la risposta dal chatbot;
 *Scenario Principale:*
-- Il sistema trarmette il messaggio al chatbot e nel frattempo l'utente riceve un feedback che indica l'elaborazione della risposta;
+- Il sistema trarmette il messaggio al chatbot e nel frattempo l'utente riceve un feedback che indica l'elaborazione della
+  risposta;
 - Il chatbot elabora e restituisce una risposta;
 - La risposta viene mostrata all'utente tramite l'interfaccia della chat specifica;
 *Estensioni:*
@@ -564,7 +567,8 @@ Questo utente ha accesso ad un'#gloss[interfaccia web] di configurazione del cha
 *Attori principali:*
 - Cliente;
 *Descrizione:*
-- L'utente ha ricevuto la risposta dal chatbot e vuole dare un feedback su tale risposta tramite l'opzione "Pollice su/giù";
+- L'utente ha ricevuto la risposta dal chatbot e vuole dare un feedback su tale risposta tramite l'opzione "Pollice
+  su/giù";
 *Precondizioni:*
 - L'utente deve aver effettuato il login;
 - L'utente deve aver inviato un messaggio al chatbot;
@@ -578,6 +582,7 @@ Questo utente ha accesso ad un'#gloss[interfaccia web] di configurazione del cha
 - Sistema non raggiungibile;
 
 == UC21 - Eliminazione di una chat
+#figure(image("../imgs/eliminazione-chat.png", width: 80%), caption: "Eliminazione di una chat")
 *Attori principali:*
 - Cliente;
 *Descrizione:*
@@ -587,13 +592,14 @@ Questo utente ha accesso ad un'#gloss[interfaccia web] di configurazione del cha
 *Postcondizioni:*
 - Viene eliminata la chat selezionata;
 *Scenario Principale:*
-- L'utente seleziona la chat dalla homepage e preme il tasto per eliminarla, la chat poi viene cancellata e non è più presente nella piattaforma;
+- L'utente seleziona la chat dalla homepage e preme il tasto per eliminarla, la chat poi viene cancellata e non è più
+  presente nella piattaforma;
 *Estensioni:*
 - Invio richiesta con dati mancanti o errati;
 - Sistema non raggiungibile;
 
 == UC22 - Selezione Dark/Light Mode
-#figure(image("../imgs/dark-light-mode.png", width: 50%), caption: "Selezione modalità chiara/scura")
+#figure(image("../imgs/selezione-dark-light.png", width: 50%), caption: "Selezione modalità chiara/scura")
 *Attori principali:*
 - Cliente;
 *Descrizione:*
@@ -619,7 +625,8 @@ Questo utente ha accesso ad un'#gloss[interfaccia web] di configurazione del cha
 *Postcondizioni:*
 - Viene modificato limite di tempo di memorizzazione dello storico;
 *Scenario Principale:*
-- Il fornitore modifica il periodo di tempo su cui visualizare lo storico delle chat avvenute con il chatbot e lo conferma;
+- Il fornitore modifica il periodo di tempo su cui visualizare lo storico delle chat avvenute con il chatbot e lo
+  conferma;
 - Il sistema memorizza la nuova impostazione;
 *Estensioni:*
 - Sistema non raggiungibile;
@@ -633,7 +640,8 @@ Questo utente ha accesso ad un'#gloss[interfaccia web] di configurazione del cha
 - Il fornitore deve aver effettuato il login;
 - Il fornitore deve accedere alle impostazioni
 *Postcondizioni:*
-- Il sistema ha effettuato un controllo di validità del formato del logo, e se il logo è risultato valido lo ha inserito nell'interfaccia;
+- Il sistema ha effettuato un controllo di validità del formato del logo, e se il logo è risultato valido lo ha inserito
+  nell'interfaccia;
 *Scenario Principale:*
 - Il fornitore accede alla sezione "Carica logo" e inserisce il proprio logo;
 - Il sistema controlla il formato del logo caricato e se conforme lo utilizza nell'interaccia;
@@ -642,10 +650,12 @@ Questo utente ha accesso ad un'#gloss[interfaccia web] di configurazione del cha
 - Sistema non raggiungibile;
 
 == UC25 - Selezione palette colori
+#figure(image("../imgs/selezione-palette.png", width: 90%), caption: "Selezione palette colori")
 *Attori principali:*
 - Fornitore;
 *Descrizione:*
-- Un fornitore vuole selezionare una semplice palette di colori di alcuni degli elementi dell'interfaccia in modo da caratterizzarla;
+- Un fornitore vuole selezionare una semplice palette di colori di alcuni degli elementi dell'interfaccia in modo da
+  caratterizzarla;
 *Precondizioni:*
 - Il fornitore deve aver effettuato il login;
 - Il fornitore deve accedere alle impostazioni;
@@ -653,17 +663,18 @@ Questo utente ha accesso ad un'#gloss[interfaccia web] di configurazione del cha
 - Il sistema ha modificato l'interfaccia con la palette di colori scelta il fornitore;
 *Scenario Principale:*
 - Il fornitore entra nella sezione "Palette colori";
-- Il fornitore sceglie l'insieme di colori che comporranno la parte di palette personalizzabile; la scelta avviene tramite un #gloss[color picker] oppure inserendo i codici esadecimali dei colori, se dei colori non vengono scelti vengono mantenuti i colori della palette precedente;
+- Il fornitore sceglie l'insieme di colori che comporranno la parte di palette personalizzabile; la scelta avviene tramite
+  un #gloss[color picker] oppure inserendo i codici esadecimali dei colori, se dei colori non vengono scelti vengono
+  mantenuti i colori della palette precedente;
 - Il fornitore salva le scelte effettuate;
 - Il sistema modifica l'interfaccia con i colori scelti dal fornitore;
 *Estensioni*:
 - Invio richiesta con dati mancanti o errati;
 - Sistema non raggiungibile;
 
-// TODO: sistemare grafico
 == UC26 - Visualizzare statistiche domanda-risposta
 #figure(
-  image("../imgs/statistiche-filtri-fornitore.png", width: 90%),
+  image("../imgs/filtri-statistiche.png", width: 90%),
   caption: "Visualizzazione statistiche e filtri del fornitore",
 )
 *Attori principali:*
@@ -678,7 +689,8 @@ Questo utente ha accesso ad un'#gloss[interfaccia web] di configurazione del cha
 - Vengono mostrate le statistiche relative alle interazioni tra clienti e chatbot;
 *Scenario Principale*:
 - Il fornitore accede alla sezione "Statistiche";
-- Il sistema mostra le statistiche relative alle interazioni tra clienti e chatbot, se necessario tramite grafici o tabelle;
+- Il sistema mostra le statistiche relative alle interazioni tra clienti e chatbot, se necessario tramite grafici o
+  tabelle;
 *Estensioni*:
 - Inserimento filtri di visualizzazione;
 - Sistema non raggiungibile;
@@ -700,7 +712,7 @@ Questo utente ha accesso ad un'#gloss[interfaccia web] di configurazione del cha
 
 // TODO: sistemare grafico
 == UC28 - Aggiunta account cliente
-#figure(image("../imgs/aggiunta-account-cliente.png", width: 100%), caption: "Aggiunta di un account cliente")
+#figure(image("../imgs/aggiunta-account-cliente.png", width: 90%), caption: "Aggiunta di un account cliente")
 *Attori principali:*
 - Fornitore;
 *Descrizione:*
@@ -732,13 +744,14 @@ Questo utente ha accesso ad un'#gloss[interfaccia web] di configurazione del cha
 // - L'inserimento del nuovo account non va a buon fine;
 // *Scenario Principale:*
 // - Il sistema riceve i parametri dell'account inseriti dal fornitore, ma questi non sono validi;
-- Il sistema mostra un messaggio di errore il quale indica che i parametri inseriti non sono validi;
+//- Il sistema mostra un messaggio di errore il quale indica che i parametri inseriti non sono validi;
 
 == UC29 - Inserimento di un account già esistente
 * Attori principali:*
 - Fornitore;
 *Descrizione:*
-- Un fornitore autenticato vuole aggiungere un account per un cliente in modo che quest'ultimo possa accedere al chatbot, ma tenta di inserisce un account già esistente;
+- Un fornitore autenticato vuole aggiungere un account per un cliente in modo che quest'ultimo possa accedere al chatbot,
+  ma tenta di inserisce un account già esistente;
 *Precondizioni:*
 - Il sistema ha ricevuto i parametri dell'account inseriti dal fornitore;
 *Postcondizioni:*
@@ -749,17 +762,22 @@ Questo utente ha accesso ad un'#gloss[interfaccia web] di configurazione del cha
 - Il sistema mostra un messaggio di errore il quale indica che l'account inserito è già esistente;
 
 == UC30 - Eliminazione dell'account cliente
+#figure(image("../imgs/eliminazione-account-cliente.png", width: 90%), caption: "Eliminazione di un account cliente")
 *Attori principali:*
 - Fornitore;
 *Descrizione*
-- Un fornitore autenticato vuole eliminare un account di un cliente in modo che quest'ultimo non possa più accedere al chatbot. In questo caso non vengono gestiti i corner case in cui il fornitore elimina un account non esistente o selezionando credenziali errate, poiché i metodi di selezione dell'account da eliminare costringono il fornitore ad eliminare solo account esistenti;
+- Un fornitore autenticato vuole eliminare un account di un cliente in modo che quest'ultimo non possa più accedere al
+  chatbot. In questo caso non vengono gestiti i corner case in cui il fornitore elimina un account non esistente o
+  selezionando credenziali errate, poiché i metodi di selezione dell'account da eliminare costringono il fornitore ad
+  eliminare solo account esistenti;
 *Precondizioni:*
 - Il fornitore deve aver effettuato il login;
 - Il fornitore deve accedere alla sezione "Gestione account clienti";
 *Postcondizioni:*
 - Viene eliminato un account di un cliente;
 *Scenario Principale:*
-- Il fornitore seleziona l'account del cliente da eliminare tra una lista di quelli disponibili, oppure usa il bottone di eliminazione relativo ad un account specifico tra quelli visualizzati;
+- Il fornitore seleziona l'account del cliente da eliminare tra una lista di quelli disponibili, oppure usa il bottone di
+  eliminazione relativo ad un account specifico tra quelli visualizzati;
 - Viene richiesta la password del fornitore per confermare l'eliminazione;
 - Il fornitore conferma l'eliminazione dell'account;
 - Il sistema elimina l'account del cliente;
@@ -769,6 +787,10 @@ Questo utente ha accesso ad un'#gloss[interfaccia web] di configurazione del cha
 - Sistema non raggiungibile;
 
 == UC31 - Inserimento documenti aziendali
+#figure(
+  image("../imgs/inserimento-documenti-aziendali.png", width: 100%),
+  caption: "Inserimento di documenti aziendali",
+)
 *Attori principali:*
 - Fornitore;
 *Descrizione:*
@@ -799,9 +821,14 @@ Questo utente ha accesso ad un'#gloss[interfaccia web] di configurazione del cha
 - Viene inviato un messaggio d'errore al fornitore;
 - Il file non viene caricato e salvato nel sistema;
 *Scenario Principale:*
-- Il sistema riceve il file caricato dal fornitore e dopo aver verificato che il formato non è valido, invia un messaggio d'errore al fornitore;
+- Il sistema riceve il file caricato dal fornitore e dopo aver verificato che il formato non è valido, invia un messaggio
+  d'errore al fornitore;
 
 == UC33 - Visualizzazione dei documenti aziendali
+#figure(
+  image("../imgs/visualizzazione-documenti-aziendali.png", width: 100%),
+  caption: "Visualizzazione di documenti aziendali",
+)
 *Attori principali:*
 - Fornitore;
 *Descrizione:*
@@ -817,7 +844,11 @@ Questo utente ha accesso ad un'#gloss[interfaccia web] di configurazione del cha
 *Estensioni:*
 - Sistema non raggiungibile;
 
-== UC34 - Eliminazione di un documento aziendali
+== UC34 - Eliminazione di un documento aziendale
+#figure(
+  image("../imgs/eliminazione-documento-aziendale.png", width: 100%),
+  caption: "Eliminazione di un documento aziendale",
+)
 *Attori principali:*
 - Fornitore;
 *Descrizione:*
@@ -837,10 +868,12 @@ Questo utente ha accesso ad un'#gloss[interfaccia web] di configurazione del cha
 - Sistema non raggiungibile;
 
 == UC35 - Aggiunta delle FAQ
+#figure(image("../imgs/aggiunta-faq.png", width: 50%), caption: "Aggiunta delle FAQ")
 *Attori principali:*
 - Fornitore;
 *Descrizione:*
-- Il fornitore vuole aggiungere delle FAQ nella piattaforma in modo che il cliente possa usarle per ricevere risposte più precise e veloci;
+- Il fornitore vuole aggiungere delle FAQ nella piattaforma in modo che il cliente possa usarle per ricevere risposte più
+  precise e veloci;
 *Precondizioni:*
 - Il fornitore deve aver effettuato il login;
 - Il fornitore deve essere nella pagina delle impostazioni della piattaforma;
@@ -852,6 +885,7 @@ Questo utente ha accesso ad un'#gloss[interfaccia web] di configurazione del cha
 - Il sistema riceve le FAQ, le formatta e le inserisce nel sistema in modo che siano utilizzabili dall'LLM;
 
 == UC36 - Visualizzazione delle FAQ
+#figure(image("../imgs/visualizzazione-faq.png", width: 90%), caption: "Visualizzazione delle FAQ")
 *Attori principali:*
 - Fornitore;
 *Descrizione:*
@@ -867,6 +901,7 @@ Questo utente ha accesso ad un'#gloss[interfaccia web] di configurazione del cha
 - Sistema non raggiungibile;
 
 == UC37 - Modifica di una FAQ
+#figure(image("../imgs/modifica-faq.png", width: 90%), caption: "Modifica di una FAQ")
 *Attori principali:*
 - Fornitore;
 *Descrizione:*
@@ -885,6 +920,7 @@ Questo utente ha accesso ad un'#gloss[interfaccia web] di configurazione del cha
 - Sistema non raggiungibile;
 
 == UC38 - Eliminazione di una FAQ
+#figure(image("../imgs/eliminazione-faq.png", width: 90%), caption: "Eliminazione di una FAQ")
 *Attori principali:*
 - Fornitore;
 *Descrizione:*
@@ -913,7 +949,8 @@ Questo utente ha accesso ad un'#gloss[interfaccia web] di configurazione del cha
 *Postcondizioni:*
 - Viene notificato l'errore relativo alla piattaforma all'utente;
 *Scenario Principale:*
-- L'utente tenta di compiere un'operazione che richiede la comunicazione con il sistema, ma il sistema non è raggiungibile;
+- L'utente tenta di compiere un'operazione che richiede la comunicazione con il sistema, ma il sistema non è
+  raggiungibile;
 - Il sistema mostra un messaggio d'errore all'utente tramite il client;
 
 == UC40 - Invio richiesta con dati mancanti o errati
@@ -927,11 +964,14 @@ Questo utente ha accesso ad un'#gloss[interfaccia web] di configurazione del cha
 - Viene notificato l'errore relativo alla richiesta all'utente;
 - La richiesta non va a buon fine;
 *Scenario Principale:*
-- L'utente invia una richiesta al sistema, ma i dati utilizzati nella richiesta sono mancanti o errati; in alcuni casi richieste come queste possono essere associate un utilizzo errato della piattaforma o un tentativo di attacco informatico; 
+- L'utente invia una richiesta al sistema, ma i dati utilizzati nella richiesta sono mancanti o errati; in alcuni casi
+  richieste come queste possono essere associate un utilizzo errato della piattaforma o un tentativo di attacco
+  informatico; 
 - Il sistema mostra un messaggio d'errore all'utente tramite il client dove spiega la causa dell'errore;
 
 = Requisiti
-In questa sezione vengono elencati i requisiti del capitolato, individuati durante la fase di analisi. Ogni #gloss[requisito] viene identificato da un codice, scelto in base ai seguenti parametri:
+In questa sezione vengono elencati i requisiti del capitolato, individuati durante la fase di analisi. Ogni #gloss[requisito] viene
+identificato da un codice, scelto in base ai seguenti parametri:
 #align(center, [*R - [numero] - [tipo] - [Priorità]*])
 con:
 - *Numero*: numero progressivo che identifica il requisito, parte da 01.
@@ -993,7 +1033,7 @@ con:
     "R-10-F-O",
     "Sia cliente che fornitore devono avere la possibilità di vedere la lista di tutte le chat in loro possesso",
     "UC12 - Riunioni esterne",
-    // creazione nuova chat 
+    // creazione nuova chat
     "R-11-F-O",
     "Sia cliente che fornitore devono avere la possibilità di creare una nuova chat con un contesto pulito, che verrà aggiunta alla lista di quelle già presenti",
     "UC13 - Riunioni esterne",
@@ -1037,7 +1077,7 @@ con:
     "R-21-F-D",
     "L'utente deve avere la possibilità di scegliere tra tema scuro e tema chiaro dell'interfaccia",
     "UC22 - Riunioni interne",
-    // modifica durata storico chat 
+    // modifica durata storico chat
     "R-22-F-O",
     "Il fornitore deve avere la possibilità di modificare la durata dello storico delle chat, ovvero il periodo di tempo massimo per cui vengono memorizzati e tenuti come contesto i messaggi per ogni chat",
     "UC23 - Riunioni esterne",
