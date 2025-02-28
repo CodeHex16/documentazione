@@ -177,9 +177,10 @@ contesto tramite dei documenti aziendali o #gloss[FAQ], personalizzare graficame
 palette colori.\
 Questo utente ha accesso ad un'#gloss[interfaccia web] di configurazione del chatbot e di gestione degli account dei
 clienti.\
-*Utente non autenticato*: rappresenta un utente generico che non ha ancora completato l'autenticazione.\ 
+*Utente non autenticato*: chiamato anche "utente non registrato" rappresenta un utente generico che non ha ancora
+completato l'autenticazione.\ 
 
-#figure(image("../imgs/attori.png", width: 50%), caption: "Lista degli attori")
+#figure(image("../imgs/attori.png", width: 70%), caption: "Lista degli attori")
 
 == UC1 - Login
 #figure(image("../imgs/login-cliente.png", width: 80%), caption: "Login Cliente")
@@ -736,7 +737,7 @@ clienti.\
 
 // TODO: sistemare grafico
 == UC28 - Aggiunta account cliente
-#figure(image("../imgs/aggiunta-account-cliente.png", width: 100%), caption: "Aggiunta di un account cliente")
+#figure(image("../imgs/aggiunta-account-cliente.png", width: 90%), caption: "Aggiunta di un account cliente")
 *Attori principali:*
 - Fornitore;
 *Descrizione:*
@@ -768,7 +769,7 @@ clienti.\
 // - L'inserimento del nuovo account non va a buon fine;
 // *Scenario Principale:*
 // - Il sistema riceve i parametri dell'account inseriti dal fornitore, ma questi non sono validi;
-- Il sistema mostra un messaggio di errore il quale indica che i parametri inseriti non sono validi;
+//- Il sistema mostra un messaggio di errore il quale indica che i parametri inseriti non sono validi;
 
 == UC29 - Inserimento di un account già esistente
 * Attori principali:*
@@ -786,6 +787,7 @@ clienti.\
 - Il sistema mostra un messaggio di errore il quale indica che l'account inserito è già esistente;
 
 == UC30 - Eliminazione dell'account cliente
+#figure(image("../imgs/eliminazione-account-cliente.png", width: 90%), caption: "Eliminazione di un account cliente")
 *Attori principali:*
 - Fornitore;
 *Descrizione*
@@ -810,6 +812,10 @@ clienti.\
 - Sistema non raggiungibile;
 
 == UC31 - Inserimento documenti aziendali
+#figure(
+  image("../imgs/inserimento-documenti-aziendali.png", width: 100%),
+  caption: "Inserimento di documenti aziendali",
+)
 *Attori principali:*
 - Fornitore;
 *Descrizione:*
@@ -844,6 +850,10 @@ clienti.\
   d'errore al fornitore;
 
 == UC33 - Visualizzazione dei documenti aziendali
+#figure(
+  image("../imgs/visualizzazione-documenti-aziendali.png", width: 100%),
+  caption: "Visualizzazione di documenti aziendali",
+)
 *Attori principali:*
 - Fornitore;
 *Descrizione:*
@@ -859,7 +869,11 @@ clienti.\
 *Estensioni:*
 - Sistema non raggiungibile;
 
-== UC34 - Eliminazione di un documento aziendali
+== UC34 - Eliminazione di un documento aziendale
+#figure(
+  image("../imgs/eliminazione-documento-aziendale.png", width: 100%),
+  caption: "Eliminazione di un documento aziendale",
+)
 *Attori principali:*
 - Fornitore;
 *Descrizione:*
@@ -879,6 +893,7 @@ clienti.\
 - Sistema non raggiungibile;
 
 == UC35 - Aggiunta delle FAQ
+#figure(image("../imgs/aggiunta-faq.png", width: 50%), caption: "Aggiunta delle FAQ")
 *Attori principali:*
 - Fornitore;
 *Descrizione:*
@@ -895,6 +910,7 @@ clienti.\
 - Il sistema riceve le FAQ, le formatta e le inserisce nel sistema in modo che siano utilizzabili dall'LLM;
 
 == UC36 - Visualizzazione delle FAQ
+#figure(image("../imgs/visualizzazione-faq.png", width: 90%), caption: "Visualizzazione delle FAQ")
 *Attori principali:*
 - Fornitore;
 *Descrizione:*
@@ -910,6 +926,7 @@ clienti.\
 - Sistema non raggiungibile;
 
 == UC37 - Modifica di una FAQ
+#figure(image("../imgs/modifica-faq.png", width: 90%), caption: "Modifica di una FAQ")
 *Attori principali:*
 - Fornitore;
 *Descrizione:*
@@ -928,6 +945,7 @@ clienti.\
 - Sistema non raggiungibile;
 
 == UC38 - Eliminazione di una FAQ
+#figure(image("../imgs/eliminazione-faq.png", width: 90%), caption: "Eliminazione di una FAQ")
 *Attori principali:*
 - Fornitore;
 *Descrizione:*
