@@ -10,32 +10,25 @@ Documentazione del Gruppo 16 per il Progetto di **Ingegneria del Software** dell
 ```
 documentazione/
 ├── 📁 1 - candidatura
-|  ├── 📁 source
-|  ├── 📄 *.pdf
-|  └── 📁 verbali
-|     ├── 📁 esterni
-|     |  └── 📁 source
-|     |  └── 📄 *.pdf
-|     └── 📁 interni
-|        └── 📁 source
-|        └── 📄 *.pdf
+|  └── 📁 source
+|  └── 📄 *.pdf
 ├── 📁 2 - RTB
 |  ├── 📁 imgs
-|  ├── 📁 source
-|  ├── 📄 *.pdf
-|  └── 📁 verbali
-|     ├── 📁 esterni
-|     |  └── 📁 source
-|     |  └── 📄 *.pdf
-|     └── 📁 interni
-|        ├── 📁 imgs
-|        └── 📁 source
-|        └── 📄 *.pdf
+|  └── 📁 source
+|  └── 📄 *.pdf
 ├── 📁 diari-di-bordo
 ├── 📁 glossario
 |  └── 📁 source
 |  └── 📄 *.pdf
-└── 📁 template		# file di template per i documenti
-   └── 📁 images		# assets per i documenti
+├── 📁 template		# file di template per i documenti
+|  └── 📁 images		# assets per i documenti
+└── 📁 verbali
+   ├── 📁 esterni
+   |  └── 📁 source
+   |  └── 📄 *.pdf
+   └── 📁 interni
+      ├── 📁 imgs
+      └── 📁 source
+      └── 📄 *.pdf
 ```
 <!-- FINE TREE DIRECTORY -->
