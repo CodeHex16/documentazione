@@ -21,6 +21,7 @@
     sommario: [],
     
     versioni : (
+      "0.7.0","01-03-2025","Luca Rossi","Aggiunta descrizione Sprint 7", "Luca Ribon",
       "0.6.0","14-02-2025","Luca Rossi","Aggiunta descrizione Sprint 6", "Luca Ribon",
       "0.5.0","17-01-2025","Gabriele Magnelli","Aggiunto descrizione Sprint 5 e correzione immagine Sprint 4", "Luca Rossi",
       "0.4.0","05/01/2025","Francesco Fragonas","Aggiunta sezione Pianificazione del lavoro e Periodi di sviluppo", "Yi Hao Zhuo",
@@ -444,8 +445,6 @@ In generale, durante questo sprint, si è continuata la stesura dei documenti pr
 )
 
 === Sprint 6
-
-
 *Intervallo temporale*: 07/01/2025 - 20/01/2025
 
 Con lo *Sprint 6*, il team ha proseguito nella stesura della documentazione principale del progetto. 
@@ -475,6 +474,36 @@ Un punto chiave di questo sprint è stato l’incontro con il proponente, durant
     Suddivisione oraria per ruolo con relativi costi.
   ],
 )
+
+=== Sprint 7
+*Intervallo temporale*: 21/01/2025 - 10/02/2025
+
+Durante lo *Sprint 7*, il team ha completato diverse attività legate alla documentazione e all'analisi dei requisiti. 
+Inoltre, sono stati definiti gli aspetti architetturali del *Proof of Concept* (PoC) e sono state integrate le chiavi API di OpenAI fornite da Ergon.
+
+#pseudoheading[*Attività svolte*]
+
+- *Aggiornamento Piano di Progetto*: Revisione e integrazione delle sezioni relative agli sprint precedenti.
+- *Aggiornamento e miglioramento della sezione Use Case*: Revisione e perfezionamento della documentazione.
+- *Integrazione chiavi API OpenAI*: Condivisione delle credenziali e primi test.
+- *Definizione architettura PoC*: Strutturazione in componenti principali e creazione repository GitHub.
+
+#pseudoheading[*Ruoli ricoperti e ore svolte*]
+
+#figure(
+  image("../imgs/sprint7-tabella.png", width: 100%),
+  caption: [
+    Suddivisione oraria per membro e ruolo.
+  ],
+)
+
+#figure(
+  image("../imgs/sprint7-grafico.png", width: 100%),
+  caption: [
+    Suddivisione oraria per ruolo con relativi costi.
+  ],
+)
+
 
 == Periodo PB
 *Periodo*: *DA DEFINIRE*
