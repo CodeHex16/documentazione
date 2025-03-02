@@ -81,6 +81,9 @@ Il documento #gloss[Piano di Progetto] ha come obbiettivo quello di definire le 
 Il prodotto consiste nella creazione di un'interfaccia in stile #gloss[chatbot], accessibile tramite interfaccia mobile, che delle aziende fornitrici possono configurare in modo che l'#gloss[assistente virtuale] conosca il contesto aziendale e possa rispondere alle domande dei clienti del #gloss[fornitore].
 L'assistente virtuale sfrutta un #gloss[LLM] per comprendere il contesto tramite l'analisi dei documenti aziendali.
 Il fornitore, tramite un'#gloss[interfaccia web] di amministrazione, potrà inserire i documenti aziendarli, memorizzare delle domande e delle risposte predefinite e gestire gli #gloss[account] dei clienti.
+// Riportare le risorse (immagini, grafici, ecc...) utilizzate per la stesura del documento
+== Risorse e riferimenti
+
 
 // Decidere se riportare il preventivo fatto inizialmente o se fare riferimento al documento dedicato; da aggiornare con un resoconto dopo ogni fase
 = Preventivo
@@ -569,7 +572,3 @@ Durante lo *Sprint 7*, il team ha completato diverse attività legate alla docum
 - *Aggiornamento dei documenti*: Revisione e completamento della documentazione per la consegna finale.
 - *Consegna al cliente*: Preparazione e presentazione del prodotto finale.
 L'obiettivo principale di questo periodo è stato garantire che il prodotto fosse pronto per l'accettazione finale da parte del cliente, con particolare attenzione alla qualità e alla completezza.
-
-
-// Riportare le risorse (immagini, grafici, ecc...) utilizzate per la stesura del documento
-= Risorse e riferimenti
