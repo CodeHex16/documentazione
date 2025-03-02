@@ -202,7 +202,7 @@ La progettazione del sistema è il l'attività di definizione dell'architettura 
 
 In particolare vanno definiti i componenti software e le loro interazioni, prestando attenzione a manterli separati e indipendenti per garantire una maggiore manutenibilità e scalabilità del sistema; in questo passaggio è importante anche definire le unità architetturali.\
 Inoltre vanno definite le responsabilità che verranno applicate in fase di codifica assicurandosi di mantenere un livello di efficienza e efficacia il più alto possibile.
-L'approccio utilizzato in questa attività sarà sia top-down, per scomporre il problema in sotto-problemi, sia bottom-up, per ragionare sui singoli sotto-problemi e integrali in una soluzione complessiva.
+L'approccio utilizzato in questa attività sarà sia top-down, per scomporre il problema in sotto-problemi, sia bottom-up, per ragionare sui singoli sotto-problemi e integrarli in una soluzione complessiva.
 
 Al termine di questa attività ci si aspetta di avere un'architettura ben definita che preveda:
 - #gloss[Backend]:
