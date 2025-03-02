@@ -430,7 +430,7 @@ I ruoli svolti, a rotazione, dai membri del gruppo sono:
 Ogni membro, in un dato momento, può svolgere un solo ruolo alla volta, ma durante lo sprint può assumere più ruoli.
 
 ==== Ticketing (Issue Tracking System)
-Il gruppo sfrutta l'ITS(Issue Tracking System) offerto da Github per gestire le attività da svolgere, cioè le *Issue*.
+Il gruppo sfrutta l'ITS offerto da Github per gestire le attività da svolgere, cioè le *Issue*.
 Creare le issue è molto semplice e veloce; quando viene individuata un'attività specifica da svolgere viene creata una issue e viene assegnata, in modo coerente, ad un membro del gruppo.
 Quando viene creata una issue, questa sarà composta da:
 - *Titolo*: Il nome della issue che identifica l'attività da svolgere;
