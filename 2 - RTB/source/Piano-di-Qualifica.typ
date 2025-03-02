@@ -19,8 +19,8 @@
 ), sommario: [Piano di qualifica], versioni: (
   "0.3.0",
   "27/02/2025",
-  "",
-  "Aggiunte sezioni cruscotto e automiglioramenti",
+  "Filippo Sabbadin",
+  "Aggiunta sezione valutazione e automiglioramenti",
   "",
   "0.2.0",
   "05/02/2025",
@@ -569,6 +569,9 @@ adottata.
     "Inizio progetto",
     "Alcuni lavori assegnati nella fase iniziale richiedevano più tempo e risorse rispetto ad altri",
     "Il gruppo si è concentrato per fare in modo che le attività assegnate abbiano il maggiore grado di coesione con le altre attività assegnate agli altri membri del gruppo",
+    "Inizio progetto",
+    "Inizialmente venivano caricate modifiche che presentavano errori come mancanza di un verificatore nella tabella delle versioni o mancanza della versione nuova con i cambiamenti",
+    "Il problema è stato risolto attraverso l'utilizzo di branch protection, controllando se la tabella delle versioni aveva le sezioni (verificatore, versione, etc...) non vuote e corrette",
   ),
 )
 
