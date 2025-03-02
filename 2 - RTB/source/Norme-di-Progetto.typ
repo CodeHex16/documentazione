@@ -8,17 +8,17 @@
     "Matteo Bazzan",
     "",
     "Luca Ribon",
-    "Redattore",
+    "Redattore, Verificatore",
     "Francesco Fragonas",
-    "",
+    "Redattore",
     "Gabriele Magnelli",
-    "",
+    "Redattore, Verificatore",
     "Filippo Sabbadin",
     "Redattore, Verificatore",
     "Luca Rossi",
-    "",
+    "Verificatore",
     "Yi Hao Zhuo",
-    "",
+    "Verificatore",
   ),
   sommario: [Norme di progetto],
 
@@ -27,7 +27,7 @@
     "26/02/2025",
     "Gabriele Magnelli",
     "Conclusa sezione verifica",
-    "",
+    "Luca Ribon",
     "0.5.0",
     "12/11/2024",
     "Luca Ribon",
@@ -106,7 +106,7 @@ Le definizioni sono disponibili nel documento Glossario.pdf e possono essere con
 - Standard ISO/IEC 12207:1995: #link("https://www.math.unipd.it/~tullio/IS-1/2009/Approfondimenti/ISO_12207-1995.pdf");
 
 - Glossario:
-  - Documento: #link("https://codehex16.github.io/docs/3%20-%20PB/Glossario.pdf");
+  - Documento: #link("https://codehex16.github.io/docs/glossario/glossario.pdf");
   - Pagina web: #link("https://codehex16.github.io/glossario.html");
 
 = Processi primari
@@ -278,7 +278,7 @@ Verranno prodotti i seguenti documenti:
 Ogni voce di un elenco puntato finisce con ";".
 
 === Immagini use case
-Per produrre i diagrammi uml degli use case il team ha usato il seguente sito : #link("https://app.diagrams.net/#G1kdbwjlMBb1ySHratfEgKb-PqIMNOqlVq#%7B%22pageId%22%3A%22Q5CIVrjjWraXMqxVwAuv%22%7D")[app.diagrams.net].
+Per produrre i diagrammi uml degli use case il team ha usato il seguente sito : #link("https://app.diagrams.net/#G1kdbwjlMBb1ySHratfEgKb-PqIMNOqlVq#%7B%22pageId%22%3A%22Q5CIVrjjWraXMqxVwAuv%22%7D")[draw.io].
 Successivamente vengono inseriti nei documenti opportuni come immagini.
 
 === Formato delle date
@@ -475,4 +475,4 @@ Nel caso in cui il Responsabile non fosse presente durante le riunioni, il verba
 === Miglioramento
 ==== Scopo e descrizione
 Il miglioramento è un processo sempre attivo che durerà per tutto il progetto il cui obiettivo è quello di controllare e migliorare tutto quello che viene prodotto mantenendo un elevato grado di qualità.
-In particolare si cerca e si cercherà di ruotare ruoli, identificare attività idonee ai membri del gruppo così da risolvere il maggiorn numero di problemi che si potrebbero venire a creare e/o colamre tempestivamente eventuali lacune mantenendo il lavoro del team elastico e flessibile. 
+In particolare si cerca e si cercherà di ruotare ruoli, identificare attività idonee ai membri del gruppo così da risolvere il maggiorn numero di problemi che si potrebbero venire a creare e/o colmare tempestivamente eventuali lacune mantenendo il lavoro del team elastico e flessibile. 
