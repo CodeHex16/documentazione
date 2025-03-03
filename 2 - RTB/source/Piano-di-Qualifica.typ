@@ -100,7 +100,7 @@ comprensione e lettura.
 
 === Fornitura
 Per il processo di fornitura vengono indicate tutte le scelte operative fatte in fase di sviluppo. L'acronimo usato
-prima dei nomi è MPC: Minimum Predictive Capability. Questa metrica viene usata in Machine Learning per misurare la
+prima dei nomi è #gloss[MPC]: Minimum Predictive Capability. Questa metrica viene usata in Machine Learning per misurare la
 capacità di un modello di generare previsioni precise. Nel nostro caso, l'MPC è il valore minimo da raggiungere per
 essere considerato accettabile.
 - *CC - Completion Cost*: costo finale raggiunto alla fine del progetto. Idealmente non deve superare quello stimato
