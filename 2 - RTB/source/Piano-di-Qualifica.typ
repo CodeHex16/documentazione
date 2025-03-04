@@ -17,6 +17,11 @@
   "Yi Hao Zhuo",
   "Verificatore",
 ), sommario: [Piano di qualifica], versioni: (
+  "0.5.0",
+  "02/03/2025",
+  "Luca Ribon",
+  "Migliorata sezione Metodologie di testing",
+  "",
   "0.3.0",
   "27/02/2025",
   "Filippo Sabbadin",
@@ -406,29 +411,9 @@ $ ("numero di istruzioni eseguite") / ("numero di istruzioni totali nel codice")
 Per garantire la qualità del prodotto, il team CodeHex16 ha deciso di verificare il prodotto attraverso diverse
 tipologie di test.
 
-#figure(caption: [Tipologie di test], table(
-  columns: (auto, auto, auto),
-  inset: 8pt,
-  align: (x, y) => if (x == 0 and y > 0 and y < 7) { left } else { center + horizon },
-  fill: (x, y) => if (y == 0) { luma(230) },
-  table.header([*Tipo di test*], [*Scopo*], [*Strumenti*]),
-  "Test di Unità",
-  "Verificare il corretto funzionamento delle singole componenti",
-  "pytest, vitest",
-  "Test di Integrazione",
-  "Validare l’interazione tra moduli e servizi",
-  "Postman",
-  "Test di Sistema",
-  "Verificare il comportamento end-to-end rispetto ai requisiti funzionali",
-  "Playwright",
-  "Test di Accettazione",
-  "Validare il sistema con il #gloss[committente]/utente finale",
-  "Checklist manuali",
-))
+Ad ogni test è stato attribuito un codice univoco per identificarlo strutturato nel seguente modo: `[TIPO]-XXX`, dove `XXX` è un numero progressivo.
 
-Ad ogni test è stato attribuito un codice univoco per identificarlo strutturato nel seguente modo: `[TIPO]-XXX`, dove `XXX` è
-un numero progressivo.
-
+Le tipologie di test utilizzate sono:
 - Test di Unità: TU-XXX
 - Test di Integrazione: TI-XXX
 - Test di Sistema: TS-XXX
@@ -440,80 +425,226 @@ Per ogni test viene specificato lo *stato* di completamento, che può essere:
 - Fallito
 - Non implementato
 
-=== Test di Unità
-I test di unità sono utilizzati per verificare il corretto funzionamento delle singole componenti del software. Vengono
-scritti dai programmatori e sono eseguiti in modo automatico. Gli strumenti utilizzati per i test di unità sono `pytest` e `vitest`.
+Nella seguente versione del documento, dedicata all'RTB, è prevista la definizone di Test di Sistema e Test di Accettazione.
 
-Esempi applicati al progetto:
+// === Test di Unità
+// I test di unità sono utilizzati per verificare il corretto funzionamento delle singole componenti del software. Vengono
+// scritti dai programmatori e sono eseguiti in modo automatico. Gli strumenti utilizzati per i test di unità sono `pytest` e `vitest`.
 
-#figure(caption: [Esempi di unit test], table(
-  columns: (auto, auto, auto),
-  inset: 8pt,
-  align: (x, y) => if (x == 0 and y > 0 and y < 7) { left } else { center + horizon },
-  fill: (x, y) => if (y == 0) { luma(230) },
-  table.header([*Codice*], [*Descrizione*], [*Stato*]),
-  "TU-001",
-  "Verifica del parsing delle credenziali durante il login",
-  "Superato",
-  "TU-002",
-  "Test generazione risposta LLM con input validi/invalidi",
-  "Non implementato",
-  "TU-003",
-  "Controllo formati logo supportati (PNG, JPG, SVG)",
-  "Superato",
-))
+// Esempi applicati al progetto:
 
-=== Test di Integrazione
-I test di integrazione sono utilizzati per validare l’interazione tra moduli e servizi. Vengono scritti dai
-programmatori e sono eseguiti in modo automatico. Lo strumento utilizzato per i test di integrazione è `Postman`.
+// #figure(caption: [Esempi di unit test], table(
+//   columns: (auto, auto, auto),
+//   inset: 8pt,
+//   align: (x, y) => if (x == 0 and y > 0 and y < 7) { left } else { center + horizon },
+//   fill: (x, y) => if (y == 0) { luma(230) },
+//   table.header([*Codice*], [*Descrizione*], [*Stato*]),
+//   "TU-001",
+//   "Verifica del parsing delle credenziali durante il login",
+//   "Superato",
+//   "TU-002",
+//   "Test generazione risposta LLM con input validi/invalidi",
+//   "Non implementato",
+//   "TU-003",
+//   "Controllo formati logo supportati (PNG, JPG, SVG)",
+//   "Superato",
+// ))
 
-Esempi applicati al progetto:
+// === Test di Integrazione
+// I test di integrazione sono utilizzati per validare l’interazione tra moduli e servizi. Vengono scritti dai
+// programmatori e sono eseguiti in modo automatico. Lo strumento utilizzato per i test di integrazione è `Postman`.
 
-#figure(caption: [Esempi di test di integrazione], table(
-  columns: (auto, auto, auto),
-  inset: 8pt,
-  align: (x, y) => if (x == 0 and y > 0 and y < 7) { left } else { center + horizon },
-  fill: (x, y) => if (y == 0) { luma(230) },
-  table.header([*Codice*], [*Descrizione*], [*Stato*]),
-  "TI-001",
-  "Integrazione modulo autenticazione con database utenti",
-  "Superato",
-  "TI-002",
-  "Comunicazione tra frontend e API di generazione risposte LLM",
-  "Superato",
-  "TI-003",
-  "Verifica sincronizzazione impostazioni tema (dark/light mode) su più dispositivi",
-  "Non Implementato",
-))
+// Esempi applicati al progetto:
+
+// #figure(caption: [Esempi di test di integrazione], table(
+//   columns: (auto, auto, auto),
+//   inset: 8pt,
+//   align: (x, y) => if (x == 0 and y > 0 and y < 7) { left } else { center + horizon },
+//   fill: (x, y) => if (y == 0) { luma(230) },
+//   table.header([*Codice*], [*Descrizione*], [*Stato*]),
+//   "TI-001",
+//   "Integrazione modulo autenticazione con database utenti",
+//   "Superato",
+//   "TI-002",
+//   "Comunicazione tra frontend e API di generazione risposte LLM",
+//   "Superato",
+//   "TI-003",
+//   "Verifica sincronizzazione impostazioni tema (dark/light mode) su più dispositivi",
+//   "Non Implementato",
+// ))
 
 === Test di Sistema
-I test di sistema sono utilizzati per verificare il comportamento end-to-end del sistema rispetto ai requisiti
-funzionali. Vengono scritti dagli analisti e sono eseguiti in modo automatico. Lo strumento utilizzato per i test di
-sistema è `Playwright`.
+I test di sistema sono utilizzati per verificare il comportamento del sistema rispetto ai requisiti funzionali. Vengono scritti dagli analisti e sono eseguiti in modo automatico.
 
 Esempi applicati al progetto:
 
+#show figure: set block(breakable: true)
 #figure(caption: [Esempi di test di sistema], table(
-  columns: (auto, auto, auto),
+  columns: (auto, auto, auto, auto),
   inset: 8pt,
   align: (x, y) => if (x == 0 and y > 0 and y < 7) { left } else { center + horizon },
   fill: (x, y) => if (y == 0) { luma(230) },
-  table.header([*Codice*], [*Descrizione*], [*Stato*]),
+  table.header([*Codice*], [*Descrizione*], [*ID Requisito*], [*Stato*]),
   "TS-001",
-  "Test completo flusso cliente: Login → Richiesta prodotto → Valutazione risposta",
+  "Verificare che l'utente possa fare il login per accedere alla piattaforma",
+  "R-01-F-O",
   "Non Implementato",
   "TS-002",
-  "Test gestione fornitori: Aggiunta #gloss[account] → Configurazione #gloss[chatbot] → Caricamento documenti",
-  "Superato",
+  "Verificare che il fornitore debba cambiare la password al primo accesso",
+  "R-02-F-O",
+  "Non Implementato",
   "TS-003",
-  "Test tolleranza ai fallimenti: Simulazione downtime sistema durante l’invio messaggi",
-  "Pianificato",
+  "Verificare che il cliente debba cambiare la password al primo accesso",
+  "R-03-F-O",
+  "Non implementato",
+  "TS-004",
+  "Verificare che sia cliente che fornitore possano cambiare password",
+  "R-04-F-O",
+  "Non Implementato",
+  "TS-005",
+  "Verificare che un utente non autenticato possa scegliere se reinserire le credenziali ad ogni accesso o se rimanere autenticato",
+  "R-05-F-D",
+  "Non Implementato",
+  "TS-006",
+  "Verificare che un utente non autenticato possa recuperare la password dimenticata",
+  "R-06-F-O",
+  "Non Implementato",
+  "TS-007",
+  "Verificare che l'utente sia notificato in caso di errore nell'inserimento dell'e-mail",
+  "R-07-F-O",
+  "Non Implementato",
+  "TS-008",
+  "Verificare che l'utente sia notificato in caso di errore nell'inserimento della password",
+  "R-08-F-O",
+  "Non Implementato",
+  "TS-009",
+  "Verificare che sia cliente che fornitore possano effettuare il logout",
+  "R-09-F-O",
+  "Non Implementato",
+  "TS-010",
+  "Verificare che sia cliente che fornitore possano visualizzare la lista di tutte le chat",
+  "R-10-F-O",
+  "Non Implementato",
+  "TS-011",
+  "Verificare che sia cliente che fornitore possano creare una nuova chat",
+  "R-11-F-O",
+  "Non Implementato",
+  "TS-012",
+  "Verificare che sia cliente che fornitore possano modificare il titolo di una chat esistente",
+  "R-12-F-D",
+  "Non Implementato",
+  "TS-013",
+  "Verificare che sia cliente che fornitore possano aprire una chat singola dalla lista",
+  "R-13-F-O",
+  "Non Implementato",
+  "TS-014",
+  "Verificare che sia cliente che fornitore possano scrivere messaggi al chatbot",
+  "R-14-F-O",
+  "Non Implementato",
+  "TS-015",
+  "Verificare che l'utente sia avvisato quando il messaggio è troppo lungo",
+  "R-15-F-O",
+  "Non Implementato",
+  "TS-016",
+  "Verificare che sia cliente che fornitore possano utilizzare FAQ preimpostate",
+  "R-16-F-O",
+  "Non Implementato",
+  "TS-017",
+  "Verificare che sia cliente che fornitore possano inviare i messaggi scritti al chatbot",
+  "R-17-F-O",
+  "Non Implementato",
+  "TS-018",
+  "Verificare che sia cliente che fornitore ricevano risposta dal chatbot con feedback durante l'elaborazione",
+  "R-18-F-O",
+  "Non Implementato",
+  "TS-019",
+  "Verificare che il cliente possa valutare la risposta ricevuta con pollice su/giù",
+  "R-19-F-O",
+  "Non Implementato",
+  "TS-020",
+  "Verificare che sia cliente che fornitore possano eliminare una chat esistente",
+  "R-20-F-O",
+  "Non Implementato",
+  "TS-021",
+  "Verificare che l'utente possa scegliere tra tema scuro e tema chiaro dell'interfaccia",
+  "R-21-F-D",
+  "Non Implementato",
+  "TS-022",
+  "Verificare che il fornitore possa modificare la durata dello storico delle chat",
+  "R-22-F-O",
+  "Non Implementato",
+  "TS-023",
+  "Verificare che il fornitore possa caricare il proprio logo per personalizzare l'interfaccia",
+  "R-23-F-D",
+  "Non Implementato",
+  "TS-024",
+  "Verificare che il fornitore possa cambiare i colori principali dell'interfaccia",
+  "R-24-F-D",
+  "Non Implementato",
+  "TS-025",
+  "Verificare che il fornitore possa visualizzare statistiche sulle interazioni con il chatbot",
+  "R-25-F-D",
+  "Non Implementato",
+  "TS-026",
+  "Verificare che il fornitore possa filtrare le statistiche visualizzate",
+  "R-26-F-D",
+  "Non Implementato",
+  "TS-027",
+  "Verificare che il fornitore possa aggiungere account clienti",
+  "R-27-F-O",
+  "Non Implementato",
+  "TS-028",
+  "Verificare che il fornitore sia avvisato se sta aggiungendo un account già esistente",
+  "R-28-F-O",
+  "Non Implementato",
+  "TS-029",
+  "Verificare che il fornitore possa eliminare un account cliente previa autenticazione con password",
+  "R-29-F-O",
+  "Non Implementato",
+  "TS-030",
+  "Verificare che il fornitore possa inserire documenti aziendali per fornire contesto al chatbot",
+  "R-30-F-O",
+  "Non Implementato",
+  "TS-031",
+  "Verificare che il fornitore venga avvisato se il file caricato non è in un formato valido",
+  "R-31-F-O",
+  "Non Implementato",
+  "TS-032",
+  "Verificare che il fornitore possa visualizzare la lista dei documenti aziendali caricati",
+  "R-32-F-O",
+  "Non Implementato",
+  "TS-033",
+  "Verificare che il fornitore possa eliminare documenti aziendali previa autenticazione con password",
+  "R-33-F-O",
+  "Non Implementato",
+  "TS-034",
+  "Verificare che il fornitore possa aggiungere FAQ nella piattaforma",
+  "R-34-F-O",
+  "Non Implementato",
+  "TS-035",
+  "Verificare che il fornitore possa visualizzare la lista delle FAQ inserite",
+  "R-35-F-O",
+  "Non Implementato",
+  "TS-036",
+  "Verificare che il fornitore possa modificare le FAQ esistenti",
+  "R-36-F-O",
+  "Non Implementato",
+  "TS-037",
+  "Verificare che il fornitore possa eliminare FAQ previa autenticazione con password",
+  "R-37-F-O",
+  "Non Implementato",
+  "TS-038",
+  "Verificare che l'utente sia avvisato quando il sistema non è raggiungibile",
+  "R-38-F-O",
+  "Non Implementato",
+  "TS-039",
+  "Verificare che l'utente sia avvisato quando invia richieste con dati mancanti o errati",
+  "R-39-F-O",
+  "Non Implementato"
 ))
 
 === Test di Accettazione
-I test di accettazione sono utilizzati per validare il sistema con il committente o l'utente finale. Vengono scritti
-dagli analisti e sono eseguiti in modo manuale. Gli strumenti utilizzati per i test di accettazione sono checklist
-manuali.
+I test di accettazione sono utilizzati per validare il sistema con il committente, servono per confermare che il prodotto sia pronto alla consegna finale e/o distribuzione. Vengono scritti dagli analisti e sono eseguiti in modo manuale. Gli strumenti utilizzati per i test di accettazione sono delle checklist gestite manualmente.
 
 Esempi applicati al progetto:
 
@@ -524,13 +655,34 @@ Esempi applicati al progetto:
   fill: (x, y) => if (y == 0) { luma(230) },
   table.header([*Codice*], [*Descrizione*], [*Stato*]),
   "TA-001",
-  "Verifica personalizzazione interfaccia",
+  "Verificare le meccaniche di login e che distinguano gli utenti tra Cliente e Fornitore",
   "Non Implementato",
   "TA-002",
-  "Validazione accuratezza risposte LLM",
+  "Verificare la possibilità di comunicare con il chatbot tramite più chat separate tra di loro, sia come Cliente che come Fornitore",
   "Non Implementato",
   "TA-003",
-  "Test flusso cliente: Registrazione → Richiesta prodotto → Valutazione risposta",
+  "Verificare la possibilità di usare domande preimpostate durante la comunicazione con il chatbot",
+  "Non Implementato",
+  "TA-004",
+  "Verificare la possibilità di gestire le chat sia come Cliente che come Fornitore",
+  "Non Implementato",
+  "TA-005",
+  "Verficare la possibilità di valutare le risposte del chatbot, sia come Cliente che come Fornitore",
+  "Non Implementato",
+  "TA-006",
+  "Verificare che il fornitore possa personalizzare l'interfaccia della piattaforma",
+  "Non Implementato",
+  "TA-007",
+  "Verificare che il fornitore possa gestire gli account dei clienti",
+  "Non Implementato",
+  "TA-008",
+  "Verificare che il fornitore possa gestire dei documenti aziendali per fornire contesto al chatbot e le FAQ preimpostate",
+  "Non Implementato",
+  "TA-009",
+  "Verificare che il fornitore possa visualizzare e filtrare le statistiche sulle interazioni con il chatbot",
+  "Non Implementato",
+  "TA-010",
+  "Verificare che la piattaforma gestisca errori di funzionamento o utilizza da parte degli utenti in modo elegante",
   "Non Implementato",
 ))
 
