@@ -555,9 +555,9 @@ Esempi applicati al progetto:
 ))
 
 
-== Cruscotto di valutazione delle metriche
+= Cruscotto di valutazione delle metriche
 
-=== MPC-EAC(Estimated At Completion)
+== MPC-EAC(Estimated At Completion)
 #figure(
   image("../imgs/SwePdQBacEac.png", width: 100%),
   caption: [
@@ -566,7 +566,7 @@ Esempi applicati al progetto:
 )
 Osservando il grafico si nota come, soprattutto all'inizio, le stime dei costi totali si discostavano dal costo preventivato (BAC). Ciò è dovuto, per lo più, al fatto che all'inizio avevamo previsto un maggior numero di ore per il ruolo di Analista al fine di redigere il documento Analisi dei Requisiti negli sprint 2 e 3 per questo, in tali periodi, si è verificata una diminuzione dei costi. Invece i rialzi sono più contenuti e sono dovuti, principalmente, ai periodi in cui avevamo bisogno di ore aggiuntive per il ruolo di verificatore.
 
-=== MPC-EV(Estimated Value) - MPC-PV(Planned Value)
+== MPC-EV(Estimated Value) - MPC-PV(Planned Value)
 #figure(
   image("../imgs/SwePdQEvPv.png", width: 100%),
   caption: [
@@ -575,7 +575,7 @@ Osservando il grafico si nota come, soprattutto all'inizio, le stime dei costi t
 )
 Dal grafico si può notare come i valori di PV e EV quasi si sovrappongano e ciò è, dovuto al fatto che il lavoro effettivamente svolto è conforme a quello pianificato anche se con quache piccola eccezione, per esempio, tra gli sprint 6 e 7 in cui vari componenti del team hanno avuto degli esami da svolgere e il lavoro e la produttività è leggermente diminuita.
 
-=== MPC-AC(Actual Cost) - MPC-ETC(Estimated To Completion)
+== MPC-AC(Actual Cost) - MPC-ETC(Estimated To Completion)
 #figure(
   image("../imgs/SwePdQAcEtcBac.png", width: 100%),
   caption: [
@@ -584,7 +584,7 @@ Dal grafico si può notare come i valori di PV e EV quasi si sovrappongano e ci�
 )
 Il grafico mostra i valori di ETC(Estimated To Completion), cioè la stima del budget rimanente al team per portare al termine il progetto durante i vari sprint. Il grafico mostra anche i valori di AC(Actual Cost), cioè il budget effettivamente speso dal team durante i vari periodi. Si nota che l'ETC, giustamente, diminuisce costantemente con l'avanzare degli sprint, mentre l'AC rispetta una crescita proporzionale alla velocità con cui l'ETC decresce.
 
-=== MPC-SC(Schedule Variance) - MPC-CV(Cost Variance)
+== MPC-SC(Schedule Variance) - MPC-CV(Cost Variance)
 #figure(
   image("../imgs/SwePdQCvSv.png", width: 100%),
   caption: [
@@ -593,7 +593,7 @@ Il grafico mostra i valori di ETC(Estimated To Completion), cioè la stima del b
 )
 Il grafico mostra i valori di SV(Schedule Variance) dati dalla differenza tra il valore guadagnato (EV) e il valore pianificato (PV) in percentuale e i valori di CV(Cost Variance) dati dalla differenza tra il valore ottenuto (EV) e il budget speso (AC) in percentuale. In generale la CV si avvicina in vari periodi allo 0 segno che vi è una corrispondenza tra i costi sostenuti e l'avanzamento nl progetto, solo in alcuni casi il team è riuscito a fare un po' di lavoro in più rispetto a quello preventivato (probabilmente il team aveva preventivato al ribasso). Anche i valori di SV sono vicini allo 0 o sopra di qualche punto e quindi anche in questo caso sono stati rispettati i tempi previsti, solo in alcuni casi il gruppo aveva preventivato di usare più tempo per determinate attività al fine di procedere più velocemente con il progetto. Entrambi i valori comunque si discostano al massimo di 4 punti percentuali SV  e al massimo di 2 punti precentuali per i valori di CV.
 
-=== MPC-RSI(Requirements Stability Index)
+== MPC-RSI(Requirements Stability Index)
 #figure(
   image("../imgs/SwePdQRSI.png", width: 100%),
   caption: [
@@ -603,7 +603,7 @@ Il grafico mostra i valori di SV(Schedule Variance) dati dalla differenza tra il
 Il grafico mostra l'RSI(Requirements Stability Index), usata per valutare la stabilità dei requisiti del progetto nel corso del tempo. Si nota che tra gli sprint 1 e 4 vi è una rapida crescita, infatti questi sono i periodi principali in cui il team ha usato il ruolo dell' analista al fine di redigere il documento Analisi dei Requisiti.
 Nei periodi successivi i requisiti sono stati migliorati e non vi sono state modifiche sostanziali ai requisiti fino allo sprint 7, in cui l'indice RSI risulta essere del 100%.
 
-=== MPC-Correttezza Ortografica
+== MPC-Correttezza Ortografica
 #figure(
   image("../imgs/SwePdQCO.png", width: 100%),
   caption: [
@@ -612,7 +612,7 @@ Nei periodi successivi i requisiti sono stati migliorati e non vi sono state mod
 )
 Dal grafico emerge che per la maggior parte dei documenti gli errori ortografici sono molto limitati, purtroppo qualche errore è sfuggito, ma è stato successivamente corretto. Nonostante ciò per buona parte dei documenti e del tempo gli errori presenti erano 0, in particolare si è raggiunto un ottimo risultato negli ultimi sprint.
 
-=== MPC-Indice Gulpease
+== MPC-Indice Gulpease
 #figure(
   image("../imgs/SwePdQGulpease.png", width: 100%),
   caption: [
@@ -623,7 +623,7 @@ Dal grafico si può osservare come, per la maggior parte dei documenti nei vari 
 L'unico documento che inizia al di sotto del limite ottimo è l'Analisi dei Requisiti e questo è causato dalla specificità degli argomenti trattati e dal linguaggio utilizzato.
 Per il resto dei documenti l'indice Gulpease è sopra l'ottimo per la maggior parte degli sprint.
 
-=== MPC-Non-Calculated-Risk
+== MPC-Non-Calculated-Risk
 #figure(
   image("../imgs/SwePdQ_NcR.png", width: 100%),
   caption: [
