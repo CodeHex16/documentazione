@@ -19,11 +19,11 @@ Tutta la documentazione scritta è disponibile al seguente link:
 #align(center, link("https://codehex16.github.io"))
 dove è possibile trovare i seguenti documenti:\
 - verbali interni ed esterni;
-- analisi dei requisiti;
-- piano di qualifica;
-- piano di progetto;
-- norme di progetto;
-- glossario (in alto a sinistra);
+- analisi dei requisiti: #link("https://codehex16.github.io/docs/2%20-%20RTB/Analisi-dei-Requisiti.pdf");
+- piano di qualifica: #link("https://codehex16.github.io/docs/2%20-%20RTB/Piano-di-Qualifica.pdf");
+- piano di progetto: #link("https://codehex16.github.io/docs/2%20-%20RTB/Piano-di-Progetto.pdf");
+- norme di progetto: #link("https://codehex16.github.io/docs/2%20-%20RTB/Norme-di-Progetto.pdf");
+- glossario: #link("https://codehex16.github.io/glossario.html");
 Inoltre, viene fornito il Proof of Concept (PoC) al seguente link:\
 #align(center, link("https://github.com/CodeHex16/proof-of-concept"))
 Il gruppo inoltre conferma che il costo totale per la realizzazione del progetto è rimasto a *€12.895* con data di
