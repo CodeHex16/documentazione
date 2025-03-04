@@ -5,7 +5,7 @@
   "Matteo Bazzan",
   "Redattore",
   "Luca Ribon",
-  "Verficatore",
+  "Verificatore",
   "Francesco Fragonas",
   "",
   "Gabriele Magnelli",
@@ -17,6 +17,11 @@
   "Yi Hao Zhuo",
   "Verificatore",
 ), sommario: [Piano di qualifica], versioni: (
+  "0.4.0",
+  "04/03/2025",
+  "Gabriele Magnelli",
+  "Aggiunta sezione cruscotto di valutazione delle metriche",
+  "",
   "0.3.0",
   "27/02/2025",
   "Filippo Sabbadin",
@@ -103,25 +108,40 @@ Per il processo di fornitura vengono indicate tutte le scelte operative fatte in
 prima dei nomi è #gloss[MPC]: Minimum Predictive Capability. Questa metrica viene usata in Machine Learning per misurare la
 capacità di un modello di generare previsioni precise. Nel nostro caso, l'MPC è il valore minimo da raggiungere per
 essere considerato accettabile.
-- *CC - Completion Cost*: costo finale raggiunto alla fine del progetto. Idealmente non deve superare quello stimato
-  durante le fasi iniziali.
-- *EC - Estimated Cost*: costo stimato calcolando le ore necessarie per lo sviluppo del progetto.
+- *CC - Completion Cost*: costo finale raggiunto alla fine del progetto. Idealmente non deve superare quello stimato durante le fasi iniziali;
+- *EC - Estimated Cost*: costo stimato calcolando le ore necessarie per lo sviluppo del progetto;
+- *BAC - Budget At Completion*: costo totale del progetto preventivato per il suo completamento;
+- *AC - Actual Cost*: Budget speso/utilizzato fino a quel determinato momento;
+- *ETC - Estimated  To Completion*: Stima del costo finale alla data della misurazione;
+- *EV - Earned Value*: Valore ottenuto fino a quel dato momento, si basa sui progressi del completamento delle attività. Il valore viene calcolato tramite ll prodotto di BAC per la percentuale del lavoro attualmente svolto;
+- *PV - Planned Value*: Attività lavorativa decisa, cioè da completare, entro la data prevista. Si basa sulla programmazione delle attività del progetto e riflette il valore del lavoro che si intende portare a termine. Questo valore è calcolato tramite il prodotto di BAC per la percentuale del lavoro che deve essere completato (rispetto all'intero progetto) entro la data presa in considerazione;
+- *CV - Cost Variance*: Valore che misura la differenza tra il budget disponibile e il quello usato effettivamente fino a quel momento. Il valore viene calcolato come differenza tra Ev e AC;
+- *SV - Schedule Variance*: Varianza rispetto a quanto previsto inteso come anticipo o ritardo sui tempi delle attività svolte e da svolgere. Questo valore viene calcolato come la differenza tra EV e PV;
+- *EAC - Estimated At Completion*: Valore stimato per i compiti da svolgere. Questo valore viene dato dalla divisione di BAC per CPI(Cost Performance Index);
 
-#figure(caption: [Valori per misurare la qualità della fornitura], table(
-  columns: (0.8fr, 2fr, 1.2fr, 1.2fr),
-  inset: 8pt,
-  align: (x, y) => if (x == 0 and y > 0 and y < 7) { left } else { center + horizon },
-  fill: (x, y) => if (y == 0) { luma(230) },
-  table.header([*Metrica*], [*Nome*], [*Valore accettabile*], [*Valore ottimo*]),
-  "MPC-CC",
-  "Completion Cost",
-  "\u{2264}105% EC",
-  "\u{2264}100% EC",
-))
+
+#figure(
+  caption: [Valori per misurare la qualità della fornitura],
+  table(
+    columns: (0.8fr, 2fr, 1.2fr, 1.2fr),
+    inset: 8pt,
+    align: (x, y) => if (x == 0 and y > 0 and y < 7) { left } else { center + horizon },
+    fill: (x, y) => if (y == 0) { luma(230) },
+    table.header([*Metrica*], [*Nome*], [*Valore accettabile*], [*Valore ottimo*]),
+    "MPC-CC", "Completion Cost", "\u{2264}105% EC", "\u{2264}100% EC",
+    "MPC-AC", "Actual Cost", "\u{2265} 0", "\u{2264} EAC",
+    "MPC-ETC", "Estimated To Completion", "\u{2265} 0%", "\u{2264} EAC",
+    "MPC-EV", "Earned Value", "\u{2265} 0", "\u{2264} EAC",
+    "MPC-PV", "Planned Value", "\u{2265} 0", "\u{2264} BAC",
+    "MPC-CV", "Cost Variance", "\u{2265} -5%", "\u{2265} 0",
+    "MPC-SV", "Schedule Variance", "\u{2265} -10%", "\u{2265} 0",
+    "MPC-EAC", "Estimated At Completion", "\u{00B1}5% BAC", "= BAC",
+  ),
+)\
 
 === Sviluppo
 
-- *RS - Requirements Stability Index*: indice di stabilità dei requisiti. Indica la percentuale di requisiti che sono
+- *RSI - Requirements Stability Index*: indice di stabilità dei requisiti. Indica la percentuale di requisiti che sono
   stati modificati rispetto al totale dei requisiti. Un valore alto indica che i requisiti sono stabili e non soggetti a
   modifiche frequenti.
 - *TD - Technical Debt Ratio*: rapporto tra il tempo necessario per risolvere i problemi tecnici e il tempo necessario per
@@ -133,7 +153,7 @@ essere considerato accettabile.
   align: (x, y) => if (x == 0 and y > 0 and y < 7) { left } else { center + horizon },
   fill: (x, y) => if (y == 0) { luma(230) },
   table.header([*Metrica*], [*Nome*], [*Valore accettabile*], [*Valore ottimo*]),
-  "MPC-RS",
+  "MPC-RSI",
   "Requirements Stability Index",
   "\u{2265}80%",
   "100%",
@@ -441,8 +461,7 @@ Per ogni test viene specificato lo *stato* di completamento, che può essere:
 - Non implementato
 
 === Test di Unità
-I test di unità sono utilizzati per verificare il corretto funzionamento delle singole componenti del software. Vengono
-scritti dai programmatori e sono eseguiti in modo automatico. Gli strumenti utilizzati per i test di unità sono `pytest` e `vitest`.
+I test di unità sono utilizzati per verificare il corretto funzionamento delle singole componenti del software. Vengono scritti dai programmatori e sono eseguiti in modo automatico. Gli strumenti utilizzati per i test di unità sono `pytest` e `vitest`.
 
 Esempi applicati al progetto:
 
@@ -535,8 +554,83 @@ Esempi applicati al progetto:
 ))
 
 
-= Cruscotto di valutazione delle qualità
-==
+= Cruscotto di valutazione delle metriche
+
+== MPC-EAC(Estimated At Completion)
+#figure(
+  image("../imgs/SwePdQBacEac.png", width: 100%),
+  caption: [
+    Stima del costo totale durante i vari sprint.
+  ],
+)
+Osservando il grafico si nota come, soprattutto all'inizio, le stime dei costi totali si discostavano dal costo preventivato (BAC). Ciò è dovuto, per lo più, al fatto che all'inizio avevamo previsto un maggior numero di ore per il ruolo di Analista al fine di redigere il documento Analisi dei Requisiti negli sprint 2 e 3 per questo, in tali periodi, si è verificata una diminuzione dei costi. Invece i rialzi sono più contenuti e sono dovuti, principalmente, ai periodi in cui avevamo bisogno di ore aggiuntive per il ruolo di verificatore.
+
+== MPC-EV(Estimated Value) - MPC-PV(Planned Value)
+#figure(
+  image("../imgs/SwePdQEvPv.png", width: 100%),
+  caption: [
+    Stima dei valori di PV e EV durante i vari sprint.
+  ],
+)
+Dal grafico si può notare come i valori di PV e EV quasi si sovrappongano e ciò è, dovuto al fatto che il lavoro effettivamente svolto è conforme a quello pianificato anche se con qualche piccola eccezione, per esempio, tra gli sprint 6 e 7 in cui vari componenti del team hanno avuto degli esami da svolgere e il lavoro e la produttività è leggermente diminuita.
+
+== MPC-AC(Actual Cost) - MPC-ETC(Estimated To Completion)
+#figure(
+  image("../imgs/SwePdQAcEtcBac.png", width: 100%),
+  caption: [
+    Stima dei valori di AC e ETC durante i vari sprint.
+  ],
+)
+Il grafico mostra i valori di ETC(Estimated To Completion), cioè la stima del budget rimanente al team per portare al termine il progetto durante i vari sprint. Il grafico mostra anche i valori di AC(Actual Cost), cioè il budget effettivamente speso dal team durante i vari periodi. Si nota che l'ETC, giustamente, diminuisce costantemente con l'avanzare degli sprint, mentre l'AC rispetta una crescita proporzionale alla velocità con cui l'ETC decresce.
+
+== MPC-SC(Schedule Variance) - MPC-CV(Cost Variance)
+#figure(
+  image("../imgs/SwePdQCvSv.png", width: 100%),
+  caption: [
+    Stima dei valori di CV e SV durante i vari sprint.
+  ],
+)
+Il grafico mostra i valori di SV(Schedule Variance) dati dalla differenza tra il valore guadagnato (EV) e il valore pianificato (PV) in percentuale e i valori di CV(Cost Variance) dati dalla differenza tra il valore ottenuto (EV) e il budget speso (AC) in percentuale. In generale la CV si avvicina in vari periodi allo 0 segno che vi è una corrispondenza tra i costi sostenuti e l'avanzamento nl progetto, solo in alcuni casi il team è riuscito a fare un po' di lavoro in più rispetto a quello preventivato (probabilmente il team aveva preventivato al ribasso). Anche i valori di SV sono vicini allo 0 o sopra di qualche punto e quindi anche in questo caso sono stati rispettati i tempi previsti, solo in alcuni casi il gruppo aveva preventivato di usare più tempo per determinate attività al fine di procedere più velocemente con il progetto. Entrambi i valori comunque si discostano al massimo di 4 punti percentuali SV  e al massimo di 2 punti percentuali per i valori di CV.
+
+== MPC-RSI(Requirements Stability Index)
+#figure(
+  image("../imgs/SwePdQRSI.png", width: 100%),
+  caption: [
+    Stima di RSI durante i vari sprint.
+  ],
+)
+Il grafico mostra l'RSI(Requirements Stability Index), usata per valutare la stabilità dei requisiti del progetto nel corso del tempo. Si nota che tra gli sprint 1 e 4 vi è una rapida crescita, infatti questi sono i periodi principali in cui il team ha usato il ruolo dell' analista al fine di redigere il documento Analisi dei Requisiti.
+Nei periodi successivi i requisiti sono stati migliorati e non vi sono state modifiche sostanziali ai requisiti fino allo sprint 7, in cui l'indice RSI risulta essere del 100%.
+
+== MPC-Correttezza Ortografica
+#figure(
+  image("../imgs/SwePdQCO.png", width: 100%),
+  caption: [
+    Stima dei valori di correttezza ortografica durante i vari sprint.
+  ],
+)
+Dal grafico emerge che per la maggior parte dei documenti gli errori ortografici sono molto limitati, purtroppo qualche errore è sfuggito, ma è stato successivamente corretto. Nonostante ciò per buona parte dei documenti e del tempo gli errori presenti erano 0, in particolare si è raggiunto un ottimo risultato negli ultimi sprint.
+
+== MPC-Indice Gulpease
+#figure(
+  image("../imgs/SwePdQGulpease.png", width: 100%),
+  caption: [
+    Stima dei valori dell'indice Gulpease per ogni documento durante i vari sprint.
+  ],
+)
+Dal grafico si può osservare come, per la maggior parte dei documenti nei vari sprint vi sia stato un aumento, o una stabilizzazione dell'indice Gulpease.
+L'unico documento che inizia al di sotto del limite ottimo è l'Analisi dei Requisiti e questo è causato dalla specificità degli argomenti trattati e dal linguaggio utilizzato.
+Per il resto dei documenti l'indice Gulpease è sopra l'ottimo per la maggior parte degli sprint.
+
+== MPC-Non-Calculated-Risk
+#figure(
+  image("../imgs/SwePdQ_NcR.png", width: 100%),
+  caption: [
+    Stima dei valori di CV e SV durante i vari sprint.
+  ],
+)
+Il grafico mostra come per la maggior parte degli sprint non si siano verificati rischi non calcolati, ma solo nello sprint 3 abbiamo avuto un problema di comunicazione interna al gruppo che ha richiesto un incontro con il professore Tullio Vardanega e che in seguito si è risolto.
+In ogni caso dal grafico si può notare che il team ha avuto una buona previsione dei rischi.
 
 = Processi di automiglioramento
 == Introduzione
@@ -564,13 +658,13 @@ adottata.
     "È risultato difficile lavorare sugli stessi documenti nello stesso periodo di tempo senza che più persone scrivessero nella stessa sezione sovrascrivendo il lavoro di altri",
     "Si è deciso di utilizzare diversi branch su git, ognuno dedicato ad ogni attività per ogni sprint, in questo modo è stato più facile trovare sezioni sovrascritte e verificare solo le parti cambiate del documento",
     "Inizio progetto",
-    "Nella fase inziale si sono presentati dei problemi sulla formattazione del testo, struttura, stile e stesura dei documenti",
+    "Nella fase iniziale si sono presentati dei problemi sulla formattazione del testo, struttura, stile e stesura dei documenti",
     "Per organizzarsi meglio sulla stesura e stile dei documenti, si è fatto in modo che ogni documento prenda lo stile dallo stesso file, in modo da facilitarne anche la modifica",
     "Inizio progetto",
     "Alcuni lavori assegnati nella fase iniziale richiedevano troppo tempo per essere assegnati ad un solo membro",
     "Il gruppo si è impegnato per fare in modo che le attività assegnate abbiano un livello di granularità più fine",
     "Inizio progetto",
-    "Inizialmente venivano inserite nella branch main (principale) modifiche che presentavano errori, spesso a casusa della mancanza di verifica",
+    "Inizialmente venivano inserite nella branch main (principale) modifiche che presentavano errori, spesso a causa della mancanza di verifica",
     "Il problema è stato risolto attraverso l'utilizzo di branch protection, che controlla se il verificatore ha approvato le modifiche, se la tabella delle versioni è correttamente compilata e se il sorgente del documento compila correttamente",
   ),
 )
@@ -596,7 +690,7 @@ adottata.
     "Inizio progetto",
     "Responsabile, Amministratore",
     "È risultata poco chiara la differenza tra i ruoli di responsabile e amministratore",
-    "I ruoli di responsabile e amministratore vengono dichiarati ad ogni riunone insieme agli altri ruoli, e vengono chiariti i singoli compiti da eseguire. Questi sono basati su quanto imparato dal corso di Ingegneria del Software",
+    "I ruoli di responsabile e amministratore vengono dichiarati ad ogni riunione insieme agli altri ruoli, e vengono chiariti i singoli compiti da eseguire. Questi sono basati su quanto imparato dal corso di Ingegneria del Software",
   ),
 )
 == Valutazione sugli strumenti
@@ -611,7 +705,7 @@ adottata.
     table.header([*Periodo*], [*Strumento*], [*Problema*], [*Azione correttiva*]),
     "Inizio progetto",
     "Git, GitHub",
-    "Non essendo molto familare con gli strumenti di git, il gruppo ha avuto difficoltà all'inizio del progetto a gestire i branch, pull request e assegnare le issues",
+    "Non essendo molto familiare con gli strumenti di git, il gruppo ha avuto difficoltà all'inizio del progetto a gestire i branch, pull request e assegnare le issues",
     "Durante un incontro sono state spiegate le diverse funzionalità di git per creare un branch nuovo e la procedura per il merge. Inoltre ogni issue veniva assegnato a una o più persone per garantire una migliore organizzazione",
     "PoC",
     "GPT-4o mini, Python, Svelte, MongoDB, FastAPI, Chroma",
