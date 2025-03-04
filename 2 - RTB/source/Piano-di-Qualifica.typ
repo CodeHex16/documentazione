@@ -5,7 +5,7 @@
   "Matteo Bazzan",
   "Redattore",
   "Luca Ribon",
-  "Verficatore",
+  "Verificatore",
   "Francesco Fragonas",
   "",
   "Gabriele Magnelli",
@@ -115,7 +115,7 @@ essere considerato accettabile.
 - *ETC - Estimated  To Completion*: Stima del costo finale alla data della misurazione;
 - *EV - Earned Value*: Valore ottenuto fino a quel dato momento, si basa sui progressi del completamento delle attività. Il valore viene calcolato tramite ll prodotto di BAC per la percentuale del lavoro attualmente svolto;
 - *PV - Planned Value*: Attività lavorativa decisa, cioè da completare, entro la data prevista. Si basa sulla programmazione delle attività del progetto e riflette il valore del lavoro che si intende portare a termine. Questo valore è calcolato tramite il prodotto di BAC per la percentuale del lavoro che deve essere completato (rispetto all'intero progetto) entro la data presa in considerazione;
-- *CV - Cost Variance*: Valore che misura la differenza tra il budget diponibile e il quello usato effettivamente fino a quel momento. Il valore viene calcolato come differenza tra Ev e AC;
+- *CV - Cost Variance*: Valore che misura la differenza tra il budget disponibile e il quello usato effettivamente fino a quel momento. Il valore viene calcolato come differenza tra Ev e AC;
 - *SV - Schedule Variance*: Varianza rispetto a quanto previsto inteso come anticipo o ritardo sui tempi delle attività svolte e da svolgere. Questo valore viene calcolato come la differenza tra EV e PV;
 - *EAC - Estimated At Completion*: Valore stimato per i compiti da svolgere. Questo valore viene dato dalla divisione di BAC per CPI(Cost Performance Index);
 
@@ -461,8 +461,7 @@ Per ogni test viene specificato lo *stato* di completamento, che può essere:
 - Non implementato
 
 === Test di Unità
-I test di unità sono utilizzati per verificare il corretto funzionamento delle singole componenti del software. Vengono
-scritti dai programmatori e sono eseguiti in modo automatico. Gli strumenti utilizzati per i test di unità sono `pytest` e `vitest`.
+I test di unità sono utilizzati per verificare il corretto funzionamento delle singole componenti del software. Vengono scritti dai programmatori e sono eseguiti in modo automatico. Gli strumenti utilizzati per i test di unità sono `pytest` e `vitest`.
 
 Esempi applicati al progetto:
 
@@ -573,7 +572,7 @@ Osservando il grafico si nota come, soprattutto all'inizio, le stime dei costi t
     Stima dei valori di PV e EV durante i vari sprint.
   ],
 )
-Dal grafico si può notare come i valori di PV e EV quasi si sovrappongano e ciò è, dovuto al fatto che il lavoro effettivamente svolto è conforme a quello pianificato anche se con quache piccola eccezione, per esempio, tra gli sprint 6 e 7 in cui vari componenti del team hanno avuto degli esami da svolgere e il lavoro e la produttività è leggermente diminuita.
+Dal grafico si può notare come i valori di PV e EV quasi si sovrappongano e ciò è, dovuto al fatto che il lavoro effettivamente svolto è conforme a quello pianificato anche se con qualche piccola eccezione, per esempio, tra gli sprint 6 e 7 in cui vari componenti del team hanno avuto degli esami da svolgere e il lavoro e la produttività è leggermente diminuita.
 
 == MPC-AC(Actual Cost) - MPC-ETC(Estimated To Completion)
 #figure(
@@ -591,7 +590,7 @@ Il grafico mostra i valori di ETC(Estimated To Completion), cioè la stima del b
     Stima dei valori di CV e SV durante i vari sprint.
   ],
 )
-Il grafico mostra i valori di SV(Schedule Variance) dati dalla differenza tra il valore guadagnato (EV) e il valore pianificato (PV) in percentuale e i valori di CV(Cost Variance) dati dalla differenza tra il valore ottenuto (EV) e il budget speso (AC) in percentuale. In generale la CV si avvicina in vari periodi allo 0 segno che vi è una corrispondenza tra i costi sostenuti e l'avanzamento nl progetto, solo in alcuni casi il team è riuscito a fare un po' di lavoro in più rispetto a quello preventivato (probabilmente il team aveva preventivato al ribasso). Anche i valori di SV sono vicini allo 0 o sopra di qualche punto e quindi anche in questo caso sono stati rispettati i tempi previsti, solo in alcuni casi il gruppo aveva preventivato di usare più tempo per determinate attività al fine di procedere più velocemente con il progetto. Entrambi i valori comunque si discostano al massimo di 4 punti percentuali SV  e al massimo di 2 punti precentuali per i valori di CV.
+Il grafico mostra i valori di SV(Schedule Variance) dati dalla differenza tra il valore guadagnato (EV) e il valore pianificato (PV) in percentuale e i valori di CV(Cost Variance) dati dalla differenza tra il valore ottenuto (EV) e il budget speso (AC) in percentuale. In generale la CV si avvicina in vari periodi allo 0 segno che vi è una corrispondenza tra i costi sostenuti e l'avanzamento nl progetto, solo in alcuni casi il team è riuscito a fare un po' di lavoro in più rispetto a quello preventivato (probabilmente il team aveva preventivato al ribasso). Anche i valori di SV sono vicini allo 0 o sopra di qualche punto e quindi anche in questo caso sono stati rispettati i tempi previsti, solo in alcuni casi il gruppo aveva preventivato di usare più tempo per determinate attività al fine di procedere più velocemente con il progetto. Entrambi i valori comunque si discostano al massimo di 4 punti percentuali SV  e al massimo di 2 punti percentuali per i valori di CV.
 
 == MPC-RSI(Requirements Stability Index)
 #figure(
@@ -630,7 +629,7 @@ Per il resto dei documenti l'indice Gulpease è sopra l'ottimo per la maggior pa
     Stima dei valori di CV e SV durante i vari sprint.
   ],
 )
-Il grafico mostra come per la maggior parte degli sprint non si siano verifiati rischi non calcolati, ma solo nello sprint 3 abbiamo avuto un problema di comunicazione interna al gruppo che ha richiesto un incontro con il professore Tullio Vardanega e che in seguito si è risolto.
+Il grafico mostra come per la maggior parte degli sprint non si siano verificati rischi non calcolati, ma solo nello sprint 3 abbiamo avuto un problema di comunicazione interna al gruppo che ha richiesto un incontro con il professore Tullio Vardanega e che in seguito si è risolto.
 In ogni caso dal grafico si può notare che il team ha avuto una buona previsione dei rischi.
 
 = Processi di automiglioramento
@@ -659,13 +658,13 @@ adottata.
     "È risultato difficile lavorare sugli stessi documenti nello stesso periodo di tempo senza che più persone scrivessero nella stessa sezione sovrascrivendo il lavoro di altri",
     "Si è deciso di utilizzare diversi branch su git, ognuno dedicato ad ogni attività per ogni sprint, in questo modo è stato più facile trovare sezioni sovrascritte e verificare solo le parti cambiate del documento",
     "Inizio progetto",
-    "Nella fase inziale si sono presentati dei problemi sulla formattazione del testo, struttura, stile e stesura dei documenti",
+    "Nella fase iniziale si sono presentati dei problemi sulla formattazione del testo, struttura, stile e stesura dei documenti",
     "Per organizzarsi meglio sulla stesura e stile dei documenti, si è fatto in modo che ogni documento prenda lo stile dallo stesso file, in modo da facilitarne anche la modifica",
     "Inizio progetto",
     "Alcuni lavori assegnati nella fase iniziale richiedevano troppo tempo per essere assegnati ad un solo membro",
     "Il gruppo si è impegnato per fare in modo che le attività assegnate abbiano un livello di granularità più fine",
     "Inizio progetto",
-    "Inizialmente venivano inserite nella branch main (principale) modifiche che presentavano errori, spesso a casusa della mancanza di verifica",
+    "Inizialmente venivano inserite nella branch main (principale) modifiche che presentavano errori, spesso a causa della mancanza di verifica",
     "Il problema è stato risolto attraverso l'utilizzo di branch protection, che controlla se il verificatore ha approvato le modifiche, se la tabella delle versioni è correttamente compilata e se il sorgente del documento compila correttamente",
   ),
 )
@@ -691,7 +690,7 @@ adottata.
     "Inizio progetto",
     "Responsabile, Amministratore",
     "È risultata poco chiara la differenza tra i ruoli di responsabile e amministratore",
-    "I ruoli di responsabile e amministratore vengono dichiarati ad ogni riunone insieme agli altri ruoli, e vengono chiariti i singoli compiti da eseguire. Questi sono basati su quanto imparato dal corso di Ingegneria del Software",
+    "I ruoli di responsabile e amministratore vengono dichiarati ad ogni riunione insieme agli altri ruoli, e vengono chiariti i singoli compiti da eseguire. Questi sono basati su quanto imparato dal corso di Ingegneria del Software",
   ),
 )
 == Valutazione sugli strumenti
@@ -706,7 +705,7 @@ adottata.
     table.header([*Periodo*], [*Strumento*], [*Problema*], [*Azione correttiva*]),
     "Inizio progetto",
     "Git, GitHub",
-    "Non essendo molto familare con gli strumenti di git, il gruppo ha avuto difficoltà all'inizio del progetto a gestire i branch, pull request e assegnare le issues",
+    "Non essendo molto familiare con gli strumenti di git, il gruppo ha avuto difficoltà all'inizio del progetto a gestire i branch, pull request e assegnare le issues",
     "Durante un incontro sono state spiegate le diverse funzionalità di git per creare un branch nuovo e la procedura per il merge. Inoltre ogni issue veniva assegnato a una o più persone per garantire una migliore organizzazione",
     "PoC",
     "GPT-4o mini, Python, Svelte, MongoDB, FastAPI, Chroma",
