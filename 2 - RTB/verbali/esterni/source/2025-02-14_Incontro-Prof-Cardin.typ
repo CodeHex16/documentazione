@@ -1,4 +1,4 @@
-#import "../../../../template/verbale-esterno-noFirma.typ": *
+#import "../../../../template/verbale.typ": *
 
 #show: doc => verbale(
   titolo: "Incontro con il Professor Cardin",

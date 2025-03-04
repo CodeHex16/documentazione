@@ -156,15 +156,17 @@
   counter(page).update(1)
   contenuto
 
-  if tipo == "esterno" {
-    align(bottom+right, 
-      box()[
-        #align(left,
-          text("Firma referente azienda")
-        )
-        #v(3em)
-        #line(length: 20em)  
-      ]
-    )
+   if tipo == "esterno" and "Professore" not in presenze {
+      align(
+        bottom + right,
+        box()[
+          #align(
+            left,
+            text("Firma referente azienda"),
+          )
+          #v(3em)
+          #line(length: 20em)
+        ],
+      )
   }
 }
