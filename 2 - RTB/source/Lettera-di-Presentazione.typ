@@ -15,8 +15,8 @@ Con il presente documento il gruppo CodeHex16 intende presentare la propria cand
 Baseline (RTB) per il capitolato C7:\
 #align(center)[*Assistente virtuale*]\
 Proposto dall'azienda Ergon.\
-Tutta la documentazione scritta è disponibile al seguente link:\
-#align(center, link("https://codehex16.github.io"))\
+Tutta la documentazione scritta è disponibile al seguente link:
+#align(center, link("https://codehex16.github.io"))
 dove è possibile trovare i seguenti documenti:\
 - verbali interni ed esterni;
 - analisi dei requisiti;
@@ -25,22 +25,9 @@ dove è possibile trovare i seguenti documenti:\
 - norme di progetto;
 - glossario (in alto a sinistra);
 Inoltre, viene fornito il Proof of Concept (PoC) al seguente link:\
-#align(center, link("https://github.com/CodeHex16/proof-of-concept"))\
+#align(center, link("https://github.com/CodeHex16/proof-of-concept"))
 Il gruppo inoltre conferma che il costo totale per la realizzazione del progetto è rimasto a *€12.895* con data di
 consegna il *28/04/2025*.\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
 Di seguito, vengono forniti nome, cognome e numero di matricola dei membri del gruppo CodeHex16:\
 #table(
   columns: (1fr, 1fr),

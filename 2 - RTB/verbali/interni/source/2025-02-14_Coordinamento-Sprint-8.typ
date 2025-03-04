@@ -6,7 +6,18 @@
   data: [14/02/2025],
   ora: [9:00-13:00],
   tipo: "interno",
-  versioni: ("0.1.0", "14/02/2025", "Filippo Sabbadin", "Prima stesura", "Ribon Luca"),
+  versioni: (
+    "0.2.0",
+    "04/03/2025",
+    "Filippo Sabbadin",
+    "Correzione errori",
+    "Francesco Fragonas",
+    "0.1.0",
+    "14/02/2025",
+    "Filippo Sabbadin",
+    "Prima stesura",
+    "Ribon Luca",
+  ),
   presenze: (
     "Matteo Bazzan",
     "Verificatore",
@@ -28,10 +39,10 @@
 )
 
 = Revisione Sprint 7
-Durante la riunione è stato analizzato il lavoro svolto nello *Sprint 6* e lo stato attuale dei documenti. In
-particolare, il gruppo si è concentrato sul documento #gloss[Analisi dei Requisiti], a seguito dell'incontro con il prof.
-Cardin. Inoltre, sono stati controllati i documenti #gloss[Piano di Progetto], #gloss[Norme di Progetto] e si è deciso
-di portare a termine il #gloss[Piano di Qualifica] entro questo sprint. Infine è stato controllato lo stato del #gloss[PoC] con
+Durante la riunione è stato analizzato il lavoro svolto nello *Sprint 7* e lo stato attuale dei documenti. In
+particolare, il gruppo si è concentrato sul documento #gloss[Analisi dei Requisiti], a seguito dell'incontro con il
+prof. Cardin. Inoltre, sono stati controllati i documenti #gloss[Piano di Progetto], #gloss[Norme di Progetto] e si è
+deciso di portare a termine il #gloss[Piano di Qualifica] entro questo sprint. Infine è stato controllato lo stato del #gloss[PoC] con
 chiarimenti di dubbi sulla struttura di esso all'interno del gruppo.
 
 = Revisione ruoli e durata Sprint
@@ -41,7 +52,7 @@ A seguito degli scorsi sprint, il team ha concordato sulle seguenti modifiche:
   columns: (1fr, 1fr, 1fr),
   inset: 8pt,
   fill: (x, y) => if (y == 0) { luma(230) },
-  table.header([*Membro*], [*Ruolo Sprint 6*], [*Ruolo Sprint 7*]),
+  table.header([*Membro*], [*Ruolo Sprint 7*], [*Ruolo Sprint 8*]),
   "Matteo Bazzan",
   "Verificatore",
   "Programmatore",
