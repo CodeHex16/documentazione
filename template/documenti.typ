@@ -18,7 +18,7 @@
   set text(font: "Noto Sans")
   set text(size: 12pt)
 	set text(lang: "it")
-  set par(justify: true, linebreaks: "optimized",first-line-indent:1em)
+  set par(justify: true, linebreaks: "optimized",first-line-indent:0em)
   show link : set text(font:"Jetbrains Mono");
 
   grid(
@@ -138,7 +138,7 @@
 
 
   pagebreak()
-  // CONTENUTO 
+  // CONTENUTO
   set page(numbering: "1")
   set align(left)
   set heading(numbering: "1.")
