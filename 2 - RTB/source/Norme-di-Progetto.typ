@@ -23,6 +23,11 @@
   sommario: [Norme di progetto],
 
   versioni: (
+    "0.6.1",
+    "04/03/2025",
+    "Francesco Fragonas",
+    "Sistemazione indice",
+    "",
     "0.6.0",
     "26/02/2025",
     "Gabriele Magnelli",
@@ -366,21 +371,21 @@ L'inspection, preferibile al walkthrough per velocità ed efficienza, consente d
 L'analisi dinamica è un tipo di verifica che richiede l'esecuzione del sistema e delle sue componenti così da individuare difetti, problemi ed errori nel funzionamento al fine di garantire un certo grado di qualità nel prodotto finale.
 Il gruppo per garantire tutto ciò utilizzerà un insieme di test ripetibili e automatizzati, anche se sarà necessario l'uso di test manuali. Tali test si suddividono nei seguenti tipi.
 ===== Test
-====== Test di unità
+*Test di unità*\ \
 I test di unità sono test effettuati su singole componenti autonome del sistema e tali test possono essere:
 - *Test funzionali* che verificano che l'output prodotto sia uguale a quello atteso;
 - *Test strutturali*  che verificano tutti i possibili cammini del codice;
-====== Test di sistema
+\ *Test di sistema*\ \
 I test di sistema sono impiegati per verificare il corretto funzionamento del sistema e, in particolare, che tutti i requisiti richiesti siano soddisfatti.
-====== Test di integrazione
+\ \ *Test di integrazione*\ \
 I test d'integrazione verificano la corretta integrazione tra le varie componenti del sistema che sono già state testate singolarmente tramite i test di unità.
 E' possibile seguire due approcci per i test d'integrazione:
 - *Bottom up*: si testano per prime le componenti che hanno meno dipendenze e maggior valore interno, cioè quelle più nascoste all'utente;
 - *Top down*: si testano per prime le componenti che hanno il maggior numero di dipendenze e maggiormente visibili da parte dell'utente così da avere disponibilità immediata di tali componenti;
-====== Test di regressione
+\ *Test di regressione*\ \
 I test di regressione vengono impiegati per assicurare che la correzione o la modifica delle componenti non causi problemi al livello di sistema. 
 Tali test sono necessari per garantire che le modifiche non compromettano le funzionalità già testate e funzionanti evitando, quindi, la comparsa di regressioni nel sistema.
-====== Test di accettazione
+\ \ *Test di accettazione*\ \
 I test di accettazione devono essere eseguiti insieme al committente al fine di verificare che il prodotto finale rispetti tutti i requisiti richiesti.
 === Validazione
 La validazione è la verifica ultima per garantire che il prodotto sia in linea con le aspettative e che rispetti i requisiti richiesti e per questo è una fase molto importante nello sviluppo del progetto.
@@ -394,12 +399,12 @@ Questo processo segue il processo di verifica e si sofferma su alcuni aspetti qu
 Il processo di gestione della qualità ha come obiettivo quello di garantire che il software, la documentazione e tutto ciò che il team produce sia conforme ai requisiti di qualità specificati e richiesti. Processi utili a garantire un certo grado di qualità sono, sicuramente, i processi di verifica e validazione.
 Gli obiettivi e gli standard di qualità richiesti e che devono essere soddisfatti sono indicati nel documento *Piano di Qualifica*.
 
-== Processi organizzativi
-=== Gestione dei processi
-==== Scopo e descrizione
+= Processi organizzativi
+== Gestione dei processi
+=== Scopo e descrizione
 Il processo di gestione ha lo scopo di identificare le attività e i compiti che ogni membro del gruppo dovrà eseguire per proseguire nel progetto.
 
-==== Ruoli
+=== Ruoli
 I ruoli svolti, a rotazione, dai membri del gruppo sono:
 - *Responsabile*: Ha il compito primario di coordinare i membri del gruppo, inoltre deve:
   - Determinare le attività da svolgere, assegnarle e verificarne l'avanzamento;
@@ -429,7 +434,7 @@ I ruoli svolti, a rotazione, dai membri del gruppo sono:
   Il Verificatore è una figura che sarà presente durante tutto il progetto.
 Ogni membro, in un dato momento, può svolgere un solo ruolo alla volta, ma durante lo sprint può assumere più ruoli.
 
-==== Ticketing (Issue Tracking System)
+=== Ticketing (Issue Tracking System)
 Il gruppo sfrutta l'#gloss[ITS] offerto da Github per gestire le attività da svolgere, cioè le *Issue*.
 Creare le issue è molto semplice e veloce; quando viene individuata un'attività specifica da svolgere viene creata una issue e viene assegnata, in modo coerente, ad un membro del gruppo.
 Quando viene creata una issue, questa sarà composta da:
@@ -455,8 +460,8 @@ Più in particolare quando viene individuato un compito da svolgere vengono eseg
   + se corretto vengono confermate le modifiche e la issue principale e quella del verificatore vengono chiuse;
   + altrimenti le issue rimangono aperte e il verificatore suggerisce dei cambiamenti e/o correzioni a carico dell'assegnatario, una volta apportate tali modifiche si torna al punto 3;
 
-=== Coordinamento
-==== Comunicazioni e Riunioni
+== Coordinamento
+=== Comunicazioni e Riunioni
 Le comunicazioni principali che avvengono durante lo svolgimento del progetto sono di due tipi:
 - *Comunicazioni interne*: Il gruppo utilizza *Telegram* e *Discord* per le comunicazioni principali interne, in particolare Telegram viene usato per messaggi brevi, veloci e informali, mentre Discord viene usato per discussioni e riunioni a distanza.\
   Inoltre, in caso di problemi su Telegram, il gruppo può spostarsi su Discord per comunicare anche in modo non formale;
@@ -466,13 +471,13 @@ Anche le riunioni sono di due tipi:
 - *Riunioni esterne*: I membri del gruppo si riuniscono insieme al proponente, questa riunione di solito è richiesta dal gruppo per trattare problemi/dubbi di una certa importanza al fine di avere una migliore comprensione delle attività da svolgere e procedere con il progetto;
 Sarà compito del *Responsabile* riassumere in un *verbale interno*, o un *verbale esterno* quello che si è discusso durante la riunione in questione;
 
-==== Verbali
+=== Verbali
 I verbali redatti sono di due tipi:
 - *Verbali interni*: Questo tipo di verbale è la trascrizione dei punti salienti di una riunione interna e, generalmente, l'obiettivo principale è quello di discutere delle attività svolte e delle attività da svolgere, stabilendo quindi nuove issue, se necessario;
 - *Verbali esterni*: Questo tipo di verbale è la trascrizione dei punti più importanti riscontrati durante una riunione esterna, il cui obiettivo principale è quello di risolvere dubbi/problemi riscontrati durante l'avanzamento del progetto;
 Nel caso in cui il Responsabile non fosse presente durante le riunioni, il verbale corrispondente verrà redatto dall'*Amministratore*, se neanche l'amministratore era presente allora sarà uno dei membri presenti alla riunione che avrà l'incarico di redigere il verbale.
 
-=== Miglioramento
-==== Scopo e descrizione
+== Miglioramento
+=== Scopo e descrizione
 Il miglioramento è un processo sempre attivo che durerà per tutto il progetto il cui obiettivo è quello di controllare e migliorare tutto quello che viene prodotto mantenendo un elevato grado di qualità.
-In particolare si cerca e si cercherà di ruotare ruoli, identificare attività idonee ai membri del gruppo così da risolvere il maggiorn numero di problemi che si potrebbero venire a creare e/o colmare tempestivamente eventuali lacune mantenendo il lavoro del team elastico e flessibile. 
+In particolare si cerca e si cercherà di ruotare ruoli, identificare attività idonee ai membri del gruppo così da risolvere il maggiorn numero di problemi che si potrebbero venire a creare e/o colmare tempestivamente eventuali lacune mantenendo il lavoro del team elastico e flessibile.
