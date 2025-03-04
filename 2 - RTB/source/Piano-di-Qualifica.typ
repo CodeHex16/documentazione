@@ -9,7 +9,7 @@
   "Francesco Fragonas",
   "",
   "Gabriele Magnelli",
-  "",
+  "Redattore",
   "Filippo Sabbadin",
   "Redattore",
   "Luca Rossi",
@@ -21,7 +21,7 @@
   "04/03/2025",
   "Gabriele Magnelli",
   "Aggiunta sezione cruscotto di valutazione delle metriche",
-  "",
+  "Luca Ribon",
   "0.3.0",
   "27/02/2025",
   "Filippo Sabbadin",
@@ -108,24 +108,23 @@ Per il processo di fornitura vengono indicate tutte le scelte operative fatte in
 prima dei nomi è #gloss[MPC]: Minimum Predictive Capability. Questa metrica viene usata in Machine Learning per misurare la
 capacità di un modello di generare previsioni precise. Nel nostro caso, l'MPC è il valore minimo da raggiungere per
 essere considerato accettabile.
-- *CC - Completion Cost*: costo finale raggiunto alla fine del progetto. Idealmente non deve superare quello stimato durante le fasi iniziali;
-- *EC - Estimated Cost*: costo stimato calcolando le ore necessarie per lo sviluppo del progetto;
-- *BAC - Budget At Completion*: costo totale del progetto preventivato per il suo completamento;
-- *AC - Actual Cost*: Budget speso/utilizzato fino a quel determinato momento;
-- *ETC - Estimated  To Completion*: Stima del costo finale alla data della misurazione;
-- *EV - Earned Value*: Valore ottenuto fino a quel dato momento, si basa sui progressi del completamento delle attività. Il valore viene calcolato tramite ll prodotto di BAC per la percentuale del lavoro attualmente svolto;
-- *PV - Planned Value*: Attività lavorativa decisa, cioè da completare, entro la data prevista. Si basa sulla programmazione delle attività del progetto e riflette il valore del lavoro che si intende portare a termine. Questo valore è calcolato tramite il prodotto di BAC per la percentuale del lavoro che deve essere completato (rispetto all'intero progetto) entro la data presa in considerazione;
-- *CV - Cost Variance*: Valore che misura la differenza tra il budget disponibile e il quello usato effettivamente fino a quel momento. Il valore viene calcolato come differenza tra Ev e AC;
-- *SV - Schedule Variance*: Varianza rispetto a quanto previsto inteso come anticipo o ritardo sui tempi delle attività svolte e da svolgere. Questo valore viene calcolato come la differenza tra EV e PV;
-- *EAC - Estimated At Completion*: Valore stimato per i compiti da svolgere. Questo valore viene dato dalla divisione di BAC per CPI(Cost Performance Index);
-
+- *MPC-CC - Completion Cost*: costo finale raggiunto alla fine del progetto. Idealmente non deve superare quello stimato durante le fasi iniziali;
+- *MPC-EC - Estimated Cost*: costo stimato calcolando le ore necessarie per lo sviluppo del progetto;
+- *MPC-BAC - Budget At Completion*: costo totale del progetto preventivato per il suo completamento;
+- *MPC-AC - Actual Cost*: budget speso/utilizzato fino a quel determinato momento;
+- *MPC-ETC - Estimated  To Completion*: stima del costo finale alla data della misurazione;
+- *MPC-EV - Earned Value*: valore ottenuto fino a quel dato momento, si basa sui progressi del completamento delle attività. Il valore viene calcolato tramite ll prodotto di BAC per la percentuale del lavoro attualmente svolto;
+- *MPC-PV - Planned Value*: attività lavorativa decisa, cioè da completare, entro la data prevista. Si basa sulla programmazione delle attività del progetto e riflette il valore del lavoro che si intende portare a termine. Questo valore è calcolato tramite il prodotto di BAC per la percentuale del lavoro che deve essere completato (rispetto all'intero progetto) entro la data presa in considerazione;
+- *MPC-CV - Cost Variance*: valore che misura la differenza tra il budget disponibile e il quello usato effettivamente fino a quel momento. Il valore viene calcolato come differenza tra Ev e AC;
+- *MPC-SV - Schedule Variance*: varianza rispetto a quanto previsto inteso come anticipo o ritardo sui tempi delle attività svolte e da svolgere. Questo valore viene calcolato come la differenza tra EV e PV;
+- *MPC-EAC - Estimated At Completion*: valore stimato per i compiti da svolgere. Questo valore viene dato dalla divisione di BAC per CPI(Cost Performance Index).
 
 #figure(
   caption: [Valori per misurare la qualità della fornitura],
   table(
     columns: (0.8fr, 2fr, 1.2fr, 1.2fr),
     inset: 8pt,
-    align: (x, y) => if (x == 0 and y > 0 and y < 7) { left } else { center + horizon },
+    align: (x, y) => if (x == 0 and y > 0 and y < 10) { left } else { center + horizon },
     fill: (x, y) => if (y == 0) { luma(230) },
     table.header([*Metrica*], [*Nome*], [*Valore accettabile*], [*Valore ottimo*]),
     "MPC-CC", "Completion Cost", "\u{2264}105% EC", "\u{2264}100% EC",
@@ -141,10 +140,10 @@ essere considerato accettabile.
 
 === Sviluppo
 
-- *RSI - Requirements Stability Index*: indice di stabilità dei requisiti. Indica la percentuale di requisiti che sono
+- *MPC-RSI - Requirements Stability Index*: indice di stabilità dei requisiti. Indica la percentuale di requisiti che sono
   stati modificati rispetto al totale dei requisiti. Un valore alto indica che i requisiti sono stabili e non soggetti a
   modifiche frequenti.
-- *TD - Technical Debt Ratio*: rapporto tra il tempo necessario per risolvere i problemi tecnici e il tempo necessario per
+- *MPC-TD - Technical Debt Ratio*: rapporto tra il tempo necessario per risolvere i problemi tecnici e il tempo necessario per
   sviluppare nuove funzionalità. Un valore basso indica che il codice è ben strutturato e non presenta problemi tecnici.
 
 #figure(caption: [Valori per misurare la qualità dello sviluppo], table(
@@ -164,12 +163,12 @@ essere considerato accettabile.
 ))
 
 === Documentazione
-- *IG - Indice di Gulpease*
+- *MPC-IG - Indice di Gulpease*
 Indica la complessità nella lettura di una frase o documento. Considera come variabili il numero di parole, di frasi e
 di lettere.\
 Formula dell'indice di Gulpease:
 $ 89+((300*"numero di frasi") - (10*"numero di lettere")) / "numero di parole" $ <Gulpease>\
-- *CO - Correttezza ortografica*
+- *MPC-CO - Correttezza ortografica*
 Indica il numero di errori ortografici presenti nella documentazione.
 #figure(caption: [Valori per misurare la qualità della documentazione], table(
   columns: (auto, auto, auto, auto),
@@ -188,13 +187,13 @@ Indica il numero di errori ortografici presenti nella documentazione.
 ))
 
 === Verifica
-- *Code coverage*
-Quantità di codice eseguito durante un test.\
+- *MPC-CCO - Code coverage*
+Quantità di codice eseguito durante i test.\
 Viene utilizzato per valutare la qualità dei test e garantire che il codice sia stato adeguatamente testato. Un alto
 livello indica che il codice è stato eseguito in molti contesti e scenari diversi con diverse parti di codice. In altre
 parole, indica quanto codice è stato sottoposto ai test.
 
-- *Test superati in percentuale*
+- *MPC-TSP - Test superati in percentuale*
 Indica la proporzione di test automatizzati o manuali che sono stati eseguiti con successo rispetto al totale dei test
 previsti. Viene espressa come una percentuale e serve a misurare quanto dell'applicazione in fase di sviluppo è stato
 verificato con successo tramite i test. Una percentuale alta di test superati indica che il sistema è stabile e che la
@@ -206,16 +205,28 @@ In altre parole, indica quanti test sono stati superati.
   align: (x, y) => if (x == 0 and y > 0 and y < 7) { left } else { center + horizon },
   fill: (x, y) => if (y == 0) { luma(230) },
   table.header([*Metrica*], [*Nome*], [*Valore accettabile*], [*Valore ottimo*]),
-  "MPC0000",
+  "MPC-CCO",
   "Code coverage",
   "\u{2265}90%",
   "100%",
-  "MPC0000",
+  "MPC-TSP",
   "Test superati in percentuale",
   "100%",
   "100%",
 ))
 === Gestione della qualità
+- *MPC-QMS - Satisfaction of Quality Metrics*: misura la quantità di metriche soddisfatte. Questo valore viene calcolato come la somma delle metriche di qualità soddisfatte diviso il numero totale di metriche di qualità.
+#figure(caption: [Valori per misurare la gestione della qualità], table(
+  columns: (auto, auto, auto, auto),
+  inset: 8pt,
+  align: (x, y) => if (x == 0 and y > 0 and y < 7) { left } else { center + horizon },
+  fill: (x, y) => if (y == 0) { luma(230) },
+  table.header([*Metrica*], [*Nome*], [*Valore accettabile*], [*Valore ottimo*]),
+  "MPC-QMS",
+  "Satisfaction of Quality Metrics",
+  "\u{2265}85%",
+  "100%",
+))
 
 == Qualità del prodotto
 === Funzionalità
@@ -590,7 +601,7 @@ Il grafico mostra i valori di ETC(Estimated To Completion), cioè la stima del b
     Stima dei valori di CV e SV durante i vari sprint.
   ],
 )
-Il grafico mostra i valori di SV(Schedule Variance) dati dalla differenza tra il valore guadagnato (EV) e il valore pianificato (PV) in percentuale e i valori di CV(Cost Variance) dati dalla differenza tra il valore ottenuto (EV) e il budget speso (AC) in percentuale. In generale la CV si avvicina in vari periodi allo 0 segno che vi è una corrispondenza tra i costi sostenuti e l'avanzamento nl progetto, solo in alcuni casi il team è riuscito a fare un po' di lavoro in più rispetto a quello preventivato (probabilmente il team aveva preventivato al ribasso). Anche i valori di SV sono vicini allo 0 o sopra di qualche punto e quindi anche in questo caso sono stati rispettati i tempi previsti, solo in alcuni casi il gruppo aveva preventivato di usare più tempo per determinate attività al fine di procedere più velocemente con il progetto. Entrambi i valori comunque si discostano al massimo di 4 punti percentuali SV  e al massimo di 2 punti percentuali per i valori di CV.
+Il grafico mostra i valori di SV(Schedule Variance) dati dalla differenza tra il valore guadagnato (EV) e il valore pianificato (PV) in percentuale e i valori di CV(Cost Variance) dati dalla differenza tra il valore ottenuto (EV) e il budget speso (AC) in percentuale. In generale la CV si avvicina in vari periodi allo 0 segno dove vi è una corrispondenza tra i costi sostenuti e l'avanzamento nel progetto, solo in alcuni casi il team è riuscito a fare un po' di lavoro in più rispetto a quello preventivato (probabilmente il team aveva preventivato al ribasso). Anche i valori di SV sono vicini allo 0 o sopra di qualche punto e quindi anche in questo caso sono stati rispettati i tempi previsti, solo in alcuni casi il gruppo aveva preventivato di usare più tempo per determinate attività al fine di procedere più velocemente con il progetto. Entrambi i valori comunque si discostano al massimo di 4 punti percentuali SV  e al massimo di 2 punti percentuali per i valori di CV.
 
 == MPC-RSI(Requirements Stability Index)
 #figure(
@@ -609,7 +620,7 @@ Nei periodi successivi i requisiti sono stati migliorati e non vi sono state mod
     Stima dei valori di correttezza ortografica durante i vari sprint.
   ],
 )
-Dal grafico emerge che per la maggior parte dei documenti gli errori ortografici sono molto limitati, purtroppo qualche errore è sfuggito, ma è stato successivamente corretto. Nonostante ciò per buona parte dei documenti e del tempo gli errori presenti erano 0, in particolare si è raggiunto un ottimo risultato negli ultimi sprint.
+Dal grafico emerge che, nella maggior parte dei documenti, gli errori ortografici sono molto limitati, purtroppo qualche errore è sfuggito, ma è stato successivamente corretto. Nonostante ciò per buona parte dei documenti e del tempo gli errori presenti erano 0, in particolare si è raggiunto un ottimo risultato negli ultimi sprint.
 
 == MPC-Indice Gulpease
 #figure(
