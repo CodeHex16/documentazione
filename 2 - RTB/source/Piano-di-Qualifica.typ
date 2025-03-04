@@ -215,14 +215,14 @@ In altre parole, indica quanti test sono stati superati.
   "100%",
 ))
 === Gestione della qualità
-- *MPC-QMS - Satisfaction of Quality Metrics*: misura la quantità di metriche soddisfatte. Questo valore viene calcolato come la somma delle metriche di qualità soddisfatte diviso il numero totale di metriche di qualità.
+- *MPC-SQM - Satisfaction of Quality Metrics*: misura la quantità di metriche soddisfatte. Questo valore viene calcolato come la somma delle metriche di qualità soddisfatte diviso il numero totale di metriche di qualità.
 #figure(caption: [Valori per misurare la gestione della qualità], table(
   columns: (auto, auto, auto, auto),
   inset: 8pt,
   align: (x, y) => if (x == 0 and y > 0 and y < 7) { left } else { center + horizon },
   fill: (x, y) => if (y == 0) { luma(230) },
   table.header([*Metrica*], [*Nome*], [*Valore accettabile*], [*Valore ottimo*]),
-  "MPC-QMS",
+  "MPC-SQM",
   "Satisfaction of Quality Metrics",
   "\u{2265}85%",
   "100%",
