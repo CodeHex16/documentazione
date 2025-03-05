@@ -21,7 +21,7 @@
   "02/03/2025",
   "Luca Ribon",
   "Migliorata sezione Metodologie di testing",
-  "",
+  "Filippo Sabbadin",
   "0.4.0",
   "04/03/2025",
   "Gabriele Magnelli",
