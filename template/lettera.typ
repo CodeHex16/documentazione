@@ -68,9 +68,9 @@
 
   contenuto
 
-  v(5em)
-  align(right)[
+  v(1em)
+  align(left)[
     Cordiali saluti, \
-    Il gruppo _CodeHex16_
+    Il gruppo _CodeHex16_.
   ]
 }
