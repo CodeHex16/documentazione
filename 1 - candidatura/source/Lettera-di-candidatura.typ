@@ -13,10 +13,6 @@
         "Luca Rossi", "Validatore",
         "Yi Hao Zhuo", "Validatore"
     ),
-    versioni : (
-        "0.1.0","31/10/2024","Filippo Sabbadin","Prima stesura", "",
-        "0.2.0","31/10/2024","","Stesura finale", ""
-    ),
     doc,
 )
 

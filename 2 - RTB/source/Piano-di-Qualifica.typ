@@ -111,7 +111,7 @@ essere considerato accettabile.
 - *MPC-CC - Completion Cost*: costo finale raggiunto alla fine del progetto. Idealmente non deve superare quello stimato
   durante le fasi iniziali;
 - *MPC-EC - Estimated Cost*: costo stimato calcolando le ore necessarie per lo sviluppo del progetto;
-- *MPC-BAC - Budget At Completion*: costo totale del progetto preventivato per il suo completamento;
+- *MPC-BAC - #gloss[Budget] At Completion*: costo totale del progetto preventivato per il suo completamento;
 - *MPC-AC - Actual Cost*: budget speso/utilizzato fino a quel determinato momento;
 - *MPC-ETC - Estimated To Completion*: stima del costo finale alla data della misurazione;
 - *MPC-EV - Earned Value*: valore ottenuto fino a quel dato momento, si basa sui progressi del completamento delle
