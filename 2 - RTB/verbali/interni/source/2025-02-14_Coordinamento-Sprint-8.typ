@@ -11,7 +11,7 @@
     "04/03/2025",
     "Filippo Sabbadin",
     "Correzione errori",
-    "Francesco Fragonas",
+    "Ribon Luca",
     "0.1.0",
     "14/02/2025",
     "Filippo Sabbadin",
