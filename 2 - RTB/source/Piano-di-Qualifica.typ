@@ -456,7 +456,7 @@ Per ogni test viene specificato lo *stato* di completamento, che può essere:
 - Fallito
 - Non implementato
 
-Nella seguente versione del documento, dedicata all'RTB, è prevista la definizone di Test di Sistema e Test di Accettazione.
+Nella seguente versione del documento, dedicata all'#gloss[RTB], è prevista la definizone di Test di Sistema e Test di Accettazione.
 
 // === Test di Unità
 // I test di unità sono utilizzati per verificare il corretto funzionamento delle singole componenti del software. Vengono
@@ -497,7 +497,7 @@ Nella seguente versione del documento, dedicata all'RTB, è prevista la definizo
 //   "Integrazione modulo autenticazione con database utenti",
 //   "Superato",
 //   "TI-002",
-//   "Comunicazione tra frontend e API di generazione risposte LLM",
+//   "Comunicazione tra #gloss[frontend] e API di generazione risposte LLM",
 //   "Superato",
 //   "TI-003",
 //   "Verifica sincronizzazione impostazioni tema (dark/light mode) su più dispositivi",
@@ -675,7 +675,7 @@ Esempi applicati al progetto:
 ))
 
 === Test di Accettazione
-I test di accettazione sono utilizzati per validare il sistema con il committente, servono per confermare che il prodotto sia pronto alla consegna finale e/o distribuzione. Vengono scritti dagli analisti e sono eseguiti in modo manuale. Gli strumenti utilizzati per i test di accettazione sono delle checklist gestite manualmente.
+I test di accettazione sono utilizzati per validare il sistema con il #gloss[committente], servono per confermare che il prodotto sia pronto alla consegna finale e/o distribuzione. Vengono scritti dagli analisti e sono eseguiti in modo manuale. Gli strumenti utilizzati per i test di accettazione sono delle checklist gestite manualmente.
 
 Esempi applicati al progetto:
 
