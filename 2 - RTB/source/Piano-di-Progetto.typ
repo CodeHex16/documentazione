@@ -1,4 +1,4 @@
-#import "../../template/documenti.typ" : *
+#import "../../template/documenti.typ": *
 
 #let pseudoheading(body) = {
   set align(center)
@@ -6,29 +6,65 @@
   smallcaps(body)
 }
 
-#show : doc => documento(
-    titolo: "Piano di Progetto",
-    data: [24/10/2024],
-    ruoli : (
-        "Matteo Bazzan","",
-        "Luca Ribon","Redattore",
-        "Francesco Fragonas","",
-        "Gabriele Magnelli","",
-        "Filippo Sabbadin","Verificatore",
-        "Luca Rossi", "",
-        "Yi Hao Zhuo", ""
-    ),
-    sommario: [],
-    
-    versioni : (
-      "0.6.0","14-02-2025","Luca Rossi","Aggiunta descrizione Sprint 6", "Luca Ribon",
-      "0.5.0","17-01-2025","Gabriele Magnelli","Aggiunto descrizione Sprint 5 e correzione immagine Sprint 4", "Luca Rossi",
-      "0.4.0","05/01/2025","Francesco Fragonas","Aggiunta sezione Pianificazione del lavoro e Periodi di sviluppo", "Yi Hao Zhuo",
-      "0.3.0","18/12/2024","Francesco Fragonas","Aggiunta sezione analisi dei rischi", "Filippo Sabbadin",
-      "0.2.0","05/12/2024","Luca Rossi","Aggiunta sezione preventivo", "Matteo Bazzan",
-      "0.1.0","24/10/2024","Luca Ribon","Definizione della struttura base e definizone delle linee guida per la stesura", "Filippo Sabbadin"
-    ),
-    doc,
+#show: doc => documento(
+  titolo: "Piano di Progetto",
+  data: [24/10/2024],
+  ruoli: (
+    "Matteo Bazzan",
+    "Verificatore",
+    "Luca Ribon",
+    "Redattore, Verificatore",
+    "Francesco Fragonas",
+    "Redattore",
+    "Gabriele Magnelli",
+    "Redattore",
+    "Filippo Sabbadin",
+    "Verificatore",
+    "Luca Rossi",
+    "Redattore, Verificatore",
+    "Yi Hao Zhuo",
+    "Verificatore",
+  ),
+  sommario: [],
+
+  versioni: (
+    "0.7.0",
+    "01-03-2025",
+    "Luca Rossi",
+    "Aggiunta descrizione Sprint 7",
+    "Luca Ribon",
+    "0.6.0",
+    "14-02-2025",
+    "Luca Rossi",
+    "Aggiunta descrizione Sprint 6",
+    "Luca Ribon",
+    "0.5.0",
+    "17-01-2025",
+    "Gabriele Magnelli",
+    "Aggiunta descrizione Sprint 5 e correzione immagine Sprint 4",
+    "Luca Rossi",
+    "0.4.0",
+    "05/01/2025",
+    "Francesco Fragonas",
+    "Aggiunta sezione Pianificazione del lavoro e Periodi di sviluppo",
+    "Yi Hao Zhuo",
+    "0.3.0",
+    "18/12/2024",
+    "Francesco Fragonas",
+    "Aggiunta sezione analisi dei rischi",
+    "Filippo Sabbadin",
+    "0.2.0",
+    "05/12/2024",
+    "Luca Rossi",
+    "Aggiunta sezione preventivo",
+    "Matteo Bazzan",
+    "0.1.0",
+    "24/10/2024",
+    "Luca Ribon",
+    "Definizione della struttura base e definizone delle linee guida per la stesura",
+    "Filippo Sabbadin",
+  ),
+  doc,
 )
 
 = Introduzione
@@ -45,10 +81,13 @@ Il documento #gloss[Piano di Progetto] ha come obbiettivo quello di definire le 
 Il prodotto consiste nella creazione di un'interfaccia in stile #gloss[chatbot], accessibile tramite interfaccia mobile, che delle aziende fornitrici possono configurare in modo che l'#gloss[assistente virtuale] conosca il contesto aziendale e possa rispondere alle domande dei clienti del #gloss[fornitore].
 L'assistente virtuale sfrutta un #gloss[LLM] per comprendere il contesto tramite l'analisi dei documenti aziendali.
 Il fornitore, tramite un'#gloss[interfaccia web] di amministrazione, potrà inserire i documenti aziendarli, memorizzare delle domande e delle risposte predefinite e gestire gli #gloss[account] dei clienti.
+// Riportare le risorse (immagini, grafici, ecc...) utilizzate per la stesura del documento
+== Risorse e riferimenti
+
 
 // Decidere se riportare il preventivo fatto inizialmente o se fare riferimento al documento dedicato; da aggiornare con un resoconto dopo ogni fase
 = Preventivo
-Il preventivo è stato calcolato considerando i costi orari dei diversi ruoli coinvolti e il numero stimato di ore per ciascuno, basandosi su un'analisi dettagliata delle attività necessarie per il progetto. 
+Il preventivo è stato calcolato considerando i costi orari dei diversi ruoli coinvolti e il numero stimato di ore per ciascuno, basandosi su un'analisi dettagliata delle attività necessarie per il progetto.
 Di seguito sono riportate tabelle riepilogative che mostrano sia il compenso totale che il compenso orario per ogni ruolo, oltre alla distribuzione delle ore tra i membri del team.
 
 == Dettagli Preventivo per Ruoli
@@ -56,35 +95,47 @@ Di seguito sono riportate tabelle riepilogative che mostrano sia il compenso tot
 #table(
   columns: (1.5fr, 1fr, 1fr, 1fr),
   inset: 8pt,
-  align: (x,y) => if(x==0 and y>0 and y< 7) {left} else {center+horizon},
-  fill: (x,y) => if (y== 0 or y == 7) { luma(230) },
+  align: (x, y) => if (x == 0 and y > 0 and y < 7) { left } else { center + horizon },
+  fill: (x, y) => if (y == 0 or y == 7) { luma(230) },
   table.header(
-    [*Ruolo*], [*Costo/Ora*], [*Ora/Ruolo*], [*Totale Ruolo*], 
+    [*Ruolo*],
+    [*Costo/Ora*],
+    [*Ora/Ruolo*],
+    [*Totale Ruolo*],
   ),
-  "Responsabile","30","63","1890",
-  "Amministratore","20","70","1400",
-  "Analista","25","75","1875",
-  "Progettista","25","119","2975",
-  "Programmatore","15","177","2655",
-  "Verificatore","15","140","2100",
-  "Totale","",[*644 h*],[*€ 12.895*]
+
+  "Responsabile", "30", "63", "1890",
+  "Amministratore", "20", "70", "1400",
+  "Analista", "25", "75", "1875",
+  "Progettista", "25", "119", "2975",
+  "Programmatore", "15", "177", "2655",
+  "Verificatore", "15", "140", "2100",
+  "Totale", "", [*644 h*], [*€ 12.895*],
 )
 == Distribuzione delle Ore per Membri
 #table(
   columns: (2fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr),
   inset: 8pt,
-  align: (x,y) => if(x==0 and y>0) {left} else {center+horizon},
-  fill: (x,y) => if y== 0 or x==7 { luma(230) },
+  align: (x, y) => if (x == 0 and y > 0) { left } else { center + horizon },
+  fill: (x, y) => if y == 0 or x == 7 { luma(230) },
   table.header(
-    [*Membro*], [*Resp.*], [*Amm.*], [*Anal.*], [*Proget.*], [*Prog.*], [*Verif.*], [*Totale*]
+    [*Membro*],
+    [*Resp.*],
+    [*Amm.*],
+    [*Anal.*],
+    [*Proget.*],
+    [*Prog.*],
+    [*Verif.*],
+    [*Totale*],
   ),
-  "Ribon","9","10","11","17","25","20","92",
-  "Bazzan","9","10","11","17","25","20","92",
-  "Fragonas","9","10","11","17","25","20","92",
-  "Magnelli","9","10","11","17","25","20","92",
-  "Sabbadin","9","10","11","17","25","20","92",
-  "Rossi","9","10","10","17","26","20","92",
-  "Zhuo","9","10","10","17","26","20","92",
+
+  "Ribon", "9", "10", "11", "17", "25", "20", "92",
+  "Bazzan", "9", "10", "11", "17", "25", "20", "92",
+  "Fragonas", "9", "10", "11", "17", "25", "20", "92",
+  "Magnelli", "9", "10", "11", "17", "25", "20", "92",
+  "Sabbadin", "9", "10", "11", "17", "25", "20", "92",
+  "Rossi", "9", "10", "10", "17", "26", "20", "92",
+  "Zhuo", "9", "10", "10", "17", "26", "20", "92",
 )
 
 - *Metodo di calcolo*: i costi orari sono stati stimati sulla base di #gloss[standard] di mercato e di esperienze precedenti. Le ore totali per ogni ruolo sono state calcolate considerando il numero di attività assegnate e il livello di complessità delle stesse.
@@ -121,124 +172,127 @@ Secondo lo standard ISO/IEC 31000:2009, la gestione dei rischi si articola in ci
 
 5. *Monitoraggio e revisione dei rischi*:
   #h(2em)
-  -  Integrare il controllo dei rischi nel processo di gestione del progetto e effettuare verifiche periodiche per aggiornare la situazione.
+  - Integrare il controllo dei rischi nel processo di gestione del progetto e effettuare verifiche periodiche per aggiornare la situazione.
 
 == Rischi organizzativi
 #table(
   columns: (1fr, 2fr),
   inset: 8pt,
-  align: (x,y) => if(y>0) {left} else {center+horizon},
-  fill: (x,y) => if y==0 { luma(180)} else if (y==2 or y==4){luma(230)},
-  table.header(
-    table.cell(
-      colspan: 2
-    )[*Comunicazione inefficace*]
-  ),
-  [*Descrizione*],[Una comunicazione scarsa o inefficace tra i membri del team o tra team diversi può portare a fraintendimenti, errori e rallentamenti nei tempi di esecuzione],
-  [*Probabilità*],[Alta],
-  [*Pericolosità*],[Alta],
-  [*Rilevamento*],[Monitoraggio della qualità e frequenza delle riunioni di aggiornamento, analisi dei #gloss[feedback], misurazione delle performance del team],
-  [*Piano di contingenza*],[Implementare strumenti di comunicazione efficaci (#gloss[GitHub], #gloss[Telegram]), riunioni regolari di aggiornamento, definire chiaramente i canali di comunicazione]
+  align: (x, y) => if (y > 0) { left } else { center + horizon },
+  fill: (x, y) => if y == 0 { luma(180) } else if (y == 2 or y == 4) { luma(230) },
+  table.header(table.cell(colspan: 2)[*Comunicazione inefficace*]),
+  [*Descrizione*],
+  [Una comunicazione scarsa o inefficace tra i membri del team o tra team diversi può portare a fraintendimenti, errori e rallentamenti nei tempi di esecuzione],
+
+  [*Probabilità*], [Alta],
+  [*Pericolosità*], [Alta],
+  [*Rilevamento*],
+  [Monitoraggio della qualità e frequenza delle riunioni di aggiornamento, analisi dei #gloss[feedback], misurazione delle performance del team],
+
+  [*Piano di contingenza*],
+  [Implementare strumenti di comunicazione efficaci (#gloss[GitHub], #gloss[Telegram]), riunioni regolari di aggiornamento, definire chiaramente i canali di comunicazione],
 )
 #table(
   columns: (1fr, 2fr),
   inset: 8pt,
-  align: (x,y) => if(y>0) {left} else {center+horizon},
-  fill: (x,y) => if y==0 { luma(180)} else if (y==2 or y==4){luma(230)},
-  table.header(
-    table.cell(
-      colspan: 2
-    )[*Imprecisioni nella pianificazione delle attività*]
-  ),
-  [*Descrizione*],[Errori nella pianificazione possono derivare da scarsa comprensione dei requisiti, stime errate di risorse o tempi, o inesperienza del team],
-  [*Probabilità*],[Alta],
-  [*Pericolosità*],[Alta],
-  [*Rilevamento*],[Confronto periodico con il Piano di Progetto e monitoraggio delle attività tramite strumenti come board su GitHub. Ritardi costanti sono segnali chiave],
-  [*Piano di contingenza*],[Revisionare il Piano di Progetto per aggiornare tempistiche e risorse. In caso di difficoltà, il Responsabile riassegna risorse o posticipa attività]
+  align: (x, y) => if (y > 0) { left } else { center + horizon },
+  fill: (x, y) => if y == 0 { luma(180) } else if (y == 2 or y == 4) { luma(230) },
+  table.header(table.cell(colspan: 2)[*Imprecisioni nella pianificazione delle attività*]),
+  [*Descrizione*],
+  [Errori nella pianificazione possono derivare da scarsa comprensione dei requisiti, stime errate di risorse o tempi, o inesperienza del team],
+
+  [*Probabilità*], [Alta],
+  [*Pericolosità*], [Alta],
+  [*Rilevamento*],
+  [Confronto periodico con il Piano di Progetto e monitoraggio delle attività tramite strumenti come board su GitHub. Ritardi costanti sono segnali chiave],
+
+  [*Piano di contingenza*],
+  [Revisionare il Piano di Progetto per aggiornare tempistiche e risorse. In caso di difficoltà, il Responsabile riassegna risorse o posticipa attività],
 )
 #table(
   columns: (1fr, 2fr),
   inset: 8pt,
-  align: (x,y) => if(y>0) {left} else {center+horizon},
-  fill: (x,y) => if y==0 { luma(180)} else if (y==2 or y==4){luma(230)},
-  table.header(
-    table.cell(
-      colspan: 2
-    )[*Impegni personali e universitari*]
-  ),
-  [*Descrizione*],[Gli impegni accademici o personali dei membri del team possono interferire con il rispetto delle scadenze del progetto],
-  [*Probabilità*],[Media],
-  [*Pericolosità*],[Media],
-  [*Rilevamento*],[Monitoraggio delle scadenze tramite #gloss[meeting] regolari e verifica delle disponibilità segnalate su un calendario condiviso in Google Fogli],
-  [*Piano di contingenza*],[Concordare una pianificazione flessibile basata sulle disponibilità indicate. In caso di necessità, ridistribuire le attività o posticipare #gloss[task] meno prioritari]
+  align: (x, y) => if (y > 0) { left } else { center + horizon },
+  fill: (x, y) => if y == 0 { luma(180) } else if (y == 2 or y == 4) { luma(230) },
+  table.header(table.cell(colspan: 2)[*Impegni personali e universitari*]),
+  [*Descrizione*],
+  [Gli impegni accademici o personali dei membri del team possono interferire con il rispetto delle scadenze del progetto],
+
+  [*Probabilità*], [Media],
+  [*Pericolosità*], [Media],
+  [*Rilevamento*],
+  [Monitoraggio delle scadenze tramite #gloss[meeting] regolari e verifica delle disponibilità segnalate su un calendario condiviso in Google Fogli],
+
+  [*Piano di contingenza*],
+  [Concordare una pianificazione flessibile basata sulle disponibilità indicate. In caso di necessità, ridistribuire le attività o posticipare #gloss[task] meno prioritari],
 )
 
 == Rischi tecnici
 #table(
   columns: (1fr, 2fr),
   inset: 8pt,
-  align: (x,y) => if(y>0) {left} else {center+horizon},
-  fill: (x,y) => if y==0 { luma(180)} else if (y==2 or y==4){luma(230)},
-  table.header(
-    table.cell(
-      colspan: 2
-    )[*Inesperienza*]
-  ),
-  [*Descrizione*],[Il team potrebbe non avere l'esperienza necessaria nelle competenze specifiche richieste dal progetto, portando a errori, inefficienze o rallentamenti nel lavoro],
-  [*Probabilità*],[Media],
-  [*Pericolosità*],[Media],
-  [*Rilevamento*],[Valutazione delle competenze iniziali del team, feedback regolari durante il progresso del progetto],
-  [*Piano di contingenza*],[Studio indivuduale delle nuove tecnologie con allineamento continuo fra i membri del gruppo]
+  align: (x, y) => if (y > 0) { left } else { center + horizon },
+  fill: (x, y) => if y == 0 { luma(180) } else if (y == 2 or y == 4) { luma(230) },
+  table.header(table.cell(colspan: 2)[*Inesperienza*]),
+  [*Descrizione*],
+  [Il team potrebbe non avere l'esperienza necessaria nelle competenze specifiche richieste dal progetto, portando a errori, inefficienze o rallentamenti nel lavoro],
+
+  [*Probabilità*], [Media],
+  [*Pericolosità*], [Media],
+  [*Rilevamento*],
+  [Valutazione delle competenze iniziali del team, feedback regolari durante il progresso del progetto],
+
+  [*Piano di contingenza*],
+  [Studio indivuduale delle nuove tecnologie con allineamento continuo fra i membri del gruppo],
 )
 #table(
   columns: (1fr, 2fr),
   inset: 8pt,
-  align: (x,y) => if(y>0) {left} else {center+horizon},
-  fill: (x,y) => if y==0 { luma(180)} else if (y==2 or y==4){luma(230)},
-  table.header(
-    table.cell(
-      colspan: 2
-    )[*Problemi di disponibilità e performance delle #gloss[API] LLM*]
-  ),
-  [*Descrizione*],[Le API LLM potrebbero andare offline o non soddisfare le aspettative in termini di performance, impattando il funzionamento del sistema],
-  [*Probabilità*],[Bassa],
-  [*Pericolosità*],[Alta],
-  [*Rilevamento*],[Monitoraggio continuo delle API e gestione di errori o malfunzionamenti],
-  [*Piano di contingenza*],[In caso di problemi, usare risposte predefinite o caching dei dati precedenti finché le API non sono nuovamente disponibili]
+  align: (x, y) => if (y > 0) { left } else { center + horizon },
+  fill: (x, y) => if y == 0 { luma(180) } else if (y == 2 or y == 4) { luma(230) },
+  table.header(table.cell(colspan: 2)[*Problemi di disponibilità e performance delle #gloss[API] LLM*]),
+  [*Descrizione*],
+  [Le API LLM potrebbero andare offline o non soddisfare le aspettative in termini di performance, impattando il funzionamento del sistema],
+
+  [*Probabilità*], [Bassa],
+  [*Pericolosità*], [Alta],
+  [*Rilevamento*], [Monitoraggio continuo delle API e gestione di errori o malfunzionamenti],
+  [*Piano di contingenza*],
+  [In caso di problemi, usare risposte predefinite o caching dei dati precedenti finché le API non sono nuovamente disponibili],
 )
 
 == Rischi di analisi e progettazione
 #table(
   columns: (1fr, 2fr),
   inset: 8pt,
-  align: (x,y) => if(y>0) {left} else {center+horizon},
-  fill: (x,y) => if y==0 { luma(180)} else if (y==2 or y==4){luma(230)},
-  table.header(
-    table.cell(
-      colspan: 2
-    )[*Impegni personali e universitari*]
-  ),
-  [*Descrizione*],[Cambiamenti imprevisti richiesti dall'azienda #gloss[proponente] o da nuove esigenze emerse durante il progetto],
-  [*Probabilità*],[Alta],
-  [*Pericolosità*],[Media],
-  [*Rilevamento*],[Segnalazioni da parte del cliente o analisi delle modifiche richieste rispetto al piano iniziale],
-  [*Piano di contingenza*],[Effettuare una buona analisi iniziale dei requisiti e mantenere un dialogo costante con l'azienda proponente, cercando di prevedere modifiche potenziali e valutare il loro impatto in anticipo]
+  align: (x, y) => if (y > 0) { left } else { center + horizon },
+  fill: (x, y) => if y == 0 { luma(180) } else if (y == 2 or y == 4) { luma(230) },
+  table.header(table.cell(colspan: 2)[*Impegni personali e universitari*]),
+  [*Descrizione*],
+  [Cambiamenti imprevisti richiesti dall'azienda #gloss[proponente] o da nuove esigenze emerse durante il progetto],
+
+  [*Probabilità*], [Alta],
+  [*Pericolosità*], [Media],
+  [*Rilevamento*], [Segnalazioni da parte del cliente o analisi delle modifiche richieste rispetto al piano iniziale],
+  [*Piano di contingenza*],
+  [Effettuare una buona analisi iniziale dei requisiti e mantenere un dialogo costante con l'azienda proponente, cercando di prevedere modifiche potenziali e valutare il loro impatto in anticipo],
 )
 #table(
   columns: (1fr, 2fr),
   inset: 8pt,
-  align: (x,y) => if(y>0) {left} else {center+horizon},
-  fill: (x,y) => if y==0 { luma(180)} else if (y==2 or y==4){luma(230)},
-  table.header(
-    table.cell(
-      colspan: 2
-    )[*Errori nella progettazione dell'architettura*]
-  ),
-  [*Descrizione*],[Una progettazione inadeguata può compromettere scalabilità e performance, rendendo difficile la gestione del sistema],
-  [*Probabilità*],[Media],
-  [*Pericolosità*],[Alta],
-  [*Rilevamento*],[Monitoraggio continuo delle prestazioni tramite test di carico, benchmark e analisi delle aree critiche per identificare potenziali problemi di performance o scalabilità],
-  [*Piano di contingenza*],[Revisione dell'architettura prima dello sviluppo avanzato, con correzioni tempestive in caso di problemi]
+  align: (x, y) => if (y > 0) { left } else { center + horizon },
+  fill: (x, y) => if y == 0 { luma(180) } else if (y == 2 or y == 4) { luma(230) },
+  table.header(table.cell(colspan: 2)[*Errori nella progettazione dell'architettura*]),
+  [*Descrizione*],
+  [Una progettazione inadeguata può compromettere scalabilità e performance, rendendo difficile la gestione del sistema],
+
+  [*Probabilità*], [Media],
+  [*Pericolosità*], [Alta],
+  [*Rilevamento*],
+  [Monitoraggio continuo delle prestazioni tramite test di carico, benchmark e analisi delle aree critiche per identificare potenziali problemi di performance o scalabilità],
+
+  [*Piano di contingenza*],
+  [Revisione dell'architettura prima dello sviluppo avanzato, con correzioni tempestive in caso di problemi],
 )
 
 // Rischi effettivamente incontrati e come sono stati affrontati
@@ -415,7 +469,7 @@ Inoltre è stato svolto un *incontro online* con il referente dell'azienda Ergon
 
 Con lo *Sprint 5* il team ha scelto in modo definitivo il nome della webapp e sarà: *#gloss[Suppl-AI]* nome scelto dalla fusione delle parole "Supply"(fornitura) e "AI"(Artificial Intelligence) e si è deciso il framework da usare per la parte frontend della webapp, cioè *Svelte*.
 
-Inoltre, per essere il più efficiente possibile, il team non ha seguito la rotazione circolare dei ruoli, ma questi sono stati assegnati in base alle attività svolte precedentemente da ogni membro del gruppo. 
+Inoltre, per essere il più efficiente possibile, il team non ha seguito la rotazione circolare dei ruoli, ma questi sono stati assegnati in base alle attività svolte precedentemente da ogni membro del gruppo.
 
 In generale, durante questo sprint, si è continuata la stesura dei documenti principali del progetto.
 
@@ -444,11 +498,9 @@ In generale, durante questo sprint, si è continuata la stesura dei documenti pr
 )
 
 === Sprint 6
-
-
 *Intervallo temporale*: 07/01/2025 - 20/01/2025
 
-Con lo *Sprint 6*, il team ha proseguito nella stesura della documentazione principale del progetto. 
+Con lo *Sprint 6*, il team ha proseguito nella stesura della documentazione principale del progetto.
 Inoltre, sono stati integrati i diagrammi #gloss[UML] degli use case.
 
 Un punto chiave di questo sprint è stato l’incontro con il proponente, durante il quale il team ha verificato la completezza degli Use Case e presentato la scelta dell’LLM
@@ -476,6 +528,36 @@ Un punto chiave di questo sprint è stato l’incontro con il proponente, durant
   ],
 )
 
+=== Sprint 7
+*Intervallo temporale*: 21/01/2025 - 10/02/2025
+
+Durante lo *Sprint 7*, il team ha completato diverse attività legate alla documentazione. Inoltre, sono stati definiti gli aspetti architetturali del *Proof of Concept* (PoC).
+
+#pseudoheading[*Attività svolte*]
+
+- *Aggiornamento Piano di Progetto*: Revisione e integrazione delle sezioni relative agli sprint precedenti.
+- *Continuazione e miglioramento dell'Analisi dei Requisiti*: Revisione e perfezionamento delle sezioni Use Case e Requisiti del documento.
+- *Continuazione stesura Piano di Qualifica*: Terminata la sezione delle metriche di qualità e dei test da effettuare.
+- *Definizione architettura PoC*: Strutturazione in componenti principali e creazione repository GitHub.
+- *Incontro con il prof. Cardin*: è stato svolto un incontro con il prof. Cardin per risolvere alcuni dubbi riguardanti l'Analisi dei Requisiti.
+
+#pseudoheading[*Ruoli ricoperti e ore svolte*]
+
+#figure(
+  image("../imgs/sprint7-tabella.png", width: 100%),
+  caption: [
+    Suddivisione oraria per membro e ruolo.
+  ],
+)
+
+#figure(
+  image("../imgs/sprint7-grafico.png", width: 100%),
+  caption: [
+    Suddivisione oraria per ruolo con relativi costi.
+  ],
+)
+
+
 == Periodo PB
 *Periodo*: *DA DEFINIRE*
 
@@ -490,7 +572,3 @@ Un punto chiave di questo sprint è stato l’incontro con il proponente, durant
 - *Aggiornamento dei documenti*: Revisione e completamento della documentazione per la consegna finale.
 - *Consegna al cliente*: Preparazione e presentazione del prodotto finale.
 L'obiettivo principale di questo periodo è stato garantire che il prodotto fosse pronto per l'accettazione finale da parte del cliente, con particolare attenzione alla qualità e alla completezza.
-
-
-// Riportare le risorse (immagini, grafici, ecc...) utilizzate per la stesura del documento
-= Risorse e riferimenti
