@@ -110,7 +110,7 @@ capacità di un modello di generare previsioni precise. Nel nostro caso, l'MPC �
 essere considerato accettabile.
 - *MPC-CC - Completion Cost*: costo finale raggiunto alla fine del progetto. Idealmente non deve superare quello stimato durante le fasi iniziali;
 - *MPC-EC - Estimated Cost*: costo stimato calcolando le ore necessarie per lo sviluppo del progetto;
-- *MPC-BAC - Budget At Completion*: costo totale del progetto preventivato per il suo completamento;
+- *MPC-BAC - #gloss[Budget] At Completion*: costo totale del progetto preventivato per il suo completamento;
 - *MPC-AC - Actual Cost*: budget speso/utilizzato fino a quel determinato momento;
 - *MPC-ETC - Estimated  To Completion*: stima del costo finale alla data della misurazione;
 - *MPC-EV - Earned Value*: valore ottenuto fino a quel dato momento, si basa sui progressi del completamento delle attività. Il valore viene calcolato tramite ll prodotto di BAC per la percentuale del lavoro attualmente svolto;
@@ -571,10 +571,10 @@ Esempi applicati al progetto:
 #figure(
   image("../imgs/SwePdQBacEac.png", width: 100%),
   caption: [
-    Stima del costo totale durante i vari sprint.
+    Stima del costo totale durante i vari #gloss[sprint].
   ],
 )
-Osservando il grafico si nota come, soprattutto all'inizio, le stime dei costi totali si discostavano dal costo preventivato (BAC). Ciò è dovuto, per lo più, al fatto che all'inizio avevamo previsto un maggior numero di ore per il ruolo di Analista al fine di redigere il documento Analisi dei Requisiti negli sprint 2 e 3 per questo, in tali periodi, si è verificata una diminuzione dei costi. Invece i rialzi sono più contenuti e sono dovuti, principalmente, ai periodi in cui avevamo bisogno di ore aggiuntive per il ruolo di verificatore.
+Osservando il grafico si nota come, soprattutto all'inizio, le stime dei costi totali si discostavano dal costo preventivato (BAC). Ciò è dovuto, per lo più, al fatto che all'inizio avevamo previsto un maggior numero di ore per il ruolo di Analista al fine di redigere il documento #gloss[Analisi dei Requisiti] negli sprint 2 e 3 per questo, in tali periodi, si è verificata una diminuzione dei costi. Invece i rialzi sono più contenuti e sono dovuti, principalmente, ai periodi in cui avevamo bisogno di ore aggiuntive per il ruolo di verificatore.
 
 == MPC-EV(Estimated Value) - MPC-PV(Planned Value)
 #figure(
@@ -651,7 +651,7 @@ In ogni caso dal grafico si può notare che il team ha avuto una buona prevision
   ],
 )
 Dal grafico risulta che nei primi sprint una parte delle metriche di qualità non sono state soddisfatte o non hanno raggiunto un valore accettabile e questo è dovuto ad una iniziale inesperienza da parte dei membri del team, i quali, però, hanno capito questi errori apprendendo da essi e migliorando come gruppo.
-Questo fino a raggiungere valori accettabili e in seguito ottimi soprattutto negli ultimi sprint dimostrando un miglioramento nel way of working e nei risultati ottenuti.
+Questo fino a raggiungere valori accettabili e in seguito ottimi soprattutto negli ultimi sprint dimostrando un miglioramento nel #gloss[way of working] e nei risultati ottenuti.
 
 = Processi di automiglioramento
 == Introduzione
