@@ -182,7 +182,7 @@ Indica il numero di errori ortografici presenti nella documentazione.
   "\u{2265}60",
   "MPC-CO",
   "Correttezza ortografica",
-  "0",
+  "3",
   "0",
 ))
 
@@ -642,6 +642,16 @@ Per il resto dei documenti l'indice Gulpease è sopra l'ottimo per la maggior pa
 )
 Il grafico mostra come per la maggior parte degli sprint non si siano verificati rischi non calcolati, ma solo nello sprint 3 abbiamo avuto un problema di comunicazione interna al gruppo che ha richiesto un incontro con il professore Tullio Vardanega e che in seguito si è risolto.
 In ogni caso dal grafico si può notare che il team ha avuto una buona previsione dei rischi.
+
+== MPC-QMS(Quality Metric Satisfied)
+#figure(
+  image("../imgs/SwePdQQMS.png", width: 100%),
+  caption: [
+    Stima della percentuale di metriche di qualità soddisfatte durante i vari sprint.
+  ],
+)
+Dal grafico risulta che nei primi sprint una parte delle metriche di qualità non sono state soddisfatte o non hanno raggiunto un valore accettabile e questo è dovuto ad una iniziale inesperienza da parte dei membri del team, i quali, però, hanno capito questi errori apprendendo da essi e migliorando come gruppo.
+Questo fino a raggiungere valori accettabili e in seguito ottimi soprattutto negli ultimi sprint dimostrando un miglioramento nel way of working e nei risultati ottenuti.
 
 = Processi di automiglioramento
 == Introduzione
