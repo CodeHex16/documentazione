@@ -5,7 +5,6 @@
   email: "unipd.codehex16@gmail.com",
   destinatari: ("Prof. Vardanega Tullio", "Prof. Cardin Riccardo"),
   fase: [Candidatura],
-  versioni: ("0.1.0", "", "", "",),
   data: [],
   sommario: [],
   ruoli: (),
