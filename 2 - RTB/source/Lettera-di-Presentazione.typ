@@ -52,4 +52,4 @@ Di seguito, vengono forniti nome, cognome e numero di matricola dei membri del g
   "Luca Rossi", "2042374",
   "Yi Hao Zhuo", "2044939",
 )
-Rimaniamo in attesa di una Vostro riscontro.
+Rimaniamo in attesa di un Vostro riscontro.
