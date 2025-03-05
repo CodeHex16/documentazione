@@ -27,7 +27,7 @@
     "04/03/2025",
     "Francesco Fragonas",
     "Sistemazione indice",
-    "",
+    "Gabriele Magnelli",
     "0.6.0",
     "26/02/2025",
     "Gabriele Magnelli",
