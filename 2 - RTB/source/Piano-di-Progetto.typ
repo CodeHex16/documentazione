@@ -25,9 +25,14 @@
     "Yi Hao Zhuo",
     "Verificatore",
   ),
-  sommario: [],
+  sommario: [Piano di Progetto],
 
   versioni: (
+    "1.0.0",
+    "06/03/2025",
+    "Luca Ribon",
+    "Aggiunto resoconto RTB e correzioni finali",
+    "",
     "0.7.0",
     "01-03-2025",
     "Luca Rossi",
@@ -84,10 +89,11 @@ Il fornitore, tramite un'#gloss[interfaccia web] di amministrazione, potrà inse
 // Riportare le risorse (immagini, grafici, ecc...) utilizzate per la stesura del documento
 == Riferimenti
 === Riferimenti normativi
-- #link("https://docs.google.com/spreadsheets/d/16KMeeW7fNX_SnfywgynXvfblE6J0bMLXzpujRgH2c2Q/edit?gid=359634719#gid=359634719")[#underline("Google Fogli usato come consuntivo orario")]
+- #link("https://docs.google.com/spreadsheets/d/16KMeeW7fNX_SnfywgynXvfblE6J0bMLXzpujRgH2c2Q/edit?gid=359634719#gid=359634719")[#underline("Google Fogli usato come consuntivo orario")] _(ultima consultazione 06/03/2025)_
+- #link("https://github.com/orgs/CodeHex16/projects/1")[#underline("Project Board su GitHub")] _(ultima consultazione 06/03/2025)_
 === Riferimenti informativi
 - Slide T04 - Gestione di Progetto: https://codehex16.github.io/resources/slides/T4.pdf
-- Standard ISO/IEC 31000:2009 - Analisi dei rischi
+- Standard ISO/IEC 31000:2009 - Analisi dei rischi 
 
 
 // Decidere se riportare il preventivo fatto inizialmente o se fare riferimento al documento dedicato; da aggiornare con un resoconto dopo ogni fase
@@ -95,7 +101,7 @@ Il fornitore, tramite un'#gloss[interfaccia web] di amministrazione, potrà inse
 Il preventivo è stato calcolato considerando i costi orari dei diversi ruoli coinvolti e il numero stimato di ore per ciascuno, basandosi su un'analisi dettagliata delle attività necessarie per il progetto.
 Di seguito sono riportate tabelle riepilogative che mostrano sia il compenso totale che il compenso orario per ogni ruolo, oltre alla distribuzione delle ore tra i membri del team.
 
-== Dettagli Preventivo per Ruoli
+== Dettagli preventivo per ruoli
 
 #table(
   columns: (1.5fr, 1fr, 1fr, 1fr),
@@ -117,7 +123,7 @@ Di seguito sono riportate tabelle riepilogative che mostrano sia il compenso tot
   "Verificatore", "15", "140", "2100",
   "Totale", "", [*644 h*], [*€ 12.895*],
 )
-== Distribuzione delle Ore per Membri
+== Distribuzione delle ore per membri
 #table(
   columns: (2fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr),
   inset: 8pt,
@@ -159,24 +165,19 @@ L'approccio adottato prevede l'identificazione delle principali categorie di ris
 Secondo lo standard ISO/IEC 31000:2009, la gestione dei rischi si articola in cinque fasi chiave:
 
 1. *Identificazione dei rischi*:
-  #h(2em)
   - Riconoscere le fonti di rischio, le aree di impatto e le cause che potrebbero influenzare gli obiettivi del progetto.
   - Utilizzare attività di #gloss[brainstorming] per generare un elenco completo dei rischi potenziali e valutare le circostanze che potrebbero determinare il loro verificarsi.
 
 2. *Analisi dei rischi*:
-  #h(2em)
   - Valutare la probabilità e l'impatto di ciascun rischio per comprenderne la gravità.
 
 3. *Valutazione dei rischi*:
-  #h(2em)
   - Stabilire le priorità tra i rischi identificati, determinando quali richiedono interventi immediati o piani di mitigazione.
 
 4. *Trattamento dei rischi*:
-  #h(2em)
   - Implementare misure per ridurre la probabilità di accadimento e minimizzare i danni, come azioni preventive, soluzioni tecniche o piani di emergenza.
 
 5. *Monitoraggio e revisione dei rischi*:
-  #h(2em)
   - Integrare il controllo dei rischi nel processo di gestione del progetto e effettuare verifiche periodiche per aggiornare la situazione.
 
 == Rischi organizzativi
@@ -187,7 +188,7 @@ Secondo lo standard ISO/IEC 31000:2009, la gestione dei rischi si articola in ci
   fill: (x, y) => if y == 0 { luma(180) } else if (y == 2 or y == 4) { luma(230) },
   table.header(table.cell(colspan: 2)[*Comunicazione inefficace*]),
   [*Descrizione*],
-  [Una comunicazione scarsa o inefficace tra i membri del team o tra team diversi può portare a fraintendimenti, errori e rallentamenti nei tempi di esecuzione],
+  [Una comunicazione scarsa o inefficace tra i membri del team può portare a fraintendimenti, errori e rallentamenti nei tempi di esecuzione],
 
   [*Probabilità*], [Alta],
   [*Pericolosità*], [Alta],
@@ -223,13 +224,13 @@ Secondo lo standard ISO/IEC 31000:2009, la gestione dei rischi si articola in ci
   [*Descrizione*],
   [Gli impegni accademici o personali dei membri del team possono interferire con il rispetto delle scadenze del progetto],
 
-  [*Probabilità*], [Media],
+  [*Probabilità*], [Alta],
   [*Pericolosità*], [Media],
   [*Rilevamento*],
   [Monitoraggio delle scadenze tramite #gloss[meeting] regolari e verifica delle disponibilità segnalate su un calendario condiviso in Google Fogli],
 
   [*Piano di contingenza*],
-  [Concordare una pianificazione flessibile basata sulle disponibilità indicate. In caso di necessità, ridistribuire le attività o posticipare #gloss[task] meno prioritari],
+  [Concordare una pianificazione flessibile basata sulle disponibilità indicate. In caso di necessità, ridistribuire le attività o posticipare #gloss[task] meno prioritarie],
 )
 
 == Rischi tecnici
@@ -240,9 +241,9 @@ Secondo lo standard ISO/IEC 31000:2009, la gestione dei rischi si articola in ci
   fill: (x, y) => if y == 0 { luma(180) } else if (y == 2 or y == 4) { luma(230) },
   table.header(table.cell(colspan: 2)[*Inesperienza*]),
   [*Descrizione*],
-  [Il team potrebbe non avere l'esperienza necessaria nelle competenze specifiche richieste dal progetto, portando a errori, inefficienze o rallentamenti nel lavoro],
+  [Il team potrebbe non avere l'esperienza necessaria con le competenze richieste dal progetto, portando a errori, inefficienze o rallentamenti nel lavoro],
 
-  [*Probabilità*], [Media],
+  [*Probabilità*], [Alta],
   [*Pericolosità*], [Media],
   [*Rilevamento*],
   [Valutazione delle competenze iniziali del team, feedback regolari durante il progresso del progetto],
@@ -263,7 +264,7 @@ Secondo lo standard ISO/IEC 31000:2009, la gestione dei rischi si articola in ci
   [*Pericolosità*], [Alta],
   [*Rilevamento*], [Monitoraggio continuo delle API e gestione di errori o malfunzionamenti],
   [*Piano di contingenza*],
-  [In caso di problemi, usare risposte predefinite o caching dei dati precedenti finché le API non sono nuovamente disponibili],
+  [In caso di errori gestirli in modo elegante ed eventualmente implementare un meccanismo di caching dei dati  in modo da colmare parzialmente l'assenza temporanea delle API],
 )
 
 == Rischi di analisi e progettazione
@@ -272,11 +273,11 @@ Secondo lo standard ISO/IEC 31000:2009, la gestione dei rischi si articola in ci
   inset: 8pt,
   align: (x, y) => if (y > 0) { left } else { center + horizon },
   fill: (x, y) => if y == 0 { luma(180) } else if (y == 2 or y == 4) { luma(230) },
-  table.header(table.cell(colspan: 2)[*Impegni personali e universitari*]),
+  table.header(table.cell(colspan: 2)[*Cambiamenti dei requisiti*]),
   [*Descrizione*],
   [Cambiamenti imprevisti richiesti dall'azienda #gloss[proponente] o da nuove esigenze emerse durante il progetto],
 
-  [*Probabilità*], [Alta],
+  [*Probabilità*], [Media],
   [*Pericolosità*], [Media],
   [*Rilevamento*], [Segnalazioni da parte del cliente o analisi delle modifiche richieste rispetto al piano iniziale],
   [*Piano di contingenza*],
@@ -336,24 +337,25 @@ Ciascun macroperiodo è composto da sprint di durata variabile (inizialmente di 
 
 Al termine di ogni macroperiodo, viene effettuata una revisione complessiva del lavoro svolto, analizzando l'aderenza agli obiettivi prefissati e pianificando le attività per la fase successiva.
 
-
-
 == Periodo RTB
-*Periodo*: 18/11/2024 - *IN CORSO*
+*Periodo*: 18/11/2024 - 07/03/2025 (data stimata)
 
 #pseudoheading[*Obiettivi principali*]
 
 - *Analisi dettagliata dei requisiti*: Identificazione e classificazione dei requisiti funzionali e non funzionali del progetto.
 - *Studio delle tecnologie*: Esplorazione delle tecnologie proposte e valutazione della loro adeguatezza.
-- *Proof of Concept (PoC)*: Realizzazione di una demo iniziale per verificare la fattibilità tecnica del progetto.
+- *Proof of Concept (PoC)*: Realizzazione di una demo iniziale per verificare la fattibilità tecnica del progetto utilizzando le tecnologie scelte.
 - *Documentazione*: Produzione dei documenti fondamentali, tra cui Analisi dei Requisiti, Glossario, Piano di Progetto e #gloss[Norme di Progetto].
 
 Durante questo periodo, il team ha lavorato intensamente sulla comprensione delle esigenze del cliente e sulla definizione delle basi tecnologiche. L'obiettivo era garantire che tutte le scelte progettuali e tecniche fossero ben motivate e supportate da un'adeguata analisi preliminare.
 
 === Sprint 1
 *Intervallo temporale*: 18/11/2024 - 24/11/2024
-
+#pseudoheading[*Restrospettiva*]
 Durante lo *Sprint 1*, della durata di una settimana, il gruppo si è concentrato principalmente sulla definizione delle tecnologie da utilizzare per il progetto. In seguito a una discussione con l'azienda proponente, sono stati analizzati i requisiti tecnologici, comprese le opzioni per lo sviluppo dell'app e la scelta degli strumenti da impiegare. Sono state inoltre avviate le attività per la stesura del glossario tecnico, con la creazione di una pagina web ad hoc per il glossario stesso.
+
+Durante lo sprint sono state individuate delle criticità relative ad una frequenza di rotazione dei ruoli troppo alta, date dall'inesperienza nella pianificazione di progetto; queste hanno portando ad un cambio di contesto per i membri troppo frequente e quindi inefficiente.\ 
+Per questo motivo si è deciso, dallo sprint successivo in poi, di aumentare la durata delle assegnazioni dei ruoli in base alle necessità. 
 
 #pseudoheading[*Attività svolte*]
 
@@ -381,8 +383,10 @@ Durante lo *Sprint 1*, della durata di una settimana, il gruppo si è concentrat
 
 === Sprint 2
 *Intervallo temporale*: 25/11/2024 - 01/12/2024
-
+#pseudoheading[*Retrospettiva*]
 Durante lo *Sprint 2*, il gruppo ha proseguito i lavori avviati nello Sprint 1, concentrandosi principalmente sull'elaborazione dei documenti fondamentali per il progetto. Sono state definite le attività relative ai documenti "Analisi dei Requisiti", "Glossario", "Norme di Progetto" e "Piano di Progetto". Inoltre, si è proceduto con l'aggiornamento dei ruoli dei membri del gruppo, tenendo conto delle necessità del progetto.
+
+Durante questo sprint il gruppo ha incontrato le prime difficoltà con l'utilizzo di GitHub, che ci concretizzavano in errori nel prodotto presente nella branch principale. Per questo si è deciso di normare l'utilizzo di branch come descritto nel documento "Norme di Progetto"; inoltre è stata introdotta la meccanica di branch protection, a cui sono state integrate delle GitHub Action, in modo da evitare che venissero introdotti nella branch principale documenti non verificati o sorgenti typst con errori di compilazione. 
 
 #pseudoheading[*Attività svolte*]
 
@@ -411,7 +415,7 @@ Durante lo *Sprint 2*, il gruppo ha proseguito i lavori avviati nello Sprint 1, 
 
 === Sprint 3
 *Intervallo temporale*: 02/12/2024 - 08/12/2024
-
+#pseudoheading[*Retrospettiva*]
 Durante lo *Sprint 3*, il gruppo ha continuato le attività avviate negli sprint precedenti, concentrandosi sul completamento e l'aggiornamento dei principali documenti di progetto. È stata effettuata una rotazione dei ruoli tra i membri del team per migliorare la distribuzione del carico di lavoro e consentire una maggiore flessibilità operativa. Inoltre, sono stati introdotti nuovi #gloss[branch] nel repository per gestire le #gloss[pull request] e mantenere una maggiore coerenza nella collaborazione.
 
 #pseudoheading[*Attività svolte*]
@@ -440,10 +444,12 @@ Durante lo *Sprint 3*, il gruppo ha continuato le attività avviate negli sprint
 
 === Sprint 4
 *Intervallo temporale*: 09/12/2024 - 22/12/2024
-
+#pseudoheading[*Retrospettiva*]
 Con lo *Sprint 4* il team ha deciso di estendere la durata degli sprint a due settimane per affrontare in modo più efficace task complesse e migliorare la gestione della rotazione dei ruoli. Durante questo sprint, il focus principale è stato la realizzazione del Proof of Concept (PoC) per il frontend, testando due framework diversi, #gloss[Svelte] e #gloss[Vue.js], e il proseguimento nella stesura dei principali documenti di progetto.
 
 Inoltre è stato svolto un *incontro online* con il referente dell'azienda Ergon Informatica per ottenere chiarimenti essenziali sull'utilizzo degli LLM e sulla struttura del sistema. Questo ha permesso di delineare meglio l'Analisi dei Requisiti e di avviare la pianificazione del Proof of Concept (PoC).
+
+Durante questo sprint ci si è resi conto che il gruppo iniziava ad essere più autonomo e le attività iniziavano ad essere di maggior durata; abbiamo quindi constatato che una durata degli sprint troppo rigida, come quella utilizzata fino ad allora, avrebbe rischiato di ridurre la produttività del gruppo. Per questo motivo si è deciso di aumentare la durata degli sprint.
 
 #pseudoheading[*Attività svolte*]
 
@@ -471,12 +477,14 @@ Inoltre è stato svolto un *incontro online* con il referente dell'azienda Ergon
 
 === Sprint 5
 *Intervallo temporale* : 23/12/2024 - 06/01/2025
-
+#pseudoheading[*Retrospettiva*]
 Con lo *Sprint 5* il team ha scelto in modo definitivo il nome della webapp e sarà: *#gloss[Suppl-AI]* nome scelto dalla fusione delle parole "Supply"(fornitura) e "AI"(Artificial Intelligence) e si è deciso il framework da usare per la parte frontend della webapp, cioè *Svelte*.
 
 Inoltre, per essere il più efficiente possibile, il team non ha seguito la rotazione circolare dei ruoli, ma questi sono stati assegnati in base alle attività svolte precedentemente da ogni membro del gruppo.
 
 In generale, durante questo sprint, si è continuata la stesura dei documenti principali del progetto.
+
+In questo sprint abbiamo anche cercato di anticipare il calo di produttività dato dalle festività natalizie e dall'avvicinarsi della sessione invernale, per questo abbiamo cercato di adattare e distribuire il carico di lavoro al periodo. 
 
 #pseudoheading[*Attività svolte*]
 
@@ -504,11 +512,11 @@ In generale, durante questo sprint, si è continuata la stesura dei documenti pr
 
 === Sprint 6
 *Intervallo temporale*: 07/01/2025 - 20/01/2025
-
+#pseudoheading[*Retrospettiva*]
 Con lo *Sprint 6*, il team ha proseguito nella stesura della documentazione principale del progetto.
 Inoltre, sono stati integrati i diagrammi #gloss[UML] degli use case.
 
-Un punto chiave di questo sprint è stato l’incontro con il proponente, durante il quale il team ha verificato la completezza degli Use Case e presentato la scelta dell’LLM
+Un punto chiave di questo sprint è stato l’incontro con il proponente, durante il quale il team ha verificato la completezza degli Use Case e presentato la scelta dell’LLM.
 
 #pseudoheading[*Attività svolte*]
 
@@ -535,8 +543,11 @@ Un punto chiave di questo sprint è stato l’incontro con il proponente, durant
 
 === Sprint 7
 *Intervallo temporale*: 21/01/2025 - 10/02/2025
-
+#pseudoheading[*Retrospettiva*]
 Durante lo *Sprint 7*, il team ha completato diverse attività legate alla documentazione. Inoltre, sono stati definiti gli aspetti architetturali del *Proof of Concept* (PoC).
+
+Inoltre abbiamo constatato che la strategia di assegnazione delle attività adottata dallo Sprint 5 è stata discretamente efficace dato che ha permesso di completare quasi tutte le task assegnate nonostante il periodo impegnativo. 
+Abbiamo inoltre deciso di aumentare ulteriormente la durata degli sprint per poter progredire in modo più efficiente con la stesura dei documenti e lo sviluppo del PoC dato l'avvicinarsi della consegna prevista dell'RTB.
 
 #pseudoheading[*Attività svolte*]
 
@@ -562,18 +573,64 @@ Durante lo *Sprint 7*, il team ha completato diverse attività legate alla docum
   ],
 )
 
+=== Retrospettiva RTB
+// TODO: da aggiornare con i dati finali e da modificare mostrando differenze con il prenventivo
+#table(
+  columns: (1.5fr, 1fr, 1fr, 1fr),
+  inset: 8pt,
+  align: (x, y) => if (x == 0 and y > 0 and y < 7) { left } else { center + horizon },
+  fill: (x, y) => if (y == 0 or y == 7) { luma(230) },
+  table.header(
+    [*Ruolo*],
+    [*Costo/Ora*],
+    [*Ora/Ruolo*],
+    [*Totale Ruolo*],
+  ),
+
+  "Responsabile", "30", "63", "1890",
+  "Amministratore", "20", "70", "1400",
+  "Analista", "25", "75", "1875",
+  "Progettista", "25", "119", "2975",
+  "Programmatore", "15", "177", "2655",
+  "Verificatore", "15", "140", "2100",
+  "Totale", "", [*644 h*], [*€ 12.895*],
+) 
+#table(
+  columns: (2fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr),
+  inset: 8pt,
+  align: (x, y) => if (x == 0 and y > 0) { left } else { center + horizon },
+  fill: (x, y) => if y == 0 or x == 7 { luma(230) },
+  table.header(
+    [*Membro*],
+    [*Resp.*],
+    [*Amm.*],
+    [*Anal.*],
+    [*Proget.*],
+    [*Prog.*],
+    [*Verif.*],
+    [*Totale*],
+  ),
+
+  "Ribon", "9", "10", "11", "17", "25", "20", "92",
+  "Bazzan", "9", "10", "11", "17", "25", "20", "92",
+  "Fragonas", "9", "10", "11", "17", "25", "20", "92",
+  "Magnelli", "9", "10", "11", "17", "25", "20", "92",
+  "Sabbadin", "9", "10", "11", "17", "25", "20", "92",
+  "Rossi", "9", "10", "10", "17", "26", "20", "92",
+  "Zhuo", "9", "10", "10", "17", "26", "20", "92",
+)
+// TODO: parlare di rischi incontrati in generale del progetto, come sono stati gestiti, conseguenze...
 
 == Periodo PB
-*Periodo*: *DA DEFINIRE*
+Le documentazione relativa al periodo PB verrà redatta dopo il superamento della RTB.
 
+// == Periodo CA
+// Le documentazione relativa al periodo PB verrà redatta dopo il superamento della RTB.
 
-== Periodo CA
-*Periodo*: *DA DEFINIRE*
+// #pseudoheading[*Obiettivi principali*]
 
-#pseudoheading[*Obiettivi principali*]
-
-- *Validazione finale del prodotto*: Esecuzione di test conclusivi per garantire che il prodotto soddisfi tutti i requisiti.
-- *Ottimizzazioni finali*: Correzione degli ultimi bug e miglioramento delle prestazioni.
-- *Aggiornamento dei documenti*: Revisione e completamento della documentazione per la consegna finale.
-- *Consegna al cliente*: Preparazione e presentazione del prodotto finale.
-L'obiettivo principale di questo periodo è stato garantire che il prodotto fosse pronto per l'accettazione finale da parte del cliente, con particolare attenzione alla qualità e alla completezza.
+// - *Validazione finale del prodotto*: Esecuzione di test conclusivi per garantire che il prodotto soddisfi tutti i requisiti.
+// - *Ottimizzazioni finali*: Correzione degli ultimi bug e miglioramento delle prestazioni.
+// - *Aggiornamento dei documenti*: Revisione e completamento della documentazione per la consegna finale.
+// - *Consegna al cliente*: Preparazione e presentazione del prodotto finale.
+// L'obiettivo principale di questo periodo è stato garantire che il prodotto fosse pronto per l'accettazione finale da parte del cliente, con particolare attenzione alla qualità e alla completezza.
