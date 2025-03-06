@@ -487,7 +487,7 @@ Per ogni test viene specificato lo *stato* di completamento, che può essere:
 - Fallito
 - Non implementato
 
-Nella seguente versione del documento, dedicata all'#gloss[RTB], è prevista la definizone di Test di Sistema e Test di Accettazione.
+Nella seguente versione del documento, dedicata all'#gloss[RTB], è prevista la definizione di Test di Sistema e Test di Accettazione.
 
 // === Test di Unità
 // I test di unità sono utilizzati per verificare il corretto funzionamento delle singole componenti del software. Vengono
@@ -729,7 +729,7 @@ Esempi applicati al progetto:
   "Verificare la possibilità di gestire le chat sia come Cliente che come Fornitore",
   "Non Implementato",
   "TA-005",
-  "Verficare la possibilità di valutare le risposte del chatbot, sia come Cliente che come Fornitore",
+  "Verificare la possibilità di valutare le risposte del chatbot, sia come Cliente che come Fornitore",
   "Non Implementato",
   "TA-006",
   "Verificare che il fornitore possa personalizzare l'interfaccia della piattaforma",
@@ -869,10 +869,10 @@ adottata.
     "Per organizzarsi meglio sulla stesura e stile dei documenti, si è fatto in modo che ogni documento prenda lo stile dallo stesso file, in modo da facilitarne anche la modifica",
     "Inizio progetto",
     "Alcuni lavori assegnati nella fase iniziale richiedevano troppo tempo per essere assegnati ad un solo membro",
-    "Il gruppo si è impegnato per fare in modo che le attività assegnate abbiano un livello di granularità più simile",
+    "Il gruppo si è impegnato per fare in modo che le attività assegnate abbiano un livello di granularità più fine",
     "Inizio progetto",
     "Inizialmente venivano inserite nella branch main (principale) modifiche che presentavano errori, spesso a causa della mancanza di verifica",
-    "Il problema è stato risolto attraverso l'utilizzo di branch protection, che controlla se il verificatore ha approvato le modifiche, se la tabella delle versioni è correttamente compilata e se la sorgente del documento compila correttamente",
+    "Il problema è stato risolto attraverso l'utilizzo di branch protection, che controlla se il verificatore ha approvato le modifiche, se la tabella delle versioni è correttamente compilata e se il codice sorgente del documento compila correttamente",
   ),
 )
 
