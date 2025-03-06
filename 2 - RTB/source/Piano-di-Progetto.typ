@@ -61,7 +61,7 @@
     "0.1.0",
     "24/10/2024",
     "Luca Ribon",
-    "Definizione della struttura base e definizone delle linee guida per la stesura",
+    "Definizione della struttura base e definizione delle linee guida per la stesura",
     "Filippo Sabbadin",
   ),
   doc,
@@ -80,9 +80,14 @@ Il documento #gloss[Piano di Progetto] ha come obbiettivo quello di definire le 
 == Scopo del prodotto
 Il prodotto consiste nella creazione di un'interfaccia in stile #gloss[chatbot], accessibile tramite interfaccia mobile, che delle aziende fornitrici possono configurare in modo che l'#gloss[assistente virtuale] conosca il contesto aziendale e possa rispondere alle domande dei clienti del #gloss[fornitore].
 L'assistente virtuale sfrutta un #gloss[LLM] per comprendere il contesto tramite l'analisi dei documenti aziendali.
-Il fornitore, tramite un'#gloss[interfaccia web] di amministrazione, potrà inserire i documenti aziendarli, memorizzare delle domande e delle risposte predefinite e gestire gli #gloss[account] dei clienti.
+Il fornitore, tramite un'#gloss[interfaccia web] di amministrazione, potrà inserire i documenti aziendali, memorizzare delle domande e delle risposte predefinite e gestire gli #gloss[account] dei clienti.
 // Riportare le risorse (immagini, grafici, ecc...) utilizzate per la stesura del documento
-== Risorse e riferimenti
+== Riferimenti
+=== Riferimenti normativi
+- #link("https://docs.google.com/spreadsheets/d/16KMeeW7fNX_SnfywgynXvfblE6J0bMLXzpujRgH2c2Q/edit?gid=359634719#gid=359634719")[#underline("Google Fogli usato come consuntivo orario")]
+=== Riferimenti informativi
+- Slide T04 - Gestione di Progetto: https://codehex16.github.io/resources/slides/T4.pdf
+- Standard ISO/IEC 31000:2009 - Analisi dei rischi
 
 
 // Decidere se riportare il preventivo fatto inizialmente o se fare riferimento al documento dedicato; da aggiornare con un resoconto dopo ogni fase
@@ -243,7 +248,7 @@ Secondo lo standard ISO/IEC 31000:2009, la gestione dei rischi si articola in ci
   [Valutazione delle competenze iniziali del team, feedback regolari durante il progresso del progetto],
 
   [*Piano di contingenza*],
-  [Studio indivuduale delle nuove tecnologie con allineamento continuo fra i membri del gruppo],
+  [Studio individuale delle nuove tecnologie con allineamento continuo fra i membri del gruppo],
 )
 #table(
   columns: (1fr, 2fr),

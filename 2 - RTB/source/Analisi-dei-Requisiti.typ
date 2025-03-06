@@ -129,14 +129,15 @@ nella seguente pagina web: #link("https://codehex16.github.io/glossario").
 #link("https://www.math.unipd.it/~tullio/IS-1/2024/Progetto/C7.pdf")
 
 === Riferimenti informativi:
-- Slide T05 del corso di Ingegneria del software - #gloss[Analisi dei requisiti]:
+- Slide T05 - #gloss[Analisi dei requisiti]:
 #link("https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T05.pdf")
 
 - "Analisi e descrizione delle funzionalità: #gloss[Use case] e relativi diagrammi (#gloss[UML])":
 #link("https://www.math.unipd.it/~rcardin/swea/2022/Diagrammi%20Use%20Case.pdf")
 
 - Glossario:
-#link("https://codehex16.github.io/glossario")
+  - Documento: #link("https://codehex16.github.io/docs/glossario/glossario.pdf");
+  - Pagina web: #link("https://codehex16.github.io/glossario.html");
 
 
 = Use Cases

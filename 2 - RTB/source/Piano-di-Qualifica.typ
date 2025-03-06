@@ -79,7 +79,7 @@ comprensione e lettura.
 
 == Riferimenti
 === Riferimenti normativi
-- Capitolato C7 - #gloss[LLM] : #gloss[Assistente Virtuale]
+- Capitolato C7 - #gloss[Assistente Virtuale] Ergon:
 #link("https://www.math.unipd.it/~tullio/IS-1/2024/Progetto/C7.pdf")
 
 - #gloss[Norme di Progetto]
@@ -103,6 +103,10 @@ comprensione e lettura.
     - ISO/IEC/IEEE 90003:2018 (versione applicata ai prodotti SW)
   - ISO 9004:2018 (qualità organizzativa - autovalutazione)
   - ISO/IEC 33020:2019.
+
+- Glossario:
+  - Documento: #link("https://codehex16.github.io/docs/glossario/glossario.pdf");
+  - Pagina web: #link("https://codehex16.github.io/glossario.html");
 
 = Metriche di qualità
 
