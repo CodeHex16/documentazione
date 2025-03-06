@@ -753,11 +753,11 @@ Esempi applicati al progetto:
 
 == MPC-EAC(Estimated At Completion)
 #figure(image("../imgs/SwePdQBacEac.png", width: 100%), caption: [
-  Stima del costo totale durante i vari sprint.
+  Stima del costo totale durante i vari #gloss[sprint].
 ])
 Osservando il grafico si nota come, soprattutto all'inizio, le stime dei costi totali si discostavano dal costo
 preventivato (BAC). Ciò è dovuto, per lo più, al fatto che all'inizio avevamo previsto un maggior numero di ore per il
-ruolo di Analista al fine di redigere il documento Analisi dei Requisiti negli sprint 2 e 3 per questo, in tali periodi,
+ruolo di Analista al fine di redigere il documento #gloss[Analisi dei Requisiti] negli sprint 2 e 3 per questo, in tali periodi,
 si è verificata una diminuzione dei costi. Invece i rialzi sono più contenuti e sono dovuti, principalmente, ai periodi
 in cui avevamo bisogno di ore aggiuntive per il ruolo di verificatore.
 
@@ -836,7 +836,7 @@ previsione dei rischi.
 Dal grafico risulta che nei primi sprint una parte delle metriche di qualità non sono state soddisfatte o non hanno
 raggiunto un valore accettabile e questo è dovuto ad una iniziale inesperienza da parte dei membri del team, i quali,
 però, hanno capito questi errori apprendendo da essi e migliorando come gruppo. Questo fino a raggiungere valori
-accettabili e in seguito ottimi soprattutto negli ultimi sprint dimostrando un miglioramento nel way of working e nei
+accettabili e in seguito ottimi soprattutto negli ultimi sprint dimostrando un miglioramento nel #gloss[way of working] e nei
 risultati ottenuti.
 
 = Processi di automiglioramento
