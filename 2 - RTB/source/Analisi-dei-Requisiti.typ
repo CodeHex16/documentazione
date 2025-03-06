@@ -82,22 +82,31 @@
 = Introduzione
 
 == Scopo e Descrizione del Prodotto
-Il progetto consiste nella realizzazione di un *#gloss[chatbot]* basato su modelli linguistici (*#gloss[LLM]*) pensato per i *fornitori* di beni, come bevande o alimenti, da offrire ai propri clienti. Questo sistema consente ai clienti di ottenere in modo semplice e immediato informazioni dettagliate sui prodotti o servizi disponibili, senza la necessità di contattare direttamente un operatore dell'azienda.
+Il progetto consiste nella realizzazione di un *#gloss[chatbot]* basato su modelli linguistici (*#gloss[LLM]*) pensato
+per i *fornitori* di beni, come bevande o alimenti, da offrire ai propri clienti. Questo sistema consente ai clienti di
+ottenere in modo semplice e immediato informazioni dettagliate sui prodotti o servizi disponibili, senza la necessità di
+contattare direttamente un operatore dell'azienda.
 
 Il chatbot si integra con un'interfaccia dedicata al #gloss[fornitore], che permette di:
 
-- Gestire i clienti e i documenti contenenti le informazioni di riferimento utilizzate dal modello linguistico per generare risposte accurate e personalizzate.
-- Personalizzare graficamente la piattaforma tramite l'inserimento del logo aziendale e la selezione di una palette colori.
+- Gestire i clienti e i documenti contenenti le informazioni di riferimento utilizzate dal modello linguistico per
+  generare risposte accurate e personalizzate.
+- Personalizzare graficamente la piattaforma tramite l'inserimento del logo aziendale e la selezione di una palette
+  colori.
 
 == Obiettivi del sistema
 - *Semplificazione del flusso informativo*: riduce i tempi di risposta alle richieste dei clienti e rende l'accesso alle
   informazioni rapido e indipendente da intermediari umani.
-- *Ottimizzazione della produttività aziendale*: automatizza la gestione delle richieste di informazioni, permettendo agli operatori di concentrarsi su attività di maggiore valore aggiunto.
-- *Esperienza utente migliorata*: garantisce risposte precise e aggiornate in qualsiasi momento, offrendo un'interazione fluida e accessibile.
+- *Ottimizzazione della produttività aziendale*: automatizza la gestione delle richieste di informazioni, permettendo agli
+  operatori di concentrarsi su attività di maggiore valore aggiunto.
+- *Esperienza utente migliorata*: garantisce risposte precise e aggiornate in qualsiasi momento, offrendo un'interazione
+  fluida e accessibile.
 
 == Utenti
-*Azienda fornitrice:* rappresenta l'azienda che fornisce beni o servizi ai propri clienti. Questo utente ha accesso a un'interfaccia web per la configurazione del chatbot e la gestione dei clienti oltre ad un interfaccia equivalente a quella del cliente per comunicare con il chatbot.
-*Cliente:* rappresenta il cliente finale che acquista i prodotti dal fornitore. Questo utente può interagire con il chatbot per ottenere informazioni sui prodotti o servizi offerti. 
+*Azienda fornitrice:* rappresenta l'azienda che fornisce beni o servizi ai propri clienti. Questo utente ha accesso a
+un'interfaccia web per la configurazione del chatbot e la gestione dei clienti oltre ad un interfaccia equivalente a
+quella del cliente per comunicare con il chatbot. *Cliente:* rappresenta il cliente finale che acquista i prodotti dal
+fornitore. Questo utente può interagire con il chatbot per ottenere informazioni sui prodotti o servizi offerti. 
 
 == Funzionalità del prodotto
 Il sistema dovrà offrire le seguenti funzionalità principali:
@@ -106,7 +115,8 @@ Il sistema dovrà offrire le seguenti funzionalità principali:
     - Ottenere descrizioni dettagliate di prodotti;
     - Conoscere disponibilità, varianti e caratteristiche tecniche di specifici articoli;
     - Ricevere suggerimenti basati su domande frequenti;
-    - Ottenere risposte personalizzate, generate utilizzando documenti aziendali archiviati nel sistema e il constesto della chat;
+    - Ottenere risposte personalizzate, generate utilizzando documenti aziendali archiviati nel sistema e il constesto della
+      chat;
   - Fornire #gloss[feedback] sul grado di soddisfazione delle risposte ricevute, per migliorare la qualità del sistema.
 - *Per le aziende:*
   - Gestire clienti e documenti attraverso un'interfaccia di amministrazione #gloss[user-friendly].
@@ -147,7 +157,8 @@ Nelle seguenti sezioni verranno descritti tutti i possibili casi d'uso, cioè tu
 più avanti, possono interagire con l'applicazione.
 
 == Attori
-*Amministratore*: rappresenta la persona o il gruppo di persone che si occupa della distribuzione e configurazione del sistema per tutti i fornitori. Gestisce anche gli #gloss[account] dei fornitori.\
+*Amministratore*: rappresenta la persona o il gruppo di persone che si occupa della distribuzione e configurazione del
+sistema per tutti i fornitori. Gestisce anche gli #gloss[account] dei fornitori.\
 In questo caso va interpretato come l'azienda Ergon Informatica Srl.\
 *Cliente*: rappresenta il cliente finale che acquista prodotti dal fornitore e che ha la possibilità di interagire con
 il chatbot del fornitore per ottenere informazioni sui prodotti o servizi offerti.\
@@ -163,10 +174,7 @@ completato l'autenticazione.\
 #figure(image("../imgs/attori.png", width: 70%), caption: "Lista degli attori")
 
 == UC1 - Login
-#figure(
-  image("../imgs/inserimento-email-password.png", width: 90%),
-  caption: "Login",
-)
+#figure(image("../imgs/inserimento-email-password.png", width: 90%), caption: "Login")
 *Attori principali:*
 - Utente non autenticato;
 *Descrizione:*
@@ -862,9 +870,10 @@ completato l'autenticazione.\
 - Viene richiesta la password del fornitore per confermare l'eliminazione;
 - Il sistema elimina il documento dalla piattaforma;
 *Estensioni:*
-- Inserimento password;
 - Invio richiesta con dati mancanti o errati;
 - Sistema non raggiungibile;
+*Inclusioni:*
+- Inserimento password;
 
 == UC35 - Aggiunta delle FAQ
 #figure(image("../imgs/aggiunta-faq.png", width: 90%), caption: "Aggiunta delle FAQ")
@@ -937,9 +946,10 @@ completato l'autenticazione.\
 - Viene richiesta la password del fornitore per confermare l'eliminazione;
 - Il sistema elimina la FAQ dalla piattaforma;
 *Estensioni:*
-- Inserimento password;
 - Invio richiesta con dati mancanti o errati;
 - Sistema non raggiungibile;
+*Inclusioni:*
+- Inserimento password;
 
 == UC39 - Sistema non raggiungibile
 *Attori principali:*
@@ -979,7 +989,8 @@ con:
 - *Numero*: numero progressivo che identifica il requisito, parte da 01.
 - *Tipo*: può essere
   - *F*: requisito funzionale, indica una funzionalità del sistema;
-  - *Q*: requisito di qualità, definisce le caratteristiche della qualità del prodotto, come un sistema deve essere o come il sistema deve esibirsi, per soddisfare le esigenze dell'utente;
+  - *Q*: requisito di qualità, definisce le caratteristiche della qualità del prodotto, come un sistema deve essere o come
+    il sistema deve esibirsi, per soddisfare le esigenze dell'utente;
   - *V*: requisito di vincolo, ovvero limiti e restrizioni imposte dal capitolato;
 - *Priorità*: può essere
   - *O*: Obbligatorio, viene richiesto dal #gloss[proponente] ed è necessario per considerare il prodotto completo;
@@ -1168,49 +1179,65 @@ con:
     align: center + horizon,
     fill: (x, y) => if (y == 0) { luma(230) },
     table.header([*ID Requisito*], [*Descrizione*], [*Fonte*]),
-    "R-01-Q-O", "È richiesta la presentazione della documentazione che descrive la progettazione architetturale", "Capitolato",
-    "R-02-Q-O", "È richiesta la presentazione della documentazione che presenta le tecnologie utilizzate", "Capitolato",
-    "R-03-Q-O", "È richiesta la presentazione della documentazione che descrive la progettazione della base di dati", "Capitolato",
-    "R-04-Q-O", "È richiesta la presentazione della documentazione che descrive l'implementazione del sistema di raccomandazione utilizzato con LLM", "Capitolato",
-    "R-05-Q-O", "Tutte le attività del progetto devono essere svolte rispettando le Norme di Progetto", "Riunione interna",
+    "R-01-Q-O",
+    "È richiesta la presentazione della documentazione che descrive la progettazione architetturale",
+    "Capitolato",
+    "R-02-Q-O",
+    "È richiesta la presentazione della documentazione che presenta le tecnologie utilizzate",
+    "Capitolato",
+    "R-03-Q-O",
+    "È richiesta la presentazione della documentazione che descrive la progettazione della base di dati",
+    "Capitolato",
+    "R-04-Q-O",
+    "È richiesta la presentazione della documentazione che descrive l'implementazione del sistema di raccomandazione utilizzato con LLM",
+    "Capitolato",
+    "R-05-Q-O",
+    "Tutte le attività del progetto devono essere svolte rispettando le Norme di Progetto",
+    "Riunione interna",
   ),
 )
 
 == Requisiti di vincolo
 #show figure: set block(breakable: true)
-#figure(
-  caption: [Requisiti di vincolo],
-  table(
-    columns: (1fr, 2fr, 1fr),
-    inset: 8pt,
-    align: center + horizon,
-    fill: (x, y) => if (y == 0) { luma(230) },
-    table.header([*ID Requisito*], [*Descrizione*], [*Fonte*]),
-    "R-01-V-O",
-    "L'interfaccia dedicata al cliente deve essere fruibile da dispositivi mobile e user friendly",
-    "Capitolato",
-    "R-02-V-O",
-    "L'interfaccia di configurazione del fornitore deve essere un'interfaccia web",
-    "Capitolato",
-    "R-03-V-O",
-    "Tutto il codice e la documentazione vanno salvati all'interno di un repository pubblico",
-    "Capitolato",
-  ),
-)
+#figure(caption: [Requisiti di vincolo], table(
+  columns: (1fr, 2fr, 1fr),
+  inset: 8pt,
+  align: center + horizon,
+  fill: (x, y) => if (y == 0) { luma(230) },
+  table.header([*ID Requisito*], [*Descrizione*], [*Fonte*]),
+  "R-01-V-O",
+  "L'interfaccia dedicata al cliente deve essere fruibile da dispositivi mobile e user friendly",
+  "Capitolato",
+  "R-02-V-O",
+  "L'interfaccia di configurazione del fornitore deve essere un'interfaccia web",
+  "Capitolato",
+  "R-03-V-O",
+  "Tutto il codice e la documentazione vanno salvati all'interno di un repository pubblico",
+  "Capitolato",
+))
 
 == Riepilogo
 #show figure: set block(breakable: true)
-#figure(
-  caption: [Riepilogo],
-  table(
-    columns: (0.75fr, 0.5fr, 0.5fr, 0.5fr),
-    inset: 8pt,
-    align: center + horizon,
-    fill: (x, y) => if (y == 0 or y == 4) { luma(230) },
-    table.header([*Tipo di requisiti*], [*Obbligatori*], [*Desiderabili*], [*Totale*]),
-    "Funzionali", "32", "7", "39",
-    "Qualità", "5", "0", "5",
-    "Vincolo", "3", "0", "3",
-    "Totale", "40", "7", "47",
-  ),
-)
+#figure(caption: [Riepilogo], table(
+  columns: (0.75fr, 0.5fr, 0.5fr, 0.5fr),
+  inset: 8pt,
+  align: center + horizon,
+  fill: (x, y) => if (y == 0 or y == 4) { luma(230) },
+  table.header([*Tipo di requisiti*], [*Obbligatori*], [*Desiderabili*], [*Totale*]),
+  "Funzionali",
+  "32",
+  "7",
+  "39",
+  "Qualità",
+  "5",
+  "0",
+  "5",
+  "Vincolo",
+  "3",
+  "0",
+  "3",
+  "Totale",
+  "40",
+  "7",
+  "47",
+))
