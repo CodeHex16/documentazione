@@ -18,7 +18,7 @@
   "Verificatore",
 ), sommario: [Piano di qualifica], versioni: (
   "1.0.0",
-  "02/03/2025",
+  "05/03/2025",
   "Luca Ribon",
   "Migliorata sezione Metodologie di testing",
   "Filippo Sabbadin",
