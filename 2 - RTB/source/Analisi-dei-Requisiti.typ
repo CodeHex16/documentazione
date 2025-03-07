@@ -137,21 +137,22 @@ nella seguente pagina web: #link("https://codehex16.github.io/glossario").
 
 == Riferimenti
 === Riferimenti normativi:
-- #gloss[Norme di progetto] v1.0.0:
-#link("https://codehex16.github.io/docs/2%20-%20RTB/Norme-di-Progetto.pdf")
+- #gloss[Norme di progetto] _(versione 1.0.0)_:
+#link("https://codehex16.github.io/docs/2%20-%20RTB/Norme-di-Progetto.pdf");
 
 - Capitolato C7 - #gloss[Assistente Virtuale] Ergon:
-#link("https://www.math.unipd.it/~tullio/IS-1/2024/Progetto/C7.pdf")
+#link("https://www.math.unipd.it/~tullio/IS-1/2024/Progetto/C7.pdf");
 
 === Riferimenti informativi:
 - Slide T05 del corso di Ingegneria del software - #gloss[Analisi dei requisiti]:
-#link("https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T05.pdf")
+#link("https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T05.pdf");
 
 - "Analisi e descrizione delle funzionalità: #gloss[Use case] e relativi diagrammi (#gloss[UML])":
-#link("https://www.math.unipd.it/~rcardin/swea/2022/Diagrammi%20Use%20Case.pdf")
+#link("https://www.math.unipd.it/~rcardin/swea/2022/Diagrammi%20Use%20Case.pdf");
 
 - Glossario:
-#link("https://codehex16.github.io/glossario")
+  - Documento: #link("https://codehex16.github.io/docs/glossario/glossario.pdf") _(versione 1.0.0)_;
+  - Pagina web: #link("https://codehex16.github.io/glossario.html") _(ultima consultazione 06-03-2025)_;
 
 
 = Use Cases
