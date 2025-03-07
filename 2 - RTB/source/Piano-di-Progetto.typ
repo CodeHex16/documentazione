@@ -336,8 +336,6 @@ Le seguenti tabelle rappresentano un resoconto delle ore svolte dal gruppo con i
     Ore e costo per ciascun ruolo aggiornate al termine del periodo RTB
   ],
 )
-Dall'analisi della retrospettiva del periodo RTB il gruppo ha notato una distribuzione disomogenea delle ore svolte dai singoli individui relativamente ai diversi ruoli.\
-La motivazione principale di questa disomogeneità è stato 
 
 #figure(
 table(
@@ -368,6 +366,10 @@ caption: [
   Ore per ciascun membro del gruppo, suddivise per ruolo, aggiornate al termine del periodo RTB
 ],
 )
+Dall'analisi della retrospettiva del periodo RTB il gruppo ha notato una distribuzione disomogenea delle ore svolte dai singoli individui relativamente ai diversi ruoli.\
+La motivazione principale di questa disomogeneità è stata la scelta di assegnare le attività in base alle competenze, in modo da garantire un'efficace gestione delle risorse e una maggiore efficienza nel lavoro. \
+Comprendiamo, però, che il modo corretto di ovviare all'inesperienza dei singoli membri è quello di comunicare e diffondere le conoscenze tra i membri del gruppo, per questo nel prossimo periodo il gruppo si impegnerà maggiormente nel fornire feedback e spiegazioni in modo reciproco. Inoltre ogni membro del gruppo si impegnerà ad approfondire autonomamente le tecnologie e le competenze necessarie per il progetto. 
+
 === Aggiornamento preventivo
 Analizzando la retrospettiva del periodo RTB il gruppo ha deciso di rivedere il preventivo iniziale senza però apportare modifiche ad ore e costi totali. \ 
 Infatti le modifiche apportate riguardano solo una riorganizzazione delle ore tra i vari ruoli; nella tabella seguente sono riportate le ore e i costi aggiornati a seguito della riorganizzazione e nella colonna "Variazione ore" vengono mostrate le ore aggiunte o rimosse al preventivo iniziale:
