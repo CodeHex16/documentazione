@@ -32,7 +32,7 @@
     "06/03/2025",
     "Luca Ribon",
     "Aggiunto Sprint 8, resoconto RTB e correzioni finali",
-    "",
+    "Matteo Bazzan",
     "0.7.0",
     "01-03-2025",
     "Luca Rossi",
