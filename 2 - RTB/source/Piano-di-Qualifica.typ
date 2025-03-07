@@ -84,9 +84,9 @@ comprensione e lettura.
 
 - #gloss[Norme di Progetto]
 === Riferimenti informativi
-- Slide T08 - Qualità di processo: #link("https://codehex16.github.io/resources/slides/T8.pdf") #emph("(ultima consultazione 06-03-2025)");
+- Slide T08 - Qualità di processo: #link("https://codehex16.github.io/resources/slides/T8.pdf") _(ultima consultazione 06-03-2025)_;
 
-- Slide T09 - Verifica e validazione #link("https://codehex16.github.io/resources/slides/T9.pdf") #emph("(ultima consultazione 07-03-2025)");
+- Slide T09 - Verifica e validazione #link("https://codehex16.github.io/resources/slides/T9.pdf") _(ultima consultazione 07-03-2025)_;
 
 = Metriche di qualità
 
