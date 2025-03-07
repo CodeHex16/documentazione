@@ -89,71 +89,17 @@ Il fornitore, tramite un'#gloss[interfaccia web] di amministrazione, potrà inse
 // Riportare le risorse (immagini, grafici, ecc...) utilizzate per la stesura del documento
 == Riferimenti
 === Riferimenti normativi
-- #link("https://docs.google.com/spreadsheets/d/16KMeeW7fNX_SnfywgynXvfblE6J0bMLXzpujRgH2c2Q/edit?gid=359634719#gid=359634719")[#underline("Google Fogli usato come consuntivo orario")] _(ultima consultazione 06/03/2025)_
-- #link("https://github.com/orgs/CodeHex16/projects/1")[#underline("Project Board su GitHub")] _(ultima consultazione 06/03/2025)_
+- #link("https://docs.google.com/spreadsheets/d/16KMeeW7fNX_SnfywgynXvfblE6J0bMLXzpujRgH2c2Q/edit?gid=359634719#gid=359634719")[#underline("Google Fogli usato come consuntivo orario")] _(ultima consultazione 07-03-2025)_;
+- #link("https://github.com/orgs/CodeHex16/projects/1")[#underline("Project Board su GitHub")] _(ultima consultazione 07-03-2025)_;
 === Riferimenti informativi
-- Slide T04 - Gestione di Progetto: https://codehex16.github.io/resources/slides/T4.pdf
-- Standard ISO/IEC 31000:2009 - Analisi dei rischi 
+- Slide T04 - Gestione di Progetto: https://codehex16.github.io/resources/slides/T4.pdf _(ultima consultazione 06-03-2025)_;
+- #link("https://www.iso.org/obp/ui/#iso:std:iso:31000:ed-1:v1:en")[#underline[Standard ISO/IEC 31000:2009]] _(versione v1)_;
+- Glossario:
+  - Documento: #link("https://codehex16.github.io/docs/glossario/glossario.pdf") _(versione 1.0.0)_;
+  - Pagina web: #link("https://codehex16.github.io/glossario.html") _(ultima consultazione 06-03-2025)_;
 
 
-// Decidere se riportare il preventivo fatto inizialmente o se fare riferimento al documento dedicato; da aggiornare con un resoconto dopo ogni fase
-= Preventivo
-Il preventivo è stato calcolato considerando i costi orari dei diversi ruoli coinvolti e il numero stimato di ore per ciascuno, basandosi su un'analisi dettagliata delle attività necessarie per il progetto.
-Di seguito sono riportate tabelle riepilogative che mostrano sia il compenso totale che il compenso orario per ogni ruolo, oltre alla distribuzione delle ore tra i membri del team.
-
-== Dettagli preventivo per ruoli
-
-#table(
-  columns: (1.5fr, 1fr, 1fr, 1fr),
-  inset: 8pt,
-  align: (x, y) => if (x == 0 and y > 0 and y < 7) { left } else { center + horizon },
-  fill: (x, y) => if (y == 0 or y == 7) { luma(230) },
-  table.header(
-    [*Ruolo*],
-    [*Costo/Ora*],
-    [*Ora/Ruolo*],
-    [*Totale Ruolo*],
-  ),
-
-  "Responsabile", "30", "63", "1890",
-  "Amministratore", "20", "70", "1400",
-  "Analista", "25", "75", "1875",
-  "Progettista", "25", "119", "2975",
-  "Programmatore", "15", "177", "2655",
-  "Verificatore", "15", "140", "2100",
-  "Totale", "", [*644 h*], [*€ 12.895*],
-)
-== Distribuzione delle ore per membri
-#table(
-  columns: (2fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr),
-  inset: 8pt,
-  align: (x, y) => if (x == 0 and y > 0) { left } else { center + horizon },
-  fill: (x, y) => if y == 0 or x == 7 { luma(230) },
-  table.header(
-    [*Membro*],
-    [*Resp.*],
-    [*Amm.*],
-    [*Anal.*],
-    [*Proget.*],
-    [*Prog.*],
-    [*Verif.*],
-    [*Totale*],
-  ),
-
-  "Ribon", "9", "10", "11", "17", "25", "20", "92",
-  "Bazzan", "9", "10", "11", "17", "25", "20", "92",
-  "Fragonas", "9", "10", "11", "17", "25", "20", "92",
-  "Magnelli", "9", "10", "11", "17", "25", "20", "92",
-  "Sabbadin", "9", "10", "11", "17", "25", "20", "92",
-  "Rossi", "9", "10", "10", "17", "26", "20", "92",
-  "Zhuo", "9", "10", "10", "17", "26", "20", "92",
-)
-
-- *Metodo di calcolo*: i costi orari sono stati stimati sulla base di #gloss[standard] di mercato e di esperienze precedenti. Le ore totali per ogni ruolo sono state calcolate considerando il numero di attività assegnate e il livello di complessità delle stesse.
-
-// Per ogni categoria descrivere i rischi, la probabilità che questi accadano, con che frequenza, le conseguenze e l'importanza di queste conseguenze, dei possibili modi per prevenirli o mitigarli.
 = Analisi dei rischi
-
 Questa sezione del Piano di Progetto ha lo scopo di identificare, analizzare e gestire i rischi che potrebbero influire sull'avanzamento delle attività e sul raggiungimento degli obiettivi prefissati. L'analisi dei rischi è essenziale per mitigare gli impatti di eventuali problematiche e garantire una gestione efficace delle difficoltà riscontrate durante lo sviluppo del progetto.
 
 L'approccio adottato prevede l'identificazione delle principali categorie di rischio, la valutazione del grado di pericolosità e la definizione di azioni preventive e piani di mitigazione per affrontare eventuali criticità. Le categorie principali considerate includono:
@@ -264,7 +210,7 @@ Secondo lo standard ISO/IEC 31000:2009, la gestione dei rischi si articola in ci
   [*Pericolosità*], [Alta],
   [*Rilevamento*], [Monitoraggio continuo delle API e gestione di errori o malfunzionamenti],
   [*Piano di contingenza*],
-  [In caso di errori gestirli in modo elegante ed eventualmente implementare un meccanismo di caching dei dati  in modo da colmare parzialmente l'assenza temporanea delle API],
+  [In caso di errori gestirli in modo elegante ed eventualmente implementare un meccanismo di caching dei dati in modo da colmare parzialmente l'assenza temporanea delle API],
 )
 
 == Rischi di analisi e progettazione
@@ -301,10 +247,166 @@ Secondo lo standard ISO/IEC 31000:2009, la gestione dei rischi si articola in ci
   [Revisione dell'architettura prima dello sviluppo avanzato, con correzioni tempestive in caso di problemi],
 )
 
-// Rischi effettivamente incontrati e come sono stati affrontati
-//= Difficoltà affrontate
+= Preventivo
+Il preventivo è stato calcolato considerando i costi orari dei diversi ruoli coinvolti e il numero stimato di ore per ciascuno, basandosi su un'analisi dettagliata delle attività necessarie per il progetto.
+Di seguito sono riportate tabelle riepilogative che mostrano sia il compenso totale che il compenso orario per ogni ruolo, oltre alla distribuzione delle ore tra i membri del team.
 
-// Spiegare pianificazione del lavoro (#gloss[sprint] da una settimana ecc...), metodo di lavoro, milestone e prodotti al raggiungimento di ogni milestone, cosa è stato fatto nei vari periodi atti al raggiungimento delle milestone
+#figure(
+  table(
+    columns: (1.5fr, 1fr, 1fr, 1fr),
+    inset: 8pt,
+    align: (x, y) => if (x == 0 and y > 0 and y < 7) { left } else { center + horizon },
+    fill: (x, y) => if (y == 0 or y == 7) { luma(230) },
+    table.header(
+      [*Ruolo*],
+      [*Costo/Ora*],
+      [*Ora/Ruolo*],
+      [*Totale Ruolo*],
+    ),
+
+    "Responsabile", "30", "63", "1890",
+    "Amministratore", "20", "70", "1400",
+    "Analista", "25", "75", "1875",
+    "Progettista", "25", "119", "2975",
+    "Programmatore", "15", "177", "2655",
+    "Verificatore", "15", "140", "2100",
+    "Totale", "", [*644 h*], [*€ 12.895*],
+  ),
+  caption: [
+    Preventivo di ore e costo per ciascun ruolo
+  ],
+)
+#figure(
+  table(
+    columns: (2fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr),
+    inset: 8pt,
+    align: (x, y) => if (x == 0 and y > 0) { left } else { center + horizon },
+    fill: (x, y) => if y == 0 or x == 7 { luma(230) },
+    table.header(
+      [*Membro*],
+      [*Resp.*],
+      [*Amm.*],
+      [*Anal.*],
+      [*Proget.*],
+      [*Prog.*],
+      [*Verif.*],
+      [*Totale*],
+    ),
+
+    "Ribon", "9", "10", "11", "17", "25", "20", "92",
+    "Bazzan", "9", "10", "11", "17", "25", "20", "92",
+    "Fragonas", "9", "10", "11", "17", "25", "20", "92",
+    "Magnelli", "9", "10", "11", "17", "25", "20", "92",
+    "Sabbadin", "9", "10", "11", "17", "25", "20", "92",
+    "Rossi", "9", "10", "10", "17", "26", "20", "92",
+    "Zhuo", "9", "10", "10", "17", "26", "20", "92",
+  ),
+  caption: [
+    Distribuzione delle ore di ciascun membro del gruppo, suddivise per ruolo
+  ],
+)
+
+*Metodo di calcolo*: i costi orari sono stati stimati sulla base di #gloss[standard] di mercato e di esperienze precedenti. Le ore totali per ogni ruolo sono state calcolate considerando il numero di attività assegnate e il livello di complessità delle stesse.
+
+== Retrospettiva RTB
+Le seguenti tabelle rappresentano un resoconto delle ore svolte dal gruppo con i relativi costi e delle ore svolte da ogni membro.
+#figure(
+  table(
+    columns: (1.2fr, 0.8fr, 0.8fr, 1fr, 1fr, 1fr),
+    inset: 8pt,
+    align: (x, y) => if (x == 0 and y > 0 and y < 7) { left } else { center + horizon },
+    fill: (x, y) => if (y == 0 or y == 7) { luma(230) },
+    table.header(
+      [*Ruolo*],
+      [*Costo/Ora*],
+      [*Ora/Ruolo*],
+      [#text(maroon)[*Ora/Ruolo Rimanenti*]],
+      [*Totale Ruolo*],
+      [#text(maroon)[*Costo attuale*]],
+    ),
+    "Responsabile", "30", "63", [#text(maroon)[21,5]], "1890", [#text(maroon)[1245]],
+    "Amministratore", "20", "70", [#text(maroon)[39]], "1400", [#text(maroon)[620]],
+    "Analista", "25", "75", [#text(maroon)[6,25]], "1875", [#text(maroon)[1718,75]],
+    "Progettista", "25", "119", [#text(maroon)[115,5]], "2975", [#text(maroon)[87,5]],
+    "Programmatore", "15", "177", [#text(maroon)[121,25]], "2655", [#text(maroon)[836,25]],
+    "Verificatore", "15", "140", [#text(maroon)[84,85]], "2100", [#text(maroon)[827,25]],
+    "Totale", "", [*644 h*], [#text(maroon)[*388,35 h*]], [*€ 12.895*], [#text(maroon)[*€ 5.334,75*]],
+  ),
+  caption: [
+    Ore e costo per ciascun ruolo aggiornate al termine del periodo RTB
+  ],
+)
+Dall'analisi della retrospettiva del periodo RTB il gruppo ha notato una distribuzione disomogenea delle ore svolte dai singoli individui relativamente ai diversi ruoli.\
+La motivazione principale di questa disomogeneità è stato 
+
+#figure(
+table(
+  columns: (2fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr),
+  inset: 8pt,
+  align: (x, y) => if (x == 0 and y > 0) { left } else { center + horizon },
+  fill: (x, y) => if y == 0 or x == 7 { luma(230) },
+  table.header(
+    [*Membro*],
+    [*Resp.*],
+    [*Amm.*],
+    [*Anal.*],
+    [*Proget.*],
+    [*Prog.*],
+    [*Verif.*],
+    [*Totale*],
+  ),
+
+  "Ribon", "7,25", "8", "31,25", "0", "3,25", "9,4", "59,15",
+  "Bazzan", "2", "1", "5", "3,5", "26,5", "8,45", "46,45",
+  "Fragonas", "11", "8", "0", "0", "17", "6,25", "42,25",
+  "Magnelli", "8,75", "11,5", "8,5", "0", "0", "8,5", "37,25",
+  "Sabbadin", "3", "0", "22", "0", "0", "10,5", "35,5",
+  "Rossi", "9,5", "1", "2", "0", "0", "5", "17,5",
+  "Zhuo", "0", "1,5", "0", "0", "9", "7,05", "17,55",
+),
+caption: [
+  Ore per ciascun membro del gruppo, suddivise per ruolo, aggiornate al termine del periodo RTB
+],
+)
+=== Aggiornamento preventivo
+Analizzando la retrospettiva del periodo RTB il gruppo ha deciso di rivedere il preventivo iniziale senza però apportare modifiche ad ore e costi totali. \ 
+Infatti le modifiche apportate riguardano solo una riorganizzazione delle ore tra i vari ruoli; nella tabella seguente sono riportate le ore e i costi aggiornati a seguito della riorganizzazione e nella colonna "Variazione ore" vengono mostrate le ore aggiunte o rimosse al preventivo iniziale:
+
+#figure(
+  table(
+    columns: (1.2fr, 0.8fr, 0.8fr, 0.8fr, 1fr, 1fr),
+    inset: 8pt,
+    align: (x, y) => if (x == 0 and y > 0 and y < 7) { left } else { center + horizon },
+    fill: (x, y) => if (y == 0 or y == 7) { luma(230) },
+    table.header(
+      [*Ruolo*],
+      [*Costo/Ora*],
+      [*Ora/Ruolo*],
+      [#text(maroon)[*Variazione ore*]],
+      [#text(maroon)[*Ora/Ruolo Rimanenti*]],
+      [*Totale ruolo*],
+    ),
+    "Responsabile", "30", "66", [#text(maroon)[+3]], [#text(maroon)[24,5]], [#text(maroon)[1980]],
+    "Amministratore", "20", "61", [#text(maroon)[-9]], [#text(maroon)[30]], [#text(maroon)[1220]],
+    "Analista", "25", "84", [#text(maroon)[+9]], [#text(maroon)[15,25]], [#text(maroon)[2100]],
+    "Progettista", "25", "110", [#text(maroon)[-9]], [#text(maroon)[106,5]], [#text(maroon)[2750]],
+    "Programmatore", "15", "185", [#text(maroon)[+8]], [#text(maroon)[129,25]], [#text(maroon)[2775]],
+    "Verificatore", "15", "138", [#text(maroon)[-2]], [#text(maroon)[82,85]], [#text(maroon)[2070]],
+    "Totale", "", [*644 h*], [#text(maroon)[*0 h*]], [#text(maroon)[*388,35 h*]], [*€ 12.895*],
+  ),
+  caption: [
+    Ore e costi per ciascun ruolo riorganizzate al termine del periodo RTB
+  ],
+)
+La necessità di riorganizzare la distribuzione ore è stata causata da una mancanza di esperienza e competenze nella pianificazione di progetto, che ha portato a stimare in modo errato le ore necessarie per alcune delle attività svolte nel periodo di RTB.\
+Di seguito sono riportate le motivazioni che hanno guidato questa riorganizzazione:
+- per il ruolo di *Responsabile* abbiamo preferito aggiungere 3 ore che, seppur poche, ci permetteranno di avere più margine di ore lavorative in caso di necessità; 
+- per il ruolo di *Amministratore* sono state rimosse 9 ore dato che buona parte della configurazione dell'ambiente di lavoro è già stata svolta; prevediamo che le ore rimanenti bastino per aggiornare i documenti associati a questo ruolo e per compiere eventuali attività di configurazione, legate allo sviluppo, che sorgeranno in futuro;
+- per il ruolo di *Analista* abbiamo ritenuto fondamentale aggiungere 9 ore per avere un buon margine in caso fosse necessario rivedere o aggiornare l'analisi dei requisiti;
+- per il ruolo di *Progettista* sono state rimosse 9 ore dato che abbiamo ritenuto le ore rimanenti eccessive per il ruolo in questione; questa sovrastima è stata causata da un errore, iniziale, di comprensione delle attività associate a questo ruolo;
+- abbiamo notato che il numero di ore impiegate per lo sviluppo del PoC è stato più alto del previsto, per questo abbiamo deciso di aggiungere 8 ore al ruolo di *Programmatore*;
+- il ruolo di *Verificatore* ha subito una riduzione di 2 ore dato che per questo ruolo non abbiamo individuato particolari necessità, quindi abbiamo ritenuto ragionevole ridurre le ore di questo ruolo per assegnarle ad altri ruoli che ne necessitano di più.
+
 = Pianificazione del lavoro
 La *pianificazione del progetto* si basa su un modello iterativo e incrementale, con lo scopo di garantire un monitoraggio continuo del progresso e una gestione efficace delle attività. Abbiamo deciso di suddividere il lavoro in sprint, ognuno dei quali inizia con un incontro per stabilire obiettivi e analizzare eventuali difficoltà, e si conclude con una retrospettiva sul lavoro svolto. Questo approccio ci ha permesso di adattarci rapidamente alle necessità del progetto, mantenendo una visione chiara delle priorità e dei risultati attesi.
 
@@ -325,7 +427,7 @@ Questo approccio consente una chiara distribuzione dei compiti, facilitando il c
 
 = Periodi di sviluppo
 == Introduzione
-Il progetto è stato suddiviso in tre macroperiodi principali, ciascuno associato a una milestone cruciale:
+Il progetto è stato suddiviso in tre macro periodi principali, ciascuno associato a una milestone cruciale:
 
 - *#gloss[RTB] (Requirements and Technology Baseline)*: Focus sull'#gloss[analisi dei requisiti], sulla definizione delle tecnologie e sulla preparazione di un Proof of Concept (#gloss[PoC]).
 - *#gloss[PB] (Product Baseline)*: Concentrato sull'implementazione delle funzionalità principali e sulla verifica dell'architettura progettata.
@@ -333,9 +435,9 @@ Il progetto è stato suddiviso in tre macroperiodi principali, ciascuno associat
 
 Questa suddivisione consente una chiara definizione degli obiettivi di breve e medio termine, facilitando il monitoraggio dell'avanzamento e l'identificazione tempestiva di eventuali criticità.
 
-Ciascun macroperiodo è composto da sprint di durata variabile (inizialmente di una settimana, poi portata a due settimane). Gli sprint rappresentano unità operative chiave, durante le quali vengono svolte attività specifiche con obiettivi ben definiti. Per ogni sprint, il team tiene una riunione iniziale per pianificare le task e una retrospettiva finale per valutare i risultati.
+Ciascun macro periodo è composto da sprint di durata variabile (inizialmente di una settimana, poi portata a due settimane). Gli sprint rappresentano unità operative chiave, durante le quali vengono svolte attività specifiche con obiettivi ben definiti. Per ogni sprint, il team tiene una riunione iniziale per pianificare le task e una retrospettiva finale per valutare i risultati.
 
-Al termine di ogni macroperiodo, viene effettuata una revisione complessiva del lavoro svolto, analizzando l'aderenza agli obiettivi prefissati e pianificando le attività per la fase successiva.
+Al termine di ogni macro periodo, viene effettuata una revisione complessiva del lavoro svolto, analizzando l'aderenza agli obiettivi prefissati e pianificando le attività per la fase successiva.
 
 == Periodo RTB
 *Periodo*: 18/11/2024 - 07/03/2025 (data stimata)
@@ -354,8 +456,8 @@ Durante questo periodo, il team ha lavorato intensamente sulla comprensione dell
 #pseudoheading[*Restrospettiva*]
 Durante lo *Sprint 1*, della durata di una settimana, il gruppo si è concentrato principalmente sulla definizione delle tecnologie da utilizzare per il progetto. In seguito a una discussione con l'azienda proponente, sono stati analizzati i requisiti tecnologici, comprese le opzioni per lo sviluppo dell'app e la scelta degli strumenti da impiegare. Sono state inoltre avviate le attività per la stesura del glossario tecnico, con la creazione di una pagina web ad hoc per il glossario stesso.
 
-Durante lo sprint sono state individuate delle criticità relative ad una frequenza di rotazione dei ruoli troppo alta, date dall'inesperienza nella pianificazione di progetto; queste hanno portando ad un cambio di contesto per i membri troppo frequente e quindi inefficiente.\ 
-Per questo motivo si è deciso, dallo sprint successivo in poi, di aumentare la durata delle assegnazioni dei ruoli in base alle necessità. 
+Durante lo sprint sono state individuate delle criticità relative ad una frequenza di rotazione dei ruoli troppo alta, date dall'inesperienza nella pianificazione di progetto; queste hanno portando ad un cambio di contesto per i membri troppo frequente e quindi inefficiente.\
+Per questo motivo si è deciso, dallo sprint successivo in poi, di aumentare la durata delle assegnazioni dei ruoli in base alle necessità.
 
 #pseudoheading[*Attività svolte*]
 
@@ -386,7 +488,7 @@ Per questo motivo si è deciso, dallo sprint successivo in poi, di aumentare la 
 #pseudoheading[*Retrospettiva*]
 Durante lo *Sprint 2*, il gruppo ha proseguito i lavori avviati nello Sprint 1, concentrandosi principalmente sull'elaborazione dei documenti fondamentali per il progetto. Sono state definite le attività relative ai documenti "Analisi dei Requisiti", "Glossario", "Norme di Progetto" e "Piano di Progetto". Inoltre, si è proceduto con l'aggiornamento dei ruoli dei membri del gruppo, tenendo conto delle necessità del progetto.
 
-Durante questo sprint il gruppo ha incontrato le prime difficoltà con l'utilizzo di GitHub, che ci concretizzavano in errori nel prodotto presente nella branch principale. Per questo si è deciso di normare l'utilizzo di branch come descritto nel documento "Norme di Progetto"; inoltre è stata introdotta la meccanica di branch protection, a cui sono state integrate delle GitHub Action, in modo da evitare che venissero introdotti nella branch principale documenti non verificati o sorgenti typst con errori di compilazione. 
+Durante questo sprint il gruppo ha incontrato le prime difficoltà con l'utilizzo di GitHub, che ci concretizzavano in errori nel prodotto presente nella branch principale. Per questo si è deciso di normare l'utilizzo di branch come descritto nel documento "Norme di Progetto"; inoltre è stata introdotta la meccanica di branch protection, a cui sono state integrate delle GitHub Action, in modo da evitare che venissero introdotti nella branch principale documenti non verificati o sorgenti typst con errori di compilazione.
 
 #pseudoheading[*Attività svolte*]
 
@@ -484,7 +586,7 @@ Inoltre, per essere il più efficiente possibile, il team non ha seguito la rota
 
 In generale, durante questo sprint, si è continuata la stesura dei documenti principali del progetto.
 
-In questo sprint abbiamo anche cercato di anticipare il calo di produttività dato dalle festività natalizie e dall'avvicinarsi della sessione invernale, per questo abbiamo cercato di adattare e distribuire il carico di lavoro al periodo. 
+In questo sprint abbiamo anche cercato di anticipare il calo di produttività dato dalle festività natalizie e dall'avvicinarsi della sessione invernale, per questo abbiamo cercato di adattare e distribuire il carico di lavoro al periodo.
 
 #pseudoheading[*Attività svolte*]
 
@@ -546,7 +648,7 @@ Un punto chiave di questo sprint è stato l’incontro con il proponente, durant
 #pseudoheading[*Retrospettiva*]
 Durante lo *Sprint 7*, il team ha completato diverse attività legate alla documentazione. Inoltre, sono stati definiti gli aspetti architetturali del *Proof of Concept* (PoC).
 
-Inoltre abbiamo constatato che la strategia di assegnazione delle attività adottata dallo Sprint 5 è stata discretamente efficace dato che ha permesso di completare quasi tutte le task assegnate nonostante il periodo impegnativo. 
+Inoltre abbiamo constatato che la strategia di assegnazione delle attività adottata dallo Sprint 5 è stata discretamente efficace dato che ha permesso di completare quasi tutte le task assegnate nonostante il periodo impegnativo.
 Abbiamo inoltre deciso di aumentare ulteriormente la durata degli sprint per poter progredire in modo più efficiente con la stesura dei documenti e lo sviluppo del PoC dato l'avvicinarsi della consegna prevista dell'RTB.
 
 #pseudoheading[*Attività svolte*]
@@ -572,55 +674,6 @@ Abbiamo inoltre deciso di aumentare ulteriormente la durata degli sprint per pot
     Suddivisione oraria per ruolo con relativi costi.
   ],
 )
-
-=== Retrospettiva RTB
-// TODO: da aggiornare con i dati finali e da modificare mostrando differenze con il prenventivo
-#table(
-  columns: (1.5fr, 1fr, 1fr, 1fr),
-  inset: 8pt,
-  align: (x, y) => if (x == 0 and y > 0 and y < 7) { left } else { center + horizon },
-  fill: (x, y) => if (y == 0 or y == 7) { luma(230) },
-  table.header(
-    [*Ruolo*],
-    [*Costo/Ora*],
-    [*Ora/Ruolo*],
-    [*Totale Ruolo*],
-  ),
-
-  "Responsabile", "30", "63", "1890",
-  "Amministratore", "20", "70", "1400",
-  "Analista", "25", "75", "1875",
-  "Progettista", "25", "119", "2975",
-  "Programmatore", "15", "177", "2655",
-  "Verificatore", "15", "140", "2100",
-  "Totale", "", [*644 h*], [*€ 12.895*],
-) 
-#table(
-  columns: (2fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr),
-  inset: 8pt,
-  align: (x, y) => if (x == 0 and y > 0) { left } else { center + horizon },
-  fill: (x, y) => if y == 0 or x == 7 { luma(230) },
-  table.header(
-    [*Membro*],
-    [*Resp.*],
-    [*Amm.*],
-    [*Anal.*],
-    [*Proget.*],
-    [*Prog.*],
-    [*Verif.*],
-    [*Totale*],
-  ),
-
-  "Ribon", "9", "10", "11", "17", "25", "20", "92",
-  "Bazzan", "9", "10", "11", "17", "25", "20", "92",
-  "Fragonas", "9", "10", "11", "17", "25", "20", "92",
-  "Magnelli", "9", "10", "11", "17", "25", "20", "92",
-  "Sabbadin", "9", "10", "11", "17", "25", "20", "92",
-  "Rossi", "9", "10", "10", "17", "26", "20", "92",
-  "Zhuo", "9", "10", "10", "17", "26", "20", "92",
-)
-// TODO: parlare di rischi incontrati in generale del progetto, come sono stati gestiti, conseguenze...
-
 == Periodo PB
 Le documentazione relativa al periodo PB verrà redatta dopo il superamento della RTB.
 
