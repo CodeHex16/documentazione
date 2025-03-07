@@ -17,6 +17,11 @@
   "Yi Hao Zhuo",
   "Verificatore",
 ), sommario: [Analisi dei requisiti del capitolato C7], versioni: (
+  "1.0.0",
+  "06/03/2025",
+  "Gabriele Magnelli",
+  "Varie migliorie",
+  "Matteo Bazzan",
   "0.9.0",
   "21/02/2025",
   "Filippo Sabbadin",
@@ -82,22 +87,31 @@
 = Introduzione
 
 == Scopo e Descrizione del Prodotto
-Il progetto consiste nella realizzazione di un *#gloss[chatbot]* basato su modelli linguistici (*#gloss[LLM]*) pensato per i *fornitori* di beni, come bevande o alimenti, da offrire ai propri clienti. Questo sistema consente ai clienti di ottenere in modo semplice e immediato informazioni dettagliate sui prodotti o servizi disponibili, senza la necessità di contattare direttamente un operatore dell'azienda.
+Il progetto consiste nella realizzazione di un *#gloss[chatbot]* basato su modelli linguistici (*#gloss[LLM]*) pensato
+per i *fornitori* di beni, come bevande o alimenti, da offrire ai propri clienti. Questo sistema consente ai clienti di
+ottenere in modo semplice e immediato informazioni dettagliate sui prodotti o servizi disponibili, senza la necessità di
+contattare direttamente un operatore dell'azienda.
 
 Il chatbot si integra con un'interfaccia dedicata al #gloss[fornitore], che permette di:
 
-- Gestire i clienti e i documenti contenenti le informazioni di riferimento utilizzate dal modello linguistico per generare risposte accurate e personalizzate.
-- Personalizzare graficamente la piattaforma tramite l'inserimento del logo aziendale e la selezione di una palette colori.
+- Gestire i clienti e i documenti contenenti le informazioni di riferimento utilizzate dal modello linguistico per
+  generare risposte accurate e personalizzate.
+- Personalizzare graficamente la piattaforma tramite l'inserimento del logo aziendale e la selezione di una palette
+  colori.
 
 == Obiettivi del sistema
 - *Semplificazione del flusso informativo*: riduce i tempi di risposta alle richieste dei clienti e rende l'accesso alle
   informazioni rapido e indipendente da intermediari umani.
-- *Ottimizzazione della produttività aziendale*: automatizza la gestione delle richieste di informazioni, permettendo agli operatori di concentrarsi su attività di maggiore valore aggiunto.
-- *Esperienza utente migliorata*: garantisce risposte precise e aggiornate in qualsiasi momento, offrendo un'interazione fluida e accessibile.
+- *Ottimizzazione della produttività aziendale*: automatizza la gestione delle richieste di informazioni, permettendo agli
+  operatori di concentrarsi su attività di maggiore valore aggiunto.
+- *Esperienza utente migliorata*: garantisce risposte precise e aggiornate in qualsiasi momento, offrendo un'interazione
+  fluida e accessibile.
 
 == Utenti
-*Azienda fornitrice:* rappresenta l'azienda che fornisce beni o servizi ai propri clienti. Questo utente ha accesso a un'interfaccia web per la configurazione del chatbot e la gestione dei clienti oltre ad un interfaccia equivalente a quella del cliente per comunicare con il chatbot.
-*Cliente:* rappresenta il cliente finale che acquista i prodotti dal fornitore. Questo utente può interagire con il chatbot per ottenere informazioni sui prodotti o servizi offerti. 
+*Azienda fornitrice:* rappresenta l'azienda che fornisce beni o servizi ai propri clienti. Questo utente ha accesso a
+un'interfaccia web per la configurazione del chatbot e la gestione dei clienti oltre ad un interfaccia equivalente a
+quella del cliente per comunicare con il chatbot. *Cliente:* rappresenta il cliente finale che acquista i prodotti dal
+fornitore. Questo utente può interagire con il chatbot per ottenere informazioni sui prodotti o servizi offerti. 
 
 == Funzionalità del prodotto
 Il sistema dovrà offrire le seguenti funzionalità principali:
@@ -106,7 +120,8 @@ Il sistema dovrà offrire le seguenti funzionalità principali:
     - Ottenere descrizioni dettagliate di prodotti;
     - Conoscere disponibilità, varianti e caratteristiche tecniche di specifici articoli;
     - Ricevere suggerimenti basati su domande frequenti;
-    - Ottenere risposte personalizzate, generate utilizzando documenti aziendali archiviati nel sistema e il constesto della chat;
+    - Ottenere risposte personalizzate, generate utilizzando documenti aziendali archiviati nel sistema e il constesto della
+      chat;
   - Fornire #gloss[feedback] sul grado di soddisfazione delle risposte ricevute, per migliorare la qualità del sistema.
 - *Per le aziende:*
   - Gestire clienti e documenti attraverso un'interfaccia di amministrazione #gloss[user-friendly].
@@ -122,21 +137,22 @@ nella seguente pagina web: #link("https://codehex16.github.io/glossario").
 
 == Riferimenti
 === Riferimenti normativi:
-- #gloss[Norme di progetto] v1.0.0:
-#link("https://codehex16.github.io/docs/2%20-%20RTB/Norme-di-Progetto.pdf")
+- #gloss[Norme di progetto] _(versione 1.0.0)_:
+#link("https://codehex16.github.io/docs/2%20-%20RTB/Norme-di-Progetto.pdf");
 
 - Capitolato C7 - #gloss[Assistente Virtuale] Ergon:
-#link("https://www.math.unipd.it/~tullio/IS-1/2024/Progetto/C7.pdf")
+#link("https://www.math.unipd.it/~tullio/IS-1/2024/Progetto/C7.pdf");
 
 === Riferimenti informativi:
 - Slide T05 del corso di Ingegneria del software - #gloss[Analisi dei requisiti]:
-#link("https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T05.pdf")
+#link("https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T05.pdf");
 
 - "Analisi e descrizione delle funzionalità: #gloss[Use case] e relativi diagrammi (#gloss[UML])":
-#link("https://www.math.unipd.it/~rcardin/swea/2022/Diagrammi%20Use%20Case.pdf")
+#link("https://www.math.unipd.it/~rcardin/swea/2022/Diagrammi%20Use%20Case.pdf");
 
 - Glossario:
-#link("https://codehex16.github.io/glossario")
+  - Documento: #link("https://codehex16.github.io/docs/glossario/glossario.pdf") _(versione 1.0.0)_;
+  - Pagina web: #link("https://codehex16.github.io/glossario.html") _(ultima consultazione 07-03-2025)_;
 
 
 = Use Cases
@@ -147,7 +163,8 @@ Nelle seguenti sezioni verranno descritti tutti i possibili casi d'uso, cioè tu
 più avanti, possono interagire con l'applicazione.
 
 == Attori
-*Amministratore*: rappresenta la persona o il gruppo di persone che si occupa della distribuzione e configurazione del sistema per tutti i fornitori. Gestisce anche gli #gloss[account] dei fornitori.\
+*Amministratore*: rappresenta la persona o il gruppo di persone che si occupa della distribuzione e configurazione del
+sistema per tutti i fornitori. Gestisce anche gli #gloss[account] dei fornitori.\
 In questo caso va interpretato come l'azienda Ergon Informatica Srl.\
 *Cliente*: rappresenta il cliente finale che acquista prodotti dal fornitore e che ha la possibilità di interagire con
 il chatbot del fornitore per ottenere informazioni sui prodotti o servizi offerti.\
@@ -163,10 +180,7 @@ completato l'autenticazione.\
 #figure(image("../imgs/attori.png", width: 70%), caption: "Lista degli attori")
 
 == UC1 - Login
-#figure(
-  image("../imgs/inserimento-email-password.png", width: 90%),
-  caption: "Login",
-)
+#figure(image("../imgs/inserimento-email-password.png", width: 90%), caption: "Login")
 *Attori principali:*
 - Utente non autenticato;
 *Descrizione:*
@@ -295,7 +309,7 @@ completato l'autenticazione.\
 *Precondizioni:*
 - L'utente ha selezionato l'opzione "Resta connesso";
 - Le credenziali dell'utente devono essere presenti nel sistema;
-- L'utente deve essere possedere le credenziali necessarie per l'accesso;
+- L'utente deve possedere le credenziali necessarie per l'accesso;
 - L'utente deve inserire le credenziali corrette;
 *Postcondizioni:*
 - È stata salvata la preferenza dell'utente relativa al salvataggio delle credenziali;
@@ -505,7 +519,7 @@ completato l'autenticazione.\
 - Il sistema notifica l'utente che il messaggio è troppo lungo;
 - Viene impedito l'invio del messaggio finché non viene rispettata la lunghezza massima;
 *Scenario Principale:*
-- L'utente digita il messaggio nella campo apposito all'interno della chat;
+- L'utente digita il messaggio nel campo apposito all'interno della chat;
 - Il sistema verifica la lunghezza del messaggio e, se questa supera la lunghezza massima, notifica l'utente;
 
 == UC17 - Scrittura messaggio tramite FAQ
@@ -517,7 +531,7 @@ completato l'autenticazione.\
 - L'utente deve aver effettuato il login;
 - L'utente deve aver aperto una singola chat;
 *Postcondizioni:*
-- L'utente ha scritto un messaggio utilizzando una delle domande preimpostati;
+- L'utente ha scritto un messaggio utilizzando una delle domande preimpostate;
 *Scenario Principale:*
 - L'utente, anziché scrivere un messaggio manualmente, decide di utilizzare un messaggio tra quelli preimpostati
   nell'applicazione; nel caso in cui l'LLM individua delle FAQ utili nel constesto della chat sarà il chatbot stesso a
@@ -623,9 +637,9 @@ completato l'autenticazione.\
 - Il fornitore deve aver effettuato il login;
 - Il fornitore deve accedere alle impostazioni;
 *Postcondizioni:*
-- Viene modificato limite di tempo di memorizzazione dello storico;
+- Viene modificato il limite di tempo di memorizzazione dello storico;
 *Scenario Principale:*
-- Il fornitore modifica il periodo di tempo su cui visualizare lo storico delle chat avvenute con il chatbot e lo
+- Il fornitore modifica il periodo di tempo su cui visualizzare lo storico delle chat avvenute con il chatbot e lo
   conferma;
 - Il sistema memorizza la nuova impostazione;
 *Estensioni:*
@@ -638,13 +652,13 @@ completato l'autenticazione.\
 - Un fornitore vuole caricare il proprio logo per personalizzare l'interfaccia della web-app;
 *Precondizioni:*
 - Il fornitore deve aver effettuato il login;
-- Il fornitore deve accedere alle impostazioni
+- Il fornitore deve accedere alle impostazioni;
 *Postcondizioni:*
 - Il sistema ha effettuato un controllo di validità del formato del logo, e se il logo è risultato valido lo ha inserito
   nell'interfaccia;
 *Scenario Principale:*
 - Il fornitore accede alla sezione "Carica logo" e inserisce il proprio logo;
-- Il sistema controlla il formato del logo caricato e se conforme lo utilizza nell'interaccia;
+- Il sistema controlla il formato del logo caricato e se conforme lo utilizza nell'interfaccia;
 *Estensioni*:
 - Formato file non valido;
 - Sistema non raggiungibile;
@@ -660,7 +674,7 @@ completato l'autenticazione.\
 - Il fornitore deve aver effettuato il login;
 - Il fornitore deve accedere alle impostazioni;
 *Postcondizioni:*
-- Il sistema ha modificato l'interfaccia con la palette di colori scelta il fornitore;
+- Il sistema ha modificato l'interfaccia con la palette di colori scelta dal fornitore;
 *Scenario Principale:*
 - Il fornitore entra nella sezione "Palette colori";
 - Il fornitore sceglie l'insieme di colori che comporranno la parte di palette personalizzabile; la scelta avviene tramite
@@ -750,7 +764,7 @@ completato l'autenticazione.\
 - Fornitore;
 *Descrizione:*
 - Un fornitore autenticato vuole aggiungere un account per un cliente in modo che quest'ultimo possa accedere al chatbot,
-  ma tenta di inserisce un account già esistente;
+  ma tenta di inserire un account già esistente;
 *Precondizioni:*
 - Il sistema ha ricevuto i parametri dell'account inseriti dal fornitore;
 *Postcondizioni:*
@@ -812,7 +826,7 @@ completato l'autenticazione.\
 *Attori principali:*
 - Fornitore;
 *Descrizione:*
-- Il fornitore ha cercato di caricare un file nella piattaforma ma formato non è tra quelli accettati;
+- Il fornitore ha cercato di caricare un file nella piattaforma ma il formato di tale file non è tra quelli accettati;
 *Precondizioni:*
 - Il fornitore deve aver effettuato il login;
 - Il fornitore ha caricato un file;
@@ -862,9 +876,10 @@ completato l'autenticazione.\
 - Viene richiesta la password del fornitore per confermare l'eliminazione;
 - Il sistema elimina il documento dalla piattaforma;
 *Estensioni:*
-- Inserimento password;
 - Invio richiesta con dati mancanti o errati;
 - Sistema non raggiungibile;
+*Inclusioni:*
+- Inserimento password;
 
 == UC35 - Aggiunta delle FAQ
 #figure(image("../imgs/aggiunta-faq.png", width: 90%), caption: "Aggiunta delle FAQ")
@@ -937,9 +952,10 @@ completato l'autenticazione.\
 - Viene richiesta la password del fornitore per confermare l'eliminazione;
 - Il sistema elimina la FAQ dalla piattaforma;
 *Estensioni:*
-- Inserimento password;
 - Invio richiesta con dati mancanti o errati;
 - Sistema non raggiungibile;
+*Inclusioni:*
+- Inserimento password;
 
 == UC39 - Sistema non raggiungibile
 *Attori principali:*
@@ -967,7 +983,7 @@ completato l'autenticazione.\
 - La richiesta non va a buon fine;
 *Scenario Principale:*
 - L'utente invia una richiesta al sistema, ma i dati utilizzati nella richiesta sono mancanti o errati; in alcuni casi
-  richieste come queste possono essere associate un utilizzo errato della piattaforma o un tentativo di attacco
+  richieste come queste possono essere associate ad un utilizzo errato della piattaforma o ad un tentativo di attacco
   informatico; 
 - Il sistema mostra un messaggio d'errore all'utente tramite il client dove spiega la causa dell'errore;
 
@@ -979,11 +995,12 @@ con:
 - *Numero*: numero progressivo che identifica il requisito, parte da 01.
 - *Tipo*: può essere
   - *F*: requisito funzionale, indica una funzionalità del sistema;
-  - *Q*: requisito di qualità, definisce le caratteristiche della qualità del prodotto, come un sistema deve essere o come il sistema deve esibirsi, per soddisfare le esigenze dell'utente;
+  - *Q*: requisito di qualità, definisce le caratteristiche della qualità del prodotto, come un sistema deve essere o come
+    il sistema deve esibirsi, per soddisfare le esigenze dell'utente;
   - *V*: requisito di vincolo, ovvero limiti e restrizioni imposte dal capitolato;
 - *Priorità*: può essere
   - *O*: Obbligatorio, viene richiesto dal #gloss[proponente] ed è necessario per considerare il prodotto completo;
-  - *D*: Desiderabile, non è strettamente necessario ma è valore aggiunto;
+  - *D*: Desiderabile, non è strettamente necessario ma è un valore aggiunto;
 
 == Requisiti funzionali
 #show figure: set block(breakable: true)
@@ -1117,7 +1134,7 @@ con:
     "UC31 - Capitolato",
     // formato file non valido
     "R-31-F-O",
-    "Il fornitore deve sapere quando file caricato, sia come logo che come documento aziendale, non sia del formato corretto",
+    "Il fornitore deve sapere quando un file caricato, sia come logo che come documento aziendale, non sia nel formato corretto",
     "UC32 - Riunioni interne",
     // visualizzazione documenti aziendali
     "R-32-F-O",
@@ -1168,49 +1185,65 @@ con:
     align: center + horizon,
     fill: (x, y) => if (y == 0) { luma(230) },
     table.header([*ID Requisito*], [*Descrizione*], [*Fonte*]),
-    "R-01-Q-O", "È richiesta la presentazione della documentazione che descrive la progettazione architetturale", "Capitolato",
-    "R-02-Q-O", "È richiesta la presentazione della documentazione che presenta le tecnologie utilizzate", "Capitolato",
-    "R-03-Q-O", "È richiesta la presentazione della documentazione che descrive la progettazione della base di dati", "Capitolato",
-    "R-04-Q-O", "È richiesta la presentazione della documentazione che descrive l'implementazione del sistema di raccomandazione utilizzato con LLM", "Capitolato",
-    "R-05-Q-O", "Tutte le attività del progetto devono essere svolte rispettando le Norme di Progetto", "Riunione interna",
+    "R-01-Q-O",
+    "È richiesta la presentazione della documentazione che descrive la progettazione architetturale",
+    "Capitolato",
+    "R-02-Q-O",
+    "È richiesta la presentazione della documentazione che presenta le tecnologie utilizzate",
+    "Capitolato",
+    "R-03-Q-O",
+    "È richiesta la presentazione della documentazione che descrive la progettazione della base di dati",
+    "Capitolato",
+    "R-04-Q-O",
+    "È richiesta la presentazione della documentazione che descrive l'implementazione del sistema di raccomandazione utilizzato con LLM",
+    "Capitolato",
+    "R-05-Q-O",
+    "Tutte le attività del progetto devono essere svolte rispettando le Norme di Progetto",
+    "Riunione interna",
   ),
 )
 
 == Requisiti di vincolo
 #show figure: set block(breakable: true)
-#figure(
-  caption: [Requisiti di vincolo],
-  table(
-    columns: (1fr, 2fr, 1fr),
-    inset: 8pt,
-    align: center + horizon,
-    fill: (x, y) => if (y == 0) { luma(230) },
-    table.header([*ID Requisito*], [*Descrizione*], [*Fonte*]),
-    "R-01-V-O",
-    "L'interfaccia dedicata al cliente deve essere fruibile da dispositivi mobile e user friendly",
-    "Capitolato",
-    "R-02-V-O",
-    "L'interfaccia di configurazione del fornitore deve essere un'interfaccia web",
-    "Capitolato",
-    "R-03-V-O",
-    "Tutto il codice e la documentazione vanno salvati all'interno di un repository pubblico",
-    "Capitolato",
-  ),
-)
+#figure(caption: [Requisiti di vincolo], table(
+  columns: (1fr, 2fr, 1fr),
+  inset: 8pt,
+  align: center + horizon,
+  fill: (x, y) => if (y == 0) { luma(230) },
+  table.header([*ID Requisito*], [*Descrizione*], [*Fonte*]),
+  "R-01-V-O",
+  "L'interfaccia dedicata al cliente deve essere fruibile da dispositivi mobile e user friendly",
+  "Capitolato",
+  "R-02-V-O",
+  "L'interfaccia di configurazione del fornitore deve essere un'interfaccia web",
+  "Capitolato",
+  "R-03-V-O",
+  "Tutto il codice e la documentazione vanno salvati all'interno di un repository pubblico",
+  "Capitolato",
+))
 
 == Riepilogo
 #show figure: set block(breakable: true)
-#figure(
-  caption: [Riepilogo],
-  table(
-    columns: (0.75fr, 0.5fr, 0.5fr, 0.5fr),
-    inset: 8pt,
-    align: center + horizon,
-    fill: (x, y) => if (y == 0 or y == 4) { luma(230) },
-    table.header([*Tipo di requisiti*], [*Obbligatori*], [*Desiderabili*], [*Totale*]),
-    "Funzionali", "32", "7", "39",
-    "Qualità", "5", "0", "5",
-    "Vincolo", "3", "0", "3",
-    "Totale", "40", "7", "47",
-  ),
-)
+#figure(caption: [Riepilogo], table(
+  columns: (0.75fr, 0.5fr, 0.5fr, 0.5fr),
+  inset: 8pt,
+  align: center + horizon,
+  fill: (x, y) => if (y == 0 or y == 4) { luma(230) },
+  table.header([*Tipo di requisiti*], [*Obbligatori*], [*Desiderabili*], [*Totale*]),
+  "Funzionali",
+  "32",
+  "7",
+  "39",
+  "Qualità",
+  "5",
+  "0",
+  "5",
+  "Vincolo",
+  "3",
+  "0",
+  "3",
+  "Totale",
+  "40",
+  "7",
+  "47",
+))

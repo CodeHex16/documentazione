@@ -96,7 +96,7 @@
     #set par(justify: false)
     #text(hyphenate: false, it)
   ]
-
+	set table.cell(breakable: false)
   table(
     align: left,
     columns: (auto,auto,auto,auto,auto),
@@ -105,7 +105,7 @@
     table.header(
       [*Versione*],[*Data*],[*Autore*],[*Cambiamenti*],[*Verificatore*]
     ),
-    ..versioni     
+    ..versioni
   )
   
   // Indice
