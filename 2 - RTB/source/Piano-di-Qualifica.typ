@@ -5,13 +5,13 @@
   "Matteo Bazzan",
   "Redattore",
   "Luca Ribon",
-  "Verificatore",
+  "Redattore, Verificatore",
   "Francesco Fragonas",
   "",
   "Gabriele Magnelli",
   "Redattore",
   "Filippo Sabbadin",
-  "Redattore",
+  "Redattore, Verificatore",
   "Luca Rossi",
   "",
   "Yi Hao Zhuo",
@@ -89,8 +89,8 @@ comprensione e lettura.
 - Slide T09 - Verifica e validazione #link("https://codehex16.github.io/resources/slides/T9.pdf") _(ultima consultazione 07-03-2025)_;
 
 - Glossario:
-  - Documento: #link("https://codehex16.github.io/docs/glossario/glossario.pdf");
-  - Pagina web: #link("https://codehex16.github.io/glossario.html");
+  - Documento: #link("https://codehex16.github.io/docs/glossario/glossario.pdf") _(versione 1.0.0)_;
+  - Pagina web: #link("https://codehex16.github.io/glossario.html") _(ultima consultazione 07-03-2025)_;
 
 = Metriche di qualità
 
