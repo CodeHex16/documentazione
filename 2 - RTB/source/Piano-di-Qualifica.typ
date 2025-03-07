@@ -79,7 +79,7 @@ comprensione e lettura.
 
 == Riferimenti
 === Riferimenti normativi
-- Capitolato C7 - #gloss[LLM] : #gloss[Assistente Virtuale]
+- Capitolato C7 - #gloss[Assistente Virtuale] Ergon:
 #link("https://www.math.unipd.it/~tullio/IS-1/2024/Progetto/C7.pdf")
 
 - #gloss[Norme di Progetto]
@@ -87,6 +87,10 @@ comprensione e lettura.
 - Slide T08 - Qualità di processo: #link("https://codehex16.github.io/resources/slides/T8.pdf") _(ultima consultazione 06-03-2025)_;
 
 - Slide T09 - Verifica e validazione #link("https://codehex16.github.io/resources/slides/T9.pdf") _(ultima consultazione 07-03-2025)_;
+
+- Glossario:
+  - Documento: #link("https://codehex16.github.io/docs/glossario/glossario.pdf");
+  - Pagina web: #link("https://codehex16.github.io/glossario.html");
 
 = Metriche di qualità
 
