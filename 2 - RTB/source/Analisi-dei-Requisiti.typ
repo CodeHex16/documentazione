@@ -21,7 +21,7 @@
   "06/03/2025",
   "Gabriele Magnelli",
   "Varie migliorie",
-  "",
+  "Matteo Bazzan",
   "0.9.0",
   "21/02/2025",
   "Filippo Sabbadin",
@@ -152,7 +152,7 @@ nella seguente pagina web: #link("https://codehex16.github.io/glossario").
 
 - Glossario:
   - Documento: #link("https://codehex16.github.io/docs/glossario/glossario.pdf") _(versione 1.0.0)_;
-  - Pagina web: #link("https://codehex16.github.io/glossario.html") _(ultima consultazione 06-03-2025)_;
+  - Pagina web: #link("https://codehex16.github.io/glossario.html") _(ultima consultazione 07-03-2025)_;
 
 
 = Use Cases
