@@ -23,6 +23,11 @@
   sommario: [Norme di progetto],
 
   versioni: (
+    "1.0.0",
+    "06/03/2025",
+    "Francesco Fragonas",
+    "Sistemazione riferimenti",
+    "Gabriele Magnelli",
     "0.6.1",
     "04/03/2025",
     "Francesco Fragonas",
@@ -71,7 +76,7 @@ formattazione e stesura sezione Sviluppo",
 = Introduzione
 
 == Scopo del documento
-Questo documento ha lo scopo di delineare le principali fasi di sviluppo, i ruoli e le responsabilità dei membri del team #gloss[CodeHex16]. Al suo interno, viene fornita una guida completa per tutte le #gloss[Practice] adottate dal gruppo e per il #gloss[Way of Working], garantendo un approccio strutturato e organizzato alle attività collaborative.
+Questo documento ha lo scopo di delineare le principali fasi di sviluppo, i ruoli e le responsabilità dei membri del team #gloss[CodeHex16]. Al suo interno viene fornita una guida completa per tutte le #gloss[Practice] adottate dal gruppo e per il #gloss[Way of Working], garantendo un approccio strutturato e organizzato alle attività collaborative.
 
 Il documento non si limita a fornire una panoramica iniziale ma si propone come un riferimento dinamico, soggetto a revisioni e aggiornamenti continui. Tale approccio incrementale assicura che il contenuto resti sempre aggiornato rispetto alle esigenze del progetto e alle best practices emergenti, consentendo al gruppo di adattarsi rapidamente a nuovi requisiti o cambiamenti contestuali.
 
@@ -86,33 +91,31 @@ Per agevolare la comprensione del presente documento, è stato predisposto un gl
 #gloss[Esempio]
 
 Le definizioni sono disponibili nel documento Glossario.pdf e possono essere consultate anche tramite la seguente pagina web:
-#link("https://github.com/CodeHex16/documentazione/tree/main/glossario/glossario.pdf")[Glossario.pdf]
+#link("https://codehex16.github.io/glossario")
 
 == Riferimenti
 === Riferimenti normativi
-- Capitolato C7 - Assistente Virtuale Ergon: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Progetto/C7.pdf");
+- Capitolato C7 - Assistente Virtuale Ergon:\  #link("https://www.math.unipd.it/~tullio/IS-1/2024/Progetto/C7.pdf") _(ultima consultazione 03-03-2025)_;
 === Riferimenti informativi
-- Sito del gruppo CodeHex16: #link("https://codehex16.github.io/");
+- Sito del gruppo CodeHex16:\ #link("https://codehex16.github.io/") _(ultima consultazione 06-03-2025)_;
 
-- Repository della documentazione del progetto: #link("https://github.com/CodeHex16/documentazione");
+- Repository della documentazione del progetto:\  #link("https://github.com/CodeHex16/documentazione") _(ultima consultazione 06-03-2025)_;
 
-- Valutazione capitolati: #link("https://codehex16.github.io/docs/1%20-%20candidatura/Valutazione-Capitolati.pdf");
+- Valutazione capitolati:\ #link("https://codehex16.github.io/docs/1%20-%20candidatura/Valutazione-Capitolati.pdf") _(versione 0.3.0)_;
 
-- Preventivo costi e impegni: #link("https://codehex16.github.io/docs/1%20-%20candidatura/Preventivo-Costi-e-Impegni.pdf");
+- Preventivo costi e impegni:\ #link("https://codehex16.github.io/docs/1%20-%20candidatura/Preventivo-Costi-e-Impegni.pdf") _(versione 0.2.0)_;
 
-- Analisi dei requisiti: #link("https://codehex16.github.io/docs/2%20-%20RTB/Analisi-dei-Requisiti.pdf");
+- Analisi dei requisiti:\ #link("https://codehex16.github.io/docs/2%20-%20RTB/Analisi-dei-Requisiti.pdf") _(versione 0.9.0)_;
 
-- Piano di progetto: #link("https://codehex16.github.io/docs/2%20-%20RTB/Piano-di-Progetto.pdf");
+- Piano di progetto:\ #link("https://codehex16.github.io/docs/2%20-%20RTB/Piano-di-Progetto.pdf") _(versione 0.7.0)_;
 
-- Analisi dei rischi: #link("https://codehex16.github.io/docs/2%20-%20PB/Analisi-dei-Rischi.pdf");
+- Piano di Qualifica:\ #link("https://codehex16.github.io/docs/2%20-%20RTB/Piano-di-Qualifica.pdf") _(versione 1.0.0)_;
 
-- Piano di Qualifica: #link("https://codehex16.github.io/docs/2%20-%20RTB/Piano-di-Qualifica.pdf");
-
-- Standard ISO/IEC 12207:1995: #link("https://www.math.unipd.it/~tullio/IS-1/2009/Approfondimenti/ISO_12207-1995.pdf");
+- Standard ISO/IEC 12207:1995:\ #link("https://www.math.unipd.it/~tullio/IS-1/2009/Approfondimenti/ISO_12207-1995.pdf") _(ultima consultazione 06-03-2025)_;
 
 - Glossario:
-  - Documento: #link("https://codehex16.github.io/docs/glossario/glossario.pdf");
-  - Pagina web: #link("https://codehex16.github.io/glossario.html");
+  - Documento: #link("https://codehex16.github.io/docs/glossario/glossario.pdf") _(versione 0.6.0)_;
+  - Pagina web: #link("https://codehex16.github.io/glossario.html") _(ultima consultazione 06-03-2025)_;
 
 = Processi primari
 
@@ -132,7 +135,7 @@ Il gruppo CodeHex16 manterrà un dialogo attivo e regolare con il Proponente per
 Il formato testuale è chiaro, ma ci sono metodi di comunicazione che hanno maggiore fluidità e precisione:
 
 I #gloss[Meeting] saranno organizzati con cadenza variabile e fissati tramite e-mail in base alle necessità riscontrate durante lo sviluppo del progetto. Tutti i dettagli discussi durante questi incontri saranno documentati in verbali, con particolare attenzione alle decisioni prese. I verbali saranno disponibili al seguente link:
-#link("https://github.com/CodeHex16/documentazione/tree/main/verbali/esterni")[Verbali esterni - https://github.com/CodeHex16/documentazione/tree/main/verbali/esterni]
+#link("https://github.com/CodeHex16/documentazione/tree/main/2%20-%20RTB/verbali/esterni")[Verbali esterni - https://github.com/CodeHex16/documentazione/tree/main/2%20-%20RTB/verbali/esterni]
 
 === Documentazione prodotta
 In questa sezione viene illustrata la documentazione prodotta dal gruppo nel processo di fornitura, che sarà messa a disposizione del Proponente, Ergon Informatica, e dei Committenti, i professori Tullio Vardanega e Riccardo Cardin.
@@ -190,7 +193,7 @@ Gli attori individuati sono:
 - Amministratore;
 - Cliente;
 - Fornitore;
-- Sistema;
+- Utente non registrato;
 Ogni use case ha la seguente struttura: 
 - Diagramma del caso d'uso;
 - Attori principali;
@@ -203,9 +206,9 @@ Ogni use case ha la seguente struttura:
 In questo modo si possono definire in modo dettagliato i requisiti funzionali, di qualità e di vincolo.
 
 ==== Progettazione
-La progettazione del sistema è il l'attività di definizione dell'architettura del software dal punto di vista logico; in questo fase di decide come soddisfare i requisiti identificati durante l'analisi.
+La progettazione del sistema è l'attività di definizione dell'architettura del software dal punto di vista logico; in questa fase si decide come soddisfare i requisiti identificati durante l'analisi.
 
-In particolare vanno definiti i componenti software e le loro interazioni, prestando attenzione a manterli separati e indipendenti per garantire una maggiore manutenibilità e scalabilità del sistema; in questo passaggio è importante anche definire le unità architetturali.\
+In particolare vanno definiti i componenti software e le loro interazioni, prestando attenzione a mantenerli separati e indipendenti per garantire una maggiore manutenibilità e scalabilità del sistema; in questo passaggio è importante anche definire le unità architetturali.\
 Inoltre vanno definite le responsabilità che verranno applicate in fase di codifica assicurandosi di mantenere un livello di #gloss[efficienza] e #gloss[efficacia] il più alto possibile.
 L'approccio utilizzato in questa attività sarà sia #gloss[top-down], per scomporre il problema in sotto-problemi, sia #gloss[bottom-up], per ragionare sui singoli sotto-problemi e integrarli in una soluzione complessiva.
 
@@ -213,7 +216,7 @@ Al termine di questa attività ci si aspetta di avere un'architettura ben defini
 - #gloss[Backend]:
   - #gloss[API] per l'interazione con l'LLM;
   - API per l'interazione con il database;
-  - beckend per la gestione delle interfacce utente e di configurazione;
+  - backend per la gestione delle interfacce utente e di configurazione;
 - #gloss[Frontend]:
   - Interfaccia utente per il cliente;
   - Interfaccia per il fornitore;
@@ -227,7 +230,7 @@ Nello specifico la documentazione dovrà prevedere la documentazione dedicata al
 = Processi di supporto
 == Documentazione
 === Scopo e descrizione
-Lo scopo del processo di documentazione è quello di tracciare e, quindi, rendere immediatamente consultabile ogni attività e processo relativi al progetto.
+Lo scopo del processo di documentazione è quello di tracciare e quindi rendere immediatamente consultabile ogni attività e processo relativi al progetto.
 Inoltre, saranno riportate le decisioni prese e le norme scelte dal gruppo CodeHex16 che verranno rispettate da tutti i suoi membri al fine di procedere al meglio nello sviluppo del progetto.
 
 === Composizione tipografica
@@ -242,7 +245,7 @@ Ci sono diversi tipi di documenti e generalmente sono organizzati nelle seguenti
 
 ==== Intestazione
 La prima pagina è l'intestazione del documento ed è composta generalmente dalle seguenti informazioni:
-- *Titolo*: Titolo del documento che è anche il nome del documento;
+- *Titolo*: Titolo del documento che è anche il nome del file;
 - *E-mail*: E-mail del gruppo;
 - *Logo*: Logo del gruppo;
 - *Data*: La data in cui il gruppo si è incontrato e/o in cui il documento è stato redatto;
@@ -259,15 +262,15 @@ Per i verbali vengono aggiunte le seguenti informazioni:
 La seconda pagina riguarda il registro modifiche il cui contenuto è organizzato mediante una tabella in cui vengono riportate le seguente informazioni:
 - *Versione*: Indica il numero della versione del documento, seguendo il formato definito nella sezione @Versionamento["Versionamento"];
 - *Data*: Data della versione in cui è redatto il documento;
-- *Autore*: Autore di quella versione del documento, cioè il membro del gruppo che ha apportato le modifiche al documento;\
+- *Autore*: Autore di quella versione del documento, cioè il membro del gruppo che ha apportato le modifiche;\
 - *Cambiamenti*: I cambiamenti pricipali di quella versione del documento;\
 - *Verificatore*: Membro del gruppo che ha verificato il documento per quella versione;
 
 ==== Indice
-Nella terza pagina, e se necessario le seguenti, è riservata all'indice del documento che elenca le sezioni di cui è composto i documento.\
+La terza pagina, e se necessario le seguenti, è riservata all'indice del documento che elenca le sezioni di cui è composto i documento.\
 
 ==== Corpo del documento
-Il corpo del documento è suddiviso in capitoli ognuno dei quali può essere diviso in sottocapitoli che a loro volta possono essere suddivisi in altri sottocapitoli.\
+Il corpo del documento è strutturato in capitoli, ciascuno dei quali può essere suddiviso in sottocapitoli, che a loro volta possono contenere ulteriori suddivisioni.\
 
 === Documenti del progetto
 Verranno prodotti i seguenti documenti:
@@ -315,12 +318,12 @@ In particolare, per i verbali vengono considerati solo i numeri Y e Z per il fat
 ==== Struttura della repository documentazione
 Il contenuto pronto e convalidato del repository è presente nel #gloss[branch] main in cui sono presenti tutti i PDF dei documenti prodotti.
 Nel branch main si possono trovare diverse cartelle che servono per organizzare e dividere i vari tipi di documenti e codice, in particolare:
-- In *1 - candidatura* si trovano i documenti relativi alla candidatura per la gara d'appalto di dei capitolati;
-- In *2 - RTB* si trovano i documenti relativi alla fase di progetto *RTB(Requirement and Technology Baseline)*;
-- In *3 - PB* si trovano i documenti relativi alla fase di progetto *PB(Product Baseline)*;
+- In *1 - candidatura* si trovano i documenti relativi alla candidatura per la gara d'appalto dei capitolati;
+- In *2 - RTB* si trovano i documenti relativi alla fase di progetto *RTB (Requirement and Technology Baseline)*;
+- In *3 - PB* si trovano i documenti relativi alla fase di progetto *PB (Product Baseline)*;
 - In *diari-di-bordo* sono presenti tutti i diari di bordo prodotti;
 - In *glossario* è presente il documento Glossario;
-- In *verbali* sono presenti sia i verbali interni sia quelli esterni;
+- In *template* sono presenti i template per i vari documenti.
 
 === Sincronizzazione
 La sincronizzazione avviene tramite repository condivise su #link("https://github.com/CodeHex16/")[github] in cui ogni attività da svolgere è tracciata da una issue con il/i membro/i assegnato/i a tale issue così da sapere sempre chi la segue, o l'ha seguita.
@@ -336,7 +339,7 @@ Inoltre, se più membri del gruppo lavorano allo stesso documento allora viene c
 Quindi in generale la sintassi del nome di un branch è la seguente: *[Titolo]-[Nome-Membro]-[Sprint]*.
 Una volta finito il lavoro da parte di tutti i membri che operano su quel documento, questo viene verificato (tramite #gloss[pull request]) e viene eseguito il merge sul branch main, mentre i branch ausiliari vengono eliminati appena si ha la sicurezza che questi non sono più necessari.\
 Altri branch degni di nota sono:
-- *diario-di-bordo*: Utilizzato inserire i diari di bordo nel repository;
+- *diario-di-bordo*: Utilizzato per inserire i diari di bordo nel repository;
 ==== Pull request
 Per quanto riguarda le pull request si è deciso che per ogni documento redatto viene richiesta la verifica tramite pull request.
 A questo punto i verificatori a cui è stata assegnata la issue di verifica di quel documento, tramite questa pull request, eseguono la verifica e se è tutto corretto viene fatto il merge delle modifiche apportate nel main, altrimenti il verificatore può correggere direttamente il documento, oppure scrivere un commento con delle indicazioni per le correzioni da svolgere.
@@ -348,7 +351,7 @@ A questo punto i verificatori incaricati del sprint corrente (vengono create del
   git checkout <pr-branch-name> 
   ```
 + Eseguono la verifica e aggiungere proprio nome nel Registro dell Versioni
-+ Se è tutto corretto viene committato
++ Se è tutto corretto viene effettuato il commit
   ```bash
   git add .
   git commit -m "Verifica <pr-branch-name>...."
@@ -369,7 +372,7 @@ L'analisi statica è un tipo di verifica che non richiede l'esecuzione del prodo
 L'inspection, preferibile al walkthrough per velocità ed efficienza, consente di individuare tempestivamente potenziali difetti, errori e problemi. Il walkthrough mette in collaborazione il verificatore con l'autore del prodotto preso in analisi e ne prevede una lettura a pettine. 
 ==== Analisi dinamica
 L'analisi dinamica è un tipo di verifica che richiede l'esecuzione del sistema e delle sue componenti così da individuare difetti, problemi ed errori nel funzionamento al fine di garantire un certo grado di qualità nel prodotto finale.
-Il gruppo per garantire tutto ciò utilizzerà un insieme di test ripetibili e automatizzati, anche se sarà necessario l'uso di test manuali. Tali test si suddividono nei seguenti tipi.
+Il gruppo, per garantire tutto ciò, utilizzerà un insieme di test ripetibili e automatizzati, anche se sarà necessario l'uso di test manuali. Tali test si suddividono nei seguenti tipi:
 ===== Test
 *Test di unità*\ \
 I test di unità sono test effettuati su singole componenti autonome del sistema e tali test possono essere:
@@ -384,19 +387,19 @@ E' possibile seguire due approcci per i test d'integrazione:
 - *Top down*: si testano per prime le componenti che hanno il maggior numero di dipendenze e maggiormente visibili da parte dell'utente così da avere disponibilità immediata di tali componenti;
 \ *Test di regressione*\ \
 I test di regressione vengono impiegati per assicurare che la correzione o la modifica delle componenti non causi problemi al livello di sistema. 
-Tali test sono necessari per garantire che le modifiche non compromettano le funzionalità già testate e funzionanti evitando, quindi, la comparsa di regressioni nel sistema.
+Tali test sono necessari per garantire che le modifiche non compromettano le funzionalità già testate e funzionanti, evitando quindi la comparsa di regressioni nel sistema.
 \ \ *Test di accettazione*\ \
 I test di accettazione devono essere eseguiti insieme al committente al fine di verificare che il prodotto finale rispetti tutti i requisiti richiesti.
 === Validazione
 La validazione è la verifica ultima per garantire che il prodotto sia in linea con le aspettative e che rispetti i requisiti richiesti e per questo è una fase molto importante nello sviluppo del progetto.
 Questo processo segue il processo di verifica e si sofferma su alcuni aspetti quali:
-- Il prodotto finale deve funzionare correttamente e essere conforme con la logica di progettazione;
-- Il prodotto deve essere soddisfare completamente i requisiti specificati;
+- Il prodotto finale deve funzionare correttamente ed essere conforme con la logica di progettazione;
+- Il prodotto deve soddisfare completamente i requisiti specificati;
 - Il prodotto deve essere intuitivo e di facile compresione e utilizzo, cioè deve essere usabile;
 - Il prodotto deve essere efficace nel soddisfare le necessità del cliente;
 === Gestione qualità
 ==== Scopo e descrizione
-Il processo di gestione della qualità ha come obiettivo quello di garantire che il software, la documentazione e tutto ciò che il team produce sia conforme ai requisiti di qualità specificati e richiesti. Processi utili a garantire un certo grado di qualità sono, sicuramente, i processi di verifica e validazione.
+Il processo di gestione della qualità ha come obiettivo quello di garantire che il software, la documentazione e tutto ciò che il team produce sia conforme ai requisiti di qualità specificati e richiesti. Processi utili a garantire un certo grado di qualità sono sicuramente i processi di verifica e validazione.
 Gli obiettivi e gli standard di qualità richiesti e che devono essere soddisfatti sono indicati nel documento *Piano di Qualifica*.
 
 = Processi organizzativi
@@ -422,8 +425,8 @@ I ruoli svolti, a rotazione, dai membri del gruppo sono:
   - Studiare i bisogni dei committenti;
   - Studiare i requisiti definendone la complessità;
   - Scrivere il documento *Analisi dei Requisiti*
-  L'analista è una figura che sarà, principalmente, presente durante la prima parte del progetto in cui verrà analizzato e compreso appieno il capitolato.
-  Solo in casi straordinari, cioè se il gruppo dovesse cambiare i requisiti del progetto, allora l'Analista dovrà interpellato per apportare delle modifiche ai requisiti in questione.
+  L'analista è una figura che sarà presente principalmente durante la prima parte del progetto in cui verrà analizzato e compreso appieno il capitolato.
+  Solo in casi straordinari, cioè se il gruppo dovesse cambiare i requisiti del progetto, allora l'Analista dovrà essere interpellato per apportare delle modifiche ai requisiti in questione.
 - *Programmatore*: Ha il compito primario di svolgere l'attività di codifica e sviluppare l'architettura individuata dal Progettista, in particolare deve:
   - Scrivere codice mantenibile che rispetti le *Norme di Progetto*;
   - Creare test per la verifica e validazione del codice;
@@ -469,15 +472,15 @@ Le comunicazioni principali che avvengono durante lo svolgimento del progetto so
 Anche le riunioni sono di due tipi:
 - *Riunioni interne*: I membri del gruppo si riuniscono su *Discord* dove si fa il punto della situazione in quel momento e se necessario si introducono nuove attività da svolgere e/o si procede con quelle già indicate;
 - *Riunioni esterne*: I membri del gruppo si riuniscono insieme al proponente, questa riunione di solito è richiesta dal gruppo per trattare problemi/dubbi di una certa importanza al fine di avere una migliore comprensione delle attività da svolgere e procedere con il progetto;
-Sarà compito del *Responsabile* riassumere in un *verbale interno*, o un *verbale esterno* quello che si è discusso durante la riunione in questione;
+Sarà compito del *Responsabile* riassumere in un *verbale interno* o un *verbale esterno* quello che si è discusso durante la riunione in questione;
 
 === Verbali
 I verbali redatti sono di due tipi:
 - *Verbali interni*: Questo tipo di verbale è la trascrizione dei punti salienti di una riunione interna e, generalmente, l'obiettivo principale è quello di discutere delle attività svolte e delle attività da svolgere, stabilendo quindi nuove issue, se necessario;
 - *Verbali esterni*: Questo tipo di verbale è la trascrizione dei punti più importanti riscontrati durante una riunione esterna, il cui obiettivo principale è quello di risolvere dubbi/problemi riscontrati durante l'avanzamento del progetto;
-Nel caso in cui il Responsabile non fosse presente durante le riunioni, il verbale corrispondente verrà redatto dall'*Amministratore*, se neanche l'amministratore era presente allora sarà uno dei membri presenti alla riunione che avrà l'incarico di redigere il verbale.
+Nel caso in cui il Responsabile non fosse presente durante le riunioni, il verbale corrispondente verrà redatto dall'*Amministratore*; se neanche l'amministratore fosse presente allora sarà uno dei membri presenti alla riunione ad avere l'incarico di redigere il verbale.
 
 == Miglioramento
 === Scopo e descrizione
 Il miglioramento è un processo sempre attivo che durerà per tutto il progetto il cui obiettivo è quello di controllare e migliorare tutto quello che viene prodotto mantenendo un elevato grado di qualità.
-In particolare si cerca e si cercherà di ruotare ruoli, identificare attività idonee ai membri del gruppo così da risolvere il maggiorn numero di problemi che si potrebbero venire a creare e/o colmare tempestivamente eventuali lacune mantenendo il lavoro del team elastico e flessibile.
+In particolare si cerca e si cercherà di ruotare ruoli, identificare attività idonee ai membri del gruppo così da risolvere il maggior numero di problemi che si potrebbero venire a creare e/o colmare tempestivamente eventuali lacune mantenendo il lavoro del team elastico e flessibile.
