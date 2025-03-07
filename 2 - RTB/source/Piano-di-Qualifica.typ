@@ -493,7 +493,7 @@ Nella seguente versione del documento, dedicata all'#gloss[RTB], è prevista la 
 //   "Verifica del parsing delle credenziali durante il login",
 //   "Superato",
 //   "TU-002",
-//   "Test generazione risposta LLM con input validi/invalidi",
+//   "Test generazione risposta #gloss[LLM] con input validi/invalidi",
 //   "Non implementato",
 //   "TU-003",
 //   "Controllo formati logo supportati (PNG, JPG, SVG)",

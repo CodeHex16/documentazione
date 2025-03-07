@@ -410,7 +410,7 @@ Di seguito sono riportate le motivazioni che hanno guidato questa riorganizzazio
 - il ruolo di *Verificatore* ha subito una riduzione di 2 ore dato che per questo ruolo non abbiamo individuato particolari necessità, quindi abbiamo ritenuto ragionevole ridurre le ore di questo ruolo per assegnarle ad altri ruoli che ne necessitano di più.
 
 = Pianificazione del lavoro
-La *pianificazione del progetto* si basa su un modello iterativo e incrementale, con lo scopo di garantire un monitoraggio continuo del progresso e una gestione efficace delle attività. Abbiamo deciso di suddividere il lavoro in sprint, ognuno dei quali inizia con un incontro per stabilire obiettivi e analizzare eventuali difficoltà, e si conclude con una retrospettiva sul lavoro svolto. Questo approccio ci ha permesso di adattarci rapidamente alle necessità del progetto, mantenendo una visione chiara delle priorità e dei risultati attesi.
+La *pianificazione del progetto* si basa su un modello iterativo e incrementale, con lo scopo di garantire un monitoraggio continuo del progresso e una gestione efficace delle attività. Abbiamo deciso di suddividere il lavoro in #gloss[sprint], ognuno dei quali inizia con un incontro per stabilire obiettivi e analizzare eventuali difficoltà, e si conclude con una retrospettiva sul lavoro svolto. Questo approccio ci ha permesso di adattarci rapidamente alle necessità del progetto, mantenendo una visione chiara delle priorità e dei risultati attesi.
 
 == Organizzazione degli sprint
 Gli sprint rappresentano le unità operative fondamentali per il lavoro del gruppo. Inizialmente della durata di una settimana, sono stati successivamente estesi a due settimane per consentire una pianificazione più realistica delle attività.
@@ -490,7 +490,7 @@ Per questo motivo si è deciso, dallo sprint successivo in poi, di aumentare la 
 #pseudoheading[*Retrospettiva*]
 Durante lo *Sprint 2*, il gruppo ha proseguito i lavori avviati nello Sprint 1, concentrandosi principalmente sull'elaborazione dei documenti fondamentali per il progetto. Sono state definite le attività relative ai documenti "Analisi dei Requisiti", "Glossario", "Norme di Progetto" e "Piano di Progetto". Inoltre, si è proceduto con l'aggiornamento dei ruoli dei membri del gruppo, tenendo conto delle necessità del progetto.
 
-Durante questo sprint il gruppo ha incontrato le prime difficoltà con l'utilizzo di GitHub, che ci concretizzavano in errori nel prodotto presente nella branch principale. Per questo si è deciso di normare l'utilizzo di branch come descritto nel documento "Norme di Progetto"; inoltre è stata introdotta la meccanica di branch protection, a cui sono state integrate delle GitHub Action, in modo da evitare che venissero introdotti nella branch principale documenti non verificati o sorgenti typst con errori di compilazione.
+Durante questo sprint il gruppo ha incontrato le prime difficoltà con l'utilizzo di GitHub, che ci concretizzavano in errori nel prodotto presente nella branch principale. Per questo si è deciso di normare l'utilizzo di branch come descritto nel documento "Norme di Progetto"; inoltre è stata introdotta la meccanica di branch protection, a cui sono state integrate delle GitHub Action, in modo da evitare che venissero introdotti nella branch principale documenti non verificati o sorgenti #gloss[typst] con errori di compilazione.
 
 #pseudoheading[*Attività svolte*]
 
@@ -685,7 +685,7 @@ Con lo *Sprint 8* il gruppo si è impegnato nel concludere le attività necessar
 In questo periodo il gruppo ha dovuto affrontare alcune difficoltà tecniche legate alla realizzazione del PoC. Nello specifico c'è stato bisogno di alcuni incontri di coordinazione tra i membri che hanno contribuito allo sviluppo per gestire l'integrazione tra le componenti del PoC.
 
 #pseudoheading[*Attività svolte*]
-- *Completamento del PoC*: Sviluppo delle componenti frontend e backend, integrazione con l'API di LLM e implementazione dell'autenticazione.
+- *Completamento del PoC*: Sviluppo delle componenti frontend e #gloss[backend], integrazione con l'API di LLM e implementazione dell'autenticazione.
 - *Verifica e correzione dei documenti*: Revisione completa di tutti i documenti per la milestone RTB con correzione aggiornamento del contenuto e correzione degli errori presenti.
 - *Finalizzazione del documento Analisi dei Requisiti*: Completamento dei casi d'uso e dei requisiti con relativa verifica.
 - *Aggiornamento della struttura del sito web*: Modifica della struttura del sito web per migliorare l'esperienza utente.
