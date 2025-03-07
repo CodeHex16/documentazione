@@ -27,7 +27,7 @@
     "06/03/2025",
     "Francesco Fragonas",
     "Sistemazione riferimenti",
-    "",
+    "Gabriele Magnelli",
     "0.6.1",
     "04/03/2025",
     "Francesco Fragonas",
