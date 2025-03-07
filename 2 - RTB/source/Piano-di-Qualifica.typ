@@ -18,7 +18,7 @@
   "Verificatore",
 ), sommario: [Piano di qualifica], versioni: (
   "1.0.0",
-  "02/03/2025",
+  "05/03/2025",
   "Luca Ribon",
   "Migliorata sezione Metodologie di testing",
   "Filippo Sabbadin",
@@ -84,25 +84,9 @@ comprensione e lettura.
 
 - #gloss[Norme di Progetto]
 === Riferimenti informativi
-- Slide T08 - Qualità di processo
-#link("https://codehex16.github.io/resources/slides/T8.pdf")
+- Slide T08 - Qualità di processo: #link("https://codehex16.github.io/resources/slides/T8.pdf") _(ultima consultazione 06-03-2025)_;
 
-- Slide T09 - Verifica e validazione: introduzione
-#link("https://codehex16.github.io/resources/slides/T9.pdf")
-
-- Verifica e validazione:
-  - ISO/IEC 9126:2001 SWE Product Quality;
-  - ISO/IEC 14598:1999 SW Product Evaluation;
-  - ISO/IEC 25000:2005 SQuaRE: Systems and software Quality;
-  - ISO/IEC 25010:2011 Quality model;
-  - ISO/IEC 25020:2019 Quality measurement framework;
-  - ISO/IEC 25030:2007 Quality requirements;
-  - ISO/IEC 25040:2011 Quality evaluation;
-  - ISO 9000:2015 (fondamenti e glossario);
-  - ISO 9001:2015 (sistema qualità - requisiti);
-    - ISO/IEC/IEEE 90003:2018 (versione applicata ai prodotti SW)
-  - ISO 9004:2018 (qualità organizzativa - autovalutazione)
-  - ISO/IEC 33020:2019.
+- Slide T09 - Verifica e validazione #link("https://codehex16.github.io/resources/slides/T9.pdf") _(ultima consultazione 07-03-2025)_;
 
 - Glossario:
   - Documento: #link("https://codehex16.github.io/docs/glossario/glossario.pdf");
