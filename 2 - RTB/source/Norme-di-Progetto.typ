@@ -114,7 +114,7 @@ Le definizioni sono disponibili nel documento Glossario.pdf e possono essere con
 - Standard ISO/IEC 12207:1995:\ #link("https://www.math.unipd.it/~tullio/IS-1/2009/Approfondimenti/ISO_12207-1995.pdf") _(ultima consultazione 06-03-2025)_;
 
 - Glossario:
-  - Documento: #link("https://codehex16.github.io/docs/glossario/glossario.pdf") _(versione 0.6.0)_;
+  - Documento: #link("https://codehex16.github.io/docs/glossario/glossario.pdf") _(versione 1.0.0)_;
   - Pagina web: #link("https://codehex16.github.io/glossario.html") _(ultima consultazione 06-03-2025)_;
 
 = Processi primari
