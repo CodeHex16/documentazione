@@ -163,7 +163,7 @@ Per lo svolgimento del progetto abbiamo utilizzato i seguenti strumenti:
 - *#gloss[Discord]* per gli incontri interni;
 - *Zoom* per gli incontri esterni con il referente dell'azienda Ergon Informatica;
 - *GitHub* per organizzare tutti i documenti e file sorgente del progetto tramite un repository;
-- *GitHub Issue* per assegnare task ad ogni membro avendo un rendiconto preciso dei ruoli e delle ore svolte per ogni sprint, con l'assegnazione di label e milestone specifiche;
+- *GitHub Issue* per assegnare #gloss[task] ad ogni membro avendo un rendiconto preciso dei ruoli e delle ore svolte per ogni sprint, con l'assegnazione di label e milestone specifiche;
 - *GitHub Project* per visualizzare in modo più ordinato le issue e i loro dettagli;
 - *Google Fogli* per organizzare incontri con la compilazione di un calendario settimanale e per fissare le ore svolte avendo una visione generale dell'andamento del progetto;
 - *Typst* per la stesura di tutti i documenti e verbali;
