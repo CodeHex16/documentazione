@@ -31,7 +31,7 @@
     "1.0.0",
     "06/03/2025",
     "Luca Ribon",
-    "Aggiunto resoconto RTB e correzioni finali",
+    "Aggiunto Sprint 8, resoconto RTB e correzioni finali",
     "",
     "0.7.0",
     "01-03-2025",
@@ -676,6 +676,39 @@ Abbiamo inoltre deciso di aumentare ulteriormente la durata degli sprint per pot
     Suddivisione oraria per ruolo con relativi costi.
   ],
 )
+
+=== Sprint 8
+*Intervallo temporale*: 11/02/2025 - 08/03/2025
+#pseudoheading[*Retrospettiva*]
+Con lo *Sprint 8* il gruppo si è impegnato nel concludere le attività necessarie al raggiungimento dell'RTB, nello specifico è stata conclusa la stesura di tutta la documentazione relativa al periodo RTB ed è stato terminato il PoC.
+
+In questo periodo il gruppo ha dovuto affrontare alcune difficoltà tecniche legate alla realizzazione del PoC. Nello specifico c'è stato bisogno di alcuni incontri di coordinazione tra i membri che hanno contribuito allo sviluppo per gestire l'integrazione tra le componenti del PoC.
+
+#pseudoheading[*Attività svolte*]
+- *Completamento del PoC*: Sviluppo delle componenti frontend e backend, integrazione con l'API di LLM e implementazione dell'autenticazione.
+- *Verifica e correzione dei documenti*: Revisione completa di tutti i documenti per la milestone RTB con correzione aggiornamento del contenuto e correzione degli errori presenti.
+- *Finalizzazione del documento Analisi dei Requisiti*: Completamento dei casi d'uso e dei requisiti con relativa verifica.
+- *Aggiornamento della struttura del sito web*: Modifica della struttura del sito web per migliorare l'esperienza utente.
+- *Incontro con il prof. Cardin*: è stato svolto un incontro con il prof. Cardin per risolvere alcuni dubbi riguardanti l'Analisi dei Requisiti.
+- *Preparazione all'RTB*: è stato redatto il materiale necessario alla consegna dell'RTB.
+
+
+#pseudoheading[*Ruoli ricoperti e ore svolte*]
+
+#figure(
+  image("../imgs/sprint8-tabella.png", width: 100%),
+  caption: [
+    Suddivisione oraria per membro e ruolo.
+  ],
+)
+
+#figure(
+  image("../imgs/sprint8-grafico.png", width: 100%),
+  caption: [
+    Suddivisione oraria per ruolo con relativi costi.
+  ],
+)
+
 == Periodo PB
 Le documentazione relativa al periodo PB verrà redatta dopo il superamento della RTB.
 
