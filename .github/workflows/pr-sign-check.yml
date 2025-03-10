@@ -1,0 +1,70 @@
+name: Check Document Verifier Sign
+
+on:
+  pull_request:
+    branches:
+      - main
+    types:
+      - ready_for_review
+      - review_requested
+      - synchronize
+      - opened
+
+jobs:
+  document-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout the code with full fetch
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 # Fetch all history to ensure 'main' branch reference is available
+
+      # Step 2: Find changed .typ files and verify the versioni section
+      - name: Check changed .typ files
+        id: check-versioni-section
+        run: |
+          # Fetch the latest 'main' branch reference
+          git fetch origin main > /dev/null 2>&1
+
+          # Find changed .typ files in the PR
+          FILES=$(git diff --name-only --diff-filter=ACMR origin/main | grep '\.typ$' || true)
+
+          # If no .typ files were changed, exit successfully
+          if [ -z "$FILES" ]; then
+            echo "No .typ files changed in this PR."
+            exit 0
+          fi
+
+          # Initialize a flag to track failures
+          FAILED=0
+
+          # Loop through each changed .typ file
+          IFS=$'\n' # Change internal field separator to newline to handle spaces in filenames
+          for FILE in $FILES; do
+            echo "Checking $FILE..."
+
+            # Extract the 'versioni' section
+            VERSIONI=$(sed -n '/versioni: (/ , /)/{p}' "$FILE")
+
+            # Check for empty strings in the versioni section
+            if echo "$VERSIONI" | grep -E '\"\s*\"'; then
+              echo "❌ Empty strings found in versioni section of $FILE!"
+              FAILED=1
+            fi
+
+            # Check for excessive exclamation marks in the versioni section
+            if echo "$VERSIONI" | grep -E '".*!{4,}.*"'; then
+              echo "❌ Found more than 4 exclamation marks in a string in versioni section of $FILE!"
+              FAILED=1
+            fi
+          done
+
+          # Fail the job if any issues were found
+          if [ $FAILED -eq 1 ]; then
+            echo "❌ Compliance check failed for one or more .typ files."
+            exit 1
+          fi
+
+          echo "✅ All changed .typ files passed the compliance checks in the versioni section."

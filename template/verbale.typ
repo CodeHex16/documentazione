@@ -1,16 +1,4 @@
-#let gloss(body) = {
-  link("https://codehex16.github.io/glossario#"+body.text)[#text(blue, size:12pt, font: "Noto Sans")[#underline[#body]\*]]
-}
-
-#let issue(number, title) = {
-  show link : it => {
-    set text(font: "Noto Sans")
-    underline(it)
-  }
-  link("https://github.com/CodeHex16/documentazione/issues/"+number)[
-    #title
-  ]
-}
+#import "./utils.typ" : *
 
 #let verbale(
   titolo: "Titolo del verbale",
@@ -28,7 +16,8 @@
 ) = {
   set text(font: "Noto Sans")
   set text(size: 12pt)
-  set par(justify: true, linebreaks: "optimized",first-line-indent:1em)
+	set text(lang: "it")
+  set par(justify: true, linebreaks: "optimized")
   show link : set text(font:"Jetbrains Mono");
 
 
@@ -105,24 +94,23 @@
 
 
   // Versionamento
-  pagebreak()
-  text(size: 16pt, weight: "black", "Registro delle Versioni")
-  set table.cell(breakable: true)
-  show table.cell : it => [
-    #par(justify: false)[
-      #text(hyphenate: false, it)
-    ]
-  ]
+  // pagebreak()
+  // text(size: 16pt, weight: "black", "Registro delle Versioni")
+  // set table.cell(breakable: true)
+  // show table.cell : it => [
+  //   #set par(justify: false)
+  //   #text(hyphenate: false, it)
+  // ]
 
-  table(
-    columns: (auto,auto,auto,auto,auto),
-    fill: (x,y) => if (y== 0) { luma(230) },
-    inset: 10pt,
-    table.header(
-      [*Versione*],[*Data*],[*Autore*],[*Cambiamenti*],[*Verificatore*]
-    ),
-    ..versioni
-  )
+  // table(
+  //   columns: (auto,auto,auto,auto,auto),
+  //   fill: (x,y) => if (y== 0) { luma(230) },
+  //   inset: 10pt,
+  //   table.header(
+  //     [*Versione*],[*Data*],[*Autore*],[*Cambiamenti*],[*Verificatore*]
+  //   ),
+  //   ..versioni
+  // )
       
 
   // Indice
@@ -168,15 +156,17 @@
   counter(page).update(1)
   contenuto
 
-  if tipo == "esterno" {
-    align(bottom+right, 
-      box()[
-        #align(left,
-          text("Firma referente azienda")
-        )
-        #v(3em)
-        #line(length: 20em)  
-      ]
-    )
+   if tipo == "esterno" and "Professore" not in presenze {
+      align(
+        bottom + right,
+        box()[
+          #align(
+            left,
+            text("Firma referente azienda"),
+          )
+          #v(3em)
+          #line(length: 20em)
+        ],
+      )
   }
 }

@@ -1,16 +1,4 @@
-#let gloss(body) = {
-  link("https://codehex16.github.io/glossario#"+body.text)[#text(blue, size:12pt, font: "Noto Sans")[#underline[#body]\*]]
-}
-
-#let issue(number, title) = {
-  show link : it => {
-    set text(font: "Noto Sans")
-    underline(it)
-  }
-  link("https://github.com/CodeHex16/documentazione/issues/"+number)[
-    #title
-  ]
-}
+#import "./utils.typ" : *
 
 #let documento(
   titolo: "Titolo del documento",
@@ -29,7 +17,8 @@
 ) = {
   set text(font: "Noto Sans")
   set text(size: 12pt)
-  set par(justify: true, linebreaks: "optimized",first-line-indent:1em)
+	set text(lang: "it")
+  set par(justify: true, linebreaks: "optimized",first-line-indent:0em)
   show link : set text(font:"Jetbrains Mono");
 
   grid(
@@ -104,10 +93,10 @@
   pagebreak()
   text(size: 16pt, weight: "black", "Registro delle Versioni")
   show table.cell : it => [
-    #par(justify: false)[
-      #text(hyphenate: false, it)
-    ]
+    #set par(justify: false)
+    #text(hyphenate: false, it)
   ]
+	set table.cell(breakable: false)
   table(
     align: left,
     columns: (auto,auto,auto,auto,auto),
@@ -116,7 +105,7 @@
     table.header(
       [*Versione*],[*Data*],[*Autore*],[*Cambiamenti*],[*Verificatore*]
     ),
-    ..versioni     
+    ..versioni
   )
   
   // Indice
@@ -149,11 +138,14 @@
 
 
   pagebreak()
-  // CONTENUTO 
+  // CONTENUTO
   set page(numbering: "1")
   set align(left)
   set heading(numbering: "1.")
-  show heading.where(level: 1): set align(center)
+  show heading.where(level: 1): it => {
+    pagebreak(weak: true)
+    align(center, it)
+  }
   show heading : it => [
     #it
     #v(1em)
