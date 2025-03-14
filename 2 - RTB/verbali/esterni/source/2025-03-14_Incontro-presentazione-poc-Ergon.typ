@@ -3,11 +3,11 @@
 
 #show: doc => verbale(
   titolo: "Incontro di presentazione del PoC con l'azienda Ergon",
-  ordine-del-giorno: ("Presentazione del POC", "Domande su alcuni aspetti dell'applicazione",),
+  ordine-del-giorno: ("Presentazione del PoC", "Domande su alcuni aspetti dell'applicazione",),
   data: [14/03/2025],
   ora: [10:00-10:30],
   tipo: "esterno",
-  versioni: ("0.1.0", "13/01/2025", "Gabriele Magnelli", "Prima stesura", "Luca Rossi"),
+  versioni: ("0.1.0", "14/03/2025", "Filippo Sabbadin", "Prima stesura", ""),
   presenze: (
     "Matteo Bazzan",
     "Verificatore",
