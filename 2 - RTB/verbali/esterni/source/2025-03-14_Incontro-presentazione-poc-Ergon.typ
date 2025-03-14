@@ -45,9 +45,10 @@ Dopo la presentazione del PoC, sono state poste alcune domande per avere dei chi
   login se l'utente appena autenticato è un fornitore?_\
   \Sì! Molto più semplice fare così!
 
-+ _Per le domande generate dall'LLM, cioè le FAQ, nel caso siano troppo lunghe, possono essere abbreviate usando il modello
-  LLM?_\
-  \Sì, è possibile abbreviare le risposte generate dall'LLM. Questo permetterebbe di avere risposte più concise.
++ _Per le domande generate dall'LLM, cioè le FAQ, nel caso siano troppo lunghe e occupino troppo spazio nell'interfaccia,
+  possono essere abbreviate usando il modello LLM o direttamente dal fornitore?_\
+  \Sì, è possibile. La scelta sull'usare il modello LLM o farla modificare dal fornitore vanno entrambe bene e può
+  decidere il gruppo quale metodo usare.
 
 = Altri problemi
 Durante l'incontro è stato notato che il chatbot quando fa delle liste, prende solo tre elementi. Causa di questo
