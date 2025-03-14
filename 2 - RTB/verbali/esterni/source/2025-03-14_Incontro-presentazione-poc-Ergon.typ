@@ -56,4 +56,5 @@ problema è molto probabile che sia la struttura del dataset. L'azienda si impeg
 per aiutare a risolvere il problema.
 
 = Conclusioni
-L'incontro si è concluso molto positivamente con l'azienda Ergon che ha apprezzato il lavoro svolto dal gruppo.
+L'incontro si è concluso molto positivamente, con l'azienda che ha apprezzato il lavoro svolto dal gruppo fino a questo
+momento.
