@@ -50,3 +50,5 @@ Durante l'incontro è stato evidenziato dal gruppo che il chatbot, quando dovreb
 
 = Conclusioni
 L'incontro si è concluso molto positivamente, con l'azienda che ha apprezzato il lavoro svolto dal gruppo fino a questo momento.
+== Azioni future
+- #link("https://github.com/CodeHex16/MVP/issues/1")[Campo per inserire l'abbreviazione delle FAQ]
