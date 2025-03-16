@@ -7,7 +7,6 @@
   data: [14/03/2025],
   ora: [10:00-10:30],
   tipo: "esterno",
-  versioni: ("0.1.0", "14/03/2025", "Filippo Sabbadin", "Prima stesura", ""),
   presenze: (
     "Matteo Bazzan",
     "Verificatore",
@@ -34,27 +33,20 @@
   doc,
 )
 = Scopo dell'incontro
-L'incontro, svolto subito dopo la revisione RTB con il prof. Cardin, aveva lo scopo di presentare il PoC realizzato dal
-gruppo all'azienda Ergon e di chiarire alcuni aspetti sull'applicazione.
+L'incontro, svolto subito dopo la revisione RTB con il prof. Cardin, aveva lo scopo di presentare il PoC realizzato dal gruppo all'azienda Ergon e di chiarire alcuni aspetti sull'applicazione.
 
 = Domande poste
 Dopo la presentazione del PoC, sono state poste alcune domande per avere dei chiarimenti:
 #set enum(numbering: "Q1.", spacing: 1.5em)
 
-+ _Va bene avere una pagina singola di login sia per utente che fornitore, con l'applicazione che controlla subito dopo il
-  login se l'utente appena autenticato è un fornitore?_\
-  \Sì! Molto più semplice fare così!
++ _Va bene avere una pagina singola di login sia per utente che fornitore, con l'applicazione che controlla subito dopo il login se l'utente appena autenticato è un fornitore?_\
+  Sì, la soluzione è corretta e ragionevole.
 
-+ _Per le domande generate dall'LLM, cioè le FAQ, nel caso siano troppo lunghe e occupino troppo spazio nell'interfaccia,
-  possono essere abbreviate usando il modello LLM o direttamente dal fornitore?_\
-  \Sì, è possibile. La scelta sull'usare il modello LLM o farla modificare dal fornitore vanno entrambe bene e può
-  decidere il gruppo quale metodo usare.
++ _Nel caso in cui le FAQ, ovvero le coppie domanda-risposta preimpostate dal fornitore, siano troppo lunghe e occupino troppo spazio nell'interfaccia, può essere mostrata una versione abbreviata generata dal modello LLM o inserita direttamente dal fornitore?_\
+  Sì, è possibile. Entrambe le opzioni vanno bene, è a vostra discrezione quale usare.
 
 = Altri problemi
-Durante l'incontro è stato notato che il chatbot quando fa delle liste, prende solo tre elementi. Causa di questo
-problema è molto probabile che sia la struttura del dataset. L'azienda si impegnerà a fornire un dataset con un indice
-per aiutare a risolvere il problema.
+Durante l'incontro è stato evidenziato dal gruppo che il chatbot, quando dovrebbe rispondere usando diversi documenti come contesto, fatica a dare una risposta completa. Una causa di questo problema è la struttura del dataset di test. L'azienda si impegnerà a fornire un dataset con un indice per aiutare a risolvere il problema.
 
 = Conclusioni
-L'incontro si è concluso molto positivamente, con l'azienda che ha apprezzato il lavoro svolto dal gruppo fino a questo
-momento.
+L'incontro si è concluso molto positivamente, con l'azienda che ha apprezzato il lavoro svolto dal gruppo fino a questo momento.
