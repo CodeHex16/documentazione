@@ -38,21 +38,21 @@
 )
 
 = Revisione generale dei documenti
-Durante l'incontro sono stati analizzati i documenti "Analisi dei requisiti","Piano di progetto","Piano di qualifica" e "Norme
+Durante l'incontro sono stati analizzati i documenti "#gloss[Analisi dei requisiti]","#gloss[Piano di progetto]","Piano di qualifica" e "Norme
 di progetto", prima di portarli alla versione "1.0.0".
 
 = Controllo stato del PoC
 Il PoC è stato preparato e testato, risultando funzionante e pronto per la presentazione.
 
 = Stesura slide presentazione
-Sono state redatte le slide per la presentazione del PoC, spiegando il motivo della scelta della realizzazione di una webapp anziché di un'applicazione usando .NET MAUI. Vi è stata posta molta attenzione a presentare in modo chiaro e conciso le motivazioni delle scelte delle tecnologie utilizzate confrontandole con altre, spiegandone la scelta. Viene
+Sono state redatte le slide per la presentazione del PoC, spiegando il motivo della scelta della realizzazione di una #gloss[webapp] anziché di un'applicazione usando .NET MAUI. Vi è stata posta molta attenzione a presentare in modo chiaro e conciso le motivazioni delle scelte delle tecnologie utilizzate confrontandole con altre, spiegandone la scelta. Viene
 messo a confronto:
 - Docker con LXC;
-- Svelte con Vue.js e React; 
+- #gloss[Svelte] con #gloss[Vue.js] e React; 
 - FastAPI con Flask; 
 - MongoDB con PostgreSQL;
 - ChromaDB con Milvus;
-- GPT-o4-mini con altri modelli, tra cui quelli proposti dal proponente nel capitolato e alcuni modelli individuati dal gruppo; in questo confronto è stato tenuto in considerazione anche il prezzo per token.
+- GPT-o4-mini con altri modelli, tra cui quelli proposti dal #gloss[proponente] nel capitolato e alcuni modelli individuati dal gruppo; in questo confronto è stato tenuto in considerazione anche il prezzo per #gloss[token].
 Inoltre sono state aggiunte delle slide con i risultati di test eseguiti con i seguenti strumenti: Svelte, MongoDB, ChromaDB, GPT-o4-mini.
 
 = Organizzazione nuovo incontro con Ergon
