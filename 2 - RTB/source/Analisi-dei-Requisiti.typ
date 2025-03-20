@@ -120,7 +120,7 @@ Il sistema dovrà offrire le seguenti funzionalità principali:
     - Ottenere descrizioni dettagliate di prodotti;
     - Conoscere disponibilità, varianti e caratteristiche tecniche di specifici articoli;
     - Ricevere suggerimenti basati su domande frequenti;
-    - Ottenere risposte personalizzate, generate utilizzando documenti aziendali archiviati nel sistema e il constesto della
+    - Ottenere risposte personalizzate, generate utilizzando documenti aziendali archiviati nel sistema e il contesto della
       chat;
   - Fornire #gloss[feedback] sul grado di soddisfazione delle risposte ricevute, per migliorare la qualità del sistema.
 - *Per le aziende:*
@@ -251,7 +251,7 @@ completato l'autenticazione.\
 *Descrizione:*
 - Un cliente vuole accedere per la prima volta alla piattaforma per interagire con il chatbot del fornitore;
 *Precondizioni:*
-- Le credenziali del cliente sono state corretamente inserite dal fornitore;
+- Le credenziali del cliente sono state correttamente inserite dal fornitore;
 - Il cliente non ha mai effettuato l'accesso alla piattaforma;
 - Il cliente deve essere in possesso delle sue credenziali fornite dal fornitore;
 *Postcondizioni:*
@@ -452,7 +452,7 @@ completato l'autenticazione.\
 *Postcondizioni:*
 - Viene creata una nuova chat;
 *Scenario Principale:*
-- L'utente usa il tasto per creare una nuova chat nella hompage e crea una nuova chat con un nuovo contesto;
+- L'utente usa il tasto per creare una nuova chat nella homepage e crea una nuova chat con un nuovo contesto;
 *Estensioni:*
 - Sistema non raggiungibile;
 
@@ -534,8 +534,7 @@ completato l'autenticazione.\
 - L'utente ha scritto un messaggio utilizzando una delle domande preimpostate;
 *Scenario Principale:*
 - L'utente, anziché scrivere un messaggio manualmente, decide di utilizzare un messaggio tra quelli preimpostati
-  nell'applicazione; nel caso in cui l'LLM individua delle FAQ utili nel constesto della chat sarà il chatbot stesso a
-  suggerirle all'utente; 
+  nell'applicazione; nel caso in cui l'LLM individua delle FAQ utili nel contesto della chat sarà il chatbot stesso a suggerirle all'utente; 
 
 == UC18 - Invio messaggio
 #figure(image("../imgs/invio-messaggio.png", width: 100%), caption: "Invio messaggio")
@@ -570,7 +569,7 @@ completato l'autenticazione.\
 *Postcondizioni:*
 - L'utente ha ricevuto la risposta dal chatbot;
 *Scenario Principale:*
-- Il sistema trarmette il messaggio al chatbot e nel frattempo l'utente riceve un feedback che indica l'elaborazione della
+- Il sistema trasmette il messaggio al chatbot e nel frattempo l'utente riceve un feedback che indica l'elaborazione della
   risposta;
 - Il chatbot elabora e restituisce una risposta;
 - La risposta viene mostrata all'utente tramite l'interfaccia della chat specifica;
@@ -1172,7 +1171,7 @@ con:
 )
 
 == Requisiti di qualità
-// NOTA: qua bisogna scrivere requisitii piu generali che
+// NOTA: qua bisogna scrivere requisiti piu generali che
 // o sono stabiliti dal capitolato
 // o sono stabiliti da noi
 // la fonte puo essere capitolato o interno
