@@ -174,8 +174,9 @@ contesto tramite dei documenti aziendali o #gloss[FAQ], personalizzare graficame
 palette colori.\
 Questo utente ha accesso ad un'#gloss[interfaccia web] di configurazione del chatbot e di gestione degli account dei
 clienti.\
-*Utente non autenticato*: chiamato anche "utente non registrato" rappresenta un utente generico che non ha ancora
-completato l'autenticazione.\ 
+*Utente non autenticato*: chiamato anche "utente non registrato" rappresenta un utente che non ha ancora
+completato l'autenticazione.\
+*Utente generico*: rappresenta un utente, che può essere Fornitore o Cliente, sia nel caso in cui sia autenticato sia nel caso in cui non lo sia.\ 
 
 #figure(image("../imgs/attori.png", width: 70%), caption: "Lista degli attori")
 
@@ -283,7 +284,7 @@ completato l'autenticazione.\
 == UC4 - Modifica password
 #figure(image("../imgs/modifica-password.png", width: 90%), caption: "Modifica password")
 *Attori principali:*
-- Utente non autenticato/cliente;
+- Cliente;
 *Descrizione:*
 - Un utente deve cambiare la password del proprio account;
 *Precondizioni:*
@@ -370,31 +371,37 @@ completato l'autenticazione.\
 *Estensioni:*
 - Password non valida;
 
-== UC9 - E-mail non valida
+== UC9 - Credenziale non valida
 *Attori principali:*
-- Utente non autenticato;
-*Descrizione:*
-- Un utente non autenticato ha inserito un'e-mail errata;
-*Precondizioni:*
-- L'utente ha inserito un'e-mail non presente nel sistema o che non rispetta il formato corretto;
-*Postcondizioni:*
-- Il sistema notifica l'utente che la mail inserita è sbagliata;
-- Il login non va a buon fine;
-*Scenario principale:*
-- L'utente inserisce un'e-mail sbagliata e il sistema restituisce errore;
+- *Utente generico*;
 
-== UC10 - Password non valida
-*Attori principali:*
-- Utente non autenticato;
-*Descrizione:*
-- Un utente non autenticato ha inserito una password errata;
-*Precondizioni:*
-- L'utente ha inserito una password sbagliata o che non rispetta il formato richiesto;
-*Postcondizioni:*
-- Il sistema notifica l'utente che la password inserita è sbagliata;
-- Il login non va a buon fine;
-*Scenario principale:*
-- L'utente inserisce una password sbagliata e il sistema restituisce errore;
+
+
+// == UC9 - E-mail non valida
+// *Attori principali:*
+// - Utente non autenticato;
+// *Descrizione:*
+// - Un utente non autenticato ha inserito un'e-mail errata;
+// *Precondizioni:*
+// - L'utente ha inserito un'e-mail non presente nel sistema o che non rispetta il formato corretto;
+// *Postcondizioni:*
+// - Il sistema notifica l'utente che la mail inserita è sbagliata;
+// - Il login non va a buon fine;
+// *Scenario principale:*
+// - L'utente inserisce un'e-mail sbagliata e il sistema restituisce errore;
+
+// == UC10 - Password non valida
+// *Attori principali:*
+// - Utente non autenticato;
+// *Descrizione:*
+// - Un utente non autenticato ha inserito una password errata;
+// *Precondizioni:*
+// - L'utente ha inserito una password sbagliata o che non rispetta il formato richiesto;
+// *Postcondizioni:*
+// - Il sistema notifica l'utente che la password inserita è sbagliata;
+// - Il login non va a buon fine;
+// *Scenario principale:*
+// - L'utente inserisce una password sbagliata e il sistema restituisce errore;
 
 // == UC8 - Password scelta non valida
 // *Attori principali:*
@@ -958,7 +965,7 @@ completato l'autenticazione.\
 
 == UC39 - Sistema non raggiungibile
 *Attori principali:*
-- Utente non autenticato/cliente;
+- Utente generico;
 *Descrizione:*
 - Il sistema non è raggiungibile;
 *Precondizioni:*
@@ -972,7 +979,7 @@ completato l'autenticazione.\
 
 == UC40 - Invio richiesta con dati mancanti o errati
 *Attori principali:*
-- Utente non autenticato/cliente;
+- Utente generico;
 *Descrizione:*
 - Un utente ha inviato una richiesta al sistema, ma i dati inseriti sono mancanti o errati;
 *Precondizioni:*
