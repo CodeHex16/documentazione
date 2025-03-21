@@ -62,4 +62,4 @@ Il gruppo ha deciso di organizzare un incontro con l'azienda Ergon per presentar
 Il gruppo ha pianificato le seguenti azioni da eseguire per la prossima settimana:
 - incontro con l'azienda Ergon;
 - #link("https://github.com/CodeHex16/documentazione/issues/244")[terminare le slide per la presentazione RTB (con il prof. Cardin)];
-- #link("https://github.com/CodeHex16/documentazione/issues/245")[stesura delle slide per la presentazione RTB (con il prof. Vardanega)];
+- stesura delle slide per la presentazione RTB (con il prof. Vardanega);
