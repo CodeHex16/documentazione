@@ -30,7 +30,7 @@
 // Fare riferimento al Glossario.pdf, indicando eventuali termini tecnici utilizzati.
 
 == Riferimenti
-// Includere riferimenti normativi e informativi utili (es. Capitolato C7, Norme di Progetto, slide).
+// Includere riferimenti normativi e informativi utili (es. Capitolato C7, #gloss[Norme di Progetto], slide).
 
 = Tecnologie
 
@@ -46,7 +46,7 @@
 // Descrivere endpoint come login/logout, specificando metodi, parametri e formati.
 
 == Endpoint di chat
-// Presentare endpoint relativi all’interazione con il chatbot (creazione, invio messaggi, FAQ).
+// Presentare endpoint relativi all’interazione con il #gloss[chatbot] (creazione, invio messaggi, #gloss[FAQ]).
 
 == Endpoint di gestione documenti
 // Esporre endpoint per upload, visualizzazione ed eliminazione documenti.
@@ -69,7 +69,7 @@
 // Specificare i pattern impiegati e le motivazioni dietro le scelte.
 
 == Diagramma delle classi
-// Inserire diagramma UML con le principali classi e relazioni.
+// Inserire diagramma #gloss[UML] con le principali classi e relazioni.
 
 = Database
 // Illustrare le scelte relative al database (es. MongoDB, Chroma), schema dei dati, e gestione allegati/FAQ.
