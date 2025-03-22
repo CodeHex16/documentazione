@@ -354,7 +354,7 @@ completato l'autenticazione.\
 *Scenario principale:*
 - L'utente inserisce la sua e-mail nel campo dedicato;
 *Estensioni:*
-- E-mail non valida;
+- Credenziale non valida;
 
 == UC8 - Inserimento password
 *Attori principali:*
@@ -369,13 +369,21 @@ completato l'autenticazione.\
 *Scenario principale:*
 - L'utente inserisce la sua password nel campo dedicato;
 *Estensioni:*
-- Password non valida;
+- Credenziale non valida;
 
 == UC9 - Credenziale non valida
 *Attori principali:*
-- *Utente generico*;
-
-
+- Utente generico;
+*Descrizione:*
+- Un utente ha inserito una credenziale non valida;
+*Precondizioni:*
+- Le credenziali dell'utente sono state correttamente inserite;
+- L'utente ha inserito una credenziale non valida;
+*Postcondizioni:*
+- L'utente viene notificato dal sistema dell'errore fatto tramite un messaggio che non specifica la credenziale errata;
+- Viene richiesto di reinserire la credenziale;
+*Scenario principale:*
+- L'utente inserisce una credenziale è errata o che non rispetta il formato richiesto;
 
 // == UC9 - E-mail non valida
 // *Attori principali:*
