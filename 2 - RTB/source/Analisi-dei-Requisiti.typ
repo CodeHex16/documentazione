@@ -569,7 +569,7 @@ completato l'autenticazione.\
 - Invio richiesta con dati mancanti o errati;
 - Sistema non raggiungibile;
 
-== UC19 - Ricezione risposta
+== UC19 - Visualizzazione risposta
 #figure(
   image("../imgs/ricezione-valutazione-risposta.png", width: 90%),
   caption: "Ricezione e valutazione della risposta",
@@ -582,10 +582,9 @@ completato l'autenticazione.\
 - L'utente deve aver effettuato il login;
 - L'utente deve aver inviato un messaggio al chatbot;
 *Postcondizioni:*
-- L'utente ha ricevuto la risposta dal chatbot;
+- L'utente ha visualizzato la risposta dal chatbot;
 *Scenario Principale:*
-- Il sistema trasmette il messaggio al chatbot e nel frattempo l'utente riceve un feedback che indica l'elaborazione della
-  risposta;
+- Il sistema trasmette il messaggio al chatbot e nel frattempo l'utente riceve un feedback che indica l'elaborazione della risposta;
 - Il chatbot elabora e restituisce una risposta;
 - La risposta viene mostrata all'utente tramite l'interfaccia della chat specifica;
 *Estensioni:*
@@ -887,7 +886,7 @@ completato l'autenticazione.\
 - Il documento scelto dal fornitore viene eliminato dalla piattaforma;
 *Scenario Principale:*
 - Il fornitore individua il documento da eliminare e preme il bottone per eliminarlo;
-- Viene richiesta la password del fornitore per confermare l'eliminazione;
+- Viene richiesto l'inserimento della password del fornitore per confermare l'eliminazione;
 - Il sistema elimina il documento dalla piattaforma;
 *Estensioni:*
 - Invio richiesta con dati mancanti o errati;
@@ -996,15 +995,13 @@ completato l'autenticazione.\
 - Viene notificato l'errore relativo alla richiesta all'utente;
 - La richiesta non va a buon fine;
 *Scenario Principale:*
-- L'utente invia una richiesta al sistema, ma i dati utilizzati nella richiesta sono mancanti o errati; in alcuni casi
-  richieste come queste possono essere associate ad un utilizzo errato della piattaforma o ad un tentativo di attacco
-  informatico; 
+- L'utente invia una richiesta al sistema, ma i dati utilizzati nella richiesta sono mancanti o errati; in alcuni casi richieste come queste possono essere associate ad un utilizzo errato della piattaforma o ad un tentativo di attacco informatico; 
 - Il sistema mostra un messaggio d'errore all'utente tramite il client dove spiega la causa dell'errore;
 
 = Requisiti
 In questa sezione vengono elencati i requisiti del capitolato, individuati durante la fase di analisi. Ogni #gloss[requisito] viene
 identificato da un codice, scelto in base ai seguenti parametri:
-#align(center, [*R - [numero] - [tipo] - [Priorità]*])
+#align(center, [*R - [numero] - [tipo] - [priorità]*])
 con:
 - *Numero*: numero progressivo che identifica il requisito, parte da 01.
 - *Tipo*: può essere
@@ -1200,20 +1197,23 @@ con:
     fill: (x, y) => if (y == 0) { luma(230) },
     table.header([*ID Requisito*], [*Descrizione*], [*Fonte*]),
     "R-01-Q-O",
-    "È richiesta la presentazione della documentazione che descrive la progettazione architetturale",
+    "È richiesta la presentazione del documento Specifica Tecnica che include dettagli riguardanti la progettazione architetturale",
     "Capitolato",
     "R-02-Q-O",
-    "È richiesta la presentazione della documentazione che presenta le tecnologie utilizzate",
+    "È richiesta la presentazione del documento Specifica Tecnica che include dettagli riguardanti le tecnologie utilizzate",
     "Capitolato",
     "R-03-Q-O",
-    "È richiesta la presentazione della documentazione che descrive la progettazione della base di dati",
+    "È richiesta la presentazione del documento Specifica Tecnica che include dettagli riguardanti la progettazione della base di dati",
     "Capitolato",
     "R-04-Q-O",
-    "È richiesta la presentazione della documentazione che descrive l'implementazione del sistema di raccomandazione utilizzato con LLM",
+    "È richiesta la presentazione del documento Specifica Tecnica che include dettagli riguardanti l'implementazione del sistema di raccomandazione utilizzato con LLM",
     "Capitolato",
     "R-05-Q-O",
     "Tutte le attività del progetto devono essere svolte rispettando le Norme di Progetto",
     "Riunione interna",
+    "R-06-Q-O",
+    "Tutto il codice e la documentazione vanno salvati all'interno di un repository pubblico",
+    "Capitolato",
   ),
 )
 
@@ -1226,16 +1226,63 @@ con:
   fill: (x, y) => if (y == 0) { luma(230) },
   table.header([*ID Requisito*], [*Descrizione*], [*Fonte*]),
   "R-01-V-O",
-  "L'interfaccia dedicata al cliente deve essere fruibile da dispositivi mobile e user friendly",
-  "Capitolato",
-  "R-02-V-O",
   "L'interfaccia di configurazione del fornitore deve essere un'interfaccia web",
-  "Capitolato",
-  "R-03-V-O",
-  "Tutto il codice e la documentazione vanno salvati all'interno di un repository pubblico",
   "Capitolato",
 ))
 
+// TODO: controllare ->
+== Tracciamento dei casi d'uso
+#figure(
+  caption: [Tracciamento dei casi d'uso],
+  table(
+    columns: (1fr, 1.5fr),
+    inset: 8pt,
+    align: center + horizon,
+    fill: (x, y) => if (y == 0) { luma(230) },
+    table.header([*Requisito*], [*Casi d'uso*]),
+    "R-01-F-O", "UC1",
+    "R-02-F-O", "UC2, UC4",
+    "R-03-F-O", "UC3, UC4",
+    "R-04-F-O", "UC4",
+    "R-05-F-D", "UC5",
+    "R-06-F-O", "UC6",
+    "R-07-F-O", "UC9",
+    "R-08-F-O", "UC9",
+    "R-09-F-O", "UC11",
+    "R-10-F-O", "UC12",
+    "R-11-F-O", "UC13",
+    "R-12-F-D", "UC14",
+    "R-13-F-O", "UC15",
+    "R-14-F-O", "UC16",
+    "R-15-F-O", "UC16.1",
+    "R-16-F-O", "UC17",
+    "R-17-F-O", "UC18",
+    "R-18-F-O", "UC19",
+    "R-19-F-O", "UC20",
+    "R-20-F-O", "UC21",
+    "R-21-F-D", "UC22",
+    "R-22-F-O", "UC23",
+    "R-23-F-D", "UC24",
+    "R-24-F-D", "UC25",
+    "R-25-F-D", "UC26",
+    "R-26-F-D", "UC27",
+    "R-27-F-O", "UC28",
+    "R-28-F-O", "UC29",
+    "R-29-F-O", "UC30",
+    "R-30-F-O", "UC31",
+    "R-31-F-O", "UC32",
+    "R-32-F-O", "UC33",
+    "R-33-F-O", "UC34",
+    "R-34-F-O", "UC35",
+    "R-35-F-O", "UC36",
+    "R-36-F-O", "UC37",
+    "R-37-F-O", "UC38",
+    "R-38-F-O", "UC39",
+    "R-39-F-O", "UC40",
+  )
+)
+
+// TODO: sistemare
 == Riepilogo
 #show figure: set block(breakable: true)
 #figure(caption: [Riepilogo], table(
