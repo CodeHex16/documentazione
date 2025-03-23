@@ -288,7 +288,7 @@ completato l'autenticazione.\
 *Descrizione:*
 - Un utente deve cambiare la password del proprio account;
 *Precondizioni:*
-- Le credenziali dell'utente sono state corretamente inserite nel sistema;
+- Le credenziali dell'utente sono state correttamente inserite nel sistema;
 - L'utente deve essersi autenticato con le credenziali corrette;
 *Postcondizioni:*
 - Il sistema ha ricevuto la richiesta di cambio password e, se questa è valida, effettua il cambiamento della password;
@@ -455,6 +455,21 @@ completato l'autenticazione.\
 - L'utente vede la lista di tutte le chat, se non ne ha mai creata una visualizzerà solo quella presente di default;
 *Estensioni:*
 - Sistema non raggiungibile;
+*Inclusioni:*
+- Visualizzazione nome della chat;
+
+=== UC12.1 - Visualizzazione nome della chat
+*Attori principali:*
+- Cliente;
+*Descrizione:*
+- Nella lista della chat viene mostrato il nome della chat;
+*Precondizioni:*
+- L'utente deve aver effettuato il login;
+- L'utente sta visualizzando la lista delle chat;
+*Postcondizioni:*
+- L'utente può leggere il nome della chat;
+*Scenario Principale:*
+- L'utente visualizza il nome della chat presente nella lista delle chat;
 
 == UC13 - Creazione di una nuova chat
 *Attori principali:*
@@ -495,7 +510,7 @@ completato l'autenticazione.\
 - Un utente vuole visualizzare una chat nello specifico;
 *Precondizioni:*
 - L'utente deve aver effettuato il login;
-- L'utente preme sul pulsante "Visualizza chat" di una specifica chat;
+- L'utente preme sulla riga di una specifica chat;
 *Postcondizioni:*
 - L'utente visualizza la chat da lui selezionata;
 *Scenario Principale:*
@@ -594,8 +609,7 @@ completato l'autenticazione.\
 *Attori principali:*
 - Cliente;
 *Descrizione:*
-- L'utente ha ricevuto la risposta dal chatbot e vuole dare un feedback su tale risposta tramite l'opzione "Pollice
-  su/giù";
+- L'utente ha ricevuto la risposta dal chatbot e vuole dare un feedback su tale risposta tramite le opzioni disponibili;
 *Precondizioni:*
 - L'utente deve aver effettuato il login;
 - L'utente deve aver inviato un messaggio al chatbot;
@@ -603,8 +617,45 @@ completato l'autenticazione.\
 *Postcondizioni:*
 - Il feedback dell'utente viene registrato dal sistema;
 *Scenario Principale:*
-- L'utente ha ricevuto una risposta dal chatbot e valutato tale risposta con l'opzione "Pollice su" o "Pollice giù";
+- L'utente ha ricevuto una risposta dal chatbot e valuta tale risposta con una delle opzioni disponibili;
 - Il sistema registra il feedback dell'utente;
+*Estensioni:*
+- Sistema non raggiungibile;
+*Generalizzazioni:*
+- Valutazione risposta positiva;
+- Valutazione risposta negativa;
+
+=== UC20.1 - Valutazione risposta positiva
+*Attori principali:*
+- Cliente;
+*Descrizione:*
+- L'utente ha ricevuto una risposta dal chatbot e vuole dare un feedback positivo su tale risposta;
+*Precondizioni:*
+- L'utente deve aver effettuato il login;
+- L'utente deve aver inviato un messaggio al chatbot;
+- L'utente deve aver ricevuto una risposta dal chatbot;
+*Postcondizioni:*
+- Il feedback positivo dell'utente viene registrato dal sistema;
+*Scenario Principale:*
+- L'utente ha ricevuto una risposta dal chatbot e valuta tale risposta premendo il bottone "Pollice su";
+- Il sistema registra il feedback positivo dell'utente;
+*Estensioni:*
+- Sistema non raggiungibile;
+
+=== UC20.2 - Valutazione risposta negativa
+*Attori principali:*
+- Cliente;
+*Descrizione:*
+- L'utente ha ricevuto una risposta dal chatbot e vuole dare un feedback negativo su tale risposta;
+*Precondizioni:*
+- L'utente deve aver effettuato il login;
+- L'utente deve aver inviato un messaggio al chatbot;
+- L'utente deve aver ricevuto una risposta dal chatbot;
+*Postcondizioni:*
+- Il feedback negativo dell'utente viene registrato dal sistema;
+*Scenario Principale:*
+- L'utente ha ricevuto una risposta dal chatbot e valuta tale risposta premendo il bottone "Pollice giù";
+- Il sistema registra il feedback negativo dell'utente;
 *Estensioni:*
 - Sistema non raggiungibile;
 
@@ -625,6 +676,7 @@ completato l'autenticazione.\
 - Invio richiesta con dati mancanti o errati;
 - Sistema non raggiungibile;
 
+// TODO: forse generalizzare?
 == UC22 - Selezione Dark/Light Mode
 #figure(image("../imgs/selezione-dark-light.png", width: 50%), caption: "Selezione modalità chiara/scura")
 *Attori principali:*
