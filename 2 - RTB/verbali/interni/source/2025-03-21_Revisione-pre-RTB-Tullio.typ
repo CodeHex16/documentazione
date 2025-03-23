@@ -41,3 +41,9 @@ impiegato.
 = Azioni future
 Il gruppo ha discusso riguardo lo stato di avanzamento del progetto e delle attività da svolgere per il prossimo sprint.
 Sono stati assegnati i seguenti compiti:
+- #issue("301")[*Diagrammi delle classi iniziale per discutere dell'architettura*].
+- #issue("302")[*Correggere Adr a seguito di TB*].
+- #issue("303")[*Diario di bordo 12*].
+- #issue("298")[*Studio struttura e contenuto Manuale utente*].
+- #issue("2")[*Studio configurazione CI/CD per la parte di testing di python*].
+- #issue("3")[*Studio ottimizzazione contesto/RAG dell'LLM*].
