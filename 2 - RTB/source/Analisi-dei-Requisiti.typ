@@ -503,6 +503,7 @@ completato l'autenticazione.\
 - Invio richiesta con dati mancanti o errati;
 - Sistema non raggiungibile;
 
+// TODO: mettere visualizzazione dei messaggi, del nome della chat, della scrittura ...
 == UC15 - Apertura di una chat singola
 *Attori principali:*
 - Cliente;
