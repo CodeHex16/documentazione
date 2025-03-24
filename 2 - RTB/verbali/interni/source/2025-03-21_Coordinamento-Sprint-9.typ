@@ -1,0 +1,79 @@
+#import "../../../../template/verbale.typ": *
+
+#show : doc => verbale(
+  titolo: "Coordinamento sprint 9",
+  ordine-del-giorno: ("Simulazione presentazione con il prof. Tullio", "Assegnazione ruoli", "Azioni future",),
+  data: [19/03/2025],
+  ora: [9:00-12:00],
+  tipo: "interno",
+  versioni: ("0.1.0", "20/03/2025", "Filippo Sabbadin", "Prima stesura", "",),
+  presenze: (
+    "Matteo Bazzan",
+    "Verificatore",
+    "3h",
+    "Luca Ribon",
+    "Verificatore",
+    "3h",
+    "Filippo Sabbadin",
+    "Relatore",
+    "3h",
+    "Francesco Fragonas",
+    "Verificatore",
+    "3h",
+    "Gabriele Magnelli",
+    "Verificatore",
+    "3h",
+    "Yi Hao Zhuo",
+    "Verificatore",
+    "3h",
+    "Luca Rossi",
+    "Verificatore",
+    "3h",
+  ),
+  doc,
+)
+
+= Simulazione presentazione con il prof. Tullio
+Durante l'incontro sono state controllate le slides della presentazione da fare con il prof. Tullio. Il gruppo ha fatto
+inoltre una prova di presentazione per verificare che tutto fosse corretto, ponendo attenzione ai contenuti e al tempo
+impiegato.
+
+= Assegnazione Ruoli
+I nuovi ruoli per lo sprint 9 sono i seguenti:
+#table(
+  columns: (1fr, 1fr, 1fr),
+  inset: 8pt,
+  fill: (x, y) => if (y == 0) { luma(230) },
+  table.header([*Membro*], [*Ruolo Sprint 7*], [*Ruolo Sprint 8*]),
+  "Matteo Bazzan",
+  "Programmatore",
+  "Progettista",
+  "Francesco Fragonas",
+  "Programmatore",
+  "Programmatore",
+  "Gabriele Magnelli",
+  "Verificatore",
+  "Responsabile",
+  "Luca Ribon",
+  "Analista",
+  "Progettista",
+  "Luca Rossi",
+  "Amministratore",
+  "Progettista",
+  "Filippo Sabbadin",
+  "Responsabile",
+  "Programmatore",
+  "Yi Hao Zhuo",
+  "Analista",
+  "Amministratore",
+)
+
+= Azioni future
+Il gruppo ha discusso riguardo lo stato di avanzamento del progetto e delle attività da svolgere per il prossimo sprint.
+Sono stati assegnati i seguenti compiti:
+- #issue("301")[*Diagrammi delle classi iniziale per discutere dell'architettura*].
+- #issue("302")[*Correggere Adr a seguito di TB*].
+- #issue("303")[*Diario di bordo 12*].
+- #issue("298")[*Studio struttura e contenuto Manuale utente*].
+- #issue("2")[*Studio configurazione CI/CD per la parte di testing di python*].
+- #issue("3")[*Studio ottimizzazione contesto/RAG dell'LLM*].
