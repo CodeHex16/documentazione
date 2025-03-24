@@ -17,6 +17,11 @@
   "Yi Hao Zhuo",
   "Verificatore",
 ), sommario: [Analisi dei requisiti del capitolato C7], versioni: (
+  "1.1.0",
+  "20/03/2025",
+  "Luca Ribon",
+  "Correzioni a seguito della revisione del prof. Cardin",
+  "!!!!!!!!!!!!!!!!!!!!",
   "1.0.0",
   "06/03/2025",
   "Gabriele Magnelli",
@@ -456,18 +461,18 @@ completato l'autenticazione.\
 *Estensioni:*
 - Sistema non raggiungibile;
 *Inclusioni:*
-- Visualizzazione nome della chat;
+- Visualizzazione titolo della chat;
 
-=== UC12.1 - Visualizzazione nome della chat
+== UC12 Visualizzazione titolo della chat
 *Attori principali:*
 - Cliente;
 *Descrizione:*
 - Nella lista della chat viene mostrato il nome della chat;
 *Precondizioni:*
 - L'utente deve aver effettuato il login;
-- L'utente sta visualizzando la lista delle chat;
+- L'utente sta visualizzando la lista delle chat o una chat specifica;
 *Postcondizioni:*
-- L'utente può leggere il nome della chat;
+- L'utente ha visualizzato il nome della chat;
 *Scenario Principale:*
 - L'utente visualizza il nome della chat presente nella lista delle chat;
 
@@ -518,6 +523,47 @@ completato l'autenticazione.\
 - L'utente visualizza la chat scelta in una nuova finestra;
 *Estensioni:*
 - Sistema non raggiungibile;
+*Inclusioni:*
+- Visualizzazione titolo della chat;
+- Visualizzazione messaggi precedenti;
+- Scrittura messaggio;
+- Scrittura messaggio tramite FAQ;
+- Invio messaggio;
+- Visualizzazione risposta;
+- Valutazione risposta;
+- Valutazione risposta positiva;
+- Valutazione risposta negativa;
+
+== UC16 - Visualizzazione messaggi precedenti
+*Attori principali:*
+- Cliente;
+*Descrizione:*
+- Un utente visualizza i messaggi precedenti una volta aperta una chat;
+*Precondizioni:*
+- L'utente deve aver effettuato il login;
+- L'utente deve aver aperto una chat specifica;
+*Postcondizioni:*
+- L'utente visualizza i messaggi precedenti della chat aperta;
+*Scenario Principale:*
+- L'utente visualizza i messaggi inviati e ricevuti all'interno della chat;
+*Generalizzazioni:*
+- Visualizzazione risposta;
+- Visualizzazione messaggio inviato;
+
+== UC16 - Visualizzazione messaggio inviato
+*Attori principali:*
+- Cliente;
+*Descrizione:*
+- Un utente ha inviato un messaggio nella chat e lo visualizza;
+*Precondizioni:*
+- L'utente deve aver effettuato il login;
+- L'utente deve aver aperto una chat specifica;
+- L'utente deve aver scritto un messaggio;
+- L'utente deve aver inviato un messaggio;
+*Postcondizioni:*
+- L'utente visualizza il messaggio inviato;
+*Scenario Principale:*
+- L'utente visualizza il messaggio inviato all'interno della chat;
 
 == UC16 - Scrittura messaggio
 #figure(image("../imgs/scrittura-messaggio.png", width: 100%), caption: "Scrittura messaggio")
@@ -602,7 +648,7 @@ completato l'autenticazione.\
 *Scenario Principale:*
 - Il sistema trasmette il messaggio al chatbot e nel frattempo l'utente riceve un feedback che indica l'elaborazione della risposta;
 - Il chatbot elabora e restituisce una risposta;
-- La risposta viene mostrata all'utente tramite l'interfaccia della chat specifica;
+- La contenuto della risposta viene mostrato all'utente tramite l'interfaccia della chat specifica;
 *Estensioni:*
 - Sistema non raggiungibile;
 
@@ -800,8 +846,12 @@ completato l'autenticazione.\
 - Vengono mostrate le statistiche relative alle interazioni tra clienti e chatbot;
 *Scenario Principale*:
 - Il fornitore accede alla sezione "Statistiche";
-- Il sistema mostra le statistiche relative alle interazioni tra clienti e chatbot, se necessario tramite grafici o
-  tabelle;
+- Il sistema mostra le statistiche relative alle interazioni tra clienti e chatbot, se necessario tramite grafici o tabelle; nello specifico le statistiche visualizzate riguardano:
+  - valutazioni delle risposte positive;
+  - valutazioni delle risposte negative;
+  - relazione tra valutazioni positive e negative;
+  - numero di messaggi inviati dal chatbot e dagli utenti;
+  - numero di messaggi inviati tramite FAQ;
 *Estensioni*:
 - Inserimento filtri di visualizzazione;
 - Sistema non raggiungibile;
@@ -816,7 +866,10 @@ completato l'autenticazione.\
 - Il fornitore deve accedere alla sezione "Statistiche";
 - Il fornitore deve avere almeno un cliente che ha interagito con il chatbot;
 *Postcondizioni*
-- Vengono applicati i filtri alle statistiche relative alle interazioni tra clienti e chatbot;
+- Vengono applicati i filtri scelti dall'utente tra quelli disponibili:
+  - filtro per data e ora: vengono filtrate le statistiche relative ad un determinato periodo di tempo;
+  - filtro per cliente: vengono filtrate le statistiche relative ad un determinato cliente;
+  - filtro per FAQ: vengono filtrate le statistiche relative ad una FAQ specifica;
 *Scenario Principale*
 - Il fornitore inserisce i filtri di visualizzazione desiderati;
 - Il sistema applica i filtri alle statistiche;
