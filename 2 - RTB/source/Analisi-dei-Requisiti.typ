@@ -677,20 +677,51 @@ completato l'autenticazione.\
 - Sistema non raggiungibile;
 
 // TODO: forse generalizzare?
-== UC22 - Selezione Dark/Light Mode
+== UC22 - Cambio tema
 #figure(image("../imgs/selezione-dark-light.png", width: 50%), caption: "Selezione modalità chiara/scura")
 *Attori principali:*
 - Cliente;
 *Descrizione:*
-- Un utente vuole modificare il tema dell'interfaccia della web-app tramite l'opzione "Dark/Light mode";
+- Un utente vuole modificare il tema dell'interfaccia della web-app tramite con una delle opzioni disponibili;
 *Precondizioni:*
 - L'utente deve aver effettuato il login;
 - L'utente deve accedere alle impostazioni;
 *Postcondizioni:*
 - Il sistema ha modificato l'interfaccia lato client con l'opzione scelta dall'utente;
 *Scenario Principale:*
-- L'utente modifica il tema dell'interfaccia tramite l'opzione "Dark/Light mode";
+- L'utente sceglie una delle opzioni disponibili per il tema il tema dell'interfaccia;
 - Il sistema modifica il tema dell'interfaccia lato client con l'opzione scelta dall'utente;
+*Generalizzazioni:*
+- Cambio tema chiaro;
+- Cambio tema scuro;
+
+=== UC22.1 - Cambio tema chiaro
+*Attori principali:*
+- Cliente;
+*Descrizione:*
+- Un utente vuole modificare il tema dell'interfaccia della web-app in modalità chiara;
+*Precondizioni:*
+- L'utente deve aver effettuato il login;
+- L'utente deve accedere alle impostazioni;
+*Postcondizioni:*
+- Il sistema ha impostato il tema chiaro per l'interfaccia lato client;
+*Scenario Principale:*
+- L'utente seleziona l'opzione per il tema chiaro;
+- Il sistema imposta il tema chiaro per dell'interfaccia lato client;
+
+=== UC22.2 - Cambio tema scuro
+*Attori principali:*
+- Cliente;
+*Descrizione:*
+- Un utente vuole modificare il tema dell'interfaccia della web-app in modalità scura;
+*Precondizioni:*
+- L'utente deve aver effettuato il login;
+- L'utente deve accedere alle impostazioni;
+*Postcondizioni:*
+- Il sistema ha impostato il tema scuro per l'interfaccia lato client;
+*Scenario Principale:*
+- L'utente seleziona l'opzione per il tema scuro;
+- Il sistema imposta il tema scuro per dell'interfaccia lato client;
 
 == UC23 - Modifica della durata dello storico delle chat
 #figure(image("../imgs/impostazioni-fornitore.png", width: 90%), caption: "Impostazioni fornitore")
@@ -960,7 +991,10 @@ completato l'autenticazione.\
 - Le FAQ scelte dal fornitore vengono inserite nella piattaforma;
 *Scenario Principale:*
 - Il fornitore accede alla sezione "Gestione FAQ";
-- Il fornitore inserisce le FAQ tramite dei campi appositi nell'interfaccia;
+- Il fornitore inserisce le FAQ compilando i seguenti campi:
+  - Domanda;
+  - Descrizione o titolo molto breve della domanda, utile per mostrare la FAQ in chat dove è disponibile poco spazio; 
+  - Risposta;
 - Il sistema riceve le FAQ, le formatta e le inserisce nel sistema in modo che siano utilizzabili dall'LLM;
 *Estensioni:*
 - Invio richiesta con dati mancanti o errati;
@@ -978,7 +1012,11 @@ completato l'autenticazione.\
 *Postcondizioni:*
 - Il fornitore visualizza la lista delle FAQ inserite nella piattaforma;
 *Scenario Principale:*
-- Viene visualizzata la lista delle FAQ inserite nella piattaforma;
+- Viene visualizzata la lista delle FAQ inserite nella piattaforma con i seguenti campi:
+  - Descrizione breve o titolo; 
+  - Domanda;
+  - Risposta;
+  La domanda e la risposta vengono troncate se risultano troppo lunghe;
 *Estensioni:*
 - Sistema non raggiungibile;
 
