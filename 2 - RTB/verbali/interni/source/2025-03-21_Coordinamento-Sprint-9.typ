@@ -36,7 +36,7 @@
 Durante l'incontro sono state controllate le slide della presentazione da fare con il prof. Vardanega. Il gruppo ha fatto inoltre una prova di presentazione per verificare che tutto fosse corretto, ponendo attenzione ai contenuti e al tempo impiegato.
 
 = Assegnazione Ruoli
-I nuovi ruoli per lo sprint 9 sono i seguenti:
+I nuovi ruoli per lo #gloss[sprint] 9 sono i seguenti:
 #table(
   columns: (1fr, 1fr, 1fr),
   inset: 8pt,
