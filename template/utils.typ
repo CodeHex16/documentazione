@@ -8,7 +8,7 @@
 
 #let issue(number, title, repo: "documentazione") = {
   show link : it => {
-    set text(font: "Noto Sans")
+    set text(font: "Noto Sans", weight: 700)
     underline(it)
   }
   link("https://github.com/CodeHex16/"+repo+"/issues/"+number)[
