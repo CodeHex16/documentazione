@@ -68,9 +68,9 @@ I nuovi ruoli per lo sprint 9 sono i seguenti:
 = Azioni future
 Il gruppo ha discusso riguardo lo stato di avanzamento del progetto e delle attività da svolgere per il prossimo sprint.
 Sono stati assegnati i seguenti compiti:
-- #issue("301", "Diagrammi delle classi iniziale per discutere dell'architettura", "documentazione").
-- #issue("302", "Correggere Adr a seguito di TB", "documentazione").
-- #issue("303", "Diario di bordo 12", "documentazione").
-- #issue("298", "Studio struttura e contenuto Manuale utente", "documentazione").
-- #issue("2", "Studio configurazione CI/CD per la parte di testing di python", "MVP").
-- #issue("3", "Studio ottimizzazione contesto/RAG dell'LLM", "LLM-API").
+- #issue("301", "Diagrammi delle classi iniziale per discutere dell'architettura", repo: "documentazione").
+- #issue("302", "Correggere Adr a seguito di TB", repo: "documentazione").
+- #issue("303", "Diario di bordo 12", repo: "documentazione").
+- #issue("298", "Studio struttura e contenuto Manuale utente", repo: "documentazione").
+- #issue("2", "Studio configurazione CI/CD per la parte di testing di python", repo: "MVP").
+- #issue("3", "Studio ottimizzazione contesto/RAG dell'LLM", repo: "LLM-API").

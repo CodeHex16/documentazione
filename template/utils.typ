@@ -6,7 +6,7 @@
   link("https://codehex16.github.io/glossario#"+toIdCase(body.text))[#text(blue, size:12pt, font: "Noto Sans")[#underline[#body]\*]]
 }
 
-#let issue(number, title, repo) = {
+#let issue(number, title, repo: "documentazione") = {
   show link : it => {
     set text(font: "Noto Sans", weight: 700)
     underline(it)
