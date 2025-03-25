@@ -140,3 +140,10 @@ consigliate sono quelle utilizzate dal gruppo all'inizio dello sviluppo del prog
 
 == Lista chat
 
+== Impostazioni profilo
+
+= Impostazioni
+
+== Utente
+
+== Fornitore
