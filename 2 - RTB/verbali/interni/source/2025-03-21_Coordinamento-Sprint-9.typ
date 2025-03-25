@@ -6,7 +6,6 @@
   data: [19/03/2025],
   ora: [9:00-12:00],
   tipo: "interno",
-  versioni: ("0.1.0", "20/03/2025", "Filippo Sabbadin", "Prima stesura", "",),
   presenze: (
     "Matteo Bazzan",
     "Verificatore",
@@ -33,10 +32,8 @@
   doc,
 )
 
-= Simulazione presentazione con il prof. Tullio
-Durante l'incontro sono state controllate le slides della presentazione da fare con il prof. Tullio. Il gruppo ha fatto
-inoltre una prova di presentazione per verificare che tutto fosse corretto, ponendo attenzione ai contenuti e al tempo
-impiegato.
+= Simulazione presentazione con il prof. Vardanega
+Durante l'incontro sono state controllate le slide della presentazione da fare con il prof. Vardanega. Il gruppo ha fatto inoltre una prova di presentazione per verificare che tutto fosse corretto, ponendo attenzione ai contenuti e al tempo impiegato.
 
 = Assegnazione Ruoli
 I nuovi ruoli per lo sprint 9 sono i seguenti:
@@ -44,7 +41,7 @@ I nuovi ruoli per lo sprint 9 sono i seguenti:
   columns: (1fr, 1fr, 1fr),
   inset: 8pt,
   fill: (x, y) => if (y == 0) { luma(230) },
-  table.header([*Membro*], [*Ruolo Sprint 7*], [*Ruolo Sprint 8*]),
+  table.header([*Membro*], [*Ruolo Sprint 8*], [*Ruolo Sprint 9*]),
   "Matteo Bazzan",
   "Programmatore",
   "Progettista",
@@ -71,9 +68,9 @@ I nuovi ruoli per lo sprint 9 sono i seguenti:
 = Azioni future
 Il gruppo ha discusso riguardo lo stato di avanzamento del progetto e delle attività da svolgere per il prossimo sprint.
 Sono stati assegnati i seguenti compiti:
-- #issue("301")[*Diagrammi delle classi iniziale per discutere dell'architettura*].
-- #issue("302")[*Correggere Adr a seguito di TB*].
-- #issue("303")[*Diario di bordo 12*].
-- #issue("298")[*Studio struttura e contenuto Manuale utente*].
-- #issue("2")[*Studio configurazione CI/CD per la parte di testing di python*].
-- #issue("3")[*Studio ottimizzazione contesto/RAG dell'LLM*].
+- #issue("301", "Diagrammi delle classi iniziale per discutere dell'architettura", "documentazione").
+- #issue("302", "Correggere Adr a seguito di TB", "documentazione").
+- #issue("303", "Diario di bordo 12", "documentazione").
+- #issue("298", "Studio struttura e contenuto Manuale utente", "documentazione").
+- #issue("2", "Studio configurazione CI/CD per la parte di testing di python", "MVP").
+- #issue("3", "Studio ottimizzazione contesto/RAG dell'LLM", "LLM-API").
