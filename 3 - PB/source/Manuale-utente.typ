@@ -2,21 +2,11 @@
 #import "../../template/i-figured.typ"
 
 #show: doc => documento(titolo: "Manuale utente", data: [24/03/2025], ruoli: (
-  "Matteo Bazzan",
-  "",
   "Luca Ribon",
-  "",
-  "Francesco Fragonas",
-  "",
-  "Gabriele Magnelli",
-  "",
+  "Verificatore",
   "Filippo Sabbadin",
   "Redattore",
-  "Luca Rossi",
-  "",
-  "Yi Hao Zhuo",
-  "",
-), sommario: [Manuale utente], versioni: ("0.1.0", "24/03/2025", "Filippo Sabbadin", "Prima stesura", ""), doc)
+  ), sommario: [Manuale utente], versioni: ("0.1.0", "24/03/2025", "Filippo Sabbadin", "Prima stesura", ""), doc)
 // spaciugo per aggiungere l'indice delle immagini
 #set page(numbering: "I")
 #counter(page).update(3)
