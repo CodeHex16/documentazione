@@ -38,10 +38,7 @@ agli utenti di ottenere rapidamente e in modo intuitivo informazioni dettagliate
 eliminando la necessità di contattare direttamente l’azienda.
 
 == Scopo del documento
-
-Lo scopo di questo documento è quello di fornire una guida all'utilizzo del prodotto, spiegandone l'installazione, i
-requisiti consigliati per garantire il corretto funzionamento dell'applicazione, le funzionalità principali e le
-modalità di utilizzo.
+Lo scopo di questo documento è quello di fornire una guida all'utilizzo del prodotto, spiegandone l'installazione, i requisiti consigliati per garantire il corretto funzionamento dell'applicazione, le funzionalità principali e le modalità di utilizzo.
 
 == Glossario
 
@@ -92,7 +89,7 @@ utilizzavano Ubuntu/*versione*/, dunque i requisiti di sistema consigliati sono 
 ), caption: "Requisiti di sistema")
 
 == Requisiti hardware
-Per hardware si intendono le componenti della macchina dove verrà eseguito il prodotto. I requisiti consigliati sono i
+Per hardware si intendono le componenti della macchina dove verrà utilizzato il prodotto. I requisiti consigliati sono i
 seguenti:
 #figure(table(
   columns: (1fr, 1fr),
@@ -105,9 +102,11 @@ seguenti:
   "Memoria primaria",
   "2GB DDR4",
   "Memoria secondaria",
-  "16GB",
+  // TODO: da verificare quando sapremo cosa salveremo in locale
+  "500MB",
   "Connessione internet",
-  "Non è richiesto un valore specifico, ma la connessione deve essere comunque stabile e veloce",
+  // TODO: da verificare
+  "5mbps",
 ), caption: "Requisiti hardware")
 
 == Requisiti software
