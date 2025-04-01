@@ -6,7 +6,7 @@
   data: [24/03/2025],
   ruoli: ("Luca Ribon", "Verificatore", "Filippo Sabbadin", "Redattore",),
   sommario: [Manuale utente],
-  versioni: ("0.1.0", "24/03/2025", "Filippo Sabbadin", "Prima stesura", ""),
+  versioni: ("0.1.0", "24/03/2025", "Filippo Sabbadin", "Prima stesura", "Luca Ribon"),
   doc,
 )
 // spaciugo per aggiungere l'indice delle immagini
@@ -35,7 +35,6 @@ requisiti consigliati per garantire il corretto funzionamento dell'applicazione,
 modalità di utilizzo.
 
 == Glossario
-
 Per facilitare la comprensione di questo documento, viene fornito un glossario che chiarisce il significato dei termini
 specifici utilizzati nel contesto del progetto. Ogni termine di glossario è contrassegnato con un asterisco "\*" in
 apice e collegato direttamente alla pagina web del glossario, permettendo così di accedere immediatamente alla
@@ -67,8 +66,7 @@ garantire il corretto funzionamento del prodotto.
 
 == Requisiti di sistema
 
-Alcuni membri del gruppo hanno utilizzato il sistema operativo Windows 11 durante lo sviluppo del progetto, altri invece
-utilizzavano Ubuntu/*versione*/, dunque i requisiti di sistema consigliati sono i seguenti:
+Alcuni membri del gruppo hanno utilizzato il sistema operativo Windows 11 durante lo sviluppo del progetto, altri invece utilizzavano Ubuntu/*versione*/, dunque i requisiti di sistema consigliati sono i seguenti:
 
 #figure(table(
   columns: (1fr, 1fr),
@@ -78,13 +76,15 @@ utilizzavano Ubuntu/*versione*/, dunque i requisiti di sistema consigliati sono 
   table.header([*Sistema*], [*Versione*]),
   "Windows 11",
   "24H2",
-  "Ubuntu",
+  "Arch Linux",
   "",
+  "Fedora Linux",
+  ""
 ), caption: "Requisiti di sistema")
 
 == Requisiti hardware
-Per hardware si intendono le componenti della macchina dove verrà utilizzato il prodotto. I requisiti consigliati sono i
-seguenti:
+Per hardware si intendono le componenti della macchina dove verrà utilizzato il prodotto. I requisiti consigliati sono i seguenti:
+
 #figure(table(
   columns: (1fr, 1fr),
   inset: 8pt,
@@ -105,8 +105,8 @@ seguenti:
 
 == Requisiti software
 
-Visto che il gruppo sta sviluppando una webapp, per software si intende un browser web. I browser e le loro versioni
-consigliate sono quelle utilizzate dal gruppo all'inizio dello sviluppo del progetto:
+Visto che il gruppo sta sviluppando una webapp, per software si intende un browser web. I browser e le loro versioni consigliate sono quelle utilizzate dal gruppo all'inizio dello sviluppo del progetto:
+
 #figure(table(
   columns: (1fr, 1fr),
   inset: 8pt,
@@ -119,13 +119,11 @@ consigliate sono quelle utilizzate dal gruppo all'inizio dello sviluppo del prog
   "134.0.6998.165 (Build ufficiale) (64 bit)",
 ), caption: "Requisiti software")
 
+// TODO: probabilmente l'installazione non serve perché è gestita dall'amministratore
 = Installazione
 
-////////////////////////////
-
 = Utente
-Un utente è un cliente che utilizza l'applicazione per comunicare con il chatbot. Può essere un privato o un'azienda. Un
-utente può registrarsi e accedere all'applicazione per utilizzare le funzionalità offerte dal chatbot.
+Un utente è un cliente che utilizza la piattaforma per comunicare con il chatbot. Può essere un privato o un'azienda. Un utente può registrarsi e accedere alla piattaforma per utilizzare le funzionalità offerte dal chatbot.
 
 == Login
 //Immagine della sezione login
@@ -208,23 +206,6 @@ essere eliminata.
 == Impostazioni profilo
 Il fornitore può accedere alle impostazioni del proprio profilo per aggiornare le informazioni personali, come il nome,
 l'indirizzo e-mail e la password.
-
-== Interfaccia principale
-
-=== Homepage principale
-
-//Qui ci sono le schermate principali dell'applicazione appena si entra, tipo la lista delle chat, caricare i documenti, creare profili utente, etc...
-
-=== Gestire i documenti aziendali
-
-=== Gestione profili utente
-
-=== Modificare le FAQ
-
-=== Lista chat
-
-/////////////////
-== Impostazioni profilo
 
 = Temi dell'applicazione
 == Tema chiaro e scuro
