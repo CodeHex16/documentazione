@@ -70,4 +70,11 @@ chiarimenti via e-mail.
 )
 
 = Azioni future
-- #issue("185")[*Progressi norme di progetto*]
+- #issue("7", repo: "MVP")[*Studio architettura Suppl-AI*]
+- #issue("321")[*Diario di bordo 13*]
+- #issue("325")[*Verifica struttura manuale utente*]
+- #issue("6", repo: "Suppl-AI")[*Definire l'interfaccia fornitore*]
+- #issue("7", repo: "LLM-API")[*Implementare architettura LLM-API*]
+- #issue("6", repo: "LLM-API")[*Progettazione Architettura LLM-API*]
+- #issue("16", repo: "MVP")[*Diagramma delle classi iniziale per discutere dell'architettura*]
+- #issue("299")[*Studio struttura e contenuto Manuale sviluppatore*]

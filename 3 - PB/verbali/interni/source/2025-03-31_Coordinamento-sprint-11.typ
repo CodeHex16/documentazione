@@ -34,12 +34,11 @@
 )
 
 = Revisione Sprint 10
-- Design homepage
-- Discussione sulla rappresentazione con i diagrammi UML
-- Discussione sullo stato di avanzamento del progetto
-- Chieste domande ad Ergon:
-  - Manuale utente o sviluppatore?
-  - Richiesto documento per migliorare l'indicizzazione...
+All'inizio della riunione sono state discusse le scelte prese per l'architettura da usare per il frontend e come
+rappresentarla, seguito poi da un controllo generale sullo stato dei documenti. Inoltre è stata presentata una bozza per
+il design della homepage del sito. Infine è stata presa la decisione di inviare un'e-mail al rappresentante di Ergon per
+chiedere un chiarimento sul manuale utente e sul manuale sviluppatore, in quanto non è chiaro se bisogna scrivere un
+manuale utente anche per il fornitore.
 
 = Assegnazione ruoli
 - I *nuovi ruoli* per lo Sprint 11 sono:
@@ -72,4 +71,14 @@
 )
 
 = Azioni future
-- #issue("185")[*Progressi norme di progetto*]
+A seguito della riunione sono state decise le seguenti azioni:
+- #issue("2", repo: "Database-API")[*Rivedere/continuare implementazione Database*]
+- #issue("5", "Implementazione backend LLM", repo: "Implementazione backend LLM")
+- #issue("5", repo: "Suppl-AI")[*Implementazione interfaccia frontend amministratore*]
+- #issue("327")[*Stesura verbale interno 2025-03-31*]
+- #issue("314")[*Stesura verbale interno 2025-03-26*]
+- #issue("324")[*Sistemare PdQ a seguito di RTB*]
+- #issue("323")[*Sistemare retrospettiva PdP a seguito di RTB*]
+- #issue("322")[*Sistemare NdP a seguito di RTB*]
+- #issue("295")[*Aggiornare Piano di Progetto con Sprint 9 si può procedere*]
+- #issue("334")[*Diario di bordo 14*]
