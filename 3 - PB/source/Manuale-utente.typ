@@ -105,7 +105,7 @@ Per hardware si intendono le componenti della macchina dove verrà utilizzato il
 
 == Requisiti software
 
-Visto che il gruppo sta sviluppando una webapp, per software si intende un browser web. I browser e le loro versioni consigliate sono quelle utilizzate dal gruppo all'inizio dello sviluppo del progetto:
+Visto che il gruppo sta sviluppando una #gloss[webapp], per software si intende un browser web. I browser e le loro versioni consigliate sono quelle utilizzate dal gruppo all'inizio dello sviluppo del progetto:
 
 #figure(table(
   columns: (1fr, 1fr),
@@ -127,8 +127,8 @@ Un utente è un cliente che utilizza la piattaforma per comunicare con il chatbo
 
 == Login
 //Immagine della sezione login
-Se l'utente ha già un account, può accedere all'applicazione inserendo il proprio indirizzo e-mail e la password. In
-caso contrario, deve richiedere l'accesso al fornitore dell'applicazione. Una volta effettuato l'accesso, l'utente può
+Se l'utente ha già un #gloss[account], può accedere all'applicazione inserendo il proprio indirizzo e-mail e la password. In
+caso contrario, deve richiedere l'accesso al #gloss[fornitore] dell'applicazione. Una volta effettuato l'accesso, l'utente può
 utilizzare tutte le funzionalità del chatbot.
 
 === Primo Login
