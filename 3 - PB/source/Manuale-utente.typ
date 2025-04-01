@@ -124,27 +124,90 @@ consigliate sono quelle utilizzate dal gruppo all'inizio dello sviluppo del prog
 ////////////////////////////
 
 = Utente
-
-== Registrazione
+Un utente è un cliente che utilizza l'applicazione per comunicare con il chatbot. Può essere un privato o un'azienda. Un
+utente può registrarsi e accedere all'applicazione per utilizzare le funzionalità offerte dal chatbot.
 
 == Login
+//Immagine della sezione login
+Se l'utente ha già un account, può accedere all'applicazione inserendo il proprio indirizzo e-mail e la password. In
+caso contrario, deve richiedere l'accesso al fornitore dell'applicazione. Una volta effettuato l'accesso, l'utente può
+utilizzare tutte le funzionalità del chatbot.
 
 === Primo Login
+Per accedere per la prima volta alla piattaforma, l'utente deve richiedere il permesso al fornitore proprietario
+dell'applicazione, il quale gli fornisce una password temporanea. L'utente inserisce il suo indirizzo e-mail e la
+password temporanea fornitegli dal fornitore. Successivamente provvederà a cambiare la password temporanea con una
+password personale.
 
 == Interfaccia principale
-
-//Qui ci sono le schermate principali dell'applicazione appena si entra, tipo la lista delle chat etc...
+//Immagine della schermata principale dell'applicazione
+Appena entrato nell'applicazione, l'utente si trova di fronte alla schermata principale. Qui può visualizzare la lista
+delle chat con il chatbot, etc...//Qui ci sono le schermate principali dell'applicazione appena si entra, tipo la lista delle chat etc...
 
 === Lista chat
+//Immagine della lista chat
+La lista chat mostra tutte le conversazioni precedenti con il chatbot. L'utente può selezionare una chat per
+visualizzarne il contenuto. Ogni chat è identificata da un titolo che viene generato automaticamente in base al contesto
+della conversazione. L'utente può anche eliminare le chat precedenti se non sono più necessarie.
 
-///////////////////////
 == Impostazioni profilo
+//Immagine della schermata delle impostazioni del profilo
+Premendo sull'icona del profilo, l'utente può accedere alle impostazioni del proprio profilo. Qui può modificare le
+informazioni personali, come il nome, l'indirizzo e-mail e la password.//da modificare
+
+=== Cambio password
+//Immagine della schermata di cambio password
+L'utente può cambiare la password cliccando il bottone raffigurato nella sezione delle impostazioni del profilo. Deve
+inserire la password nuova e riscriverla nuovamente per essere sicuro che non presenti errori. Inoltre dovrà inserire la
+password attuale per confermare il cambio. Se la password attuale non è corretta, o la password nuova nuova non è stata
+riscritta correttamente, il cambio non andrà a buon fine.
 
 = Fornitore
+Il fornitore è l'azienda che possiede una sua versione dell'applicazione e la gestisce. Ha accesso a tutte le
+funzionalità dell'applicazione e può configurarla in base alle proprie esigenze aziendali. Inoltre, il fornitore può
+monitorare l'utilizzo dell'applicazione da parte degli utenti e gestire i contenuti disponibili.
 
 == Login
+Il fornitore può accedere all'applicazione utilizzando le proprie credenziali, e-mail e password. Una volta effettuato
+il login, ha accesso a tutte le funzionalità amministrative dell'applicazione.
 
 === Primo Login
+Durante il primo accesso, il fornitore utilizza una password temporanea fornita dall'azienda Ergon. Dopo aver effettuato
+l'accesso, sarà richiesto di cambiare la password temporanea con una personale per motivi di sicurezza.
+
+== Interfaccia principale
+//Immagine della schermata principale del fornitore (se cambia)
+Dopo aver effettuato il login, il fornitore viene reindirizzato alla homepage principale dell'applicazione. Qui può
+svolgere tutte le funzionalità che un utente generico può svolgere, ma ha anche accesso a funzionalità aggiuntive che
+gli consentono di gestire l'applicazione e i contenuti disponibili per gli utenti.
+
+
+=== Gestire i documenti aziendali
+//Immagine della schermata di gestione dei documenti aziendali
+Il fornitore può caricare documenti aziendali che saranno usati dal chatbot per prendere informazioni durante la
+conversazioni con gli utenti. Il formato di questi file può essere ".pdf", ".docx" o ".txt". Il fornitore può anche
+visualizzare i documenti già caricati ed eliminarli nel caso diventino obsoleti o non più necessari.//da aggiungere delle linee guida
+
+=== Gestione profili utente
+//Immagine della schermata di gestione dei profili utente
+Il fornitore può creare o eliminare i profili utente. Alla crezione di un account dovrà anche assegnargli una password
+temporanea.
+
+=== Modificare le FAQ
+//Immagine della schermata di modifica delle FAQ
+Durante le conversazioni con gli utenti, verranno suggerite delle domande all'utente in base al contesto della
+conversazione. Il fornitore può aggiungere, modificare o eliminare alcune di queste domande.
+
+=== Lista chat
+Esattamente come un cliente, anche il fornitore può visualizzare la lista delle chat. La lista chat mostra tutte le
+conversazioni precedenti con il chatbot. Si può selezionare una chat per visualizzarne il contenuto. Ogni chat è
+identificata da un titolo che viene generato automaticamente in base al contesto della conversazione. Una chat può anche
+essere eliminata.
+
+// da qui in poi inizia a diventare più vago quindi per il momento lascio vuoto
+== Impostazioni profilo
+Il fornitore può accedere alle impostazioni del proprio profilo per aggiornare le informazioni personali, come il nome,
+l'indirizzo e-mail e la password.
 
 == Interfaccia principale
 
@@ -165,3 +228,6 @@ consigliate sono quelle utilizzate dal gruppo all'inizio dello sviluppo del prog
 
 = Temi dell'applicazione
 // dark/light mode
+L'applicazione offre la possibilità di scegliere tra due temi: chiaro e scuro. L'utente può selezionare il tema
+preferito nella sezione delle impostazioni. Il tema scelto verrà applicato a tutte le schermate dell'applicazione,
+possibilmente migliorandone l'accessibilità, leggibilità e ridurre lo stress visivo.
