@@ -1,12 +1,14 @@
 #import "../../template/documenti.typ": *
 #import "../../template/i-figured.typ"
 
-#show: doc => documento(titolo: "Manuale utente", data: [24/03/2025], ruoli: (
-  "Luca Ribon",
-  "Verificatore",
-  "Filippo Sabbadin",
-  "Redattore",
-  ), sommario: [Manuale utente], versioni: ("0.1.0", "24/03/2025", "Filippo Sabbadin", "Prima stesura", ""), doc)
+#show: doc => documento(
+  titolo: "Manuale utente",
+  data: [24/03/2025],
+  ruoli: ("Luca Ribon", "Verificatore", "Filippo Sabbadin", "Redattore",),
+  sommario: [Manuale utente],
+  versioni: ("0.1.0", "24/03/2025", "Filippo Sabbadin", "Prima stesura", ""),
+  doc,
+)
 // spaciugo per aggiungere l'indice delle immagini
 #set page(numbering: "I")
 #counter(page).update(3)
@@ -28,7 +30,9 @@ agli utenti di ottenere rapidamente e in modo intuitivo informazioni dettagliate
 eliminando la necessità di contattare direttamente l’azienda.
 
 == Scopo del documento
-Lo scopo di questo documento è quello di fornire una guida all'utilizzo del prodotto, spiegandone l'installazione, i requisiti consigliati per garantire il corretto funzionamento dell'applicazione, le funzionalità principali e le modalità di utilizzo.
+Lo scopo di questo documento è quello di fornire una guida all'utilizzo del prodotto, spiegandone l'installazione, i
+requisiti consigliati per garantire il corretto funzionamento dell'applicazione, le funzionalità principali e le
+modalità di utilizzo.
 
 == Glossario
 
@@ -119,20 +123,45 @@ consigliate sono quelle utilizzate dal gruppo all'inizio dello sviluppo del prog
 
 ////////////////////////////
 
-= Eseguire l'accesso
+= Utente
 
 == Registrazione
 
 == Login
 
-= Interfaccia principale
+=== Primo Login
 
-== Lista chat
+== Interfaccia principale
 
+//Qui ci sono le schermate principali dell'applicazione appena si entra, tipo la lista delle chat etc...
+
+=== Lista chat
+
+///////////////////////
 == Impostazioni profilo
 
-= Impostazioni
+= Fornitore
 
-== Utente
+== Login
 
-== Fornitore
+=== Primo Login
+
+== Interfaccia principale
+
+=== Homepage principale
+
+//Qui ci sono le schermate principali dell'applicazione appena si entra, tipo la lista delle chat, caricare i documenti, creare profili utente, etc...
+
+=== Gestire i documenti aziendali
+
+=== Gestione profili utente
+
+=== Modificare le FAQ
+
+=== Lista chat
+
+/////////////////
+== Impostazioni profilo
+
+= Temi dell'applicazione
+// dark/light mode
