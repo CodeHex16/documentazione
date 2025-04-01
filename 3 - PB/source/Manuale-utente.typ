@@ -227,7 +227,8 @@ l'indirizzo e-mail e la password.
 == Impostazioni profilo
 
 = Temi dell'applicazione
-// dark/light mode
+== Tema chiaro e scuro
+//Immagine della schermata di selezione del tema o simbolo da cliccare
 L'applicazione offre la possibilità di scegliere tra due temi: chiaro e scuro. L'utente può selezionare il tema
 preferito nella sezione delle impostazioni. Il tema scelto verrà applicato a tutte le schermate dell'applicazione,
 possibilmente migliorandone l'accessibilità, leggibilità e ridurre lo stress visivo.
