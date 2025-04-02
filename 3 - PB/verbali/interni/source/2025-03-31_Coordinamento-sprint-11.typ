@@ -3,12 +3,7 @@
 
 #show: doc => verbale(
   titolo: "Coordinamento Sprint 11",
-  ordine-del-giorno: (
-    "Revisione Sprint 10",
-    "Analisi sullo stato di avanzamento",
-    "Correzione a seguito di RTB",
-    "Coordinamento per lo Sprint 11",
-  ),
+  ordine-del-giorno: ("Revisione Sprint 10", "Analisi sullo stato di avanzamento", "Coordinamento per lo Sprint 11",),
   data: [31/03/2025],
   ora: [17:00-19:00],
   tipo: "interno",
@@ -71,6 +66,7 @@ manuale utente anche per il fornitore.
 )
 
 = Azioni future
+//descrivere il perché
 A seguito della riunione sono state decise le seguenti azioni:
 - #issue("2", repo: "Database-API")[*Rivedere/continuare implementazione Database*]
 - #issue("5", "Implementazione backend LLM", repo: "Implementazione backend LLM")

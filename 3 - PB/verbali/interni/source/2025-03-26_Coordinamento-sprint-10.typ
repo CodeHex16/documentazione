@@ -7,6 +7,7 @@
     "Revisione Sprint 9",
     "Analisi sullo stato di avanzamento",
     "Correzione a seguito di RTB",
+    "Discussione sulle nuove norme di progetto riguardo lo sviluppo",
     "Coordinamento per lo Sprint 10",
   ),
   data: [26/03/2025],
@@ -15,13 +16,13 @@
   versioni: ("0.1.0", "26/03/2025", "Filippo Sabbadin", "Prima stesura", "",),
   presenze: (
     "Matteo Bazzan",
-    "Relatore",
+    "Verificatore",
     "3h",
     "Luca Ribon",
     "Verificatore",
     "3h",
     "Filippo Sabbadin",
-    "Verificatore",
+    "Relatore",
     "3h",
     "Francesco Fragonas",
     "Verificatore",
@@ -35,9 +36,11 @@
 
 = Revisione Sprint 9
 Durante l'incontro sono stati controllati i lavori svolti durante lo Sprint 9. Inoltre, il gruppo ha discusso sulle
-correzioni apportate al documento Analisi dei requisiti da parte del prof. Cardin, e sono stati chiesti alcuni
-chiarimenti via e-mail.
-- Anche documenti di Tullio
+correzioni suggerite al documento Analisi dei requisiti da parte del prof. Cardin, e sono stati chiesti alcuni
+chiarimenti via e-mail.//- Anche documenti di prof. Vardanega
+== Correzioni sull'Analisi dei requisiti
+
+== Discussione sulle nuove norme di progetto riguardo lo sviluppatore
 
 = Assegnazione ruoli
 - I *nuovi ruoli* per lo Sprint 10 sono:
