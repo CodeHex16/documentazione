@@ -57,7 +57,7 @@ e nella seguente pagina web:
 
 == Linguaggi
 - Python;
-- Svelte;
+- Typescript;
 - JavaScript;
 == Strumenti e servizi
 - Git;
