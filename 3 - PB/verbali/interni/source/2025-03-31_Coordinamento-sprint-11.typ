@@ -42,21 +42,21 @@ stato dei documenti.
 == Discussione architettura frontend
 All'inizio della riunione sono state discusse le scelte prese per l'architettura da usare per il frontend e come
 rappresentarla. Visto che erano ancora presenti dei dubbi, il gruppo ha deciso di inviare un'e-mail al prof. Cardin per
-chiedere chiarimenti sulla rappresentazione con i grafici UML delle classi e anche sulle correzioni adottate al
-documento "Analisi dei requisiti".
+chiedere chiarimenti sulla rappresentazione con i grafici UML delle classi e anche su alcune correzioni del professore
+al documento Analisi dei requisiti.
 
 == Primo design interfaccia amministratore
 Durante la riunione è stata presentata una bozza per il design della homepage dell'amministratore. Questa schermata sarà
 visualizzata dall'amministratore appena avrà effettuato il login. L'abbozzo prevede una schermata divisa in tre parti
 principali, e si può navigare scorrendo lateralmente con tre pallini sotto che indicano la posizione nella pagina. Ogni
-pagina presenta circa quattro pulsanti, che aprono una nuova pagina con le varie funzionalità.
+pagina presenta circa quattro pulsanti, che aprono una nuova pagina con le proprie funzionalità.
 
 == Chiarimenti sui documenti manuale utente e sviluppatore
 Alla fine della riunione è stata presa la decisione di chiedere chiarimenti all'azienda Ergon riguardo al manuale
 utente, in quanto suggerito dal prof. Vardanega durante il precedente diario di bordo. Più precisamente nell'e-mail
 veniva chiesto al referente se bisogna fare un altro manuale utente per lo sviluppatore, o se il manuale utente è
-sufficiente per entrambi gli utenti. Inoltre è stato chiesto un miglioramento al dataset, con documenti che migliorano
-l'indicizzazione dei documenti, per rendere le risposte del chatbot più naturali ed efficienti.
+sufficiente per entrambi gli utenti. Inoltre è stato chiesto un miglioramento al dataset, con un documento che fornisce
+un'indicizzazione degli altri documenti per rendere le risposte del chatbot più naturali ed efficienti.
 
 = Assegnazione ruoli
 - I *nuovi ruoli* per lo Sprint 11 sono:
@@ -90,11 +90,12 @@ l'indicizzazione dei documenti, per rendere le risposte del chatbot più natural
 
 = Azioni future
 Per le azioni future, il gruppo ha deciso di continuare sempre con lo sviluppo dell'applicazione, iniziando ad
-implementare anche il frontend:
+implementare anche il frontend, a seguito della progettazione dell'architettura:
 - #issue("2", repo: "Database-API")[*Rivedere/continuare implementazione Database*]
 - #issue("5", repo: "LLM-API")[*Implementazione backend LLM*]
 - #issue("5", repo: "Suppl-AI")[*Implementazione interfaccia frontend amministratore*]
-Inoltre si è deciso di continuare la stesura dei documenti e correggere quelli già esistenti:
+
+Inoltre si è deciso di continuare la stesura dei documenti nuovi e correggere quelli già esistenti:
 - #issue("327")[*Stesura verbale interno 2025-03-31*]
 - #issue("314")[*Stesura verbale interno 2025-03-26*]
 - #issue("334")[*Diario di bordo 14*]

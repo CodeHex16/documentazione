@@ -47,7 +47,8 @@ correzioni suggerite dal professore, tuttavia sono sorti dubbi su altre. È stat
 professore per chiedere chiarimenti su questi dubbi.
 
 == Discussione sulle nuove norme di progetto riguardo lo sviluppo
-In vista della nuova fase del progetto, il gruppo ha deciso di aggiungere alcune norme di progetto riguardo lo sviluppo.
+In vista della nuova fase del progetto, il gruppo ha deciso di aggiungere alcune norme riguardo lo sviluppo nel
+documento Norme di progetto.
 
 = Assegnazione ruoli
 - I *nuovi ruoli* per lo Sprint 10 sono:
