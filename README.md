@@ -21,9 +21,7 @@ documentazione/
 |        └── 📄 *.pdf
 ├── 📁 2 - RTB
 |  ├── 📁 imgs
-|  ├── 📁 presentazione
-|  |  └── 📁 source
-|  |  └── 📄 *.pdf
+|  ├── 📁 presentazioni
 |  ├── 📁 source
 |  ├── 📄 *.pdf
 |  └── 📁 verbali
@@ -35,9 +33,7 @@ documentazione/
 |        └── 📁 source
 |        └── 📄 *.pdf
 ├── 📁 3 - PB
-|  ├── 📁 presentazione
-|  |  └── 📁 source
-|  |  └── 📄 *.pdf
+|  ├── 📁 presentazioni
 |  └── 📁 source
 |  └── 📄 *.pdf
 ├── 📁 diari-di-bordo
@@ -45,6 +41,10 @@ documentazione/
 |  └── 📁 source
 |  └── 📄 *.pdf
 └── 📁 template		# file di template per i documenti
+   └── 📁 images		# assets per i documenti
+```
+<!-- FINE TREE DIRECTORY -->
+ template per i documenti
    └── 📁 images		# assets per i documenti
 ```
 <!-- FINE TREE DIRECTORY -->
