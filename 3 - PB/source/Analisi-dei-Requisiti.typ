@@ -1,83 +1,90 @@
 #import "../../template/documenti.typ": *
 #import "../../template/i-figured.typ"
 
-#show: doc => documento(titolo: "Analisi dei Requisiti", data: [12/11/2024], ruoli: (
-  "Matteo Bazzan",
-  "Verificatore",
-  "Luca Ribon",
-  "Redattore",
-  "Francesco Fragonas",
-  "Redattore - Verificatore",
-  "Gabriele Magnelli",
-  "Redattore",
-  "Filippo Sabbadin",
-  "Redattore - Verificatore",
-  "Luca Rossi",
-  "",
-  "Yi Hao Zhuo",
-  "Verificatore",
-), sommario: [Analisi dei requisiti del capitolato C7], versioni: (
-  "1.1.0",
-  "20/03/2025",
-  "Luca Ribon",
-  "Correzioni a seguito della revisione del prof. Cardin",
-  "!!!!!!!!!!!!!!!!!!!!",
-  "1.0.0",
-  "06/03/2025",
-  "Gabriele Magnelli",
-  "Varie migliorie",
-  "Matteo Bazzan",
-  "0.9.0",
-  "21/02/2025",
-  "Filippo Sabbadin",
-  "Aggiunti grafici use case e corretti alcuni errori",
-  "Matteo Bazzan",
-  "0.8.0",
-  "20/02/2025",
-  "Luca Ribon",
-  "Corretti e aggiunti use case e requisiti a seguito della riunione con il Prof. Cardin",
-  "Francesco Fragonas",
-  "0.7.1",
-  "10/02/2025",
-  "Luca Ribon",
-  "Aggiunti use case mancanti e corretti typo",
-  "Filippo Sabbadin",
-  "0.7.0",
-  "07/02/2025",
-  "Luca Ribon, Filippo Sabbadin",
-  "Aggiunti requisiti funzionali",
-  "Francesco Fragonas",
-  "0.6.0",
-  "31/01/2025",
-  "Filippo Sabbadin, Luca Ribon",
-  "Aggiunta sezione requisiti, migliorati use case esistenti",
-  "Francesco Fragonas",
-  "0.5.0",
-  "11/01/2025",
-  "Filippo Sabbadin",
-  "Corretti use case sul login, aggiunte immagini con i grafici UML",
-  "Yi Hao Zhuo",
-  "0.4.0",
-  "06/01/2025",
-  "Luca Ribon",
-  "Aggiunti use case, corretti alcuni dei precedenti",
-  "Filippo Sabbadin",
-  "0.3.0",
-  "23/12/2024",
-  "Luca Ribon",
-  "Aggiunti use case",
-  "Filippo Sabbadin",
-  "0.2.0",
-  "27/11/2024",
-  "Gabriele Magnelli",
-  "Aggiunti use case",
-  "Filippo Sabbadin",
-  "0.1.0",
-  "12/11/2024",
-  "Francesco Fragonas",
-  "Prima stesura",
-  "Matteo Bazzan",
-), doc)
+#show: doc => documento(
+  titolo: "Analisi dei Requisiti",
+  data: [12/11/2024],
+  ruoli: (
+    "Matteo Bazzan",
+    "Verificatore",
+    "Luca Ribon",
+    "Redattore",
+    "Francesco Fragonas",
+    "Redattore - Verificatore",
+    "Gabriele Magnelli",
+    "Redattore",
+    "Filippo Sabbadin",
+    "Redattore - Verificatore",
+    "Luca Rossi",
+    "",
+    "Yi Hao Zhuo",
+    "Verificatore",
+  ),
+  sommario: [Analisi dei requisiti del capitolato C7],
+  versioni: (
+    "1.1.0",
+    "20/03/2025",
+    "Luca Ribon",
+    "Correzioni testuali a seguito della revisione del prof. Cardin",
+    "!!!!!!!!!!!!!!!!!!!!",
+    "1.0.0",
+    "06/03/2025",
+    "Gabriele Magnelli",
+    "Varie migliorie",
+    "Matteo Bazzan",
+    "0.9.0",
+    "21/02/2025",
+    "Filippo Sabbadin",
+    "Aggiunti grafici use case e corretti alcuni errori",
+    "Matteo Bazzan",
+    "0.8.0",
+    "20/02/2025",
+    "Luca Ribon",
+    "Corretti e aggiunti use case e requisiti a seguito della riunione con il Prof. Cardin",
+    "Francesco Fragonas",
+    "0.7.1",
+    "10/02/2025",
+    "Luca Ribon",
+    "Aggiunti use case mancanti e corretti typo",
+    "Filippo Sabbadin",
+    "0.7.0",
+    "07/02/2025",
+    "Luca Ribon, Filippo Sabbadin",
+    "Aggiunti requisiti funzionali",
+    "Francesco Fragonas",
+    "0.6.0",
+    "31/01/2025",
+    "Filippo Sabbadin, Luca Ribon",
+    "Aggiunta sezione requisiti, migliorati use case esistenti",
+    "Francesco Fragonas",
+    "0.5.0",
+    "11/01/2025",
+    "Filippo Sabbadin",
+    "Corretti use case sul login, aggiunte immagini con i grafici UML",
+    "Yi Hao Zhuo",
+    "0.4.0",
+    "06/01/2025",
+    "Luca Ribon",
+    "Aggiunti use case, corretti alcuni dei precedenti",
+    "Filippo Sabbadin",
+    "0.3.0",
+    "23/12/2024",
+    "Luca Ribon",
+    "Aggiunti use case",
+    "Filippo Sabbadin",
+    "0.2.0",
+    "27/11/2024",
+    "Gabriele Magnelli",
+    "Aggiunti use case",
+    "Filippo Sabbadin",
+    "0.1.0",
+    "12/11/2024",
+    "Francesco Fragonas",
+    "Prima stesura",
+    "Matteo Bazzan",
+  ),
+  doc,
+)
 // spaciugo per aggiungere l'indice delle immagini
 #set page(numbering: "I")
 #counter(page).update(3)
@@ -116,7 +123,7 @@ Il chatbot si integra con un'interfaccia dedicata al #gloss[fornitore], che perm
 *Azienda fornitrice:* rappresenta l'azienda che fornisce beni o servizi ai propri clienti. Questo utente ha accesso a
 un'interfaccia web per la configurazione del chatbot e la gestione dei clienti oltre ad un interfaccia equivalente a
 quella del cliente per comunicare con il chatbot. *Cliente:* rappresenta il cliente finale che acquista i prodotti dal
-fornitore. Questo utente può interagire con il chatbot per ottenere informazioni sui prodotti o servizi offerti. 
+fornitore. Questo utente può interagire con il chatbot per ottenere informazioni sui prodotti o servizi offerti.
 
 == Funzionalità del prodotto
 Il sistema dovrà offrire le seguenti funzionalità principali:
@@ -181,7 +188,7 @@ Questo utente ha accesso ad un'#gloss[interfaccia web] di configurazione del cha
 clienti.\
 *Utente non autenticato*: chiamato anche "utente non registrato" rappresenta un utente che non ha ancora
 completato l'autenticazione.\
-*Utente generico*: rappresenta un utente, che può essere Fornitore o Cliente, sia nel caso in cui sia autenticato sia nel caso in cui non lo sia.\ 
+*Utente generico*: rappresenta un utente, che può essere Fornitore o Cliente, sia nel caso in cui sia autenticato sia nel caso in cui non lo sia.\
 
 #figure(image("../imgs/attori.png", width: 70%), caption: "Lista degli attori")
 
@@ -202,14 +209,13 @@ completato l'autenticazione.\
 - L'utente inserisce l'indirizzo e-mail e la password nei campi dedicati;
 - Il sistema riceve la richiesta di accesso e verifica le credenziali, se sono corrette reindirizza alla homepage;
 *Estensioni:*
-- Sistema non raggiungibile;
+- Errore: Sistema non raggiungibile;
 - Primo login fornitore;
 - Primo login cliente;
 *Inclusioni:*
 - Inserimento e-mail;
 - Inserimento password;
 - Possibilità "Resta connesso";
-
 
 == UC2 - Primo login fornitore
 #figure(image("../imgs/login-fornitore.png", width: 80%), caption: "Primo login Fornitore")
@@ -241,7 +247,7 @@ completato l'autenticazione.\
     - reindirizza alla piattaforma;
   - se le credenziali sono errate, restituisce un errore e permette di reinserirle;
 *Estensioni:*
-- Sistema non raggiungibile;
+- Errore: Sistema non raggiungibile;
 - Possibilità "Resta connesso";
 *Inclusioni:*
 - Inserimento e-mail;
@@ -278,7 +284,7 @@ completato l'autenticazione.\
     - reindirizza alla piattaforma;
   - se le credenziali sono errate, restituisce un errore e permette di reinserirle;
 *Estensioni:*
-- Sistema non raggiungibile;
+- Errore: Sistema non raggiungibile;
 - Possibilità "Resta connesso";
 *Inclusioni:*
 - Inserimento e-mail;
@@ -302,9 +308,10 @@ completato l'autenticazione.\
 - L'utente inserisce le password richieste;
 - Il sistema riceve la richiesta di cambio password e, se quella nuova è valida, lo effettua;
 *Estensioni:*
-- Sistema non raggiungibile;
+- Errore: Sistema non raggiungibile;
 *Inclusioni:*
-- Inserimento password;
+- Controllo identità;
+- Inserimento nuova password;
 
 == UC5 - Possibilità "Resta connesso"
 *Attori principali:*
@@ -323,7 +330,7 @@ completato l'autenticazione.\
 - L'utente inserisce le credenziali;
 - Il sistema mantiene in memoria la preferenza per i futuri login;
 *Estensioni:*
-- Sistema non raggiungibile;
+- Errore: Sistema non raggiungibile;
 
 // non va incluso il modifica password perché in questo caso non si conosce la password vecchia
 == UC6 - Recupero password
@@ -342,9 +349,7 @@ completato l'autenticazione.\
 - Il sistema riceve la richiesta, controlla che l'e-mail sia valida e, se lo è, invia all'e-mail le istruzioni per il
   recupero della password;
 *Estensioni:*
-- Sistema non raggiungibile;
-*Inclusioni:*
-- Inserimento password;
+- Errore: Sistema non raggiungibile;
 
 == UC7 - Inserimento e-mail
 *Attori principali:*
@@ -359,7 +364,7 @@ completato l'autenticazione.\
 *Scenario principale:*
 - L'utente inserisce la sua e-mail nel campo dedicato;
 *Estensioni:*
-- Credenziale non valida;
+- Errore: Credenziale non valida;
 
 == UC8 - Inserimento password
 *Attori principali:*
@@ -374,9 +379,41 @@ completato l'autenticazione.\
 *Scenario principale:*
 - L'utente inserisce la sua password nel campo dedicato;
 *Estensioni:*
-- Credenziale non valida;
+- Errore: Credenziale non valida;
 
-== UC9 - Credenziale non valida
+== UC9 - Inserimento nuova password
+*Attori principali:*
+- Cliente;
+*Descrizione:*
+- Un utente autenticato deve inserire la password che andrà a sostituire la sua password corrente, in caso di primo login o di un qualsiasi cambio password;
+*Precondizioni:*
+- Le credenziali dell'utente sono state correttamente inserite nel sistema;
+- L'utente deve essersi autenticato con le credenziali corrette;
+*Postcondizioni:*
+- Il sistema ha ricevuto la richiesta di cambio password e, se questa è valida, effettua il cambiamento della password;
+*Scenario Principale:*
+- All'utente viene mostrato un form per inserire la nuova password;
+- L'utente inserisce la nuova password;
+*Inclusioni:*
+- Errore: Credenziale non valida;
+
+== UC10 - Controllo identità
+*Attori principali:*
+- Cliente;
+*Descrizione:*
+- Un utente autenticato deve inserire la password corrente associata al proprio utente per confermare la propria identità;
+*Precondizioni:*
+- Le credenziali dell'utente sono state correttamente inserite nel sistema;
+- L'utente deve essersi precedentemente autenticato con le credenziali corrette;
+*Postcondizioni:*
+- Il sistema ha ricevuto la password inserite e, se questa è valida, vengono abilitate le funzionalità che necessitano dell'identificazione;
+*Scenario Principale:*
+- All'utente viene mostrato un form per inserire la password corrente;
+- L'utente inserisce la password corrente;
+*Inclusioni:*
+- Errore: Credenziale non valida;
+
+== UC11 - Errore: Credenziale non valida
 *Attori principali:*
 - Utente generico;
 *Descrizione:*
@@ -388,7 +425,7 @@ completato l'autenticazione.\
 - L'utente viene notificato dal sistema dell'errore fatto tramite un messaggio che non specifica la credenziale errata;
 - Viene richiesto di reinserire la credenziale;
 *Scenario principale:*
-- L'utente inserisce una credenziale è errata o che non rispetta il formato richiesto;
+- L'utente inserisce una credenziale errata o che non rispetta il formato richiesto;
 
 // == UC9 - E-mail non valida
 // *Attori principali:*
@@ -430,7 +467,7 @@ completato l'autenticazione.\
 // - Il sistema riceve la password inserita dall'utente;
 // - Il sistema verifica la password inserita e la trova non conforme ai requisiti, quindi invia un messaggio d'errore all'utente con la richiesta di scegliere un'altra password valida;
 
-== UC11 - Logout
+== UC12 - Logout
 #figure(image("../imgs/logout.png", width: 50%), caption: "Logout")
 *Attori principali:*
 - Cliente;
@@ -444,9 +481,9 @@ completato l'autenticazione.\
 - L'utente preme il pulsante di logout;
 - Il sistema riceve la richiesta di logout e disconnette l'utente dal sistema;
 *Estensioni:*
-- Sistema non raggiungibile;
+- Errore: Sistema non raggiungibile;
 
-== UC12 - Visualizzazione della lista delle chat
+== UC13 - Visualizzazione della lista delle chat
 #figure(image("../imgs/lista-chat.png", width: 100%), caption: "Schermata delle chat")
 *Attori principali:*
 - Cliente;
@@ -459,11 +496,11 @@ completato l'autenticazione.\
 *Scenario Principale:*
 - L'utente vede la lista di tutte le chat, se non ne ha mai creata una visualizzerà solo quella presente di default;
 *Estensioni:*
-- Sistema non raggiungibile;
+- Errore: Sistema non raggiungibile;
 *Inclusioni:*
 - Visualizzazione titolo della chat;
 
-== UC12 Visualizzazione titolo della chat
+== UC14 - Visualizzazione titolo della chat
 *Attori principali:*
 - Cliente;
 *Descrizione:*
@@ -476,7 +513,7 @@ completato l'autenticazione.\
 *Scenario Principale:*
 - L'utente visualizza il nome della chat presente nella lista delle chat;
 
-== UC13 - Creazione di una nuova chat
+== UC15 - Creazione di una nuova chat
 *Attori principali:*
 - Cliente;
 *Descrizione:*
@@ -489,9 +526,9 @@ completato l'autenticazione.\
 *Scenario Principale:*
 - L'utente usa il tasto per creare una nuova chat nella homepage e crea una nuova chat con un nuovo contesto;
 *Estensioni:*
-- Sistema non raggiungibile;
+- Errore: Sistema non raggiungibile;
 
-== UC14 - Modifica titolo di una chat
+== UC16 - Modifica titolo di una chat
 #figure(image("../imgs/modifica-titolo-chat.png", width: 100%), caption: "Modifica titolo chat")
 *Attori principali:*
 - Cliente;
@@ -505,11 +542,10 @@ completato l'autenticazione.\
 - L'utente seleziona la chat dalla lista di tutte le chat e preme il tasto per modificare il titolo
 - L'utente inserisce il nuovo titolo nel campo apposito e conferma;
 *Estensioni:*
-- Invio richiesta con dati mancanti o errati;
-- Sistema non raggiungibile;
+- Errore: Richiesta con dati mancanti o errati;
+- Errore: Sistema non raggiungibile;
 
-// TODO: mettere visualizzazione dei messaggi, del nome della chat, della scrittura ...
-== UC15 - Apertura di una chat singola
+== UC17 - Apertura di una chat singola
 *Attori principali:*
 - Cliente;
 *Descrizione:*
@@ -522,7 +558,7 @@ completato l'autenticazione.\
 *Scenario Principale:*
 - L'utente visualizza la chat scelta in una nuova finestra;
 *Estensioni:*
-- Sistema non raggiungibile;
+- Errore: Sistema non raggiungibile;
 *Inclusioni:*
 - Visualizzazione titolo della chat;
 - Visualizzazione messaggi precedenti;
@@ -534,7 +570,7 @@ completato l'autenticazione.\
 - Valutazione risposta positiva;
 - Valutazione risposta negativa;
 
-== UC16 - Visualizzazione messaggi precedenti
+== UC18 - Visualizzazione messaggi precedenti
 *Attori principali:*
 - Cliente;
 *Descrizione:*
@@ -550,7 +586,7 @@ completato l'autenticazione.\
 - Visualizzazione risposta;
 - Visualizzazione messaggio inviato;
 
-== UC16 - Visualizzazione messaggio inviato
+== UC19 - Visualizzazione messaggio inviato
 *Attori principali:*
 - Cliente;
 *Descrizione:*
@@ -565,7 +601,7 @@ completato l'autenticazione.\
 *Scenario Principale:*
 - L'utente visualizza il messaggio inviato all'interno della chat;
 
-== UC16 - Scrittura messaggio
+== UC20 - Scrittura messaggio
 #figure(image("../imgs/scrittura-messaggio.png", width: 100%), caption: "Scrittura messaggio")
 *Attori principali:*
 - Cliente;
@@ -581,10 +617,10 @@ completato l'autenticazione.\
 *Generalizzazioni:*
 - Scrittura messaggio tramite FAQ;
 *Estensioni:*
-- Messaggio troppo lungo;
-- Sistema non raggiungibile;
+- Errore: Messaggio troppo lungo;
+- Errore: Sistema non raggiungibile;
 
-=== UC16.1 - Messaggio troppo lungo
+=== UC20.1 - Errore: Messaggio troppo lungo
 *Attori principali:*
 - Cliente;
 *Descrizione:*
@@ -599,7 +635,7 @@ completato l'autenticazione.\
 - L'utente digita il messaggio nel campo apposito all'interno della chat;
 - Il sistema verifica la lunghezza del messaggio e, se questa supera la lunghezza massima, notifica l'utente;
 
-== UC17 - Scrittura messaggio tramite FAQ
+== UC21 - Scrittura messaggio tramite FAQ
 *Attori principali:*
 - Cliente;
 *Descrizione:*
@@ -611,9 +647,9 @@ completato l'autenticazione.\
 - L'utente ha scritto un messaggio utilizzando una delle domande preimpostate;
 *Scenario Principale:*
 - L'utente, anziché scrivere un messaggio manualmente, decide di utilizzare un messaggio tra quelli preimpostati
-  nell'applicazione; nel caso in cui l'LLM individua delle FAQ utili nel contesto della chat sarà il chatbot stesso a suggerirle all'utente; 
+  nell'applicazione; nel caso in cui l'LLM individua delle FAQ utili nel contesto della chat sarà il chatbot stesso a suggerirle all'utente;
 
-== UC18 - Invio messaggio
+== UC22 - Invio messaggio
 #figure(image("../imgs/invio-messaggio.png", width: 100%), caption: "Invio messaggio")
 *Attori principali:*
 - Cliente;
@@ -628,10 +664,10 @@ completato l'autenticazione.\
 *Scenario Principale:*
 - Dopo aver scritto il messaggio l'utente invia il messaggio;
 *Estensioni:*
-- Invio richiesta con dati mancanti o errati;
-- Sistema non raggiungibile;
+- Errore: Richiesta con dati mancanti o errati;
+- Errore: Sistema non raggiungibile;
 
-== UC19 - Visualizzazione risposta
+== UC23 - Visualizzazione risposta
 #figure(
   image("../imgs/ricezione-valutazione-risposta.png", width: 90%),
   caption: "Ricezione e valutazione della risposta",
@@ -650,9 +686,9 @@ completato l'autenticazione.\
 - Il chatbot elabora e restituisce una risposta;
 - La contenuto della risposta viene mostrato all'utente tramite l'interfaccia della chat specifica;
 *Estensioni:*
-- Sistema non raggiungibile;
+- Errore: Sistema non raggiungibile;
 
-== UC20 - Valutazione risposta
+== UC24 - Valutazione risposta
 *Attori principali:*
 - Cliente;
 *Descrizione:*
@@ -667,12 +703,12 @@ completato l'autenticazione.\
 - L'utente ha ricevuto una risposta dal chatbot e valuta tale risposta con una delle opzioni disponibili;
 - Il sistema registra il feedback dell'utente;
 *Estensioni:*
-- Sistema non raggiungibile;
+- Errore: Sistema non raggiungibile;
 *Generalizzazioni:*
 - Valutazione risposta positiva;
 - Valutazione risposta negativa;
 
-=== UC20.1 - Valutazione risposta positiva
+=== UC24.1 - Valutazione risposta positiva
 *Attori principali:*
 - Cliente;
 *Descrizione:*
@@ -687,9 +723,9 @@ completato l'autenticazione.\
 - L'utente ha ricevuto una risposta dal chatbot e valuta tale risposta premendo il bottone "Pollice su";
 - Il sistema registra il feedback positivo dell'utente;
 *Estensioni:*
-- Sistema non raggiungibile;
+- Errore: Sistema non raggiungibile;
 
-=== UC20.2 - Valutazione risposta negativa
+=== UC24.2 - Valutazione risposta negativa
 *Attori principali:*
 - Cliente;
 *Descrizione:*
@@ -704,9 +740,9 @@ completato l'autenticazione.\
 - L'utente ha ricevuto una risposta dal chatbot e valuta tale risposta premendo il bottone "Pollice giù";
 - Il sistema registra il feedback negativo dell'utente;
 *Estensioni:*
-- Sistema non raggiungibile;
+- Errore: Sistema non raggiungibile;
 
-== UC21 - Eliminazione di una chat
+== UC25 - Eliminazione di una chat
 #figure(image("../imgs/eliminazione-chat.png", width: 80%), caption: "Eliminazione di una chat")
 *Attori principali:*
 - Cliente;
@@ -720,11 +756,10 @@ completato l'autenticazione.\
 - L'utente seleziona la chat dalla homepage e preme il tasto per eliminarla, la chat poi viene cancellata e non è più
   presente nella piattaforma;
 *Estensioni:*
-- Invio richiesta con dati mancanti o errati;
-- Sistema non raggiungibile;
+- Errore: Richiesta con dati mancanti o errati;
+- Errore: Sistema non raggiungibile;
 
-// TODO: forse generalizzare?
-== UC22 - Cambio tema
+== UC26 - Cambio tema
 #figure(image("../imgs/selezione-dark-light.png", width: 50%), caption: "Selezione modalità chiara/scura")
 *Attori principali:*
 - Cliente;
@@ -742,7 +777,7 @@ completato l'autenticazione.\
 - Cambio tema chiaro;
 - Cambio tema scuro;
 
-=== UC22.1 - Cambio tema chiaro
+=== UC26.1 - Cambio tema chiaro
 *Attori principali:*
 - Cliente;
 *Descrizione:*
@@ -756,7 +791,7 @@ completato l'autenticazione.\
 - L'utente seleziona l'opzione per il tema chiaro;
 - Il sistema imposta il tema chiaro per dell'interfaccia lato client;
 
-=== UC22.2 - Cambio tema scuro
+=== UC26.2 - Cambio tema scuro
 *Attori principali:*
 - Cliente;
 *Descrizione:*
@@ -770,7 +805,7 @@ completato l'autenticazione.\
 - L'utente seleziona l'opzione per il tema scuro;
 - Il sistema imposta il tema scuro per dell'interfaccia lato client;
 
-== UC23 - Modifica della durata dello storico delle chat
+== UC27 - Modifica della durata dello storico delle chat
 #figure(image("../imgs/impostazioni-fornitore.png", width: 90%), caption: "Impostazioni fornitore")
 *Attori principali:*
 - Fornitore;
@@ -786,9 +821,9 @@ completato l'autenticazione.\
   conferma;
 - Il sistema memorizza la nuova impostazione;
 *Estensioni:*
-- Sistema non raggiungibile;
+- Errore: Sistema non raggiungibile;
 
-== UC24 - Caricare il proprio logo
+== UC28 - Inserimento del logo
 *Attori principali:*
 - Fornitore;
 *Descrizione:*
@@ -803,10 +838,10 @@ completato l'autenticazione.\
 - Il fornitore accede alla sezione "Carica logo" e inserisce il proprio logo;
 - Il sistema controlla il formato del logo caricato e se conforme lo utilizza nell'interfaccia;
 *Estensioni*:
-- Formato file non valido;
-- Sistema non raggiungibile;
+- Errore: Formato file non valido;
+- Errore: Sistema non raggiungibile;
 
-== UC25 - Selezione palette colori
+== UC29 - Selezione palette colori
 #figure(image("../imgs/selezione-palette.png", width: 90%), caption: "Selezione palette colori")
 *Attori principali:*
 - Fornitore;
@@ -826,10 +861,10 @@ completato l'autenticazione.\
 - Il fornitore salva le scelte effettuate;
 - Il sistema modifica l'interfaccia con i colori scelti dal fornitore;
 *Estensioni*:
-- Invio richiesta con dati mancanti o errati;
-- Sistema non raggiungibile;
+- Errore: Richiesta con dati mancanti o errati;
+- Errore: Sistema non raggiungibile;
 
-== UC26 - Visualizzare statistiche domanda-risposta
+== UC30 - Visualizzazione statistiche domanda-risposta
 #figure(
   image("../imgs/filtri-statistiche.png", width: 90%),
   caption: "Visualizzazione statistiche e filtri del fornitore",
@@ -854,9 +889,9 @@ completato l'autenticazione.\
   - numero di messaggi inviati tramite FAQ;
 *Estensioni*:
 - Inserimento filtri di visualizzazione;
-- Sistema non raggiungibile;
+- Errore: Sistema non raggiungibile;
 
-== UC27 - Inserimento filtri di visualizzazione
+== UC31 - Scelta filtri di visualizzazione
 *Attori principali:*
 - Fornitore;
 *Descrizione*
@@ -874,7 +909,7 @@ completato l'autenticazione.\
 - Il fornitore inserisce i filtri di visualizzazione desiderati;
 - Il sistema applica i filtri alle statistiche;
 
-== UC28 - Aggiunta account cliente
+== UC32 - Aggiunta account cliente
 #figure(image("../imgs/aggiunta-account-cliente.png", width: 90%), caption: "Aggiunta di un account cliente")
 *Attori principali:*
 - Fornitore;
@@ -891,9 +926,9 @@ completato l'autenticazione.\
 - Il fornitore conferma l'aggiunta dell'account;
 - Il sistema aggiunge l'account per il cliente;
 *Estensioni:*
-- Invio richiesta con dati mancanti o errati;
-- Inserimento di un account già esistente;
-- Sistema non raggiungibile;
+- Errore: Richiesta con dati mancanti o errati;
+- Errore: Account inserito già esistente;
+- Errore: Sistema non raggiungibile;
 
 // == UC27 - Inserimento di parametri dell'account non validi
 // *Attori principali:*
@@ -909,7 +944,7 @@ completato l'autenticazione.\
 // - Il sistema riceve i parametri dell'account inseriti dal fornitore, ma questi non sono validi;
 //- Il sistema mostra un messaggio di errore il quale indica che i parametri inseriti non sono validi;
 
-== UC29 - Inserimento di un account già esistente
+== UC33 - Errore: Account inserito già esistente
 * Attori principali:*
 - Fornitore;
 *Descrizione:*
@@ -924,7 +959,7 @@ completato l'autenticazione.\
 - Il sistema riceve i parametri dell'account inseriti dal fornitore, ma questo è già presente nel sistema;
 - Il sistema mostra un messaggio di errore il quale indica che l'account inserito è già esistente;
 
-== UC30 - Eliminazione dell'account cliente
+== UC34 - Eliminazione dell'account cliente
 #figure(image("../imgs/eliminazione-account-cliente.png", width: 90%), caption: "Eliminazione di un account cliente")
 *Attori principali:*
 - Fornitore;
@@ -945,11 +980,11 @@ completato l'autenticazione.\
 - Il fornitore conferma l'eliminazione dell'account;
 - Il sistema elimina l'account del cliente;
 *Estensioni:*
-- Inserimento password;
-- Invio richiesta con dati mancanti o errati;
-- Sistema non raggiungibile;
+- Controllo identità;
+- Errore: Richiesta con dati mancanti o errati;
+- Errore: Sistema non raggiungibile;
 
-== UC31 - Inserimento documenti aziendali
+== UC35 - Inserimento documenti aziendali
 #figure(
   image("../imgs/inserimento-documenti-aziendali.png", width: 100%),
   caption: "Inserimento di documenti aziendali",
@@ -969,10 +1004,10 @@ completato l'autenticazione.\
 - Il fornitore carica i documenti tramite l'interfaccia;
 - Il sistema riceve i documenti, li formatta e li inserisce nel sistema in modo che siano utilizzabili dall'LLM;
 *Estensioni:*
-- Formato file non valido;
-- Sistema non raggiungibile;
+- Errore: Formato file non valido;
+- Errore: Sistema non raggiungibile;
 
-== UC32 - Formato file non valido
+== UC36 - Errore: Formato file non valido
 *Attori principali:*
 - Fornitore;
 *Descrizione:*
@@ -987,7 +1022,7 @@ completato l'autenticazione.\
 - Il sistema riceve il file caricato dal fornitore e dopo aver verificato che il formato non è valido, invia un messaggio
   d'errore al fornitore;
 
-== UC33 - Visualizzazione dei documenti aziendali
+== UC37 - Visualizzazione dei documenti aziendali
 #figure(
   image("../imgs/visualizzazione-documenti-aziendali.png", width: 100%),
   caption: "Visualizzazione di documenti aziendali",
@@ -1005,9 +1040,9 @@ completato l'autenticazione.\
 - Il fornitore accede alla sezione "Gestione documenti aziendali";
 - La piattaforma visualizza la lista dei documenti aziendali caricati nella piattaforma;
 *Estensioni:*
-- Sistema non raggiungibile;
+- Errore: Sistema non raggiungibile;
 
-== UC34 - Eliminazione di un documento aziendale
+== UC38 - Eliminazione di un documento aziendale
 #figure(
   image("../imgs/eliminazione-documento-aziendale.png", width: 100%),
   caption: "Eliminazione di un documento aziendale",
@@ -1026,35 +1061,34 @@ completato l'autenticazione.\
 - Viene richiesto l'inserimento della password del fornitore per confermare l'eliminazione;
 - Il sistema elimina il documento dalla piattaforma;
 *Estensioni:*
-- Invio richiesta con dati mancanti o errati;
-- Sistema non raggiungibile;
+- Errore: Richiesta con dati mancanti o errati;
+- Errore: Sistema non raggiungibile;
 *Inclusioni:*
-- Inserimento password;
+- Controllo identità;
 
-== UC35 - Aggiunta delle FAQ
-#figure(image("../imgs/aggiunta-faq.png", width: 90%), caption: "Aggiunta delle FAQ")
+== UC39 - Inserimento di una FAQ
+#figure(image("../imgs/aggiunta-faq.png", width: 90%), caption: "Inserimento di una FAQ")
 *Attori principali:*
 - Fornitore;
 *Descrizione:*
-- Il fornitore vuole aggiungere delle FAQ nella piattaforma in modo che il cliente possa usarle per ricevere risposte più
-  precise e veloci;
+- Il fornitore vuole aggiungere una FAQ nella piattaforma in modo che il cliente possa usarla per ricevere risposte più precise e veloci;
 *Precondizioni:*
 - Il fornitore deve aver effettuato il login;
 - Il fornitore deve essere nella pagina delle impostazioni della piattaforma;
 *Postcondizioni:*
-- Le FAQ scelte dal fornitore vengono inserite nella piattaforma;
+- La FAQ scelta dal fornitore viene inserita nella piattaforma;
 *Scenario Principale:*
 - Il fornitore accede alla sezione "Gestione FAQ";
-- Il fornitore inserisce le FAQ compilando i seguenti campi:
+- Il fornitore inserisce la FAQ compilando i seguenti campi:
   - Domanda;
-  - Descrizione o titolo molto breve della domanda, utile per mostrare la FAQ in chat dove è disponibile poco spazio; 
+  - Descrizione o titolo molto breve della domanda, utile per mostrare la FAQ in chat dove è disponibile poco spazio;
   - Risposta;
-- Il sistema riceve le FAQ, le formatta e le inserisce nel sistema in modo che siano utilizzabili dall'LLM;
+- Il sistema riceve la FAQ, la formatta e la inserisce nel sistema in modo che sia utilizzabile dall'LLM;
 *Estensioni:*
-- Invio richiesta con dati mancanti o errati;
-- Sistema non raggiungibile;
+- Errore: Richiesta con dati mancanti o errati;
+- Errore: Sistema non raggiungibile;
 
-== UC36 - Visualizzazione delle FAQ
+== UC40 - Visualizzazione delle FAQ
 #figure(image("../imgs/visualizzazione-faq.png", width: 90%), caption: "Visualizzazione delle FAQ")
 *Attori principali:*
 - Fornitore;
@@ -1067,14 +1101,14 @@ completato l'autenticazione.\
 - Il fornitore visualizza la lista delle FAQ inserite nella piattaforma;
 *Scenario Principale:*
 - Viene visualizzata la lista delle FAQ inserite nella piattaforma con i seguenti campi:
-  - Descrizione breve o titolo; 
+  - Descrizione breve o titolo;
   - Domanda;
   - Risposta;
   La domanda e la risposta vengono troncate se risultano troppo lunghe;
 *Estensioni:*
-- Sistema non raggiungibile;
+- Errore: Sistema non raggiungibile;
 
-== UC37 - Modifica di una FAQ
+== UC41 - Modifica di una FAQ
 #figure(image("../imgs/modifica-faq.png", width: 90%), caption: "Modifica di una FAQ")
 *Attori principali:*
 - Fornitore;
@@ -1090,10 +1124,10 @@ completato l'autenticazione.\
 - Il fornitore modifica la FAQ tramite dei campi appositi nell'interfaccia;
 - Il sistema riceve le modifiche e, se tutti i campi modificati rispettano i formati richiesti, le applica;
 *Estensioni:*
-- Invio richiesta con dati mancanti o errati;
-- Sistema non raggiungibile;
+- Errore: Richiesta con dati mancanti o errati;
+- Errore: Sistema non raggiungibile;
 
-== UC38 - Eliminazione di una FAQ
+== UC42 - Eliminazione di una FAQ
 #figure(image("../imgs/eliminazione-faq.png", width: 90%), caption: "Eliminazione di una FAQ")
 *Attori principali:*
 - Fornitore;
@@ -1109,12 +1143,12 @@ completato l'autenticazione.\
 - Viene richiesta la password del fornitore per confermare l'eliminazione;
 - Il sistema elimina la FAQ dalla piattaforma;
 *Estensioni:*
-- Invio richiesta con dati mancanti o errati;
-- Sistema non raggiungibile;
+- Errore: Richiesta con dati mancanti o errati;
+- Errore: Sistema non raggiungibile;
 *Inclusioni:*
-- Inserimento password;
+- Controllo identità;
 
-== UC39 - Sistema non raggiungibile
+== UC43 - Errore: Sistema non raggiungibile
 *Attori principali:*
 - Utente generico;
 *Descrizione:*
@@ -1128,7 +1162,7 @@ completato l'autenticazione.\
   raggiungibile;
 - Il sistema mostra un messaggio d'errore all'utente tramite il client;
 
-== UC40 - Invio richiesta con dati mancanti o errati
+== UC44 - Errore: Richiesta con dati mancanti o errati
 *Attori principali:*
 - Utente generico;
 *Descrizione:*
@@ -1139,7 +1173,7 @@ completato l'autenticazione.\
 - Viene notificato l'errore relativo alla richiesta all'utente;
 - La richiesta non va a buon fine;
 *Scenario Principale:*
-- L'utente invia una richiesta al sistema, ma i dati utilizzati nella richiesta sono mancanti o errati; in alcuni casi richieste come queste possono essere associate ad un utilizzo errato della piattaforma o ad un tentativo di attacco informatico; 
+- L'utente invia una richiesta al sistema, ma i dati utilizzati nella richiesta sono mancanti o errati; in alcuni casi richieste come queste possono essere associate ad un utilizzo errato della piattaforma o ad un tentativo di attacco informatico;
 - Il sistema mostra un messaggio d'errore all'utente tramite il client dove spiega la causa dell'errore;
 
 = Requisiti
@@ -1315,11 +1349,11 @@ con:
     "R-37-F-O",
     "Il fornitore deve avere la possibilità di eliminare le domande preimpostate dalla piattaforma solo dopo aver autorizzato l'eliminazione tramite la propria password",
     "UC38 - Riunioni interne",
-    // sistema non raggiungibile
+    // Errore: Sistema non raggiungibile
     "R-38-F-O",
     "Un utente non autenticato o il cliente che sta utilizzando la piattaforma deve essere avvisato nel caso in cui il sistema non sia raggiungibile, possibilmente specificando il motivo del malfunzionamento",
     "UC39 - Riunioni interne",
-    // invio richiesta con dati mancanti o errati
+    // Errore: Richiesta con dati mancanti o errati
     "R-39-F-O",
     "Un utente non autenticato o il cliente che sta utilizzando la piattaforma deve essere avvisato nel caso in cui la richiesta che ha inviato contenga dati mancanti o errati; nel caso sia pertinente deve anche essere specificato il problema",
     "UC40 - Riunioni interne",
@@ -1343,36 +1377,47 @@ con:
     "R-01-Q-O",
     "È richiesta la presentazione del documento Specifica Tecnica che include dettagli riguardanti la progettazione architetturale",
     "Capitolato",
+
     "R-02-Q-O",
     "È richiesta la presentazione del documento Specifica Tecnica che include dettagli riguardanti le tecnologie utilizzate",
     "Capitolato",
+
     "R-03-Q-O",
     "È richiesta la presentazione del documento Specifica Tecnica che include dettagli riguardanti la progettazione della base di dati",
     "Capitolato",
+
     "R-04-Q-O",
     "È richiesta la presentazione del documento Specifica Tecnica che include dettagli riguardanti l'implementazione del sistema di raccomandazione utilizzato con LLM",
     "Capitolato",
+
     "R-05-Q-O",
     "Tutte le attività del progetto devono essere svolte rispettando le Norme di Progetto",
     "Riunione interna",
-    "R-06-Q-O",
-    "Tutto il codice e la documentazione vanno salvati all'interno di un repository pubblico",
-    "Capitolato",
+
+    "R-06-Q-O", "Tutto il codice e la documentazione vanno salvati all'interno di un repository pubblico", "Capitolato",
   ),
 )
 
 == Requisiti di vincolo
 #show figure: set block(breakable: true)
-#figure(caption: [Requisiti di vincolo], table(
-  columns: (1fr, 2fr, 1fr),
-  inset: 8pt,
-  align: center + horizon,
-  fill: (x, y) => if (y == 0) { luma(230) },
-  table.header([*ID Requisito*], [*Descrizione*], [*Fonte*]),
-  "R-01-V-O",
-  "L'interfaccia di configurazione del fornitore deve essere un'interfaccia web",
-  "Capitolato",
-))
+#figure(
+  caption: [Requisiti di vincolo],
+  table(
+    columns: (1fr, 2fr, 1fr),
+    inset: 8pt,
+    align: center + horizon,
+    fill: (x, y) => if (y == 0) { luma(230) },
+    table.header([*ID Requisito*], [*Descrizione*], [*Fonte*]),
+    "R-01-V-O", "L'interfaccia di configurazione del fornitore deve essere un'interfaccia web", "Capitolato",
+    "R-03-V-O",
+    "La piattaforma deve essere responsive e funzionare correttamente su dispositivi desktop, tablet e mobile con una larghezza minima di 320px",
+    "Riunione interna",
+
+    "R-02-V-O",
+    "La piattaforma deve supportare i browser Google Chrome (v123+), Mozilla Firefox (v123+), Safari (v17+) ed Edge (v133+)",
+    "Riunione interna",
+  ),
+)
 
 // TODO: controllare ->
 == Tracciamento dei casi d'uso
@@ -1423,32 +1468,23 @@ con:
     "R-37-F-O", "UC38",
     "R-38-F-O", "UC39",
     "R-39-F-O", "UC40",
-  )
+  ),
 )
 
 // TODO: sistemare
 == Riepilogo
 #show figure: set block(breakable: true)
-#figure(caption: [Riepilogo], table(
-  columns: (0.75fr, 0.5fr, 0.5fr, 0.5fr),
-  inset: 8pt,
-  align: center + horizon,
-  fill: (x, y) => if (y == 0 or y == 4) { luma(230) },
-  table.header([*Tipo di requisiti*], [*Obbligatori*], [*Desiderabili*], [*Totale*]),
-  "Funzionali",
-  "32",
-  "7",
-  "39",
-  "Qualità",
-  "5",
-  "0",
-  "5",
-  "Vincolo",
-  "3",
-  "0",
-  "3",
-  "Totale",
-  "40",
-  "7",
-  "47",
-))
+#figure(
+  caption: [Riepilogo],
+  table(
+    columns: (0.75fr, 0.5fr, 0.5fr, 0.5fr),
+    inset: 8pt,
+    align: center + horizon,
+    fill: (x, y) => if (y == 0 or y == 4) { luma(230) },
+    table.header([*Tipo di requisiti*], [*Obbligatori*], [*Desiderabili*], [*Totale*]),
+    "Funzionali", "32", "7", "39",
+    "Qualità", "5", "0", "5",
+    "Vincolo", "3", "1", "4",
+    "Totale", "40", "8", "48",
+  ),
+)
