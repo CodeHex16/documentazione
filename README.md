@@ -21,6 +21,9 @@ documentazione/
 |        └── 📄 *.pdf
 ├── 📁 2 - RTB
 |  ├── 📁 imgs
+|  ├── 📁 presentazione
+|  |  └── 📁 source
+|  |  └── 📄 *.pdf
 |  ├── 📁 source
 |  ├── 📄 *.pdf
 |  └── 📁 verbali
@@ -32,6 +35,9 @@ documentazione/
 |        └── 📁 source
 |        └── 📄 *.pdf
 ├── 📁 3 - PB
+|  ├── 📁 presentazione
+|  |  └── 📁 source
+|  |  └── 📄 *.pdf
 |  └── 📁 source
 |  └── 📄 *.pdf
 ├── 📁 diari-di-bordo
