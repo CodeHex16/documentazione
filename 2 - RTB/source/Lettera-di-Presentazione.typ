@@ -1,4 +1,4 @@
-#import "../../../template/lettera.typ": *
+#import "../../template/lettera.typ": *
 
 #show: doc => documento(
   titolo: "\nLettera di Presentazione RTB",
