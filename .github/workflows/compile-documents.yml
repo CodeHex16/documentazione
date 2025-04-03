@@ -42,8 +42,7 @@ jobs:
 
             - name: Clean old PDFs
               run: |
-                  find . -name "*.pdf" ! -name "*_ext.pdf" ! -name "*_firmato.pdf" -not -path "./diari-di-bordo/*" -not -path "2 - RTB/presentazioni/*" -not -path "3 - PB/presentazioni/*" -delete
-
+                  find . -name "*.pdf" ! -name "*_ext.pdf" ! -name "*_firmato.pdf" -not -path "./diari-di-bordo/*" -not -path "./2\ -\ RTB/presentazioni/*" -not -path "./3\ -\ PB/presentazioni/*" -delete
             - name: Process Glossario # Esecuzione script glossario
               run: |
                   cd glossario/source
