@@ -28,6 +28,10 @@
   sommario: [Piano di Progetto],
 
   versioni: (
+    "1.1.0",
+    "04/04/2025",
+    "Luca Rossi",
+    "Aggiunto Sprint 9",
     "1.0.0",
     "06/03/2025",
     "Luca Ribon",
@@ -708,6 +712,40 @@ In questo periodo il gruppo ha dovuto affrontare alcune difficoltà tecniche leg
     Suddivisione oraria per ruolo con relativi costi.
   ],
 )
+
+=== Sprint 9
+*Intervallo temporale*: 12/03/2025 - 22/03/2025
+
+#pseudoheading[*Retrospettiva*]
+Con lo *Sprint 9* il gruppo ha completato la presentazione dell’RTB al docente, ricevendo feedback e indicazioni di miglioramento da parte del prof. Cardin.  
+Questa fase ha segnato l’inizio della preparazione per la milestone PB, con particolare attenzione alla riorganizzazione della documentazione e alla progettazione dell’architettura.  
+È emersa la necessità di chiarire alcuni aspetti relativi alla struttura dei documenti, gestire in modo più efficace la distinzione tra documentazione interna ed esterna, e definire strumenti per CI/CD e testing.  
+Il gruppo ha mostrato capacità di adattamento, reagendo rapidamente ai cambiamenti richiesti e preparando le basi per le attività del prossimo sprint.
+
+#pseudoheading[*Attività svolte*]
+- *Presentazione RTB*: Consegna e presentazione della milestone RTB al docente.
+- *Ricezione e integrazione dei feedback*: Analisi delle osservazioni del prof. Cardin, con pianificazione delle azioni correttive.
+- *Avvio documentazione PB*: Studio e definizione della struttura dei documenti da produrre in PB.
+- *Progettazione dell’architettura*: Approfondimento della componente API e database.
+- *Studio strumenti CI/CD e testing*: Prima valutazione degli strumenti da adottare.
+- *Aggiornamento della struttura dei file*: Avvio della riorganizzazione della documentazione interna ed esterna.
+
+#pseudoheading[*Ruoli ricoperti e ore svolte*]
+
+#figure(
+  image("../imgs/sprint9-tabella.png", width: 100%),
+  caption: [
+    Suddivisione oraria per membro e ruolo.
+  ],
+)
+
+#figure(
+  image("../imgs/sprint9-grafico.png", width: 100%),
+  caption: [
+    Suddivisione oraria per ruolo con relativi costi.
+  ],
+)
+
 
 == Periodo PB
 Le documentazione relativa al periodo PB verrà redatta dopo il superamento della RTB.
