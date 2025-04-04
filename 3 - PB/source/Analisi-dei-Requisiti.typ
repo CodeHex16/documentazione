@@ -1035,7 +1035,10 @@ completato l'autenticazione.\
 - Il fornitore deve aver effettuato il login;
 - Il fornitore deve essere nella pagina dedicata alla gestione dei documenti aziendali;
 *Postcondizioni:*
-- Il fornitore visualizza la lista dei documenti aziendali caricati nella piattaforma;
+- Il fornitore visualizza la lista dei documenti aziendali caricati nella piattaforma, in particolare vengono mostrati i seguenti
+  campi:
+  - Nome del documento;
+  - Data di caricamento;
 *Scenario Principale:*
 - Il fornitore accede alla sezione "Gestione documenti aziendali";
 - La piattaforma visualizza la lista dei documenti aziendali caricati nella piattaforma;
@@ -1215,7 +1218,7 @@ con:
     "UC3, UC4 - Riunioni esterne",
     // modifica password
     "R-04-F-O",
-    "Sia utente che fornitore devono poter cambiare la password liberamente",
+    "Sia cliente che fornitore devono poter cambiare la password liberamente",
     "UC4 - Riunioni interne",
     // resta connesso
     "R-05-F-D",
@@ -1225,138 +1228,134 @@ con:
     "R-06-F-O",
     "L'utente non autenticato deve poter recuperare la password nel caso in cui la dimentichi",
     "UC6 - Riunioni interne",
-    // errore email
+    // errore credenziali
     "R-07-F-O",
-    "L'utente non autenticato deve essere notificato in caso di errore nell'inserimento dell'e-mail",
-    "UC9 - Riunioni interne",
-    // errore password
-    "R-08-F-O",
-    "L'utente non autenticato deve essere notificato in caso di errore nell'inserimento della password o nel caso in cui la password scelta non rispetti il formato richiesto",
-    "UC10 - Riunioni interne",
-    // logout
-    "R-09-F-O",
-    "Sia cliente che fornitore devono avere la possibilità di uscire dal proprio account",
+    "L'utente non autenticato deve essere notificato in caso di errore nell'inserimento delle credenziali",
     "UC11 - Riunioni interne",
+    // logout
+    "R-08-F-O",
+    "Sia cliente che fornitore devono avere la possibilità di uscire dal proprio account",
+    "UC12 - Riunioni interne",
     // visualizzazione lista chat
-    "R-10-F-O",
-    "Sia cliente che fornitore devono avere la possibilità di vedere la lista di tutte le chat in loro possesso",
-    "UC12 - Riunioni esterne",
+    "R-09-F-O",
+    "Sia cliente che fornitore devono avere la possibilità di vedere la lista di tutte le chat in loro possesso, delle quali verrà mostrato il titolo",
+    "UC13, UC14 - Riunioni esterne",
     // creazione nuova chat
-    "R-11-F-O",
+    "R-10-F-O",
     "Sia cliente che fornitore devono avere la possibilità di creare una nuova chat con un contesto pulito, che verrà aggiunta alla lista di quelle già presenti",
-    "UC13 - Riunioni esterne",
-    // modifica titolo di una chat
-    "R-12-F-D",
-    "Sia cliente che fornitore devono avere la possibilità di modificare il titolo di una chat già esistente",
-    "UC14 - Riunioni interne",
-    // apertura chat singola
-    "R-13-F-O",
-    "Sia cliente che fornitore devono avere la possibilità di aprire una chat singola dalla lista di tutte le chat in loro possesso",
     "UC15 - Riunioni esterne",
+    // modifica titolo di una chat
+    "R-11-F-D",
+    "Sia cliente che fornitore devono avere la possibilità di modificare il titolo di una chat già esistente",
+    "UC16 - Riunioni interne",
+    // apertura chat singola
+    "R-12-F-O",
+    "Sia cliente che fornitore devono avere la possibilità di aprire una chat singola dalla lista di tutte le chat in loro possesso, una volta aperta visualizzeranno il titolo della chat e i messaggi scambiati con il chatbot",
+    "UC16, UC17, UC18 - Riunioni esterne",
     // scrittura messaggio
-    "R-14-F-O",
+    "R-13-F-O",
     "Sia cliente che fornitore devono poter scrivere messaggi per comunicare con il chatbot",
-    "UC16 - Capitolato",
+    "UC20 - Capitolato",
     // scrittura messaggio troppo lungo
-    "R-15-F-O",
+    "R-14-F-O",
     "L'utente che digita il messaggio deve essere avvisato nel caso in cui il messaggio scritto sia troppo lungo",
-    "UC16.1 - Riunioni interne",
+    "UC20.1 - Riunioni interne",
     // scrittura messaggio tramite FAQ
-    "R-16-F-O",
+    "R-15-F-O",
     "Sia cliente che fornitore devono avere la possibilità di scrivere messaggi tramite FAQ preimpostate dal fornitore; se possibile il chatbot suggerirà delle FAQ utili in base al contesto",
-    "UC17 - Capitolato, Riunioni esterne",
+    "UC21 - Capitolato, Riunioni esterne",
     // invio messaggio
-    "R-17-F-O",
-    "Sia cliente che fornitore per comunicare con il chatbot devono poter trasmettere il messaggio scritto",
-    "UC18 - Capitolato",
+    "R-16-F-O",
+    "Sia cliente che fornitore per comunicare con il chatbot devono poter trasmettere il messaggio scritto, e successivamente visualizzarlo nella chat",
+    "UC19, UC22 - Capitolato",
     // ricezione risposta
-    "R-18-F-O",
+    "R-17-F-O",
     "Sia cliente che fornitore devono ricevere la risposta elaborata dal chatbot in seguito all'invio di un messaggio; durante l'elaborazione della risposta l'utente deve ricevere un feedback che indica l'elaborazione della risposta",
-    "UC19 - Capitolato",
+    "UC23 - Capitolato",
     // valutazione risposta
-    "R-19-F-O",
+    "R-18-F-O",
     "Il cliente deve avere la possibilità di valutare la risposta ricevuta dal chatbot tramite l'opzione 'Pollice su/giù'",
-    "UC20 - Capitolato, riunione esterna",
+    "UC24, UC24.1, UC24.2 - Capitolato, riunione esterna",
     // eliminazione chat
-    "R-20-F-O",
+    "R-19-F-O",
     "Sia cliente che fornitore devono avere la possibilità di eliminare una chat presente nella lista di tutte le chat",
-    "UC21 - Riunioni interne",
+    "UC10, UC25 - Riunioni interne",
     // dark/light mode
-    "R-21-F-D",
+    "R-20-F-D",
     "L'utente deve avere la possibilità di scegliere tra tema scuro e tema chiaro dell'interfaccia",
-    "UC22 - Riunioni interne",
+    "UC26, UC26.1, UC26.2 - Riunioni interne",
     // modifica durata storico chat
-    "R-22-F-O",
+    "R-21-F-O",
     "Il fornitore deve avere la possibilità di modificare la durata dello storico delle chat, ovvero il periodo di tempo massimo per cui vengono memorizzati e tenuti come contesto i messaggi per ogni chat",
-    "UC23 - Riunioni esterne",
+    "UC27 - Riunioni esterne",
     // caricare logo
-    "R-23-F-D",
+    "R-22-F-D",
     "Il fornitore deve avere la possibilità di caricare il proprio logo per personalizzare la propria piattaforma fornita ai clienti",
-    "UC24 - Riunioni interne, Riunioni esterne",
+    "UC28 - Riunioni interne, Riunioni esterne",
     // palette colori
-    "R-24-F-D",
+    "R-23-F-D",
     "Il fornitore deve avere la possibilità di cambiare i colori principali dell'interfaccia della propria piattaforma",
-    "UC25 - Riunioni interne, Riunioni esterne",
+    "UC29 - Riunioni interne, Riunioni esterne",
     // statistiche domanda risposta
-    "R-25-F-D",
+    "R-24-F-D",
     "Il fornitore deve avere la possibilità di visualizzare le statistiche relative alle interazioni con il chatbot",
-    "UC26 - Riunioni interne, Riunioni esterne",
+    "UC30 - Riunioni interne, Riunioni esterne",
     // filtri visualizzazione
-    "R-26-F-D",
+    "R-25-F-D",
     "Il fornitore deve avere la possibilità di filtrare le statistiche visualizzate",
-    "UC27 - Riunioni interne, Riunioni esterne",
+    "UC31 - Riunioni interne, Riunioni esterne",
     // aggiunta account cliente
-    "R-27-F-O",
+    "R-26-F-O",
     "Il fornitore deve avere la possibilità di aggiungere gli account per i propri clienti",
-    "UC28 - Riunioni esterne",
+    "UC32 - Riunioni esterne",
     // inserimento account già esistente
-    "R-28-F-O",
+    "R-27-F-O",
     "Il fornitore deve essere avvisato nel caso in cui stia aggiungendo un account cliente già esistente",
-    "UC29 - Riunioni interne",
-    // eliminazione account cliente
-    "R-29-F-O",
-    "Il fornitore deve avere la possibilità di eliminare un account cliente solo dopo aver autorizzato l'eliminazione tramite la propria password",
-    "UC30 - Riunioni interne",
-    // inserimento documenti aziendali
-    "R-30-F-O",
-    "Il fornitore deve avere la possibilità di inserire documenti aziendali in modo da fornire ulteriore contesto all'chatbot",
-    "UC31 - Capitolato",
-    // formato file non valido
-    "R-31-F-O",
-    "Il fornitore deve sapere quando un file caricato, sia come logo che come documento aziendale, non sia nel formato corretto",
-    "UC32 - Riunioni interne",
-    // visualizzazione documenti aziendali
-    "R-32-F-O",
-    "Il fornitore deve avere la possibilità di visualizzare la lista dei documenti aziendali caricati nella piattaforma",
     "UC33 - Riunioni interne",
-    // eliminazione documento aziendale
-    "R-33-F-O",
-    "Il fornitore deve avere la possibilità di eliminare un documento aziendale dalla piattaforma solo dopo aver autorizzato l'eliminazione tramite la propria password",
-    "UC34 - Riunioni interne",
-    // aggiunta FAQ
-    "R-34-F-O",
-    "Il fornitore deve avere la possibilità di aggiungere delle domande preimpostate nella piattaforma",
-    "UC35 - Riunioni esterne",
-    // visualizzazione FAQ
-    "R-35-F-O",
-    "Il fornitore deve avere la possibilità di visualizzare la lista delle domande preimpostate inserite nella piattaforma",
+    // eliminazione account cliente
+    "R-28-F-O",
+    "Il fornitore deve avere la possibilità di eliminare un account cliente solo dopo aver autorizzato l'eliminazione tramite la propria password",
+    "UC10, UC34 - Riunioni interne",
+    // inserimento documenti aziendali
+    "R-29-F-O",
+    "Il fornitore deve avere la possibilità di inserire documenti aziendali in modo da fornire ulteriore contesto all'chatbot",
+    "UC35 - Capitolato",
+    // formato file non valido
+    "R-30-F-O",
+    "Il fornitore deve sapere quando un file caricato, sia come logo che come documento aziendale, non è nel formato corretto",
     "UC36 - Riunioni interne",
-    // modifica FAQ
-    "R-36-F-O",
-    "Il fornitore deve avere la possibilità di modificare le domande preimpostate già inserite nella piattaforma",
+    // visualizzazione documenti aziendali
+    "R-31-F-O",
+    "Il fornitore deve avere la possibilità di visualizzare la lista dei documenti aziendali caricati nella piattaforma",
     "UC37 - Riunioni interne",
-    // eliminazione FAQ
-    "R-37-F-O",
-    "Il fornitore deve avere la possibilità di eliminare le domande preimpostate dalla piattaforma solo dopo aver autorizzato l'eliminazione tramite la propria password",
-    "UC38 - Riunioni interne",
-    // Errore: Sistema non raggiungibile
-    "R-38-F-O",
-    "Un utente non autenticato o il cliente che sta utilizzando la piattaforma deve essere avvisato nel caso in cui il sistema non sia raggiungibile, possibilmente specificando il motivo del malfunzionamento",
-    "UC39 - Riunioni interne",
-    // Errore: Richiesta con dati mancanti o errati
-    "R-39-F-O",
-    "Un utente non autenticato o il cliente che sta utilizzando la piattaforma deve essere avvisato nel caso in cui la richiesta che ha inviato contenga dati mancanti o errati; nel caso sia pertinente deve anche essere specificato il problema",
+    // eliminazione documento aziendale
+    "R-32-F-O",
+    "Il fornitore deve avere la possibilità di eliminare un documento aziendale dalla piattaforma solo dopo aver autorizzato l'eliminazione tramite la propria password",
+    "UC10, UC38 - Riunioni interne",
+    // aggiunta FAQ
+    "R-33-F-O",
+    "Il fornitore deve avere la possibilità di aggiungere delle domande preimpostate nella piattaforma",
+    "UC39 - Riunioni esterne",
+    // visualizzazione FAQ
+    "R-34-F-O",
+    "Il fornitore deve avere la possibilità di visualizzare la lista delle domande preimpostate inserite nella piattaforma",
     "UC40 - Riunioni interne",
+    // modifica FAQ
+    "R-35-F-O",
+    "Il fornitore deve avere la possibilità di modificare le domande preimpostate già inserite nella piattaforma",
+    "UC41 - Riunioni interne",
+    // eliminazione FAQ
+    "R-36-F-O",
+    "Il fornitore deve avere la possibilità di eliminare le domande preimpostate dalla piattaforma solo dopo aver autorizzato l'eliminazione tramite la propria password",
+    "UC10, UC42 - Riunioni interne",
+    // Errore: Sistema non raggiungibile
+    "R-37-F-O",
+    "Un utente non autenticato o il cliente che sta utilizzando la piattaforma deve essere avvisato nel caso in cui il sistema non sia raggiungibile, possibilmente specificando il motivo del malfunzionamento",
+    "UC43 - Riunioni interne",
+    // Errore: Richiesta con dati mancanti o errati
+    "R-38-F-O",
+    "Un utente non autenticato o il cliente che sta utilizzando la piattaforma deve essere avvisato nel caso in cui la richiesta che ha inviato contenga dati mancanti o errati; nel caso sia pertinente deve anche essere specificato il problema",
+    "UC44 - Riunioni interne",
   ),
 )
 
@@ -1409,82 +1408,92 @@ con:
     fill: (x, y) => if (y == 0) { luma(230) },
     table.header([*ID Requisito*], [*Descrizione*], [*Fonte*]),
     "R-01-V-O", "L'interfaccia di configurazione del fornitore deve essere un'interfaccia web", "Capitolato",
-    "R-03-V-O",
+
+    "R-02-V-O",
     "La piattaforma deve essere responsive e funzionare correttamente su dispositivi desktop, tablet e mobile con una larghezza minima di 320px",
     "Riunione interna",
 
-    "R-02-V-O",
+    "R-03-V-O",
     "La piattaforma deve supportare i browser Google Chrome (v123+), Mozilla Firefox (v123+), Safari (v17+) ed Edge (v133+)",
     "Riunione interna",
   ),
 )
 
-// TODO: controllare ->
-== Tracciamento dei casi d'uso
+== Tracciamento dei requisiti
 #figure(
-  caption: [Tracciamento dei casi d'uso],
+  caption: [Tracciamento requisiti],
   table(
     columns: (1fr, 1.5fr),
     inset: 8pt,
     align: center + horizon,
     fill: (x, y) => if (y == 0) { luma(230) },
-    table.header([*Requisito*], [*Casi d'uso*]),
-    "R-01-F-O", "UC1",
-    "R-02-F-O", "UC2, UC4",
-    "R-03-F-O", "UC3, UC4",
-    "R-04-F-O", "UC4",
-    "R-05-F-D", "UC5",
-    "R-06-F-O", "UC6",
-    "R-07-F-O", "UC9",
-    "R-08-F-O", "UC9",
-    "R-09-F-O", "UC11",
-    "R-10-F-O", "UC12",
-    "R-11-F-O", "UC13",
-    "R-12-F-D", "UC14",
-    "R-13-F-O", "UC15",
-    "R-14-F-O", "UC16",
-    "R-15-F-O", "UC16.1",
-    "R-16-F-O", "UC17",
-    "R-17-F-O", "UC18",
-    "R-18-F-O", "UC19",
-    "R-19-F-O", "UC20",
-    "R-20-F-O", "UC21",
-    "R-21-F-D", "UC22",
-    "R-22-F-O", "UC23",
-    "R-23-F-D", "UC24",
-    "R-24-F-D", "UC25",
-    "R-25-F-D", "UC26",
-    "R-26-F-D", "UC27",
-    "R-27-F-O", "UC28",
-    "R-28-F-O", "UC29",
-    "R-29-F-O", "UC30",
-    "R-30-F-O", "UC31",
-    "R-31-F-O", "UC32",
-    "R-32-F-O", "UC33",
-    "R-33-F-O", "UC34",
-    "R-34-F-O", "UC35",
-    "R-35-F-O", "UC36",
-    "R-36-F-O", "UC37",
-    "R-37-F-O", "UC38",
-    "R-38-F-O", "UC39",
-    "R-39-F-O", "UC40",
+    table.header([*Requisito*], [*Fonti*]),
+    // Requisiti funzionali
+    "R-01-F-O", "UC1 - Riunioni esterne",
+    "R-02-F-O", "UC2, UC4 - Riunioni esterne",
+    "R-03-F-O", "UC3, UC4 - Riunioni esterne",
+    "R-04-F-O", "UC4 - Riunioni interne",
+    "R-05-F-D", "UC5 - Riunioni interne",
+    "R-06-F-O", "UC6 - Riunioni interne",
+    "R-07-F-O", "UC7 - Riunioni interne",
+    "R-08-F-O", "UC8 - Riunioni interne",
+    "R-09-F-O", "UC13, UC14 - Riunioni esterne",
+    "R-10-F-O", "UC15 - Riunioni esterne",
+    "R-11-F-D", "UC16 - Riunioni interne",
+    "R-12-F-O", "UC16, UC17, UC18 - Riunioni esterne",
+    "R-13-F-O", "UC20 - Capitolato",
+    "R-14-F-O", "UC20.1 - Riunioni interne",
+    "R-15-F-O", "UC21 - Capitolato, Riunioni esterne",
+    "R-16-F-O", "UC19, UC22 - Capitolato",
+    "R-17-F-O", "UC23 - Capitolato",
+    "R-18-F-O", "UC24, UC24.1, UC24.2 - Capitolato, Riunioni esterne",
+    "R-19-F-O", "UC10, UC25 - Riunioni interne",
+    "R-20-F-D", "UC26, UC26.1, UC26.2 - Riunioni interne",
+    "R-21-F-O", "UC27 - Riunioni esterne",
+    "R-22-F-D", "UC28 - Riunioni interne, Riunioni esterne",
+    "R-23-F-D", "UC29 - Riunioni interne, Riunioni esterne",
+    "R-24-F-D", "UC30 - Riunioni interne, Riunioni esterne",
+    "R-25-F-D", "UC31 - Riunioni interne, Riunioni esterne",
+    "R-26-F-O", "UC32 - Riunioni esterne",
+    "R-27-F-O", "UC33 - Riunioni interne",
+    "R-28-F-O", "UC10, UC34 - Riunioni interne",
+    "R-29-F-O", "UC35 - Capitolato",
+    "R-30-F-O", "UC36 - Riunioni interne",
+    "R-31-F-O", "UC37 - Riunioni interne",
+    "R-32-F-O", "UC10, UC38 - Riunioni interne",
+    "R-33-F-O", "UC39 - Riunioni esterne",
+    "R-34-F-O", "UC40 - Riunioni interne",
+    "R-35-F-O", "UC41 - Riunioni interne",
+    "R-36-F-O", "UC10, UC42 - Riunioni interne",
+    "R-37-F-O", "UC43 - Riunioni interne",
+    "R-38-F-O", "UC44 - Riunioni interne",
+    // Requisiti di qualità
+    "R-01-Q-O", "Capitolato",
+    "R-02-Q-O", "Capitolato",
+    "R-03-Q-O", "Capitolato",
+    "R-04-Q-O", "Capitolato",
+    "R-05-Q-O", "Riunione interna",
+    "R-06-Q-O", "Capitolato",
+    // Requisiti di vincolo
+    "R-01-V-O", "Capitolato",
+    "R-02-V-O", "Riunione interna",
+    "R-03-V-O", "Riunione interna",
   ),
 )
 
-// TODO: sistemare
 == Riepilogo
 #show figure: set block(breakable: true)
 #figure(
-  caption: [Riepilogo],
+  caption: [Riepilogo requisiti],
   table(
     columns: (0.75fr, 0.5fr, 0.5fr, 0.5fr),
     inset: 8pt,
     align: center + horizon,
     fill: (x, y) => if (y == 0 or y == 4) { luma(230) },
     table.header([*Tipo di requisiti*], [*Obbligatori*], [*Desiderabili*], [*Totale*]),
-    "Funzionali", "32", "7", "39",
-    "Qualità", "5", "0", "5",
-    "Vincolo", "3", "1", "4",
-    "Totale", "40", "8", "48",
+    "Funzionali", "31", "7", "38",
+    "Qualità", "6", "0", "6",
+    "Vincolo", "3", "0", "3",
+    "Totale", "40", "7", "47",
   ),
 )
