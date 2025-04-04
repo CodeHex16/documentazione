@@ -14,7 +14,6 @@
   data: [31/03/2025],
   ora: [17:00-19:00],
   tipo: "interno",
-  versioni: ("0.1.0", "31/03/2025", "Filippo Sabbadin", "Prima stesura", "",),
   presenze: (
     "Matteo Bazzan",
     "Verificatore",
