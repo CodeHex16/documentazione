@@ -32,6 +32,7 @@
     "04/04/2025",
     "Luca Rossi",
     "Aggiunto Sprint 9",
+    "Luca Ribon",
     "1.0.0",
     "06/03/2025",
     "Luca Ribon",
