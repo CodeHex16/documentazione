@@ -41,8 +41,8 @@ stato dei documenti.
 == Discussione architettura frontend
 All'inizio della riunione sono state discusse le scelte prese per l'architettura da usare per il frontend e come
 rappresentarla. Visto che erano ancora presenti dei dubbi, il gruppo ha deciso di inviare un'e-mail al prof. Cardin per
-chiedere chiarimenti sulla rappresentazione con i grafici UML delle classi e anche su alcune correzioni del professore
-al documento Analisi dei requisiti.
+chiedere chiarimenti sulla rappresentazione con i grafici #gloss[UML] delle classi e anche su alcune correzioni del professore
+al documento #gloss[Analisi dei requisiti].
 
 == Primo design interfaccia amministratore
 Durante la riunione è stata presentata una bozza per il design della homepage dell'amministratore. Questa schermata sarà
@@ -55,7 +55,7 @@ Alla fine della riunione è stata presa la decisione di chiedere chiarimenti all
 utente, in quanto suggerito dal prof. Vardanega durante il precedente diario di bordo. Più precisamente nell'e-mail
 veniva chiesto al referente se bisogna fare un altro manuale utente per lo sviluppatore, o se il manuale utente è
 sufficiente per entrambi gli utenti. Inoltre è stato chiesto un miglioramento al dataset, con un documento che fornisce
-un'indicizzazione degli altri documenti per rendere le risposte del chatbot più naturali ed efficienti.
+un'indicizzazione degli altri documenti per rendere le risposte del #gloss[chatbot] più naturali ed efficienti.
 
 = Assegnazione ruoli
 - I *nuovi ruoli* per lo Sprint 11 sono:

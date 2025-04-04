@@ -80,7 +80,7 @@ documento Norme di progetto.
 )
 
 = Azioni future
-Essendo all'inizio della fase PB, il gruppo ha iniziato attività riguardo la progettazione dell'architettura
+Essendo all'inizio della fase #gloss[PB], il gruppo ha iniziato attività riguardo la progettazione dell'architettura
 dell'applicazione.
 - #issue("7", repo: "MVP")[*Studio architettura Suppl-AI*]
 - #issue("6", repo: "Suppl-AI")[*Definire l'interfaccia fornitore*]

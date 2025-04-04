@@ -34,8 +34,15 @@ documentazione/
 |        └── 📄 *.pdf
 ├── 📁 3 - PB
 |  ├── 📁 presentazioni
-|  └── 📁 source
-|  └── 📄 *.pdf
+|  ├── 📁 source
+|  ├── 📄 *.pdf
+|  └── 📁 verbali
+|     ├── 📁 esterni
+|     |  └── 📁 source
+|     |  └── 📄 *.pdf
+|     └── 📁 interni
+|        └── 📁 source
+|        └── 📄 *.pdf
 ├── 📁 diari-di-bordo
 ├── 📁 glossario
 |  └── 📁 source
