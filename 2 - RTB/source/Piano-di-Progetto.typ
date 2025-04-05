@@ -252,6 +252,34 @@ Secondo lo standard ISO/IEC 31000:2009, la gestione dei rischi si articola in ci
   [Revisione dell'architettura prima dello sviluppo avanzato, con correzioni tempestive in caso di problemi],
 )
 
+== Rivalutazione e integrazioni sui Rischi
+
+Nel corso dei primi e ultimi sprint (fino allo Sprint 9) sono emerse criticità e informazioni utili per valutare con maggiore precisione la probabilità e l’impatto dei rischi individuati in precedenza. In particolare:
+
+- **Impegni personali e universitari**  
+  Alla luce dei recenti ritardi nell’allineamento del gruppo. Per mitigare questo rischio, sono stati introdotti:
+  - Una maggiore attenzione al calendario condiviso con la disponibilità di ciascun membro.
+  - Riunioni di aggiornamento più frequenti per ripianificare rapidamente le task.
+  - Eventuale riassegnazione di attività in caso di assenze prolungate.
+
+- **Difficoltà di comunicazione interna e leadership debole**  
+  Nelle fasi iniziali il gruppo tendeva a sottovalutare la necessità di una leadership più solida. Le difficoltà riscontrate nello Sprint 8 e 9 (integrazione del PoC, condivisione delle correzioni con il proponente) 
+  hanno evidenziato che una leadership chiara e una comunicazione costante sono fondamentali per evitare colli di bottiglia. 
+  Il gruppo ha avviato i seguenti accorgimenti:
+  - Definizione più chiara di compiti e responsabilità, con riferimento esplicito alle Norme di Progetto.
+  - Uso di canali di messaggistica strutturati (issue GitHub + Telegram) per gestire i feedback in tempo reale.
+
+- **Difficoltà tecniche e integrazione di componenti**  
+  L’esperienza accumulata durante la realizzazione del PoC (soprattutto sugli strumenti di CI/CD e testing) ha evidenziato aree di incertezza nelle configurazioni. 
+  Per mitigare:
+  - Adozione di un primo pipeline di build e test.
+  - Pianificazione di sessioni di pairing in caso di blocchi tecnici.
+  - Creazione di documentazione interna per i passaggi di setup e deploy.
+
+- **Cambio frequente dei requisiti**  
+  Dopo l’RTB, i requisiti si sono stabilizzati e non sono emerse modifiche sostanziali. 
+  Il gruppo rimane pronto a riconsiderare questo rischio se in PB dovessero emergere ulteriori richieste da parte del proponente.
+
 = Preventivo
 Il preventivo è stato calcolato considerando i costi orari dei diversi ruoli coinvolti e il numero stimato di ore per ciascuno, basandosi su un'analisi dettagliata delle attività necessarie per il progetto.
 Di seguito sono riportate tabelle riepilogative che mostrano sia il compenso totale che il compenso orario per ogni ruolo, oltre alla distribuzione delle ore tra i membri del team.
@@ -371,9 +399,30 @@ caption: [
   Ore per ciascun membro del gruppo, suddivise per ruolo, aggiornate al termine del periodo RTB
 ],
 )
-Dall'analisi della retrospettiva del periodo RTB il gruppo ha notato una distribuzione disomogenea delle ore svolte dai singoli individui relativamente ai diversi ruoli.\
-La motivazione principale di questa disomogeneità è stata la scelta di assegnare le attività in base alle competenze, in modo da garantire un'efficace gestione delle risorse e una maggiore efficienza nel lavoro. \
-Comprendiamo, però, che il modo corretto di ovviare all'inesperienza dei singoli membri è quello di comunicare e diffondere le conoscenze tra i membri del gruppo, per questo nel prossimo periodo il gruppo si impegnerà maggiormente nel fornire feedback e spiegazioni in modo reciproco. Inoltre ogni membro del gruppo si impegnerà ad approfondire autonomamente le tecnologie e le competenze necessarie per il progetto. 
+
+Dall’analisi della retrospettiva del periodo RTB, il gruppo ha riscontrato che l’assegnazione delle attività in base alle singole competenze ha permesso di raggiungere alcuni risultati in modo rapido e focalizzato. 
+Al tempo stesso, però, si è creata una disomogeneità nelle ore svolte dai vari membri: alcuni ruoli sono stati coperti molto di più rispetto ad altri, rallentando la crescita condivisa delle competenze.
+
+La mancanza di una leadership forte e il ricorso limitato a momenti di tutoring interno hanno contribuito a rendere alcuni membri più “specialisti” rispetto ad altri, 
+rischiando di generare colli di bottiglia quando questi esperti non erano disponibili. 
+La visione d’insieme del lavoro, inoltre, non è stata sempre chiarissima, portando a ridondanze in alcune aree e a carenze in altre.
+
+Per ovviare a tali criticità, il gruppo ha ipotizzato diverse soluzioni:
+
+- dedicare alcuni slot di tempo in cui più persone lavorano contemporaneamente sulla stessa issue, in modo da favorire il passaggio di conoscenze e la coesione del gruppo. Ciò richiede un calendario degli impegni che permetta di trovare fasce orarie comuni.
+  
+- organizzare sessioni periodiche in cui i membri più esperti affiancano quelli meno esperti, aiutandoli a colmare i buchi di competenza e distribuendo in modo più omogeneo il carico di lavoro.
+
+Nel breve termine, tali misure potrebbero aumentare il costo e il tempo di alcune attività, 
+poiché la formazione richiede impegno extra. 
+Tuttavia, nel medio-lungo periodo, la diffusione delle competenze e una leadership più chiara 
+dovrebbero ridurre i colli di bottiglia, rendere il team più resiliente e limitare gli effetti di eventuali assenze. 
+L’auspicio è di migliorare la qualità complessiva del lavoro e la flessibilità nella distribuzione dei compiti, 
+riducendo così il rischio di accumulare debito tecnico e ritardi nelle prossime fasi del progetto.
+
+In conclusione, la retrospettiva evidenzia la necessità di migliorare la sinergia del team e di adottare misure che favoriscano 
+un’evoluzione più omogenea delle competenze. L’aspettativa è che, intervenendo ora, si eviteranno difficoltà più rilevanti nelle prossime fasi del progetto, 
+migliorando sia la qualità del lavoro sia la flessibilità organizzativa.
 
 === Aggiornamento preventivo
 Analizzando la retrospettiva del periodo RTB il gruppo ha deciso di rivedere il preventivo iniziale senza però apportare modifiche ad ore e costi totali. \ 
@@ -745,6 +794,23 @@ Il gruppo ha mostrato capacità di adattamento, reagendo rapidamente ai cambiame
   caption: [
     Suddivisione oraria per ruolo con relativi costi.
   ],
+)
+
+#pseudoheading[*Ore rimanenti per persona*]
+
+#table(
+  columns: 2,
+  [
+    ["Membro", "Ore mancanti"],
+    ["Ribon", "31.35"],
+    ["Bazzan", "37.55"],
+    ["Fragonas", "45.75"],
+    ["Magnelli", "54.75"],
+    ["Sabbadin", "48.10"],
+    ["Rossi", "63.50"],
+    ["Zhuo", "74.45"],
+    [*strong("TOTALE"), *strong("355.45")]
+  ]
 )
 
 
