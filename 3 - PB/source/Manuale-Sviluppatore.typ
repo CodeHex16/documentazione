@@ -21,7 +21,7 @@
 = Introduzione
 
 == Scopo del documento
-Questo documento è pensato e realizzato per gli sviluppatori avranno intenzione di modificare o di operare con il prodotto. Per questo lo scopo di tale documento è quello di fornire le informazioni necessarie per comprendere l'architettura e le funzionalità del prodotto software realizzato. Tali informazioni riguardano i requisiti, codice sorgente, API e librerie utilizzate.
+Questo documento è pensato e realizzato per gli sviluppatori avranno intenzione di modificare o di operare con il prodotto. Per questo lo scopo di tale documento è quello di fornire le informazioni necessarie per comprendere l'architettura e le funzionalità del prodotto software realizzato. Tali informazioni riguardano i requisiti, #gloss[codice sorgente], #gloss[API] e librerie utilizzate.
 
 == Scopo del prodotto
 Il prodotto consiste nella creazione di un'interfaccia in stile #gloss[chatbot], accessibile tramite interfaccia mobile, che delle aziende fornitrici possono configurare in modo che l'#gloss[assistente virtuale] conosca il contesto aziendale e possa rispondere alle domande dei clienti del #gloss[fornitore].
@@ -57,7 +57,7 @@ e nella seguente pagina web:
 == Linguaggi
 - Python;
 - Typescript;
-- JavaScript;
+- #gloss[JavaScript];
 == Strumenti e servizi
 - Git;
 == Tecnologie per i test
@@ -104,7 +104,7 @@ seguenti:
 ), caption: "Requisiti hardware")
 
 == Requisiti software
-Visto che il gruppo sta sviluppando una webapp, per software si intende un browser web. I browser e le loro versioni consigliate sono quelle utilizzate dal gruppo all'inizio dello sviluppo del progetto:
+Visto che il gruppo sta sviluppando una #gloss[webapp], per software si intende un browser web. I browser e le loro versioni consigliate sono quelle utilizzate dal gruppo all'inizio dello sviluppo del progetto:
 #figure(table(
   columns: (1fr, 1fr),
   inset: 8pt,
