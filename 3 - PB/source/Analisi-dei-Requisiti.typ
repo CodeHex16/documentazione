@@ -1414,7 +1414,7 @@ con:
     "Riunione interna",
 
     "R-03-V-O",
-    "La piattaforma deve supportare i browser Google Chrome (v123+), Mozilla Firefox (v123+), Safari (v17+) ed Edge (v133+)",
+    "La piattaforma deve supportare i browser Chrome (v123+), Firefox (v123+), Safari (v17+) ed Edge (v122+)",
     "Riunione interna",
   ),
 )
