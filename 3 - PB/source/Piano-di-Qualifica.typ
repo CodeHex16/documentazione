@@ -950,9 +950,12 @@ dove "TIPO" sarà:
 = Cruscotto sulle misure di automiglioramento
 //presentare o grafici, screenshots o qualsiasi cosa che possa mostrare i miglioramenti ottenuti
 == OPI-01 (Pianificazione riunioni con tutti i membri)
-#figure(text("grafico con numero di membri durante le riunioni"), caption: "grafico")
+#figure(
+  text("grafico con numero di membri durante le riunioni,  dati si potrebbero prendere dai verbali"),
+  caption: "grafico",
+)
 == OPI-02 (Pianificazione ore di lavoro entro i limiti assegnati)
-#figure(text("grafico con ore di lavoro rispetto al limite"), caption: "grafico")
+#figure(text("grafico con ore di lavoro totali, non individuali, rispetto al limite"), caption: "grafico")
 == OPI-03 (Lavoro su documenti in parallelo)
 #figure(
   text("grafico con numero di documenti modificati e membri che ci hanno lavorato, o qualcosa simile"),
@@ -966,10 +969,14 @@ dove "TIPO" sarà:
 #figure(text("grafico con numero di modifiche e numero di errori risolti"), caption: "grafico")
 
 == RL-01 (Compiti assegnati a ciascun ruolo)
+#figure(text("grafico con numero di issue assegnati per ruolo"), caption: "grafico")
 == RL-02 (Compiti del verificatore)
+#figure(text("grafico con numero di pr ????"), caption: "grafico")
 == RL-03 (Differenza tra i ruoli di responsabile e amministratore)
-
+#figure(text("grafico gli issue assegnati all'amministratore e responsabile?????"), caption: "grafico")
 == STR-01 (Difficoltà con gli strumenti di git)
+#figure(text("grafico con numero di commit????"), caption: "grafico")
 == STR-02 (Difficoltà con gli strumenti di sviluppo)
+#figure(text("si potrebbe fare quanti membri lavorano come programmatori per ogni sprint"), caption: "grafico")
 == STR-03 (Problemi con Typst 0.13)
-#figure(text("grafico con numero di errori dati da typst"), caption: "grafico")
+#figure(text("grafico con numero di errori dati da typst ?????"), caption: "grafico")
