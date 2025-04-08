@@ -148,6 +148,12 @@ Secondo lo standard ISO/IEC 31000:2009, la gestione dei rischi si articola in ci
 
   [*Piano di contingenza*],
   [Implementare strumenti di comunicazione efficaci (#gloss[GitHub], #gloss[Telegram]), riunioni regolari di aggiornamento, definire chiaramente i canali di comunicazione],
+  [*Difficoltà di comunicazione interna e leadership debole*],
+  [Nelle fasi iniziali il gruppo tendeva a sottovalutare la necessità di una leadership più solida. Le difficoltà riscontrate nello Sprint 8 e 9 (integrazione del PoC, condivisione delle correzioni con il proponente) 
+  hanno evidenziato che una leadership chiara e una comunicazione costante sono fondamentali per evitare colli di bottiglia.],
+  [*Accorgimenti*],
+  [- Definizione più chiara di compiti e responsabilità, con riferimento esplicito alle Norme di Progetto.
+  - Uso di canali di messaggistica strutturati (issue #gloss[GitHub] + #gloss[Telegram]) per gestire i feedback in tempo reale.],
 )
 #table(
   columns: (1fr, 2fr),
@@ -169,19 +175,26 @@ Secondo lo standard ISO/IEC 31000:2009, la gestione dei rischi si articola in ci
 #table(
   columns: (1fr, 2fr),
   inset: 8pt,
-  align: (x, y) => if (y > 0) { left } else { center + horizon },
+  align: (x, y) => if y > 0 { left } else { center + horizon },
   fill: (x, y) => if y == 0 { luma(180) } else if (y == 2 or y == 4) { luma(230) },
   table.header(table.cell(colspan: 2)[*Impegni personali e universitari*]),
+
   [*Descrizione*],
-  [Gli impegni accademici o personali dei membri del team possono interferire con il rispetto delle scadenze del progetto],
+  [Gli impegni accademici o personali dei membri del team possono interferire con il rispetto delle scadenze del progetto. 
+  Durante gli ultimi sprint si sono verificati ritardi legati alla disponibilità di alcuni membri.],
 
   [*Probabilità*], [Alta],
   [*Pericolosità*], [Media],
   [*Rilevamento*],
-  [Monitoraggio delle scadenze tramite #gloss[meeting] regolari e verifica delle disponibilità segnalate su un calendario condiviso in Google Fogli],
-
+  [Monitoraggio delle scadenze tramite riunioni regolari e verifica delle disponibilità segnalate su un calendario condiviso.],
   [*Piano di contingenza*],
-  [Concordare una pianificazione flessibile basata sulle disponibilità indicate. In caso di necessità, ridistribuire le attività o posticipare #gloss[task] meno prioritarie],
+  [Maggiore attenzione al calendario condiviso, riunioni di aggiornamento più frequenti, eventuale riassegnazione delle attività in caso di assenze prolungate.],
+  [*Aggiornamento*],
+  [ Nelle fasi iniziali il gruppo tendeva a sottovalutare la necessità di una leadership più solida. Le difficoltà riscontrate nello Sprint 8 e 9 (integrazione del PoC, condivisione delle correzioni con il proponente) 
+  hanno evidenziato che una leadership chiara e una comunicazione costante sono fondamentali per evitare colli di bottiglia.],
+  [*Accorgimenti*],
+  [- Definizione più chiara di compiti e responsabilità, con riferimento esplicito alle Norme di Progetto.
+  - Uso di canali di messaggistica strutturati (issue GitHub + Telegram) per gestire i feedback in tempo reale.],
 )
 
 == Rischi tecnici
@@ -252,33 +265,33 @@ Secondo lo standard ISO/IEC 31000:2009, la gestione dei rischi si articola in ci
   [Revisione dell'architettura prima dello sviluppo avanzato, con correzioni tempestive in caso di problemi],
 )
 
-== Rivalutazione e integrazioni sui Rischi
+#table(
+  columns: (1fr, 2fr),
+  inset: 8pt,
+  align: (x, y) => if y > 0 { left } else { center + horizon },
+  fill: (x, y) => if y == 0 { luma(180) } else if (y == 2 or y == 4 or y == 6 or y == 8) { luma(230) },
+  table.header(table.cell(colspan: 2)[*Difficoltà tecniche e integrazione di componenti*]),
 
-Nel corso dei primi e ultimi sprint (fino allo Sprint 9) sono emerse criticità e informazioni utili per valutare con maggiore precisione la probabilità e l’impatto dei rischi individuati in precedenza. In particolare:
+  [*Descrizione*],
+  [Il team potrebbe non avere l'esperienza necessaria con le tecnologie adottate e le integrazioni richieste, causando errori e inefficienze durante lo sviluppo.],
 
-- **Impegni personali e universitari**  
-  Alla luce dei recenti ritardi nell’allineamento del gruppo. Per mitigare questo rischio, sono stati introdotti:
-  - Una maggiore attenzione al calendario condiviso con la disponibilità di ciascun membro.
-  - Riunioni di aggiornamento più frequenti per ripianificare rapidamente le task.
-  - Eventuale riassegnazione di attività in caso di assenze prolungate.
+  [*Probabilità*], [Media],
+  [*Pericolosità*], [Media],
+  [*Rilevamento*],
+  [Valutazione delle competenze iniziali, monitoraggio dei blocchi tecnici e delle difficoltà di integrazione emerse durante gli sprint.],
 
-- **Difficoltà di comunicazione interna e leadership debole**  
-  Nelle fasi iniziali il gruppo tendeva a sottovalutare la necessità di una leadership più solida. Le difficoltà riscontrate nello Sprint 8 e 9 (integrazione del PoC, condivisione delle correzioni con il proponente) 
-  hanno evidenziato che una leadership chiara e una comunicazione costante sono fondamentali per evitare colli di bottiglia. 
-  Il gruppo ha avviato i seguenti accorgimenti:
-  - Definizione più chiara di compiti e responsabilità, con riferimento esplicito alle Norme di Progetto.
-  - Uso di canali di messaggistica strutturati (issue GitHub + Telegram) per gestire i feedback in tempo reale.
+  [*Piano di contingenza*],
+  [Studio individuale delle tecnologie, documentazione interna condivisa e collaborazione diretta tra membri per superare blocchi.],
 
-- **Difficoltà tecniche e integrazione di componenti**  
-  L’esperienza accumulata durante la realizzazione del PoC (soprattutto sugli strumenti di CI/CD e testing) ha evidenziato aree di incertezza nelle configurazioni. 
-  Per mitigare:
-  - Adozione di un primo pipeline di build e test.
-  - Pianificazione di sessioni di pairing in caso di blocchi tecnici.
-  - Creazione di documentazione interna per i passaggi di setup e deploy.
+  [*Aggiornamento*],
+  [L’esperienza accumulata durante la realizzazione del PoC, soprattutto sugli strumenti di CI/CD e testing, ha evidenziato aree di incertezza nelle configurazioni.],
 
-- **Cambio frequente dei requisiti**  
-  Dopo l’RTB, i requisiti si sono stabilizzati e non sono emerse modifiche sostanziali. 
-  Il gruppo rimane pronto a riconsiderare questo rischio se in PB dovessero emergere ulteriori richieste da parte del proponente.
+  [*Accorgimenti*],
+  [- Adozione di un primo pipeline di build e test.,
+   - Pianificazione di sessioni di pairing in caso di blocchi tecnici.,
+   - Creazione di documentazione interna per i passaggi di setup e deploy.,]
+)
+
 
 = Preventivo
 Il preventivo è stato calcolato considerando i costi orari dei diversi ruoli coinvolti e il numero stimato di ore per ciascuno, basandosi su un'analisi dettagliata delle attività necessarie per il progetto.
@@ -400,29 +413,15 @@ caption: [
 ],
 )
 
-Dall’analisi della retrospettiva del periodo RTB, il gruppo ha riscontrato che l’assegnazione delle attività in base alle singole competenze ha permesso di raggiungere alcuni risultati in modo rapido e focalizzato. 
-Al tempo stesso, però, si è creata una disomogeneità nelle ore svolte dai vari membri: alcuni ruoli sono stati coperti molto di più rispetto ad altri, rallentando la crescita condivisa delle competenze.
+Dall’analisi della retrospettiva del periodo RTB, il gruppo ha rilevato che l’assegnazione delle attività in base alle competenze ha portato a risultati rapidi, ma ha anche generato una disomogeneità nelle ore svolte e nella distribuzione dei ruoli, rallentando la crescita condivisa.
 
-La mancanza di una leadership forte e il ricorso limitato a momenti di tutoring interno hanno contribuito a rendere alcuni membri più “specialisti” rispetto ad altri, 
-rischiando di generare colli di bottiglia quando questi esperti non erano disponibili. 
-La visione d’insieme del lavoro, inoltre, non è stata sempre chiarissima, portando a ridondanze in alcune aree e a carenze in altre.
+La mancanza di una leadership solida e la scarsa diffusione delle competenze hanno reso il team dipendente da pochi membri esperti, con conseguenti colli di bottiglia in momenti critici. La visione complessiva del lavoro, inoltre, non è sempre stata chiara a tutti i componenti.
 
-Per ovviare a tali criticità, il gruppo ha ipotizzato diverse soluzioni:
+Per affrontare queste criticità, il gruppo ha ipotizzato alcune soluzioni:
+- dedicare momenti di lavoro condiviso sulla stessa issue, così da favorire la coesione e il passaggio di conoscenze, compatibilmente con gli impegni individuali;
+- organizzare sessioni periodiche di affiancamento tra membri esperti e meno esperti, al fine di colmare i gap e distribuire meglio il carico.
 
-- dedicare alcuni slot di tempo in cui più persone lavorano contemporaneamente sulla stessa issue, in modo da favorire il passaggio di conoscenze e la coesione del gruppo. Ciò richiede un calendario degli impegni che permetta di trovare fasce orarie comuni.
-  
-- organizzare sessioni periodiche in cui i membri più esperti affiancano quelli meno esperti, aiutandoli a colmare i buchi di competenza e distribuendo in modo più omogeneo il carico di lavoro.
-
-Nel breve termine, tali misure potrebbero aumentare il costo e il tempo di alcune attività, 
-poiché la formazione richiede impegno extra. 
-Tuttavia, nel medio-lungo periodo, la diffusione delle competenze e una leadership più chiara 
-dovrebbero ridurre i colli di bottiglia, rendere il team più resiliente e limitare gli effetti di eventuali assenze. 
-L’auspicio è di migliorare la qualità complessiva del lavoro e la flessibilità nella distribuzione dei compiti, 
-riducendo così il rischio di accumulare debito tecnico e ritardi nelle prossime fasi del progetto.
-
-In conclusione, la retrospettiva evidenzia la necessità di migliorare la sinergia del team e di adottare misure che favoriscano 
-un’evoluzione più omogenea delle competenze. L’aspettativa è che, intervenendo ora, si eviteranno difficoltà più rilevanti nelle prossime fasi del progetto, 
-migliorando sia la qualità del lavoro sia la flessibilità organizzativa.
+Queste misure richiederanno uno sforzo aggiuntivo nel breve periodo, ma nel medio-lungo termine dovrebbero ridurre i colli di bottiglia e migliorare la resilienza del gruppo. L’obiettivo è una maggiore omogeneità nelle competenze e una distribuzione più equilibrata dei compiti, così da prevenire ritardi futuri e aumentare l’efficienza complessiva del lavoro.
 
 === Aggiornamento preventivo
 Analizzando la retrospettiva del periodo RTB il gruppo ha deciso di rivedere il preventivo iniziale senza però apportare modifiche ad ore e costi totali. \ 
@@ -799,18 +798,21 @@ Il gruppo ha mostrato capacità di adattamento, reagendo rapidamente ai cambiame
 #pseudoheading[*Ore rimanenti per persona*]
 
 #table(
-  columns: 2,
-  [
-    ["Membro", "Ore mancanti"],
-    ["Ribon", "31.35"],
-    ["Bazzan", "37.55"],
-    ["Fragonas", "45.75"],
-    ["Magnelli", "54.75"],
-    ["Sabbadin", "48.10"],
-    ["Rossi", "63.50"],
-    ["Zhuo", "74.45"],
-    [*strong("TOTALE"), *strong("355.45")]
-  ]
+  columns: (1fr, 2fr),
+  inset: 8pt,
+  align: (x, y) => if y > 0 { left } else { center + horizon },
+  fill: (x, y) => if y == 0 { luma(180) } else if (y == 2 or y == 4 or y == 6 or y == 8) { luma(230) },
+  table.header(table.cell(colspan: 2)[*Ore rimanenti per persona*]),
+
+  [*Membro*], [Ore mancanti],
+  [Ribon], [31.35],
+  [Bazzan], [37.55],
+  [Fragonas], [45.75],
+  [Magnelli], [54.75],
+  [Sabbadin], [48.10],
+  [Rossi], [63.50],
+  [Zhuo], [74.45],
+  [*TOTALE*], [*355.45*],
 )
 
 
