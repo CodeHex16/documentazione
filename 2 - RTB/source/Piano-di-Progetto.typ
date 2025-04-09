@@ -148,9 +148,11 @@ Secondo lo standard ISO/IEC 31000:2009, la gestione dei rischi si articola in ci
 
   [*Piano di contingenza*],
   [Implementare strumenti di comunicazione efficaci (#gloss[GitHub], #gloss[Telegram]), riunioni regolari di aggiornamento, definire chiaramente i canali di comunicazione],
+	//TODO: DA SPOSTARE IN UN'ALTRA TABELLA
   [*Difficoltà di comunicazione interna e leadership debole*],
   [Nelle fasi iniziali il gruppo tendeva a sottovalutare la necessità di una leadership più solida. Le difficoltà riscontrate nello Sprint 8 e 9 (integrazione del PoC, condivisione delle correzioni con il proponente) 
   hanno evidenziato che una leadership chiara e una comunicazione costante sono fondamentali per evitare colli di bottiglia.],
+
   [*Accorgimenti*],
   [- Definizione più chiara di compiti e responsabilità, con riferimento esplicito alle Norme di Progetto.
   - Uso di canali di messaggistica strutturati (issue #gloss[GitHub] + #gloss[Telegram]) per gestire i feedback in tempo reale.],
@@ -180,13 +182,12 @@ Secondo lo standard ISO/IEC 31000:2009, la gestione dei rischi si articola in ci
   table.header(table.cell(colspan: 2)[*Impegni personali e universitari*]),
 
   [*Descrizione*],
-  [Gli impegni accademici o personali dei membri del team possono interferire con il rispetto delle scadenze del progetto. 
-  Durante gli ultimi sprint si sono verificati ritardi legati alla disponibilità di alcuni membri.],
+  [Gli impegni accademici o personali dei membri del team possono interferire con il rispetto delle scadenze del progetto.],
 
   [*Probabilità*], [Alta],
   [*Pericolosità*], [Media],
   [*Rilevamento*],
-  [Monitoraggio delle scadenze tramite riunioni regolari e verifica delle disponibilità segnalate su un calendario condiviso.],
+  [Monitoraggio delle scadenze tramite riunioni regolari e verifica delle disponibilità segnalate su un calendario condiviso in Google Fogli.],
   [*Piano di contingenza*],
   [Maggiore attenzione al calendario condiviso, riunioni di aggiornamento più frequenti, eventuale riassegnazione delle attività in caso di assenze prolungate.],
   [*Aggiornamento*],
@@ -795,16 +796,15 @@ Il gruppo ha mostrato capacità di adattamento, reagendo rapidamente ai cambiame
   ],
 )
 
-#pseudoheading[*Ore rimanenti per persona*]
 
 #table(
-  columns: (1fr, 2fr),
+  columns: (1fr, 1fr),
   inset: 8pt,
   align: (x, y) => if y > 0 { left } else { center + horizon },
   fill: (x, y) => if y == 0 { luma(180) } else if (y == 2 or y == 4 or y == 6 or y == 8) { luma(230) },
   table.header(table.cell(colspan: 2)[*Ore rimanenti per persona*]),
 
-  [*Membro*], [Ore mancanti],
+  [*Membro*], [*Ore mancanti*],
   [Ribon], [31.35],
   [Bazzan], [37.55],
   [Fragonas], [45.75],
