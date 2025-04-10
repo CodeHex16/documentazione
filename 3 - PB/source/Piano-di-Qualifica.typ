@@ -980,3 +980,5 @@ dove "TIPO" sarà:
 #figure(text("si potrebbe fare quanti membri lavorano come programmatori per ogni sprint"), caption: "grafico")
 == STR-03 (Problemi con Typst 0.13)
 #figure(text("grafico con numero di errori dati da typst ?????"), caption: "grafico")
+
+// Sotto il cruscotto delle metriche mettere degli effetti che ci si aspetta di vedere in futuro o che ha dato
