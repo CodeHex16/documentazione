@@ -26,7 +26,7 @@
     "20/03/2025",
     "Luca Ribon",
     "Correzioni testuali a seguito della revisione del prof. Cardin",
-    "!!!!!!!!!!!!!!!!!!!!",
+    "Matteo Bazzan",
     "1.0.0",
     "06/03/2025",
     "Gabriele Magnelli",
