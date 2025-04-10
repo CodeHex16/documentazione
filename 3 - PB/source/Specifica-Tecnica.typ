@@ -71,11 +71,11 @@ e nella seguente pagina web: #link("https://codehex16.github.io/glossario").
 - Diagrammi delle classi (UML):\ #link("https://www.math.unipd.it/~rcardin/swea/2023/Diagrammi%20delle%20Classi.pdf");\
 
 - Slide sui pattern architetturali del prof. Cardin:\ 
-  - introduzione ai pattern: #link("https://www.math.unipd.it/~rcardin/swea/2022/Software%20Architecture%20Patterns.pdf");
-  - pattern creazionali: #link("https://www.math.unipd.it/~rcardin/swea/2022/Design%20Pattern%20Creazionali.pdf")
-  - pattern strutturali: #link("https://www.math.unipd.it/~rcardin/swea/2022/Design%20Pattern%20Strutturali.pdf")\
-  - pattern comportamentali: #link("https://drive.google.com/file/d/1cpi6rORMxFtC91nI6_sPrG1Xn-28z8eI/view?usp=sharing")\
-  - pattern Model View Controller: #link("https://www.math.unipd.it/~rcardin/sweb/2022/L02.pdf")\
+  - introduzione ai pattern:\ #link("https://www.math.unipd.it/~rcardin/swea/2022/Software%20Architecture%20Patterns.pdf");
+  - pattern creazionali:\ #link("https://www.math.unipd.it/~rcardin/swea/2022/Design%20Pattern%20Creazionali.pdf")
+  - pattern strutturali:\ #link("https://www.math.unipd.it/~rcardin/swea/2022/Design%20Pattern%20Strutturali.pdf")\
+  - pattern comportamentali:\ #link("https://drive.google.com/file/d/1cpi6rORMxFtC91nI6_sPrG1Xn-28z8eI/view?usp=sharing")\
+  - pattern Model View Controller:\ #link("https://www.math.unipd.it/~rcardin/sweb/2022/L02.pdf")\
 
 = Tecnologie
 
@@ -86,23 +86,85 @@ che hanno portato alla sua scelta.
 == Tecnologie per la codifica
 
 === Linguaggi
-- Python: scelto per la sua versatilità e facilità d'uso, è il linguaggio principale per lo sviluppo del back-end. Anche
-  se presenta delle performance minori rispetto ad altri linguaggi come C++ o C#, è più supportato per gli LLM e dagli
-  altri componenti utilizzati.
-- Svelte: scelto per la sua semplicità e leggerezza, è il framework principale per lo sviluppo del front-end. Permette di
-  creare interfacce utente più reattive con un codice più semplice rispetto ad altri framework come React o Angular.
-- TypeScript: 
+//Versioni prese dalle repo github delle tecnologie
+#figure(
+  caption: "Linguaggi utilizzati",
+  table(
+    columns: (0.3fr, 1fr, 0.3fr),
+    inset: 8pt,
+    align: (x, y) => if (y > 0) { left } else { center + horizon },
+    fill: (x, y) => if y == 0 { luma(190) } else if (y == 2 or y == 4) { luma(230) },
+    table.header([*Linguaggio*], [*Motivazione*], [*Versione*]),
+    "Python",
+    "Scelto per la sua versatilità e facilità d'uso, è il linguaggio principale per lo sviluppo del back-end. Anche se presenta delle performance minori rispetto ad altri linguaggi come C++ o C, è più supportato per gli LLM e dagli altri componenti utilizzati.",
+    "3.11.4",
+    "TypeScript",
+    "Scelto per la sua tipizzazione statica, migliora la qualità del codice e facilita la manutenzione. È utilizzato in combinazione con Svelte per lo sviluppo del front-end.",
+    "5.8.3",
+  ),
+)
 === Framework e librerie
-
+#figure(
+  caption: "Framework e librerie utilizzati",
+  table(
+    columns: (0.3fr, 1fr, 0.3fr),
+    inset: 8pt,
+    align: (x, y) => if (y > 0) { left } else { center + horizon },
+    fill: (x, y) => if y == 0 { luma(190) } else if (y == 2 or y == 4) { luma(230) },
+    table.header([*Linguaggio*], [*Motivazione*], [*Versione*]),
+    "Svelte",
+    "Scelto per la sua semplicità e leggerezza, è il framework principale per lo sviluppo del front-end. Permette di creare interfacce utente più reattive con un codice più semplice rispetto ad altri framework come React o Angular.",
+    "5.25.10",
+    "FastAPI",
+    "",
+    "0.115.12",
+    "LangChain",
+    "",
+    "0.9.71", //https://changelog.langchain.com/
+  ),
+)
 === Strumenti e servizi
-- Git: utilizzato per il versionamento del codice sorgente, permette di tenere traccia delle modifiche e collaborare con
-  altri membri del team.
 
-// Elencare linguaggi, framework e librerie utilizzati, con motivazione della scelta.
+#figure(
+  caption: "Strumenti e servizi utilizzati",
+  table(
+    columns: (0.3fr, 1fr, 0.4fr),
+    inset: 8pt,
+    align: (x, y) => if (y > 0) { left } else { center + horizon },
+    fill: (x, y) => if y == 0 { luma(190) } else if (y == 2 or y == 4) { luma(230) },
+    table.header([*Linguaggio*], [*Motivazione*], [*Versione*]),
+    "Git",
+    "Utilizzato per il versionamento del codice sorgente, permette di tenere traccia delle modifiche e collaborare con altri membri del team",
+    "2.49.0",
+    "GPT-4o-mini",
+    "",
+    "-",
+    "Docker",
+    "",
+    "0.21.0 Build\n28.0.4 Engine\n4.40.0 Desktop\n2.34.0 Compose",
+    "MongoDB",
+    "",
+    "8.0",
+    "ChromaDB",
+    "",
+    "1.0.4",
+  ),
+)
 
 == Tecnologie per il testing
-- Github Actions
-- Pytest
+#figure(caption: "Tecnologie per il testing utilizzate", table(
+  columns: (0.3fr, 1fr, 0.4fr),
+  inset: 8pt,
+  align: (x, y) => if (y > 0) { left } else { center + horizon },
+  fill: (x, y) => if y == 0 { luma(190) } else if (y == 2 or y == 4) { luma(230) },
+  table.header([*Linguaggio*], [*Motivazione*], [*Versione*]),
+  "Github Actions",
+  "",
+  "-",
+  "Pytest",
+  "",
+  "8.3.5",
+))
 // Indicare strumenti e librerie impiegati per le attività di testing e analisi del codice.
 
 = API
