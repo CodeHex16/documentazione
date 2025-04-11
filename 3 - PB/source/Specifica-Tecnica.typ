@@ -246,7 +246,7 @@ click sui pulsanti e l'invio dei messaggi. In questo modo, il file TypeScript fu
 il back-end, seguendo il pattern 'controller' del MVC.\
 Ogni file svelte presenta una funzione _load_, che viene eseguita quando la pagina viene caricata.\
 \
-Nelle sezioni successive, verrà descritto solo il file TypeScript, in quanto il file Svelte non presenta logiche
+Nelle sezioni successive, verrà descritto solo il file _.server.ts_, in quanto il file _.svelte_ non presenta logiche
 particolari, ma solo markup HTML e CSS.
 
 == Pagina di login
@@ -280,8 +280,20 @@ Presenta una funzione:
 /Suppl-AI/src/routes/profilo\
 
 == Pagina chat
-- Percorso: /Suppl-AI/src/routes/chat\
-
+/Suppl-AI/src/routes/chat\
+La pagina chat mostra la conversazione tra l'utente e il chatbot. Presenta due variabili costanti:
+- API_URL: contiene l'URL dell'API del database.
+- LLM_URL: contiene l'URL dell'API del LLM.\
+Presenta le seguenti funzioni:
+- _updateChatNameIfNeeded_: se la chat inizia ad avere più di 2 messaggi, viene mandata una richiesta POST alla API
+  dell'LLM che chiede di cambiare il titolo della chat in base al contesto. Poi viene fatta una richiesta PUT alla API del
+  database per memorizzare il titolo.
+- _load_: controlla se l'utente è autenticato tramite un token cookie. Se non lo è, questo viene reindirizzato alla pagina
+  di login. La chat viene caricata tramite un metodo GET alla API del database dove vengono richiesti tutti messaggi della
+  chat.
+- _actions_: viene eseguita quando l'utente invia un messaggio. Viene fatta una richiesta POST alla API del LLM per
+  elaborare il messaggio e generare una risposta. La risposta viene poi mostrata nella chat. In caso di errore, la
+  funzione ritorna un messaggio di errore.
 = Architettura logica
 
 // Descrivere la suddivisione in moduli e livelli logici del sistema.
