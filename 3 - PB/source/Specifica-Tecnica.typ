@@ -42,6 +42,23 @@
 //mettere #gloss per parole da aggiungere nel glossario
 = Introduzione
 
+== Scopo del prodotto
+Il progetto consiste nella realizzazione di un *#gloss[chatbot]* basato su modelli linguistici (*#gloss[LLM]*) pensato
+per i *fornitori* di beni, come bevande o alimenti, da offrire ai propri clienti. Questo sistema consente ai clienti di
+ottenere in modo semplice e immediato informazioni dettagliate sui prodotti o servizi disponibili, senza la necessità di
+contattare direttamente un operatore dell'azienda.
+
+Il chatbot si integra con un'interfaccia dedicata al #gloss[fornitore], che permette di:
+
+- Gestire i clienti e i documenti contenenti le informazioni di riferimento utilizzate dal modello linguistico per
+  generare risposte accurate e personalizzate.
+- Personalizzare graficamente la piattaforma tramite l'inserimento del logo aziendale e la selezione di una palette
+  colori.
+
+Per garantire la massima compatibilità e facilità d'uso, il chatbot è accessibile tramite un'interfaccia web, che può
+essere utilizzata su qualsiasi dispositivo con un browser. I linguaggi principali usati nella webapp sono #gloss[HTML], #gloss[CSS], #gloss[JavaScript] e
+#gloss[Python], linguaggi ampiamente supportati da molti dispositivi.
+
 == Scopo del documento
 Lo scopo del documento è fornire una panoramica dettagliata delle scelte progettuali e tecniche adottate per lo sviluppo
 del sistema. Qui verranno forniti i diagrammi UML delle classi e le scelte architetturali, oltre a una descrizione delle
@@ -56,7 +73,7 @@ e nella seguente pagina web: #link("https://codehex16.github.io/glossario").
 
 == Riferimenti
 
-//IMPORTANTE: i link dei documenti reindirizzano sulla versione RTB, qui li ho aggiornati con PB nel link, ma potrebbero comunque non andare anche dopo il fix
+//IMPORTANTE: i link dei documenti nostri reindirizzano sulla versione RTB, qui li ho aggiornati con PB nel link, ma potrebbero comunque non andare anche dopo il fix
 
 == Riferimenti normativi
 - Capitolato C7 - Assistente Virtuale Ergon:\ #link("https://www.math.unipd.it/~tullio/IS-1/2024/Progetto/C7.pdf")\ _(ultima consultazione: 03-03-2025)_; //da tenere aggiornato
@@ -226,12 +243,44 @@ essere riutilizzati in altre pagine.
 Il file TypeScript contiene la logica di business per la pagina. Gestisce le chiamate API al back-end, elabora i dati
 ricevuti e li passa al file Svelte per la visualizzazione. Inoltre, gestisce gli eventi dell'interfaccia utente, come i
 click sui pulsanti e l'invio dei messaggi. In questo modo, il file TypeScript funge da intermediario tra il front-end e
-il back-end, seguendo il pattern 'controller' del MVC.
+il back-end, seguendo il pattern 'controller' del MVC.\
+Ogni file svelte presenta una funzione _load_, che viene eseguita quando la pagina viene caricata.\
+\
+Nelle sezioni successive, verrà descritto solo il file TypeScript, in quanto il file Svelte non presenta logiche
+particolari, ma solo markup HTML e CSS.
 
 == Pagina di login
+/Suppl-AI/src/routes/login\
+La pagina di login è la prima pagina che l'utente vede quando accede alla webapp. Consente agli utenti di inserire le
+proprie credenziali (email e password) per accedere alla piattaforma.\
+Presenta una variabile costante:
+- API_URL: contiene l'URL dell'API del database.\
+Presenta due funzioni:
+- _load_: controlla se l'utente è già autenticato tramite un token #gloss[cookie]. Se questo token esiste, reindirizza
+  l'utente alla pagina principale.
+- _actions_: viene eseguita quando l'utente invia il modulo di login. Prende lo username e password inseriti, e li manda
+  attraverso una richiesta POST alla API per l'autenticazione. In caso di successo, reindirizza l'utente alla pagina
+  principale. In caso di errore, mostra un messaggio di errore all'utente. Il cookie che mantiene l'accesso dura fino a 1
+  settimana, finita la quale l'utente dovrà reinserire le credenziali.
+
 == Homepage
+/Suppl-AI/src/routes\
+La homepage è la pagina principale della webapp. Consente agli utenti di visualizzare le chat disponibili e di crearne
+di nuove. Presenta una barra di navigazione per accedere ad altre funzionalità della piattaforma, come la lista delle
+chat o le informazioni del profilo.\
+Presenta una variabile costante:
+- API_URL: contiene l'URL dell'API del database.\
+Presenta una funzione:
+- _load_: controlla se l'utente è autenticato tramite un token cookie. Se questo token esiste, reindirizza l'utente alla
+  pagina di login. Inoltre, carica le chat disponibili per l'utente autenticato e le mostra nella homepage. Ritorna il
+  token dell'utente e la lista delle chat.
+//da aggiungere o modificare i casi per il fornitore
+
 == Pagina account utente
+/Suppl-AI/src/routes/profilo\
+
 == Pagina chat
+- Percorso: /Suppl-AI/src/routes/chat\
 
 = Architettura logica
 
