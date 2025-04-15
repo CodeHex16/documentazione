@@ -20,7 +20,7 @@
   "1.1.0",
   "06/04/2025",
   "Filippo Sabbadin",
-  "Migliorata sezione Metodologie di testing",
+  "Aggiunta sezione PB nel cruscotto di valutazione delle metriche",
   "",
   "1.0.0",
   "05/03/2025",
@@ -765,6 +765,9 @@ ruolo di Analista al fine di redigere il documento #gloss[Analisi dei Requisiti]
 periodi, si è verificata una diminuzione dei costi. Invece i rialzi sono più contenuti e sono dovuti, principalmente, ai
 periodi in cui avevamo bisogno di ore aggiuntive per il ruolo di verificatore.
 
+=== PB
+Durante la fase PB, il costo preventivato è rimasto invariato mentre le stime del costo totale sono state più stabili. 
+
 == MPC-EV(Estimated Value) - MPC-PV(Planned Value)
 #figure(image("../imgs/SwePdQEvPv.png", width: 100%), caption: [
   Stima dei valori di PV e EV durante i vari sprint.
@@ -774,6 +777,10 @@ effettivamente svolto è conforme a quello pianificato anche se con qualche picc
 sprint 6 e 7 in cui vari componenti del team hanno avuto degli esami da svolgere e il lavoro e la produttività è
 leggermente diminuita.
 
+=== PB
+Come scritto nella sezione sugli automiglioramenti, il gruppo ha avuto difficoltà a lavorare in parallelo sugli stessi
+file, risolto usando la funzione dei branch di Git. Questo ha portato a un aumento del tempo di lavoro.
+
 == MPC-AC(Actual Cost) - MPC-ETC(Estimated To Completion)
 #figure(image("../imgs/SwePdQAcEtcBac.png", width: 100%), caption: [
   Stima dei valori di AC e ETC durante i vari sprint.
@@ -782,6 +789,10 @@ Il grafico mostra i valori di ETC(Estimated To Completion), cioè la stima del b
 termine il progetto durante i vari sprint. Il grafico mostra anche i valori di AC(Actual Cost), cioè il budget
 effettivamente speso dal team durante i vari periodi. Si nota che l'ETC, giustamente, diminuisce costantemente con
 l'avanzare degli sprint, mentre l'AC rispetta una crescita proporzionale alla velocità con cui l'ETC decresce.
+
+=== PB
+Visto l'aumento di velocità del gruppo durante la fase PB con il consumo di più ore, i valori di ETC sono diminuiti più
+velocemente, e i valori di AC sono aumentati più velocemente rispetto al budget speso.
 
 == MPC-SC(Schedule Variance) - MPC-CV(Cost Variance)
 #figure(image("../imgs/SwePdQCvSv.png", width: 100%), caption: [
@@ -797,6 +808,12 @@ solo in alcuni casi il gruppo aveva preventivato di usare più tempo per determi
 velocemente con il progetto. Entrambi i valori comunque si discostano al massimo di 4 punti percentuali SV e al massimo
 di 2 punti percentuali per i valori di CV.
 
+=== PB
+Come scritto nella sezione di automiglioramento, all'inizio del progetto, il team ha avuto qualche difficoltà a
+rispettare le scadenze e i costi previsti, ma con il passare del tempo e l'aumento della velocità del gruppo, i valori
+di SV e CV sono stati rispettati. Questo è dovuto alla maggiore esperienza del team e alla maggiore conoscenza del
+progetto.
+
 == MPC-RSI(Requirements Stability Index)
 #figure(image("../imgs/SwePdQRSI.png", width: 100%), caption: [
   Stima di RSI durante i vari sprint.
@@ -807,6 +824,10 @@ cui il team ha usato il ruolo dell' analista al fine di redigere il documento An
 successivi i requisiti sono stati migliorati e non vi sono state modifiche sostanziali ai requisiti fino allo sprint 7,
 in cui l'indice RSI risulta essere del 100%.
 
+=== PB
+Durante la fase PB, i requisiti non hanno visto modifiche sostanziali, per questo *il grafico* è rimasto un po' più
+stabile, ma sono stati comunque migliorati alcuni requisiti.
+
 == MPC-Correttezza Ortografica
 #figure(image("../imgs/SwePdQCO.png", width: 100%), caption: [
   Stima dei valori di correttezza ortografica durante i vari sprint.
@@ -814,6 +835,11 @@ in cui l'indice RSI risulta essere del 100%.
 Dal grafico emerge che, nella maggior parte dei documenti, gli errori ortografici sono molto limitati, purtroppo qualche
 errore è sfuggito, ma è stato successivamente corretto. Nonostante ciò per buona parte dei documenti e del tempo gli
 errori presenti erano 0, in particolare si è raggiunto un ottimo risultato negli ultimi sprint.
+
+=== PB
+Come notato nella sezione automiglioramento, è stato difficile avere un formato dei documenti omogeneo e questo ha
+portato a un aumento di diversi errori. Questo è stato risolto con l'uso di un correttore ortografico automatico una
+maggiore comunicazione tra i membri del gruppo.
 
 == MPC-Indice Gulpease
 #figure(image("../imgs/SwePdQGulpease.png", width: 100%), caption: [
@@ -824,6 +850,9 @@ stabilizzazione dell'indice Gulpease. L'unico documento che inizia al di sotto d
 Requisiti e questo è causato dalla specificità degli argomenti trattati e dal linguaggio utilizzato. Per il resto dei
 documenti l'indice Gulpease è sopra l'ottimo per la maggior parte degli sprint.
 
+=== PB
+Durante la fase PB, l'indice è rimasto abbastanza stabile e non vi sono stati cambiamenti sostanziali.
+
 == MPC-Non-Calculated-Risk
 #figure(image("../imgs/SwePdQ_NcR.png", width: 100%), caption: [
   Stima dei valori di CV e SV durante i vari sprint.
@@ -832,6 +861,9 @@ Il grafico mostra come per la maggior parte degli sprint non si siano verificati
 sprint 3 abbiamo avuto un problema di comunicazione interna al gruppo che ha richiesto un incontro con il professore
 Tullio Vardanega e che in seguito si è risolto. In ogni caso dal grafico si può notare che il team ha avuto una buona
 previsione dei rischi.
+
+=== PB
+//Ancora un po' presto per scriverla
 
 == MPC-QMS(Quality Metric Satisfied)
 #figure(image("../imgs/SwePdQQMS.png", width: 100%), caption: [
@@ -842,6 +874,10 @@ raggiunto un valore accettabile e questo è dovuto ad una iniziale inesperienza 
 però, hanno capito questi errori apprendendo da essi e migliorando come gruppo. Questo fino a raggiungere valori
 accettabili e in seguito ottimi soprattutto negli ultimi sprint dimostrando un miglioramento nel #gloss[way of working] e
 nei risultati ottenuti.
+
+=== PB
+Durante la fase PB, il gruppo ha mantenuto un valore stabile di soddisfazione delle metriche di qualità e non vi sono
+stati cambiamenti sostanziali. Questo grazie a ciò che è stato appreso durante la fase precedente.
 
 = Processi di automiglioramento
 
@@ -946,7 +982,7 @@ dove "TIPO" sarà:
     "Nella nuova versione è stato modificato un tag usato per creare le tabelle nei documenti, è bastato aggiungere un altro tag insieme a quello usato",
   ),
 )
-
+/*
 = Cruscotto sulle misure di automiglioramento
 //presentare o grafici, screenshots o qualsiasi cosa che possa mostrare i miglioramenti ottenuti
 == OPI-01 (Pianificazione riunioni con tutti i membri)
@@ -981,4 +1017,4 @@ dove "TIPO" sarà:
 == STR-03 (Problemi con Typst 0.13)
 #figure(text("grafico con numero di errori dati da typst ?????"), caption: "grafico")
 
-// Sotto il cruscotto delle metriche mettere degli effetti che ci si aspetta di vedere in futuro o che ha dato
+// Sotto il cruscotto delle metriche mettere degli effetti che ci si aspetta di vedere in futuro o che ha dato*/
