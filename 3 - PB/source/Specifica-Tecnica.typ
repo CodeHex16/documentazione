@@ -2,26 +2,18 @@
 #import "../../template/i-figured.typ"
 
 #show: doc => documento(titolo: "Specifica Tecnica", data: [21/03/2025], ruoli: (
-  "Matteo Bazzan",
-  "",
   "Luca Ribon",
   "Verificatore",
-  "Francesco Fragonas",
-  "",
-  "Gabriele Magnelli",
-  "",
   "Filippo Sabbadin",
   "Redattore",
   "Luca Rossi",
   "Redattore",
-  "Yi Hao Zhuo",
-  "",
 ), sommario: [Specifica tecnica], versioni: (
   "0.2.0",
   "10/04/2025",
   "Filippo Sabbadin",
   "Stesura sezioni iniziali",
-  "",
+  "Luca Ribon",
   "0.1.0",
   "21/03/2025",
   "Luca Rossi",
@@ -50,13 +42,13 @@ contattare direttamente un operatore dell'azienda.
 
 Il chatbot si integra con un'interfaccia dedicata al #gloss[fornitore], che permette di:
 
-- Gestire i clienti e i documenti contenenti le informazioni di riferimento utilizzate dal modello linguistico per
+- Gestire clienti, faq e documenti contenenti le informazioni di riferimento utilizzate dal modello linguistico per
   generare risposte accurate e personalizzate.
 - Personalizzare graficamente la piattaforma tramite l'inserimento del logo aziendale e la selezione di una palette
   colori.
 
 Per garantire la massima compatibilità e facilità d'uso, il chatbot è accessibile tramite un'interfaccia web, che può
-essere utilizzata su qualsiasi dispositivo con un browser. I linguaggi principali usati nella webapp sono #gloss[HTML], #gloss[CSS], #gloss[JavaScript] e
+essere utilizzata su qualsiasi dispositivo su cui è installato un browser. I linguaggi principali usati nella webapp sono #gloss[HTML], #gloss[CSS], #gloss[JavaScript], TypeScript e
 #gloss[Python], linguaggi ampiamente supportati da molti dispositivi.
 
 == Scopo del documento
@@ -101,9 +93,9 @@ funzione e al loro ambito di applicazione. Ogni tecnologia è accompagnata da un
 che hanno portato alla sua scelta.
 
 == Tecnologie per la codifica
-
-=== Linguaggi
 //Versioni prese dalle repo github delle tecnologie
+// TODO: controllare le versioni a fine progetto
+=== Linguaggi
 #show figure: set block(breakable: true)
 #figure(
   caption: "Linguaggi utilizzati",
@@ -123,8 +115,8 @@ che hanno portato alla sua scelta.
     "Utilizzato per la creazione di interazioni dinamiche e reattive nelle pagine web.",
     "ECMAScript 2024",
     "Python",
-    "Scelto per la sua versatilità e facilità d'uso, è il linguaggio principale per lo sviluppo del back-end. Anche se presenta delle performance minori rispetto ad altri linguaggi come C++ o C, è più supportato per gli LLM e dagli altri componenti utilizzati.",
-    "3.11.4",
+    "Scelto per la sua versatilità e facilità d'uso, è il linguaggio principale per lo sviluppo del back-end. Inoltre supporta e integra esaustivamente tutti i componenti esterni come gli LLM e i database vettoriali e non; inoltre la documentazione relativa a queste integrazioni è ampia e ben strutturata.",
+    "3.12",
     "TypeScript",
     "Scelto per la sua tipizzazione statica, migliora la qualità del codice e facilita la manutenzione. È utilizzato in combinazione con Svelte per lo sviluppo del front-end.",
     "5.8.3",
@@ -140,18 +132,19 @@ che hanno portato alla sua scelta.
     fill: (x, y) => if y == 0 { luma(190) } else if (y == 2 or y == 4) { luma(230) },
     table.header([*Linguaggio*], [*Motivazione*], [*Versione*]),
     "Svelte",
-    "Scelto per la sua semplicità e leggerezza, è il framework principale per lo sviluppo del front-end. Permette di creare interfacce utente più reattive con un codice più semplice rispetto ad altri framework come React o Angular.",
+    "Scelto per la sua semplicità e leggerezza, è il framework utilizzato per il rendering delle pagine del front-end. Permette di creare UI e UX gradevoli con una struttura e semantica del codice che il gruppo ha preferito rispetto ad altri framework.",
     "5.25.10",
+    "SvelteKit",
+    "Scelto per la sua integrazione con Svelte, è un framework per lo sviluppo di applicazioni web. Permette di gestire implementare funzioni come ottimizzazione delle build, routing in modo semplice.",
     "FastAPI",
-    "Framework scelto per la sua facilità nell'implementazione di API REST. È utilizzato per il back-end per far comunicare tra loro i componenti software",
+    "Framework scelto per la sua facilità nell'implementazione di API REST. È utilizzato per il back-end per far comunicare tra loro i componenti software.",
     "0.115.12",
     "LangChain",
-    "Libreria scelta per l'integrazione tra modelli AI e database, permette di gestire query sui documenti e migliorare la qualità delle risposte",
+    "Libreria scelta per l'integrazione tra modelli AI e database, permette di gestire documenti, contesto e query rivolte all'LLM integrato.",
     "0.9.71", //https://changelog.langchain.com/
   ),
 )
 === Strumenti e servizi
-
 #figure(
   caption: "Strumenti e servizi utilizzati",
   table(
@@ -167,7 +160,7 @@ che hanno portato alla sua scelta.
     "Il modello utilizzato per il chatbot, scelto in base al prezzo e qualità delle risposte",
     "-",
     "Docker",
-    "Utilizzato per suddividere ed eseguire in container l’intera applicazione, rendendola facilmente distribuibile e scalabile in diversi ambienti",
+    "Utilizzato per suddividere ed eseguire in container l'applicazione, rendendola facilmente distribuibile e scalabile in diversi ambienti",
     "0.21.0 Build\n28.0.4 Engine\n4.40.0 Desktop\n2.34.0 Compose",
     "MongoDB",
     "Database NoSQL utilizzato per memorizzare documenti, cronologia delle conversazioni e utenti. Scelto perché rende più facile e diretto memorizzare i file come formato json",
@@ -178,7 +171,7 @@ che hanno portato alla sua scelta.
   ),
 )
 
-== Tecnologie per il testing
+== Tecnologie per i test
 #figure(
   caption: "Tecnologie per il testing utilizzate",
   table(
@@ -218,41 +211,34 @@ che hanno portato alla sua scelta.
 
 = Architettura Front-end
 
-Per il front-end sono stati utilizzati #gloss[Svelte] e TypeScript. Svelte è un #gloss[framework] #gloss[JavaScript] che
-consente di creare interfacce utente reattive e performanti, mentre #gloss[TypeScript] è un #gloss[superset] di
-JavaScript che aggiunge tipizzazione statica al linguaggio, migliorando la qualità del codice e facilitando la
-manutenzione.
+Per il front-end sono stati utilizzati #gloss[Svelte], SvelteKit e TypeScript. SvelteKit è un #gloss[framework] #gloss[JavaScript] che integra Svelte e consente di creare interfacce utente reattive e performanti, mentre #gloss[TypeScript] è un #gloss[superset] di JavaScript che aggiunge tipizzazione statica al linguaggio, viene utilizzato per la logica di gestione e manipolazione della presentazione dell'applicazione.
 
-== Architettura di una pagina della webapp
+== Architettura delle pagine dell'applicazione web
 
 Ogni pagina della webapp è composta da un file Svelte '_page.svelte_', e da un file Typescript '_page.server.ts_'.
 Questa struttura segue il pattern #gloss[Model-View-Controller] (MVC), in cui il file Svelte rappresenta la 'view',
-mentre il file TypeScript rappresenta il 'controller', il 'model' invece sono i dati che vengono ricevuti dal back-end
-tramite le API.
+mentre il file TypeScript rappresenta il 'controller', il 'model' invece sono i dati che vengono ricevuti dal back-end tramite le API.
 
 === File Svelte
 
-Il file Svelte contiene il markup HTML e il CSS per la pagina. Utilizza le funzionalità di Svelte e prende le varie
-librerie create sempre dal gruppo. Queste librerie contengono vari componenti di una pagina web, come la diversi
-pulsanti, la barra di navigazione, layout dei messaggi e chat... Inoltre, sfrutta le funzionalità di reattività di
-Svelte per aggiornare automaticamente l'interfaccia utente in base ai cambiamenti dello stato. In un certo senso, tutti
-i file Svelte sono strutturati tramite il pattern 'composite', in quanto sono composti da più componenti che possono
-essere riutilizzati in altre pagine.
+Il file Svelte contiene il codice HTML e il CSS, utilizza le funzionalità di Svelte e le
+librerie create dal gruppo. Queste librerie contengono vari componenti grafici utilizzati nelle pagina web; inoltre, sfrutta le funzionalità delle pagine dinamiche di Svelte per aggiornare automaticamente l'interfaccia utente in base ai cambiamenti dello stato. 
+
+In un certo senso, tutti i file Svelte sono strutturati tramite il pattern _ composite_, in quanto sono composti da più componenti che possono essere riutilizzati in altre pagine.
 
 === File Typescript
-Il file TypeScript contiene la logica di business per la pagina. Gestisce le chiamate API al back-end, elabora i dati
+Il file TypeScript funge da _controller_ del pattern MVC. Gestisce le chiamate API al back-end, elabora i dati
 ricevuti e li passa al file Svelte per la visualizzazione. Inoltre, gestisce gli eventi dell'interfaccia utente, come i
-click sui pulsanti e l'invio dei messaggi. In questo modo, il file TypeScript funge da intermediario tra il front-end e
-il back-end, seguendo il pattern 'controller' del MVC.\
+click sui pulsanti e l'invio dei messaggi.
+
 Ogni file svelte presenta una funzione _load_, che viene eseguita quando la pagina viene caricata.\
-\
-Nelle sezioni successive, verrà descritto solo il file _.server.ts_, in quanto il file _.svelte_ non presenta logiche
-particolari, ma solo markup HTML e CSS.
+
 
 == Pagina di login
-/Suppl-AI/src/routes/login\
+Percorso: _/Suppl-AI/src/routes/login_ . \
 La pagina di login è la prima pagina che l'utente vede quando accede alla webapp. Consente agli utenti di inserire le
 proprie credenziali (email e password) per accedere alla piattaforma.\
+Inoltre permette all'utente di avviare la procedura di recupero password in caso di smarrimento. \
 Presenta una variabile costante:
 - API_URL: contiene l'URL dell'API del database.\
 Presenta due funzioni:
@@ -264,9 +250,9 @@ Presenta due funzioni:
   settimana, finita la quale l'utente dovrà reinserire le credenziali.
 
 == Homepage
-/Suppl-AI/src/routes\
+Percorso: _/Suppl-AI/src/routes_ .\
 La homepage è la pagina principale della webapp. Consente agli utenti di visualizzare le chat disponibili e di crearne
-di nuove. Presenta una barra di navigazione per accedere ad altre funzionalità della piattaforma, come la lista delle
+di nuove. Presenta una barra di navigazione, posta in basso per facilitarne l'utilizzo da dispositivi mobile, per accedere ad altre funzionalità della piattaforma, come la lista delle
 chat o le informazioni del profilo.\
 Presenta una variabile costante:
 - API_URL: contiene l'URL dell'API del database.\
@@ -277,10 +263,10 @@ Presenta una funzione:
 //da aggiungere o modificare i casi per il fornitore
 
 == Pagina account utente
-/Suppl-AI/src/routes/profilo\
+Percorso: _/Suppl-AI/src/routes/profilo_ .\
 
 == Pagina chat
-/Suppl-AI/src/routes/chat\
+Percorso: _/Suppl-AI/src/routes/chat_ .\
 La pagina chat mostra la conversazione tra l'utente e il chatbot. Presenta due variabili costanti:
 - API_URL: contiene l'URL dell'API del database.
 - LLM_URL: contiene l'URL dell'API del LLM.\
