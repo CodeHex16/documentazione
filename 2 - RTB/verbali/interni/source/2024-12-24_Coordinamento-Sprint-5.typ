@@ -47,7 +47,7 @@
 Durante la riunione è stato analizzato il lavoro svolto nello *Sprint 4*, in particolare sono stati condivisi i progressi sui documenti #gloss[Norme di Progetto] e #gloss[Analisi dei Requisiti], sono stati presentati i due #gloss[POC] sviluppati con due framework diversi #gloss[Svelte] e #gloss[Vue.js].
 
 = Scelta del framework per la webapp
-Durante lo Sprint 4 è stata condotta un'analisi approfondita tra i framework Vue.js e Svelte/SvelteKit attraverso lo sviluppo di PoC paralleli. In seguito alla presentazione da parte dei due incaricati e averne valutato i risultati, il team ha deciso di adottare Svelte per lo sviluppo della webapp.
+Durante lo Sprint 4 è stata condotta un'analisi approfondita tra i framework Vue.js e Svelte/#gloss[SvelteKit] attraverso lo sviluppo di PoC paralleli. In seguito alla presentazione da parte dei due incaricati e averne valutato i risultati, il team ha deciso di adottare Svelte per lo sviluppo della webapp.
 
 La scelta è stata motivata dai seguenti fattori:
 - Compilazione anticipata del codice che risulta in un bundle più leggero e prestazioni runtime migliori, più adatto alle prestazioni solitamente più modeste dei dispositivi mobile.

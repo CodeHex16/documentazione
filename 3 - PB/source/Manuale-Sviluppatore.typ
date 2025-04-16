@@ -56,7 +56,7 @@ e nella seguente pagina web:
 
 == Linguaggi
 - Python;
-- Typescript;
+- #gloss[Typescript];
 - #gloss[JavaScript];
 == Strumenti e servizi
 - Git;

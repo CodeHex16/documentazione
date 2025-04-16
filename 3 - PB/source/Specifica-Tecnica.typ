@@ -47,14 +47,14 @@ Il chatbot si integra con un'interfaccia dedicata al #gloss[fornitore], che perm
 - Personalizzare graficamente la piattaforma tramite l'inserimento del logo aziendale e la selezione di una palette
   colori.
 
-Per garantire la massima compatibilità e facilità d'uso, il chatbot è accessibile tramite un'interfaccia web, che può
-essere utilizzata su qualsiasi dispositivo su cui è installato un browser. I linguaggi principali usati nella webapp sono #gloss[HTML], #gloss[CSS], #gloss[JavaScript], TypeScript e
+Per garantire la massima compatibilità e facilità d'uso, il chatbot è accessibile tramite un'#gloss[interfaccia web], che può
+essere utilizzata su qualsiasi dispositivo su cui è installato un browser. I linguaggi principali usati nella #gloss[webapp] sono #gloss[HTML], #gloss[CSS], #gloss[JavaScript], TypeScript e
 #gloss[Python], linguaggi ampiamente supportati da molti dispositivi.
 
 == Scopo del documento
 Lo scopo del documento è fornire una panoramica dettagliata delle scelte progettuali e tecniche adottate per lo sviluppo
 del sistema. Qui verranno forniti i diagrammi UML delle classi e le scelte architetturali, oltre a una descrizione delle
-tecnologie utilizzate e delle API implementate.// Indicare come si colloca nel contesto del progetto.
+tecnologie utilizzate e delle #gloss[API] implementate.// Indicare come si colloca nel contesto del progetto.
 
 == Glossario
 Per facilitare la comprensione di questo documento, viene fornito un glossario che chiarisce il significato dei termini
@@ -235,14 +235,14 @@ Ogni file svelte presenta una funzione _load_, che viene eseguita quando la pagi
 
 
 == Pagina di login
-Percorso: _/Suppl-AI/src/routes/login_ . \
+Percorso: _/#gloss[Suppl-AI]/src/routes/login_ . \
 La pagina di login è la prima pagina che l'utente vede quando accede alla webapp. Consente agli utenti di inserire le
 proprie credenziali (email e password) per accedere alla piattaforma.\
 Inoltre permette all'utente di avviare la procedura di recupero password in caso di smarrimento. \
 Presenta una variabile costante:
 - API_URL: contiene l'URL dell'API del database.\
 Presenta due funzioni:
-- _load_: controlla se l'utente è già autenticato tramite un token #gloss[cookie]. Se questo token esiste, reindirizza
+- _load_: controlla se l'utente è già autenticato tramite un #gloss[token] #gloss[cookie]. Se questo token esiste, reindirizza
   l'utente alla pagina principale.
 - _actions_: viene eseguita quando l'utente invia il modulo di login. Prende lo username e password inseriti, e li manda
   attraverso una richiesta POST alla API per l'autenticazione. In caso di successo, reindirizza l'utente alla pagina
