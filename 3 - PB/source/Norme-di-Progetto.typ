@@ -5,8 +5,6 @@
   titolo: "Norme di Progetto",
   data: [12/11/2024],
   ruoli: (
-    "Matteo Bazzan",
-    "",
     "Luca Ribon",
     "Redattore, Verificatore",
     "Francesco Fragonas",
@@ -27,7 +25,7 @@
     "10/04/2025",
     "Gabriele Magnelli",
     "Correzioni rispetto alle indicazioni ricevute in RTB",
-    "",
+    "Luca Ribon",
     "1.0.0",
     "06/03/2025",
     "Francesco Fragonas",
