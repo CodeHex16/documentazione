@@ -245,7 +245,7 @@ Più nello specifico questa attività si suddividerà in:
 ==== Codifica e Testing
 In questa attività i Programmatori traducono l'output della Progettazione in #gloss[codice sorgente], in modo da integrare ogni unità prevista dall'architettura.
 Inoltre ogni unità sarà documentata e testata per garantire che soddisfi i requisiti definiti in fase di analisi e progettazione.
-Nello specifico la documentazione dovrà prevedere la documentazione dedicata all'utente finale e quella dedicata al manutentore. Inoltre nella documentazione verranno integrati anche i dettagli realtivi al testing eseguito sulle singole unità.
+Nello specifico la documentazione dovrà prevedere la documentazione dedicata all'utente finale e quella dedicata al manutentore. Inoltre nella documentazione verranno integrati anche i dettagli relativi al testing eseguito sulle singole unità.
 
 === Strumenti usati
 - *VS Code*: per la scrittura del codice;
@@ -297,7 +297,7 @@ La seconda pagina riguarda il registro modifiche il cui contenuto è organizzato
 - *Versione*: Indica il numero della versione del documento, seguendo il formato definito nella sezione @Versionamento["Versionamento"];
 - *Data*: Data della versione in cui è redatto il documento;
 - *Autore*: Autore di quella versione del documento, cioè il membro del gruppo che ha apportato le modifiche;\
-- *Cambiamenti*: I cambiamenti pricipali di quella versione del documento;\
+- *Cambiamenti*: I cambiamenti principali di quella versione del documento;\
 - *Verificatore*: Membro del gruppo che ha verificato il documento per quella versione;
 
 ==== Indice
@@ -337,7 +337,7 @@ Per la composizione tipografica dei documenti si è deciso di usare #gloss[Typst
 - Semplicità degli strumenti utilizzati per la stesura;
 - Sintassi semplice;
 - Compilazione immediata;
-Grazie a Typst si riesce facilmente a creare e mantenere un documento non lasciando il lavoro di controllo grafico al gruppo, infatti si possono scrivere i vari tipi di documenti partendo dai template che si possono trovare nella repository #link("https://github.com/CodeHex16/documentazione")[#underline[*documentazione*]] nella cartella _template_.
+Grazie a Typst si riesce facilmente a creare e mantenere un documento non lasciando il lavoro di controllo grafico al gruppo, infatti si possono scrivere i vari tipi di documenti partendo dai template che si possono trovare nella repository #link("https://github.com/CodeHex16/documentazione/tree/main/template")[#underline[*documentazione*]].
 
 === Strumenti
 - *VS Code*: Editor di testo usato per scrivere i documenti;
@@ -375,17 +375,8 @@ Nel branch main si possono trovare diverse cartelle che servono per organizzare 
 La sincronizzazione avviene tramite repository condivise su #link("https://github.com/CodeHex16/")[github] in cui ogni attività da svolgere è tracciata da una issue con il/i membro/i assegnato/i a tale issue così da sapere sempre chi la segue, o l'ha seguita.
 ==== Branch
 // TODO: branch riguardanti il codice, quando sarà ora
-Per gestire al meglio le varie issue e la documentazione si è deciso di creare dei branch appositi per ogni documento importante come:
-- *Norme di Progetto*;
-- *Piano di Progetto*;
-- *Analisi dei Requisiti*;
-- *Piano di Qualifica*;
-- *Manuale Utente*;
-- *Manuale Sviluppatore*;
-- *Specifica tecnica*; 
-- *Glossario*;
-Inoltre, se più membri del gruppo lavorano allo stesso documento allora viene creato un branch per ogni membro con nome il nome del documento/attività e di chi lo sta svolgendo.
-Quindi in generale la sintassi del nome di un branch è la seguente: *[NomeDocumento]-[Nome-Membro]-[Sprint]*.
+Per gestire al meglio le varie issue e la documentazione si è deciso di creare dei branch ogni volta che un membro svolge una o un insieme di attività correlate tra di loro.
+Quindi in generale la sintassi del nome di un branch è la seguente: *[NomeDocumento/Attività]-[NomeMembro]-[Sprint]*.
 Una volta finito il lavoro da parte di tutti i membri che operano su quel documento, questo viene verificato (tramite #gloss[pull request]) e viene eseguito il merge sul branch main, mentre i branch ausiliari vengono eliminati appena si ha la sicurezza che questi non sono più necessari.\
 Altri branch degni di nota sono:
 - *diario-di-bordo*: Utilizzato per inserire i diari di bordo nel repository;
@@ -411,7 +402,7 @@ A questo punto i verificatori incaricati del sprint corrente (vengono create del
 In generale, le pull request vengono effettuate quando vi è una modifica interna al repository.
 === Strumenti usati
 - *Git*: Software usato per il controllo della versione dei documenti e del codice;
-- *Github*: Servizio di hosting per progetti sotware usato dal gruppo per coordinarsi sulle operazioni di versionamento e usato come *Issue Tracking System*;
+- *Github*: Servizio di hosting per progetti software usato dal gruppo per coordinarsi sulle operazioni di versionamento e usato come *Issue Tracking System*;
 
 
 == Gestione qualità
@@ -454,10 +445,11 @@ La validazione è la verifica ultima per garantire che il prodotto sia in linea 
 Questo processo segue il processo di verifica e si sofferma su alcuni aspetti quali:
 - Il prodotto finale deve funzionare correttamente ed essere conforme con la logica di progettazione;
 - Il prodotto deve soddisfare completamente i requisiti specificati;
-- Il prodotto deve essere intuitivo e di facile compresione e utilizzo, cioè deve essere usabile;
+- Il prodotto deve essere intuitivo e di facile comprensione e utilizzo, cioè deve essere usabile;
 - Il prodotto deve essere efficace nel soddisfare le necessità del cliente;
 === Strumenti usati
 - *Github Actions*
+- *Github Pull Request*
 = Processi organizzativi
 == Gestione dei processi
 
@@ -496,7 +488,7 @@ I ruoli svolti, a rotazione, dai membri del gruppo sono:
   - Scrivere codice mantenibile che rispetti le *Norme di Progetto*;
   - Creare test per la verifica e validazione del codice;
   Il programmatore è una figura che sarà presente durante la parte di sviluppo del progetto.
-- *Verificatore*: Ha il compito pricipale di controllare e validare la documentazione e il codice prodotto, in particolare deve:
+- *Verificatore*: Ha il compito principale di controllare e validare la documentazione e il codice prodotto, in particolare deve:
   - Controllare ogni documento a lui assegnato, verificarlo e in caso correggerlo o notificare il redattore, specificare cosa non è corretto e richiederne la correzione;
   - Controllare che tutto ciò che viene prodotto rispetti le *Norme di Progetto*;
   Il Verificatore è una figura che sarà presente durante tutto il progetto.
