@@ -132,10 +132,10 @@ Il processo di fornitura è finalizzato a garantire la realizzazione di un prodo
 Il processo di fornitura prevede varie attività:
 - *Analisi*: attività in cui il gruppo analizza le richieste e le aspettative del proponente considerando contemporaneamente i vincoli di vario genere a cui è sottoposto il team stesso(vincoli temporali, di organizzazione ...). Questa attività culmina con l'individuazione dei vari requisiti da parte del gruppo che vengono inseriti nel documento *Analisi dei Requisiti*;
 - *Confronto*: attività in cui il gruppo e il proponente si incontrano per discutere e decidere definitivamente (eccetto casi particolari) i requisiti del prodotto finale;
-- *Progettazione*: ;
-- *Realizzazione*: ;
-- *Verifica e Revisione*: ;
-- *Completamento*: ;
+- *Progettazione*: attività in cui il gruppo studia e definisce l'architettura alla base del progetto;
+- *Realizzazione*: attività in cui il gruppo realizza ciò che è stato definito durante l'attività di progettazione;
+- *Verifica e Revisione*: attività in cui il gruppo controlla e revisiona il lavoro svolto verificando principalmente che sia stato raggiunto lo standard di qualità previsto e che tutte le funzionalità del prodotto siano pronte e funzionanti;
+- *Completamento*: attività in cui il gruppo presenta e consegna il lavoro svolto;
 
 === Rapporti con il proponente
 Il gruppo CodeHex16 manterrà un dialogo attivo e regolare con il Proponente per tutta la durata del progetto didattico, con l'obiettivo di raccogliere il maggior numero possibile di #gloss[Feedback] sulla correttezza e qualità del lavoro svolto. La comunicazione si articolerà in due modalità principali:
