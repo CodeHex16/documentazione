@@ -247,7 +247,7 @@ Nello specifico la documentazione dovrà prevedere la documentazione dedicata al
 
 === Strumenti usati
 - *VS Code*: per la scrittura del codice;
-- *Draw.io*: per elaborare i diagrammi UML degli use case individuati durante la fase di analisi dei requisiti;
+- *Draw.io*: per elaborare i diagrammi #gloss[UML] degli use case individuati durante la fase di analisi dei requisiti;
 
 = Processi di supporto
 == Documentazione
@@ -312,7 +312,7 @@ Verranno prodotti i seguenti documenti:
 - *Piano di Qualifica*;
 - *Manuale Utente*;
 - *Manuale Sviluppatore*;
-- *Specifica tecnica*; 
+- *#gloss[Specifica tecnica]*; 
 - *Glossario*;
 - *Verbali esterni*;
 - *Verbali interni*;
