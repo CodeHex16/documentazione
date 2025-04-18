@@ -33,6 +33,7 @@ documentazione/
 |        └── 📁 source
 |        └── 📄 *.pdf
 ├── 📁 3 - PB
+|  ├── 📁 imgs
 |  ├── 📁 presentazioni
 |  ├── 📁 source
 |  ├── 📄 *.pdf

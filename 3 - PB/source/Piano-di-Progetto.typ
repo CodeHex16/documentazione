@@ -28,11 +28,16 @@
   sommario: [Piano di Progetto],
 
   versioni: (
-    "1.1.0",
-    "07/04/2025",
+	  "1.2.0",
+    "04/04/2025",
+    "Luca Rossi",
+    "Aggiunto Sprint 10",
     "Luca Ribon",
-    "Aggiunto Sprint 8, resoconto RTB e correzioni finali",
-    "Matteo Bazzan",
+    "1.1.0",
+    "04/04/2025",
+    "Luca Rossi",
+    "Aggiunto Sprint 9 e parte della retrospettiva PdP a seguito di RTB",
+    "Luca Ribon",
     "1.0.0",
     "06/03/2025",
     "Luca Ribon",
@@ -139,15 +144,15 @@ Secondo lo standard ISO/IEC 31000:2009, la gestione dei rischi si articola in ci
   fill: (x, y) => if y == 0 { luma(180) } else if (y == 2 or y == 4) { luma(230) },
   table.header(table.cell(colspan: 2)[*Comunicazione inefficace*]),
   [*Descrizione*],
-  [Una comunicazione scarsa o inefficace tra i membri del team può portare a fraintendimenti, errori e rallentamenti nei tempi di esecuzione],
+  [Una comunicazione scarsa o inefficace tra i membri del team può portare a fraintendimenti, errori e rallentamenti nei tempi di esecuzione.],
 
   [*Probabilità*], [Alta],
   [*Pericolosità*], [Alta],
   [*Rilevamento*],
-  [Monitoraggio della qualità e frequenza delle riunioni di aggiornamento, analisi dei #gloss[feedback], misurazione delle performance del team],
+  [Monitoraggio della qualità e frequenza delle riunioni di aggiornamento, analisi dei #gloss[feedback], misurazione delle performance del team.],
 
   [*Piano di contingenza*],
-  [Implementare strumenti di comunicazione efficaci (#gloss[GitHub], #gloss[Telegram]), riunioni regolari di aggiornamento, definire chiaramente i canali di comunicazione],
+  [Implementare strumenti di comunicazione efficaci (#gloss[GitHub], #gloss[Telegram]), riunioni regolari di aggiornamento, definire chiaramente i canali di comunicazione.],
 )
 #table(
   columns: (1fr, 2fr),
@@ -156,32 +161,50 @@ Secondo lo standard ISO/IEC 31000:2009, la gestione dei rischi si articola in ci
   fill: (x, y) => if y == 0 { luma(180) } else if (y == 2 or y == 4) { luma(230) },
   table.header(table.cell(colspan: 2)[*Imprecisioni nella pianificazione delle attività*]),
   [*Descrizione*],
-  [Errori nella pianificazione possono derivare da scarsa comprensione dei requisiti, stime errate di risorse o tempi, o inesperienza del team],
+  [Errori nella pianificazione possono derivare da scarsa comprensione dei requisiti, stime errate di risorse o tempi, o inesperienza del team.],
 
   [*Probabilità*], [Alta],
   [*Pericolosità*], [Alta],
   [*Rilevamento*],
-  [Confronto periodico con il Piano di Progetto e monitoraggio delle attività tramite strumenti come board su GitHub. Ritardi costanti sono segnali chiave],
+  [Confronto periodico con il Piano di Progetto e monitoraggio delle attività tramite strumenti come board su GitHub. Ritardi costanti sono segnali chiave.],
 
   [*Piano di contingenza*],
-  [Revisionare il Piano di Progetto per aggiornare tempistiche e risorse. In caso di difficoltà, il Responsabile riassegna risorse o posticipa attività],
+  [Revisionare il Piano di Progetto per aggiornare tempistiche e risorse. In caso di difficoltà, il Responsabile riassegna risorse o posticipa attività.],
 )
+#table(
+  columns: (1fr, 2fr),
+  inset: 8pt,
+  align: (x, y) => if y > 0 { left } else { center + horizon },
+  fill: (x, y) => if y == 0 { luma(180) } else if (y == 2 or y == 4) { luma(230) },
+  table.header(table.cell(colspan: 2)[*Impegni personali e universitari*]),
+  [*Descrizione*],
+  [Gli impegni accademici o personali dei membri del team possono interferire con il rispetto delle scadenze del progetto.],
+
+  [*Probabilità*], [Alta],
+  [*Pericolosità*], [Media],
+  [*Rilevamento*],
+  [Monitoraggio delle scadenze tramite riunioni regolari e verifica delle disponibilità segnalate su un calendario condiviso in Google Fogli.],
+
+  [*Piano di contingenza*],
+  [Concordare una pianificazione flessibile basata sulle disponibilità indicate. In caso di necessità, ridistribuire le attività o posticipare #gloss[task] meno prioritarie.],
+)
+// Esempio valido (forse?) di aggiornamento dei rischi
 #table(
   columns: (1fr, 2fr),
   inset: 8pt,
   align: (x, y) => if (y > 0) { left } else { center + horizon },
   fill: (x, y) => if y == 0 { luma(180) } else if (y == 2 or y == 4) { luma(230) },
-  table.header(table.cell(colspan: 2)[*Impegni personali e universitari*]),
+  table.header(table.cell(colspan: 2)[*Difficoltà o dubbi nella comprensione delle indicazioni di attori esterni*]),
   [*Descrizione*],
-  [Gli impegni accademici o personali dei membri del team possono interferire con il rispetto delle scadenze del progetto],
+  [Difficoltà o dubbi nella comprensione delle indicazioni fornite da proponente o professori possono portare a errori o dubbi che rallentano il progresso del progetto.],
 
-  [*Probabilità*], [Alta],
-  [*Pericolosità*], [Media],
+  [*Probabilità*], [Media],
+  [*Pericolosità*], [Alta],
   [*Rilevamento*],
-  [Monitoraggio delle scadenze tramite #gloss[meeting] regolari e verifica delle disponibilità segnalate su un calendario condiviso in Google Fogli],
+  [Una volta ricevute delle indicazioni il gruppo si riunisce per discuterle e programmare le attività derivate dall'analisi delle indicazioni stesse; in questo modo il gruppo ha modo di individuare eventuali dubbi o difficoltà e, se possibile, di chiarirli.],
 
   [*Piano di contingenza*],
-  [Concordare una pianificazione flessibile basata sulle disponibilità indicate. In caso di necessità, ridistribuire le attività o posticipare #gloss[task] meno prioritarie],
+  [Nel caso i cui difficoltà o dubbi persistessero, il gruppo contatterà chi ha fornito tali indicazioni per chiarire i punti poco chiari.],
 )
 
 == Rischi tecnici
@@ -226,14 +249,15 @@ Secondo lo standard ISO/IEC 31000:2009, la gestione dei rischi si articola in ci
   fill: (x, y) => if y == 0 { luma(180) } else if (y == 2 or y == 4) { luma(230) },
   table.header(table.cell(colspan: 2)[*Cambiamenti dei requisiti*]),
   [*Descrizione*],
-  [Cambiamenti imprevisti richiesti dall'azienda #gloss[proponente] o da nuove esigenze emerse durante il progetto],
+  [Cambiamenti imprevisti richiesti dall'azienda #gloss[proponente] o da nuove esigenze emerse durante il progetto.],
 
   [*Probabilità*], [Media],
   [*Pericolosità*], [Media],
-  [*Rilevamento*], [Segnalazioni da parte del cliente o analisi delle modifiche richieste rispetto al piano iniziale],
+  [*Rilevamento*], [Segnalazioni da parte del cliente o analisi delle modifiche richieste rispetto al piano iniziale.],
   [*Piano di contingenza*],
-  [Effettuare una buona analisi iniziale dei requisiti e mantenere un dialogo costante con l'azienda proponente, cercando di prevedere modifiche potenziali e valutare il loro impatto in anticipo],
+  [Effettuare una buona analisi iniziale dei requisiti e mantenere un dialogo costante con l'azienda proponente, cercando di prevedere modifiche potenziali e valutare il loro impatto in anticipo.],
 )
+
 #table(
   columns: (1fr, 2fr),
   inset: 8pt,
@@ -241,15 +265,15 @@ Secondo lo standard ISO/IEC 31000:2009, la gestione dei rischi si articola in ci
   fill: (x, y) => if y == 0 { luma(180) } else if (y == 2 or y == 4) { luma(230) },
   table.header(table.cell(colspan: 2)[*Errori nella progettazione dell'architettura*]),
   [*Descrizione*],
-  [Una progettazione inadeguata può compromettere scalabilità e performance, rendendo difficile la gestione del sistema],
+  [Una progettazione inadeguata può compromettere scalabilità e performance, rendendo difficile la gestione del sistema.],
 
   [*Probabilità*], [Media],
   [*Pericolosità*], [Alta],
   [*Rilevamento*],
-  [Monitoraggio continuo delle prestazioni tramite test di carico, benchmark e analisi delle aree critiche per identificare potenziali problemi di performance o scalabilità],
+  [Monitoraggio continuo delle prestazioni tramite test di carico, benchmark e analisi delle aree critiche per identificare potenziali problemi di performance o scalabilità.],
 
   [*Piano di contingenza*],
-  [Revisione dell'architettura prima dello sviluppo avanzato, con correzioni tempestive in caso di problemi],
+  [Revisione dell'architettura prima dello sviluppo avanzato, con correzioni tempestive in caso di problemi.],
 )
 
 = Preventivo
@@ -329,6 +353,7 @@ Le seguenti tabelle rappresentano un resoconto delle ore svolte dal gruppo con i
       [*Totale Ruolo*],
       [#text(maroon)[*Costo attuale*]],
     ),
+
     "Responsabile", "30", "63", [#text(maroon)[21,5]], "1890", [#text(maroon)[1245]],
     "Amministratore", "20", "70", [#text(maroon)[39]], "1400", [#text(maroon)[620]],
     "Analista", "25", "75", [#text(maroon)[6,25]], "1875", [#text(maroon)[1718,75]],
@@ -343,40 +368,47 @@ Le seguenti tabelle rappresentano un resoconto delle ore svolte dal gruppo con i
 )
 
 #figure(
-table(
-  columns: (2fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr),
-  inset: 8pt,
-  align: (x, y) => if (x == 0 and y > 0) { left } else { center + horizon },
-  fill: (x, y) => if y == 0 or x == 7 { luma(230) },
-  table.header(
-    [*Membro*],
-    [*Resp.*],
-    [*Amm.*],
-    [*Anal.*],
-    [*Proget.*],
-    [*Prog.*],
-    [*Verif.*],
-    [*Totale*],
-  ),
+  table(
+    columns: (2fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr),
+    inset: 8pt,
+    align: (x, y) => if (x == 0 and y > 0) { left } else { center + horizon },
+    fill: (x, y) => if y == 0 or x == 7 { luma(230) },
+    table.header(
+      [*Membro*],
+      [*Resp.*],
+      [*Amm.*],
+      [*Anal.*],
+      [*Proget.*],
+      [*Prog.*],
+      [*Verif.*],
+      [*Totale*],
+    ),
 
-  "Ribon", "7,25", "8", "31,25", "0", "3,25", "9,4", "59,15",
-  "Bazzan", "2", "1", "5", "3,5", "26,5", "8,45", "46,45",
-  "Fragonas", "11", "8", "0", "0", "17", "6,25", "42,25",
-  "Magnelli", "8,75", "11,5", "8,5", "0", "0", "8,5", "37,25",
-  "Sabbadin", "3", "0", "22", "0", "0", "10,5", "35,5",
-  "Rossi", "9,5", "1", "2", "0", "0", "5", "17,5",
-  "Zhuo", "0", "1,5", "0", "0", "9", "7,05", "17,55",
-),
-caption: [
-  Ore per ciascun membro del gruppo, suddivise per ruolo, aggiornate al termine del periodo RTB
-],
+    "Ribon", "7,25", "8", "31,25", "0", "3,25", "9,4", "59,15",
+    "Bazzan", "2", "1", "5", "3,5", "26,5", "8,45", "46,45",
+    "Fragonas", "11", "8", "0", "0", "17", "6,25", "42,25",
+    "Magnelli", "8,75", "11,5", "8,5", "0", "0", "8,5", "37,25",
+    "Sabbadin", "3", "0", "22", "0", "0", "10,5", "35,5",
+    "Rossi", "9,5", "1", "2", "0", "0", "5", "17,5",
+    "Zhuo", "0", "1,5", "0", "0", "9", "7,05", "17,55",
+  ),
+  caption: [
+    Ore per ciascun membro del gruppo, suddivise per ruolo, aggiornate al termine del periodo RTB
+  ],
 )
-Dall'analisi della retrospettiva del periodo RTB il gruppo ha notato una distribuzione disomogenea delle ore svolte dai singoli individui relativamente ai diversi ruoli.\
-La motivazione principale di questa disomogeneità è stata la scelta di assegnare le attività in base alle competenze, in modo da garantire un'efficace gestione delle risorse e una maggiore efficienza nel lavoro. \
-Comprendiamo, però, che il modo corretto di ovviare all'inesperienza dei singoli membri è quello di comunicare e diffondere le conoscenze tra i membri del gruppo, per questo nel prossimo periodo il gruppo si impegnerà maggiormente nel fornire feedback e spiegazioni in modo reciproco. Inoltre ogni membro del gruppo si impegnerà ad approfondire autonomamente le tecnologie e le competenze necessarie per il progetto. 
+
+Dall'analisi della retrospettiva del periodo RTB, il gruppo ha rilevato che l'assegnazione delle attività in base alle competenze ha portato a risultati rapidi, ma ha anche generato una disomogeneità nelle ore svolte e nella distribuzione dei ruoli, rallentando la crescita come gruppo.
+
+La mancanza di una leadership solida e la scarsa diffusione delle competenze hanno reso il team dipendente da pochi membri esperti, con conseguenti colli di bottiglia in momenti critici. La visione complessiva del lavoro, inoltre, non è sempre stata chiara a tutti i componenti.
+
+Per affrontare queste criticità, il gruppo ha deciso di attuare le seguenti soluzioni:
+- dedicare momenti di lavoro condiviso sulla stessa issue, così da favorire la coesione e il passaggio di conoscenze, compatibilmente con gli impegni individuali;
+- organizzare sessioni periodiche di affiancamento tra membri esperti e meno esperti, al fine di colmare i gap e distribuire meglio il carico.
+
+Queste misure richiederanno uno sforzo aggiuntivo nel breve periodo, ma nel medio-lungo termine dovrebbero ridurre i colli di bottiglia e migliorare la resilienza del gruppo. L'obiettivo è una maggiore omogeneità nelle competenze e una distribuzione più equilibrata dei compiti, così da prevenire ritardi futuri e aumentare l'efficienza complessiva del lavoro.
 
 === Aggiornamento preventivo
-Analizzando la retrospettiva del periodo RTB il gruppo ha deciso di rivedere il preventivo iniziale senza però apportare modifiche ad ore e costi totali. \ 
+Analizzando la retrospettiva del periodo RTB il gruppo ha deciso di rivedere il preventivo iniziale senza però apportare modifiche ad ore e costi totali. \
 Infatti le modifiche apportate riguardano solo una riorganizzazione delle ore tra i vari ruoli; nella tabella seguente sono riportate le ore e i costi aggiornati a seguito della riorganizzazione e nella colonna "Variazione ore" vengono mostrate le ore aggiunte o rimosse al preventivo iniziale:
 
 #figure(
@@ -393,6 +425,7 @@ Infatti le modifiche apportate riguardano solo una riorganizzazione delle ore tr
       [#text(maroon)[*Ora/Ruolo Rimanenti*]],
       [*Totale ruolo*],
     ),
+
     "Responsabile", "30", "66", [#text(maroon)[+3]], [#text(maroon)[24,5]], [#text(maroon)[1980]],
     "Amministratore", "20", "61", [#text(maroon)[-9]], [#text(maroon)[30]], [#text(maroon)[1220]],
     "Analista", "25", "84", [#text(maroon)[+9]], [#text(maroon)[15,25]], [#text(maroon)[2100]],
@@ -407,7 +440,7 @@ Infatti le modifiche apportate riguardano solo una riorganizzazione delle ore tr
 )
 La necessità di riorganizzare la distribuzione ore è stata causata da una mancanza di esperienza e competenze nella pianificazione di progetto, che ha portato a stimare in modo errato le ore necessarie per alcune delle attività svolte nel periodo di RTB.\
 Di seguito sono riportate le motivazioni che hanno guidato questa riorganizzazione:
-- per il ruolo di *Responsabile* abbiamo preferito aggiungere 3 ore che, seppur poche, ci permetteranno di avere più margine di ore lavorative in caso di necessità; 
+- per il ruolo di *Responsabile* abbiamo preferito aggiungere 3 ore che, seppur poche, ci permetteranno di avere più margine di ore lavorative in caso di necessità;
 - per il ruolo di *Amministratore* sono state rimosse 9 ore dato che buona parte della configurazione dell'ambiente di lavoro è già stata svolta; prevediamo che le ore rimanenti bastino per aggiornare i documenti associati a questo ruolo e per compiere eventuali attività di configurazione, legate allo sviluppo, che sorgeranno in futuro;
 - per il ruolo di *Analista* abbiamo ritenuto fondamentale aggiungere 9 ore per avere un buon margine in caso fosse necessario rivedere o aggiornare l'analisi dei requisiti;
 - per il ruolo di *Progettista* sono state rimosse 9 ore dato che abbiamo ritenuto le ore rimanenti eccessive per il ruolo in questione; questa sovrastima è stata causata da un errore, iniziale, di comprensione delle attività associate a questo ruolo;
@@ -601,7 +634,7 @@ In questo sprint abbiamo anche cercato di anticipare il calo di produttività da
 - *Stesura Piano di Progetto*: Continuazione della stesura del documento concentrandosi nelle sezioni pianificazione del lavoro e periodi di sviluppo ;
 - *Stesura Piano di Qualifica*: Inizio stesura del documento e in particolare iniziando a definire le metriche di qualità;
 - *Aggiornamento Glossario*: Revisione e aggiornamento dei termini tecnici sulla base del lavoro svolto nello Sprint 5;
-- *Continuazione definizione Use Case dell’interfaccia cliente e fornitore*: Proseguimento nella definizione degli use case del sistema, con particolare attenzione alle interfacce cliente e fornitore;
+- *Continuazione definizione Use Case dell'interfaccia cliente e fornitore*: Proseguimento nella definizione degli use case del sistema, con particolare attenzione alle interfacce cliente e fornitore;
 
 #pseudoheading[*Ruoli ricoperti e ore svolte*]
 
@@ -625,14 +658,14 @@ In questo sprint abbiamo anche cercato di anticipare il calo di produttività da
 Con lo *Sprint 6*, il team ha proseguito nella stesura della documentazione principale del progetto.
 Inoltre, sono stati integrati i diagrammi #gloss[UML] degli use case.
 
-Un punto chiave di questo sprint è stato l’incontro con il proponente, durante il quale il team ha verificato la completezza degli Use Case e presentato la scelta dell’LLM.
+Un punto chiave di questo sprint è stato l'incontro con il proponente, durante il quale il team ha verificato la completezza degli Use Case e presentato la scelta dell'LLM.
 
 #pseudoheading[*Attività svolte*]
 
 - *Stesura Norme di Progetto*: Continuazione della stesura del documento, con ulteriore dettaglio sulla gestione delle revisioni e degli standard adottati.
 - *Aggiornamento Glossario*: Integrazione di nuovi termini tecnici sorti durante la stesura dei documenti.
 - *Integrazione Diagrammi UML degli use case*: Aggiunta dei diagrammi per supportare la comprensione delle funzionalità chiave del sistema.
-- *Scelta dell’LLM*: Discussione e decisione definitiva sul modello linguistico da integrare nel progetto.
+- *Scelta dell'LLM*: Discussione e decisione definitiva sul modello linguistico da integrare nel progetto.
 
 #pseudoheading[*Ruoli ricoperti e ore svolte*]
 
@@ -714,8 +747,107 @@ In questo periodo il gruppo ha dovuto affrontare alcune difficoltà tecniche leg
   ],
 )
 
+=== Sprint 9
+*Intervallo temporale*: 12/03/2025 - 22/03/2025
+
+#pseudoheading[*Retrospettiva*]
+Con lo *Sprint 9* il gruppo ha completato la presentazione dell'RTB al docente, ricevendo feedback e indicazioni di miglioramento da parte del prof. Cardin.
+Questa fase ha segnato l'inizio della preparazione per la milestone PB, con particolare attenzione alla riorganizzazione della documentazione e alla progettazione dell'architettura.
+È emersa la necessità di chiarire alcuni aspetti relativi alla struttura dei documenti, gestire in modo più efficace la distinzione tra documentazione interna ed esterna, e definire strumenti per CI/CD e testing.
+Il gruppo ha mostrato capacità di adattamento, reagendo rapidamente ai cambiamenti richiesti e preparando le basi per le attività del prossimo sprint.
+
+#pseudoheading[*Attività svolte*]
+- *Presentazione RTB*: Consegna e presentazione della milestone RTB al docente.
+- *Ricezione e integrazione dei feedback*: Analisi delle osservazioni del prof. Cardin, con pianificazione delle azioni correttive.
+- *Avvio documentazione PB*: Studio e definizione della struttura dei documenti da produrre in PB.
+- *Progettazione dell'architettura*: Approfondimento della componente API e database.
+- *Studio strumenti CI/CD e testing*: Prima valutazione degli strumenti da adottare.
+- *Aggiornamento della struttura dei file*: Avvio della riorganizzazione della documentazione interna ed esterna.
+
+#pseudoheading[*Ruoli ricoperti e ore svolte*]
+
+#figure(
+  image("../imgs/sprint9-tabella.png", width: 100%),
+  caption: [
+    Suddivisione oraria per membro e ruolo.
+  ],
+)
+
+#figure(
+  image("../imgs/sprint9-grafico.png", width: 100%),
+  caption: [
+    Suddivisione oraria per ruolo con relativi costi.
+  ],
+)
+
+
+#table(
+  columns: (1fr, 1fr),
+  inset: 8pt,
+  align: (x, y) => if y > 0 { left } else { center + horizon },
+  fill: (x, y) => if y == 0 { luma(180) } else if (y == 2 or y == 4 or y == 6 or y == 8) { luma(230) },
+  table.header(table.cell(colspan: 2)[*Ore rimanenti per persona*]),
+  [*Membro*], [*Ore mancanti*],
+  [Ribon], [31.35],
+  [Bazzan], [37.55],
+  [Fragonas], [45.75],
+  [Magnelli], [54.75],
+  [Sabbadin], [48.10],
+  [Rossi], [63.50],
+  [Zhuo], [74.45],
+  [*TOTALE*], [*355.45*],
+)
+
 == Periodo PB
 Le documentazione relativa al periodo PB verrà redatta dopo il superamento della RTB.
+
+=== Sprint 10
+*Intervallo temporale*: 24/03/2025 - 31/03/2025
+
+#pseudoheading[*Retrospettiva*]
+Durante lo *Sprint 10*, il gruppo ha consolidato i progressi iniziati nella fase successiva all’RTB. Sono state svolte attività su tutti i fronti: correzione dei documenti secondo i feedback ricevuti, 
+completamento della progettazione architetturale e avvio dello sviluppo dell’interfaccia fornitore.  
+La collaborazione è risultata più efficace rispetto agli sprint precedenti, grazie a una maggiore condivisione interna e al chiarimento delle responsabilità nei vari ruoli.  
+Tuttavia, alcune attività hanno richiesto più tempo del previsto a causa della complessità dell’integrazione dei servizi e della necessità di coordinare i vari moduli in parallelo.
+
+#pseudoheading[*Attività svolte*]
+- *Correzione documentazione*: Aggiornamento di Analisi dei Requisiti, Piano di Progetto, Norme di Progetto e struttura dei verbali in seguito all’RTB.
+- *Progettazione architettura*: Completamento della progettazione per i servizi LLM, Database e Suppl-AI; iniziale integrazione tra i moduli.
+- *Implementazione interfaccia fornitore*: Avvio dello sviluppo frontend e definizione dell’interfaccia lato fornitore.
+- *Verifica struttura del Manuale Utente*: Revisione preliminare del contenuto per l’utente finale e per il fornitore.
+
+#pseudoheading[*Ruoli ricoperti e ore svolte*]
+
+#figure(
+  image("../imgs/sprint10-tabella.png", width: 100%),
+  caption: [
+    Suddivisione oraria per membro e ruolo.
+  ],
+)
+
+#figure(
+  image("../imgs/sprint10-grafico.png", width: 100%),
+  caption: [
+    Suddivisione oraria per ruolo con relativi costi.
+  ],
+)
+
+#table(
+  columns: (1fr, 1fr),
+  inset: 8pt,
+  align: (x, y) => if y > 0 { left } else { center + horizon },
+  fill: (x, y) => if y == 0 { luma(180) } else if (y == 2 or y == 4 or y == 6 or y == 8) { luma(230) },
+  table.header(table.cell(colspan: 2)[*Ore rimanenti per persona*]),
+  [*Membro*], [*Ore mancanti*],
+  [Ribon], [10.6],
+  [Bazzan], [21.55],
+  [Fragonas], [34.75],
+  [Magnelli], [38.75],
+  [Sabbadin], [43.1],
+  [Rossi], [49.5],
+  [Zhuo], [59.45],
+  [*TOTALE*], [*257.7*],
+)
 
 // == Periodo CA
 // Le documentazione relativa al periodo PB verrà redatta dopo il superamento della RTB.
