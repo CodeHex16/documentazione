@@ -21,7 +21,7 @@
   "06/04/2025",
   "Filippo Sabbadin",
   "Aggiunta sezione PB nel cruscotto di valutazione delle metriche",
-  "",
+  "Francesco Fragonas",
   "1.0.0",
   "05/03/2025",
   "Luca Ribon",
@@ -838,7 +838,7 @@ errori presenti erano 0, in particolare si è raggiunto un ottimo risultato negl
 
 === PB
 Come notato nella sezione automiglioramento, è stato difficile avere un formato dei documenti omogeneo e questo ha
-portato a un aumento di diversi errori. Questo è stato risolto con l'uso di un correttore ortografico automatico una
+portato a un aumento di diversi errori. Questo è stato risolto con l'uso di un correttore ortografico automatico e una
 maggiore comunicazione tra i membri del gruppo.
 
 == MPC-Indice Gulpease
@@ -904,11 +904,11 @@ dove "TIPO" sarà:
     "OPI-01",
     "Tutto il progetto",
     "È risultato molto difficile organizzare incontri dove fossero presenti tutti i membri del gruppo, per questioni di lavoro, orari, impegni personali ed esami durante la sessione invernale",
-    "Il gruppo ha deciso di organizzare incontri basandosi sulle disponibilità dichiarate da ogni membro su un Foglio Google dedicato, nel caso alcuni membri non erano presenti, questi venivano informati sulle decisioni prese durante un incontro tramite verbali ed eventualmente dei messaggi su Telegram",
+    "Il gruppo ha deciso di organizzare incontri basandosi sulle disponibilità dichiarate da ogni membro su un Foglio Google dedicato. Nel caso in cui alcuni membri non fossero presenti, venivano informati sulle decisioni prese durante l’incontro tramite un verbale e, se necessario, anche attraverso messaggi su Telegram",
     "OPI-02",
     "Tutto il progetto",
     "È risultato difficile cercare di rimanere entro i limiti di tempo e budget assegnati ad ogni ruolo",
-    "Per organizzarsi al meglio, il gruppo ha deciso di tenere una tabella su un Foglio Google che tiene conto delle ore individuali e totali di ogni ruolo",
+    "Per organizzarsi al meglio, il gruppo ha deciso di realizzare una tabella su un Foglio Google che tiene conto delle ore individuali e totali di ogni ruolo",
     "OPI-03",
     "Tutto il progetto",
     "È risultato difficile lavorare sugli stessi documenti nello stesso periodo di tempo, senza che più persone scrivessero nella stessa sezione, sovrascrivendo il lavoro di altri",
