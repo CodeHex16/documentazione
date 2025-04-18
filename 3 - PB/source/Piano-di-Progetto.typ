@@ -28,7 +28,7 @@
   sommario: [Piano di Progetto],
 
   versioni: (
-	"1.2.0",
+	  "1.2.0",
     "04/04/2025",
     "Luca Rossi",
     "Aggiunto Sprint 10",
