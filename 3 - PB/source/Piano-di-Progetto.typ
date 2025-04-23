@@ -28,11 +28,12 @@
   sommario: [Piano di Progetto],
 
   versioni: (
-	"1.3.0",
+    "1.3.0",
     "18/04/2025",
     "Luca Rossi",
     "Aggiornamento della retrospettiva",
-	"1.2.0",
+    "Francesco Fragonas",
+    "1.2.0",
     "04/04/2025",
     "Luca Rossi",
     "Aggiunto Sprint 10",
