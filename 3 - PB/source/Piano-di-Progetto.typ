@@ -913,7 +913,7 @@ Tuttavia, alcune attività hanno richiesto più tempo del previsto a causa della
 *Intervallo temporale*: 01/04/2025 - 07/04/2025
 
 #pseudoheading[*Retrospettiva*]
-Durante lo *Sprint 11*, il gruppo ha proseguito il lavoro di consolidamento avviato dopo l'RTB. Sono state completate diverse attività fondamentali: correzioni importanti ai documenti principali (Analisi dei Requisiti, Piano di Progetto, Norme di Progetto), implementazione di funzionalità core come l'autenticazione con ruoli tramite token, il miglioramento del backend LLM e l'ampliamento del database.  
+Durante lo *Sprint 11*, il gruppo ha proseguito il lavoro di consolidamento avviato dopo l'RTB. Sono state completate diverse attività fondamentali: correzioni importanti ai documenti principali (Analisi dei Requisiti, Piano di Progetto, Norme di Progetto), implementazione di funzionalità core come l'autenticazione con ruoli tramite #gloss[token], il miglioramento del backend LLM e l'ampliamento del database.  
 È stato inoltre svolto un incontro esterno con il prof. Cardin, durante il quale sono stati chiariti alcuni dubbi relativi all'Analisi dei Requisiti e alla rappresentazione dell'architettura frontend.  
 Il gruppo ha avviato anche lo studio della configurazione della pipeline CI/CD, dimostrando una crescente attenzione alla qualità e all'integrazione continua.  
 La collaborazione interna si è ulteriormente rafforzata, sebbene permangano alcune difficoltà nella gestione delle attività più complesse e nell'integrazione tra moduli diversi.
