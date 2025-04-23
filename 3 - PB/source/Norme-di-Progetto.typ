@@ -660,218 +660,243 @@ In particolare vengono misurate:
 - *Stabilità*: capacità del prodotto di continuare a funzionare senza gravi problemi a seguito di modifiche sbagliate;
 = Metriche di qualità
 == Nomenclatura delle metriche
+- *MPC*: sigla per le metriche per la qualità dei processi;
+- *MPD*: sigla per le metriche per la qualità del prodotto;
 == Metriche per i processi
 === Processi primari
 ==== Fornitura
-- *Budget At Completion(BAC)*:
-  - *Definizione*: costo totale del progetto preventivato per il suo completamento;;
-- *Estimated Cost(EC)*:
-  - *Definizione*: costo stimato calcolando le ore necessarie per lo sviluppo del progetto;
-- *Completion Cost(CC)*:
-  - *Definizione*:  costo finale raggiunto alla fine del progetto. Idealmente non deve superare quello stimato durante le fasi inizi;
-  - *Valore ottimo*: \u{2264}100% EC;
-  - *Valore accettabile*: \u{2264}105% EC;
-- *Estimate At Completion(EAC)*:
-  - *Definizione*: stima del costo totale del progetto al momento del suo completamento, considerando i costi sostenuti fino ad ora e una stima aggiornata dei costi rimanenti;
-  - *Come calcolarlo*: ;
-  - *Valore ottimo*: ;
-  - *Valore accettabile*: ;
-- *Estimate To Complete(ETC)*:
-  - *Definizione*: ;
-  - *Come calcolarlo*: ;
-  - *Valore ottimo*: ;
-  - *Valore accettabile*: ;
-- *Earned Value(EV)*:
-  - *Definizione*:  valore ottenuto fino a quel dato momento, si basa sui progressi del completamento delle attività;
-  - *Come calcolarlo*: ;
-  - *Valore ottimo*: ;
-  - *Valore accettabile*: ;
-- *Planned Value(PV)*:
-  - *Definizione*: ;
-  - *Come calcolarlo*: ;
-  - *Valore ottimo*: ;
-  - *Valore accettabile*: ;
-- *Actual Cost(AC)*:
-  - *Definizione*: ;
-  - *Come calcolarlo*: ;
-  - *Valore ottimo*: ;
-  - *Valore accettabile*: ;
-- *Cost Performance Index(CPI)*:
-  - *Definizione*: ;
-  - *Come calcolarlo*: ;
-  - *Valore ottimo*: ;
-  - *Valore accettabile*: ;
-- *Schedule Performance Index(SPI)*:
-   - *Definizione*: ;
-  - *Come calcolarlo*: ;
-  - *Valore ottimo*: ;
-  - *Valore accettabile*: ;
-- *Schedule Variance(SV)*:
-  - *Definizione*: ;
-  - *Come calcolarlo*: ;
-  - *Valore ottimo*: ;
-  - *Valore accettabile*: ;
-- *Cost Variance(CV)*:
-  - *Definizione*: ;
-  - *Come calcolarlo*: ;
-  - *Valore ottimo*: ;
-  - *Valore accettabile*: ;
+===== Budget At Completion(MPC-BAC)
+- *Codice*: MPC-BAC;
+- *Descrizione*: costo totale del progetto preventivato per il suo completamento;
+===== Estimated Cost(MPC-EC)
+- *Descrizione*: costo stimato calcolando le ore necessarie per lo sviluppo del progetto;
+===== Completion Cost(MPC-CC)
+- *Descrizione*:  costo finale raggiunto alla fine del progetto. Idealmente non deve superare quello stimato durante le fasi iniziali;
+- *Valore ottimo*: \u{2264} 100% EC;
+- *Valore accettabile*: \u{2264} 105% EC;
+===== Actual Cost(MPC-AC)
+- *Descrizione*: budget utilizzato fino a quel determinato momento. 
+Indicatore utile per monitorare l’andamento del progetto e valutare se i costi rispettano le aspettative;
+- *Valore ottimo*: \u{2264} EAC;
+- *Valore accettabile*: \u{2265} 0%;
+===== Earned Value(MPC-EV)
+- *Descrizione*: valore ottenuto fino a quel dato momento, si basa sui progressi del completamento delle attività. 
+In particolare viene quantificato il valore del lavoro effettivamente completato rispetto al budget complessivo.
+Questo indicatore permette di monitorare e valutare l'andamento del progetto, offrendo una misura concreta dello stato di avanzamento rispetto a quanto pianificato;
+- *Come calcolarlo*: $"Earned Value" = "Budget at Completion" / "% lavoro completato"$;
+- *Valore ottimo*: \u{2264} EAC;
+- *Valore accettabile*: \u{2265} 0;
+===== Planned Value(MPC-PV)
+- *Descrizione*: rappresenta il valore del lavoro che dovrebbe essere completato. 
+Si basa sulla programmazione delle attività del progetto e riflette il valore del lavoro che si intende portare a termine.
+Questo indicatore fornisce una base di riferimento per confrontare il progresso reale del progetto con le aspettative;
+- *Come calcolarlo*:  $"Planned Value" = "Budget at Completion" / "% lavoro da completare"$;
+- *Valore ottimo*: \u{2264} BAC;
+- *Valore accettabile*: \u{2265} 0;
+===== Cost Performance Index(MPC-CPI)/*Da aggiungere al Piano di Qualifica*/
+- *Descrizione*:  indicatore che misura l'efficienza del costo del lavoro realizzato rispetto al costo pianificato. Il Cost Performance Index rappresenta il rapporto tra il valore del lavoro effettivamente completato e il budget utilizzato per portarlo a termine;
+- *Come calcolarlo*: $"Cost Performance Index" = "Earned Value" / "Actual Cost"$;
+- *Valore ottimo*: \u{2265} 1;
+- *Valore accettabile*: \u{2265} 0.8;
+===== Estimate At Completion(MPC-EAC)
+- *Descrizione*: stima del costo totale del progetto al momento del suo completamento, considerando i costi sostenuti fino ad ora e una stima aggiornata dei costi rimanenti;
+- *Come calcolarlo*: $"Estimate At Completion" = "Budget at Completion" / "Cost Performance Index"$;
+- *Valore ottimo*: = BAC;
+- *Valore accettabile*: \u{00B1} 5% BAC;
+===== Estimate To Complete(MPC-ETC)
+- *Descrizione*: stima del costo necessario per completare il progetto.
+- *Come calcolarlo*: Estimate To Complete = Estimate At Completion - Actual Cost;
+- *Valore ottimo*: \u{2264} EAC;
+- *Valore accettabile*: \u{2265} 0%;
+===== Schedule Performance Index(MPC-SPI)/*Da aggiungere al Piano di Qualifica*/
+- *Descrizione*: è una metrica che misura quanto il progetto sta procedendo rispetto alla sua pianificazione iniziale tramite il rapporto tra il costo preventivato del lavoro completato(EV) e il costo preventivato del lavoro ancora da svolgere(PV);
+- *Come calcolarlo*: $"Schedule Performance Index" = "Earned Value" / "Planned Value"$;
+- *Valore ottimo*: \u{2265} 1;
+- *Valore accettabile*: \u{2265} 0.8;
+===== Schedule Variance(MPC-SV)
+- *Descrizione*: varianza rispetto a quanto previsto inteso come anticipo o ritardo sui tempi delle attività svolte e da svolgere. 
+Rappresenta la differenza tra il valore del lavoro completato e il valore del lavoro pianificato.
+In pratica, misura se un progetto è in anticipo, in ritardo o in linea con la pianificazione effettuata inizialmente;
+- *Come calcolarlo*: Schedule Variance = Earned Value - Planned Value;
+- *Valore ottimo*: \u{2265} 0;
+- *Valore accettabile*: \u{2265} -10%;
+===== Cost Variance(MPC-CV)
+- *Descrizione*: valore che misura la differenza tra il budget disponibile e il quello usato effettivamente fino a quel momento. 
+Rappresenta la differenza tra il valore del lavoro completato e il budget utilizzato per completarlo.
+È un indicatore fondamentale per valutare la performance finanziaria di un progetto, rivelando se si sta spendendo più o meno di quanto previsto dal budget inizialmente preventivato. 
+- *Come calcolarlo*: Cost Variance = Earned Value - Actual Cost;
+- *Valore ottimo*: \u{2265} 0;
+- *Valore accettabile*: \u{2265} -5%;
 ==== Sviluppo
-- *Requirement Stability Index(RSI)*:
-  - *Definizione*: ;
-  - *Come calcolarlo*: ;
-  - *Valore ottimo*: ;
-  - *Valore accettabile*: ;
-- *Technical Debt Ratio(TDR)*:
-  - *Definizione*: ;
-  - *Come calcolarlo*: ;
-  - *Valore ottimo*: ;
-  - *Valore accettabile*: ;
+===== Requirement Stability Index(MPC-RSI)
+- *Descrizione*: indice di stabilità dei requisiti. 
+Indica la percentuale di requisiti che sono stati modificati rispetto al totale dei requisiti. 
+Un valore alto indica che i requisiti sono stabili e non soggetti a modifiche frequenti;
+- *Come calcolarlo*: $"Requirement Stability Index" = (("TNOR" + "NCR" + "NAR" + "NDR") / ("TNOR"))*"100"$ dove:
+  - *TNOR*: Total Number of Original Requirements = numero iniziale di requisiti;
+  - *NCR*: Number of Changed Requirements = numero di requisiti modificati ;
+  - *NAR*: Number of Added Requirements = numero di requisiti aggiunti;
+  - *NDR*: Number of Deleted Requirements = numero di requisiti cancellati;
+- *Valore ottimo*: 100%;
+- *Valore accettabile*: \u{2265} 80%;
+===== Technical Debt Ratio(MPC-TDR)
+- *Descrizione*: rapporto tra il tempo necessario per risolvere i problemi tecnici e il tempo necessario per sviluppare nuove funzionali.
+Quindi calcola quanto costa correggere e mantenere il codice, rispetto a quanto è costato inizialmente svilupparlo;
+- *Valore ottimo*: \u{2264} 5%;
+- *Valore accettabile*: \u{2264} 15%;
 === Processi di supporto
 ==== Documentazione
-- *Indice di Gulpease*:
-  - *Definizione*: ;
-  - *Come calcolarlo*: ;
-  - *Valore ottimo*: ;
-  - *Valore accettabile*: ;
-- *Correttezza ortografica*:
-  - *Definizione*: ;
-  - *Come calcolarlo*: ;
-  - *Valore ottimo*: ;
-  - *Valore accettabile*: ;
+===== Indice di Gulpease(MPC-IG)
+- *Descrizione*: Indica la complessità nella lettura di una frase o documento. 
+Considera come variabili il numero di parole, di frasi e di lettere;
+- *Come calcolarlo*: $"Indice di Gulpease" = 89+((300*"numero di frasi") - (10*"numero di lettere")) / "numero di parole" $;
+- *Valore ottimo*: \u{2265} 60;
+- *Valore accettabile*: \u{2265} 40;
+===== Correttezza ortografica(MPC-CO)
+- *Descrizione*: Indica il numero di errori ortografici presenti nella documentazione;
+- *Valore ottimo*: 0;
+- *Valore accettabile*: 3;
 ==== Gestione qualità
-- *Satisfaction of Quality Metrics(SQM)*:
-  - *Definizione*: ;
-  - *Come calcolarlo*: ;
-  - *Valore ottimo*: ;
-  - *Valore accettabile*: ;
+===== Satisfaction of Quality Metrics(MPC-SQM)
+- *Descrizione*: misura della quantità di metriche soddisfatte. 
+Più in particolare viene misurato il grado di soddisfazione dell'utente finale rispetto alla qualità di un prodotto.
+Ciò aiuta a comprendere se le aspettative del cliente sono state soddisfatte o meno, e consentono di identificare eventuali migliorie;
+- *Come calcolarlo*: $"Satisfaction of Quality Metrics" = "Numero totale di metriche soddisfatte" / "Numero totale di metriche"$;
+- *Valore ottimo*: 100%;
+- *Valore accettabile*: \u{2265} 85%;
 ==== Verifica
-- *Code Coverage(CC)*:
-  - *Definizione*: ;
-  - *Come calcolarlo*: ;
-  - *Valore ottimo*: ;
-  - *Valore accettabile*: ;
-- *Test Superati in Percentuale(TSP)*:
-  - *Definizione*: ;
-  - *Come calcolarlo*: ;
-  - *Valore ottimo*: ;
-  - *Valore accettabile*: ;
+===== Code Coverage(MPC-CC)
+- *Descrizione*: Quantità di codice eseguito durante i test.
+Viene utilizzato per valutare la qualità dei test e garantire che il codice sia stato adeguatamente testato. 
+Un alto livello indica che il codice è stato eseguito in molti contesti e scenari diversi con diverse parti di codice. 
+Quindi indica quanto codice è stato sottoposto ai test;
+- *Come calcolarlo*: $"Code Coverage" = "Linee di Codice Eseguite" / "Linee di Codice Totali" * 100$;
+- *Valore ottimo*: 100%;
+- *Valore accettabile*: \u{2265}90%;
+===== Test Superati in Percentuale(MPC-TSP)
+- *Descrizione*: Indica la proporzione di test automatizzati o manuali che sono stati eseguiti con successo rispetto al totale dei test previsti. 
+Viene espressa come una percentuale e serve a misurare quanto dell’applicazione in fase di sviluppo è stato verificato con successo tramite i test. 
+Una percentuale alta di test superati indica che il sistema è stabile e che la maggior parte delle funzionalità funzionano come previsto.
+Quindi indica quanti test sono stati superati;
+- *Come calcolarlo*: $"Test Superati in Percentuale" = "Numero di Test Superati" / "Numero Totale di Test" * 100$;
+- *Valore ottimo*: 100%;
+- *Valore accettabile*: 100%;
 === Processi organizzativi
 ==== Gestione dei processi
-- *Time Efficiency(TE)*:
-  - *Definizione*: ;
-  - *Come calcolarlo*: ;
-  - *Valore ottimo*: ;
-  - *Valore accettabile*: ;
+===== Time Efficiency(MPC-TE)
+- *Descrizione*: ;
+- *Come calcolarlo*: ;
+- *Valore ottimo*: ;
+- *Valore accettabile*: ;
 == Metriche per il prodotto
 === Funzionalità
--*Copertura Requisiti Obbligatori*:
-  - *Definizione*: ;
-  - *Come calcolarlo*: ;
-  - *Valore ottimo*: ;
-  - *Valore accettabile*: ;
--*Copertura Requisiti Opzionali*:
-  - *Definizione*: ;
-  - *Come calcolarlo*: ;
-  - *Valore ottimo*: ;
-  - *Valore accettabile*: ;
+==== Copertura Requisiti Obbligatori
+- *Descrizione*: ;
+- *Come calcolarlo*: ;
+- *Valore ottimo*: ;
+- *Valore accettabile*: ;
+==== Copertura Requisiti Opzionali
+- *Descrizione*: ;
+- *Come calcolarlo*: ;
+- *Valore ottimo*: ;
+- *Valore accettabile*: ;
 === Affidabilità
-- *Code Coverage(CC)*:
-  - *Definizione*: ;
+==== Code Coverage(CC)
+  - *Descrizione*: ;
   - *Come calcolarlo*: ;
   - *Valore ottimo*: ;
   - *Valore accettabile*: ;
 - *Branch Coverage(BC)*:
-  - *Definizione*: ;
+  - *Descrizione*: ;
   - *Come calcolarlo*: ;
   - *Valore ottimo*: ;
   - *Valore accettabile*: ;
 - *Statement Coverage(SC)*:
-  - *Definizione*: ;
+  - *Descrizione*: ;
   - *Come calcolarlo*: ;
   - *Valore ottimo*: ;
   - *Valore accettabile*: ;
 - *Failure Tolerance(FT)*:
-  - *Definizione*: ;
+  - *Descrizione*: ;
   - *Come calcolarlo*: ;
   - *Valore ottimo*: ;
   - *Valore accettabile*: ;
 - *Failure Frequency(FF)*:
-  - *Definizione*: ;
+  - *Descrizione*: ;
   - *Come calcolarlo*: ;
   - *Valore ottimo*: ;
   - *Valore accettabile*: ;
 - *Mean Time Between Failure(MTBF)*:
-  - *Definizione*: ;
+  - *Descrizione*: ;
   - *Come calcolarlo*: ;
   - *Valore ottimo*: ;
   - *Valore accettabile*: ;
 - *Disponibilità Sistema(DS)*:
-  - *Definizione*: ;
+  - *Descrizione*: ;
   - *Come calcolarlo*: ;
   - *Valore ottimo*: ;
   - *Valore accettabile*: ;
 === Usabilità
 - *Tempo di Apprendimento(TA)*:
-  - *Definizione*: ;
+  - *Descrizione*: ;
   - *Come calcolarlo*: ;
   - *Valore ottimo*: ;
   - *Valore accettabile*: ;
 - *Errori Utente/Azione(EUA)*:
-  - *Definizione*: ;
+  - *Descrizione*: ;
   - *Come calcolarlo*: ;
   - *Valore ottimo*: ;
   - *Valore accettabile*: ;
 - *Task Success Rate(TSR)*:
-  - *Definizione*: ;
+  - *Descrizione*: ;
   - *Come calcolarlo*: ;
   - *Valore ottimo*: ;
   - *Valore accettabile*: ;
 === Efficienza
 - *Tempo Risposta API(TRA)*:
-  - *Definizione*: ;
+  - *Descrizione*: ;
   - *Come calcolarlo*: ;
   - *Valore ottimo*: ;
   - *Valore accettabile*: ;
 - *Memoria Processo(MP)*:
-  - *Definizione*: ;
+  - *Descrizione*: ;
   - *Come calcolarlo*: ;
   - *Valore ottimo*: ;
   - *Valore accettabile*: ;
 - *Consumo Energetico(CE)*:
-  - *Definizione*: ;
+  - *Descrizione*: ;
   - *Come calcolarlo*: ;
   - *Valore ottimo*: ;
   - *Valore accettabile*: ;
 === Manutenibilità
 - *Complessità Ciclomatica(CC*:
-  - *Definizione*: ;
+  - *Descrizione*: ;
   - *Come calcolarlo*: ;
   - *Valore ottimo*: ;
   - *Valore accettabile*: ;
 - *Debito Tecnico(DT)*:
-  - *Definizione*: ;
+  - *Descrizione*: ;
   - *Come calcolarlo*: ;
   - *Valore ottimo*: ;
   - *Valore accettabile*: ;
 - *Code Smell Density(CSD)*:
-  - *Definizione*: ;
+  - *Descrizione*: ;
   - *Come calcolarlo*: ;
   - *Valore ottimo*: ;
   - *Valore accettabile*: ;
 - *Tempo Fix Bug(TFB)*:
-  - *Definizione*: ;
+  - *Descrizione*: ;
   - *Come calcolarlo*: ;
   - *Valore ottimo*: ;
   - *Valore accettabile*: ;
 === Sicurezza
 - *Tasso di Autenticazione Fallita*:
-  - *Definizione*: ;
+  - *Descrizione*: ;
   - *Come calcolarlo*: ;
   - *Valore ottimo*: ;
   - *Valore accettabile*: ;
 - *Crittografia Dati*:
-  - *Definizione*: ;
+  - *Descrizione*: ;
   - *Come calcolarlo*: ;
   - *Valore ottimo*: ;
   - *Valore accettabile*: ;
