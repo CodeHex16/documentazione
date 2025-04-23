@@ -38,14 +38,14 @@
 Durante la riunione del 9 Aprile 2025 sono stati discussi i risultati dello Sprint 11, partendo dalla visione dell'interfaccia amministratore e quindi del lavoro svolto sulla parte frontend.
 
 == Visione interfaccia amministratore
-All'inizio della riunione è stato visionato il lavoro svolto nella parte frontend. In particolare,nella pagina home visualizzata dall'amministratore appena avrà effettuato il login sarà presente una sezione composta da sei pulsanti con cui interagire per accedere alle seguenti pagine:
+All'inizio della riunione è stato visionato il lavoro svolto nella parte frontend. In particolare, nella pagina home visualizzata dall'amministratore appena avrà effettuato il login sarà presente una sezione composta da sei pulsanti con cui interagire per accedere alle seguenti pagine:
 - *Gestione dei Clienti*;
 - *Documenti Aziendali*;
 - *Gestione FAQ*;
 - *Statistiche*;
 - *Gestione Piattaforma*;
 
-Per quanto riguarda le pagine relative a *Gestione dei Clienti*, *Documenti Aziendali* e *Gestione FAQ* si è deciso di implementare  le funzionalità di aggiunta, modifica ed eliminazione tramite dei pop-up appositi.
+Per quanto riguarda le pagine relative a *Gestione dei Clienti*, *Documenti Aziendali* e *Gestione FAQ* si è deciso di implementare le funzionalità di aggiunta, modifica ed eliminazione tramite dei pop-up appositi.
 
 == Studio di gruppo per l’esecuzione dei servizi sui sistemi di tutti i membri
 Successivamente alla visione dell'interfaccia amministratore i vari membri del gruppo hanno provato l'applicativo sui propri dispositivi verificando che tutto funzionasse correttamente senza nessun errore particolare.
