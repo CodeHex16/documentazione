@@ -56,7 +56,7 @@ tutti i membri.
   table.header([*Membro*], [*Ruolo Sprint 10*], [*Ruolo Sprint 11*]),
   "Matteo Bazzan",
   "Analista",
-  "",
+  "Programmatore",
   "Francesco Fragonas",
   "Programmatore",
   "Verificatore",
