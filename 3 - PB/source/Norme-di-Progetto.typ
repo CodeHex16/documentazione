@@ -25,7 +25,7 @@
     "23/04/2025",
     "Gabriele Magnelli",
     "Definite le attività per le ultime sezioni e aggiunte sezioni per le metriche di qualità",
-    "",
+    "Francesco Fragonas",
     "1.1.0",
     "10/04/2025",
     "Gabriele Magnelli",
