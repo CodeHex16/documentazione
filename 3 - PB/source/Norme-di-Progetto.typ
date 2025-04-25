@@ -587,9 +587,9 @@ Le attività principali del processo di miglioramento sono:
 Lo scopo principale del processo di formazione è quello di tenere aggiornati e preparati i membri del gruppo così da reagire prontamente ad eventuali modifiche o problemi che possono sorgere durante lo svolgimento del progetto.
 === Attività
 Le principali attività del processo di formazione sono:
-- *Inizializzazione*: vengono definiti le procedure per formare i membri del gruppo;
+- *Inizializzazione*: vengono definite le procedure per formare i membri del gruppo;
 - *Sviluppo materiale*: viene sviluppato il materiale necessario alla formazione e aggiornamento per tutti i membri del gruppo;
-- *Attivazione*: quando necessario i membri del gruppo attivano i meccanismi di formazione. In particolare vengono attivati, durante gli sprint, dei momenti e delle issue relative allo studio delle tecnologie usate durante il progetto. Inoltre se necessario più membri del gruppo si possono ritrovare per discutere problemi specifici sorti per uno o più membro del gruppo che sono già stati incontrati e risolti da altri membri del team così da condividere le conoscenze tra i vari membri. In ogni caso tutti i membri del team possono accedere alle repository riguardanti il codice e la documentazione per ottenere informazioni in modo veloce e risolvere eventuali dubbi;
+- *Attivazione*: quando necessario i membri del gruppo attivano i meccanismi di formazione. In particolare vengono attivati, durante gli sprint, dei momenti e delle issue relative allo studio delle tecnologie usate durante il progetto. Inoltre, se necessario, i membri del gruppo possono incontrarsi per discutere problemi specifici già affrontati e risolti da altri, favorendo così la condivisione delle conoscenze tra colleghi. In ogni caso tutti i membri del team possono accedere alle repository riguardanti il codice e la documentazione per ottenere informazioni in modo veloce e risolvere eventuali dubbi;
 === Strumenti usati
 - *Discord*: per gli incontri formali;
 - *Github*: per gestire tutta la documentazione e il codice per il progetto in un repository;
@@ -611,7 +611,7 @@ La funzionalità riguarda e misura il grado di soddisfacibilità delle esigenze 
 In particolare vengono misurate:
 - *Completezza*: il software prodotto deve soddisfare tutti i requisiti e le funzionalità previste;
 - *Correttezza*: il funzionamento del software deve rispettare le specifiche dichiarate;
-- *Adeguatezza*: il software prodotto deve essere idoneo allo scopo per qui è stato pensato e al contesto in cui viene usato;
+- *Adeguatezza*: il software prodotto deve essere idoneo allo scopo per cui è stato pensato e al contesto in cui viene usato;
 - *Conformità*: il software prodotto deve rispettare le norme predefinite e il grado di qualità previsto;
 == Performance
 La performance misura l'efficienza di un prodotto e la capacità del prodotto stesso di gestire le risorse in modo direttamente proporzionale alle prestazioni che vengono fornite.
@@ -623,7 +623,7 @@ In particolare vengono misurate:
 == Affidabilità
 L'affidabilità è il parametro per misurare se un prodotto reagisce ai problemi senza compromettere le prestazioni.
 In particolare vengono misurate:
-- *Tolleranza ai guasti e agli errori*: il prodotto deve saper gestire gli errori e rispondere a malfunzionamenti o guasti senza che si causino interruzioni gravi nel prodotto e allo stesso tempo mantenendo un certo grado di prestazioni;
+- *Tolleranza ai guasti e agli errori*: il prodotto deve saper gestire gli errori e rispondere a malfunzionamenti o guasti senza che si causino interruzioni gravi nel prodotto e allo stesso tempo mantenere un certo grado di prestazioni;
 - *Maturità*: il prodotto deve garantire affidabilità e stabilità cercando di evitare che si vengano a generare errori o malfunzionamenti;
 - *Recuperabilità*: a seguito di un qualsiasi tipo di errore, guasto o malfunzionamento il prodotto deve essere in grado di tornare alle sue prestazioni standard rispristinando le sue funzionalità;
 - *Disponibilità*: il prodotto deve essere accessibile e correttamente funzionante, quindi operativo ogni qual volta sia necessario;
@@ -635,15 +635,15 @@ La sicurezza di un prodotto misura il suo grado di protezione da minacce e vulne
 - *Autenticazione*: il software deve controllare e verificare le credenziali degli utenti e limitare l'accesso ai soli utenti autorizzati;
 - *Autenticità*: il prodotto deve permettere di verificare la provenienza dei dati;
 == Usabilità
-L'usabilità ci permette di calcolare e comprendere quanto e in quanto tempo l'utente finale riesca ad apprendere le modalità di utilizzo di un prodotto.
+L'usabilità ci permette di calcolare e comprendere quando e in quanto tempo l'utente finale riesca ad apprendere le modalità di utilizzo di un prodotto.
 In particolare vengono misurate:
 - *Apprendibilità*: la semplicità con cui l'utente riesce ad apprendere le funzionalità del prodotto;
-- *Comprensibilità*: la facilità con cui l'utente comprende il funzionamento del prodotto e di capire come usarlo appropriatamente;
+- *Comprensibilità*: la facilità con cui l'utente comprende il funzionamento del prodotto e riesce ad utilizzarlo in modo appropriato;
 - *Riconoscibilità*: il prodotto deve fornire un'interfaccia utente intuitiva e di facile comprensione;
 - *Estetica*: l'interfaccia del prodotto deve essere gradevole;
 - *Operabilità*: quanto è semplice per l'utente usare il prodotto in maniera corretta;
 == Portabilità
-La portabilità è la capacità di un prodotto  di essere facilmente spostato da un ambiente di esecuzione ad un altro senza insorgere in problemi.
+La portabilità è la capacità di un prodotto di essere facilmente spostato da un ambiente di esecuzione ad un altro senza insorgere in problemi.
 In particolare vengono misurate:
 - *Adattabilità*: il software deve essere capace di funzionare in ambienti di esecuzione diversi in modo corretto;
 - *Installabilità*: il software deve poter essere installato e configurato facilmente e rapidamente;
