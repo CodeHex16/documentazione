@@ -659,7 +659,7 @@ In particolare vengono misurate:
 = Metriche di qualità
 == Nomenclatura delle metriche
 Per identificare le metriche relative ai processi e quelle relative ai prodotti vengono usate, come prefisso, le seguenti sigle:
-- *MPC*: sigla per le metriche per la qualità dei processi;
+- *#gloss[MPC]*: sigla per le metriche per la qualità dei processi;
 - *MPD*: sigla per le metriche per la qualità del prodotto;
 Quindi una metrica avrà come sigla : *MPC/MPD-AcronimoMetrica*.
 == Metriche per i processi
