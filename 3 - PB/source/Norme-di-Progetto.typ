@@ -723,7 +723,7 @@ Quindi una metrica avrà come sigla : *MPC/MPD-AcronimoMetrica*.
 - *Valore ottimo*: \u{2265} 0;
 - *Valore accettabile*: \u{2265} -10%;
 ===== Cost Variance(MPC-CV)
-- *Descrizione*: valore che misura la differenza tra il budget disponibile e il quello usato effettivamente fino a quel momento. 
+- *Descrizione*: valore che misura la differenza tra il budget disponibile e quello usato effettivamente fino a quel momento. 
   Rappresenta la differenza tra il valore del lavoro completato e il budget utilizzato per completarlo.
   È un indicatore fondamentale per valutare la performance finanziaria di un progetto, rivelando se si sta spendendo più o meno di quanto previsto dal budget inizialmente preventivato. 
 - *Come calcolarlo*: Cost Variance = Earned Value - Actual Cost;
@@ -794,13 +794,13 @@ Quindi una metrica avrà come sigla : *MPC/MPD-AcronimoMetrica*.
 === Funzionalità
 ==== Copertura Requisiti Obbligatori(MPD-RO)
 - *Descrizione*: indica la percentuale di requisiti obbligatori coperti dal prodotto. 
-  Un valore del 100% indica che tutti i requisiti obbligatori sono stati implementat;
+  Un valore del 100% indica che tutti i requisiti obbligatori sono stati implementati;
 - *Come calcolarlo*: $"Copertura Requisiti Obbligatori" = "Numero Requisiti Obbligatori implementati" / "Numero Requisiti Obbligatori totali"$;
 - *Valore ottimo*: 100%;
 - *Valore accettabile*: 100%;
 ==== Copertura Requisiti Opzionali(MPD-OP)
 - *Descrizione*:  indica la percentuale di requisiti opzionali coperti dal prodotto. 
-  Un valore del 100% indica che tutti i requisiti opzionali sono stati implementat;
+  Un valore del 100% indica che tutti i requisiti opzionali sono stati implementati;
 - *Come calcolarlo*: $"Copertura Requisiti Opzionali" = "Numero Requisiti Opzionali implementati" / "Numero Requisiti Opzionali totali"$;
 - *Valore ottimo*: 100%;
 - *Valore accettabile*: \u{2265} 50%;
