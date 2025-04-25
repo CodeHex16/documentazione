@@ -24,18 +24,18 @@
 
 = Revisione Sprint 12
 Durante la riunione del 17 Aprile 2025 sono stati discussi i risultati dello Sprint 12, iniziati con un controllo
-sull'architettura e stato del frontend.
+sull'architettura e stato del #gloss[frontend].
 
 == Discussione architettura frontend
 Durante la riunione è stato presentato il design sviluppato della homepage dell'amministratore. Questa schermata
 presenta un bottone per modificare o aggiungere documenti, un bottone per modificare o aggiungere utenti e un bottone
-per modificare o aggiungere le FAQ che vengono visualizzate durante una chat tra utente e chatbot. Inoltre la homepage
+per modificare o aggiungere le #gloss[FAQ] che vengono visualizzate durante una chat tra utente e #gloss[chatbot]. Inoltre la homepage
 dell'amministratore mostra anche le funzionalità di un cliente, ad esempio lista delle chat e un bottone per
 visualizzare la pagina del profilo. Infine è stata aggiunta la possibilità di cambiare modalità in chiara o scura e
 aggiunta la possibilità all'amministratore di cambiare il colore principale per l'applicazione.
 
 == Definita struttura del database
-Durante la riunione è stato mostrato lo stato del backend, ed è risultato necessario stendere una struttura comune del
+Durante la riunione è stato mostrato lo stato del #gloss[backend], ed è risultato necessario stendere una struttura comune del
 database per avere una maggiore coordinazione tra i membri che stanno sviluppando il backend. Oltre a ciò che esisteva
 già, per avere un database più ordinato e accessibile, si è deciso di creare una tabella per ogni chat utente, con tuple
 che memorizzano l'id della chat e il titolo del messaggio, il suo contenuto, il mittente, la data di invio del messaggio
