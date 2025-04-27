@@ -21,10 +21,11 @@
   sommario: [Norme di progetto],
 
   versioni: (
-	"1.3.0",
-	"Luca Rossi",
-	"24/04/2025",
-	"Aggiunte regole di sviluppo",
+    "1.3.0",
+    "Luca Rossi",
+    "24/04/2025",
+    "Aggiunte regole di sviluppo",
+    "Gabriele Magnelli",
     "1.2.0",
     "23/04/2025",
     "Gabriele Magnelli",
