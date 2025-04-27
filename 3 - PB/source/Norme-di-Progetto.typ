@@ -21,6 +21,11 @@
   sommario: [Norme di progetto],
 
   versioni: (
+    "1.3.0",
+    "Luca Rossi",
+    "24/04/2025",
+    "Aggiunte regole di sviluppo",
+    "Gabriele Magnelli",
     "1.2.0",
     "23/04/2025",
     "Gabriele Magnelli",
@@ -248,6 +253,55 @@ Più nello specifico questa attività si suddividerà in:
 In questa attività i Programmatori traducono l'output della Progettazione in #gloss[codice sorgente], in modo da integrare ogni unità prevista dall'architettura.
 Inoltre ogni unità sarà documentata e testata per garantire che soddisfi i requisiti definiti in fase di analisi e progettazione.
 Nello specifico la documentazione dovrà prevedere la documentazione dedicata all'utente finale e quella dedicata al manutentore. Inoltre nella documentazione verranno integrati anche i dettagli relativi al testing eseguito sulle singole unità.
+
+==== Regole di sviluppo del codice
+
+Il gruppo ha definito norme precise per il processo di sviluppo del codice, volte a garantire uniformità, qualità e tracciabilità durante tutte le fasi di implementazione.
+
+===== Naming delle branch
+Ogni branch deve essere nominata seguendo la convenzione:
+- *oggettoDellaBranch-utente-sprint*
+dove l'oggetto rappresenta brevemente l'attività svolta, l'utente indica chi ha creato il branch, e sprint si riferisce allo sprint di appartenenza.
+
+È stata inoltre creata una branch *develop* su cui confluiranno tutte le modifiche, sottoposte a verifica tramite action CI/CD, prima di essere integrate nel branch *main*.
+
+===== Messaggi di commit
+I messaggi di commit devono essere scritti in italiano e iniziare con uno dei seguenti prefissi standard:
+- *fix:* correzioni di bug o malfunzionamenti;
+- *feat:* introduzione o miglioramento di funzionalità;
+- *refactor:* ristrutturazioni del codice senza modifica del comportamento esterno;
+- *ci:* modifiche relative alla gestione della CI/CD;
+- *test:* modifiche relative alla creazione o aggiornamento di test.
+
+Ogni messaggio deve essere conciso e descrivere in modo chiaro il contenuto del commit.
+
+===== Protezione dei branch
+Come già avviene per il repository della documentazione, sono state attivate regole di *branch protection* su *main* e *develop*:
+- È richiesto il superamento dei controlli automatici prima del merge;
+- È obbligatoria almeno una review approvata.
+
+===== Label dedicate
+Nelle repository di sviluppo sono state introdotte nuove label per categorizzare rapidamente le issue:
+- *enhancement* per miglioramenti o nuove feature;
+- *bug* per segnalazioni di malfunzionamenti;
+- *documentation* per documentazione tecnica;
+- *test* per attività relative alla scrittura o revisione di test;
+- *environment* per attività di configurazione ambienti o CI/CD.
+
+===== Testing
+La verifica del software sarà suddivisa in:
+- *Testing automatico*, gestito tramite pipeline CI/CD, comprendente:
+  - test di unità;
+  - test di integrazione;
+- *Testing manuale*, eseguito periodicamente per validare i comportamenti complessi non completamente automatizzabili.
+
+===== Stile del codice
+Lo stile dei sorgenti seguirà le convenzioni ufficiali delle principali guideline:
+- Per il codice *Python*, si adotterà la nomenclatura indicata in [PEP8](https://peps.python.org/pep-0008/).
+- Per il codice *TypeScript/JavaScript*, si seguiranno le convenzioni del [Google TypeScript Style Guide](https://google.github.io/styleguide/tsguide.html#naming).
+
+La coerenza nello stile favorirà la leggibilità del codice e semplificherà i processi di revisione.
+
 
 === Strumenti usati
 - *VS Code*: per la scrittura del codice;
