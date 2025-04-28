@@ -32,7 +32,6 @@
     "25/04/2025",
     "Francesco Fragonas",
     "Aggiunto sprint 13",
-    "",
     "1.3.0",
     "18/04/2025",
     "Luca Rossi",
