@@ -2,7 +2,7 @@
 #import "../../template/i-figured.typ"
 
 #show: doc => documento(
-  titolo: "Manuale utente",
+  titolo: "Manuale Utente",
   data: [24/03/2025],
   ruoli: ("Luca Ribon", "Verificatore", "Filippo Sabbadin", "Redattore",),
   sommario: [Manuale utente],
