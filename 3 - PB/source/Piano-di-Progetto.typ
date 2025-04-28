@@ -971,8 +971,8 @@ La collaborazione interna si è ulteriormente rafforzata, sebbene permangano alc
 #pseudoheading[*Retrospettiva*]
 Durante lo *Sprint 12*, il gruppo ha continuato attivamente lo sviluppo del progetto, concentrandosi sia sull’ampliamento delle funzionalità software sia sull’evoluzione della documentazione tecnica.
 Dal lato frontend è proseguita l’implementazione dell’interfaccia amministratore, con particolare attenzione all’aggiunta di personalizzazioni come la gestione dinamica del colore e del logo in modalità chiara e scura.  
-Sul backend sono state completate funzionalità fondamentali, come l’invio automatico di e-mail alla creazione di un nuovo account utente e le operazioni CRUD su utenti, documenti e FAQ.  
-Contemporaneamente, sono stati avviati i primi capitoli della *Specifica Tecnica*, e si è proseguito con l’introduzione dei test automatici tramite `pytest`, dimostrando una crescente attenzione alla qualità del software.  
+Sul backend sono state completate funzionalità fondamentali, come l’invio automatico di e-mail alla creazione di un nuovo account utente e le operazioni CRUD su utenti, documenti e #gloss[FAQ].  
+Contemporaneamente, sono stati avviati i primi capitoli della *#gloss[Specifica Tecnica]*, e si è proseguito con l’introduzione dei test automatici tramite `pytest`, dimostrando una crescente attenzione alla qualità del software.  
 Nel complesso, non sono emersi problemi rilevanti: l’unica leggera difficoltà si è manifestata nella gestione del lavoro sincrono di più programmatori sul frontend, ma è stata affrontata senza particolari ostacoli.
 
 #pseudoheading[*Attività svolte*]
