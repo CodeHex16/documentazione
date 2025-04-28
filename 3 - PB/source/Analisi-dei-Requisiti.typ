@@ -6,15 +6,15 @@
   data: [12/11/2024],
   ruoli: (
     "Matteo Bazzan",
-    "Verificatore",
+    "Redattore, Verificatore",
     "Luca Ribon",
-    "Redattore",
+    "Redattore, Verificatore",
     "Francesco Fragonas",
-    "Redattore - Verificatore",
+    "Redattore, Verificatore",
     "Gabriele Magnelli",
     "Redattore",
     "Filippo Sabbadin",
-    "Redattore - Verificatore",
+    "Redattore, Verificatore",
     "Luca Rossi",
     "",
     "Yi Hao Zhuo",
@@ -22,6 +22,11 @@
   ),
   sommario: [Analisi dei requisiti del capitolato C7],
   versioni: (
+    "1.2.0",
+    "23/04/2025",
+    "Matteo Bazzan",
+    "Aggiornamento grafici degli use case e correzione di errori",
+    "Luca Ribon",
     "1.1.0",
     "20/03/2025",
     "Luca Ribon",
@@ -193,7 +198,7 @@ completato l'autenticazione.\
 #figure(image("../imgs/attori.png", width: 70%), caption: "Lista degli attori")
 
 == UC1 - Login
-#figure(image("../imgs/inserimento-email-password.png", width: 90%), caption: "Login")
+#figure(image("../imgs/uc1.png", width: 95%), caption: "UC1 - Login")
 *Attori principali:*
 - Utente non autenticato;
 *Descrizione:*
@@ -218,7 +223,7 @@ completato l'autenticazione.\
 - Possibilità "Resta connesso";
 
 == UC2 - Primo login fornitore
-#figure(image("../imgs/login-fornitore.png", width: 80%), caption: "Primo login Fornitore")
+#figure(image("../imgs/uc2.png", width: 95%), caption: "UC2 - Primo login fornitore")
 *Attori principali:*
 - Utente non autenticato;
 *Attori secondari:*
@@ -255,7 +260,7 @@ completato l'autenticazione.\
 - Modifica password;
 
 == UC3 - Primo login cliente
-#figure(image("../imgs/login-cliente.png", width: 80%), caption: "Primo login Cliente")
+#figure(image("../imgs/uc3.png", width: 95%), caption: "UC3 - Primo login cliente")
 *Attori principali:*
 - Utente non autenticato;
 *Attori secondari:*
@@ -293,7 +298,7 @@ completato l'autenticazione.\
 
 // È uno use case a parte perché sarà anche quello usato per modificare la password dell'utente
 == UC4 - Modifica password
-#figure(image("../imgs/modifica-password.png", width: 90%), caption: "Modifica password")
+#figure(image("../imgs/uc4.png", width: 95%), caption: "UC4 - Modifica password")
 *Attori principali:*
 - Cliente;
 *Descrizione:*
@@ -314,6 +319,7 @@ completato l'autenticazione.\
 - Inserimento nuova password;
 
 == UC5 - Possibilità "Resta connesso"
+#figure(image("../imgs/uc5.png", width: 95%), caption: "UC5 - Possibilità \"Resta connesso\"")
 *Attori principali:*
 - Utente non autenticato;
 *Descrizione:*
@@ -334,7 +340,7 @@ completato l'autenticazione.\
 
 // non va incluso il modifica password perché in questo caso non si conosce la password vecchia
 == UC6 - Recupero password
-#figure(image("../imgs/recupero-password.png", width: 90%), caption: "Recupero password")
+#figure(image("../imgs/uc6.png", width: 95%), caption: "UC6 - Recupero password")
 *Attori principali:*
 - Utente non autenticato;
 *Descrizione:*
@@ -348,10 +354,13 @@ completato l'autenticazione.\
 - L'utente invia la richiesta di recupero password inserendo l'e-mail associata al proprio account;
 - Il sistema riceve la richiesta, controlla che l'e-mail sia valida e, se lo è, invia all'e-mail le istruzioni per il
   recupero della password;
+*Inclusioni:*
+- Inserimento e-mail;
 *Estensioni:*
 - Errore: Sistema non raggiungibile;
 
 == UC7 - Inserimento e-mail
+#figure(image("../imgs/uc7.png", width: 95%), caption: "UC7 - Inserimento e-mail")
 *Attori principali:*
 - Utente non autenticato;
 *Descrizione:*
@@ -367,6 +376,7 @@ completato l'autenticazione.\
 - Errore: Credenziale non valida;
 
 == UC8 - Inserimento password
+#figure(image("../imgs/uc8.png", width: 95%), caption: "UC8 - Inserimento password")
 *Attori principali:*
 - Utente non autenticato;
 *Descrizione:*
@@ -382,6 +392,7 @@ completato l'autenticazione.\
 - Errore: Credenziale non valida;
 
 == UC9 - Inserimento nuova password
+#figure(image("../imgs/uc9.png", width: 95%), caption: "UC9 - Inserimento nuova password")
 *Attori principali:*
 - Cliente;
 *Descrizione:*
@@ -394,10 +405,11 @@ completato l'autenticazione.\
 *Scenario Principale:*
 - All'utente viene mostrato un form per inserire la nuova password;
 - L'utente inserisce la nuova password;
-*Inclusioni:*
+*Estensioni:*
 - Errore: Credenziale non valida;
 
 == UC10 - Controllo identità
+#figure(image("../imgs/uc10.png", width: 95%), caption: "UC10 - Controllo identità")
 *Attori principali:*
 - Cliente;
 *Descrizione:*
@@ -414,6 +426,7 @@ completato l'autenticazione.\
 - Errore: Credenziale non valida;
 
 == UC11 - Errore: Credenziale non valida
+#figure(image("../imgs/uc11.png", width: 60%), caption: "UC11 - Errore: Credenziale non valida")
 *Attori principali:*
 - Utente generico;
 *Descrizione:*
@@ -427,48 +440,8 @@ completato l'autenticazione.\
 *Scenario principale:*
 - L'utente inserisce una credenziale errata o che non rispetta il formato richiesto;
 
-// == UC9 - E-mail non valida
-// *Attori principali:*
-// - Utente non autenticato;
-// *Descrizione:*
-// - Un utente non autenticato ha inserito un'e-mail errata;
-// *Precondizioni:*
-// - L'utente ha inserito un'e-mail non presente nel sistema o che non rispetta il formato corretto;
-// *Postcondizioni:*
-// - Il sistema notifica l'utente che la mail inserita è sbagliata;
-// - Il login non va a buon fine;
-// *Scenario principale:*
-// - L'utente inserisce un'e-mail sbagliata e il sistema restituisce errore;
-
-// == UC10 - Password non valida
-// *Attori principali:*
-// - Utente non autenticato;
-// *Descrizione:*
-// - Un utente non autenticato ha inserito una password errata;
-// *Precondizioni:*
-// - L'utente ha inserito una password sbagliata o che non rispetta il formato richiesto;
-// *Postcondizioni:*
-// - Il sistema notifica l'utente che la password inserita è sbagliata;
-// - Il login non va a buon fine;
-// *Scenario principale:*
-// - L'utente inserisce una password sbagliata e il sistema restituisce errore;
-
-// == UC8 - Password scelta non valida
-// *Attori principali:*
-// - Utente non autenticato;
-// *Descrizione:*
-// - Un utente vuole cambiare la propria password ma ne sceglie una non valida;
-// *Precondizioni:*
-// - L'utente deve aver effettuato il suo primo accesso;
-// - Il sistema deve aver ricevuto una password inserita dall'utente che è errata;
-// *Postcondizioni:*
-// - Se la password scelta dall'utente non è valida, il sistema invia un messaggio d'errore all'utente;
-// *Scenario Principale:*
-// - Il sistema riceve la password inserita dall'utente;
-// - Il sistema verifica la password inserita e la trova non conforme ai requisiti, quindi invia un messaggio d'errore all'utente con la richiesta di scegliere un'altra password valida;
-
 == UC12 - Logout
-#figure(image("../imgs/logout.png", width: 50%), caption: "Logout")
+#figure(image("../imgs/uc12.png", width: 95%), caption: "UC12 - Logout")
 *Attori principali:*
 - Cliente;
 *Descrizione:*
@@ -484,7 +457,7 @@ completato l'autenticazione.\
 - Errore: Sistema non raggiungibile;
 
 == UC13 - Visualizzazione della lista delle chat
-#figure(image("../imgs/lista-chat.png", width: 100%), caption: "Schermata delle chat")
+#figure(image("../imgs/uc13.png", width: 95%), caption: "UC13 - Visualizzazione della lista delle chat")
 *Attori principali:*
 - Cliente;
 *Descrizione:*
@@ -501,6 +474,7 @@ completato l'autenticazione.\
 - Visualizzazione titolo della chat;
 
 == UC14 - Visualizzazione titolo della chat
+#figure(image("../imgs/uc14.png", width: 60%), caption: "UC14 - Visualizzazione titolo della chat")
 *Attori principali:*
 - Cliente;
 *Descrizione:*
@@ -514,6 +488,7 @@ completato l'autenticazione.\
 - L'utente visualizza il nome della chat presente nella lista delle chat;
 
 == UC15 - Creazione di una nuova chat
+#figure(image("../imgs/uc15.png", width: 95%), caption: "UC15 - Creazione di una nuova chat")
 *Attori principali:*
 - Cliente;
 *Descrizione:*
@@ -529,7 +504,7 @@ completato l'autenticazione.\
 - Errore: Sistema non raggiungibile;
 
 == UC16 - Modifica titolo di una chat
-#figure(image("../imgs/modifica-titolo-chat.png", width: 100%), caption: "Modifica titolo chat")
+#figure(image("../imgs/uc16.png", width: 95%), caption: "UC16 - Modifica titolo di una chat")
 *Attori principali:*
 - Cliente;
 *Descrizione:*
@@ -546,6 +521,7 @@ completato l'autenticazione.\
 - Errore: Sistema non raggiungibile;
 
 == UC17 - Apertura di una chat singola
+#figure(image("../imgs/uc17.png", width: 70%), caption: "UC17 - Apertura di una chat singola")
 *Attori principali:*
 - Cliente;
 *Descrizione:*
@@ -571,6 +547,7 @@ completato l'autenticazione.\
 - Valutazione risposta negativa;
 
 == UC18 - Visualizzazione messaggi precedenti
+#figure(image("../imgs/uc18.png", width: 95%), caption: "UC18 - Visualizzazione messaggi precedenti")
 *Attori principali:*
 - Cliente;
 *Descrizione:*
@@ -587,6 +564,7 @@ completato l'autenticazione.\
 - Visualizzazione messaggio inviato;
 
 == UC19 - Visualizzazione messaggio inviato
+#figure(image("../imgs/uc19.png", width: 60%), caption: "UC19 - Visualizzazione messaggio inviato")
 *Attori principali:*
 - Cliente;
 *Descrizione:*
@@ -602,7 +580,7 @@ completato l'autenticazione.\
 - L'utente visualizza il messaggio inviato all'interno della chat;
 
 == UC20 - Scrittura messaggio
-#figure(image("../imgs/scrittura-messaggio.png", width: 100%), caption: "Scrittura messaggio")
+#figure(image("../imgs/uc20.png", width: 95%), caption: "UC20 - Scrittura messaggio")
 *Attori principali:*
 - Cliente;
 *Descrizione:*
@@ -636,6 +614,7 @@ completato l'autenticazione.\
 - Il sistema verifica la lunghezza del messaggio e, se questa supera la lunghezza massima, notifica l'utente;
 
 == UC21 - Scrittura messaggio tramite FAQ
+#figure(image("../imgs/uc21.png", width: 60%), caption: "UC21 - Scrittura messaggio tramite FAQ")
 *Attori principali:*
 - Cliente;
 *Descrizione:*
@@ -650,7 +629,7 @@ completato l'autenticazione.\
   nell'applicazione; nel caso in cui l'LLM individua delle FAQ utili nel contesto della chat sarà il chatbot stesso a suggerirle all'utente;
 
 == UC22 - Invio messaggio
-#figure(image("../imgs/invio-messaggio.png", width: 100%), caption: "Invio messaggio")
+#figure(image("../imgs/uc22.png", width: 95%), caption: "UC22 - Invio messaggio")
 *Attori principali:*
 - Cliente;
 *Descrizione:*
@@ -668,10 +647,7 @@ completato l'autenticazione.\
 - Errore: Sistema non raggiungibile;
 
 == UC23 - Visualizzazione risposta
-#figure(
-  image("../imgs/ricezione-valutazione-risposta.png", width: 90%),
-  caption: "Ricezione e valutazione della risposta",
-)
+#figure(image("../imgs/uc23.png", width: 95%), caption: "UC23 - Visualizzazione risposta")
 *Attori principali:*
 - Cliente;
 *Descrizione:*
@@ -689,6 +665,7 @@ completato l'autenticazione.\
 - Errore: Sistema non raggiungibile;
 
 == UC24 - Valutazione risposta
+#figure(image("../imgs/uc24.png", width: 95%), caption: "UC24 - Valutazione risposta")
 *Attori principali:*
 - Cliente;
 *Descrizione:*
@@ -743,7 +720,7 @@ completato l'autenticazione.\
 - Errore: Sistema non raggiungibile;
 
 == UC25 - Eliminazione di una chat
-#figure(image("../imgs/eliminazione-chat.png", width: 80%), caption: "Eliminazione di una chat")
+#figure(image("../imgs/uc25.png", width: 95%), caption: "UC25 - Eliminazione di una chat")
 *Attori principali:*
 - Cliente;
 *Descrizione:*
@@ -760,7 +737,7 @@ completato l'autenticazione.\
 - Errore: Sistema non raggiungibile;
 
 == UC26 - Cambio tema
-#figure(image("../imgs/selezione-dark-light.png", width: 50%), caption: "Selezione modalità chiara/scura")
+#figure(image("../imgs/uc26.png", width: 95%), caption: "UC26 - Cambio tema")
 *Attori principali:*
 - Cliente;
 *Descrizione:*
@@ -806,7 +783,7 @@ completato l'autenticazione.\
 - Il sistema imposta il tema scuro per dell'interfaccia lato client;
 
 == UC27 - Modifica della durata dello storico delle chat
-#figure(image("../imgs/impostazioni-fornitore.png", width: 90%), caption: "Impostazioni fornitore")
+#figure(image("../imgs/uc27.png", width: 95%), caption: "UC27 - Modifica della durata dello storico delle chat")
 *Attori principali:*
 - Fornitore;
 *Descrizione:*
@@ -824,6 +801,7 @@ completato l'autenticazione.\
 - Errore: Sistema non raggiungibile;
 
 == UC28 - Inserimento del logo
+#figure(image("../imgs/uc28.png", width: 95%), caption: "UC28 - Inserimento del logo")
 *Attori principali:*
 - Fornitore;
 *Descrizione:*
@@ -842,7 +820,7 @@ completato l'autenticazione.\
 - Errore: Sistema non raggiungibile;
 
 == UC29 - Selezione palette colori
-#figure(image("../imgs/selezione-palette.png", width: 90%), caption: "Selezione palette colori")
+#figure(image("../imgs/uc29.png", width: 95%), caption: "UC29 - Selezione palette colori")
 *Attori principali:*
 - Fornitore;
 *Descrizione:*
@@ -865,10 +843,7 @@ completato l'autenticazione.\
 - Errore: Sistema non raggiungibile;
 
 == UC30 - Visualizzazione statistiche domanda-risposta
-#figure(
-  image("../imgs/filtri-statistiche.png", width: 90%),
-  caption: "Visualizzazione statistiche e filtri del fornitore",
-)
+#figure(image("../imgs/uc30.png", width: 95%), caption: "UC30 - Visualizzazione statistiche domanda-risposta")
 *Attori principali:*
 - Fornitore;
 *Descrizione*:
@@ -887,11 +862,13 @@ completato l'autenticazione.\
   - relazione tra valutazioni positive e negative;
   - numero di messaggi inviati dal chatbot e dagli utenti;
   - numero di messaggi inviati tramite FAQ;
+*Inclusioni*:
+- Scelta filtri di visualizzazione;
 *Estensioni*:
-- Inserimento filtri di visualizzazione;
 - Errore: Sistema non raggiungibile;
 
 == UC31 - Scelta filtri di visualizzazione
+#figure(image("../imgs/uc31.png", width: 60%), caption: "UC31 - Scelta filtri di visualizzazione")
 *Attori principali:*
 - Fornitore;
 *Descrizione*
@@ -910,7 +887,7 @@ completato l'autenticazione.\
 - Il sistema applica i filtri alle statistiche;
 
 == UC32 - Aggiunta account cliente
-#figure(image("../imgs/aggiunta-account-cliente.png", width: 90%), caption: "Aggiunta di un account cliente")
+#figure(image("../imgs/uc32.png", width: 95%), caption: "UC32 - Aggiunta account cliente")
 *Attori principali:*
 - Fornitore;
 *Descrizione:*
@@ -930,21 +907,8 @@ completato l'autenticazione.\
 - Errore: Account inserito già esistente;
 - Errore: Sistema non raggiungibile;
 
-// == UC27 - Inserimento di parametri dell'account non validi
-// *Attori principali:*
-// - Fornitore;
-// *Descrizione:*
-// - Un fornitore autenticato vuole aggiungere un account per un cliente in modo che quest'ultimo possa accedere al chatbot, ma inserisce dei parametri non validi;
-// *Precondizioni:*
-// - Il sistema ha ricevuto i parametri dell'account inseriti dal fornitore;
-// *Postcondizioni:*
-// - Viene visualizzato un messaggio di errore che indica che i parametri inseriti non sono validi;
-// - L'inserimento del nuovo account non va a buon fine;
-// *Scenario Principale:*
-// - Il sistema riceve i parametri dell'account inseriti dal fornitore, ma questi non sono validi;
-//- Il sistema mostra un messaggio di errore il quale indica che i parametri inseriti non sono validi;
-
 == UC33 - Errore: Account inserito già esistente
+#figure(image("../imgs/uc33.png", width: 60%), caption: "UC33 - Errore: Account inserito già esistente")
 * Attori principali:*
 - Fornitore;
 *Descrizione:*
@@ -960,7 +924,7 @@ completato l'autenticazione.\
 - Il sistema mostra un messaggio di errore il quale indica che l'account inserito è già esistente;
 
 == UC34 - Eliminazione dell'account cliente
-#figure(image("../imgs/eliminazione-account-cliente.png", width: 90%), caption: "Eliminazione di un account cliente")
+#figure(image("../imgs/uc34.png", width: 95%), caption: "UC34 - Eliminazione dell'account cliente")
 *Attori principali:*
 - Fornitore;
 *Descrizione*
@@ -979,16 +943,14 @@ completato l'autenticazione.\
 - Viene richiesta la password del fornitore per confermare l'eliminazione;
 - Il fornitore conferma l'eliminazione dell'account;
 - Il sistema elimina l'account del cliente;
-*Estensioni:*
+*Inclusioni:*
 - Controllo identità;
+*Estensioni:*
 - Errore: Richiesta con dati mancanti o errati;
 - Errore: Sistema non raggiungibile;
 
 == UC35 - Inserimento documenti aziendali
-#figure(
-  image("../imgs/inserimento-documenti-aziendali.png", width: 100%),
-  caption: "Inserimento di documenti aziendali",
-)
+#figure(image("../imgs/uc35.png", width: 95%), caption: "UC35 - Inserimento documenti aziendali")
 *Attori principali:*
 - Fornitore;
 *Descrizione:*
@@ -1008,6 +970,7 @@ completato l'autenticazione.\
 - Errore: Sistema non raggiungibile;
 
 == UC36 - Errore: Formato file non valido
+#figure(image("../imgs/uc36.png", width: 60%), caption: "UC36 - Errore: Formato file non valido")
 *Attori principali:*
 - Fornitore;
 *Descrizione:*
@@ -1023,10 +986,7 @@ completato l'autenticazione.\
   d'errore al fornitore;
 
 == UC37 - Visualizzazione dei documenti aziendali
-#figure(
-  image("../imgs/visualizzazione-documenti-aziendali.png", width: 100%),
-  caption: "Visualizzazione di documenti aziendali",
-)
+#figure(image("../imgs/uc37.png", width: 95%), caption: "UC37 - Visualizzazione dei documenti aziendali")
 *Attori principali:*
 - Fornitore;
 *Descrizione:*
@@ -1046,10 +1006,7 @@ completato l'autenticazione.\
 - Errore: Sistema non raggiungibile;
 
 == UC38 - Eliminazione di un documento aziendale
-#figure(
-  image("../imgs/eliminazione-documento-aziendale.png", width: 100%),
-  caption: "Eliminazione di un documento aziendale",
-)
+#figure(image("../imgs/uc38.png", width: 95%), caption: "UC38 - Eliminazione di un documento aziendale")
 *Attori principali:*
 - Fornitore;
 *Descrizione:*
@@ -1070,7 +1027,7 @@ completato l'autenticazione.\
 - Controllo identità;
 
 == UC39 - Inserimento di una FAQ
-#figure(image("../imgs/aggiunta-faq.png", width: 90%), caption: "Inserimento di una FAQ")
+#figure(image("../imgs/uc39.png", width: 95%), caption: "UC39 - Inserimento di una FAQ")
 *Attori principali:*
 - Fornitore;
 *Descrizione:*
@@ -1092,7 +1049,7 @@ completato l'autenticazione.\
 - Errore: Sistema non raggiungibile;
 
 == UC40 - Visualizzazione delle FAQ
-#figure(image("../imgs/visualizzazione-faq.png", width: 90%), caption: "Visualizzazione delle FAQ")
+#figure(image("../imgs/uc40.png", width: 95%), caption: "UC40 - Visualizzazione delle FAQ")
 *Attori principali:*
 - Fornitore;
 *Descrizione:*
@@ -1112,7 +1069,7 @@ completato l'autenticazione.\
 - Errore: Sistema non raggiungibile;
 
 == UC41 - Modifica di una FAQ
-#figure(image("../imgs/modifica-faq.png", width: 90%), caption: "Modifica di una FAQ")
+#figure(image("../imgs/uc41.png", width: 95%), caption: "UC41 - Modifica di una FAQ")
 *Attori principali:*
 - Fornitore;
 *Descrizione:*
@@ -1131,7 +1088,7 @@ completato l'autenticazione.\
 - Errore: Sistema non raggiungibile;
 
 == UC42 - Eliminazione di una FAQ
-#figure(image("../imgs/eliminazione-faq.png", width: 90%), caption: "Eliminazione di una FAQ")
+#figure(image("../imgs/uc42.png", width: 95%), caption: "UC42 - Eliminazione di una FAQ")
 *Attori principali:*
 - Fornitore;
 *Descrizione:*
@@ -1152,6 +1109,7 @@ completato l'autenticazione.\
 - Controllo identità;
 
 == UC43 - Errore: Sistema non raggiungibile
+#figure(image("../imgs/uc43.png", width: 60%), caption: "UC43 - Errore: Sistema non raggiungibile")
 *Attori principali:*
 - Utente generico;
 *Descrizione:*
@@ -1166,6 +1124,7 @@ completato l'autenticazione.\
 - Il sistema mostra un messaggio d'errore all'utente tramite il client;
 
 == UC44 - Errore: Richiesta con dati mancanti o errati
+#figure(image("../imgs/uc44.png", width: 60%), caption: "UC44 - Errore: Richiesta con dati mancanti o errati")
 *Attori principali:*
 - Utente generico;
 *Descrizione:*
