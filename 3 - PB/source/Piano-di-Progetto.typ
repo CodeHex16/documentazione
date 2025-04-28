@@ -28,6 +28,11 @@
   sommario: [Piano di Progetto],
 
   versioni: (
+    "1.4.0",
+    "25/04/2025",
+    "Francesco Fragonas",
+    "Aggiunto sprint 13",
+    "",
     "1.3.0",
     "18/04/2025",
     "Luca Rossi",
@@ -959,6 +964,57 @@ La collaborazione interna si è ulteriormente rafforzata, sebbene permangano alc
   [Rossi], [39.5],
   [Zhuo], [59.45],
   [*TOTALE*], [*247.7*],
+)
+
+=== Sprint 12
+*Intervallo temporale*: 08/04/2025 - 15/04/2025
+
+#pseudoheading[*Retrospettiva*]
+Durante lo *Sprint 12*, il gruppo ha continuato attivamente lo sviluppo del progetto, concentrandosi sia sull’ampliamento delle funzionalità software sia sull’evoluzione della documentazione tecnica.
+Dal lato frontend è proseguita l’implementazione dell’interfaccia amministratore, con particolare attenzione all’aggiunta di personalizzazioni come la gestione dinamica del colore e del logo in modalità chiara e scura.  
+Sul backend sono state completate funzionalità fondamentali, come l’invio automatico di e-mail alla creazione di un nuovo account utente e le operazioni CRUD su utenti, documenti e FAQ.  
+Contemporaneamente, sono stati avviati i primi capitoli della *Specifica Tecnica*, e si è proseguito con l’introduzione dei test automatici tramite `pytest`, dimostrando una crescente attenzione alla qualità del software.  
+Nel complesso, non sono emersi problemi rilevanti: l’unica leggera difficoltà si è manifestata nella gestione del lavoro sincrono di più programmatori sul frontend, ma è stata affrontata senza particolari ostacoli.
+
+#pseudoheading[*Attività svolte*]
+- *Sviluppo frontend*: Continuazione dell’interfaccia amministratore con pagine dedicate e navigazione.
+- *Gestione UI dinamica*: Implementazione della selezione di colore e logo, compatibile con dark/light mode.
+- *Invio mail account utente*: Integrazione backend per l’invio automatico di e-mail al momento della registrazione.
+- *CRUD utenti/documenti/FAQ*: Implementazione completa delle funzionalità di creazione, lettura, aggiornamento e eliminazione.
+- *Specifica Tecnica*: Avvio della stesura dei primi capitoli del documento.
+- *Test automatici*: Prosecuzione nello sviluppo di test di integrazione e unitari con `pytest`.
+
+#pseudoheading[*Ruoli ricoperti e ore svolte*]
+
+#figure(
+  image("../imgs/sprint12-tabella.png", width: 100%),
+  caption: [
+    Suddivisione oraria per membro e ruolo.
+  ],
+)
+
+#figure(
+  image("../imgs/sprint12-grafico.png", width: 100%),
+  caption: [
+    Suddivisione oraria per ruolo con relativi costi.
+  ],
+)
+
+#table(
+  columns: (1fr, 1fr),
+  inset: 8pt,
+  align: (x, y) => if y > 0 { left } else { center + horizon },
+  fill: (x, y) => if y == 0 { luma(180) } else if (y == 2 or y == 4 or y == 6 or y == 8) { luma(230) },
+  table.header(table.cell(colspan: 2)[*Ore rimanenti per persona*]),
+  [*Membro*], [*Ore mancanti*],
+  [Ribon], [9.1],
+  [Bazzan], [11.5],
+  [Fragonas], [21.75],
+  [Magnelli], [30.75],
+  [Sabbadin], [34.1],
+  [Rossi], [33.5],
+  [Zhuo], [51.45],
+  [*TOTALE*], [*192.2*],
 )
 
 
