@@ -28,7 +28,7 @@
   sommario: [Piano di Progetto],
 
   versioni: (
-	"1.3.0",
+    "1.3.0",
     "18/04/2025",
     "Luca Rossi",
     "Aggiornamento della retrospettiva",
@@ -177,7 +177,7 @@ Secondo lo standard ISO/IEC 31000:2009, la gestione dei rischi si articola in ci
   columns: (1fr, 2fr),
   inset: 8pt,
   align: (x, y) => if y > 0 { left } else { center + horizon },
-  fill: (x, y) => if y == 0 { luma(180) } else if (y == 2 or y == 4 or y == 6 or y == 8) { luma(230) },
+  fill: (x, y) => if y == 0 { luma(180) } else if (y == 2 or y == 4) { luma(230) },
   table.header(table.cell(colspan: 2)[*Imprecisioni nella pianificazione delle attività*]),
 
   [*Descrizione*],
@@ -247,7 +247,7 @@ Secondo lo standard ISO/IEC 31000:2009, la gestione dei rischi si articola in ci
   columns: (1fr, 2fr),
   inset: 8pt,
   align: (x, y) => if y > 0 { left } else { center + horizon },
-  fill: (x, y) => if y == 0 { luma(180) } else if (y == 2 or y == 4 or y == 6 or y == 8) { luma(230) },
+  fill: (x, y) => if y == 0 { luma(180) } else if (y == 2 or y == 4) { luma(230) },
   table.header(table.cell(colspan: 2)[*Inesperienza*]),
 
   [*Descrizione*],
@@ -908,6 +908,59 @@ Tuttavia, alcune attività hanno richiesto più tempo del previsto a causa della
   [Zhuo], [59.45],
   [*TOTALE*], [*257.7*],
 )
+
+=== Sprint 11
+*Intervallo temporale*: 01/04/2025 - 07/04/2025
+
+#pseudoheading[*Retrospettiva*]
+Durante lo *Sprint 11*, il gruppo ha proseguito il lavoro di consolidamento avviato dopo l'RTB. Sono state completate diverse attività fondamentali: correzioni importanti ai documenti principali (Analisi dei Requisiti, Piano di Progetto, Norme di Progetto), implementazione di funzionalità core come l'autenticazione con ruoli tramite #gloss[token], il miglioramento del backend LLM e l'ampliamento del database.  
+È stato inoltre svolto un incontro esterno con il prof. Cardin, durante il quale sono stati chiariti alcuni dubbi relativi all'Analisi dei Requisiti e alla rappresentazione dell'architettura frontend.  
+Il gruppo ha avviato anche lo studio della configurazione della pipeline CI/CD, dimostrando una crescente attenzione alla qualità e all'integrazione continua.  
+La collaborazione interna si è ulteriormente rafforzata, sebbene permangano alcune difficoltà nella gestione delle attività più complesse e nell'integrazione tra moduli diversi.
+
+#pseudoheading[*Attività svolte*]
+- *Correzione documentazione*: Aggiornamento di Analisi dei Requisiti, Piano di Progetto e Norme di Progetto in seguito al TB.
+- *Incontro esterno con il proponente*: Chiarimenti sull'inclusione tra gli use case, correzione dello use case 40, uso dei pattern MVC con Svelte e rappresentazione dei diagrammi UML.
+- *Implementazione interfaccia amministratore*: Inizio sviluppo del frontend per la gestione amministrativa.
+- *Implementazione backend LLM e documenti*: Continuazione dello sviluppo delle API di backend.
+- *Ampliamento Database*: Revisione e miglioramento della struttura dati.
+- *Implementazione autenticazione*: Creazione del sistema di login basato su ruoli e token.
+- *Studio della CI/CD*: Analisi e progettazione iniziale della pipeline di integrazione e testing automatizzato.
+- *Verifica dei documenti e sviluppo*: Verifica incrociata dei documenti aggiornati e prime implementazioni di test automatici.
+
+#pseudoheading[*Ruoli ricoperti e ore svolte*]
+
+#figure(
+  image("../imgs/sprint11-tabella.png", width: 100%),
+  caption: [
+    Suddivisione oraria per membro e ruolo.
+  ],
+)
+
+#figure(
+  image("../imgs/sprint11-grafico.png", width: 100%),
+  caption: [
+    Suddivisione oraria per ruolo con relativi costi.
+  ],
+)
+
+#table(
+  columns: (1fr, 1fr),
+  inset: 8pt,
+  align: (x, y) => if y > 0 { left } else { center + horizon },
+  fill: (x, y) => if y == 0 { luma(180) } else if (y == 2 or y == 4 or y == 6 or y == 8) { luma(230) },
+  table.header(table.cell(colspan: 2)[*Ore rimanenti per persona*]),
+  [*Membro*], [*Ore mancanti*],
+  [Ribon], [10.6],
+  [Bazzan], [21.55],
+  [Fragonas], [34.75],
+  [Magnelli], [38.75],
+  [Sabbadin], [43.1],
+  [Rossi], [39.5],
+  [Zhuo], [59.45],
+  [*TOTALE*], [*247.7*],
+)
+
 
 // == Periodo CA
 // Le documentazione relativa al periodo PB verrà redatta dopo il superamento della RTB.

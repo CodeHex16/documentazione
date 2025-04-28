@@ -21,6 +21,16 @@
   sommario: [Norme di progetto],
 
   versioni: (
+    "1.3.0",
+    "Luca Rossi",
+    "24/04/2025",
+    "Aggiunte regole di sviluppo",
+    "Gabriele Magnelli",
+    "1.2.0",
+    "23/04/2025",
+    "Gabriele Magnelli",
+    "Definite le attività per le ultime sezioni e aggiunte sezioni per le metriche di qualità",
+    "Francesco Fragonas",
     "1.1.0",
     "10/04/2025",
     "Gabriele Magnelli",
@@ -119,7 +129,6 @@ Le definizioni sono disponibili nel documento Glossario.pdf e possono essere con
 - Glossario:
   - Documento: #link("https://codehex16.github.io/docs/glossario/glossario.pdf") _(versione 1.0.0)_;
   - Pagina web: #link("https://codehex16.github.io/glossario.html") _(ultima consultazione 06-03-2025)_;
-
 = Processi primari
 
 == Processo di fornitura
@@ -188,10 +197,10 @@ Il processo di sviluppo è finalizzato alla realizzazione del prodotto software 
 
 === Attività
 Questo processo prevede le seguenti attività principali:
-- Analisi dei requisiti;
-- Progettazione;
-- Codifica;
-- Testing;
+- *Analisi dei requisiti*;
+- *Progettazione*;
+- *Codifica*;
+- *Testing*;
 L'output atteso dal processo è un prodotto software funzionante, che soddisfi i requisiti concordati e che sia ampiamente testato. Perché rispetti i requisiti concordati la fase di codifica dovrà seguire le linee guida fissate durante l'analisi e di conseguenza durante la progettazione.
 
 ==== Analisi dei requisiti
@@ -245,6 +254,55 @@ In questa attività i Programmatori traducono l'output della Progettazione in #g
 Inoltre ogni unità sarà documentata e testata per garantire che soddisfi i requisiti definiti in fase di analisi e progettazione.
 Nello specifico la documentazione dovrà prevedere la documentazione dedicata all'utente finale e quella dedicata al manutentore. Inoltre nella documentazione verranno integrati anche i dettagli relativi al testing eseguito sulle singole unità.
 
+==== Regole di sviluppo del codice
+
+Il gruppo ha definito norme precise per il processo di sviluppo del codice, volte a garantire uniformità, qualità e tracciabilità durante tutte le fasi di implementazione.
+
+===== Naming delle branch
+Ogni branch deve essere nominata seguendo la convenzione:
+- *oggettoDellaBranch-utente-sprint*
+dove l'oggetto rappresenta brevemente l'attività svolta, l'utente indica chi ha creato il branch, e sprint si riferisce allo sprint di appartenenza.
+
+È stata inoltre creata una branch *develop* su cui confluiranno tutte le modifiche, sottoposte a verifica tramite action CI/CD, prima di essere integrate nel branch *main*.
+
+===== Messaggi di commit
+I messaggi di commit devono essere scritti in italiano e iniziare con uno dei seguenti prefissi standard:
+- *fix:* correzioni di bug o malfunzionamenti;
+- *feat:* introduzione o miglioramento di funzionalità;
+- *refactor:* ristrutturazioni del codice senza modifica del comportamento esterno;
+- *ci:* modifiche relative alla gestione della CI/CD;
+- *test:* modifiche relative alla creazione o aggiornamento di test.
+
+Ogni messaggio deve essere conciso e descrivere in modo chiaro il contenuto del commit.
+
+===== Protezione dei branch
+Come già avviene per il repository della documentazione, sono state attivate regole di *branch protection* su *main* e *develop*:
+- È richiesto il superamento dei controlli automatici prima del merge;
+- È obbligatoria almeno una review approvata.
+
+===== Label dedicate
+Nelle repository di sviluppo sono state introdotte nuove label per categorizzare rapidamente le issue:
+- *enhancement* per miglioramenti o nuove feature;
+- *bug* per segnalazioni di malfunzionamenti;
+- *documentation* per documentazione tecnica;
+- *test* per attività relative alla scrittura o revisione di test;
+- *environment* per attività di configurazione ambienti o CI/CD.
+
+===== Testing
+La verifica del software sarà suddivisa in:
+- *Testing automatico*, gestito tramite pipeline CI/CD, comprendente:
+  - test di unità;
+  - test di integrazione;
+- *Testing manuale*, eseguito periodicamente per validare i comportamenti complessi non completamente automatizzabili.
+
+===== Stile del codice
+Lo stile dei sorgenti seguirà le convenzioni ufficiali delle principali guideline:
+- Per il codice *Python*, si adotterà la nomenclatura indicata in [PEP8](https://peps.python.org/pep-0008/).
+- Per il codice *TypeScript/JavaScript*, si seguiranno le convenzioni del [Google TypeScript Style Guide](https://google.github.io/styleguide/tsguide.html#naming).
+
+La coerenza nello stile favorirà la leggibilità del codice e semplificherà i processi di revisione.
+
+
 === Strumenti usati
 - *VS Code*: per la scrittura del codice;
 - *Draw.io*: per elaborare i diagrammi #gloss[UML] degli use case individuati durante la fase di analisi dei requisiti;
@@ -257,7 +315,7 @@ Inoltre, saranno riportate le decisioni prese e le norme scelte dal gruppo CodeH
 
 === Attività
 Il processo di documentazione si suddivide in due attività principali:
-- *Realizzazione*: attività necessaria per stabilire come un documento debba essere redatto;
+- *Realizzazione*: attività in cui uno o più membri del gruppo redigono un determinato documento;
 - *Verifica e approvazione*: attività che segue la realizzazione ed è necessaria per verificare che il documento in questione abbia rispettato i criteri di qualità e le norme scelte dal gruppo;
 - *Aggiornamento*: attività necessaria per stabilire come agire nel momento in cui un documento debba subire degli aggiornamenti come modifiche, aggiunte o correzioni;
 ==== Realizzazione
@@ -348,6 +406,12 @@ Il processo di gestione di configurazione identifica le norme adottate dal grupp
 Lo scopo principale è quello di organizzare la procedura di modifica della documentazione e del codice prodotto e di rendere immediatamente consultabili le varie modifiche apportate e i loro autori.
 
 === Attività
+Le principali attività del processo di Gestione della configurazione sono:
+- *Inizializzazione*: vengono definite le norme a cui ogni elemento prodotto dal gruppo durante l'intero arco del progetto deve sottostare e quindi rispettare;
+- *Esecuzione*: viene svolto un determinato lavoro da uno o più membri del gruppo che producono un elemento (documento, codice o altro) utile al progetto;
+- *Versionamento*: il lavoro svolto viene registrato così da risultare immediamente consultabile dagli altri membri del team, o membri esterni, così da sapere chi ha svolto quel lavoro e in che momento;
+- *Verifica*: il lavoro svolto deve essere verificato da uno o più membri del team che svolgono il ruolo di verificatori con l'obiettivo di garantire che tale lavoro rispetti le norme predefinite;
+- *Accettazione o Rifiuto*: se il lavoro svolto rispetta le norme predefinite ed è considerato corretto allora viene accettato e integrato con il lavoro principale, altrimenti viene rifiutato e dovranno essere eseguite delle modifiche;
 
 === Versionamento <Versionamento>
 In generale una versione ha una sintassi del tipo X.Y.Z in cui:
@@ -446,11 +510,11 @@ Questo processo segue il processo di verifica e si sofferma su alcuni aspetti qu
 - Il prodotto deve essere intuitivo e di facile comprensione e utilizzo, cioè deve essere usabile;
 - Il prodotto deve essere efficace nel soddisfare le necessità del cliente;
 === Strumenti usati
-- *Github Actions*
-- *Github Pull Request*
+- *Github Actions*;
+- *Github Pull Request*;
+
 = Processi organizzativi
 == Gestione dei processi
-
 === Scopo e descrizione
 Il processo di gestione ha lo scopo di identificare le attività e i compiti che ogni membro del gruppo dovrà eseguire per proseguire nel progetto.
 
@@ -468,27 +532,32 @@ I ruoli svolti, a rotazione, dai membri del gruppo sono:
   - Determinare le attività da svolgere, assegnarle e verificarne l'avanzamento;
   - Gestire i rapporti tra i membri del gruppo e i soggetti esterni;
   - Redigere i verbali sia interni che esterni;
+  - Redigere il documento *Piano di Progetto*;
   Il responsabile è una figura che sarà presente durante tutto l'arco del progetto.
 - *Amministratore*: Ha il compito primario di controllare e gestire l'ambiente di lavoro, inoltre deve:
   - Stabilire gli strumenti necessari da usare durante il progetto;
   - Gestire i processi e risolverne gli eventuali problemi;
+  - Redigere il documento *Norme di Progetto*;
   L'amministratore è una figura che sarà presente durante tutto l'arco del progetto.
 - *Progettista*: Ha lo scopo principale di determinare le scelte realizzative del progetto, in particolare deve:
   - Trovare l'architettura adeguata per gestire il progetto;
+  - Redigere il documento *Specifica Tecnica*;
   Il progettista è una figura che sarà, principalmente, presente durante la parte di sviluppo del progetto.
 - *Analista*: Ha il compito principale di trovare i requisiti che il progetto dovrà soddisfare e riportarli nel documento *Analisi dei Requisiti*, quindi deve:
   - Studiare i bisogni dei committenti;
   - Studiare i requisiti definendone la complessità;
-  - Scrivere il documento *Analisi dei Requisiti*
+  - Redigere il documento *Analisi dei Requisiti*;
   L'analista è una figura che sarà presente principalmente durante la prima parte del progetto in cui verrà analizzato e compreso appieno il capitolato.
   Solo in casi straordinari, cioè se il gruppo dovesse cambiare i requisiti del progetto, allora l'Analista dovrà essere interpellato per apportare delle modifiche ai requisiti in questione.
 - *Programmatore*: Ha il compito primario di svolgere l'attività di codifica e sviluppare l'architettura individuata dal Progettista, in particolare deve:
   - Scrivere codice mantenibile che rispetti le *Norme di Progetto*;
   - Creare test per la verifica e validazione del codice;
+  - Redige il documento *Manuale Utente*;
   Il programmatore è una figura che sarà presente durante la parte di sviluppo del progetto.
 - *Verificatore*: Ha il compito principale di controllare e validare la documentazione e il codice prodotto, in particolare deve:
   - Controllare ogni documento a lui assegnato, verificarlo e in caso correggerlo o notificare il redattore, specificare cosa non è corretto e richiederne la correzione;
   - Controllare che tutto ciò che viene prodotto rispetti le *Norme di Progetto*;
+  - Redige il documento *Piano di Qualifica*;
   Il Verificatore è una figura che sarà presente durante tutto il progetto.
 Ogni membro, in un dato momento, può svolgere un solo ruolo alla volta, ma durante lo sprint può assumere più ruoli.
 
@@ -525,6 +594,11 @@ Più in particolare quando viene individuato un compito da svolgere vengono eseg
 
 == Coordinamento
 === Attività
+Le principali attività del processo di coordinamento sono:
+- *Pianificazione generale*: decisione del giorno e dell'orario in cui ritrovarsi (di solito viene deciso durante la riunione precedente, o tramite un documento apposito in *Google Fogli*);
+- *Pianificazione specifica*: decisione degli argomenti principali da discutere durante la riunione;
+- *Riunione*: momento in cui il gruppo si ritrova per controllare il lavoro svolto, risolvere eventuali dubbi e definire le nuove attività e quindi i prossimi obiettivi;
+- *Redazione verbale*: Momento successivo alla riunione in cui viene redatto il verbale relativo alla riunione che verrà successivamente verificato e integrato con la documentazione principale;
 === Comunicazioni e Riunioni
 Le comunicazioni principali che avvengono durante lo svolgimento del progetto sono di due tipi:
 - *Comunicazioni interne*: Il gruppo utilizza *Telegram* e *Discord* per le comunicazioni principali interne, in particolare Telegram viene usato per messaggi brevi, veloci e informali, mentre Discord viene usato per discussioni e riunioni a distanza.\
@@ -547,11 +621,359 @@ Nel caso in cui il Responsabile non fosse presente durante le riunioni, il verba
 - *Telegram*: usato per le comunicazioni interne;
 - *Google Mail*: per le comunicazioni esterne;
 - *Notion*: per organizzare appunti e documenti in modo non ufficiale;
+- *Google Fogli*: per organizzare gli orari per le riunioni interne;
 
 == Miglioramento
 === Scopo e descrizione
 Il miglioramento è un processo sempre attivo che durerà per tutto il progetto il cui obiettivo è quello di controllare e migliorare tutto quello che viene prodotto mantenendo un elevato grado di qualità.
 In particolare si cerca e si cercherà di ruotare ruoli, identificare attività idonee ai membri del gruppo così da risolvere il maggior numero di problemi che si potrebbero venire a creare e/o colmare tempestivamente eventuali lacune mantenendo il lavoro del team elastico e flessibile.
 === Attività
+Le attività principali del processo di miglioramento sono:
+- *Inizializzazione*: stabilire le norme che ogni membro del team dovrà rispettare durante lo svolgimento del progetto;
+- *Controllo*: stabilendo le norme ora, basandosi su queste si possono stabilire alcune metriche da valutare per controllare e verificare l'efficacia e l'efficienza di ogni processo svolto;
+- *Attivazione*: se risulta che un processo non rispetta le norme e/o non è efficiente e/o efficace allora tale processo deve essere migliorato e quindi è compito del team stesso trovare delle soluzioni per migliorare questo processo;
 === Strumenti usati
-- *Github*: ;
+- *Github*: usato come *Issue Tracking System* per gestire e monitorare il lavoro di ogni membro del gruppo e dell'andamento generale del progetto;
+- *Notion*: per organizzare appunti e documenti in modo non ufficiale;
+
+== Formazione
+=== Scopo e descrizione
+Lo scopo principale del processo di formazione è quello di tenere aggiornati e preparati i membri del gruppo così da reagire prontamente ad eventuali modifiche o problemi che possono sorgere durante lo svolgimento del progetto.
+=== Attività
+Le principali attività del processo di formazione sono:
+- *Inizializzazione*: vengono definite le procedure per formare i membri del gruppo;
+- *Sviluppo materiale*: viene sviluppato il materiale necessario alla formazione e aggiornamento per tutti i membri del gruppo;
+- *Attivazione*: quando necessario i membri del gruppo attivano i meccanismi di formazione. In particolare vengono attivati, durante gli sprint, dei momenti e delle issue relative allo studio delle tecnologie usate durante il progetto. Inoltre, se necessario, i membri del gruppo possono incontrarsi per discutere problemi specifici già affrontati e risolti da altri, favorendo così la condivisione delle conoscenze tra colleghi. In ogni caso tutti i membri del team possono accedere alle repository riguardanti il codice e la documentazione per ottenere informazioni in modo veloce e risolvere eventuali dubbi;
+=== Strumenti usati
+- *Discord*: per gli incontri formali;
+- *Github*: per gestire tutta la documentazione e il codice per il progetto in un repository;
+- *Notion*: per organizzare appunti e documenti in modo non ufficiale;
+- *Telegram*: per comunicare in modo veloce con gli altri membri del team;
+= Metriche e standard per la qualità
+Per  migliorare e avere uno standard di qualità da cui attingere il gruppo ha deciso di utilizzare degli standard riconosciuti a livello internazionale. 
+Tra quelli disponibili è stato scelto lo standard  ISO/IEC 12207:1995 per quanto riguarda la qualità dei processi principali, organizzativi e di supporto.
+Mentre per gli standard di qualità del software il gruppo adotterà lo standard ISO/IEC 25010:2023.
+Le principali caratteristiche prese in considerazione sono:
+- *Funzionalità*;
+- *Performance*;
+- *Affidabilità*;
+- *Usabilità*;
+- *Portabilità*;
+- *Manutenibilità*;
+== Funzionalità
+La funzionalità riguarda e misura il grado di soddisfacibilità delle esigenze del proponente rispetto al prodotto finale.
+In particolare vengono misurate:
+- *Completezza*: il software prodotto deve soddisfare tutti i requisiti e le funzionalità previste;
+- *Correttezza*: il funzionamento del software deve rispettare le specifiche dichiarate;
+- *Adeguatezza*: il software prodotto deve essere idoneo allo scopo per cui è stato pensato e al contesto in cui viene usato;
+- *Conformità*: il software prodotto deve rispettare le norme predefinite e il grado di qualità previsto;
+== Performance
+La performance misura l'efficienza di un prodotto e la capacità del prodotto stesso di gestire le risorse in modo direttamente proporzionale alle prestazioni che vengono fornite.
+In particolare vengono misurate:
+- *Risorse*: l'uso delle risorse deve essere efficiente;
+- *Tempo*: il software prodotto deve dare una risposta in tempi consoni alle richieste che gli vengono fatte;
+- *Conformità*: il prodotto deve rispettare dei vincoli di qualità;
+- *Capacità*: il prodotto deve saper gestire i carichi di lavoro attesi senza compromettere le prestazioni previste;
+== Affidabilità
+L'affidabilità è il parametro per misurare se un prodotto reagisce ai problemi senza compromettere le prestazioni.
+In particolare vengono misurate:
+- *Tolleranza ai guasti e agli errori*: il prodotto deve saper gestire gli errori e rispondere a malfunzionamenti o guasti senza che si causino interruzioni gravi nel prodotto e allo stesso tempo mantenere un certo grado di prestazioni;
+- *Maturità*: il prodotto deve garantire affidabilità e stabilità cercando di evitare che si vengano a generare errori o malfunzionamenti;
+- *Recuperabilità*: a seguito di un qualsiasi tipo di errore, guasto o malfunzionamento il prodotto deve essere in grado di tornare alle sue prestazioni standard rispristinando le sue funzionalità;
+- *Disponibilità*: il prodotto deve essere accessibile e correttamente funzionante, quindi operativo ogni qual volta sia necessario;
+- *Aderenza*: il prodotto deve rispettare gli standard di qualità prefissati;
+== Sicurezza
+La sicurezza di un prodotto misura il suo grado di protezione da minacce e vulnerabilità, garantendo che i dati e le funzionalità rimangano integri, disponibili e riservati.
+- *Riservatezza*: il software deve garantire la protezione dei dati sensibili;
+- *Integrità*: il software deve garantire che i dati siano completi, accurati e sicuri;
+- *Autenticazione*: il software deve controllare e verificare le credenziali degli utenti e limitare l'accesso ai soli utenti autorizzati;
+- *Autenticità*: il prodotto deve permettere di verificare la provenienza dei dati;
+== Usabilità
+L'usabilità ci permette di calcolare e comprendere quando e in quanto tempo l'utente finale riesca ad apprendere le modalità di utilizzo di un prodotto.
+In particolare vengono misurate:
+- *Apprendibilità*: la semplicità con cui l'utente riesce ad apprendere le funzionalità del prodotto;
+- *Comprensibilità*: la facilità con cui l'utente comprende il funzionamento del prodotto e riesce ad utilizzarlo in modo appropriato;
+- *Riconoscibilità*: il prodotto deve fornire un'interfaccia utente intuitiva e di facile comprensione;
+- *Estetica*: l'interfaccia del prodotto deve essere gradevole;
+- *Operabilità*: quanto è semplice per l'utente usare il prodotto in maniera corretta;
+== Portabilità
+La portabilità è la capacità di un prodotto di essere facilmente spostato da un ambiente di esecuzione ad un altro senza insorgere in problemi.
+In particolare vengono misurate:
+- *Adattabilità*: il software deve essere capace di funzionare in ambienti di esecuzione diversi in modo corretto;
+- *Installabilità*: il software deve poter essere installato e configurato facilmente e rapidamente;
+- *Sostituibilità*: il prodotto deve poter funzionare correttamente nel momento in cui venga aggiornato e quindi sostituito da nuove versioni;
+== Manutenibilità
+La manutenibilità di un prodotto misura la facilità con cui può essere modificato, corretto e migliorato nel tempo.
+In particolare vengono misurate:
+- *Analizzabilità*: la facilità con cui il codice può essere controllato al fine di risolvere eventuali errori e problemi;
+- *Modificabilità*: il software deve poter essere modificato e migliorato in maniera semplice;
+- *Testabilità*: la semplicità con cui il prodotto può essere testato;
+- *Riutilizzabilità*: le varie parti del software devono poter essere riutilizzate in progetti o ambienti differenti;
+- *Stabilità*: capacità del prodotto di continuare a funzionare senza gravi problemi a seguito di modifiche sbagliate;
+= Metriche di qualità
+== Nomenclatura delle metriche
+Per identificare le metriche relative ai processi e quelle relative ai prodotti vengono usate, come prefisso, le seguenti sigle:
+- *#gloss[MPC]*: sigla per le metriche per la qualità dei processi;
+- *MPD*: sigla per le metriche per la qualità del prodotto;
+Quindi una metrica avrà come sigla : *MPC/MPD-AcronimoMetrica*.
+== Metriche per i processi
+=== Processi primari
+==== Fornitura
+===== Budget At Completion(MPC-BAC)
+- *Codice*: MPC-BAC;
+- *Descrizione*: costo totale del progetto preventivato per il suo completamento;
+===== Estimated Cost(MPC-EC)
+- *Descrizione*: costo stimato calcolando le ore necessarie per lo sviluppo del progetto;
+===== Completion Cost(MPC-CC)
+- *Descrizione*:  costo finale raggiunto alla fine del progetto. Idealmente non deve superare quello stimato durante le fasi iniziali;
+- *Valore ottimo*: \u{2264} 100% EC;
+- *Valore accettabile*: \u{2264} 105% EC;
+===== Actual Cost(MPC-AC)
+- *Descrizione*: budget utilizzato fino a quel determinato momento. 
+  Indicatore utile per monitorare l’andamento del progetto e valutare se i costi rispettano le aspettative;
+- *Valore ottimo*: \u{2264} EAC;
+- *Valore accettabile*: \u{2265} 0%;
+===== Earned Value(MPC-EV)
+- *Descrizione*: valore ottenuto fino a quel dato momento, si basa sui progressi del completamento delle attività. 
+  In particolare viene quantificato il valore del lavoro effettivamente completato rispetto al budget complessivo.
+  Questo indicatore permette di monitorare e valutare l'andamento del progetto, offrendo una misura concreta dello stato di avanzamento rispetto a quanto pianificato;
+- *Come calcolarlo*: $"Earned Value" = "Budget at Completion" / "% lavoro completato"$;
+- *Valore ottimo*: \u{2264} EAC;
+- *Valore accettabile*: \u{2265} 0;
+===== Planned Value(MPC-PV)
+- *Descrizione*: rappresenta il valore del lavoro che dovrebbe essere completato. 
+  Si basa sulla programmazione delle attività del progetto e riflette il valore del lavoro che si intende portare a termine.
+  Questo indicatore fornisce una base di riferimento per confrontare il progresso reale del progetto con le aspettative;
+- *Come calcolarlo*:  $"Planned Value" = "Budget at Completion" / "% lavoro da completare"$;
+- *Valore ottimo*: \u{2264} BAC;
+- *Valore accettabile*: \u{2265} 0;
+===== Cost Performance Index(MPC-CPI)/*Da aggiungere al Piano di Qualifica*/
+- *Descrizione*:  indicatore che misura l'efficienza del costo del lavoro realizzato rispetto al costo pianificato. 
+  Il Cost Performance Index rappresenta il rapporto tra il valore del lavoro effettivamente completate e il budget utilizzato per portarlo a termine;
+- *Come calcolarlo*: $"Cost Performance Index" = "Earned Value" / "Actual Cost"$;
+- *Valore ottimo*: \u{2265} 1;
+- *Valore accettabile*: \u{2265} 0.8;
+===== Estimate At Completion(MPC-EAC)
+- *Descrizione*: stima del costo totale del progetto al momento del suo completamento, considerando i costi sostenuti fino ad ora e una stima aggiornata dei costi rimanenti;
+- *Come calcolarlo*: $"Estimate At Completion" = "Budget at Completion" / "Cost Performance Index"$;
+- *Valore ottimo*: = BAC;
+- *Valore accettabile*: \u{00B1} 5% BAC;
+===== Estimate To Complete(MPC-ETC)
+- *Descrizione*: stima del costo necessario per completare il progetto.
+- *Come calcolarlo*: Estimate To Complete = Estimate At Completion - Actual Cost;
+- *Valore ottimo*: \u{2264} EAC;
+- *Valore accettabile*: \u{2265} 0%;
+===== Schedule Performance Index(MPC-SPI)/*Da aggiungere al Piano di Qualifica*/
+- *Descrizione*: è una metrica che misura quanto il progetto sta procedendo rispetto alla sua pianificazione iniziale 
+  tramite il rapporto tra il costo preventivato del lavoro completato(EV) e il costo preventivato del lavoro ancora da svolgere(PV);
+- *Come calcolarlo*: $"Schedule Performance Index" = "Earned Value" / "Planned Value"$;
+- *Valore ottimo*: \u{2265} 1;
+- *Valore accettabile*: \u{2265} 0.8;
+===== Schedule Variance(MPC-SV)
+- *Descrizione*: varianza rispetto a quanto previsto inteso come anticipo o ritardo sui tempi delle attività svolte e da svolgere. 
+  Rappresenta la differenza tra il valore del lavoro completato e il valore del lavoro pianificato.
+  In pratica, misura se un progetto è in anticipo, in ritardo o in linea con la pianificazione effettuata inizialmente;
+- *Come calcolarlo*: Schedule Variance = Earned Value - Planned Value;
+- *Valore ottimo*: \u{2265} 0;
+- *Valore accettabile*: \u{2265} -10%;
+===== Cost Variance(MPC-CV)
+- *Descrizione*: valore che misura la differenza tra il budget disponibile e quello usato effettivamente fino a quel momento. 
+  Rappresenta la differenza tra il valore del lavoro completato e il budget utilizzato per completarlo.
+  È un indicatore fondamentale per valutare la performance finanziaria di un progetto, rivelando se si sta spendendo più o meno di quanto previsto dal budget inizialmente preventivato. 
+- *Come calcolarlo*: Cost Variance = Earned Value - Actual Cost;
+- *Valore ottimo*: \u{2265} 0;
+- *Valore accettabile*: \u{2265} -5%;
+==== Sviluppo
+===== Requirement Stability Index(MPC-RSI)
+- *Descrizione*: indice di stabilità dei requisiti. 
+  Indica la percentuale di requisiti che sono stati modificati rispetto al totale dei requisiti. 
+  Un valore alto indica che i requisiti sono stabili e non soggetti a modifiche frequenti;
+- *Come calcolarlo*: $"Requirement Stability Index" = (("TNOR" + "NCR" + "NAR" + "NDR") / ("TNOR"))*"100"$ dove:
+  - *TNOR*: Total Number of Original Requirements = numero iniziale di requisiti;
+  - *NCR*: Number of Changed Requirements = numero di requisiti modificati ;
+  - *NAR*: Number of Added Requirements = numero di requisiti aggiunti;
+  - *NDR*: Number of Deleted Requirements = numero di requisiti cancellati;
+- *Valore ottimo*: 100%;
+- *Valore accettabile*: \u{2265} 80%;
+===== Technical Debt Ratio(MPC-TDR)
+- *Descrizione*: rapporto tra il tempo necessario per risolvere i problemi tecnici e il tempo necessario per sviluppare nuove funzionali.
+  Quindi calcola quanto costa correggere e mantenere il codice, rispetto a quanto è costato inizialmente svilupparlo;
+- *Valore ottimo*: \u{2264} 5%;
+- *Valore accettabile*: \u{2264} 15%;
+=== Processi di supporto
+==== Documentazione
+===== Indice di Gulpease(MPC-IG)
+- *Descrizione*: Indica la complessità nella lettura di una frase o documento. 
+  Considera come variabili il numero di parole, di frasi e di lettere;
+- *Come calcolarlo*: $"Indice di Gulpease" = 89+((300*"numero di frasi") - (10*"numero di lettere")) / "numero di parole" $;
+- *Valore ottimo*: \u{2265} 60;
+- *Valore accettabile*: \u{2265} 40;
+===== Correttezza ortografica(MPC-CO)
+- *Descrizione*: Indica il numero di errori ortografici presenti nella documentazione;
+- *Valore ottimo*: 0;
+- *Valore accettabile*: 3;
+==== Gestione qualità
+===== Satisfaction of Quality Metrics(MPC-SQM)
+- *Descrizione*: misura della quantità di metriche soddisfatte. 
+  Più in particolare viene misurato il grado di soddisfazione dell'utente finale rispetto alla qualità di un prodotto.
+  Ciò aiuta a comprendere se le aspettative del cliente sono state soddisfatte o meno, e consentono di identificare eventuali migliorie;
+- *Come calcolarlo*: $"Satisfaction of Quality Metrics" = "Numero totale di metriche soddisfatte" / "Numero totale di metriche"$;
+- *Valore ottimo*: 100%;
+- *Valore accettabile*: \u{2265} 85%;
+==== Verifica
+===== Code Coverage(MPC-CCO)
+- *Descrizione*: Quantità di codice eseguito durante i test.
+  Viene utilizzato per valutare la qualità dei test e garantire che il codice sia stato adeguatamente testato. 
+  Un alto livello indica che il codice è stato eseguito in molti contesti e scenari diversi con diverse parti di codice. 
+  Quindi indica quanto codice è stato sottoposto ai test;
+- *Come calcolarlo*: $"Code Coverage" = "Linee di Codice Eseguite" / "Linee di Codice Totali" * 100$;
+- *Valore ottimo*: 100%;
+- *Valore accettabile*: \u{2265} 90%;
+===== Test Superati in Percentuale(MPC-TSP)
+- *Descrizione*: Indica la proporzione di test automatizzati o manuali che sono stati eseguiti con successo rispetto al totale dei test previsti. 
+  Viene espressa come una percentuale e serve a misurare quanto dell’applicazione in fase di sviluppo è stato verificato con successo tramite i test. 
+  Una percentuale alta di test superati indica che il sistema è stabile e che la maggior parte delle funzionalità funzionano come previsto.
+  Quindi indica quanti test sono stati superati;
+- *Come calcolarlo*: $"Test Superati in Percentuale" = "Numero di Test Superati" / "Numero Totale di Test" * 100$;
+- *Valore ottimo*: 100%;
+- *Valore accettabile*: 100%;
+=== Processi organizzativi
+==== Gestione dei processi
+===== Time Efficiency(MPC-TE)/*Da aggiungere al Piano di Qualifica*/
+- *Descrizione*: misura il rapporto tra ore utilizzate e ore produttive;
+- *Come calcolarlo*: $"Time Efficiency" = "Ore Produttive" / "Ore Totali" * 100$;
+- *Valore ottimo*: 1;
+- *Valore accettabile*: 3;
+== Metriche per il prodotto
+=== Funzionalità
+==== Copertura Requisiti Obbligatori(MPD-RO)
+- *Descrizione*: indica la percentuale di requisiti obbligatori coperti dal prodotto. 
+  Un valore del 100% indica che tutti i requisiti obbligatori sono stati implementati;
+- *Come calcolarlo*: $"Copertura Requisiti Obbligatori" = "Numero Requisiti Obbligatori implementati" / "Numero Requisiti Obbligatori totali"$;
+- *Valore ottimo*: 100%;
+- *Valore accettabile*: 100%;
+==== Copertura Requisiti Opzionali(MPD-OP)
+- *Descrizione*:  indica la percentuale di requisiti opzionali coperti dal prodotto. 
+  Un valore del 100% indica che tutti i requisiti opzionali sono stati implementati;
+- *Come calcolarlo*: $"Copertura Requisiti Opzionali" = "Numero Requisiti Opzionali implementati" / "Numero Requisiti Opzionali totali"$;
+- *Valore ottimo*: 100%;
+- *Valore accettabile*: \u{2265} 50%;
+=== Affidabilità
+==== Code Coverage(MPD-CC)
+- *Descrizione*: indica la percentuale di codice coperto dai test.  
+  Un valore alto indica che il codice è stato testato in modo approfondito e che è meno probabile che contenga errori;
+- *Come calcolarlo*: $"Code Coverage" = "righe di codice testate" / "righe di codice totali" *100$;
+- *Valore ottimo*: 100%;
+- *Valore accettabile*: \u{2265} 80%;
+===== Branch Coverage(MPD-BC)
+- *Descrizione*: è un sottoinsieme del code coverage e misura la percentuale di rami delle condizioni che sono stati eseguiti durante i test.
+  Un valore alto indica che il codice è stato testato in modo approfondito e che è meno probabile che contenga errori;
+- *Come calcolarlo*: $"Branch Coverage" = "Branch eseguiti" / "Branch totali" * 100$;
+- *Valore ottimo*: \u{2265} 80%;
+- *Valore accettabile*: \u{2265} 50%;
+===== Statement Coverage(MPD-SC)
+- *Descrizione*: è un sottoinsieme di code coverage e misura la percentuale di istruzioni che sono state eseguite durante i test. 
+  Un valore alto indica che il codice è stato testato in modo approfondito e che è meno probabile che contenga errori;
+- *Come calcolarlo*: $"Statement Coverage" = "" / "" * 100$;
+- *Valore ottimo*: \u{2265} 80%;
+- *Valore accettabile*: \u{2265} 60%;
+===== Failure Tolerance(MPD-FT)
+- *Descrizione*: misura la capacità del prodotto di mantenere un livello di prestazioni accettabile anche in caso di guasti o malfunzionamenti. 
+  Un valore alto indica che il prodotto è in grado di gestire i guasti senza compromettere le funzionalità principali;
+- *Valore ottimo*: 100%;
+- *Valore accettabile*: 100%;
+===== Failure Frequency(MPD-FF)
+- *Descrizione*: misura la frequenza con cui si verificano guasti o malfunzionamenti nel prodotto. 
+  Un valore basso indica che il prodotto è affidabile e presenta pochi problemi; 
+- *Come calcolarlo*: $"Failure Frequency" = "Numero di malfunzionamenti" / "Tempo totale"$;
+- *Valore ottimo*: 0;
+- *Valore accettabile*: 0;
+===== Mean Time Between Failure(MPD-MTBF)
+- *Descrizione*:  misura il tempo medio tra un guasto e il successivo. 
+  Un valore alto indica che il prodotto è affidabile e presenta pochi guasti;
+- *Come calcolarlo*: $"Mean Time Between Failure" = "Tempo di attività totale" / "Numero di incidenti"$ dove:
+  - Il tempo di attività totale è il tempo totale per cui il sistema rimane in funzione senza errori;
+  - Il numero totale di guasti è il numero degli errori di sistema che si sono verificati durante il periodo specificato;
+- *Valore ottimo*: \u{2265} 72h;
+- *Valore accettabile*: \u{2265} 48h;
+===== Disponibilità Sistema(MPD-DS)
+- *Descrizione*: indica la percentuale di tempo in cui il sistema è operativo. 
+  Un valore alto indica che il sistema è affidabile e che è disponibile per l’utente;
+- *Come calcolarlo*: $"Disponibilità Sistema" = "MTBF" / "(MTBF+MTTR)"$ dove:
+  - *MTBF* = Mean Time Between Failure = tempo medio tra un guasto e il successivo;
+  - *MTTR* = Mean Time To Repair = tempo medio di riparazione;
+- *Valore ottimo*: \u{2265} 99.9%;
+- *Valore accettabile*: \u{2265} 90%;
+=== Usabilità
+===== Tempo di Apprendimento(MPD-TA)
+- *Descrizione*:  indica il tempo necessario per un utente base per apprendere come utilizzare il prodotto.
+  Un valore basso indica che il prodotto è facile da usare e richiede poco tempo per essere appreso. 
+  Viene calcolato con sessioni di test con utenti;
+- *Valore ottimo*: \u{2264}5 min;
+- *Valore accettabile*: \u{2264}15 min (utente base);
+===== Errori Utente/Azione(MPD-EUA)
+- *Descrizione*:indica il numero di errori commessi dagli utenti durante l’utilizzo del prodotto. 
+  Un valore basso indica che il prodotto è intuitivo e facile da usare.
+  Viene calcolato tramite log delle interazioni;
+- *Valore ottimo*: 0;
+- *Valore accettabile*: \u{2264}0.5 errori/azione;
+===== Task Success Rate(MPD-TSR)
+- *Descrizione*:  indica la percentuale di task completati con successo dagli utenti. 
+  Un valore alto indica che il prodotto è facile da usare e che gli utenti riescono  a  completare  le  azioni  richieste.  
+  Viene  calcolato  con  sessioni  di  test  con utenti;
+- *Valore ottimo*: 100%;
+- *Valore accettabile*: \u{2265} 75%;
+=== Efficienza
+===== Tempo Risposta API(MPD-TRA)
+- *Descrizione*: misura il tempo di risposta delle API per il 90% delle richieste. 
+  Un valore basso indica che il sistema risponde velocemente alle richieste degli utenti;
+- *Valore ottimo*: \u{2264} 200 ms;
+- *Valore accettabile*: \u{2264} 500 ms;
+===== Memoria Processo(MPD-MP)
+- *Descrizione*: indica l’utilizzo della memoria da parte del sistema.
+  Un valore basso indica che il sistema utilizza in modo efficiente le risorse disponibili;
+- *Valore ottimo*: \u{2264} 256 MB;
+- *Valore accettabile*: \u{2264} 512 MB;
+===== Consumo Energetico(MPD-CE)
+- *Descrizione*: indica il consumo energetico del sistema. 
+  Un valore basso indica che il sistema consuma poca energia;
+- *Valore ottimo*: \u{2264} 1% batteria/min;
+- *Valore accettabile*: \u{2264} 2% batteria/min;
+=== Manutenibilità
+===== Complessità Ciclomatica(MPD-CC)
+- *Descrizione*: misura la complessità del codice. 
+  Un valore basso indica che il codice è semplice e facile da mantenere;
+- *Come calcolarlo*: $"Complessità Ciclomatica" = "E" - "N" + "P"$ dove:
+  - E = numero di archi nel grafo di controllo;
+  - N = numero di nodi nel grafo di controllo;
+  - P = numero di componenti connesse da ogni arco;
+- *Valore ottimo*: \u{2264} 10;
+- *Valore accettabile*: \u{2264} 15 per modulo;
+===== Debito Tecnico(MPD-DT)
+- *Descrizione*: misura la percentuale di debito tecnico rispetto al codice totale (spesso correlato alla presenza di debito tecnico). 
+  Un valore basso indica che il codice è ben strutturato e non presenta problemi tecnici;
+- *Come calcolarlo*: $"Debito Tecnico" = "Costo di rimozione del debito" / "Costo totale di sviluppo" * 100$;
+- *Valore ottimo*: \u{2264} 5%;
+- *Valore accettabile*: \u{2264} 15%;
+===== Code Smell Density(MPD-CSD)
+- *Descrizione*: indica il numero di «code smells» (cattive pratiche di codifica) per 100 righe di codice. 
+  Un valore basso indica che il codice è ben strutturato e non presenta problemi tecnici;
+- *Valore ottimo*: 0 smell;
+- *Valore accettabile*: \u{2264} $ "5 smell" / "100 righe"$;
+===== Tempo Fix Bug(MPD-TFB)
+- *Descrizione*:  misura il tempo medio per risolvere un bug critico. 
+  Un valore basso indica che il team è in grado di risolvere i bug in modo rapido ed efficiente;
+- *Come calcolarlo*:$ "Tempo Fix Bug" = "Tempo totale di riparazione bug" / "Numero totale di bug riparati"$;
+- *Valore ottimo*: \u{2264} 2 ore;
+- *Valore accettabile*: \u{2264} 4 ore (critico);
+=== Sicurezza
+===== Tasso di Autenticazione Fallita
+- *Descrizione*: misura la percentuale di tentativi di autenticazione falliti.
+  Un valore basso indica che il sistema è sicuro e che è difficile per gli utenti non autorizzati accedere al sistema;
+- *Valore ottimo*: \u{2264} 1%;
+- *Valore accettabile*: \u{2264} 5%;
+===== Crittografia Dati
+- *Descrizione*: misura il livello di crittografia dei dati sensibili. 
+  Un valore alto indica che i dati sono protetti e che è difficile per gli utenti non autorizzati accedere ai dati sensibili;
+- *Valore ottimo*: 100% dati sensibili;
+- *Valore accettabile*: 100% dati sensibili;
