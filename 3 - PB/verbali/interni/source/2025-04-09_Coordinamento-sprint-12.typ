@@ -59,7 +59,7 @@ Alla fine della riunione è stato visionato lo stato di avanzamento dei document
   columns: (1fr, 1fr, 1fr),
   inset: 8pt,
   fill: (x, y) => if (y == 0) { luma(230) },
-  table.header([*Membro*], [*Ruolo Sprint 10*], [*Ruolo Sprint 11*]),
+  table.header([*Membro*], [*Ruolo Sprint 11*], [*Ruolo Sprint 12*]),
   "Matteo Bazzan",
   "Programmatore",
   "Analista",
