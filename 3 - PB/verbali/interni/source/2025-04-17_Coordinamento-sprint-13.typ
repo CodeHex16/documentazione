@@ -53,7 +53,7 @@ tutti i membri.
   columns: (1fr, 1fr, 1fr),
   inset: 8pt,
   fill: (x, y) => if (y == 0) { luma(230) },
-  table.header([*Membro*], [*Ruolo Sprint 10*], [*Ruolo Sprint 11*]),
+  table.header([*Membro*], [*Ruolo Sprint 12*], [*Ruolo Sprint 13*]),
   "Matteo Bazzan",
   "Analista",
   "Programmatore",
