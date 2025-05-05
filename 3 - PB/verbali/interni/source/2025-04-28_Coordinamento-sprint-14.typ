@@ -33,7 +33,7 @@ Durante la riunione sono stati revisionati sia il prodotto software sia la docum
 Non sono comparsi problemi particolari riguardante la documentazione, ma riguardo il prodotto software è sorto un dubbio relativo alla gestione storica dei messaggi all'interno delle chat.
 
 == Organizzazione nuovo incontro con Ergon
-Per risolvere il dubbio sopra descritto il gruppo ha deciso di organizzare un incontro con l'azienda Ergon.
+Per risolvere il dubbio sopra descritto il gruppo ha deciso di organizzare un incontro con l'azienda Ergon che si terrà il 05-05-20205 alle ore 15:00.
 
 = Assegnazione ruoli
 - I *nuovi ruoli* per lo Sprint 11 sono:
