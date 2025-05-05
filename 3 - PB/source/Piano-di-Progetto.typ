@@ -28,10 +28,14 @@
   sommario: [Piano di Progetto],
 
   versioni: (
+	"1.5.0",
+	"05/05/2025",
+	"Luca Rossi",
+	"Aggiunto sprint 13",
     "1.4.0",
     "25/04/2025",
     "Francesco Fragonas",
-    "Aggiunto sprint 13",
+    "Aggiunto sprint 12",
     "1.3.0",
     "18/04/2025",
     "Luca Rossi",
@@ -40,7 +44,7 @@
     "1.2.0",
     "04/04/2025",
     "Luca Rossi",
-    "Aggiunto Sprint 10",
+    "Aggiunto Sprint 10 e 11",
     "Luca Ribon",
     "1.1.0",
     "04/04/2025",
@@ -1015,6 +1019,56 @@ Nel complesso, non sono emersi problemi rilevanti: l’unica leggera difficoltà
   [Zhuo], [51.45],
   [*TOTALE*], [*192.2*],
 )
+
+=== Sprint 13
+*Intervallo temporale*: 16/04/2025 – 27/04/2025
+
+#pseudoheading[*Retrospettiva*]
+Durante lo *Sprint 13*, il gruppo si sta avvicinando alla conclusione del progetto, con soli due sprint rimanenti prima della consegna finale. In questa fase è stato dato maggiore spazio allo sviluppo software, con il completamento delle funzionalità di autenticazione, gestione password e CRUD di documenti, utenti e #gloss[FAQ], inclusa la gestione dinamica di logo e colori.  
+Sono inoltre state definite e scritte le ultime sezioni delle *Norme di Progetto* e aggiornati *Piano di Qualifica* e *Piano di Progetto* con le ultime metriche e retrospettive.  
+Particolare attenzione è stata riservata anche alla qualità, con il rafforzamento del sistema CI/CD e l'inizio dei test di sistema e unitari, in preparazione al testing finale previsto per lo sprint successivo.
+
+#pseudoheading[*Attività svolte*]
+- *CRUD e autenticazione*: Implementazione del sistema CRUD per utenti/documenti/FAQ e completamento del login frontend e backend.
+- *Gestione interfaccia*: Finalizzazione delle personalizzazioni lato fornitore (profilo, logo, dark/light mode).
+- *Testing automatico*: Avvio test di sistema e unitari con verifica iniziale CI/CD.
+- *Documentazione*: Aggiornamento di Norme di Progetto (con sezione sviluppo e metriche), Piano di Progetto (retrospettiva sprint 12), Piano di Qualifica e relativi verbali.
+- *Pulizia post-merge*: Sistemazione interfaccia dopo merge e rifiniture grafiche.
+- *Redazione diari di bordo*: Compilazione dei diari 16 e 17 per tracciamento sprint.
+
+#pseudoheading[*Ruoli ricoperti e ore svolte*]
+
+#figure(
+  image("../imgs/sprint13-tabella.png", width: 100%),
+  caption: [
+    Suddivisione oraria per membro e ruolo.
+  ],
+)
+
+#figure(
+  image("../imgs/sprint13-grafico.png", width: 100%),
+  caption: [
+    Suddivisione oraria per ruolo con relativi costi.
+  ],
+)
+
+#table(
+  columns: (1fr, 1fr),
+  inset: 8pt,
+  align: (x, y) => if y > 0 { left } else { center + horizon },
+  fill: (x, y) => if y == 0 { luma(180) } else if (y == 2 or y == 4 or y == 6 or y == 8) { luma(230) },
+  table.header(table.cell(colspan: 2)[*Ore rimanenti per persona*]),
+  [*Membro*], [*Ore mancanti*],
+  [Ribon], [2.8],
+  [Bazzan], [6.55],
+  [Fragonas], [16.55],
+  [Magnelli], [17],
+  [Sabbadin], [21.1],
+  [Rossi], [24.5],
+  [Zhuo], [51.45],
+  [*TOTALE*], [*139.95*],
+)
+
 
 
 // == Periodo CA
