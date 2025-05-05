@@ -76,7 +76,6 @@ Parte backend
 - #issue("14", repo: "Database-API")[*Valutazione risposte del bot in chat*];
 - #issue("16", repo: "Database-API")[*Gestione statistiche backend*];
 - #issue("13", repo: "Database-API")[*Gestione recupero password*];
-- #issue("", repo: "")[**],
 Per quanto riguarda la documentazione:
 - #issue("395", repo: "documentazione")[*Aggiornare PdP con sprint 13*];
 - #issue("399", repo: "documentazione")[*Stesura verbale interno 28/04/2025*];
