@@ -21,6 +21,10 @@
   sommario: [Norme di progetto],
 
   versioni: (
+    "1.4.0",
+    "Gabriele Magnelli",
+    "Varie migliorie e aggiornamenti",
+    "",
     "1.3.0",
     "Luca Rossi",
     "24/04/2025",
@@ -118,11 +122,11 @@ Le definizioni sono disponibili nel documento Glossario.pdf e possono essere con
 
 - Preventivo costi e impegni:\ #link("https://codehex16.github.io/docs/1%20-%20candidatura/Preventivo-Costi-e-Impegni.pdf") _(versione 0.2.0)_;
 
-- Analisi dei requisiti:\ #link("https://codehex16.github.io/docs/2%20-%20RTB/Analisi-dei-Requisiti.pdf") _(versione 0.9.0)_;
+- Analisi dei requisiti:\ #link("https://codehex16.github.io/docs/3%20-%20PB/Analisi-dei-Requisiti.pdf") _(versione 0.9.0)_;
 
-- Piano di progetto:\ #link("https://codehex16.github.io/docs/2%20-%20RTB/Piano-di-Progetto.pdf") _(versione 0.7.0)_;
+- Piano di progetto:\ #link("https://codehex16.github.io/docs/3%20-%20PB/Piano-di-Progetto.pdf") _(versione 0.7.0)_;
 
-- Piano di Qualifica:\ #link("https://codehex16.github.io/docs/2%20-%20RTB/Piano-di-Qualifica.pdf") _(versione 1.0.0)_;
+- Piano di Qualifica:\ #link("https://codehex16.github.io/docs/3%20-%20PB/Piano-di-Qualifica.pdf") _(versione 1.0.0)_;
 
 - Standard ISO/IEC 12207:1995:\ #link("https://www.math.unipd.it/~tullio/IS-1/2009/Approfondimenti/ISO_12207-1995.pdf") _(ultima consultazione 06-03-2025)_;
 
@@ -156,7 +160,7 @@ Il gruppo CodeHex16 manterrà un dialogo attivo e regolare con il Proponente per
 Il formato testuale è chiaro, ma ci sono metodi di comunicazione che hanno maggiore fluidità e precisione:
 
 I #gloss[Meeting] saranno organizzati con cadenza variabile e fissati tramite e-mail in base alle necessità riscontrate durante lo sviluppo del progetto. Tutti i dettagli discussi durante questi incontri saranno documentati in verbali, con particolare attenzione alle decisioni prese. I verbali saranno disponibili al seguente link:
-#link("https://github.com/CodeHex16/documentazione/tree/main/2%20-%20RTB/verbali/esterni")[Verbali esterni - https://github.com/CodeHex16/documentazione/tree/main/2%20-%20RTB/verbali/esterni]
+#link("https://github.com/CodeHex16/documentazione/tree/main/3%20-%20PB/verbali/esterni")[Verbali esterni - https://github.com/CodeHex16/documentazione/tree/main/2%20-%20RTB/verbali/esterni]
 
 === Documentazione prodotta
 In questa sezione viene illustrata la documentazione prodotta dal gruppo nel processo di fornitura, che sarà messa a disposizione del Proponente, Ergon Informatica, e dei Committenti, i professori Tullio Vardanega e Riccardo Cardin.
@@ -169,14 +173,21 @@ Nel documento #link("https://codehex16.github.io/docs/1%20-%20candidatura/Preven
 
 Probabilmente non va messa qui:
 ==== Analisi dei requisiti
-Nel documento #link("https://codehex16.github.io/docs/2%20-%20RTB/Analisi-dei-Requisiti.pdf")[Analisi dei Requisiti], il gruppo ha definito tutti gli #gloss[Use Case] e i requisiti, frutto di un’attenta analisi del capitolato e della comprensione dell’utilizzo finale del progetto. Il contenuto di questo documento è stato arricchito grazie alle riflessioni svolte con il referente dell’azienda proponente durante gli incontri svolti.
+Nel documento #link("https://codehex16.github.io/docs/3%20-%20PB/Analisi-dei-Requisiti.pdf")[Analisi dei Requisiti], il gruppo ha definito tutti gli #gloss[Use Case] e i requisiti, frutto di un’attenta analisi del capitolato e della comprensione dell’utilizzo finale del progetto. Il contenuto di questo documento è stato arricchito grazie alle riflessioni svolte con il referente dell’azienda proponente durante gli incontri svolti.
 
 ==== Piano di progetto
-Nel documento #link("https://codehex16.github.io/docs/2%20-%20RTB/Piano-di-Progetto.pdf")[Piano di Progetto] è stato pianificato l'avanzamento del progetto suddiviso nei 3 periodi chiave (Candidatura, RTB e PB) con una particolare attenzione agli #gloss[Sprint] settimanali effettuati. Per ognuno è stato descritto il lavoro svolto, il rendiconto delle ore e dei costi in base ai ruoli assegnati. \
+Nel documento #link("https://codehex16.github.io/docs/3%20-%20PB/Piano-di-Progetto.pdf")[Piano di Progetto] è stato pianificato l'avanzamento del progetto suddiviso nei 3 periodi chiave (Candidatura, RTB e PB) con una particolare attenzione agli #gloss[Sprint] settimanali effettuati. Per ognuno è stato descritto il lavoro svolto, il rendiconto delle ore e dei costi in base ai ruoli assegnati. \
 Inoltre è presente una retrospettiva per ogni periodo volto al raggiungimento di una milestone.
 
 ==== Piano di qualifica
-Nel documento #link("https://codehex16.github.io/docs/2%20-%20RTB/Piano-di-Qualifica.pdf ")[Piano di Qualifica] vengono dichiarati gli obiettivi di qualità che il gruppo si prefigge di raggiungere durante lo sviluppo del progetto. Vengono inoltre descritte le metodologie di verifica e validazione adottate per garantire la qualità del prodotto finale, indicando anche le metriche di qualità utilizzate per misurare il grado di soddisfacimento degli obiettivi prefissati.
+Nel documento #link("https://codehex16.github.io/docs/3%20-%20PB/Piano-di-Qualifica.pdf ")[Piano di Qualifica] vengono dichiarati gli obiettivi di qualità che il gruppo si prefigge di raggiungere durante lo sviluppo del progetto. Vengono inoltre descritte le metodologie di verifica e validazione adottate per garantire la qualità del prodotto finale, indicando anche le metriche di qualità utilizzate per misurare il grado di soddisfacimento degli obiettivi prefissati.
+
+==== Specifica tecnica
+Nel documento #link("https://codehex16.github.io/docs/3%20-%20PB/Specifica-Tecnica.pdf ")[Specifica Tecnica] il gruppo descrive e fornisce una panoramica dettagliata delle scelte progettuali e tecniche delle componenti del prodotto sviluppato.
+
+==== Manuale utente
+Nel documento #link("https://codehex16.github.io/docs/3%20-%20PB/Manuale-Utente.pdf ")[Manuale Utente]  il gruppo cerca di fornire una guida per l'utilizzo del prodotto, spiegandone l'installazione, i
+requisiti consigliati per garantire il corretto funzionamento dell'applicazione, le funzionalità principali e le modalità di utilizzo.
 
 === Strumenti utilizzati
 Per lo svolgimento del progetto abbiamo utilizzato i seguenti strumenti:
@@ -258,7 +269,7 @@ Nello specifico la documentazione dovrà prevedere la documentazione dedicata al
 
 Il gruppo ha definito norme precise per il processo di sviluppo del codice, volte a garantire uniformità, qualità e tracciabilità durante tutte le fasi di implementazione.
 
-===== Naming delle branch
+===== Naming delle branch per la parte di codice
 Ogni branch deve essere nominata seguendo la convenzione:
 - *oggettoDellaBranch-utente-sprint*
 dove l'oggetto rappresenta brevemente l'attività svolta, l'utente indica chi ha creato il branch, e sprint si riferisce allo sprint di appartenenza.
@@ -301,7 +312,6 @@ Lo stile dei sorgenti seguirà le convenzioni ufficiali delle principali guideli
 - Per il codice *TypeScript/JavaScript*, si seguiranno le convenzioni del [Google TypeScript Style Guide](https://google.github.io/styleguide/tsguide.html#naming).
 
 La coerenza nello stile favorirà la leggibilità del codice e semplificherà i processi di revisione.
-
 
 === Strumenti usati
 - *VS Code*: per la scrittura del codice;
@@ -369,7 +379,6 @@ Verranno prodotti i seguenti documenti:
 - *Analisi dei Requisiti*;
 - *Piano di Qualifica*;
 - *Manuale Utente*;
-- *Manuale Sviluppatore*;
 - *#gloss[Specifica tecnica]*; 
 - *Glossario*;
 - *Verbali esterni*;
@@ -502,6 +511,11 @@ I test di regressione vengono impiegati per assicurare che la correzione o la mo
 Tali test sono necessari per garantire che le modifiche non compromettano le funzionalità già testate e funzionanti, evitando quindi la comparsa di regressioni nel sistema.
 \ \ *Test di accettazione*\ 
 I test di accettazione devono essere eseguiti insieme al committente al fine di verificare che il prodotto finale rispetti tutti i requisiti richiesti.
+Tutti i test di unità per essere descritti seguono la seguente nomenclatura: *Test_NomeMetodoTestato*.
+Invece gli altri test sono definiti come: *Test_Tipo_OggettoTestato* in cui:
+- Tipo: indica il tipo di test che può essere:
+  - Test d'integrazione;
+  - Test di regressione;
 === Validazione
 La validazione è la verifica ultima per garantire che il prodotto sia in linea con le aspettative e che rispetti i requisiti richiesti e per questo è una fase molto importante nello sviluppo del progetto.
 Questo processo segue il processo di verifica e si sofferma su alcuni aspetti quali:
