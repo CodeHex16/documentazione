@@ -17,6 +17,11 @@
   "Yi Hao Zhuo",
   "Verificatore",
 ), sommario: [Piano di qualifica], versioni: (
+  "1.2.0",
+  "06/05/2025",
+  "Filippo Sabbadin",
+  "",
+  "",
   "1.1.0",
   "06/04/2025",
   "Filippo Sabbadin",
@@ -766,6 +771,9 @@ periodi, si è verificata una diminuzione dei costi. Invece i rialzi sono più c
 periodi in cui avevamo bisogno di ore aggiuntive per il ruolo di verificatore.
 
 === PB
+#figure(image("../imgs/SwePdQBacEacPB.png", width: 95%), caption: [
+  Stima del costo totale durante i vari #gloss[sprint] della PB.
+])
 Durante la fase PB, il costo preventivato è rimasto invariato mentre le stime del costo totale sono state più stabili. 
 
 == MPC-EV(Estimated Value) - MPC-PV(Planned Value)
@@ -778,8 +786,12 @@ sprint 6 e 7 in cui vari componenti del team hanno avuto degli esami da svolgere
 leggermente diminuita.
 
 === PB
+#figure(image("../imgs/SwePdQEvPvPB.png", width: 95%), caption: [
+  Stima dei valori di PV e EV durante i vari sprint della PB.
+])
 Come scritto nella sezione sugli automiglioramenti, il gruppo ha avuto difficoltà a lavorare in parallelo sugli stessi
 file, risolto usando la funzione dei branch di Git. Questo ha portato a un aumento del tempo di lavoro.
+Tuttavia, durante il periodo di vacanze pasquali, è stato riscontrato una riduzione del lavoro rispetto a quello stimato.
 
 == MPC-AC(Actual Cost) - MPC-ETC(Estimated To Completion)
 #figure(image("../imgs/SwePdQAcEtcBac.png", width: 100%), caption: [
@@ -791,8 +803,12 @@ effettivamente speso dal team durante i vari periodi. Si nota che l'ETC, giustam
 l'avanzare degli sprint, mentre l'AC rispetta una crescita proporzionale alla velocità con cui l'ETC decresce.
 
 === PB
+#figure(image("../imgs/SwePdQAcEtcBacPB.png", width: 95%), caption: [
+  Stima dei valori di AC e ETC durante i vari sprint della PB.
+])
 Visto l'aumento di velocità del gruppo durante la fase PB con il consumo di più ore, i valori di ETC sono diminuiti più
 velocemente, e i valori di AC sono aumentati più velocemente rispetto al budget speso.
+L'unica eccezione è il periodo in cui il gruppo ha avuto delle vacanze pasquali e quindi il lavoro è diminuito insieme ai costi, recuperati poi nello sprint successivo.
 
 == MPC-SC(Schedule Variance) - MPC-CV(Cost Variance)
 #figure(image("../imgs/SwePdQCvSv.png", width: 100%), caption: [
@@ -851,8 +867,8 @@ Requisiti e questo è causato dalla specificità degli argomenti trattati e dal 
 documenti l'indice Gulpease è sopra l'ottimo per la maggior parte degli sprint.
 
 === PB
-Durante la fase PB, l'indice è rimasto abbastanza stabile e non vi sono stati cambiamenti sostanziali.
-
+Durante la fase PB, l'indice è rimasto abbastanza stabile e non vi sono stati cambiamenti sostanziali per i documenti già esistenti.
+Invece per i documenti nuovi, si può vedere una maggiore instabilità,
 == MPC-Non-Calculated-Risk
 #figure(image("../imgs/SwePdQ_NcR.png", width: 100%), caption: [
   Stima dei valori di CV e SV durante i vari sprint.
