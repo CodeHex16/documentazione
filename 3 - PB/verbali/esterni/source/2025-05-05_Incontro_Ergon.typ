@@ -37,7 +37,7 @@ aziendale.
 = Domande e dubbi posti
 #set enum(numbering: "Q1.", spacing: 1.5em)
 
-+ _Abbiamo un dubbio su come salvare le impostazioni della piattaforma definite dal fornitore: ci sono due opzioni file e
++ _Abbiamo un dubbio su come salvare le impostazioni della piattaforma definite dal #gloss[fornitore]: ci sono due opzioni file e
   database, con il file è molto più veloce il caricamento ma nel caso dovessimo propagare le impostazioni su più server
   diventerebbe difficile, cosa consigliate?_\
   Il referente aziendale ha consigliato di usare il database, in quanto è più semplice da gestire e permette di
@@ -46,7 +46,7 @@ aziendale.
 + _Lo scopo della limitazione dello storico delle chat è quello di non consumare troppe risorse oppure solo della
   visualizzazione dei messaggi? In più una limitazione temporale ci sembra un indicatore non ottimale, non sarebbe meglio
   usare il numero di messaggi passati?_\
-  Il chatbot utilizza solo uno stretto numero di messaggi recenti per evitare problemi, mantenere uno storico di più
+  Il #gloss[chatbot] utilizza solo uno stretto numero di messaggi recenti per evitare problemi, mantenere uno storico di più
   messaggi è comunque utile per l'utente per avere un contesto della conversazione. Inoltre, il referente aziendale ha
   suggerito di eliminare le chat anche dal database per liberare spazio, tuttavia non è strettamente necessario e ha dato
   libertà al gruppo di decidere.
@@ -59,7 +59,7 @@ aziendale.
 
 = Conclusioni e nuovi issue
 Successivamente alle domande, è stato presentato il prodotto allo stato attuale, mostrando le funzionalità del
-fornitore, tra cui: gestione clienti, gestione documenti, impostazioni e gestione FAQ. Finito l'incontro, il gruppo ha
+fornitore, tra cui: gestione clienti, gestione documenti, impostazioni e gestione #gloss[FAQ]. Finito l'incontro, il gruppo ha
 assegnato degli issue su github in base al feedback e riscontri ricevuti durante l'incontro:
 - #issue("25", repo: "Suppl-AI")[*Aggiungere bottone delle FAQ nella chat*];
 - #issue("21", repo: "Database-API")[*Salvataggio delle preferenze nel database*]
