@@ -24,7 +24,7 @@
     "1.4.0",
     "Gabriele Magnelli",
     "Varie migliorie e aggiornamenti",
-    "",
+    "Luca Ribon",
     "1.3.0",
     "Luca Rossi",
     "24/04/2025",
@@ -98,10 +98,10 @@ Questo documento ha lo scopo di delineare le principali fasi di sviluppo, i ruol
 Il documento non si limita a fornire una panoramica iniziale ma si propone come un riferimento dinamico, soggetto a revisioni e aggiornamenti continui. Tale approccio incrementale assicura che il contenuto resti sempre aggiornato rispetto alle esigenze del progetto e alle best practices emergenti, consentendo al gruppo di adattarsi rapidamente a nuovi requisiti o cambiamenti contestuali.
 
 == Scopo del prodotto
-Il progetto prevede lo sviluppo di un #gloss[Chatbot] avanzato, basato su modelli linguistici #gloss[LLM] (Large Language Models), pensato per migliorare la comunicazione tra aziende fornitrici e i loro clienti. Questo #gloss[assistente virtuale] permetterà agli utenti di ottenere rapidamente e in modo intuitivo informazioni dettagliate su prodotti o servizi offerti, eliminando la necessità di contattare direttamente l’azienda.
+Il progetto prevede lo sviluppo di un #gloss[Chatbot] avanzato, basato su modelli linguistici #gloss[LLM] (Large Language Models), pensato per migliorare la comunicazione tra aziende fornitrici e i loro clienti. Questo #gloss[assistente virtuale] permetterà agli utenti di ottenere rapidamente e in modo intuitivo informazioni dettagliate su prodotti o servizi offerti, eliminando la necessità di contattare direttamente l'azienda.
 
 
-Il sistema includerà anche un’interfaccia dedicata per le aziende fornitrici, offrendo strumenti per gestire i clienti e i documenti di riferimento che contengono le informazioni necessarie. Questi documenti saranno utilizzati dal modello linguistico per generare risposte personalizzate e accurate, garantendo un’esperienza utente ottimale. L'intero sistema sarà accessibile tramite una #gloss[Webapp], assicurando una gestione efficiente e una fruizione semplice per tutti gli utenti coinvolti.
+Il sistema includerà anche un'interfaccia dedicata per le aziende fornitrici, offrendo strumenti per gestire i clienti e i documenti di riferimento che contengono le informazioni necessarie. Questi documenti saranno utilizzati dal modello linguistico per generare risposte personalizzate e accurate, garantendo un'esperienza utente ottimale. L'intero sistema sarà accessibile tramite una #gloss[Webapp], assicurando una gestione efficiente e una fruizione semplice per tutti gli utenti coinvolti.
 
 == Glossario
 Per agevolare la comprensione del presente documento, è stato predisposto un glossario che spiega il significato dei termini specifici utilizzati nel contesto del progetto. Per facilitare la comprensione, questi termini avranno il seguente stile:
@@ -111,6 +111,7 @@ Le definizioni sono disponibili nel documento Glossario.pdf e possono essere con
 #link("https://codehex16.github.io/glossario")
 
 == Riferimenti
+// TODO: aggiornare riferimenti e link
 === Riferimenti normativi
 - Capitolato C7 - Assistente Virtuale Ergon:\  #link("https://www.math.unipd.it/~tullio/IS-1/2024/Progetto/C7.pdf") _(ultima consultazione 03-03-2025)_;
 === Riferimenti informativi
@@ -136,10 +137,10 @@ Le definizioni sono disponibili nel documento Glossario.pdf e possono essere con
 = Processi primari
 
 == Processo di fornitura
-Il processo di fornitura è strutturato in conformità agli esiti previsti dalla clausola 5.2 dello #gloss[Standard] ISO/IEC 12207:1997. Tale processo include la definizione di requisiti concordati, l’analisi dei rischi associati, e la pianificazione di tempi e costi.
+Il processo di fornitura è strutturato in conformità agli esiti previsti dalla clausola 5.2 dello #gloss[Standard] ISO/IEC 12207:1997. Tale processo include la definizione di requisiti concordati, l'analisi dei rischi associati, e la pianificazione di tempi e costi.
 
 === Scopo e descrizione
-Il processo di fornitura è finalizzato a garantire la realizzazione di un prodotto o servizio che soddisfi i requisiti concordati tra #gloss[Proponente] e #gloss[Committente]. L'accordo tra le parti deve definire in modo chiaro i requisiti, le tempistiche e i costi da rispettare. Prima di stipulare tale accordo, il #gloss[Fornitore] avrà condotto un’analisi dettagliata del progetto proposto, identificando i rischi correlati e stabilendo le linee guida necessarie per gestirli efficacemente.
+Il processo di fornitura è finalizzato a garantire la realizzazione di un prodotto o servizio che soddisfi i requisiti concordati tra #gloss[Proponente] e #gloss[Committente]. L'accordo tra le parti deve definire in modo chiaro i requisiti, le tempistiche e i costi da rispettare. Prima di stipulare tale accordo, il #gloss[Fornitore] avrà condotto un'analisi dettagliata del progetto proposto, identificando i rischi correlati e stabilendo le linee guida necessarie per gestirli efficacemente.
 
 === Attività 
 Il processo di fornitura prevede varie attività:
@@ -173,7 +174,7 @@ Nel documento #link("https://codehex16.github.io/docs/1%20-%20candidatura/Preven
 
 Probabilmente non va messa qui:
 ==== Analisi dei requisiti
-Nel documento #link("https://codehex16.github.io/docs/3%20-%20PB/Analisi-dei-Requisiti.pdf")[Analisi dei Requisiti], il gruppo ha definito tutti gli #gloss[Use Case] e i requisiti, frutto di un’attenta analisi del capitolato e della comprensione dell’utilizzo finale del progetto. Il contenuto di questo documento è stato arricchito grazie alle riflessioni svolte con il referente dell’azienda proponente durante gli incontri svolti.
+Nel documento #link("https://codehex16.github.io/docs/3%20-%20PB/Analisi-dei-Requisiti.pdf")[Analisi dei Requisiti], il gruppo ha definito tutti gli #gloss[Use Case] e i requisiti, frutto di un'attenta analisi del capitolato e della comprensione dell'utilizzo finale del progetto. Il contenuto di questo documento è stato arricchito grazie alle riflessioni svolte con il referente dell'azienda proponente durante gli incontri svolti.
 
 ==== Piano di progetto
 Nel documento #link("https://codehex16.github.io/docs/3%20-%20PB/Piano-di-Progetto.pdf")[Piano di Progetto] è stato pianificato l'avanzamento del progetto suddiviso nei 3 periodi chiave (Candidatura, RTB e PB) con una particolare attenzione agli #gloss[Sprint] settimanali effettuati. Per ognuno è stato descritto il lavoro svolto, il rendiconto delle ore e dei costi in base ai ruoli assegnati. \
@@ -269,7 +270,7 @@ Nello specifico la documentazione dovrà prevedere la documentazione dedicata al
 
 Il gruppo ha definito norme precise per il processo di sviluppo del codice, volte a garantire uniformità, qualità e tracciabilità durante tutte le fasi di implementazione.
 
-===== Naming delle branch per la parte di codice
+===== Naming delle branch per i repository di sviluppo
 Ogni branch deve essere nominata seguendo la convenzione:
 - *oggettoDellaBranch-utente-sprint*
 dove l'oggetto rappresenta brevemente l'attività svolta, l'utente indica chi ha creato il branch, e sprint si riferisce allo sprint di appartenenza.
@@ -602,7 +603,7 @@ Più in particolare quando viene individuato un compito da svolgere vengono eseg
   + altrimenti le issue rimangono aperte e il verificatore suggerisce dei cambiamenti e/o correzioni a carico dell'assegnatario, una volta apportate tali modifiche si torna al punto 3;
 
 === Strumenti usati
-- *Github*: per gestire tutta la documentazione e il codice per il progetto in un repository;;
+- *Github*: per gestire tutta la documentazione e il codice per il progetto in un repository;
 - *GitHub Issue* per assegnare i compiti ad ogni membro avendo un rendiconto preciso dei ruoli e delle ore svolte per ogni sprint;
 - *GitHub Project* per visualizzare in modo più ordinato le issue e i loro dettagli;
 
@@ -663,6 +664,8 @@ Le principali attività del processo di formazione sono:
 - *Github*: per gestire tutta la documentazione e il codice per il progetto in un repository;
 - *Notion*: per organizzare appunti e documenti in modo non ufficiale;
 - *Telegram*: per comunicare in modo veloce con gli altri membri del team;
+
+// TODO: rincontrollare metriche
 = Metriche e standard per la qualità
 Per  migliorare e avere uno standard di qualità da cui attingere il gruppo ha deciso di utilizzare degli standard riconosciuti a livello internazionale. 
 Tra quelli disponibili è stato scelto lo standard  ISO/IEC 12207:1995 per quanto riguarda la qualità dei processi principali, organizzativi e di supporto.
@@ -744,7 +747,7 @@ Quindi una metrica avrà come sigla : *MPC/MPD-AcronimoMetrica*.
 - *Valore accettabile*: \u{2264} 105% EC;
 ===== Actual Cost(MPC-AC)
 - *Descrizione*: budget utilizzato fino a quel determinato momento. 
-  Indicatore utile per monitorare l’andamento del progetto e valutare se i costi rispettano le aspettative;
+  Indicatore utile per monitorare l'andamento del progetto e valutare se i costi rispettano le aspettative;
 - *Valore ottimo*: \u{2264} EAC;
 - *Valore accettabile*: \u{2265} 0%;
 ===== Earned Value(MPC-EV)
@@ -845,7 +848,7 @@ Quindi una metrica avrà come sigla : *MPC/MPD-AcronimoMetrica*.
 - *Valore accettabile*: \u{2265} 90%;
 ===== Test Superati in Percentuale(MPC-TSP)
 - *Descrizione*: Indica la proporzione di test automatizzati o manuali che sono stati eseguiti con successo rispetto al totale dei test previsti. 
-  Viene espressa come una percentuale e serve a misurare quanto dell’applicazione in fase di sviluppo è stato verificato con successo tramite i test. 
+  Viene espressa come una percentuale e serve a misurare quanto dell'applicazione in fase di sviluppo è stato verificato con successo tramite i test. 
   Una percentuale alta di test superati indica che il sistema è stabile e che la maggior parte delle funzionalità funzionano come previsto.
   Quindi indica quanti test sono stati superati;
 - *Come calcolarlo*: $"Test Superati in Percentuale" = "Numero di Test Superati" / "Numero Totale di Test" * 100$;
@@ -912,7 +915,7 @@ Quindi una metrica avrà come sigla : *MPC/MPD-AcronimoMetrica*.
 - *Valore accettabile*: \u{2265} 48h;
 ===== Disponibilità Sistema(MPD-DS)
 - *Descrizione*: indica la percentuale di tempo in cui il sistema è operativo. 
-  Un valore alto indica che il sistema è affidabile e che è disponibile per l’utente;
+  Un valore alto indica che il sistema è affidabile e che è disponibile per l'utente;
 - *Come calcolarlo*: $"Disponibilità Sistema" = "MTBF" / "(MTBF+MTTR)"$ dove:
   - *MTBF* = Mean Time Between Failure = tempo medio tra un guasto e il successivo;
   - *MTTR* = Mean Time To Repair = tempo medio di riparazione;
@@ -926,7 +929,7 @@ Quindi una metrica avrà come sigla : *MPC/MPD-AcronimoMetrica*.
 - *Valore ottimo*: \u{2264}5 min;
 - *Valore accettabile*: \u{2264}15 min (utente base);
 ===== Errori Utente/Azione(MPD-EUA)
-- *Descrizione*:indica il numero di errori commessi dagli utenti durante l’utilizzo del prodotto. 
+- *Descrizione*:indica il numero di errori commessi dagli utenti durante l'utilizzo del prodotto. 
   Un valore basso indica che il prodotto è intuitivo e facile da usare.
   Viene calcolato tramite log delle interazioni;
 - *Valore ottimo*: 0;
@@ -944,7 +947,7 @@ Quindi una metrica avrà come sigla : *MPC/MPD-AcronimoMetrica*.
 - *Valore ottimo*: \u{2264} 200 ms;
 - *Valore accettabile*: \u{2264} 500 ms;
 ===== Memoria Processo(MPD-MP)
-- *Descrizione*: indica l’utilizzo della memoria da parte del sistema.
+- *Descrizione*: indica l'utilizzo della memoria da parte del sistema.
   Un valore basso indica che il sistema utilizza in modo efficiente le risorse disponibili;
 - *Valore ottimo*: \u{2264} 256 MB;
 - *Valore accettabile*: \u{2264} 512 MB;
