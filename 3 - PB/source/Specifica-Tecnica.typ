@@ -100,7 +100,7 @@ che hanno portato alla sua scelta.
 #figure(
   caption: "Linguaggi utilizzati",
   table(
-    columns: (0.3fr, 1fr, 0.3fr),
+    columns: (auto, 1fr, auto),
     inset: 8pt,
     align: (x, y) => if (y > 0) { left } else { center + horizon },
     fill: (x, y) => if y == 0 { luma(190) } else if (y == 2 or y == 4) { luma(230) },
@@ -122,28 +122,87 @@ che hanno portato alla sua scelta.
     "5.8.3",
   ),
 )
-=== Framework e librerie
+=== Framework
 #figure(
-  caption: "Framework e librerie utilizzati",
+  caption: "Framework utilizzati",
   table(
-    columns: (0.3fr, 1fr, 0.3fr),
+    columns: (auto, 1fr, auto),
     inset: 8pt,
     align: (x, y) => if (y > 0) { left } else { center + horizon },
     fill: (x, y) => if y == 0 { luma(190) } else if (y == 2 or y == 4) { luma(230) },
-    table.header([*Linguaggio*], [*Motivazione*], [*Versione*]),
+    table.header([*Nome*], [*Motivazione*], [*Versione*]),
     "Svelte",
     "Scelto per la sua semplicità e leggerezza, è il framework utilizzato per il rendering delle pagine del front-end. Permette di creare UI e UX gradevoli con una struttura e semantica del codice che il gruppo ha preferito rispetto ad altri framework.",
     "5.25.10",
     "SvelteKit",
     "Scelto per la sua integrazione con Svelte, è un framework per lo sviluppo di applicazioni web. Permette di gestire implementare funzioni come ottimizzazione delle build, routing in modo semplice.",
+    "",
     "FastAPI",
     "Framework scelto per la sua facilità nell'implementazione di API REST. È utilizzato per il back-end per far comunicare tra loro i componenti software.",
     "0.115.12",
-    "LangChain",
-    "Libreria scelta per l'integrazione tra modelli AI e database, permette di gestire documenti, contesto e query rivolte all'LLM integrato.",
-    "0.9.71", //https://changelog.langchain.com/
+
   ),
 )
+=== Librerie
+#pseudoheading("Python")
+#figure(
+  caption: "Librerie utilizzate",
+  table(
+    columns: (auto, 1fr, auto),
+    inset: 8pt,
+    align: (x, y) => if (y > 0) { left } else { center + horizon },
+    fill: (x, y) => if y == 0 { luma(190) } else if (y == 2 or y == 4) { luma(230) },
+    table.header([*Nome*], [*Motivazione*], [*Versione*]),
+    "langchain", "Libreria scelta per l'integrazione tra modelli AI e database, permette di gestire documenti, contesto e query rivolte all'LLM integrato.", "0.3.25",
+
+    "passlib", "Libreria che implementa diversi algoritmi di hashing che sono stati utilizzati per la gestione delle password.", "1.7.4",
+
+    "pydantic_core", "Libreria utile per la modellazione di schemi utilizzati nella trasferimento di dati tramite chiamate API.", "2.33.2",
+
+    "bcrypt", "Libreria per l'hashing delle password, specificamente implementa l'algoritmo bcrypt, noto per la sua robustezza.", "4.3.0",
+
+    "motor", "Driver asincrono per MongoDB, permette di interagire con il database in modo non bloccante, ideale per applicazioni web moderne (es. con FastAPI).", "3.7.0",
+
+    "python-jose", "Libreria per la gestione di token JWT (JSON Web Tokens) e altre specifiche JOSE (Javascript Object Signing and Encryption), utile per l'autenticazione e la trasmissione sicura di informazioni.", "3.4.0",
+
+    "requests", "Libreria HTTP per Python, utilizzata per inviare richieste HTTP/1.1 di tutti i tipi (GET, POST, PUT, ecc.).", "2.32.3",
+
+    "pymongo", "Libreria utilizzata per la manipolazione del database MongoDB.", "4.12.1",
+
+    "uvicorn", "Server ASGI (Asynchronous Server Gateway Interface) ad alte prestazioni, comunemente utilizzato per eseguire applicazioni web asincrone Python come quelle basate su FastAPI o Starlette.", "0.34.2",
+
+    "jwt", "Libreria per la codifica e decodifica di JSON Web Tokens (JWT), utilizzata per l'autenticazione e lo scambio sicuro di informazioni.", "1.3.1",
+
+    "fastapi-mail", "Estensione per FastAPI che facilita l'invio di email, supportando l'invio asincrono e la gestione di template.", "1.4.2",
+
+    "pytz", "Libreria per la gestione accurata dei fusi orari in Python, basata sul database Olson tz.", "2025.2",
+
+    "starlette", "Framework ASGI (Asynchronous Server Gateway Interface) leggero e toolkit, su cui sono costruiti framework più completi come FastAPI. Fornisce le basi per costruire servizi web asincroni.", "0.46.2",
+
+    "openai", "Libreria client ufficiale di OpenAI per interagire con le loro API", "1.77.0",
+
+    "chromadb", "Database vettoriale open-source progettato per applicazioni AI, facilita la memorizzazione, l'interrogazione e la gestione di embedding per funzionalità come la ricerca semantica.", "0.6.3",
+
+    "bson", "Libreria per la codifica e decodifica di BSON (Binary JSON), il formato di serializzazione dei dati utilizzato da MongoDB.", "0.5.10",
+
+    "pypdf", "Libreria Python pura per la manipolazione di file PDF: permette di dividere, unire, ritagliare, crittografare, decrittografare pagine PDF e estrarre testo.", "5.4.0",
+
+    "python-multipart", "Libreria per il parsing di dati multipart/form-data, comunemente usata nei web framework per gestire upload di file e dati di form complessi.", "0.0.20",
+
+    "tailwindcss", "Un framework CSS utility-first per costruire rapidamente interfacce utente personalizzate direttamente nel markup HTML.", "3.4.9",
+
+    "prettier", "Un formattatore di codice 'opinionated' che supporta molti linguaggi e si integra con la maggior parte degli editor per mantenere uno stile di codice consistente.", "3.3.2",
+
+    "vite", "Uno strumento di build per il frontend moderno che offre un'esperienza di sviluppo estremamente veloce e bundle ottimizzati per la produzione.", "6.0.0",
+
+    "lucide-svelte", "Libreria di icone SVG (basate su Lucide) per componenti Svelte.", "0.468.0",
+
+    "marked", "Un parser Markdown per convertire Markdown in HTML.", "15.0.7",
+
+    "mode-watcher", "Utility per Svelte per rilevare e reagire ai cambiamenti della preferenza di tema del sistema operativo (chiaro/scuro) o per gestirla manualmente.", "0.5.0",
+  ),
+)
+
 === Strumenti e servizi
 #figure(
   caption: "Strumenti e servizi utilizzati",
@@ -152,16 +211,16 @@ che hanno portato alla sua scelta.
     inset: 8pt,
     align: (x, y) => if (y > 0) { left } else { center + horizon },
     fill: (x, y) => if y == 0 { luma(190) } else if (y == 2 or y == 4) { luma(230) },
-    table.header([*Linguaggio*], [*Motivazione*], [*Versione*]),
+    table.header([*Strumento*], [*Motivazione*], [*Versione*]),
     "Git",
     "Utilizzato per il versionamento del codice sorgente, permette di tenere traccia delle modifiche e collaborare con altri membri del team",
     "2.49.0",
-    "GPT-4o-mini",
+    "GPT-4o mini",
     "Il modello utilizzato per il chatbot, scelto in base al prezzo e qualità delle risposte",
     "-",
     "Docker",
     "Utilizzato per suddividere ed eseguire in container l'applicazione, rendendola facilmente distribuibile e scalabile in diversi ambienti",
-    "0.21.0 Build\n28.0.4 Engine\n4.40.0 Desktop\n2.34.0 Compose",
+    "28.1.1",
     "MongoDB",
     "Database NoSQL utilizzato per memorizzare documenti, cronologia delle conversazioni e utenti. Scelto perché rende più facile e diretto memorizzare i file come formato json",
     "8.0",
@@ -171,6 +230,7 @@ che hanno portato alla sua scelta.
   ),
 )
 
+
 == Tecnologie per i test
 #figure(
   caption: "Tecnologie per il testing utilizzate",
@@ -179,7 +239,7 @@ che hanno portato alla sua scelta.
     inset: 8pt,
     align: (x, y) => if (y > 0) { left } else { center + horizon },
     fill: (x, y) => if y == 0 { luma(190) } else if (y == 2 or y == 4) { luma(230) },
-    table.header([*Linguaggio*], [*Motivazione*], [*Versione*]),
+    table.header([*Tecnologia*], [*Motivazione*], [*Versione*]),
     "Github Actions",
     "Utilizzato per l'integrazione continua e il testing automatico del codice. Permette di eseguire test e controlli di qualità ogni volta che viene effettuata una modifica al codice sorgente o prima di un merge con un altro branch",
     "-",
@@ -191,50 +251,48 @@ che hanno portato alla sua scelta.
 // ......
 // Indicare strumenti e librerie impiegati per le attività di testing e analisi del codice.
 
-= API
 
-== Endpoint di autenticazione
-// Descrivere endpoint come login/logout, specificando metodi, parametri e formati.
+= Architettura
 
-== Endpoint di chat
-// Presentare endpoint relativi all’interazione con il #gloss[chatbot] (creazione, invio messaggi, #gloss[FAQ]).
+In questa sezione viene presentata l'architettura del sistema, suddivisa in tre parti principali: il front-end, il back-end e il database. Ogni parte è descritta in dettaglio, evidenziando le tecnologie utilizzate e le scelte architetturali adottate.
 
-== Endpoint di gestione documenti
-// Esporre endpoint per upload, visualizzazione ed eliminazione documenti.
+Il sistema adotta un'*architettura a microservizi*, composta da un frontend (_Suppl-AI_), un'API per la gestione della persistenza dei dati (_Database-API_) e un'API interfacciarsi con l'LLM (_LLM-API_).
 
-== Altri endpoint
-// Inserire eventuali endpoint aggiuntivi.
+I motivi che ci hanno portato a scegliere questa architettura sono:
+- *Modularità*: ogni microservizio è responsabile di una funzionalità specifica, facilitando la manutenzione e l'evoluzione del sistema; infatti eventuali sviluppi futuri considerabili dal proponente, come un'applicazione mobile nativa, vengono semplificati dalla struttura a microservizi.
+- *Diversità delle tecnologie*: ogni microservizio può essere sviluppato utilizzando tecnologie diverse. Infatti, utilizzando SvelteKit per il frontend siamo riusciti a separare il codice Svelte/TypeScript da quello Python utilizzato dai servizi backend.
+- *Principio di singola responsabilità*: ogni microservizio ha responsabilità e scopo ben definiti, facilitando la comprensione e la gestione del codice.
 
-== Errori e codici di ritorno
-// Tabella riassuntiva dei codici di stato HTTP e dei relativi significati.
+== Flusso del sistema
+// TODO: il giro che fanno i dati tra front llm e back
 
-
-= Architettura Front-end
-
+== Architettura Frontend
+// TODO: tutto da rivedere probabilmente
 Per il front-end sono stati utilizzati #gloss[Svelte], SvelteKit e TypeScript. SvelteKit è un #gloss[framework] #gloss[JavaScript] che integra Svelte e consente di creare interfacce utente reattive e performanti, mentre #gloss[TypeScript] è un #gloss[superset] di JavaScript che aggiunge tipizzazione statica al linguaggio, viene utilizzato per la logica di gestione e manipolazione della presentazione dell'applicazione.
 
-== Architettura delle pagine dell'applicazione web
-
-Ogni pagina della webapp è composta da un file Svelte '_page.svelte_', e da un file Typescript '_page.server.ts_'.
-Questa struttura segue il pattern #gloss[Model-View-Controller] (MVC), in cui il file Svelte rappresenta la 'view',
-mentre il file TypeScript rappresenta il 'controller', il 'model' invece sono i dati che vengono ricevuti dal back-end tramite le API.
-
-=== File Svelte
+=== Suppl-AI
+==== Struttura del codice
+===== File Svelte
 
 Il file Svelte contiene il codice HTML e il CSS, utilizza le funzionalità di Svelte e le
 librerie create dal gruppo. Queste librerie contengono vari componenti grafici utilizzati nelle pagina web; inoltre, sfrutta le funzionalità delle pagine dinamiche di Svelte per aggiornare automaticamente l'interfaccia utente in base ai cambiamenti dello stato. 
 
 In un certo senso, tutti i file Svelte sono strutturati tramite il pattern _ composite_, in quanto sono composti da più componenti che possono essere riutilizzati in altre pagine.
 
-=== File Typescript
+===== File Typescript
 Il file TypeScript funge da _controller_ del pattern MVC. Gestisce le chiamate API al back-end, elabora i dati
 ricevuti e li passa al file Svelte per la visualizzazione. Inoltre, gestisce gli eventi dell'interfaccia utente, come i
 click sui pulsanti e l'invio dei messaggi.
 
 Ogni file svelte presenta una funzione _load_, che viene eseguita quando la pagina viene caricata.\
+==== Design pattern utilizzati
+==== Diagramma delle classi
 
+Ogni pagina della webapp è composta da un file Svelte '_page.svelte_', e da un file Typescript '_page.server.ts_'.
+Questa struttura segue il pattern #gloss[Model-View-Controller] (MVC), in cui il file Svelte rappresenta la 'view',
+mentre il file TypeScript rappresenta il 'controller', il 'model' invece sono i dati che vengono ricevuti dal back-end tramite le API.
 
-== Pagina di login
+===== Pagina di login
 Percorso: _/#gloss[Suppl-AI]/src/routes/login_ . \
 La pagina di login è la prima pagina che l'utente vede quando accede alla webapp. Consente agli utenti di inserire le
 proprie credenziali (email e password) per accedere alla piattaforma.\
@@ -249,7 +307,7 @@ Presenta due funzioni:
   principale. In caso di errore, mostra un messaggio di errore all'utente. Il cookie che mantiene l'accesso dura fino a 1
   settimana, finita la quale l'utente dovrà reinserire le credenziali.
 
-== Homepage
+===== Homepage
 Percorso: _/Suppl-AI/src/routes_ .\
 La homepage è la pagina principale della webapp. Consente agli utenti di visualizzare le chat disponibili e di crearne
 di nuove. Presenta una barra di navigazione, posta in basso per facilitarne l'utilizzo da dispositivi mobile, per accedere ad altre funzionalità della piattaforma, come la lista delle
@@ -262,10 +320,10 @@ Presenta una funzione:
   token dell'utente e la lista delle chat.
 //da aggiungere o modificare i casi per il fornitore
 
-== Pagina account utente
+===== Pagina account utente
 Percorso: _/Suppl-AI/src/routes/profilo_ .\
 
-== Pagina chat
+===== Pagina chat
 Percorso: _/Suppl-AI/src/routes/chat_ .\
 La pagina chat mostra la conversazione tra l'utente e il chatbot. Presenta due variabili costanti:
 - API_URL: contiene l'URL dell'API del database.
@@ -280,20 +338,44 @@ Presenta le seguenti funzioni:
 - _actions_: viene eseguita quando l'utente invia un messaggio. Viene fatta una richiesta POST alla API del LLM per
   elaborare il messaggio e generare una risposta. La risposta viene poi mostrata nella chat. In caso di errore, la
   funzione ritorna un messaggio di errore.
-= Architettura logica
+
+== Architettura Backend
+=== TODO: capitolo generale con diagramma esagonale o simili
+=== Database API
+==== Struttura del codice
+==== Diagramma delle classi
+==== Design pattern utilizzati
+
+=== LLM API
+==== Struttura del codice
+==== Diagramma delle classi
+==== Design pattern utilizzati
+
+// = API
+
+// == Endpoint di autenticazione
+// // Descrivere endpoint come login/logout, specificando metodi, parametri e formati.
+
+// == Endpoint di chat
+// // Presentare endpoint relativi all’interazione con il #gloss[chatbot] (creazione, invio messaggi, #gloss[FAQ]).
+
+// == Endpoint di gestione documenti
+// // Esporre endpoint per upload, visualizzazione ed eliminazione documenti.
+
+// == Altri endpoint
+// // Inserire eventuali endpoint aggiuntivi.
+
+// == Errori e codici di ritorno
+// // Tabella riassuntiva dei codici di stato HTTP e dei relativi significati.
+
 
 // Descrivere la suddivisione in moduli e livelli logici del sistema.
 
-= Architettura di deployment
+// TODO: capire se metterla
+// == Architettura di deployment
 // Indicare come il sistema viene distribuito (es. Docker, monolite, microservizi).
 
-= Design pattern utilizzati
-// Specificare i pattern impiegati e le motivazioni dietro le scelte.
-
-= Diagramma delle classi
-// Inserire diagramma #gloss[UML] con le principali classi e relazioni.
-
-= Database
+== Struttura Database
 // Illustrare le scelte relative al database (es. MongoDB, Chroma), schema dei dati, e gestione allegati/FAQ.
 
 = Requisiti funzionali

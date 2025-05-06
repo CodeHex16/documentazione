@@ -15,3 +15,9 @@
     #title
   ]
 }
+
+#let pseudoheading(body) = {
+  set align(center)
+  set par(justify: false)
+  smallcaps(body)
+}
