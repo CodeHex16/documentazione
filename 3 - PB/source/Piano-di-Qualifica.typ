@@ -20,7 +20,7 @@
   "1.2.0",
   "06/05/2025",
   "Filippo Sabbadin",
-  "",
+  "Aggiunta grafici PB nel cruscotto di valutazione delle metriche",
   "",
   "1.1.0",
   "06/04/2025",
@@ -772,7 +772,7 @@ periodi in cui avevamo bisogno di ore aggiuntive per il ruolo di verificatore.
 
 === PB
 #figure(image("../imgs/SwePdQBacEacPB.png", width: 95%), caption: [
-  Stima del costo totale durante i vari #gloss[sprint] della PB.
+  Stima del costo totale durante i vari sprint della fase PB.
 ])
 Durante la fase PB, il costo preventivato è rimasto invariato mentre le stime del costo totale sono state più stabili. 
 
@@ -787,11 +787,11 @@ leggermente diminuita.
 
 === PB
 #figure(image("../imgs/SwePdQEvPvPB.png", width: 95%), caption: [
-  Stima dei valori di PV e EV durante i vari sprint della PB.
+  Stima dei valori di PV e EV durante i vari sprint della fase PB.
 ])
 Come scritto nella sezione sugli automiglioramenti, il gruppo ha avuto difficoltà a lavorare in parallelo sugli stessi
-file, risolto usando la funzione dei branch di Git. Questo ha portato a un aumento del tempo di lavoro.
-Tuttavia, durante il periodo di vacanze pasquali, è stato riscontrato una riduzione del lavoro rispetto a quello stimato.
+file, risolto usando la funzione dei branch di Git. Questo ha portato a un aumento del tempo di lavoro. Tuttavia,
+durante il periodo di vacanze pasquali, è stato riscontrato una riduzione del lavoro rispetto a quello stimato.
 
 == MPC-AC(Actual Cost) - MPC-ETC(Estimated To Completion)
 #figure(image("../imgs/SwePdQAcEtcBac.png", width: 100%), caption: [
@@ -804,11 +804,12 @@ l'avanzare degli sprint, mentre l'AC rispetta una crescita proporzionale alla ve
 
 === PB
 #figure(image("../imgs/SwePdQAcEtcBacPB.png", width: 95%), caption: [
-  Stima dei valori di AC e ETC durante i vari sprint della PB.
+  Stima dei valori di AC e ETC durante i vari sprint della fase PB.
 ])
 Visto l'aumento di velocità del gruppo durante la fase PB con il consumo di più ore, i valori di ETC sono diminuiti più
-velocemente, e i valori di AC sono aumentati più velocemente rispetto al budget speso.
-L'unica eccezione è il periodo in cui il gruppo ha avuto delle vacanze pasquali e quindi il lavoro è diminuito insieme ai costi, recuperati poi nello sprint successivo.
+velocemente, e i valori di AC sono aumentati più velocemente rispetto al budget speso. L'unica eccezione è il periodo in
+cui il gruppo ha avuto delle vacanze pasquali e quindi il lavoro è diminuito insieme ai costi, recuperati poi nello
+sprint successivo.
 
 == MPC-SC(Schedule Variance) - MPC-CV(Cost Variance)
 #figure(image("../imgs/SwePdQCvSv.png", width: 100%), caption: [
@@ -825,10 +826,14 @@ velocemente con il progetto. Entrambi i valori comunque si discostano al massimo
 di 2 punti percentuali per i valori di CV.
 
 === PB
+#figure(image("../imgs/SwePdQCvSvPB.png", width: 95%), caption: [
+  Stima dei valori di CV e SV durante i vari sprint della fase PB.
+])
+
 Come scritto nella sezione di automiglioramento, all'inizio del progetto, il team ha avuto qualche difficoltà a
 rispettare le scadenze e i costi previsti, ma con il passare del tempo e l'aumento della velocità del gruppo, i valori
-di SV e CV sono stati rispettati. Questo è dovuto alla maggiore esperienza del team e alla maggiore conoscenza del
-progetto.
+di SV e CV sono stati rispettati, ad eccezione dei periodi finali a causa delle vacanze pasquali, per poi tornare
+stabili subito dopo.
 
 == MPC-RSI(Requirements Stability Index)
 #figure(image("../imgs/SwePdQRSI.png", width: 100%), caption: [
@@ -841,8 +846,11 @@ successivi i requisiti sono stati migliorati e non vi sono state modifiche sosta
 in cui l'indice RSI risulta essere del 100%.
 
 === PB
-Durante la fase PB, i requisiti non hanno visto modifiche sostanziali, per questo *il grafico* è rimasto un po' più
-stabile, ma sono stati comunque migliorati alcuni requisiti.
+#figure(image("../imgs/SwePdQRSIPB.png", width: 95%), caption: [
+  Stima di RSI durante i vari sprint della fase PB.
+])
+Durante la fase PB, i requisiti non hanno visto modifiche sostanziali, tuttabia sono stati modificati alcuni requisiti a
+seguito del colloquio RTB.
 
 == MPC-Correttezza Ortografica
 #figure(image("../imgs/SwePdQCO.png", width: 100%), caption: [
@@ -853,9 +861,14 @@ errore è sfuggito, ma è stato successivamente corretto. Nonostante ciò per bu
 errori presenti erano 0, in particolare si è raggiunto un ottimo risultato negli ultimi sprint.
 
 === PB
+#figure(image("../imgs/SwePdQCOPB.png", width: 95%), caption: [
+  Stima dei valori di correttezza ortografica durante i vari sprint della fase PB.
+])
 Come notato nella sezione automiglioramento, è stato difficile avere un formato dei documenti omogeneo e questo ha
 portato a un aumento di diversi errori. Questo è stato risolto con l'uso di un correttore ortografico automatico e una
-maggiore comunicazione tra i membri del gruppo.
+maggiore comunicazione tra i membri del gruppo. Si può notare che il numero di errori ortografici è diminuito. Unica
+eccezione sono i documenti Specifica Tecnica (ST), Manuale Sviluppatore (MS) e Manuale Utente (MU) in quanto documenti
+nuovi la cui stesura è iniziata all'inizio della fase PB.
 
 == MPC-Indice Gulpease
 #figure(image("../imgs/SwePdQGulpease.png", width: 100%), caption: [
@@ -867,8 +880,10 @@ Requisiti e questo è causato dalla specificità degli argomenti trattati e dal 
 documenti l'indice Gulpease è sopra l'ottimo per la maggior parte degli sprint.
 
 === PB
-Durante la fase PB, l'indice è rimasto abbastanza stabile e non vi sono stati cambiamenti sostanziali per i documenti già esistenti.
-Invece per i documenti nuovi, si può vedere una maggiore instabilità,
+Durante la fase PB, l'indice è rimasto abbastanza stabile e non vi sono stati cambiamenti sostanziali per i documenti
+già esistenti. Invece per i documenti nuovi, si può vedere una maggiore instabilità.
+
+
 == MPC-Non-Calculated-Risk
 #figure(image("../imgs/SwePdQ_NcR.png", width: 100%), caption: [
   Stima dei valori di CV e SV durante i vari sprint.
@@ -879,7 +894,10 @@ Tullio Vardanega e che in seguito si è risolto. In ogni caso dal grafico si pu�
 previsione dei rischi.
 
 === PB
-//Ancora un po' presto per scriverla
+#figure(image("../imgs/SwePdQ_NcRPB.png", width: 95%), caption: [
+  Stima dei valori di CV e SV durante i vari sprint della fase PB.
+])
+Come nella fase RTB, non si sono verificati rischi non calcolati, ma si è sempre presentato il problema di comunicazione interna con alcuni membri del gruppo. Si può comunque notare che anche in questa fase il team ha avuto una buona previsione dei rischi.
 
 == MPC-QMS(Quality Metric Satisfied)
 #figure(image("../imgs/SwePdQQMS.png", width: 100%), caption: [
@@ -892,6 +910,9 @@ accettabili e in seguito ottimi soprattutto negli ultimi sprint dimostrando un m
 nei risultati ottenuti.
 
 === PB
+#figure(image("../imgs/SwePdQQMSPB.png", width: 95%), caption: [
+  Stima della percentuale di metriche di qualità soddisfatte durante i vari sprint della fase PB.
+])
 Durante la fase PB, il gruppo ha mantenuto un valore stabile di soddisfazione delle metriche di qualità e non vi sono
 stati cambiamenti sostanziali. Questo grazie a ciò che è stato appreso durante la fase precedente.
 
