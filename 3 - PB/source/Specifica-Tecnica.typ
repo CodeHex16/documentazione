@@ -1,25 +1,32 @@
 #import "../../template/documenti.typ": *
 #import "../../template/i-figured.typ"
 
-#show: doc => documento(titolo: "Specifica Tecnica", data: [21/03/2025], ruoli: (
-  "Luca Ribon",
-  "Verificatore",
-  "Filippo Sabbadin",
-  "Redattore",
-  "Luca Rossi",
-  "Redattore",
-), sommario: [Specifica tecnica], versioni: (
-  "0.2.0",
-  "10/04/2025",
-  "Filippo Sabbadin",
-  "Stesura sezioni iniziali",
-  "Luca Ribon",
-  "0.1.0",
-  "21/03/2025",
-  "Luca Rossi",
-  "Bozza iniziale struttura",
-  "Luca Ribon",
-), doc)
+#show: doc => documento(
+  titolo: "Specifica Tecnica",
+  data: [21/03/2025],
+  ruoli: (
+    "Luca Ribon",
+    "Verificatore",
+    "Filippo Sabbadin",
+    "Redattore",
+    "Luca Rossi",
+    "Redattore",
+  ),
+  sommario: [Specifica tecnica],
+  versioni: (
+    "0.2.0",
+    "10/04/2025",
+    "Filippo Sabbadin",
+    "Stesura sezioni iniziali",
+    "Luca Ribon",
+    "0.1.0",
+    "21/03/2025",
+    "Luca Rossi",
+    "Bozza iniziale struttura",
+    "Luca Ribon",
+  ),
+  doc,
+)
 // spaciugo per aggiungere l'indice delle immagini
 #set page(numbering: "I")
 #counter(page).update(3)
@@ -79,7 +86,7 @@ e nella seguente pagina web: #link("https://codehex16.github.io/glossario").
 
 - Diagrammi delle classi (UML):\ #link("https://www.math.unipd.it/~rcardin/swea/2023/Diagrammi%20delle%20Classi.pdf");\
 
-- Slide sui pattern architetturali del prof. Cardin:\ 
+- Slide sui pattern architetturali del prof. Cardin:\
   - introduzione ai pattern:\ #link("https://www.math.unipd.it/~rcardin/swea/2022/Software%20Architecture%20Patterns.pdf");
   - pattern creazionali:\ #link("https://www.math.unipd.it/~rcardin/swea/2022/Design%20Pattern%20Creazionali.pdf")
   - pattern strutturali:\ #link("https://www.math.unipd.it/~rcardin/swea/2022/Design%20Pattern%20Strutturali.pdf")\
@@ -108,15 +115,19 @@ che hanno portato alla sua scelta.
     "HTML",
     "Utilizzato per la creazione della struttura e del contenuto delle pagine web. È il linguaggio di markup standard per la creazione di pagine web.",
     "5",
+
     "CSS",
     "Utilizzato per la formattazione e lo stile delle pagine web. Permette di separare il contenuto dalla presentazione, migliorando la manutenibilità del codice.",
     "3",
+
     "JavaScript",
     "Utilizzato per la creazione di interazioni dinamiche e reattive nelle pagine web.",
     "ECMAScript 2024",
+
     "Python",
     "Scelto per la sua versatilità e facilità d'uso, è il linguaggio principale per lo sviluppo del back-end. Inoltre supporta e integra esaustivamente tutti i componenti esterni come gli LLM e i database vettoriali e non; inoltre la documentazione relativa a queste integrazioni è ampia e ben strutturata.",
     "3.12",
+
     "TypeScript",
     "Scelto per la sua tipizzazione statica, migliora la qualità del codice e facilita la manutenzione. È utilizzato in combinazione con Svelte per lo sviluppo del front-end.",
     "5.8.3",
@@ -134,13 +145,14 @@ che hanno portato alla sua scelta.
     "Svelte",
     "Scelto per la sua semplicità e leggerezza, è il framework utilizzato per il rendering delle pagine del front-end. Permette di creare UI e UX gradevoli con una struttura e semantica del codice che il gruppo ha preferito rispetto ad altri framework.",
     "5.25.10",
+
     "SvelteKit",
     "Scelto per la sua integrazione con Svelte, è un framework per lo sviluppo di applicazioni web. Permette di gestire implementare funzioni come ottimizzazione delle build, routing in modo semplice.",
     "",
+
     "FastAPI",
     "Framework scelto per la sua facilità nell'implementazione di API REST. È utilizzato per il back-end per far comunicare tra loro i componenti software.",
     "0.115.12",
-
   ),
 )
 === Librerie
@@ -153,53 +165,86 @@ che hanno portato alla sua scelta.
     align: (x, y) => if (y > 0) { left } else { center + horizon },
     fill: (x, y) => if y == 0 { luma(190) } else if (y == 2 or y == 4) { luma(230) },
     table.header([*Nome*], [*Motivazione*], [*Versione*]),
-    "langchain", "Libreria scelta per l'integrazione tra modelli AI e database, permette di gestire documenti, contesto e query rivolte all'LLM integrato.", "0.3.25",
+    "langchain",
+    "Libreria scelta per l'integrazione tra modelli AI e database, permette di gestire documenti, contesto e query rivolte all'LLM integrato.",
+    "0.3.25",
 
-    "passlib", "Libreria che implementa diversi algoritmi di hashing che sono stati utilizzati per la gestione delle password.", "1.7.4",
+    "passlib",
+    "Libreria che implementa diversi algoritmi di hashing che sono stati utilizzati per la gestione delle password.",
+    "1.7.4",
 
-    "pydantic_core", "Libreria utile per la modellazione di schemi utilizzati nella trasferimento di dati tramite chiamate API.", "2.33.2",
+    "pydantic_core",
+    "Libreria utile per la modellazione di schemi utilizzati nella trasferimento di dati tramite chiamate API.",
+    "2.33.2",
 
-    "bcrypt", "Libreria per l'hashing delle password, specificamente implementa l'algoritmo bcrypt, noto per la sua robustezza.", "4.3.0",
+    "bcrypt",
+    "Libreria per l'hashing delle password, specificamente implementa l'algoritmo bcrypt, noto per la sua robustezza.",
+    "4.3.0",
 
-    "motor", "Driver asincrono per MongoDB, permette di interagire con il database in modo non bloccante, ideale per applicazioni web moderne (es. con FastAPI).", "3.7.0",
+    "motor",
+    "Driver asincrono per MongoDB, permette di interagire con il database in modo non bloccante, ideale per applicazioni web moderne (es. con FastAPI).",
+    "3.7.0",
 
-    "python-jose", "Libreria per la gestione di token JWT (JSON Web Tokens) e altre specifiche JOSE (Javascript Object Signing and Encryption), utile per l'autenticazione e la trasmissione sicura di informazioni.", "3.4.0",
+    "python-jose",
+    "Libreria per la gestione di token JWT (JSON Web Tokens) e altre specifiche JOSE (Javascript Object Signing and Encryption), utile per l'autenticazione e la trasmissione sicura di informazioni.",
+    "3.4.0",
 
-    "requests", "Libreria HTTP per Python, utilizzata per inviare richieste HTTP/1.1 di tutti i tipi (GET, POST, PUT, ecc.).", "2.32.3",
+    "requests",
+    "Libreria HTTP per Python, utilizzata per inviare richieste HTTP/1.1 di tutti i tipi (GET, POST, PUT, ecc.).",
+    "2.32.3",
 
     "pymongo", "Libreria utilizzata per la manipolazione del database MongoDB.", "4.12.1",
+    "uvicorn",
+    "Server ASGI (Asynchronous Server Gateway Interface) ad alte prestazioni, comunemente utilizzato per eseguire applicazioni web asincrone Python come quelle basate su FastAPI o Starlette.",
+    "0.34.2",
 
-    "uvicorn", "Server ASGI (Asynchronous Server Gateway Interface) ad alte prestazioni, comunemente utilizzato per eseguire applicazioni web asincrone Python come quelle basate su FastAPI o Starlette.", "0.34.2",
+    "jwt",
+    "Libreria per la codifica e decodifica di JSON Web Tokens (JWT), utilizzata per l'autenticazione e lo scambio sicuro di informazioni.",
+    "1.3.1",
 
-    "jwt", "Libreria per la codifica e decodifica di JSON Web Tokens (JWT), utilizzata per l'autenticazione e lo scambio sicuro di informazioni.", "1.3.1",
-
-    "fastapi-mail", "Estensione per FastAPI che facilita l'invio di email, supportando l'invio asincrono e la gestione di template.", "1.4.2",
+    "fastapi-mail",
+    "Estensione per FastAPI che facilita l'invio di email, supportando l'invio asincrono e la gestione di template.",
+    "1.4.2",
 
     "pytz", "Libreria per la gestione accurata dei fusi orari in Python, basata sul database Olson tz.", "2025.2",
-
-    "starlette", "Framework ASGI (Asynchronous Server Gateway Interface) leggero e toolkit, su cui sono costruiti framework più completi come FastAPI. Fornisce le basi per costruire servizi web asincroni.", "0.46.2",
+    "starlette",
+    "Framework ASGI (Asynchronous Server Gateway Interface) leggero e toolkit, su cui sono costruiti framework più completi come FastAPI. Fornisce le basi per costruire servizi web asincroni.",
+    "0.46.2",
 
     "openai", "Libreria client ufficiale di OpenAI per interagire con le loro API", "1.77.0",
+    "chromadb",
+    "Database vettoriale open-source progettato per applicazioni AI, facilita la memorizzazione, l'interrogazione e la gestione di embedding per funzionalità come la ricerca semantica.",
+    "0.6.3",
 
-    "chromadb", "Database vettoriale open-source progettato per applicazioni AI, facilita la memorizzazione, l'interrogazione e la gestione di embedding per funzionalità come la ricerca semantica.", "0.6.3",
+    "bson",
+    "Libreria per la codifica e decodifica di BSON (Binary JSON), il formato di serializzazione dei dati utilizzato da MongoDB.",
+    "0.5.10",
 
-    "bson", "Libreria per la codifica e decodifica di BSON (Binary JSON), il formato di serializzazione dei dati utilizzato da MongoDB.", "0.5.10",
+    "pypdf",
+    "Libreria Python pura per la manipolazione di file PDF: permette di dividere, unire, ritagliare, crittografare, decrittografare pagine PDF e estrarre testo.",
+    "5.4.0",
 
-    "pypdf", "Libreria Python pura per la manipolazione di file PDF: permette di dividere, unire, ritagliare, crittografare, decrittografare pagine PDF e estrarre testo.", "5.4.0",
+    "python-multipart",
+    "Libreria per il parsing di dati multipart/form-data, comunemente usata nei web framework per gestire upload di file e dati di form complessi.",
+    "0.0.20",
 
-    "python-multipart", "Libreria per il parsing di dati multipart/form-data, comunemente usata nei web framework per gestire upload di file e dati di form complessi.", "0.0.20",
+    "tailwindcss",
+    "Un framework CSS utility-first per costruire rapidamente interfacce utente personalizzate direttamente nel markup HTML.",
+    "3.4.9",
 
-    "tailwindcss", "Un framework CSS utility-first per costruire rapidamente interfacce utente personalizzate direttamente nel markup HTML.", "3.4.9",
+    "prettier",
+    "Un formattatore di codice 'opinionated' che supporta molti linguaggi e si integra con la maggior parte degli editor per mantenere uno stile di codice consistente.",
+    "3.3.2",
 
-    "prettier", "Un formattatore di codice 'opinionated' che supporta molti linguaggi e si integra con la maggior parte degli editor per mantenere uno stile di codice consistente.", "3.3.2",
-
-    "vite", "Uno strumento di build per il frontend moderno che offre un'esperienza di sviluppo estremamente veloce e bundle ottimizzati per la produzione.", "6.0.0",
+    "vite",
+    "Uno strumento di build per il frontend moderno che offre un'esperienza di sviluppo estremamente veloce e bundle ottimizzati per la produzione.",
+    "6.0.0",
 
     "lucide-svelte", "Libreria di icone SVG (basate su Lucide) per componenti Svelte.", "0.468.0",
-
     "marked", "Un parser Markdown per convertire Markdown in HTML.", "15.0.7",
-
-    "mode-watcher", "Utility per Svelte per rilevare e reagire ai cambiamenti della preferenza di tema del sistema operativo (chiaro/scuro) o per gestirla manualmente.", "0.5.0",
+    "mode-watcher",
+    "Utility per Svelte per rilevare e reagire ai cambiamenti della preferenza di tema del sistema operativo (chiaro/scuro) o per gestirla manualmente.",
+    "0.5.0",
   ),
 )
 
@@ -215,21 +260,21 @@ che hanno portato alla sua scelta.
     "Git",
     "Utilizzato per il versionamento del codice sorgente, permette di tenere traccia delle modifiche e collaborare con altri membri del team",
     "2.49.0",
-    "GPT-4o mini",
-    "Il modello utilizzato per il chatbot, scelto in base al prezzo e qualità delle risposte",
-    "-",
+
+    "GPT-4o mini", "Il modello utilizzato per il chatbot, scelto in base al prezzo e qualità delle risposte", "-",
     "Docker",
     "Utilizzato per suddividere ed eseguire in container l'applicazione, rendendola facilmente distribuibile e scalabile in diversi ambienti",
     "28.1.1",
+
     "MongoDB",
     "Database NoSQL utilizzato per memorizzare documenti, cronologia delle conversazioni e utenti. Scelto perché rende più facile e diretto memorizzare i file come formato json",
     "8.0",
+
     "ChromaDB",
     "Database vettoriale per memorizzare e recuperare embedding dei documenti, consentendo ricerche semantiche rapide per fornire risposte contestuali. Scelto per la sua velocità e facilità d'uso, è in grado di gestire grandi volumi di dati e query complesse.",
     "1.0.4",
   ),
 )
-
 
 == Tecnologie per i test
 #figure(
@@ -243,6 +288,7 @@ che hanno portato alla sua scelta.
     "Github Actions",
     "Utilizzato per l'integrazione continua e il testing automatico del codice. Permette di eseguire test e controlli di qualità ogni volta che viene effettuata una modifica al codice sorgente o prima di un merge con un altro branch",
     "-",
+
     "Pytest",
     "Utilizzato per il testing del codice Python, permette di scrivere test in modo semplice e intuitivo. È stato scelto per la sua facilità d'uso e per la sua integrazione con FastAPI",
     "8.3.5",
@@ -265,6 +311,25 @@ I motivi che ci hanno portato a scegliere questa architettura sono:
 
 == Flusso del sistema
 // TODO: il giro che fanno i dati tra front llm e back
+#figure(
+  image("../imgs/flusso-dati.png", width: 85%),
+  caption: "Flusso del sistema",
+)
+
+- *Invio contesto*: tramite il client Suppl-AI l'utente può inviare documenti e FAQ al chatbot che verranno memorizzati nel database vettoriale.
+
+
+- *Interazione con il chatbot*:
+  - *Richiesta generazione risposta*: l'utente invia una domanda al chatbot tramite il client _Suppl-AI_; la domanda viene inviata, insieme allo storico della chat ad _LLM-API_.
+  - *Generazione prompt*: _LLM-API_ recupera il contesto da _ChromaDB_ tramite la domanda e lo storico della chat, e genera un prompt per l'LLM. Il prompt contiene la domanda dell'utente, lo storico della chat e il contesto recuperato.
+  - *Generazione risposta*: _LLM-API_ si interfaccia con le API di _OpenAI_ per generare una risposta in base al prompt costruito. La risposta generata viene poi restituita al client _Suppl-AI_.
+
+- *Interazione con il database*:
+  - *Invio dei dati*: tramite il client, l'utente può inviare chat, documenti, FAQ e utenti al _Database-API_.
+  - *Salvataggio dei dati*: _Database-API_ riceve i dati e li manipola per salvarli correttamente nel database _MongoDB_.
+  - *Richiesta dei dati*: il client può richiedere chat, documenti, FAQ e utenti al _Database-API_.
+  - *Recupero dei dati*: _Database-API_ riceve la richiesta e recupera i dati dal database _MongoDB_ per poi restituirli al client.
+  
 
 == Architettura Frontend
 // TODO: tutto da rivedere probabilmente
@@ -275,7 +340,7 @@ Per il front-end sono stati utilizzati #gloss[Svelte], SvelteKit e TypeScript. S
 ===== File Svelte
 
 Il file Svelte contiene il codice HTML e il CSS, utilizza le funzionalità di Svelte e le
-librerie create dal gruppo. Queste librerie contengono vari componenti grafici utilizzati nelle pagina web; inoltre, sfrutta le funzionalità delle pagine dinamiche di Svelte per aggiornare automaticamente l'interfaccia utente in base ai cambiamenti dello stato. 
+librerie create dal gruppo. Queste librerie contengono vari componenti grafici utilizzati nelle pagina web; inoltre, sfrutta le funzionalità delle pagine dinamiche di Svelte per aggiornare automaticamente l'interfaccia utente in base ai cambiamenti dello stato.
 
 In un certo senso, tutti i file Svelte sono strutturati tramite il pattern _ composite_, in quanto sono composti da più componenti che possono essere riutilizzati in altre pagine.
 
@@ -385,7 +450,7 @@ requisito:
 - O: obbligatori
 - D: desiderabili
 
-== Tracciamento 
+== Tracciamento
 
 #show figure: set block(breakable: true)
 #figure(
