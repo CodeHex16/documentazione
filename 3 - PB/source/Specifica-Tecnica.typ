@@ -318,104 +318,180 @@ I motivi che ci hanno portato a scegliere questa architettura sono:
 
 - *Invio contesto*: tramite il client Suppl-AI l'utente può inviare documenti e FAQ al chatbot che verranno memorizzati nel database vettoriale.
 
-
 - *Interazione con il chatbot*:
   - *Richiesta generazione risposta*: l'utente invia una domanda al chatbot tramite il client _Suppl-AI_; la domanda viene inviata, insieme allo storico della chat ad _LLM-API_.
   - *Generazione prompt*: _LLM-API_ recupera il contesto da _ChromaDB_ tramite la domanda e lo storico della chat, e genera un prompt per l'LLM. Il prompt contiene la domanda dell'utente, lo storico della chat e il contesto recuperato.
   - *Generazione risposta*: _LLM-API_ si interfaccia con le API di _OpenAI_ per generare una risposta in base al prompt costruito. La risposta generata viene poi restituita al client _Suppl-AI_.
 
 - *Interazione con il database*:
+  - *Autenticazione*: il client può inviare le credenziali di accesso a _Database-API_ per autenticarsi. _Database-API_ verifica le credenziali e restituisce un token JWT al client, che viene utilizzato per autenticare le richieste successive.
   - *Invio dei dati*: tramite il client, l'utente può inviare chat, documenti, FAQ e utenti al _Database-API_.
   - *Salvataggio dei dati*: _Database-API_ riceve i dati e li manipola per salvarli correttamente nel database _MongoDB_.
   - *Richiesta dei dati*: il client può richiedere chat, documenti, FAQ e utenti al _Database-API_.
   - *Recupero dei dati*: _Database-API_ riceve la richiesta e recupera i dati dal database _MongoDB_ per poi restituirli al client.
-  
 
 == Architettura Frontend
-// TODO: tutto da rivedere probabilmente
-Per il front-end sono stati utilizzati #gloss[Svelte], SvelteKit e TypeScript. SvelteKit è un #gloss[framework] #gloss[JavaScript] che integra Svelte e consente di creare interfacce utente reattive e performanti, mentre #gloss[TypeScript] è un #gloss[superset] di JavaScript che aggiunge tipizzazione statica al linguaggio, viene utilizzato per la logica di gestione e manipolazione della presentazione dell'applicazione.
 
 === Suppl-AI
+Suppl-AI è il nome del frontend della webapp. Per il suo sviluppo sono stati utilizzati *_Svelte_*, *_SvelteKit_* e *_TypeScript_*.
+
+SvelteKit è un #gloss[framework] frontend che integra Svelte e consente di creare interfacce utente reattive e performanti, mentre *TypeScript* è un #gloss[superset] di JavaScript che aggiunge tipizzazione statica al linguaggio, viene utilizzato per la logica di gestione e manipolazione dei dati visualizzati.
+
 ==== Struttura del codice
+Ogni pagina della webapp è composta da un file Svelte `+page.svelte`, e da un file TypeScript `+page.server.ts`.
+
 ===== File Svelte
+I file `+page.svelte` contengono il codice HTML, CSS e TS, utilizzato per la gestione del layout della pagina.
+In aggiunta alla sintassi HTML, Svelte include funzionalità aggiuntive come l'uso dei costrutti `{#if}`, `{#each}` e `{#await}` per la gestione della logica di rendering condizionale, cicli e promesse; in più implementa anche un sistema di reattività che consente di aggiornare automaticamente l'interfaccia utente quando c'è un cambiamento di stato dei componenti.
 
-Il file Svelte contiene il codice HTML e il CSS, utilizza le funzionalità di Svelte e le
-librerie create dal gruppo. Queste librerie contengono vari componenti grafici utilizzati nelle pagina web; inoltre, sfrutta le funzionalità delle pagine dinamiche di Svelte per aggiornare automaticamente l'interfaccia utente in base ai cambiamenti dello stato.
-
-In un certo senso, tutti i file Svelte sono strutturati tramite il pattern _ composite_, in quanto sono composti da più componenti che possono essere riutilizzati in altre pagine.
+Inoltre da la possibilità di creare e riutilizzare componenti, che possono essere importati in altri file `.svelte`.
 
 ===== File Typescript
-Il file TypeScript funge da _controller_ del pattern MVC. Gestisce le chiamate API al back-end, elabora i dati
-ricevuti e li passa al file Svelte per la visualizzazione. Inoltre, gestisce gli eventi dell'interfaccia utente, come i
-click sui pulsanti e l'invio dei messaggi.
+I file TypeScript `+page.server.ts` contengono la logica di gestione dei dati contenuti nella pagina; questi file sono eseguiti lato server.
+Sono responsabili anche della gestione delle chiamate API al backend.
 
-Ogni file svelte presenta una funzione _load_, che viene eseguita quando la pagina viene caricata.\
 ==== Design pattern utilizzati
-==== Diagramma delle classi
+===== Model View Controller
+Ogni pagina della webapp è composta da un file `+page.svelte`, e da un file `+page.server.ts`.
+Questa struttura segue il pattern #gloss[Model-View-Controller] (MVC), in cui il file Svelte rappresenta la _View_, mentre il file TypeScript rappresenta il _Controller_, il _Model_ invece è rappresentato dalle backend API.
+===== Composite
+I file Svelte sono strutturati tramite il pattern _ composite_, in quanto sono composti da più componenti che possono essere riutilizzati in altre pagine.
 
-Ogni pagina della webapp è composta da un file Svelte '_page.svelte_', e da un file Typescript '_page.server.ts_'.
-Questa struttura segue il pattern #gloss[Model-View-Controller] (MVC), in cui il file Svelte rappresenta la 'view',
-mentre il file TypeScript rappresenta il 'controller', il 'model' invece sono i dati che vengono ricevuti dal back-end tramite le API.
 
-===== Pagina di login
-Percorso: _/#gloss[Suppl-AI]/src/routes/login_ . \
-La pagina di login è la prima pagina che l'utente vede quando accede alla webapp. Consente agli utenti di inserire le
-proprie credenziali (email e password) per accedere alla piattaforma.\
-Inoltre permette all'utente di avviare la procedura di recupero password in caso di smarrimento. \
-Presenta una variabile costante:
-- API_URL: contiene l'URL dell'API del database.\
-Presenta due funzioni:
-- _load_: controlla se l'utente è già autenticato tramite un #gloss[token] #gloss[cookie]. Se questo token esiste, reindirizza
-  l'utente alla pagina principale.
-- _actions_: viene eseguita quando l'utente invia il modulo di login. Prende lo username e password inseriti, e li manda
-  attraverso una richiesta POST alla API per l'autenticazione. In caso di successo, reindirizza l'utente alla pagina
-  principale. In caso di errore, mostra un messaggio di errore all'utente. Il cookie che mantiene l'accesso dura fino a 1
-  settimana, finita la quale l'utente dovrà reinserire le credenziali.
+// ===== Pagina di login
+// Percorso: _/#gloss[Suppl-AI]/src/routes/login_ . \
+// La pagina di login è la prima pagina che l'utente vede quando accede alla webapp. Consente agli utenti di inserire le
+// proprie credenziali (email e password) per accedere alla piattaforma.\
+// Inoltre permette all'utente di avviare la procedura di recupero password in caso di smarrimento. \
+// Presenta una variabile costante:
+// - API_URL: contiene l'URL dell'API del database.\
+// Presenta due funzioni:
+// - _load_: controlla se l'utente è già autenticato tramite un #gloss[token] #gloss[cookie]. Se questo token esiste, reindirizza
+//   l'utente alla pagina principale.
+// - _actions_: viene eseguita quando l'utente invia il modulo di login. Prende lo username e password inseriti, e li manda
+//   attraverso una richiesta POST alla API per l'autenticazione. In caso di successo, reindirizza l'utente alla pagina
+//   principale. In caso di errore, mostra un messaggio di errore all'utente. Il cookie che mantiene l'accesso dura fino a 1
+//   settimana, finita la quale l'utente dovrà reinserire le credenziali.
 
-===== Homepage
-Percorso: _/Suppl-AI/src/routes_ .\
-La homepage è la pagina principale della webapp. Consente agli utenti di visualizzare le chat disponibili e di crearne
-di nuove. Presenta una barra di navigazione, posta in basso per facilitarne l'utilizzo da dispositivi mobile, per accedere ad altre funzionalità della piattaforma, come la lista delle
-chat o le informazioni del profilo.\
-Presenta una variabile costante:
-- API_URL: contiene l'URL dell'API del database.\
-Presenta una funzione:
-- _load_: controlla se l'utente è autenticato tramite un token cookie. Se questo token esiste, reindirizza l'utente alla
-  pagina di login. Inoltre, carica le chat disponibili per l'utente autenticato e le mostra nella homepage. Ritorna il
-  token dell'utente e la lista delle chat.
-//da aggiungere o modificare i casi per il fornitore
+// ===== Homepage
+// Percorso: _/Suppl-AI/src/routes_ .\
+// La homepage è la pagina principale della webapp. Consente agli utenti di visualizzare le chat disponibili e di crearne
+// di nuove. Presenta una barra di navigazione, posta in basso per facilitarne l'utilizzo da dispositivi mobile, per accedere ad altre funzionalità della piattaforma, come la lista delle
+// chat o le informazioni del profilo.\
+// Presenta una variabile costante:
+// - API_URL: contiene l'URL dell'API del database.\
+// Presenta una funzione:
+// - _load_: controlla se l'utente è autenticato tramite un token cookie. Se questo token esiste, reindirizza l'utente alla
+//   pagina di login. Inoltre, carica le chat disponibili per l'utente autenticato e le mostra nella homepage. Ritorna il
+//   token dell'utente e la lista delle chat.
+// //da aggiungere o modificare i casi per il fornitore
 
-===== Pagina account utente
-Percorso: _/Suppl-AI/src/routes/profilo_ .\
+// ===== Pagina account utente
+// Percorso: _/Suppl-AI/src/routes/profilo_ .\
 
-===== Pagina chat
-Percorso: _/Suppl-AI/src/routes/chat_ .\
-La pagina chat mostra la conversazione tra l'utente e il chatbot. Presenta due variabili costanti:
-- API_URL: contiene l'URL dell'API del database.
-- LLM_URL: contiene l'URL dell'API del LLM.\
-Presenta le seguenti funzioni:
-- _updateChatNameIfNeeded_: se la chat inizia ad avere più di 2 messaggi, viene mandata una richiesta POST alla API
-  dell'LLM che chiede di cambiare il titolo della chat in base al contesto. Poi viene fatta una richiesta PUT alla API del
-  database per memorizzare il titolo.
-- _load_: controlla se l'utente è autenticato tramite un token cookie. Se non lo è, questo viene reindirizzato alla pagina
-  di login. La chat viene caricata tramite un metodo GET alla API del database dove vengono richiesti tutti messaggi della
-  chat.
-- _actions_: viene eseguita quando l'utente invia un messaggio. Viene fatta una richiesta POST alla API del LLM per
-  elaborare il messaggio e generare una risposta. La risposta viene poi mostrata nella chat. In caso di errore, la
-  funzione ritorna un messaggio di errore.
+// ===== Pagina chat
+// Percorso: _/Suppl-AI/src/routes/chat_ .\
+// La pagina chat mostra la conversazione tra l'utente e il chatbot. Presenta due variabili costanti:
+// - API_URL: contiene l'URL dell'API del database.
+// - LLM_URL: contiene l'URL dell'API del LLM.\
+// Presenta le seguenti funzioni:
+// - _updateChatNameIfNeeded_: se la chat inizia ad avere più di 2 messaggi, viene mandata una richiesta POST alla API
+//   dell'LLM che chiede di cambiare il titolo della chat in base al contesto. Poi viene fatta una richiesta PUT alla API del
+//   database per memorizzare il titolo.
+// - _load_: controlla se l'utente è autenticato tramite un token cookie. Se non lo è, questo viene reindirizzato alla pagina
+//   di login. La chat viene caricata tramite un metodo GET alla API del database dove vengono richiesti tutti messaggi della
+//   chat.
+// - _actions_: viene eseguita quando l'utente invia un messaggio. Viene fatta una richiesta POST alla API del LLM per
+//   elaborare il messaggio e generare una risposta. La risposta viene poi mostrata nella chat. In caso di errore, la
+//   funzione ritorna un messaggio di errore.
 
 == Architettura Backend
-=== TODO: capitolo generale con diagramma esagonale o simili
+Per lo sviluppo delle API backend sono stati utilizzati *_FastAPI_* e *_Python_*.
+
+Python è il linguaggio principale utilizzato per lo sviluppo del backend del prodotto. È stato scelto per l'integrazione ottimale, tramite librerie, di LLM e database NoSQL e vettoriali.
+
+FastAPI è un framework per la creazione di API RESTful, progettato per essere veloce e semplice da usare. È stato scelto perché risulta essere più essenziale con le funzionalità di cui avevamo bisogno rispetto ad altri framework.
+
+Inoltre, FastAPI supporta la tipizzazione statica delle richieste, che aiuta a prevenire errori e rende il codice più leggibile e manutenibile.
+Infine genera automaticamente la documentazione delle API, rendendo più semplice la comprensione e l'utilizzo delle stesse per tutti gli sviluppatori del progetto.
+
 === Database API
+Database-API è il nome del API backend che si occupa della gestione della persistenza dei dati.
+Per l'interazione con il database *_MongoDB_* sono stata importate diverse librerie, tra cui *_motor_* e *_pymongo_*.
+
+Motor è un driver asincrono per MongoDB, progettato per funzionare con framework asincroni come FastAPI. Permette di eseguire operazioni di database in modo non bloccante, migliorando le prestazioni e la reattività dell'applicazione.
+
+Pymongo è una libreria Python per interagire con MongoDB. È stata utilizzata per alcune operazioni di database che non richiedevano l'asincronia, come la gestione della connessione al database.
+
 ==== Struttura del codice
-==== Diagramma delle classi
+Il codice di Database-API è strutturato in *_router_*, *_repository_* e *_service_*.
+
+===== Router
+I router sono responsabili della gestione delle richieste HTTP e dell'instradamento delle stesse alle funzioni appropriate. Ogni router è dedicato a una delle seguenti funzionalità specifica del sistema:
+- `auth.py`;
+- `chat.py`;
+- `document.py`;
+- `faq.py`;
+- `setting.py`;
+- `user.py`;
+
+===== Repository
+I repository sono responsabili dell'interazione con il database. Gestiscono le operazioni CRUD (Create, Read, Update, Delete) e forniscono un'interfaccia per accedere ai dati.
+I repository sono suddivisi in:
+- `chat_repository.py`;
+- `document_repository.py`;
+- `faq_repository.py`;
+- `setting_repository.py`;
+- `user_repository.py`;
+
+===== Service
+I service sono delle classi che offrono funzionalità di business logic, come la gestione dell'autenticazione e l'invio di email.
+I service sono:
+- `auth_service.py`;
+- `email_service.py`;
+
 ==== Design pattern utilizzati
+
+===== Repository
+Il pattern _repository_ è stato utilizzato per separare la logica di accesso ai dati dalla gestione delle chiamate API. Questo consente di mantenere il codice più manutenibile.
+
+Infatti le classi repository implementano le operazioni CRUD e vengono utilizzate dai vari router per interagire con il database.
+
+===== Singleton
+Il pattern _singleton_ è stato utilizzato per garantire che ci sia una sola istanza del database in tutta l'applicazione. Questo è importante per evitare conflitti e garantire la coerenza dei dati.
+
+==== Diagramma delle classi
+// TODO: aggiungere diagramma delle classi di database-api
 
 === LLM API
-==== Struttura del codice
-==== Diagramma delle classi
-==== Design pattern utilizzati
+LLM-API è il nome del API backend che si occupa della gestione dell'interazione con l'LLM.
+Per l'interazione con gli LLM sono state importate diverse librerie, tra queste quella principale è *_LangChain_*.
 
+LangChain è una libreria progettata per semplificare l'integrazione e l'interazione con diversi LLM. Fornisce strumenti e astrazioni per costruire applicazioni che utilizzano LLM, facilitando l'interazione con i modelli, la gestione del contesto e la generazione di prompt.
+Inoltre semplifica l'intercambiabilità tra i diversi modelli e provider.
+
+// TODO: ricontrollare ->
+==== Struttura del codice
+Il codice di LLM-API è strutturato in *_router_* e *_service_*.
+
+===== Router
+I router sono responsabili della gestione delle richieste HTTP e dell'instradamento delle stesse alle funzioni appropriate. Ogni router è dedicato a una delle seguenti funzionalità specifica del sistema:
+- `document.py`;
+- `llm.py`;
+
+===== Service
+I service sono delle classi che rappresentano la business logic principale; queste gestiscono i seguenti aspetti dell'interazione con l'LLM:
+- embeddings_service.py: fornisce i metodi per vettorializzare il contesto grezzo fornito dall'utente, trattando gli embedding provider in modo generico;
+- file_manager_service.py: fornisce i metodi per gestire e manipolare i diversi tipi di file forniti dall'utente, trattandoli in modo generico;
+- llm_response_service.py: fornisce i metodi per ottenere le risposte generate dall'LLM in base al contesto e prompt forniti;
+- llm_service.py: permette di operare con diversi LLM e provider di LLM rendendoli facilmente intercambiabili;
+- vector_database_service.py: fornisce i metodi per interagire con il database vettoriale, permettendo di memorizzare e recuperare i dati vettorializzati, semplificando l'intercambiabilità tra diversi database vettoriali;
+
+
+==== Design pattern utilizzati
+// TODO
+==== Diagramma delle classi
+// TODO
 // = API
 
 // == Endpoint di autenticazione
