@@ -867,8 +867,8 @@ errori presenti erano 0, in particolare si è raggiunto un ottimo risultato negl
 Come notato nella sezione automiglioramento, è stato difficile avere un formato dei documenti omogeneo e questo ha
 portato a un aumento di diversi errori. Questo è stato risolto con l'uso di un correttore ortografico automatico e una
 maggiore comunicazione tra i membri del gruppo. Si può notare che il numero di errori ortografici è diminuito. Unica
-eccezione sono i documenti Specifica Tecnica (ST), Manuale Sviluppatore (MS) e Manuale Utente (MU) in quanto documenti
-nuovi la cui stesura è iniziata all'inizio della fase PB.
+eccezione sono i documenti Specifica Tecnica (ST) e Manuale Utente (MU) in quanto documenti nuovi la cui stesura è
+iniziata all'inizio della fase PB.
 
 == MPC-Indice Gulpease
 #figure(image("../imgs/SwePdQGulpease.png", width: 100%), caption: [
@@ -880,6 +880,7 @@ Requisiti e questo è causato dalla specificità degli argomenti trattati e dal 
 documenti l'indice Gulpease è sopra l'ottimo per la maggior parte degli sprint.
 
 === PB
+//Mettere il grafico
 Durante la fase PB, l'indice è rimasto abbastanza stabile e non vi sono stati cambiamenti sostanziali per i documenti
 già esistenti. Invece per i documenti nuovi, si può vedere una maggiore instabilità.
 
@@ -897,7 +898,9 @@ previsione dei rischi.
 #figure(image("../imgs/SwePdQ_NcRPB.png", width: 95%), caption: [
   Stima dei valori di CV e SV durante i vari sprint della fase PB.
 ])
-Come nella fase RTB, non si sono verificati rischi non calcolati, ma si è sempre presentato il problema di comunicazione interna con alcuni membri del gruppo. Si può comunque notare che anche in questa fase il team ha avuto una buona previsione dei rischi.
+Come nella fase RTB, non si sono verificati rischi non calcolati, ma si è sempre presentato il problema di comunicazione
+interna con alcuni membri del gruppo. Si può comunque notare che anche in questa fase il team ha avuto una buona
+previsione dei rischi.
 
 == MPC-QMS(Quality Metric Satisfied)
 #figure(image("../imgs/SwePdQQMS.png", width: 100%), caption: [
