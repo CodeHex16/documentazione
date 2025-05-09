@@ -5,8 +5,10 @@
   titolo: "Specifica Tecnica",
   data: [21/03/2025],
   ruoli: (
+    "Matteo Bazzan",
+    "Redattore",
     "Luca Ribon",
-    "Verificatore",
+    "Redattore, Verificatore",
     "Filippo Sabbadin",
     "Redattore",
     "Luca Rossi",
@@ -14,6 +16,16 @@
   ),
   sommario: [Specifica tecnica],
   versioni: (
+    "0.4.0",
+    "05/05/2025",
+    "Matteo Bazzan",
+    "Grafici e parti mancanti",
+    "",
+    "0.3.0",
+    "20/04/2025",
+    "Luca Ribon",
+    "Architettura",
+    "",
     "0.2.0",
     "10/04/2025",
     "Filippo Sabbadin",
@@ -450,6 +462,9 @@ I service sono:
 - `auth_service.py`;
 - `email_service.py`;
 
+==== Diagramma delle classi
+// TODO: aggiungere diagramma delle classi di database-api
+
 ==== Design pattern utilizzati
 
 ===== Repository
@@ -460,8 +475,6 @@ Infatti le classi repository implementano le operazioni CRUD e vengono utilizzat
 ===== Singleton
 Il pattern _singleton_ è stato utilizzato per garantire che ci sia una sola istanza del database in tutta l'applicazione. Questo è importante per evitare conflitti e garantire la coerenza dei dati.
 
-==== Diagramma delle classi
-// TODO: aggiungere diagramma delle classi di database-api
 
 === LLM API
 LLM-API è il nome del API backend che si occupa della gestione dell'interazione con l'LLM.
@@ -470,28 +483,47 @@ Per l'interazione con gli LLM sono state importate diverse librerie, tra queste 
 LangChain è una libreria progettata per semplificare l'integrazione e l'interazione con diversi LLM. Fornisce strumenti e astrazioni per costruire applicazioni che utilizzano LLM, facilitando l'interazione con i modelli, la gestione del contesto e la generazione di prompt.
 Inoltre semplifica l'intercambiabilità tra i diversi modelli e provider.
 
-// TODO: ricontrollare ->
 ==== Struttura del codice
 Il codice di LLM-API è strutturato in *_router_* e *_service_*.
 
 ===== Router
 I router sono responsabili della gestione delle richieste HTTP e dell'instradamento delle stesse alle funzioni appropriate. Ogni router è dedicato a una delle seguenti funzionalità specifica del sistema:
 - `document.py`;
+- `faq.py`;
 - `llm.py`;
 
 ===== Service
 I service sono delle classi che rappresentano la business logic principale; queste gestiscono i seguenti aspetti dell'interazione con l'LLM:
-- embeddings_service.py: fornisce i metodi per vettorializzare il contesto grezzo fornito dall'utente, trattando gli embedding provider in modo generico;
-- file_manager_service.py: fornisce i metodi per gestire e manipolare i diversi tipi di file forniti dall'utente, trattandoli in modo generico;
-- llm_response_service.py: fornisce i metodi per ottenere le risposte generate dall'LLM in base al contesto e prompt forniti;
-- llm_service.py: permette di operare con diversi LLM e provider di LLM rendendoli facilmente intercambiabili;
-- vector_database_service.py: fornisce i metodi per interagire con il database vettoriale, permettendo di memorizzare e recuperare i dati vettorializzati, semplificando l'intercambiabilità tra diversi database vettoriali;
+- `embeddings_service.py`: fornisce i metodi per vettorializzare il contesto grezzo fornito dall'utente, trattando gli embedding provider in modo generico;
+- `file_manager_service.py`: fornisce i metodi per gestire e manipolare i diversi tipi di file forniti dall'utente, trattandoli in modo generico;
+- `llm_response_service.py`: fornisce i metodi per ottenere le risposte generate dall'LLM in base al contesto e prompt forniti;
+- `llm_service.py`: permette di operare con diversi LLM e provider di LLM rendendoli facilmente intercambiabili;
+- `vector_database_service.py`: fornisce i metodi per interagire con il database vettoriale, permettendo di memorizzare e recuperare i dati vettorializzati, semplificando l'intercambiabilità tra diversi database vettoriali;
 
+
+
+==== Diagramma delle classi
+#figure(
+  image("../imgs/diagramma-llm-api.png", width: 110%),
+  caption: "Diagramma delle classi di LLM-API",
+)
+// TODO: descrizione delle classi
 
 ==== Design pattern utilizzati
-// TODO
-==== Diagramma delle classi
-// TODO
+===== Strategy
+Il pattern *_strategy_* è un pattern comportamentale che consente di definire una famiglia di algoritmi, incapsularli e renderli intercambiabili. Questo pattern permette di separare l'algoritmo dalla sua implementazione, consentendo di modificare il comportamento del sistema senza alterare il codice esistente.
+
+Abbiamo utilizzato questo pattern per:
+- dare la possibilità di implementare e utilizzare diversi provider di LLM e diversi LLM;
+- dare la possibilità di utilizzare diversi provider di funzioni di embedding;
+- dare la possibilità di utilizzare database vettoriali diversi;
+- dare la possibilità di estendere i diversi tipi di file gestiti dal sistema.
+
+===== Singleton
+Il pattern *_singleton_* è un pattern creazionale che garantisce che una classe abbia una sola istanza e fornisce un punto di accesso globale a essa. Questo pattern è utile quando è necessario controllare l'accesso a una risorsa condivisa, come un database o un file di configurazione.
+
+Abbiamo utilizzato il pattern singleton per gestire l'accesso al database vettoriale in modo che la stessa istanza del database possa essere utilizzata in tutta l'applicazione, evitando conflitti e garantendo la coerenza dei dati.
+
 // = API
 
 // == Endpoint di autenticazione
