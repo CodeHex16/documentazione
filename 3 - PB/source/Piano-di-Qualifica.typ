@@ -21,7 +21,7 @@
   "06/05/2025",
   "Filippo Sabbadin",
   "Aggiunta grafici PB nel cruscotto di valutazione delle metriche",
-  "",
+  "Luca Ribon",
   "1.1.0",
   "06/04/2025",
   "Filippo Sabbadin",
@@ -468,6 +468,7 @@ $ ("numero di istruzioni eseguite") / ("numero di istruzioni totali nel codice")
 
 = Metodologie di testing
 == Tipologie di test
+// TODO: sistemare lo stato di completamento dei test nelle tabelle sotto
 Per garantire la qualità del prodotto, il team CodeHex16 ha deciso di verificare il prodotto attraverso diverse
 tipologie di test.
 
@@ -761,6 +762,8 @@ Esempi applicati al progetto:
 = Cruscotto di valutazione delle metriche
 
 == MPC-EAC(Estimated At Completion)
+=== RTB
+// TODO: probabilmente va sistemato dopo aver aggiornato le ore preventivate
 #figure(image("../imgs/SwePdQBacEac.png", width: 100%), caption: [
   Stima del costo totale durante i vari #gloss[sprint].
 ])
@@ -777,6 +780,8 @@ periodi in cui avevamo bisogno di ore aggiuntive per il ruolo di verificatore.
 Durante la fase PB, il costo preventivato è rimasto invariato mentre le stime del costo totale sono state più stabili. 
 
 == MPC-EV(Estimated Value) - MPC-PV(Planned Value)
+// TODO: probabilmente va sistemato dopo aver aggiornato le ore preventivate
+=== RTB
 #figure(image("../imgs/SwePdQEvPv.png", width: 100%), caption: [
   Stima dei valori di PV e EV durante i vari sprint.
 ])
@@ -794,6 +799,8 @@ file, risolto usando la funzione dei branch di Git. Questo ha portato a un aumen
 durante il periodo di vacanze pasquali, è stato riscontrato una riduzione del lavoro rispetto a quello stimato.
 
 == MPC-AC(Actual Cost) - MPC-ETC(Estimated To Completion)
+// TODO: probabilmente va sistemato dopo aver aggiornato le ore preventivate
+=== RTB
 #figure(image("../imgs/SwePdQAcEtcBac.png", width: 100%), caption: [
   Stima dei valori di AC e ETC durante i vari sprint.
 ])
@@ -812,6 +819,7 @@ cui il gruppo ha avuto delle vacanze pasquali e quindi il lavoro è diminuito in
 sprint successivo.
 
 == MPC-SC(Schedule Variance) - MPC-CV(Cost Variance)
+=== RTB
 #figure(image("../imgs/SwePdQCvSv.png", width: 100%), caption: [
   Stima dei valori di CV e SV durante i vari sprint.
 ])
@@ -836,6 +844,7 @@ di SV e CV sono stati rispettati, ad eccezione dei periodi finali a causa delle 
 stabili subito dopo.
 
 == MPC-RSI(Requirements Stability Index)
+=== RTB
 #figure(image("../imgs/SwePdQRSI.png", width: 100%), caption: [
   Stima di RSI durante i vari sprint.
 ])
@@ -849,10 +858,11 @@ in cui l'indice RSI risulta essere del 100%.
 #figure(image("../imgs/SwePdQRSIPB.png", width: 95%), caption: [
   Stima di RSI durante i vari sprint della fase PB.
 ])
-Durante la fase PB, i requisiti non hanno visto modifiche sostanziali, tuttabia sono stati modificati alcuni requisiti a
+Durante la fase PB, i requisiti non hanno visto modifiche sostanziali, tuttavia sono stati modificati alcuni requisiti a
 seguito del colloquio RTB.
 
 == MPC-Correttezza Ortografica
+=== RTB
 #figure(image("../imgs/SwePdQCO.png", width: 100%), caption: [
   Stima dei valori di correttezza ortografica durante i vari sprint.
 ])
@@ -871,6 +881,7 @@ eccezione sono i documenti Specifica Tecnica (ST) e Manuale Utente (MU) in quant
 iniziata all'inizio della fase PB.
 
 == MPC-Indice Gulpease
+=== RTB
 #figure(image("../imgs/SwePdQGulpease.png", width: 100%), caption: [
   Stima dei valori dell'indice Gulpease per ogni documento durante i vari sprint.
 ])
@@ -886,6 +897,7 @@ già esistenti. Invece per i documenti nuovi, si può vedere una maggiore instab
 
 
 == MPC-Non-Calculated-Risk
+=== RTB
 #figure(image("../imgs/SwePdQ_NcR.png", width: 100%), caption: [
   Stima dei valori di CV e SV durante i vari sprint.
 ])
@@ -903,6 +915,7 @@ interna con alcuni membri del gruppo. Si può comunque notare che anche in quest
 previsione dei rischi.
 
 == MPC-QMS(Quality Metric Satisfied)
+=== RTB
 #figure(image("../imgs/SwePdQQMS.png", width: 100%), caption: [
   Stima della percentuale di metriche di qualità soddisfatte durante i vari sprint.
 ])
@@ -973,7 +986,7 @@ dove "TIPO" sarà:
 #figure(
   caption: "Valutazione sui ruoli",
   table(
-    columns: (0.4fr, 0.5fr, 0.8fr, 1fr, 1fr),
+    columns: (0.4fr, 0.8fr, 1fr, 1fr, 1fr),
     inset: 8pt,
     align: center + horizon,
     fill: (x, y) => if (y == 0) { luma(230) },
@@ -1000,7 +1013,7 @@ dove "TIPO" sarà:
 #figure(
   caption: "Valutazione sugli strumenti utilizzati",
   table(
-    columns: (0.4fr, 0.5fr, 0.8fr, 1fr, 1fr),
+    columns: (0.4fr, 0.6fr, 0.8fr, 1fr, 1fr),
     inset: 8pt,
     align: center + horizon,
     fill: (x, y) => if (y == 0) { luma(230) },
