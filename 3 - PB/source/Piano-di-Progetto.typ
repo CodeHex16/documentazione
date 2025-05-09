@@ -28,6 +28,10 @@
   sommario: [Piano di Progetto],
 
   versioni: (
+	"1.6.0",
+    "09/05/2025",
+    "Luca Rossi",
+    "Aggiunto sprint 14",
     "1.5.0",
     "05/05/2025",
     "Luca Rossi",
@@ -1054,6 +1058,53 @@ Sono inoltre state definite e scritte le ultime sezioni delle *Norme di Progetto
   [*TOTALE*], [*139.95*],
 )
 
+=== Sprint 14
+*Intervallo temporale*: 28/04/2025 - 04/05/2025
+
+#pseudoheading[*Retrospettiva*]
+Durante lo *Sprint 14*, il gruppo ha proseguito il completamento delle ultime funzionalità software lato frontend e backend, concentrandosi sull'integrazione dei moduli e sulla rifinitura dell’interfaccia.  
+Parallelamente è continuato l’aggiornamento dei documenti principali del progetto, con particolare attenzione alla retrospettiva, agli indici e alle sezioni di sviluppo.  
+Sono state completate alcune task legate alla verifica grafica, alla valutazione delle risposte del bot e al testing generale del sistema. 
+
+#pseudoheading[*Attività svolte*]
+- *Aggiornamento documentazione*: Integrazione sezione sviluppo in NdP, aggiornamento PdP, PdQ e AdR.
+- *Integrazione backend-frontend*: Sincronizzazione finale tra interfacce e servizi.
+- *Verifica e testing*: Prove complete sulla funzionalità del sistema, verifica esecuzione tramite CI/CD.
+- *Valutazione risposte bot*: Verifica qualitativa delle risposte generate lato backend.
+- *UI e flag utente*: Gestione del flag “remember me” e revisione estetica della pagina FAQ.
+
+#pseudoheading[*Ruoli ricoperti e ore svolte*]
+
+#figure(
+  image("../imgs/sprint14-tabella.png", width: 100%),
+  caption: [
+    Suddivisione oraria per membro e ruolo.
+  ],
+)
+
+#figure(
+  image("../imgs/sprint14-grafico.png", width: 100%),
+  caption: [
+    Suddivisione oraria per ruolo con relativi costi.
+  ],
+)
+
+#table(
+  columns: (1fr, 1fr),
+  inset: 8pt,
+  align: (x, y) => if y > 0 { left } else { center + horizon },
+  fill: (x, y) => if y == 0 { luma(180) } else if (y == 2 or y == 4 or y == 6 or y == 8 or y == 10 or y == 12) { luma(230) },
+  table.header(table.cell(colspan: 2)[*Ore rimanenti per persona*]),
+  [*Membro*], [*Ore mancanti*],
+  [Ribon], [0.5],
+  [Bazzan], [-0.45],
+  [Fragonas], [16.55],
+  [Magnelli], [7],
+  [Sabbadin], [11.1],
+  [Rossi], [17.5],
+  [Zhuo], [29.45],
+  [*TOTALE*], [*81.65*],
+)
 
 
 // == Periodo CA
