@@ -877,7 +877,7 @@ errori presenti erano 0, in particolare si è raggiunto un ottimo risultato negl
 Come notato nella sezione automiglioramento, è stato difficile avere un formato dei documenti omogeneo e questo ha
 portato a un aumento di diversi errori. Questo è stato risolto con l'uso di un correttore ortografico automatico e una
 maggiore comunicazione tra i membri del gruppo. Si può notare che il numero di errori ortografici è diminuito. Unica
-eccezione sono i documenti Specifica Tecnica (ST) e Manuale Utente (MU) in quanto documenti nuovi la cui stesura è
+eccezione sono i documenti #gloss[Specifica Tecnica] (ST) e Manuale Utente (MU) in quanto documenti nuovi la cui stesura è
 iniziata all'inizio della fase PB.
 
 == MPC-Indice Gulpease
