@@ -28,10 +28,11 @@
   sommario: [Piano di Progetto],
 
   versioni: (
-	"1.6.0",
+    "1.6.0",
     "09/05/2025",
     "Luca Rossi",
     "Aggiunto sprint 14",
+    "Luca Ribon",
     "1.5.0",
     "05/05/2025",
     "Luca Rossi",
@@ -1062,9 +1063,11 @@ Sono inoltre state definite e scritte le ultime sezioni delle *Norme di Progetto
 *Intervallo temporale*: 28/04/2025 - 04/05/2025
 
 #pseudoheading[*Retrospettiva*]
-Durante lo *Sprint 14*, il gruppo ha proseguito il completamento delle ultime funzionalità software lato frontend e backend, concentrandosi sull'integrazione dei moduli e sulla rifinitura dell’interfaccia.  
-Parallelamente è continuato l’aggiornamento dei documenti principali del progetto, con particolare attenzione alla retrospettiva, agli indici e alle sezioni di sviluppo.  
-Sono state completate alcune task legate alla verifica grafica, alla valutazione delle risposte del bot e al testing generale del sistema. 
+Durante lo *Sprint 14*, il gruppo ha proseguito il completamento delle ultime funzionalità software lato frontend e backend, concentrandosi sull'integrazione definitiva tra frontend e backend e sulla rifinitura dell'interfaccia.  
+Parallelamente è continuato l'aggiornamento dei documenti principali del progetto, con particolare attenzione alla retrospettiva, agli indici e alle sezioni di sviluppo.  
+Sono state completate alcune task legate alla verifica grafica, alla valutazione delle risposte del bot e al testing generale del sistema.
+
+In questo sprint si è verificato un rallentamento dovuto alla difficoltà di alcuni membri del gruppo nell'impegnarsi, per un numero di ore produttive adeguato, per il progetto. Per questo motivo è stata svolta un incontro con il prof. Vardanega dove ognuno ha dichiarato il suo impegno e disponibilità per portare a termina il progetto con una qualità che rispetti le aspettative.
 
 #pseudoheading[*Attività svolte*]
 - *Aggiornamento documentazione*: Integrazione sezione sviluppo in NdP, aggiornamento PdP, PdQ e AdR.
