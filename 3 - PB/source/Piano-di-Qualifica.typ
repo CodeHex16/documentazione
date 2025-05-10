@@ -561,7 +561,7 @@ Esempi applicati al progetto:
     "TS-003",
     "Verificare che il cliente debba cambiare la password al primo accesso",
     "R-03-F-O",
-    "Non implementato",
+    "Non Implementato",
     "TS-004",
     "Verificare che sia cliente che fornitore possano cambiare password",
     "R-04-F-O",
@@ -866,10 +866,7 @@ errori presenti erano 0, in particolare si è raggiunto un ottimo risultato negl
 ])
 Come notato nella sezione automiglioramento, è stato difficile avere un formato dei documenti omogeneo e questo ha
 portato a un aumento di diversi errori. Questo è stato risolto con l'uso di un correttore ortografico automatico e una
-maggiore comunicazione tra i membri del gruppo. Si può notare che il numero di errori ortografici è diminuito. Unica
-eccezione sono i documenti Specifica Tecnica (ST) e Manuale Utente (MU) in quanto documenti nuovi la cui stesura è
-iniziata all'inizio della fase PB.
-
+maggiore comunicazione tra i membri del gruppo.
 == MPC-Indice Gulpease
 #figure(image("../imgs/SwePdQGulpease.png", width: 100%), caption: [
   Stima dei valori dell'indice Gulpease per ogni documento durante i vari sprint.
@@ -880,9 +877,11 @@ Requisiti e questo è causato dalla specificità degli argomenti trattati e dal 
 documenti l'indice Gulpease è sopra l'ottimo per la maggior parte degli sprint.
 
 === PB
-//Mettere il grafico
+#figure(image("../imgs/SwePdQGulpeasePB.png", width: 100%), caption: [
+  Stima dei valori dell'indice Gulpease per ogni documento durante i vari sprint.
+])
 Durante la fase PB, l'indice è rimasto abbastanza stabile e non vi sono stati cambiamenti sostanziali per i documenti
-già esistenti. Invece per i documenti nuovi, si può vedere una maggiore instabilità.
+già esistenti. Invece per i documenti nuovi, cioè Specifica Tecnica (ST) e Manuale Utente (MU), si può vedere una maggiore instabilità.
 
 
 == MPC-Non-Calculated-Risk
