@@ -500,15 +500,6 @@ I service sono delle classi che rappresentano la business logic principale; ques
 - `llm_service.py`: permette di operare con diversi LLM e provider di LLM rendendoli facilmente intercambiabili;
 - `vector_database_service.py`: fornisce i metodi per interagire con il database vettoriale, permettendo di memorizzare e recuperare i dati vettorializzati, semplificando l'intercambiabilità tra diversi database vettoriali;
 
-
-
-==== Diagramma delle classi
-#figure(
-  image("../imgs/diagramma-llm-api.png", width: 110%),
-  caption: "Diagramma delle classi di LLM-API",
-)
-// TODO: descrizione delle classi
-
 ==== Design pattern utilizzati
 ===== Strategy
 Il pattern *_strategy_* è un pattern comportamentale che consente di definire una famiglia di algoritmi, incapsularli e renderli intercambiabili. Questo pattern permette di separare l'algoritmo dalla sua implementazione, consentendo di modificare il comportamento del sistema senza alterare il codice esistente.
@@ -523,6 +514,88 @@ Abbiamo utilizzato questo pattern per:
 Il pattern *_singleton_* è un pattern creazionale che garantisce che una classe abbia una sola istanza e fornisce un punto di accesso globale a essa. Questo pattern è utile quando è necessario controllare l'accesso a una risorsa condivisa, come un database o un file di configurazione.
 
 Abbiamo utilizzato il pattern singleton per gestire l'accesso al database vettoriale in modo che la stessa istanza del database possa essere utilizzata in tutta l'applicazione, evitando conflitti e garantendo la coerenza dei dati.
+
+===== Dependency Injection
+Il pattern *_dependency injection_* è un pattern strutturale che consente di includere le dipendenze necessarie in una classe, invece che crearle all'interno della classe stessa.
+Questo pattern permette di ridurre l'accoppiamento tra le classi e di rendere il codice più modulare.
+
+==== Diagramma delle classi
+#figure(
+  image("../imgs/diagramma-llm-api.png", width: 110%),
+  caption: "Diagramma delle classi di LLM-API",
+)
+
+#set par(justify: false)
+===== DTO
+#figure(
+  image("../imgs/DTO.png", width: 90%),
+  caption: "Diagramma delle classi dei DTO di LLM-API",
+)
+La classe DTO (Data Transfer Object) è un oggetto che viene utilizzato per trasferire dati tra le diverse parti del sistema. In questo caso, i DTO vengono utilizzati per trasferire i dati tra il client e il server, in modo da semplificare la comunicazione e ridurre il numero di chiamate API necessarie.
+====== Message
+- ```python +sender: str```: rappresenta il mittente del messaggio, che può essere l'utente o il chatbot;
+- ```python +content: str```: rappresenta il contenuto del messaggio;
+
+====== Question
+- ```python +question: str```: rappresenta la domanda posta dall'utente al chatbot;
+- ```python +messages: List[Messages]```: rappresenta il contesto fornito dall'utente al chatbot;
+
+====== Context
+- ```python +context: str```: rappresenta il contesto fornito dall'utente al chatbot;
+
+====== DocumentBase
+- ```python +id: str```: rappresenta l'identificativo del documento;
+- ```python +title: str```: rappresenta il nome del documento;
+
+====== Document
+Estensione della classe DocumentBase.
+- ```python +update_at: datetime```: rappresenta la data di aggiornamento del documento;
+- ```python +content: str```: rappresenta il contenuto del documento;
+
+====== DocumentDelete
+Estensione della classe DocumentBase.
+- ```python +token: str```: rappresenta il token JWT di autenticazione dell'utente;
+- ```python +current_password: str```: rappresenta la password dell'utente;
+
+====== FAQBase
+- ```python +title: str```: rappresenta il titolo della FAQ;
+- ```python +question: str```: rappresenta la domanda della FAQ;
+- ```python +answer: str```: rappresenta la risposta della FAQ;
+
+====== FAQ
+Estensione della classe FAQBase.
+- ```python +id: str```: rappresenta l'identificativo della FAQ;
+
+====== FAQDelete
+Estensione della classe FAQBase.
+- ```python +id: str```: rappresenta l'identificativo della FAQ;
+- ```python +admin_password: str```: rappresenta la password dell'utente;
+
+===== LLMRouter
+#figure(
+  image("../imgs/LLMRouter.png", width: 90%),
+  caption: "Diagramma delle classi di LLMRouter",
+)
+La classe LLMRouter è responsabile della gestione delle richieste HTTP relative alle query che verranno reindirizzate all'LLMResponseService.
+
+L'oggetto LLMResponseService viene importato tramite il metodo ```python LLMResponseService.get_llm_response_service()``` che restituisce l'istanza del servizio LLMResponseService.
+====== Attributi
+- ```python +router: APIRouter```: oggetto del modulo fastapi che permette di definire le dell'API route;
+====== Metodi
+- ```python +generate_chat_response(question: Question, llm: LLMResponseService) -> StreamingResponse```: oggetto del modulo llm_service che restituisce le risposte generate in streaming in base al prompt fornito;
+- ```python +generate_chat_name(context: Context) -> str```: oggetto del modulo llm_service che restituisce il nome della chat generato in base al contesto fornito;
+
+===== FaqRouter
+#figure(
+  image("../imgs/FaqRouter.png", width: 50%),
+  caption: "Diagramma delle classi di FaqRouter",
+)
+La classe FaqRouter è responsabile della gestione delle richieste HTTP relative alla gestione delle FAQ.
+
+// TODO: descrizione delle classi
+
+
+#set par(justify: true)
 
 // = API
 
