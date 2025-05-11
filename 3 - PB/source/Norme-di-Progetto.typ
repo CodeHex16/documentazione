@@ -25,7 +25,7 @@
     "11/05/2025",
     "Gabriele Magnelli",
     "Sistemata sezione sviluppo",
-    "",
+    "Luca Ribon",
     "1.4.0",
     "6/05/2025",
     "Gabriele Magnelli",
@@ -321,11 +321,10 @@ La coerenza nello stile favorirà la leggibilità del codice e semplificherà i 
 
 Per quanto riguarda le norme di codifica da seguire vi sono:
 - *Variabili*: si cerca di usare meno variabili globali possibili e i nomi scelti per le variabili devono essere identificativi;
-- *Funzioni*: si preferisce usare un numero di funzioni maggiore, ma più piccole svolgendo uno scopo ben preciso;
+- *Funzioni*: si preferisce usare un numero di funzioni maggiore, ma più piccole svolgendo uno scopo ben preciso; in questo modo il codice risulta meglio manutenibile e più facilmente testabile;
 - *Indentazione*: per l'indentazione, ein generale per la struttura del codice viene usato il tool *Prettier*;
 - *Commenti*: in generale il codice deve essere scritto in modo chiaro e di facile comprensione, ma in particolare, per tutte le funzioni delle api routes sono commentate con una descrizione,i parametri usati,i valori ritornati e le eccezioni gestite.
 - *Compatibilità*: il codice scritto deve essere compatibile e quindi funzionare correttamente su diversi sistemi operativi e dispositivi;
-- *Testabilità*: le funzioni devono essere piccole così da essere più facilmente testabile e verificabile;
 - *Gestione delle eccezioni*: le eccezioni e gli eventuali errori che si potrebbero verificare devono essere gestiti correttamente mostrando dove necessario messaggi d'errore;
 
 === Strumenti usati
@@ -678,6 +677,7 @@ Le principali attività del processo di formazione sono:
 - *Github*: per gestire tutta la documentazione e il codice per il progetto in un repository;
 - *Notion*: per organizzare appunti e documenti in modo non ufficiale;
 - *Telegram*: per comunicare in modo veloce con gli altri membri del team;
+// TODO: le metriche vanno riviste, molte probabilmente non sono misurate quindi vanno rimosse
 = Metriche e standard per la qualità
 Per  migliorare e avere uno standard di qualità da cui attingere il gruppo ha deciso di utilizzare degli standard riconosciuti a livello internazionale. 
 Tra quelli disponibili è stato scelto lo standard  ISO/IEC 12207:1995 per quanto riguarda la qualità dei processi principali, organizzativi e di supporto.
