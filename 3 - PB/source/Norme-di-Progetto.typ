@@ -21,13 +21,19 @@
   sommario: [Norme di progetto],
 
   versioni: (
+    "1.5.0",
+    "11/05/2025",
+    "Gabriele Magnelli",
+    "Sistemata sezione sviluppo",
+    "Luca Ribon",
     "1.4.0",
+    "6/05/2025",
     "Gabriele Magnelli",
     "Varie migliorie e aggiornamenti",
     "Luca Ribon",
     "1.3.0",
-    "Luca Rossi",
     "24/04/2025",
+    "Luca Rossi",
     "Aggiunte regole di sviluppo",
     "Gabriele Magnelli",
     "1.2.0",
@@ -59,7 +65,7 @@
     "12/11/2024",
     "Luca Ribon",
     "Correzione del contenuto,
-formattazione e stesura sezione Sviluppo",
+    formattazione e stesura sezione Sviluppo",
     "Luca Rossi",
     "0.4.0",
     "08/01/2025",
@@ -111,7 +117,6 @@ Le definizioni sono disponibili nel documento Glossario.pdf e possono essere con
 #link("https://codehex16.github.io/glossario")
 
 == Riferimenti
-// TODO: aggiornare riferimenti e link
 === Riferimenti normativi
 - Capitolato C7 - Assistente Virtuale Ergon:\  #link("https://www.math.unipd.it/~tullio/IS-1/2024/Progetto/C7.pdf") _(ultima consultazione 03-03-2025)_;
 === Riferimenti informativi
@@ -270,7 +275,7 @@ Nello specifico la documentazione dovrà prevedere la documentazione dedicata al
 
 Il gruppo ha definito norme precise per il processo di sviluppo del codice, volte a garantire uniformità, qualità e tracciabilità durante tutte le fasi di implementazione.
 
-===== Naming delle branch per i repository di sviluppo
+===== Nome delle branch per la parte di codice
 Ogni branch deve essere nominata seguendo la convenzione:
 - *oggettoDellaBranch-utente-sprint*
 dove l'oggetto rappresenta brevemente l'attività svolta, l'utente indica chi ha creato il branch, e sprint si riferisce allo sprint di appartenenza.
@@ -307,15 +312,23 @@ La verifica del software sarà suddivisa in:
   - test di integrazione;
 - *Testing manuale*, eseguito periodicamente per validare i comportamenti complessi non completamente automatizzabili.
 
-===== Stile del codice
+===== Stile e norme della codifica
 Lo stile dei sorgenti seguirà le convenzioni ufficiali delle principali guideline:
 - Per il codice *Python*, si adotterà la nomenclatura indicata in [PEP8](https://peps.python.org/pep-0008/).
 - Per il codice *TypeScript/JavaScript*, si seguiranno le convenzioni del [Google TypeScript Style Guide](https://google.github.io/styleguide/tsguide.html#naming).
 
 La coerenza nello stile favorirà la leggibilità del codice e semplificherà i processi di revisione.
 
+Per quanto riguarda le norme di codifica da seguire vi sono:
+- *Variabili*: si cerca di usare meno variabili globali possibili e i nomi scelti per le variabili devono essere identificativi;
+- *Funzioni*: si preferisce usare un numero di funzioni maggiore, ma più piccole svolgendo uno scopo ben preciso; in questo modo il codice risulta meglio manutenibile e più facilmente testabile;
+- *Indentazione*: per l'indentazione, ein generale per la struttura del codice viene usato il tool *Prettier*;
+- *Commenti*: in generale il codice deve essere scritto in modo chiaro e di facile comprensione, ma in particolare, per tutte le funzioni delle api routes sono commentate con una descrizione,i parametri usati,i valori ritornati e le eccezioni gestite.
+- *Compatibilità*: il codice scritto deve essere compatibile e quindi funzionare correttamente su diversi sistemi operativi e dispositivi;
+- *Gestione delle eccezioni*: le eccezioni e gli eventuali errori che si potrebbero verificare devono essere gestiti correttamente mostrando dove necessario messaggi d'errore;
+
 === Strumenti usati
-- *VS Code*: per la scrittura del codice;
+- *VS Code*:ambiente di sviluppo integrato (IDE) per la scrittura del codice;
 - *Draw.io*: per elaborare i diagrammi #gloss[UML] degli use case individuati durante la fase di analisi dei requisiti;
 
 = Processi di supporto
@@ -664,8 +677,7 @@ Le principali attività del processo di formazione sono:
 - *Github*: per gestire tutta la documentazione e il codice per il progetto in un repository;
 - *Notion*: per organizzare appunti e documenti in modo non ufficiale;
 - *Telegram*: per comunicare in modo veloce con gli altri membri del team;
-
-// TODO: rincontrollare metriche
+// TODO: le metriche vanno riviste, molte probabilmente non sono misurate quindi vanno rimosse
 = Metriche e standard per la qualità
 Per  migliorare e avere uno standard di qualità da cui attingere il gruppo ha deciso di utilizzare degli standard riconosciuti a livello internazionale. 
 Tra quelli disponibili è stato scelto lo standard  ISO/IEC 12207:1995 per quanto riguarda la qualità dei processi principali, organizzativi e di supporto.
