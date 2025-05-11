@@ -42,10 +42,11 @@
     "25/04/2025",
     "Francesco Fragonas",
     "Aggiunto sprint 12",
+    "Luca Rossi",
     "1.3.0",
     "18/04/2025",
     "Luca Rossi",
-    "Aggiornamento della retrospettiva",
+    "Aggiornata retrospettiva",
     "Francesco Fragonas",
     "1.2.0",
     "04/04/2025",
@@ -1108,15 +1109,3 @@ In questo sprint si è verificato un rallentamento dovuto alla difficoltà di al
   [Zhuo], [29.45],
   [*TOTALE*], [*81.65*],
 )
-
-
-// == Periodo CA
-// Le documentazione relativa al periodo PB verrà redatta dopo il superamento della RTB.
-
-// #pseudoheading[*Obiettivi principali*]
-
-// - *Validazione finale del prodotto*: Esecuzione di test conclusivi per garantire che il prodotto soddisfi tutti i requisiti.
-// - *Ottimizzazioni finali*: Correzione degli ultimi bug e miglioramento delle prestazioni.
-// - *Aggiornamento dei documenti*: Revisione e completamento della documentazione per la consegna finale.
-// - *Consegna al cliente*: Preparazione e presentazione del prodotto finale.
-// L'obiettivo principale di questo periodo è stato garantire che il prodotto fosse pronto per l'accettazione finale da parte del cliente, con particolare attenzione alla qualità e alla completezza.
