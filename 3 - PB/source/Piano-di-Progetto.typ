@@ -28,6 +28,11 @@
   sommario: [Piano di Progetto],
 
   versioni: (
+    "1.6.0",
+    "09/05/2025",
+    "Luca Rossi",
+    "Aggiunto sprint 14",
+    "Luca Ribon",
     "1.5.0",
     "05/05/2025",
     "Luca Rossi",
@@ -37,10 +42,11 @@
     "25/04/2025",
     "Francesco Fragonas",
     "Aggiunto sprint 12",
+    "Luca Rossi",
     "1.3.0",
     "18/04/2025",
     "Luca Rossi",
-    "Aggiornamento della retrospettiva",
+    "Aggiornata retrospettiva",
     "Francesco Fragonas",
     "1.2.0",
     "04/04/2025",
@@ -1054,15 +1060,52 @@ Sono inoltre state definite e scritte le ultime sezioni delle *Norme di Progetto
   [*TOTALE*], [*139.95*],
 )
 
+=== Sprint 14
+*Intervallo temporale*: 28/04/2025 - 04/05/2025
 
+#pseudoheading[*Retrospettiva*]
+Durante lo *Sprint 14*, il gruppo ha proseguito il completamento delle ultime funzionalità software lato frontend e backend, concentrandosi sull'integrazione definitiva tra frontend e backend e sulla rifinitura dell'interfaccia.  
+Parallelamente è continuato l'aggiornamento dei documenti principali del progetto, con particolare attenzione alla retrospettiva, agli indici e alle sezioni di sviluppo.  
+Sono state completate alcune task legate alla verifica grafica, alla valutazione delle risposte del bot e al testing generale del sistema.
 
-// == Periodo CA
-// Le documentazione relativa al periodo PB verrà redatta dopo il superamento della RTB.
+In questo sprint si è verificato un rallentamento dovuto alla difficoltà di alcuni membri del gruppo nell'impegnarsi, per un numero di ore produttive adeguato, per il progetto. Per questo motivo è stata svolta un incontro con il prof. Vardanega dove ognuno ha dichiarato il suo impegno e disponibilità per portare a termina il progetto con una qualità che rispetti le aspettative.
 
-// #pseudoheading[*Obiettivi principali*]
+#pseudoheading[*Attività svolte*]
+- *Aggiornamento documentazione*: Integrazione sezione sviluppo in NdP, aggiornamento PdP, PdQ e AdR.
+- *Integrazione backend-frontend*: Sincronizzazione finale tra interfacce e servizi.
+- *Verifica e testing*: Prove complete sulla funzionalità del sistema, verifica esecuzione tramite CI/CD.
+- *Valutazione risposte bot*: Verifica qualitativa delle risposte generate lato backend.
+- *UI e flag utente*: Gestione del flag “remember me” e revisione estetica della pagina FAQ.
 
-// - *Validazione finale del prodotto*: Esecuzione di test conclusivi per garantire che il prodotto soddisfi tutti i requisiti.
-// - *Ottimizzazioni finali*: Correzione degli ultimi bug e miglioramento delle prestazioni.
-// - *Aggiornamento dei documenti*: Revisione e completamento della documentazione per la consegna finale.
-// - *Consegna al cliente*: Preparazione e presentazione del prodotto finale.
-// L'obiettivo principale di questo periodo è stato garantire che il prodotto fosse pronto per l'accettazione finale da parte del cliente, con particolare attenzione alla qualità e alla completezza.
+#pseudoheading[*Ruoli ricoperti e ore svolte*]
+
+#figure(
+  image("../imgs/sprint14-tabella.png", width: 100%),
+  caption: [
+    Suddivisione oraria per membro e ruolo.
+  ],
+)
+
+#figure(
+  image("../imgs/sprint14-grafico.png", width: 100%),
+  caption: [
+    Suddivisione oraria per ruolo con relativi costi.
+  ],
+)
+
+#table(
+  columns: (1fr, 1fr),
+  inset: 8pt,
+  align: (x, y) => if y > 0 { left } else { center + horizon },
+  fill: (x, y) => if y == 0 { luma(180) } else if (y == 2 or y == 4 or y == 6 or y == 8 or y == 10 or y == 12) { luma(230) },
+  table.header(table.cell(colspan: 2)[*Ore rimanenti per persona*]),
+  [*Membro*], [*Ore mancanti*],
+  [Ribon], [0.5],
+  [Bazzan], [-0.45],
+  [Fragonas], [16.55],
+  [Magnelli], [7],
+  [Sabbadin], [11.1],
+  [Rossi], [17.5],
+  [Zhuo], [29.45],
+  [*TOTALE*], [*81.65*],
+)
