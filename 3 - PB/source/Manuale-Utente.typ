@@ -6,7 +6,11 @@
   data: [24/03/2025],
   ruoli: ("Luca Ribon", "Verificatore", "Filippo Sabbadin", "Redattore",),
   sommario: [Manuale utente],
-  versioni: ("0.1.0", "24/03/2025", "Filippo Sabbadin", "Prima stesura", "Luca Ribon"),
+  versioni: (
+    "0.4.0", "12/05/2025", "Francesco Fragonas", "Sezione Installazione", "",
+    "0.3.0", "08/05/2025", "Francesco Fragonas", "Sezione Aspetto del sistema e Tipi utenti", "",
+    "0.2.0", "05/05/2025", "Francesco Fragonas", "Sezione Guida all'utilizzo", "",
+    "0.1.0", "24/03/2025", "Filippo Sabbadin", "Prima stesura", "Luca Ribon"),
   doc,
 )
 // spaciugo per aggiungere l'indice delle immagini
@@ -44,43 +48,25 @@ e nella seguente pagina web: #link("https://codehex16.github.io/glossario").
 == Riferimenti
 
 === Riferimenti normativi
-- Capitolato C7 - Assistente Virtuale Ergon:\ #link("https://www.math.unipd.it/~tullio/IS-1/2024/Progetto/C7.pdf")\ _(ultima consultazione: 03-03-2025)_; //da tenere aggiornato
+- Capitolato C7 - Assistente Virtuale Ergon:\ #link("https://www.math.unipd.it/~tullio/IS-1/2024/Progetto/C7.pdf")\ _(ultima consultazione: 12-05-2025)_; //da tenere aggiornato
 
-- Regolamento del progetto didattico:\ #link("https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/PD1.pdf")\
+- Regolamento del progetto didattico:\ #link("https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/PD1.pdf")\\ _(ultima consultazione: 12-05-2025)_
 
 - Norme di progetto:\ #link("https://codehex16.github.io/docs/2%20-%20RTB/Norme-di-Progetto.pdf")\ _(versione 1.0.0)_;
 
 === Riferimenti informativi
-- Sito del gruppo CodeHex16:\ #link("https://codehex16.github.io/")\ _(ultima consultazione: 06-03-2025)_;
+- Sito del gruppo CodeHex16:\ #link("https://codehex16.github.io/")\ _(ultima consultazione: 12-05-2025)_;
 //da tenere aggiornato
 
 - Glossario:
   - Documento: #link("https://codehex16.github.io/docs/glossario/glossario.pdf") _(versione 1.0.0)_;
-  - Pagina web: #link("https://codehex16.github.io/glossario.html") _(ultima consultazione 06-03-2025)_;
+  - Pagina web: #link("https://codehex16.github.io/glossario.html") _(ultima consultazione 12-05-2025)_;
 
 = Requisiti consigliati
 
 In questa sezione vengono elencati i requisiti consigliati per garantire il corretto funzionamento del prodotto. Questi
 requisiti non sono necessari, ma sono comunque consigliati visto che il gruppo ha lavorato con essi, ed è in grado di
 garantire il corretto funzionamento del prodotto.
-
-== Requisiti di sistema
-
-Alcuni membri del gruppo hanno utilizzato il sistema operativo Windows 11 durante lo sviluppo del progetto, altri invece utilizzavano Ubuntu/*versione*/, dunque i requisiti di sistema consigliati sono i seguenti:
-
-#figure(table(
-  columns: (1fr, 1fr),
-  inset: 8pt,
-  align: (x, y) => if (y > 0) { left } else { center + horizon },
-  fill: (x, y) => if y == 0 { luma(190) } else if (y == 2 or y == 4) { luma(230) },
-  table.header([*Sistema*], [*Versione*]),
-  "Windows 11",
-  "24H2",
-  "Arch Linux",
-  "",
-  "Fedora Linux",
-  ""
-), caption: "Requisiti di sistema")
 
 == Requisiti hardware
 Per hardware si intendono le componenti della macchina dove verrà utilizzato il prodotto. I requisiti consigliati sono i seguenti:
@@ -96,10 +82,8 @@ Per hardware si intendono le componenti della macchina dove verrà utilizzato il
   "Memoria primaria",
   "2GB DDR4",
   "Memoria secondaria",
-  // TODO: da verificare quando sapremo cosa salveremo in locale
   "500MB",
   "Connessione internet",
-  // TODO: da verificare
   "5mbps",
 ), caption: "Requisiti hardware")
 
@@ -113,23 +97,169 @@ Visto che il gruppo sta sviluppando una #gloss[webapp], per software si intende 
   align: (x, y) => if (y > 0) { left } else { center + horizon },
   fill: (x, y) => if y == 0 { luma(190) } else if (y == 2 or y == 4) { luma(230) },
   table.header([*Browser*], [*Versione*]),
-  "Mozilla Firefox",
-  "136.0.2 (64-bit)",
   "Google Chrome",
-  "134.0.6998.165 (Build ufficiale) (64 bit)",
+  "v123+",
+  "Mozilla Firefox",
+  "v123+",
+  "Microsoft Edge",
+  "v17+",
+  "Safari",
+  "v122+"
 ), caption: "Requisiti software")
+
+=== Requisiti di sistema
+La webapp è accessibile tramite browser e non richiede installazione locale, risultando quindi compatibile con i principali sistemi operativi moderni. In particolare, il prodotto è stato progettato per funzionare correttamente su:
+
+- Windows 10 e versioni successive;
+- Linux (distribuzioni basate su Debian, Ubuntu, Fedora, Arch Linux);
+- MacOS (versioni 12 Monterey e successive).
+- iOS (versioni 16 e successive);
+- Android (versioni 12 e successive).
+
+L'unico requisito fondamentale è la presenza di un browser web aggiornato che supporto le tecnologie moderne (HTML5, CSS3, JavaScript). I browser e versioni consigliate sono indicati nella sezione precedente.
+
+L'utilizzo di browser obsoleti o non aggiornati potrebbe compromettere la corretta visualizzazione e il funzionamento dell'applicativo.
+
 
 // TODO: probabilmente l'installazione non serve perché è gestita dall'amministratore
 = Installazione
+Questa sezione descrive tutti i passaggi necessari per l'installazione dell'applicativo a partire dal codice sorgente presente nella repository.
 
-= Utente
-Un utente è un cliente che utilizza la piattaforma per comunicare con il chatbot. Può essere un privato o un'azienda. Un utente può registrarsi e accedere alla piattaforma per utilizzare le funzionalità offerte dal chatbot.
+== Clonazione del progetto
+Clonare la repository del progetto con i relativi moduli da GitHub sul server o sulla macchina locale.
+
+#raw("git clone https://github.com/CodeHex16/MVP.git --recurse-submodules", lang: "bash")
+
+#raw("cd MVP", lang: "bash")
+
+#strong[Nota:] #emph[assicurarsi di avere installato Git. In caso contrario, installarlo con sudo apt install git (su sistemi Debian-based) o tramite il gestore di pacchetti del proprio sistema operativo.]
+
+== Creazione dei file .env
+Per il corretto funzionamento dell'applicativo è necessario creare un file .env contenente le variabili d'ambiente necessarie. Per crearlo, copiare il file .env.example presente nella root del progetto e rinominarlo in .env.
+
+#strong[Linux]
+
+#raw("cp .env.example .env", lang: "bash")
+
+#strong[Windows]
+
+#raw("copy .env.example .env", lang: "bash")
+
+Aprire i file .env e modificare le variabili d'ambiente.
+
+Di seguito sono elencate le variabili d'ambiente necessarie per il corretto funzionamento dell'applicativo. 
+
+Per il microservizio #strong[Database-API] sono necessari:
+- MONGODB_URL: URL del database MongoDB;
+- SECRET_KEY_JWT: chiave segreta per la generazione dei token JWT;
+- MONGO_USERNAME: nome utente per l'accesso al database MongoDB;
+- MONGO_PASSWORD: password per l'accesso al database MongoDB;
+- ME_USERNAME: nome utente per l'accesso a Mongo Express;
+- ADMIN_EMAIL: email dell'amministratore;
+- ADMIN_PASSWORD: password dell'amministratore;
+
+Per l'invio delle email sono necessari:
+- MAIL_ADDRESS: indirizzo email del mittente;
+- MAIL_PASSWORD: password dell'email del mittente;
+- MAIL_USERNAME: nome utente dell'email del mittente;
+- MAIL_PORT: porta del server SMTP (default 587);
+- MAIL_SERVER: server SMTP (es: smtp.example.com);
+- MAIL_STARTTLS: True se si utilizza TLS, False altrimenti;
+- MAIL_SSL_TLS: True se si utilizza SSL, False altrimenti;
+- MAIL_USE_CREDENTIALS: True se si utilizzano le credenziali, False altrimenti;
+- MAIL_VALIDATE_CERTS: True se si vogliono validare i certificati, False altrimenti;
+
+Per il microservizio #strong[LLM-API] sono necessari:
+- OPENAI_API_KEY: chiave API per l'accesso al servizio OpenAI;
+
+Per il microservizio #strong[Suppl-AI] sono necessari:
+- PUBLIC_DATABASE_URL: URL del database MongoDB pubblico;
+- PUBLIC_LLM_URL: URL del servizio LLM pubblico;
+- NODE_ENV: ambiente di esecuzione del nodo;
+
+== Avvio dell'applicativo
+Il sistema può essere avviato tramite Docker. Assicurarsi di aver installato Docker e Docker Compose. In caso contrario, seguire le istruzioni sul sito ufficiale  #link("https://docs.docker.com/get-docker/") _(ultima consultazione: 12-05-2025)_.
+
+Per avviare tutti i servizi:
+
+#raw("docker compose up --build", lang: "bash")
+
+La webapp sarà disponibile all'indirizzo #link("http://localhost:3000").
+
+== Accesso alla webapp
+Una volta avviata la webapp, è possibile accedere all'area amministratore per avere accesso a tutte le funzionalità. Le credenziali di accesso predefinite sono le seguenti:
+
+#strong[Email]: admin\@test.it
+
+#strong[Password]: adminadmin
+
+Per accedere come utente normale, è possibile utilizzare le seguenti credenziali predefinite:
+
+#strong[Email]: test\@test.it
+
+#strong[Password]: testtest
+
+
+= Tipi di utente
+All'interno della webapp sono previsti due distinti ruoli utente: utente standard (user) e amministratore (admin). Ciascun ruolo ha accesso a funzionalità differenti in base alle proprie competenze e responsabilità.
+
+== Utente standard (user)
+L’utente standard può interagire direttamente con il chatbot e accedere a una serie di funzionalità utili alla fruizione del servizio. In particolare, l’utente può:
+
+- Inviare messaggi al chatbot e ricevere risposte in tempo reale;
+- Consultare le domande frequenti (FAQ) pubblicate dagli amministratori;
+- Valutare la qualità delle risposte ricevute dal chatbot tramite un sistema di feedback.
+- Non ha accesso ad alcuna funzione di amministrazione o gestione della piattaforma.
+
+== Amministratore (admin)
+L’amministratore dispone di tutti i permessi dell’utente standard, ma ha inoltre accesso a un pannello di gestione dedicato che gli consente di:
+
+- Gestire gli utenti registrati (creazione, modifica, rimozione, assegnazione ruoli);
+- Caricare, visualizzare e rimuovere documenti utilizzati per il contesto delle risposte del chatbot;
+- Modificare, creare e cancellare le FAQ;
+- Visualizzare le statistiche di utilizzo (es. numero di messaggi, percentuali di valutazione, numero di chat), con possibilità di filtrare i dati per intervalli temporali;
+- Personalizzare alcune impostazioni dell’interfaccia della webapp, come il logo, il colore primario e il numero massimo di messaggi dello storico delle chat.
+
+Queste funzionalità permettono all’amministratore di configurare, monitorare e adattare il sistema secondo le esigenze operative e organizzative.
+
+= Guida all'utilizzo
 
 == Login
-//Immagine della sezione login
-Se l'utente ha già un #gloss[account], può accedere all'applicazione inserendo il proprio indirizzo e-mail e la password. In
-caso contrario, deve richiedere l'accesso al #gloss[fornitore] dell'applicazione. Una volta effettuato l'accesso, l'utente può
-utilizzare tutte le funzionalità del chatbot.
+#grid(
+    columns: (1fr, 1fr,1fr),
+    gutter: 2mm,
+    figure(
+      image("../imgs/screen/login_compilato.jpg", height: 50%),
+      caption: [
+        Schermata di login.
+      ],
+    ),
+    figure(
+      image("../imgs/screen/login_errore_credenziali.jpg", height: 50%),
+      caption: [
+        Schermata login con dati di esempio.
+      ],
+    ),
+    figure(
+      image("../imgs/screen/recupero_password.jpg", height: 50%),
+      caption: [
+        Schermata recupero password.
+      ],
+    ),
+)
+
+Se l'utente possiede già un #gloss[account], può accedere all'applicazione tramite la schermata di login, inserendo le proprie credenziali (email e password) negli appositi campi, come mostrato in #emph[Figura 1].
+
+Se le credenziali inserite sono errate (email non esistente o password sbagliata), verrà visualizzato un messaggio di errore con la dicitura:
+"#strong[Credenziali non valide]" (vedi #emph[Figura 2]).
+
+Nel caso in cui l'utente non ricordi la password, può cliccare sul link "#strong[Password dimenticata?]". Si aprirà una nuova schermata (vedi #emph[Figura 3]) in cui l'utente dovrà inserire l'indirizzo e-mail associato al proprio account. Dopo aver inserito l'e-mail, l'utente riceverà una email contenente una password temporanea. L'utente dovrà quindi accedere nuovamente all'applicazione utilizzando questa password temporanea e successivamente cambiarla con una password personale.
+
+Qualora l'utente non sia ancora registrato, potrà contattare il #gloss[fornitore] del sistema per richiedere la creazione di un account.
+
+Mettendo un check sulla casella "#strong[Ricordami]", l'utente potrà rimanere connesso anche dopo aver chiuso il browser. In questo modo, non sarà necessario effettuare nuovamente il login ogni volta che si accede all'applicazione.
+
+Una volta effettuato correttamente l'accesso, l’utente avrà accesso completo a tutte le funzionalità del chatbot.
 
 === Primo Login
 Per accedere per la prima volta alla piattaforma, l'utente deve richiedere il permesso al fornitore proprietario
@@ -137,79 +267,415 @@ dell'applicazione, il quale gli fornisce una password temporanea. L'utente inser
 password temporanea fornitegli dal fornitore. Successivamente provvederà a cambiare la password temporanea con una
 password personale.
 
-== Interfaccia principale
-//Immagine della schermata principale dell'applicazione
-Appena entrato nell'applicazione, l'utente si trova di fronte alla schermata principale. Qui può visualizzare la lista
-delle chat con il chatbot, etc...//Qui ci sono le schermate principali dell'applicazione appena si entra, tipo la lista delle chat etc...
+== Schermata home
+#grid(
+    columns: (1fr, 1fr),
+    gutter: 2mm,
+    figure(
+      image("../imgs/screen/home_admin.jpg", height: 50%),
+      caption: [
+        Schermata home utente admin.
+      ],
+    ),
+    figure(
+      image("../imgs/screen/home_user.jpg", height: 50%),
+      caption: [
+        Schermata home utente user.
+      ],
+    ),
+)
+Dopo aver effettuato il login, l'utente viene reindirizzato alla homepage principale della webapp. In base al tipo di utente che ha effettuato il login, la schermata principale sarà diversa. I tipi di utente sono due: admin e user.
 
-=== Lista chat
-//Immagine della lista chat
-La lista chat mostra tutte le conversazioni precedenti con il chatbot. L'utente può selezionare una chat per
-visualizzarne il contenuto. Ogni chat è identificata da un titolo che viene generato automaticamente in base al contesto
-della conversazione. L'utente può anche eliminare le chat precedenti se non sono più necessarie.
+=== Home user
+La schermata home per l'utente di tipo #strong[user] (vedi #emph[Figura 4]) è composta da:
+- un pulsante per la modalità dark/light mode;
+- una sezione #strong[Cronologia Chat] che mostra le chat precedenti con il chatbot;
+- una barra di navigazione per poter accedere a tutte le funzionalità dell'applicativo.
 
-== Impostazioni profilo
-//Immagine della schermata delle impostazioni del profilo
-Premendo sull'icona del profilo, l'utente può accedere alle impostazioni del proprio profilo. Qui può modificare le
-informazioni personali, come il nome, l'indirizzo e-mail e la password.//da modificare
+=== Home admin
+La schermata home per l'utente di tipo #strong[admin] (vedi #emph[Figura 5]) ha le stesse funzionalità della home per l'utente di tipo user, con l'aggiunta delle seguenti funzionalità:
+- un pulsante per la gestione delle impostazioni di sistema;
+- un pulsante per la gestione dei profili utente; 
+- un pulsante per la gestione dei documenti aziendali;
+- un pulsante per la visualizzazione delle statistiche di utilizzo del chatbot.
+- un pulsante per la gestione delle FAQ.
+
+=== Cronologia chat
+#grid(
+    columns: (1fr, 1fr),
+    gutter: 2mm,
+    figure(
+      image("../imgs/screen/home_senza_chat.jpg", height: 50%),
+      caption: [
+        Schermata home con cronologia chat vuota.
+      ],
+    ),
+    figure(
+      image("../imgs/screen/home_elimina_chat.jpg", height: 50%),
+      caption: [
+        Schermata home con popup eliminazione chat.
+      ],
+    ),
+)
+La sezione #strong[Cronologia Chat] mostra tutte le conversazioni precedenti con il chatbot. Si può selezionare una chat per visualizzarne il contenuto. Ogni chat è identificata da un titolo che viene generato automaticamente in base al contesto della conversazione e la data di creazione. 
+
+Se l'utente non ha mai avuto conversazioni precedenti, la sezione sarà vuota e verrà visualizzata la scritta "Ancora nessuna chat" (vedi #emph[Figura 6]).
+
+A fianco di ogni chat è presente un'icona che permette di eliminare la chat. Cliccando sull'icona, l'utente verrà avvisato della cancellazione della chat e dovrà confermare l'operazione (vedi #emph[Figura 7]). Una volta confermata, la chat verrà eliminata e non sarà più visibile nella cronologia.
+
+Per iniziare una nuova conversazione, l'utente può cliccare sul pulsante "#strong[Nuova Chat]" presente nella barra di navigazione. Questo pulsante lo reindirizzerà alla schermata di chat.
+
+== Schermata profilo
+#grid(
+    columns: (1fr, 1fr),
+    gutter: 2mm,
+    figure(
+      image("../imgs/screen/profilo.jpg", height: 50%),
+      caption: [
+        Schermata profilo.
+      ],
+    ),
+    figure(
+      image("../imgs/screen/cambio_password.jpg", height: 50%),
+      caption: [
+        Schermata cambio password.
+      ],
+    ),
+)
+Nella schermata del profilo (vedi #emph[Figura 8]) l'utente può visualizzare le proprie informazioni personali, come il nome e l'indirizzo e-mail. Inoltre può modificare la password e uscire dal profilo cliccando sul pulsante "#strong[Esci dall'account]".
 
 === Cambio password
-//Immagine della schermata di cambio password
-L'utente può cambiare la password cliccando il bottone raffigurato nella sezione delle impostazioni del profilo. Deve
-inserire la password nuova e riscriverla nuovamente per essere sicuro che non presenti errori. Inoltre dovrà inserire la
-password attuale per confermare il cambio. Se la password attuale non è corretta, o la password nuova nuova non è stata
-riscritta correttamente, il cambio non andrà a buon fine.
+L'utente può cambiare la propria password cliccando sul pulsante "#strong[Cambia Password]". Si aprirà una nuova schermata (vedi #emph[Figura 9]) in cui l'utente dovrà inserire la password attuale e la nuova password. La nuova password deve essere inserita due volte per confermare che non ci siano errori di battitura. Inoltre deve avere i seguenti requisiti:
+- almeno 8 caratteri;
+- almeno una lettera maiuscola;
+- almeno una lettera minuscola; 
+- almenu un numero;
+- almeno un carattere speciale (es. ! \@ \# \$ % ^ & \* ( ) ).
+Se la password attuale non è corretta o la nuova password non è stata riscritta correttamente, il cambio non andrà a buon fine.
 
-= Fornitore
-Il fornitore è l'azienda che possiede una sua versione dell'applicazione e la gestisce. Ha accesso a tutte le
-funzionalità dell'applicazione e può configurarla in base alle proprie esigenze aziendali. Inoltre, il fornitore può
-monitorare l'utilizzo dell'applicazione da parte degli utenti e gestire i contenuti disponibili.
+== Schermata chat
+#grid(
+    columns: (1fr, 1fr, 1fr),
+    gutter: 2mm,
+    figure(
+      image("../imgs/screen/chat.jpg", height: 50%),
+      caption: [
+        Schermata chat.
+      ],
+    ),
+    figure(
+      image("../imgs/screen/chat_invio.jpg", height: 50%),
+      caption: [
+        Schermata chat con invio domanda.
+      ],
+    ),
+    figure(
+      image("../imgs/screen/chat_ricezione.jpg", height: 50%),
+      caption: [
+        Schermata chat con ricezione risposta.
+      ],
+    ),
+)
 
-== Login
-Il fornitore può accedere all'applicazione utilizzando le proprie credenziali, e-mail e password. Una volta effettuato
-il login, ha accesso a tutte le funzionalità amministrative dell'applicazione.
+La schermata di chat (vedi #emph[Figura 10]) è composta da:
+- un tasto per tornare alla schermata home;
+- il nome della chat (se la chat è nuova, il nome sarà "#strong[Nuova Chat]");
+- un tasto per le impostazioni della chat;
+- un'area di testo per visualizzare la conversazione con il chatbot;
+- un'area di input per inserire il testo da inviare al chatbot;
 
-=== Primo Login
-Durante il primo accesso, il fornitore utilizza una password temporanea fornita dall'azienda Ergon. Dopo aver effettuato
-l'accesso, sarà richiesto di cambiare la password temporanea con una personale per motivi di sicurezza.
+Per ogni messaggio è possibile visualizzare la data e l'ora di invio e ricezione. I messaggi inviati dall'utente sono visualizzati a destra, mentre le risposte del chatbot sono visualizzate a sinistra. Per ogni messaggio di risposta ricevuto dal chatbot, è possibile valutare la qualità cliccando sulle icone di valutazione (pollice su o pollice giù).
 
-== Interfaccia principale
-//Immagine della schermata principale del fornitore (se cambia)
-Dopo aver effettuato il login, il fornitore viene reindirizzato alla homepage principale dell'applicazione. Qui può
-svolgere tutte le funzionalità che un utente generico può svolgere, ma ha anche accesso a funzionalità aggiuntive che
-gli consentono di gestire l'applicazione e i contenuti disponibili per gli utenti.
+Per inviare un messaggio al chatbot, l'utente deve digitare il testo nell'area di input e premere il tasto con l'icona di invio. Il messaggio verrà quindi visualizzato nell'area di testo della conversazione (vedi #emph[Figura 11]) e il chatbot risponderà in tempo reale (vedi #emph[Figura 12]).
 
+Premendo il tasto in basso a sinistra con l'icona del messaggio è possibile selezionare una domanda presente nella lista delle FAQ. Una volta selezionata, la domanda verrà inserita nell'area di input e l'utente potrà inviarla al chatbot.
 
-=== Gestire i documenti aziendali
-//Immagine della schermata di gestione dei documenti aziendali
-Il fornitore può caricare documenti aziendali che saranno usati dal chatbot per prendere informazioni durante la
-conversazioni con gli utenti. Il formato di questi file può essere ".pdf", ".docx" o ".txt". Il fornitore può anche
-visualizzare i documenti già caricati ed eliminarli nel caso diventino obsoleti o non più necessari.//da aggiungere delle linee guida
+Alla ricezione della prima risposta da parte del chatbot, verrà generato un titolo per la chat, che sarà visibile sia nella schermata di chat che nella schermata home. Il titolo sarà generato in base al contesto della conversazione e servirà a identificare la chat nella cronologia.
 
-=== Gestione profili utente
-//Immagine della schermata di gestione dei profili utente
-Il fornitore può creare o eliminare i profili utente. Alla crezione di un account dovrà anche assegnargli una password
-temporanea.
+=== Eliminazione chat
+#grid(
+    columns: (1fr, 1fr),
+    gutter: 2mm,
+    figure(
+      image("../imgs/screen/chat_tasto_elimina.jpg", height: 50%),
+      caption: [
+        Schermata chat con tasto elimina.
+      ],
+    ),
+    figure(
+      image("../imgs/screen/chat_elimina.jpg", height: 50%),
+      caption: [
+        Popup conferma eliminazione chat.
+      ],
+    ),
+)
 
-=== Modificare le FAQ
-//Immagine della schermata di modifica delle FAQ
-Durante le conversazioni con gli utenti, verranno suggerite delle domande all'utente in base al contesto della
-conversazione. Il fornitore può aggiungere, modificare o eliminare alcune di queste domande.
+L'utente può eliminare la chat cliccando sul tasto con l'icona con i 3 punti in alto a destra e successivamente su "#strong[Elimina Chat]" presente nella schermata di chat (vedi #emph[Figura 13]). Si aprirà un popup di conferma (vedi #emph[Figura 14]) in cui l'utente dovrà confermare l'eliminazione della chat. Una volta confermata, la chat verrà eliminata e non sarà più visibile nella cronologia.
 
-=== Lista chat
-Esattamente come un cliente, anche il fornitore può visualizzare la lista delle chat. La lista chat mostra tutte le
-conversazioni precedenti con il chatbot. Si può selezionare una chat per visualizzarne il contenuto. Ogni chat è
-identificata da un titolo che viene generato automaticamente in base al contesto della conversazione. Una chat può anche
-essere eliminata.
+== Schermata impostazioni
+#grid(
+    columns: (1fr),
+    gutter: 2mm,
+    figure(
+      image("../imgs/screen/impostazioni.jpg", height: 50%),
+      caption: [
+        Schermata impostazioni.
+      ],
+    ),
+)
 
-// da qui in poi inizia a diventare più vago quindi per il momento lascio vuoto
-== Impostazioni profilo
-Il fornitore può accedere alle impostazioni del proprio profilo per aggiornare le informazioni personali, come il nome,
-l'indirizzo e-mail e la password.
+Nella schermata delle impostazioni (vedi #emph[Figura 15]), accessibile solo dall'utente #strong[admin], è possibile modificare le impostazioni di sistema. In particolare si possono modificare i seguenti parametri:
+- il colore primario della webapp;
+- il logo dell'azienda, sia in modalità chiara che scura;
+- la favicon della webapp;
+- la durata della visualizzazione delle chat nella cronologia;
 
-= Temi dell'applicazione
+La modifica del colore primario avviene tramite un selettore di colore (differente in base al sistema operativo e al browser utilizzato). L'utente può selezionare il colore desiderato e questo sarà applicato a tutte le schermate solo nel client dell'utente che ha effettuato la modifica. Per applicarlo in modo definitivo è necessario cliccare sul tasto "#strong[Salva impostazioni]". Se si desidera invece tornare al colore primario di default, è possibile cliccare sul tasto "#strong[Reset]". I testi che presentano il colore di sfondo primario si adattano automaticamente, in modo da garantire una buona leggibilità.
+
+Per modificare il logo, è necessario caricare due file, uno per la modalità chiara e uno per la modalità scura. È possibile caricare lo stesso file in entrambi i campi, ma è consigliato caricare due file diversi per garantire una buona visibilità e contrasto.
+
+== Schermata gestione clienti
+#grid(
+    columns: (1fr, 1fr),
+    gutter: 2mm,
+    figure(
+      image("../imgs/screen/clienti.jpg", height: 50%),
+      caption: [
+        Schermata clienti.
+      ],
+    ),
+    figure(
+      image("../imgs/screen/clienti_aperto.jpg", height: 50%),
+      caption: [
+        Schermata clienti con modifica ed eliminazione.
+      ],
+    ),
+)
+
+Nella schermata #strong[gestione clienti] (vedi #emph[Figura 16]) l'utente #strong[admin] può visualizzare la lista dei clienti registrati al sistema. Per ogni cliente sono visibili le seguenti informazioni:
+- nome;
+- email;
+- tipo di utente (admin o user);
+Per ricercare gli utenti è possibile utilizzare la barra di ricerca in basso. La ricerca avviene in tempo reale e viene effettuata sul nome, sull'email e sul tipo di utente.
+
+Su ogni cliente è presente una freccia che permette di espandere la visualizzazione mostrando il tasto per la modifica e il tasto per l'eliminazione (vedi #emph[Figura 17]). 
+
+=== Operazioni sui clienti
+#grid(
+    columns: (1fr, 1fr, 1fr),
+    gutter: 2mm,
+    figure(
+      image("../imgs/screen/clienti_nuovo.jpg", height: 50%),
+      caption: [
+        Schermata clienti con popup creazione.
+      ],
+    ),
+    figure(
+      image("../imgs/screen/clienti_modifica.jpg", height: 50%),
+      caption: [
+        Schermata clienti con popup modifica.
+      ],
+    ),
+    figure(
+      image("../imgs/screen/clienti_elimina.jpg", height: 50%),
+      caption: [
+        Schermata clienti con popup eliminazione.
+      ],
+    ),
+)
+
+==== Creazione utente
+Per creare un nuovo utente, l'utente #strong[admin] deve cliccare sul tasto "#strong[+]" presente nella schermata clienti. Si aprirà un popup in cui l'utente dovrà inserire le informazioni del nuovo cliente (vedi #emph[Figura 18]). I campi richiesti sono:
+- nome;
+- email;
+- ruolo (admin o user);
+
+Al salvataggio, il nuovo utente sarà salvato e verrà inviata una mail all'email inserita con le credenziali di accesso. Se l'email è già registrata, verrà visualizzato un messaggio di errore.
+
+==== Modifica utente
+Per modificare un utente, l'utente #strong[admin] deve cliccare sul tasto "#strong[Modifica]" presente nella sezione del cliente. Si aprirà un popup in cui l'utente potrà modificare le informazioni del cliente (vedi #emph[Figura 19]). I campi modificabili sono:
+- nome;
+- ruolo (admin o user);
+
+Per salvare le modifiche è necessario inserire la propria password e cliccare sul tasto "#strong[Conferma]".
+
+==== Eliminazione utente
+Per eliminare un utente, l'utente #strong[admin] deve cliccare sul tasto "#strong[Elimina]" presente nella sezione del cliente. Si aprirà un popup di conferma (vedi #emph[Figura 20]) in cui l'utente per confermare l'operazione deve inserire la propria password. Una volta cliccato sul tasto "#strong[Conferma]", l'utente verrà eliminato e non sarà più visibile nella lista dei clienti.
+
+== Schermata gestione documenti
+#grid(
+    columns: (1fr, 1fr),
+    gutter: 2mm,
+    figure(
+      image("../imgs/screen/documenti.jpg", height: 50%),
+      caption: [
+        Schermata gestione documenti.
+      ],
+    ),
+    figure(
+      image("../imgs/screen/documenti_aperto.jpg", height: 50%),
+      caption: [
+        Schermata gestione documenti con eliminazione.
+      ],
+    ),
+)
+
+Nella schermata #strong[gestione documenti] (vedi #emph[Figura 21]) l'utente #strong[admin] può visualizzare la lista dei documenti inseriti. Per ogni documento sono visibili le seguenti informazioni:
+- nome del file;
+- data di caricamento;
+- utente che ha caricato il file;
+
+I file inseriti serviranno come contesto per il chatbot, in modo da fornire risposte più pertinenti.
+
+Per ricercare i documenti è possibile utilizzare la barra di ricerca in basso. La ricerca avviene in tempo reale e viene effettuata sul nome del file e sull'utente che lo ha caricato.
+
+Su ogni documento è presente una freccia che permette di espandere la visualizzazione mostrando il tasto per l'eliminazione (vedi #emph[Figura 22]). 
+
+=== Operazioni sui documenti
+#grid(
+    columns: (1fr, 1fr),
+    gutter: 2mm,
+    figure(
+      image("../imgs/screen/documenti_nuovo.jpg", height: 50%),
+      caption: [
+        Schermata documenti con popup creazione.
+      ],
+    ),
+    figure(
+      image("../imgs/screen/documenti_elimina.jpg", height: 50%),
+      caption: [
+        Schermata documenti con popup eliminazione.
+      ],
+    ),
+)
+
+==== Creazione documento
+Per creare un nuovo documento, l'utente #strong[admin] deve cliccare sul tasto "#strong[+]" presente nella schermata documenti. Si aprirà un popup in cui l'utente dovrà scegliere uno o più file. (vedi #emph[Figura 23]). Una volta selezionati, l'utente deve cliccare sul tasto "#strong[Carica]" per caricarli. Al caricamento, i file saranno visibili nella lista dei documenti e saranno utilizzati come contesto per il chatbot.
+
+==== Eliminazione documento
+Per eliminare un documento, l'utente #strong[admin] deve cliccare sul tasto "#strong[Elimina]" presente nella sezione del documento. Si aprirà un popup di conferma (vedi #emph[Figura 24]) in cui l'utente per confermare l'operazione deve inserire la propria password. Una volta cliccato sul tasto "#strong[Conferma]", il documento verrà eliminato e non sarà più visibile nella lista dei clienti. Inoltre, il documento non sarà più utilizzabile come contesto per il chatbot.
+
+== Schermata gestione FAQ
+#grid(
+    columns: (1fr, 1fr),
+    gutter: 2mm,
+    figure(
+      image("../imgs/screen/faq.jpg", height: 50%),
+      caption: [
+        Schermata FAQ.
+      ],
+    ),
+    figure(
+      image("../imgs/screen/faq_aperto.jpg", height: 50%),
+      caption: [
+        Schermata FAQ con modifica ed eliminazione.
+      ],
+    ),
+)
+Nella schermata #strong[gestione FAQ] (vedi #emph[Figura 25]) l'utente #strong[admin] può visualizzare la lista delle FAQ inserite. Per ognuna sono visibili le seguenti informazioni:
+- domanda abbreviata;
+- domanda completa;
+- risposta alla domanda;
+
+Le FAQ inserite saranno visibili nella schermata di chat e l'utente potrà selezionarle per poter visualizzare la risposta.
+
+Per la ricerca è possibile utilizzare il campo di testo in basso. L'aggiornamento avviene in tempo reale e viene effettuato sulla domanda abbreviata, sulla domanda completa e sulla risposta.
+
+Su ogni FAQ è presente una freccia che permette di espandere la visualizzazione mostrando il tasto per l'eliminazione (vedi #emph[Figura 26])
+
+=== Operazioni sulle FAQ
+#grid(
+    columns: (1fr, 1fr, 1fr),
+    gutter: 2mm,
+    figure(
+      image("../imgs/screen/faq_nuovo.jpg", height: 50%),
+      caption: [
+        Schermata FAQ con popup aggiunta.
+      ],
+    ),
+    figure(
+      image("../imgs/screen/faq_modifica.jpg", height: 50%),
+      caption: [
+        Schermata FAQ con popup modifica.
+      ],
+    ),
+    figure(
+      image("../imgs/screen/faq_elimina.jpg", height: 50%),
+      caption: [
+        Schermata FAQ con popup eliminazione.
+      ],
+    ),
+)
+
+==== Creazione FAQ
+Per creare una nuova FAQ, l'utente #strong[admin] deve cliccare sul tasto "#strong[+]" presente nella relativa schermata. Si aprirà un popup in cui l'utente dovrà inserire le informazioni della nuova domanda (vedi #emph[Figura 27]). I campi richiesti sono:
+- domanda abbreviata;
+- domanda completa;
+- risposta alla domanda;
+
+Al salvataggio, la nuova FAQ sarà visibile a tutti gli utenti nella schermata della chat.
+
+==== Modifica FAQ
+Per modificare una FAQ, l'utente #strong[admin] deve cliccare sul tasto "#strong[Modifica]" presente nella sezione corrispondente. Verrà aperto un popup che consente l'aggiornamento delle informazioni (vedi #emph[Figura 28]). I campi modificabili sono:
+- domanda abbreviata;
+- domanda completa;
+- risposta alla domanda;
+
+Per confermare le modifiche, è necessario cliccare sul tasto "#strong[Conferma]".
+
+==== Eliminazione FAQ
+Per eliminare una FAQ, l'utente #strong[admin] deve cliccare sul tasto "#strong[Elimina]" presente nella sezione corrispondente. Si aprirà un popup di conferma (vedi #emph[Figura 29]) in cui l'utente per confermare l'operazione deve inserire la propria password. Una volta cliccato sul tasto "#strong[Conferma]", la FAQ verrà eliminata e non sarà più visibile nella schermata di chat da nessun utente.
+
+== Schermata statistiche
+#grid(
+    columns: (1fr, 1fr, 1fr),
+    gutter: 2mm,
+    figure(
+      image("../imgs/screen/statistiche.jpg", height: 50%),
+      caption: [
+        Schermata statistiche.
+      ],
+    ),
+    figure(
+      image("../imgs/screen/statistiche_data.jpg", height: 50%),
+      caption: [
+        Schermata statistiche selezione data.
+      ],
+    ),
+    figure(
+      image("../imgs/screen/statistiche_filtri.jpg", height: 50%),
+      caption: [
+        Schermata statistiche filtrate.
+      ],
+    ),
+)
+
+Nella schermata #strong[statistiche] (vedi #emph[Figura 30]) l'utente #strong[admin] può visualizzare le statistiche di utilizzo del chatbot. Fra le diverse informazioni sono visibili:
+- il numero totale di messaggi inviati (divisi fra chatbot e utente);
+- il numero totale di chat aperte;
+- la percentuale di messaggi valutati positivamente;
+- il numero di utenti attivi;
+- la media di messaggi inviati per chat;
+- la media di messaggi inviati per utente;
+
+Tutti questi dati possono essere filtrati in base alla data di inizio e di fine (vedi #emph[Figura 31]). L'aggiornamento avviene in tempo reale e i filtri sono applicati all'url della pagina. Se non sono state inserite le due date la ricerca viene effettuata su tutte le statistiche disponibili. Se sono state inserite solo una delle due date, la ricerca viene effettuata su tutte le statistiche disponibili a partire dalla data di inizio o fino alla data di fine.
+
+= Aspetto del sistema
+#grid(
+    columns: (1fr, 1fr),
+    gutter: 2mm,
+    figure(
+      image("../imgs/screen/home_light.jpg", height: 50%),
+      caption: [
+        Schermata home modalità light.
+      ],
+    ),
+    figure(
+      image("../imgs/screen/home_dark.jpg", height: 50%),
+      caption: [
+        Schermata home modalità dark.
+      ],
+    ),
+)
 == Tema chiaro e scuro
-//Immagine della schermata di selezione del tema o simbolo da cliccare
-L'applicazione offre la possibilità di scegliere tra due temi: chiaro e scuro. L'utente può selezionare il tema
-preferito nella sezione delle impostazioni. Il tema scelto verrà applicato a tutte le schermate dell'applicazione,
-possibilmente migliorandone l'accessibilità, leggibilità e ridurre lo stress visivo.
+La webapp presenta nelle schermate principali un tasto per la selezione della modalità chiara o scura. L'impostazione viene salvata nel browser dell'utente e non è visibile ad altri utenti. La modifica del tema avviene in tempo reale e non è necessario ricaricare la pagina.
