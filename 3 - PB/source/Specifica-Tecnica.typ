@@ -603,7 +603,7 @@ L'oggetto LLMResponseService viene importato tramite il metodo ```python LLMResp
   image("../imgs/FaqRouter.png", width: 50%),
   caption: "Diagramma delle classi di FaqRouter",
 )
-La classe FaqRouter è responsabile della gestione delle richieste HTTP relative alla gestione delle FAQ nel database vettoriale. \
+La classe FaqRouter è responsabile della gestione delle richieste HTTP relative a salvataggio, modifica e cancellazione delle FAQ nel database vettoriale. \
 I metodi della classe FileManager vengono utilizzati tramite l'oggetto restituito dal metodo ```python FileManagerService.get_file_manager_by_extension()```.
 ====== Attributi
 - ```python +router: APIRouter```: oggetto del modulo fastapi che permette di definire le API route;
@@ -611,6 +611,19 @@ I metodi della classe FileManager vengono utilizzati tramite l'oggetto restituit
 - ```python +create_faq(faq: FAQBase, token: str) -> json```: chiama il metodo ```python FileManager.add_faq()```, il token viene utilizzato per verificare che l'utente che esegue la richiesta sia un admin; restituisce i dati della faq creata e l'esito della richiesta;  
 - ```python +delete_faq(faq: FAQDelete) -> json```: chiama il metodo ```python FileManager.delete_faq()```, il token viene utilizzato per verificare che l'utente che esegue la richiesta sia un admin; restituisce l'esito della richiesta;
 - ```python +update_faq(faq: FAQBase) -> json```: chiama il metodo ```python FileManager.update_faq()```, il token viene utilizzato per verificare che l'utente che esegue la richiesta sia un admin; restituisce i dati della faq aggiornata e l'esito della richiesta;
+
+===== DocumentRouter
+#figure(
+  image("../imgs/DocumentRouter.png", width: 50%),
+  caption: "Diagramma delle classi di DocumentRouter",
+)
+La classe DocumentRouter è responsabile della gestione delle richieste HTTP relative a salvataggio, modifica e cancellazione dei documenti nel database vettoriale. \
+I metodi della classe FileManager vengono utilizzati tramite l'oggetto restituito dal metodo ```python FileManagerService.get_file_manager_by_extension()```.
+====== Attributi
+- ```python +router: APIRouter```: oggetto del modulo fastapi che permette di definire le API route;
+====== Metodi
+- ```python +upload_file(files: List<UploadFile>, token: str) -> json```: chiama il metodo ```python FileManager.add_document()``` per ogni file contenuto nella lista files, il token viene utilizzato per verificare che l'utente che esegue la richiesta sia un admin; restituisce l'esito della richiesta;
+- ```python +delete_file(fileDelete: DocumentDelete) -> json```: chiama il metodo ```python FileManager.delete_document()```, il token viene utilizzato per verificare che l'utente che esegue la richiesta sia un admin; restituisce l'esito della richiesta;
 
 // TODO: descrizione delle classi
 
