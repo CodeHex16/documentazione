@@ -409,7 +409,7 @@ Lo scopo principale è quello di organizzare la procedura di modifica della docu
 Le principali attività del processo di Gestione della configurazione sono:
 - *Inizializzazione*: vengono definite le norme a cui ogni elemento prodotto dal gruppo durante l'intero arco del progetto deve sottostare e quindi rispettare;
 - *Esecuzione*: viene svolto un determinato lavoro da uno o più membri del gruppo che producono un elemento (documento, codice o altro) utile al progetto;
-- *Versionamento*: il lavoro svolto viene registrato così da risultare immediamente consultabile dagli altri membri del team, o membri esterni, così da sapere chi ha svolto quel lavoro e in che momento;
+- *Versionamento*: il lavoro svolto viene registrato così da risultare immediatamente consultabile dagli altri membri del team, o membri esterni, così da sapere chi ha svolto quel lavoro e in che momento;
 - *Verifica*: il lavoro svolto deve essere verificato da uno o più membri del team che svolgono il ruolo di verificatori con l'obiettivo di garantire che tale lavoro rispetti le norme predefinite;
 - *Accettazione o Rifiuto*: se il lavoro svolto rispetta le norme predefinite ed è considerato corretto allora viene accettato e integrato con il lavoro principale, altrimenti viene rifiutato e dovranno essere eseguite delle modifiche;
 
@@ -679,7 +679,7 @@ L'affidabilità è il parametro per misurare se un prodotto reagisce ai problemi
 In particolare vengono misurate:
 - *Tolleranza ai guasti e agli errori*: il prodotto deve saper gestire gli errori e rispondere a malfunzionamenti o guasti senza che si causino interruzioni gravi nel prodotto e allo stesso tempo mantenere un certo grado di prestazioni;
 - *Maturità*: il prodotto deve garantire affidabilità e stabilità cercando di evitare che si vengano a generare errori o malfunzionamenti;
-- *Recuperabilità*: a seguito di un qualsiasi tipo di errore, guasto o malfunzionamento il prodotto deve essere in grado di tornare alle sue prestazioni standard rispristinando le sue funzionalità;
+- *Recuperabilità*: a seguito di un qualsiasi tipo di errore, guasto o malfunzionamento il prodotto deve essere in grado di tornare alle sue prestazioni standard ripristinando le sue funzionalità;
 - *Disponibilità*: il prodotto deve essere accessibile e correttamente funzionante, quindi operativo ogni qual volta sia necessario;
 - *Aderenza*: il prodotto deve rispettare gli standard di qualità prefissati;
 == Sicurezza

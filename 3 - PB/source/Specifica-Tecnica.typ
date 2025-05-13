@@ -240,13 +240,27 @@ che hanno portato alla sua scelta.
     "Libreria per il parsing di dati multipart/form-data, comunemente usata nei web framework per gestire upload di file e dati di form complessi.",
     "0.0.20",
 
+    "fastapi",
+    "Core framework per la creazione di API RESTful, scelto per la sua velocità e semplicità d'uso.",
+    "0.115.12",
+
+    "pydantic",
+    "Libreria per la validazione dei dati e la gestione delle impostazioni, utilizzata da FastAPI.",
+    "2.11.4",
+
+    "langchain-openai", "Integrazione specifica di LangChain per utilizzare i modelli forniti da OpenAI.", "0.3.16",
+    "langchain_chroma",
+    "Integrazione specifica di LangChain per l'interazione con il database vettoriale ChromaDB.",
+    "0.2.3",
+
+    "langchain_community", "Collezione di integrazioni e componenti della comunità per LangChain.", "0.3.23",
+    "httpx",
+    "Client HTTP asincrono per Python, utilizzato per effettuare richieste HTTP in modo non bloccante.",
+    "0.28.1",
+
     "tailwindcss",
     "Un framework CSS utility-first per costruire rapidamente interfacce utente personalizzate direttamente nel markup HTML.",
     "3.4.9",
-
-    "prettier",
-    "Un formattatore di codice 'opinionated' che supporta molti linguaggi e si integra con la maggior parte degli editor per mantenere uno stile di codice consistente.",
-    "3.3.2",
 
     "vite",
     "Uno strumento di build per il frontend moderno che offre un'esperienza di sviluppo estremamente veloce e bundle ottimizzati per la produzione.",
@@ -548,12 +562,12 @@ La classe DTO (Data Transfer Object) è un oggetto che viene utilizzato per tras
 - ```python +title: str```: rappresenta il nome del documento;
 
 ====== Document
-Estensione della classe DocumentBase.
+Generalizzazione della classe DocumentBase.
 - ```python +update_at: datetime```: rappresenta la data di aggiornamento del documento;
 - ```python +content: str```: rappresenta il contenuto del documento;
 
 ====== DocumentDelete
-Estensione della classe DocumentBase.
+Generalizzazione della classe DocumentBase.
 - ```python +token: str```: rappresenta il token JWT di autenticazione dell'utente;
 - ```python +current_password: str```: rappresenta la password dell'utente;
 
@@ -563,11 +577,10 @@ Estensione della classe DocumentBase.
 - ```python +answer: str```: rappresenta la risposta della FAQ;
 
 ====== FAQ
-Estensione della classe FAQBase.
+Generalizzazione della classe FAQBase.
 - ```python +id: str```: rappresenta l'identificativo della FAQ;
 
 ====== FAQDelete
-Estensione della classe FAQBase.
 - ```python +id: str```: rappresenta l'identificativo della FAQ;
 - ```python +admin_password: str```: rappresenta la password dell'utente;
 
@@ -580,17 +593,24 @@ La classe LLMRouter è responsabile della gestione delle richieste HTTP relative
 
 L'oggetto LLMResponseService viene importato tramite il metodo ```python LLMResponseService.get_llm_response_service()``` che restituisce l'istanza del servizio LLMResponseService.
 ====== Attributi
-- ```python +router: APIRouter```: oggetto del modulo fastapi che permette di definire le dell'API route;
+- ```python +router: APIRouter```: oggetto del modulo fastapi che permette di definire le API route;
 ====== Metodi
-- ```python +generate_chat_response(question: Question, llm: LLMResponseService) -> StreamingResponse```: oggetto del modulo llm_service che restituisce le risposte generate in streaming in base al prompt fornito;
-- ```python +generate_chat_name(context: Context) -> str```: oggetto del modulo llm_service che restituisce il nome della chat generato in base al contesto fornito;
+- ```python +generate_chat_response(question: Question, llm: LLMResponseService) -> StreamingResponse```: restituisce la risposta generata, in base al prompt fornito, tramite uno stream di dati; per ottenere la risposta generata viene chiamato il metodo ```python LLMResponseService.generate_llm_response()```;
+- ```python +generate_chat_name(context: Context) -> str```: restituisce il nome della chat generato in base al contesto fornito; per ottenere il nome generato viene chiamato il metodo ```python LLMResponseService.generate_llm_chat_name()```;
 
 ===== FaqRouter
 #figure(
   image("../imgs/FaqRouter.png", width: 50%),
   caption: "Diagramma delle classi di FaqRouter",
 )
-La classe FaqRouter è responsabile della gestione delle richieste HTTP relative alla gestione delle FAQ.
+La classe FaqRouter è responsabile della gestione delle richieste HTTP relative alla gestione delle FAQ nel database vettoriale. \
+I metodi della classe FileManager vengono utilizzati tramite l'oggetto restituito dal metodo ```python FileManagerService.get_file_manager_by_extension()```.
+====== Attributi
+- ```python +router: APIRouter```: oggetto del modulo fastapi che permette di definire le API route;
+====== Metodi
+- ```python +create_faq(faq: FAQBase, token: str) -> json```: chiama il metodo ```python FileManager.add_faq()```, il token viene utilizzato per verificare che l'utente che esegue la richiesta sia un admin; restituisce i dati della faq creata e l'esito della richiesta;  
+- ```python +delete_faq(faq: FAQDelete) -> json```: chiama il metodo ```python FileManager.delete_faq()```, il token viene utilizzato per verificare che l'utente che esegue la richiesta sia un admin; restituisce l'esito della richiesta;
+- ```python +update_faq(faq: FAQBase) -> json```: chiama il metodo ```python FileManager.update_faq()```, il token viene utilizzato per verificare che l'utente che esegue la richiesta sia un admin; restituisce i dati della faq aggiornata e l'esito della richiesta;
 
 // TODO: descrizione delle classi
 
