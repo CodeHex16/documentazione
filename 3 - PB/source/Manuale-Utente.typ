@@ -202,7 +202,7 @@ Per creare la rete, eseguire il seguente comando:
 #[
   #show raw.where(block: true): set block(fill: rgb("#eeeeee"), inset: 1em, radius: 0.5em, width: 100%)
   ```bash
-  docker network create #gloss[suppl-ai]-shared-network  
+  docker network create suppl-ai-shared-network  
   ```
 ]
 
