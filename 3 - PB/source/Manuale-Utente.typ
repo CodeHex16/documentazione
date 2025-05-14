@@ -4,9 +4,10 @@
 #show: doc => documento(
   titolo: "Manuale Utente",
   data: [24/03/2025],
-  ruoli: ("Luca Ribon", "Verificatore", "Filippo Sabbadin", "Redattore",),
+  ruoli: ("Matteo Bazzan", "", "Luca Ribon", "Verificatore", "Francesco Fragonas", "Redattore", "Gabriele Magnelli", "", "Filippo Sabbadin", "Redattore", "Luca Rossi", "", "Yi Hao Zhuo", ""),
   sommario: [Manuale utente],
   versioni: (
+    "0.4.1", "13/05/2025", "Francesco Fragonas", "Miglioramento sezione Installazione", "",
     "0.4.0", "12/05/2025", "Francesco Fragonas", "Sezione Installazione", "",
     "0.3.0", "08/05/2025", "Francesco Fragonas", "Sezione Aspetto del sistema e Tipi utenti", "",
     "0.2.0", "05/05/2025", "Francesco Fragonas", "Sezione Guida all'utilizzo", "",
@@ -128,22 +129,31 @@ Questa sezione descrive tutti i passaggi necessari per l'installazione dell'appl
 == Clonazione del progetto
 Clonare la repository del progetto con i relativi moduli da GitHub sul server o sulla macchina locale.
 
-#raw("git clone https://github.com/CodeHex16/MVP.git --recurse-submodules", lang: "bash")
+#[
+  #show raw.where(block: true): set block(fill: rgb("#eeeeee"), inset: 1em, radius: 0.5em, width: 100%)
+  ```bash
+  git clone https://github.com/CodeHex16/MVP.git --recurse-submodules
+  ```
+]
 
-#raw("cd MVP", lang: "bash")
+#[
+  #show raw.where(block: true): set block(fill: rgb("#eeeeee"), inset: 1em, radius: 0.5em, width: 100%)
+  ```bash
+  cd MVP
+  ```
+]
 
 #strong[Nota:] #emph[assicurarsi di avere installato Git. In caso contrario, installarlo con sudo apt install git (su sistemi Debian-based) o tramite il gestore di pacchetti del proprio sistema operativo.]
 
 == Creazione dei file .env
 Per il corretto funzionamento dell'applicativo è necessario creare un file .env contenente le variabili d'ambiente necessarie. Per crearlo, copiare il file .env.example presente nella root del progetto e rinominarlo in .env.
 
-#strong[Linux]
-
-#raw("cp .env.example .env", lang: "bash")
-
-#strong[Windows]
-
-#raw("copy .env.example .env", lang: "bash")
+#[
+  #show raw.where(block: true): set block(fill: rgb("#eeeeee"), inset: 1em, radius: 0.5em, width: 100%)
+  ```bash
+  cp .env.example .env
+  ```
+]
 
 Aprire i file .env e modificare le variabili d'ambiente.
 
@@ -177,14 +187,47 @@ Per il microservizio #strong[Suppl-AI] sono necessari:
 - PUBLIC_LLM_URL: URL del servizio LLM pubblico;
 - NODE_ENV: ambiente di esecuzione del nodo;
 
-== Avvio dell'applicativo
-Il sistema può essere avviato tramite Docker. Assicurarsi di aver installato Docker e Docker Compose. In caso contrario, seguire le istruzioni sul sito ufficiale  #link("https://docs.docker.com/get-docker/") _(ultima consultazione: 12-05-2025)_.
+Se l'indirizzo email utilizzato per l'invio delle email è protetto da autenticazione a due fattori, è necessario generare una password per le app e utilizzarla al posto della password dell'email.
+
+Esempio per gmail: #link("https://support.google.com/mail/answer/185833?hl=it") _(ultima consultazione: 12-05-2025)_
+
+== Creazione della rete Docker
+Per permettere la comunicazione tra i container dei diversi microservizi, è necessario creare una rete Docker condivisa. Questa rete verrà utilizzata da tutti i servizi coinvolti nell'applicativo.
+
+Per creare la rete, eseguire il seguente comando:
+
+#[
+  #show raw.where(block: true): set block(fill: rgb("#eeeeee"), inset: 1em, radius: 0.5em, width: 100%)
+  ```bash
+  docker network create suppl-ai-shared-network  
+  ```
+]
+
+== Esecuzione dell'applicativo
+Il sistema può essere eseguito tramite Docker. Assicurarsi di aver installato Docker e Docker Compose. In caso contrario, seguire le istruzioni sul sito ufficiale  #link("https://docs.docker.com/get-docker/") _(ultima consultazione: 12-05-2025)_.
 
 Per avviare tutti i servizi:
 
-#raw("docker compose up --build", lang: "bash")
+#[
+  #show raw.where(block: true): set block(fill: rgb("#eeeeee"), inset: 1em, radius: 0.5em, width: 100%)
+  ```bash
+  docker compose up -d --build
+  ```
+]
 
 La webapp sarà disponibile all'indirizzo #link("http://localhost:3000").
+
+Per poter utilizzare il chatbot, è necessario aver caricato almeno un documento tramite la schermata di gestione documenti, visibile agli utenti di tipo #strong[admin]
+
+Per fermare l'esecuzione di tutti i servizi, eseguire il seguente comando:
+
+#[
+  #show raw.where(block: true): set block(fill: rgb("#eeeeee"), inset: 1em, radius: 0.5em, width: 100%)
+  ```bash
+  docker compose down
+
+  ```
+]
 
 == Accesso alla webapp
 Una volta avviata la webapp, è possibile accedere all'area amministratore per avere accesso a tutte le funzionalità. Le credenziali di accesso predefinite sono le seguenti:
@@ -193,7 +236,7 @@ Una volta avviata la webapp, è possibile accedere all'area amministratore per a
 
 #strong[Password]: adminadmin
 
-Per accedere come utente normale, è possibile utilizzare le seguenti credenziali predefinite:
+Per accedere come utente di tipo user, è possibile utilizzare le seguenti credenziali predefinite:
 
 #strong[Email]: test\@test.it
 
@@ -237,7 +280,7 @@ Queste funzionalità permettono all’amministratore di configurare, monitorare 
     figure(
       image("../imgs/screen/login_errore_credenziali.jpg", height: 50%),
       caption: [
-        Schermata login con dati di esempio.
+        Schermata login con credenziali non valide.
       ],
     ),
     figure(
@@ -259,13 +302,12 @@ Qualora l'utente non sia ancora registrato, potrà contattare il #gloss[fornitor
 
 Mettendo un check sulla casella "#strong[Ricordami]", l'utente potrà rimanere connesso anche dopo aver chiuso il browser. In questo modo, non sarà necessario effettuare nuovamente il login ogni volta che si accede all'applicazione.
 
-Una volta effettuato correttamente l'accesso, l’utente avrà accesso completo a tutte le funzionalità del chatbot.
+Una volta effettuato correttamente il login, l’utente avrà accesso completo a tutte le funzionalità del chatbot.
 
 === Primo Login
 Per accedere per la prima volta alla piattaforma, l'utente deve richiedere il permesso al fornitore proprietario
 dell'applicazione, il quale gli fornisce una password temporanea. L'utente inserisce il suo indirizzo e-mail e la
-password temporanea fornitegli dal fornitore. Successivamente provvederà a cambiare la password temporanea con una
-password personale.
+password ricevuta che successivamente provvederà a cambiare  con una password personale.
 
 == Schermata home
 #grid(
@@ -321,7 +363,7 @@ La sezione #strong[Cronologia Chat] mostra tutte le conversazioni precedenti con
 
 Se l'utente non ha mai avuto conversazioni precedenti, la sezione sarà vuota e verrà visualizzata la scritta "Ancora nessuna chat" (vedi #emph[Figura 6]).
 
-A fianco di ogni chat è presente un'icona che permette di eliminare la chat. Cliccando sull'icona, l'utente verrà avvisato della cancellazione della chat e dovrà confermare l'operazione (vedi #emph[Figura 7]). Una volta confermata, la chat verrà eliminata e non sarà più visibile nella cronologia.
+A fianco di ogni chat è presente un'icona che permette l'eliminazione. Cliccando sull'icona, l'utente verrà avvisato della cancellazione della chat e dovrà confermare l'operazione (vedi #emph[Figura 7]). Una volta confermata, la chat verrà eliminata e non sarà più visibile nella cronologia.
 
 Per iniziare una nuova conversazione, l'utente può cliccare sul pulsante "#strong[Nuova Chat]" presente nella barra di navigazione. Questo pulsante lo reindirizzerà alla schermata di chat.
 
@@ -342,7 +384,7 @@ Per iniziare una nuova conversazione, l'utente può cliccare sul pulsante "#stro
       ],
     ),
 )
-Nella schermata del profilo (vedi #emph[Figura 8]) l'utente può visualizzare le proprie informazioni personali, come il nome e l'indirizzo e-mail. Inoltre può modificare la password e uscire dal profilo cliccando sul pulsante "#strong[Esci dall'account]".
+Nella schermata del profilo (vedi #emph[Figura 8]) l'utente può visualizzare le proprie informazioni personali, come il nome e l'indirizzo e-mail. Inoltre può modificare la password ed effettuare il logout cliccando sul pulsante "#strong[Esci dall'account]".
 
 === Cambio password
 L'utente può cambiare la propria password cliccando sul pulsante "#strong[Cambia Password]". Si aprirà una nuova schermata (vedi #emph[Figura 9]) in cui l'utente dovrà inserire la password attuale e la nuova password. La nuova password deve essere inserita due volte per confermare che non ci siano errori di battitura. Inoltre deve avere i seguenti requisiti:
@@ -386,7 +428,7 @@ La schermata di chat (vedi #emph[Figura 10]) è composta da:
 
 Per ogni messaggio è possibile visualizzare la data e l'ora di invio e ricezione. I messaggi inviati dall'utente sono visualizzati a destra, mentre le risposte del chatbot sono visualizzate a sinistra. Per ogni messaggio di risposta ricevuto dal chatbot, è possibile valutare la qualità cliccando sulle icone di valutazione (pollice su o pollice giù).
 
-Per inviare un messaggio al chatbot, l'utente deve digitare il testo nell'area di input e premere il tasto con l'icona di invio. Il messaggio verrà quindi visualizzato nell'area di testo della conversazione (vedi #emph[Figura 11]) e il chatbot risponderà in tempo reale (vedi #emph[Figura 12]).
+Per inviare un messaggio, l'utente deve digitare il testo nell'area di input e premere il tasto con l'icona di invio. Il messaggio verrà quindi visualizzato nell'area di testo della conversazione (vedi #emph[Figura 11]) e il chatbot risponderà in tempo reale (vedi #emph[Figura 12]).
 
 Premendo il tasto in basso a sinistra con l'icona del messaggio è possibile selezionare una domanda presente nella lista delle FAQ. Una volta selezionata, la domanda verrà inserita nell'area di input e l'utente potrà inviarla al chatbot.
 
@@ -410,7 +452,7 @@ Alla ricezione della prima risposta da parte del chatbot, verrà generato un tit
     ),
 )
 
-L'utente può eliminare la chat cliccando sul tasto con l'icona con i 3 punti in alto a destra e successivamente su "#strong[Elimina Chat]" presente nella schermata di chat (vedi #emph[Figura 13]). Si aprirà un popup di conferma (vedi #emph[Figura 14]) in cui l'utente dovrà confermare l'eliminazione della chat. Una volta confermata, la chat verrà eliminata e non sarà più visibile nella cronologia.
+L'utente può eliminare la chat cliccando sul tasto con l'icona con i 3 punti in alto a destra e successivamente su "#strong[Elimina Chat]" presente nella schermata di chat (vedi #emph[Figura 13]). Si aprirà un popup di conferma (vedi #emph[Figura 14]) in cui l'utente dovrà confermare l'eliminazione. Una volta confermata, la chat verrà eliminata e non sarà più visibile nella cronologia.
 
 == Schermata impostazioni
 #grid(
@@ -428,9 +470,9 @@ Nella schermata delle impostazioni (vedi #emph[Figura 15]), accessibile solo dal
 - il colore primario della webapp;
 - il logo dell'azienda, sia in modalità chiara che scura;
 - la favicon della webapp;
-- la durata della visualizzazione delle chat nella cronologia;
+- il numero limite di messaggi visualizzati nella cronologia;
 
-La modifica del colore primario avviene tramite un selettore di colore (differente in base al sistema operativo e al browser utilizzato). L'utente può selezionare il colore desiderato e questo sarà applicato a tutte le schermate solo nel client dell'utente che ha effettuato la modifica. Per applicarlo in modo definitivo è necessario cliccare sul tasto "#strong[Salva impostazioni]". Se si desidera invece tornare al colore primario di default, è possibile cliccare sul tasto "#strong[Reset]". I testi che presentano il colore di sfondo primario si adattano automaticamente, in modo da garantire una buona leggibilità.
+La modifica del colore primario avviene tramite un selettore di colore (differente in base al sistema operativo e al browser utilizzato). L'utente può selezionare il colore desiderato e questo sarà applicato a tutte le schermate solo nel client dell'utente che ha effettuato la modifica. Per applicarlo in modo definitivo è necessario cliccare sul tasto "#strong[Salva impostazioni]". Se si desidera invece tornare al colore primario di default, è possibile cliccare sul tasto "#strong[Reset]". I testi che presentano come sfondo il colore primario si adattano automaticamente, in modo da garantire una buona leggibilità.
 
 Per modificare il logo, è necessario caricare due file, uno per la modalità chiara e uno per la modalità scura. È possibile caricare lo stesso file in entrambi i campi, ma è consigliato caricare due file diversi per garantire una buona visibilità e contrasto.
 
@@ -490,17 +532,17 @@ Per creare un nuovo utente, l'utente #strong[admin] deve cliccare sul tasto "#st
 - email;
 - ruolo (admin o user);
 
-Al salvataggio, il nuovo utente sarà salvato e verrà inviata una mail all'email inserita con le credenziali di accesso. Se l'email è già registrata, verrà visualizzato un messaggio di errore.
+Al salvataggio, il nuovo utente sarà salvato e gli verrà inviata una email con le credenziali di accesso. Se l'email è già registrata, verrà visualizzato un messaggio di errore.
 
 ==== Modifica utente
-Per modificare un utente, l'utente #strong[admin] deve cliccare sul tasto "#strong[Modifica]" presente nella sezione del cliente. Si aprirà un popup in cui l'utente potrà modificare le informazioni del cliente (vedi #emph[Figura 19]). I campi modificabili sono:
+Per modificare un utente, l'utente #strong[admin] deve cliccare sul tasto "#strong[Modifica]" presente nella sezione del cliente. Si aprirà un popup in cui è possibile modificare le informazioni del cliente (vedi #emph[Figura 19]). I campi modificabili sono:
 - nome;
 - ruolo (admin o user);
 
 Per salvare le modifiche è necessario inserire la propria password e cliccare sul tasto "#strong[Conferma]".
 
 ==== Eliminazione utente
-Per eliminare un utente, l'utente #strong[admin] deve cliccare sul tasto "#strong[Elimina]" presente nella sezione del cliente. Si aprirà un popup di conferma (vedi #emph[Figura 20]) in cui l'utente per confermare l'operazione deve inserire la propria password. Una volta cliccato sul tasto "#strong[Conferma]", l'utente verrà eliminato e non sarà più visibile nella lista dei clienti.
+Per eliminare un utente, l'utente #strong[admin] deve cliccare sul tasto "#strong[Elimina]" presente nella sezione del cliente. Si aprirà un popup di conferma (vedi #emph[Figura 20]) in cui l'utente per confermare l'operazione deve inserire la propria password. Una volta cliccato sul tasto "#strong[Conferma]", l'account verrà eliminato e non sarà più visibile nella lista dei clienti.
 
 == Schermata gestione documenti
 #grid(
@@ -525,7 +567,7 @@ Nella schermata #strong[gestione documenti] (vedi #emph[Figura 21]) l'utente #st
 - data di caricamento;
 - utente che ha caricato il file;
 
-I file inseriti serviranno come contesto per il chatbot, in modo da fornire risposte più pertinenti.
+I file inseriti serviranno come contesto per il chatbot, in modo da fornire risposte più pertinenti. Ѐ necessario caricare almeno un file per poter utilizzare il chatbot.
 
 Per ricercare i documenti è possibile utilizzare la barra di ricerca in basso. La ricerca avviene in tempo reale e viene effettuata sul nome del file e sull'utente che lo ha caricato.
 
@@ -550,10 +592,10 @@ Su ogni documento è presente una freccia che permette di espandere la visualizz
 )
 
 ==== Creazione documento
-Per creare un nuovo documento, l'utente #strong[admin] deve cliccare sul tasto "#strong[+]" presente nella schermata documenti. Si aprirà un popup in cui l'utente dovrà scegliere uno o più file. (vedi #emph[Figura 23]). Una volta selezionati, l'utente deve cliccare sul tasto "#strong[Carica]" per caricarli. Al caricamento, i file saranno visibili nella lista dei documenti e saranno utilizzati come contesto per il chatbot.
+Per creare un nuovo documento, l'utente #strong[admin] deve cliccare sul tasto "#strong[+]" presente nella schermata documenti. Si aprirà un popup in cui l'utente dovrà scegliere uno o più file. (vedi #emph[Figura 23]). Una volta selezionati, è necessario cliccare sul tasto "#strong[Carica]" per salvarli. Al caricamento, i file saranno visibili nella lista dei documenti e saranno utilizzati come contesto per il chatbot.
 
 ==== Eliminazione documento
-Per eliminare un documento, l'utente #strong[admin] deve cliccare sul tasto "#strong[Elimina]" presente nella sezione del documento. Si aprirà un popup di conferma (vedi #emph[Figura 24]) in cui l'utente per confermare l'operazione deve inserire la propria password. Una volta cliccato sul tasto "#strong[Conferma]", il documento verrà eliminato e non sarà più visibile nella lista dei clienti. Inoltre, il documento non sarà più utilizzabile come contesto per il chatbot.
+Per eliminare un documento, l'utente #strong[admin] deve cliccare sul tasto "#strong[Elimina]" presente nella relativa sezione. Si aprirà un popup di conferma (vedi #emph[Figura 24]) in cui l'utente per confermare l'operazione deve inserire la propria password. Una volta cliccato sul tasto "#strong[Conferma]", il documento verrà eliminato e non sarà più visibile nella schermata. Inoltre, il documento non sarà più utilizzabile come contesto per il chatbot.
 
 == Schermata gestione FAQ
 #grid(
@@ -658,7 +700,7 @@ Nella schermata #strong[statistiche] (vedi #emph[Figura 30]) l'utente #strong[ad
 - la media di messaggi inviati per chat;
 - la media di messaggi inviati per utente;
 
-Tutti questi dati possono essere filtrati in base alla data di inizio e di fine (vedi #emph[Figura 31]). L'aggiornamento avviene in tempo reale e i filtri sono applicati all'url della pagina. Se non sono state inserite le due date la ricerca viene effettuata su tutte le statistiche disponibili. Se sono state inserite solo una delle due date, la ricerca viene effettuata su tutte le statistiche disponibili a partire dalla data di inizio o fino alla data di fine.
+Tutti questi dati possono essere filtrati in base alla data di inizio e di fine (vedi #emph[Figura 31]). L'aggiornamento avviene in tempo reale e i filtri sono applicati all'url della pagina. Se non sono state inserite le due date la ricerca viene effettuata su tutte le statistiche disponibili. Se viene inserita solo una delle due date, la ricerca viene effettuata su tutte le statistiche disponibili a partire dalla data di inizio o fino alla data di fine.
 
 = Aspetto del sistema
 #grid(
