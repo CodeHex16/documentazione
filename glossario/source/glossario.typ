@@ -187,7 +187,7 @@ Uno standard è un insieme di regole, linee guida o specifiche che definiscono u
 La sincronia è un paradigma di programmazione in cui le operazioni vengono eseguite in modo sequenziale e sincronizzato. In un sistema sincrono, le operazioni vengono eseguite in modo ordinato e coordinato, garantendo che una operazione venga completata prima che ne inizi un'altra. La sincronia è utilizzata per gestire operazioni che dipendono l'una dall'altra o che richiedono un'elaborazione sequenziale.
 == SQL
 Acronimo di "Structured Query Language", è un linguaggio di programmazione utilizzato per gestire e interrogare database relazionali.
-== Suppl-AI
+== SupplAI
 Nome del nostro prodotto scelto perché racchiude i concetti di: supply che richiama il target dell’utenza di questa webapp, ovvero fornitori che offrono questo chatbot ai loro clienti, e AI che richiama il modello LLM con cui ci si interfaccia tramite chatbot;
 == Svelte
 Framework JavaScript per lo sviluppo di interfacce utente, che consente di scrivere codice reattivo compilato in JavaScript ottimizzato, migliorando le prestazioni delle applicazioni web.
