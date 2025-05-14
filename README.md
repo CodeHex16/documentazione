@@ -34,6 +34,7 @@ documentazione/
 |        └── 📄 *.pdf
 ├── 📁 3 - PB
 |  ├── 📁 imgs
+|  |  └── 📁 screen
 |  ├── 📁 presentazioni
 |  ├── 📁 source
 |  ├── 📄 *.pdf
@@ -49,10 +50,6 @@ documentazione/
 |  └── 📁 source
 |  └── 📄 *.pdf
 └── 📁 template		# file di template per i documenti
-   └── 📁 images		# assets per i documenti
-```
-<!-- FINE TREE DIRECTORY -->
- template per i documenti
    └── 📁 images		# assets per i documenti
 ```
 <!-- FINE TREE DIRECTORY -->
