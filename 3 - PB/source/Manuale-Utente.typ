@@ -473,6 +473,8 @@ La modifica del colore primario avviene tramite un selettore di colore (differen
 
 Per modificare il logo, è necessario caricare due file, uno per la modalità chiara e uno per la modalità scura. È possibile caricare lo stesso file in entrambi i campi, ma è consigliato caricare due file diversi per garantire una buona visibilità e contrasto.
 
+#strong[Nota:] perché la modifica dei loghi sia visibile è necessario riavviare il container, questo è necessario a causa del modo in cui SvelteKit gestisce le immagini in cache in ambiente di produzione.
+
 == Schermata gestione clienti
 #grid(
     columns: (1fr, 1fr),
