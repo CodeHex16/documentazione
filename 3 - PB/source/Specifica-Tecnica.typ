@@ -591,7 +591,7 @@ Generalizzazione della classe FAQBase.
 )
 La classe LLMRouter è responsabile della gestione delle richieste HTTP relative alle query che verranno reindirizzate all'LLMResponseService.
 
-L'oggetto LLMResponseService viene importato tramite il metodo ```python LLMResponseService.get_llm_response_service()``` che restituisce l'istanza del servizio LLMResponseService.
+L'oggetto LLMResponseService viene importato tramite il metodo ```python LLMResponseService.get_llm_response_service()``` che restituisce l'istanza del servizio LLMResponseService (*Dependency Injection*).
 ====== Attributi
 - ```python +router: APIRouter```: oggetto del modulo fastapi che permette di definire le API route;
 ====== Metodi
@@ -604,7 +604,7 @@ L'oggetto LLMResponseService viene importato tramite il metodo ```python LLMResp
   caption: "Diagramma delle classi di FaqRouter",
 )
 La classe FaqRouter è responsabile della gestione delle richieste HTTP relative a salvataggio, modifica e cancellazione delle FAQ nel database vettoriale. \
-I metodi della classe FileManager vengono utilizzati tramite l'oggetto restituito dal metodo ```python FileManagerService.get_file_manager_by_extension()```.
+I metodi della classe FileManager vengono utilizzati tramite l'oggetto restituito dal metodo ```python FileManagerService.get_file_manager_by_extension()``` (*Dependency Injection*).
 ====== Attributi
 - ```python +router: APIRouter```: oggetto del modulo fastapi che permette di definire le API route;
 ====== Metodi
@@ -618,12 +618,29 @@ I metodi della classe FileManager vengono utilizzati tramite l'oggetto restituit
   caption: "Diagramma delle classi di DocumentRouter",
 )
 La classe DocumentRouter è responsabile della gestione delle richieste HTTP relative a salvataggio, modifica e cancellazione dei documenti nel database vettoriale. \
-I metodi della classe FileManager vengono utilizzati tramite l'oggetto restituito dal metodo ```python FileManagerService.get_file_manager_by_extension()```.
+I metodi della classe FileManager vengono utilizzati tramite l'oggetto restituito dal metodo ```python FileManagerService.get_file_manager_by_extension()``` (*Dependency Injection*).
 ====== Attributi
 - ```python +router: APIRouter```: oggetto del modulo fastapi che permette di definire le API route;
 ====== Metodi
 - ```python +upload_file(files: List<UploadFile>, token: str) -> json```: chiama il metodo ```python FileManager.add_document()``` per ogni file contenuto nella lista files, il token viene utilizzato per verificare che l'utente che esegue la richiesta sia un admin; restituisce l'esito della richiesta;
 - ```python +delete_file(fileDelete: DocumentDelete) -> json```: chiama il metodo ```python FileManager.delete_document()```, il token viene utilizzato per verificare che l'utente che esegue la richiesta sia un admin; restituisce l'esito della richiesta;
+
+===== LLMResponseService
+// #figure(
+//   image("../imgs/LLMResponseService.png", width: 90%),
+//   caption: "Diagramma delle classi di LLMResponseService",
+// )
+La classe LLMResponseService si occupa di orchestrare l'ottenimento del contesto, la preparazione della richiesta per l'LLM e, infine, il ritorno della risposta generata.
+====== Attributi
+- ```python -vector_database: VectorDatabase```: oggetto VectorDatabase che permette di recuperare il contesto; l'oggetto viene istanziato al momento della costruzione dell'LLMResponseService e viene ottenuto tramite il metodo ```python VectorDatabaseService.get_vector_database()``` (*Dependency Injection*);
+- ```python -llm: LLM```: oggetto LLM che permette di generare la risposta; l'oggetto viene istanziato al momento della costruzione dell'LLMResponseService e viene ottenuto tramite il metodo ```python LLMService.get_llm()``` (*Dependency Injection*);
+- ```python -chatbot_instruction: str```: stringa che contiene il prompt iniziale con le istruzioni per il chatbot;
+====== Metodi
+- ```python +__init__()```: costruttore della classe, inizializza gli oggetti _vector_database_, _llm_ e il prompt iniziale;
+- ```python -get_context(question: str) -> str```: restituisce il contesto in base alla domanda fornita; per ottenere il contesto viene chiamato il metodo ```python VectorDatabase.search_context()```;
+- ```python +generate_llm_response(question: Question) -> StreamingResponse```: tramite uno stream di dati restituisce la risposta, generata in base al prompt fornito; \ per ottenere il contesto viene chiamato il metodo ```python  LLMResponseService.get_context()``` e per ottenere la risposta generata viene chiamato il metodo ```python LLM.generate_response()```;
+- ```python +generate_llm_chat_name(chat_history: str) -> str```: restituisce il nome della chat generato in base al contesto fornito; \ per ottenere il nome generato viene chiamato il metodo ```python LLM.generate_chat_name()``` a cui viene passato lo storico della chat e un prompt standard che fornisce le istruzioni per l'LLM;
+- ```python +get_llm_response_service() -> LLMResponseService```: restituisce l'istanza del servizio LLMResponseService;
 
 // TODO: descrizione delle classi
 
