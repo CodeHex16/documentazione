@@ -117,14 +117,14 @@ La webapp è accessibile tramite browser e non richiede installazione locale, ri
 - iOS (versioni 16 e successive);
 - Android (versioni 12 e successive).
 
-L'unico requisito fondamentale è la presenza di un browser web aggiornato che supporto le tecnologie moderne (HTML5, CSS3, JavaScript). I browser e versioni consigliate sono indicati nella sezione precedente.
+L'unico requisito fondamentale è la presenza di un browser web aggiornato che supporto le tecnologie moderne (HTML5, CSS3, #gloss[JavaScript]). I browser e versioni consigliate sono indicati nella sezione precedente.
 
 L'utilizzo di browser obsoleti o non aggiornati potrebbe compromettere la corretta visualizzazione e il funzionamento dell'applicativo.
 
 
 // TODO: probabilmente l'installazione non serve perché è gestita dall'amministratore
 = Installazione
-Questa sezione descrive tutti i passaggi necessari per l'installazione dell'applicativo a partire dal codice sorgente presente nella repository.
+Questa sezione descrive tutti i passaggi necessari per l'installazione dell'applicativo a partire dal #gloss[codice sorgente] presente nella repository.
 
 == Clonazione del progetto
 Clonare la repository del progetto con i relativi moduli da GitHub sul server o sulla macchina locale.
@@ -161,7 +161,7 @@ Di seguito sono elencate le variabili d'ambiente necessarie per il corretto funz
 
 Per il microservizio #strong[Database-API] sono necessari:
 - MONGODB_URL: URL del database MongoDB;
-- SECRET_KEY_JWT: chiave segreta, generata in modo completamente casuale, per la generazione dei token JWT;
+- SECRET_KEY_JWT: chiave segreta, generata in modo completamente casuale, per la generazione dei #gloss[token] JWT;
 - MONGO_USERNAME: nome utente per l'accesso al database MongoDB;
 - MONGO_PASSWORD: password per l'accesso al database MongoDB;
 - ME_USERNAME: nome utente per l'accesso a Mongo Express;
@@ -181,7 +181,7 @@ Per l'invio delle email sono necessari:
 Le variabili del servizio email da impostare obbligatoriamente sono MAIL_ADDRESS, MAIL_PASSWORD; le altre variabili sono opzionali e possono essere lasciate con i valori di default.
 
 Per il microservizio #strong[LLM-API] sono necessari:
-- OPENAI_API_KEY: chiave API per l'accesso al servizio OpenAI;
+- OPENAI_API_KEY: chiave #gloss[API] per l'accesso al servizio #gloss[OpenAI];
 
 Per il microservizio #strong[Suppl-AI] sono necessari:
 - PUBLIC_DATABASE_URL: URL del database MongoDB pubblico;
@@ -202,7 +202,7 @@ Per creare la rete, eseguire il seguente comando:
 #[
   #show raw.where(block: true): set block(fill: rgb("#eeeeee"), inset: 1em, radius: 0.5em, width: 100%)
   ```bash
-  docker network create suppl-ai-shared-network  
+  docker network create #gloss[suppl-ai]-shared-network  
   ```
 ]
 
@@ -241,14 +241,14 @@ Una volta avviata la webapp, è possibile accedere all'area amministratore per a
 #strong[Password]: admin
 
 = Tipi di utente
-All'interno della webapp sono previsti due distinti ruoli utente: utente standard (user) e amministratore (admin). Ciascun ruolo ha accesso a funzionalità differenti in base alle proprie competenze e responsabilità.
+All'interno della webapp sono previsti due distinti ruoli utente: utente #gloss[standard] (user) e amministratore (admin). Ciascun ruolo ha accesso a funzionalità differenti in base alle proprie competenze e responsabilità.
 
 == Utente standard (user)
 L’utente standard, corrispondente al Cliente, può interagire direttamente con il chatbot e accedere a una serie di funzionalità utili alla fruizione del servizio. In particolare, l’utente può:
 
 - Inviare messaggi al chatbot e ricevere risposte in tempo reale;
-- Consultare e utilizzare le domande frequenti (FAQ) pubblicate dagli amministratori;
-- Valutare la qualità delle risposte ricevute dal chatbot tramite un sistema di feedback.;
+- Consultare e utilizzare le domande frequenti (#gloss[FAQ]) pubblicate dagli amministratori;
+- Valutare la qualità delle risposte ricevute dal chatbot tramite un sistema di #gloss[feedback].;
 - Non ha accesso ad alcuna funzione di amministrazione o gestione della piattaforma.
 
 == Amministratore (admin)
