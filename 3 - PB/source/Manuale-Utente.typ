@@ -7,10 +7,10 @@
   ruoli: ("Matteo Bazzan", "", "Luca Ribon", "Verificatore", "Francesco Fragonas", "Redattore", "Gabriele Magnelli", "", "Filippo Sabbadin", "Redattore", "Luca Rossi", "", "Yi Hao Zhuo", ""),
   sommario: [Manuale utente],
   versioni: (
-    "0.4.1", "13/05/2025", "Francesco Fragonas", "Miglioramento sezione Installazione", "",
-    "0.4.0", "12/05/2025", "Francesco Fragonas", "Sezione Installazione", "",
-    "0.3.0", "08/05/2025", "Francesco Fragonas", "Sezione Aspetto del sistema e Tipi utenti", "",
-    "0.2.0", "05/05/2025", "Francesco Fragonas", "Sezione Guida all'utilizzo", "",
+    "0.4.1", "13/05/2025", "Francesco Fragonas", "Miglioramento sezione Installazione", "Luca Ribon",
+    "0.4.0", "12/05/2025", "Francesco Fragonas", "Sezione Installazione", "Luca Ribon",
+    "0.3.0", "08/05/2025", "Francesco Fragonas", "Sezione Aspetto del sistema e Tipi utenti", "Filippo Sabbadin",
+    "0.2.0", "05/05/2025", "Francesco Fragonas", "Sezione Guida all'utilizzo", "Matteo Bazzan",
     "0.1.0", "24/03/2025", "Filippo Sabbadin", "Prima stesura", "Luca Ribon"),
   doc,
 )
@@ -53,7 +53,7 @@ e nella seguente pagina web: #link("https://codehex16.github.io/glossario").
 
 - Regolamento del progetto didattico:\ #link("https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/PD1.pdf")\\ _(ultima consultazione: 12-05-2025)_
 
-- Norme di progetto:\ #link("https://codehex16.github.io/docs/2%20-%20RTB/Norme-di-Progetto.pdf")\ _(versione 1.0.0)_;
+- Norme di progetto:\ #link("https://codehex16.github.io/docs/2%20-%20RTB/Norme-di-Progetto.pdf")\ _(versione 2.0.0)_;
 
 === Riferimenti informativi
 - Sito del gruppo CodeHex16:\ #link("https://codehex16.github.io/")\ _(ultima consultazione: 12-05-2025)_;
@@ -112,7 +112,7 @@ Visto che il gruppo sta sviluppando una #gloss[webapp], per software si intende 
 La webapp è accessibile tramite browser e non richiede installazione locale, risultando quindi compatibile con i principali sistemi operativi moderni. In particolare, il prodotto è stato progettato per funzionare correttamente su:
 
 - Windows 10 e versioni successive;
-- Linux (distribuzioni basate su Debian, Ubuntu, Fedora, Arch Linux);
+- Linux (distribuzioni basate su Debian, Ubuntu, Fedora, Arch);
 - MacOS (versioni 12 Monterey e successive).
 - iOS (versioni 16 e successive);
 - Android (versioni 12 e successive).
@@ -143,7 +143,7 @@ Clonare la repository del progetto con i relativi moduli da GitHub sul server o 
   ```
 ]
 
-#strong[Nota:] #emph[assicurarsi di avere installato Git. In caso contrario, installarlo con sudo apt install git (su sistemi Debian-based) o tramite il gestore di pacchetti del proprio sistema operativo.]
+#strong[Nota:] assicurarsi di avere installato Git. In caso contrario, installarlo seguendo la guida del sito ufficiale #link("https://git-scm.com/book/en/v2/Getting-Started-Installing-Git") _(ultima consultazione: 14-05-2025)_
 
 == Creazione dei file .env
 Per il corretto funzionamento dell'applicativo è necessario creare un file .env contenente le variabili d'ambiente necessarie. Per crearlo, copiare il file .env.example presente nella root del progetto e rinominarlo in .env.
@@ -161,12 +161,12 @@ Di seguito sono elencate le variabili d'ambiente necessarie per il corretto funz
 
 Per il microservizio #strong[Database-API] sono necessari:
 - MONGODB_URL: URL del database MongoDB;
-- SECRET_KEY_JWT: chiave segreta per la generazione dei token JWT;
+- SECRET_KEY_JWT: chiave segreta, generata in modo completamente casuale, per la generazione dei token JWT;
 - MONGO_USERNAME: nome utente per l'accesso al database MongoDB;
 - MONGO_PASSWORD: password per l'accesso al database MongoDB;
 - ME_USERNAME: nome utente per l'accesso a Mongo Express;
 - ADMIN_EMAIL: email dell'amministratore;
-- ADMIN_PASSWORD: password dell'amministratore;
+- ADMIN_PASSWORD: password dell'amministratore, che verrà utilizzata anche come password di accesso per Mongo Express;
 
 Per l'invio delle email sono necessari:
 - MAIL_ADDRESS: indirizzo email del mittente;
@@ -178,6 +178,7 @@ Per l'invio delle email sono necessari:
 - MAIL_SSL_TLS: True se si utilizza SSL, False altrimenti;
 - MAIL_USE_CREDENTIALS: True se si utilizzano le credenziali, False altrimenti;
 - MAIL_VALIDATE_CERTS: True se si vogliono validare i certificati, False altrimenti;
+Le variabili del servizio email da impostare obbligatoriamente sono MAIL_ADDRESS, MAIL_PASSWORD; le altre variabili sono opzionali e possono essere lasciate con i valori di default.
 
 Per il microservizio #strong[LLM-API] sono necessari:
 - OPENAI_API_KEY: chiave API per l'accesso al servizio OpenAI;
@@ -192,6 +193,8 @@ Se l'indirizzo email utilizzato per l'invio delle email è protetto da autentica
 Esempio per gmail: #link("https://support.google.com/mail/answer/185833?hl=it") _(ultima consultazione: 12-05-2025)_
 
 == Creazione della rete Docker
+Da questo momento in poi sarà necessario aver installato Docker e che Docker Engine sia in esecuzione nel proprio sistema. Per installare Docker, seguire le istruzioni sul sito ufficiale #link("https://docs.docker.com/get-docker/") _(ultima consultazione: 14-05-2025)_.
+
 Per permettere la comunicazione tra i container dei diversi microservizi, è necessario creare una rete Docker condivisa. Questa rete verrà utilizzata da tutti i servizi coinvolti nell'applicativo.
 
 Per creare la rete, eseguire il seguente comando:
@@ -204,8 +207,7 @@ Per creare la rete, eseguire il seguente comando:
 ]
 
 == Esecuzione dell'applicativo
-Il sistema può essere eseguito tramite Docker. Assicurarsi di aver installato Docker e Docker Compose. In caso contrario, seguire le istruzioni sul sito ufficiale  #link("https://docs.docker.com/get-docker/") _(ultima consultazione: 12-05-2025)_.
-
+Il sistema può essere eseguito tramite Docker.
 Per avviare tutti i servizi:
 
 #[
@@ -215,9 +217,11 @@ Per avviare tutti i servizi:
   ```
 ]
 
-La webapp sarà disponibile all'indirizzo #link("http://localhost:3000").
+- La webapp sarà disponibile all'indirizzo #link("http://localhost:3000").
+- Agli indirizzi #link("http://localhost:8000") e #link("http://localhost:8001") saranno disponibili le documentazioni generate da FastAPI rispettivamente per le API di Database-API e LLM-API.
+- All'indirizzo #link("http://localhost:8081") sarà disponibile la webapp di Mongo Express, che permette di visualizzare e gestire il database MongoDB.
 
-Per poter utilizzare il chatbot, è necessario aver caricato almeno un documento tramite la schermata di gestione documenti, visibile agli utenti di tipo #strong[admin]
+Per poter ricevere delle risposte dal chatbot è necessario aver caricato almeno un documento tramite la schermata di gestione documenti, visibile agli utenti di tipo #strong[admin].
 
 Per fermare l'esecuzione di tutti i servizi, eseguire il seguente comando:
 
@@ -234,28 +238,21 @@ Una volta avviata la webapp, è possibile accedere all'area amministratore per a
 
 #strong[Email]: admin\@test.it
 
-#strong[Password]: adminadmin
-
-Per accedere come utente di tipo user, è possibile utilizzare le seguenti credenziali predefinite:
-
-#strong[Email]: test\@test.it
-
-#strong[Password]: testtest
-
+#strong[Password]: admin
 
 = Tipi di utente
 All'interno della webapp sono previsti due distinti ruoli utente: utente standard (user) e amministratore (admin). Ciascun ruolo ha accesso a funzionalità differenti in base alle proprie competenze e responsabilità.
 
 == Utente standard (user)
-L’utente standard può interagire direttamente con il chatbot e accedere a una serie di funzionalità utili alla fruizione del servizio. In particolare, l’utente può:
+L’utente standard, corrispondente al Cliente, può interagire direttamente con il chatbot e accedere a una serie di funzionalità utili alla fruizione del servizio. In particolare, l’utente può:
 
 - Inviare messaggi al chatbot e ricevere risposte in tempo reale;
-- Consultare le domande frequenti (FAQ) pubblicate dagli amministratori;
-- Valutare la qualità delle risposte ricevute dal chatbot tramite un sistema di feedback.
+- Consultare e utilizzare le domande frequenti (FAQ) pubblicate dagli amministratori;
+- Valutare la qualità delle risposte ricevute dal chatbot tramite un sistema di feedback.;
 - Non ha accesso ad alcuna funzione di amministrazione o gestione della piattaforma.
 
 == Amministratore (admin)
-L’amministratore dispone di tutti i permessi dell’utente standard, ma ha inoltre accesso a un pannello di gestione dedicato che gli consente di:
+L’amministratore, corrispondente al Fornitore, dispone di tutti i permessi dell’utente standard, ma ha inoltre accesso a un pannello di gestione dedicato che gli consente di:
 
 - Gestire gli utenti registrati (creazione, modifica, rimozione, assegnazione ruoli);
 - Caricare, visualizzare e rimuovere documenti utilizzati per il contesto delle risposte del chatbot;
@@ -391,7 +388,7 @@ L'utente può cambiare la propria password cliccando sul pulsante "#strong[Cambi
 - almeno 8 caratteri;
 - almeno una lettera maiuscola;
 - almeno una lettera minuscola; 
-- almenu un numero;
+- almeno un numero;
 - almeno un carattere speciale (es. ! \@ \# \$ % ^ & \* ( ) ).
 Se la password attuale non è corretta o la nuova password non è stata riscritta correttamente, il cambio non andrà a buon fine.
 
