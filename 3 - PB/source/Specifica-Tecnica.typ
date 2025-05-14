@@ -636,11 +636,59 @@ La classe LLMResponseService si occupa di orchestrare l'ottenimento del contesto
 - ```python -llm: LLM```: oggetto LLM che permette di generare la risposta; l'oggetto viene istanziato al momento della costruzione dell'LLMResponseService e viene ottenuto tramite il metodo ```python LLMService.get_llm()``` (*Dependency Injection*);
 - ```python -chatbot_instruction: str```: stringa che contiene il prompt iniziale con le istruzioni per il chatbot;
 ====== Metodi
-- ```python +__init__()```: costruttore della classe, inizializza gli oggetti _vector_database_, _llm_ e il prompt iniziale;
+- ```python +__init__()```: costruttore della classe, inizializza gli oggetti vector_database, llm e il prompt iniziale;
 - ```python -get_context(question: str) -> str```: restituisce il contesto in base alla domanda fornita; per ottenere il contesto viene chiamato il metodo ```python VectorDatabase.search_context()```;
 - ```python +generate_llm_response(question: Question) -> StreamingResponse```: tramite uno stream di dati restituisce la risposta, generata in base al prompt fornito; \ per ottenere il contesto viene chiamato il metodo ```python  LLMResponseService.get_context()``` e per ottenere la risposta generata viene chiamato il metodo ```python LLM.generate_response()```;
 - ```python +generate_llm_chat_name(chat_history: str) -> str```: restituisce il nome della chat generato in base al contesto fornito; \ per ottenere il nome generato viene chiamato il metodo ```python LLM.generate_chat_name()``` a cui viene passato lo storico della chat e un prompt standard che fornisce le istruzioni per l'LLM;
 - ```python +get_llm_response_service() -> LLMResponseService```: restituisce l'istanza del servizio LLMResponseService;
+
+===== LLMService
+// #figure(
+//   image("../imgs/LLMService.png", width: 90%),
+//   caption: "Diagramma delle classi di LLMService",
+// )
+La classe LLMService permette di ottenere l'istanza dell'oggetto LLM adatto ad interagire con l'LLM specifico scelto dall'amministratore della piattaforma.
+====== Metodi
+- ```python +get_llm_model() -> LLM```: restituisce l'oggetto LLM adatto basandosi sulle variabili d'ambiente LLM_MODEL e LLM_PROVIDER;
+
+===== LLM
+// TODO: grafico che include anche le classi concrete
+// #figure(
+//  image("../imgs/LLM.png", width: 90%),
+// caption: "Diagramma delle classi di LLM",
+// )
+La classe LLM è un'astrazione che rappresenta un LLM generico. Lo scopo è quello di inizializzare l'oggetto LLM in modo che, le funzionalità di langchain per interagire con i modelli, siano utilizzabili in modo generico, quindi senza dipendere dall'LLM scelto.
+====== Attributi
+- ```python -model_name: str```: nome del modello LLM;
+- ```python -model: BaseChatModel```: oggetto della classe ```python langchain_core.language_models.chat_models.BaseChatModel``` che permette di invocare il modello LLM;
+====== Metodi
+- ```python +__init__(model_name: str)```: costruttore della classe, inizializza gli oggetti model_name e model, il secondo viene inizializzato tramite il metodo ```python initialize_model()```; controlla che le variabili d'ambiente necessarie siano impostate correttamente tramite il metodo ```python check_environment()```;
+- ```python -check_environment()```: controlla che le variabili d'ambiente necessarie siano impostate correttamente;
+- ```python -initialize_model() -> BaseChatModel```: inizializza l'oggetto model in base al modello scelto;
+====== Ollama
+- ```python -check_environment()```: controlla che le variabili d'ambiente necessarie all'utilizzo del modello scelto di Ollama siano impostate correttamente;
+- ```python -initialize_model() -> BaseChatModel```: inizializza l'oggetto model per essere utilizzato con il modello scelto di Ollama;
+====== OpenAI
+- ```python -check_environment()```: controlla che le variabili d'ambiente necessarie all'utilizzo del modello scelto di OpenAI siano impostate correttamente;
+- ```python -initialize_model() -> BaseChatModel```: inizializza l'oggetto model per essere utilizzato con il modello scelto di OpenAI;
+
+===== VectorDatabaseService
+// #figure(
+// image("../imgs/VectorDatabaseService.png", width: 90%),
+// caption: "Diagramma delle classi di VectorDatabaseService",
+// )
+La classe VectorDatabaseService permette di ottenere l'istanza dell'oggetto VectorDatabase adatto ad interagire con il database vettoriale scelto dall'amministratore della piattaforma.
+====== Metodi
+// TODO: grafico e codice non combaciano
+- ```python +get_vector_database() -> VectorDatabase```: restituisce l'oggetto VectorDatabase adatto basandosi sulla variabile d'ambiente VECTOR_DATABASE_PROVIDER;
+
+===== VectorDatabase
+La classe VectorDatabase è un'astrazione che rappresenta un database vettoriale generico. Lo scopo è quello di inizializzare l'oggetto VectorDatabase in modo che, le funzionalità di langchain per interagire con i database vettoriali, siano utilizzabili in modo generico, quindi senza dipendere dal database scelto.
+// TODO: da rivedere ci sono un po' di cose da discutere 
+====== Attributi
+- ```python -embedding: EmbeddingProvider```: oggetto della classe EmbeddingProvider che permette di accedere diverse funzioni di embedding in base all'embedding provider scelto; l'attributo viene inizializzato tramite il metodo ```python EmbeddingService.get_embedding_provider()```;
+- ```python -persist_directory: str```: percorso della directory in cui sono memorizzati i dati vettorializzati; viene inizializzata tramite la variabile d'ambiente VECTOR_DB_DIRECTORY;
+====== Metodi
 
 // TODO: descrizione delle classi
 
