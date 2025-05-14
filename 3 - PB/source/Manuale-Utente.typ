@@ -4,14 +4,55 @@
 #show: doc => documento(
   titolo: "Manuale Utente",
   data: [24/03/2025],
-  ruoli: ("Matteo Bazzan", "", "Luca Ribon", "Verificatore", "Francesco Fragonas", "Redattore", "Gabriele Magnelli", "", "Filippo Sabbadin", "Redattore", "Luca Rossi", "", "Yi Hao Zhuo", ""),
+  ruoli: (
+    "Matteo Bazzan",
+    "Verificatore",
+    "Luca Ribon",
+    "Redattore, Verificatore",
+    "Francesco Fragonas",
+    "Redattore",
+    "Gabriele Magnelli",
+    "",
+    "Filippo Sabbadin",
+    "Redattore, Verificatore",
+    "Luca Rossi",
+    "",
+    "Yi Hao Zhuo",
+    "",
+  ),
   sommario: [Manuale utente],
   versioni: (
-    "0.4.1", "13/05/2025", "Francesco Fragonas", "Miglioramento sezione Installazione", "Luca Ribon",
-    "0.4.0", "12/05/2025", "Francesco Fragonas", "Sezione Installazione", "Luca Ribon",
-    "0.3.0", "08/05/2025", "Francesco Fragonas", "Sezione Aspetto del sistema e Tipi utenti", "Filippo Sabbadin",
-    "0.2.0", "05/05/2025", "Francesco Fragonas", "Sezione Guida all'utilizzo", "Matteo Bazzan",
-    "0.1.0", "24/03/2025", "Filippo Sabbadin", "Prima stesura", "Luca Ribon"),
+    "0.4.2",
+    "14/05/2025",
+    "Luca Ribon",
+    "Aggiunta di note sull'utilizzo e installazione, altre correzioni minori",
+    "Matteo Bazzan",
+    "0.4.1",
+    "13/05/2025",
+    "Francesco Fragonas",
+    "Miglioramento sezione Installazione",
+    "Luca Ribon",
+    "0.4.0",
+    "12/05/2025",
+    "Francesco Fragonas",
+    "Sezione Installazione",
+    "Luca Ribon",
+    "0.3.0",
+    "08/05/2025",
+    "Francesco Fragonas",
+    "Sezione Aspetto del sistema e Tipi utenti",
+    "Filippo Sabbadin",
+    "0.2.0",
+    "05/05/2025",
+    "Francesco Fragonas",
+    "Sezione Guida all'utilizzo",
+    "Matteo Bazzan",
+    "0.1.0",
+    "24/03/2025",
+    "Filippo Sabbadin",
+    "Prima stesura",
+    "Luca Ribon",
+  ),
   doc,
 )
 // spaciugo per aggiungere l'indice delle immagini
@@ -72,41 +113,39 @@ garantire il corretto funzionamento del prodotto.
 == Requisiti hardware
 Per hardware si intendono le componenti della macchina dove verrà utilizzato il prodotto. I requisiti consigliati sono i seguenti:
 
-#figure(table(
-  columns: (1fr, 1fr),
-  inset: 8pt,
-  align: (x, y) => if (y > 0) { left } else { center + horizon },
-  fill: (x, y) => if y == 0 { luma(190) } else if (y == 2 or y == 4) { luma(230) },
-  table.header([*Hardware*], [*Requisito*]),
-  "Processore",
-  "Quad-core 2.38GHz",
-  "Memoria primaria",
-  "2GB DDR4",
-  "Memoria secondaria",
-  "500MB",
-  "Connessione internet",
-  "5mbps",
-), caption: "Requisiti hardware")
+#figure(
+  table(
+    columns: (1fr, 1fr),
+    inset: 8pt,
+    align: (x, y) => if (y > 0) { left } else { center + horizon },
+    fill: (x, y) => if y == 0 { luma(190) } else if (y == 2 or y == 4) { luma(230) },
+    table.header([*Hardware*], [*Requisito*]),
+    "Processore", "Quad-core 2.38GHz",
+    "Memoria primaria", "2GB DDR4",
+    "Memoria secondaria", "500MB",
+    "Connessione internet", "5mbps",
+  ),
+  caption: "Requisiti hardware",
+)
 
 == Requisiti software
 
 Visto che il gruppo sta sviluppando una #gloss[webapp], per software si intende un browser web. I browser e le loro versioni consigliate sono quelle utilizzate dal gruppo all'inizio dello sviluppo del progetto:
 
-#figure(table(
-  columns: (1fr, 1fr),
-  inset: 8pt,
-  align: (x, y) => if (y > 0) { left } else { center + horizon },
-  fill: (x, y) => if y == 0 { luma(190) } else if (y == 2 or y == 4) { luma(230) },
-  table.header([*Browser*], [*Versione*]),
-  "Google Chrome",
-  "v123+",
-  "Mozilla Firefox",
-  "v123+",
-  "Microsoft Edge",
-  "v17+",
-  "Safari",
-  "v122+"
-), caption: "Requisiti software")
+#figure(
+  table(
+    columns: (1fr, 1fr),
+    inset: 8pt,
+    align: (x, y) => if (y > 0) { left } else { center + horizon },
+    fill: (x, y) => if y == 0 { luma(190) } else if (y == 2 or y == 4) { luma(230) },
+    table.header([*Browser*], [*Versione*]),
+    "Google Chrome", "v123+",
+    "Mozilla Firefox", "v123+",
+    "Microsoft Edge", "v17+",
+    "Safari", "v122+",
+  ),
+  caption: "Requisiti software",
+)
 
 === Requisiti di sistema
 La webapp è accessibile tramite browser e non richiede installazione locale, risultando quindi compatibile con i principali sistemi operativi moderni. In particolare, il prodotto è stato progettato per funzionare correttamente su:
@@ -157,7 +196,7 @@ Per il corretto funzionamento dell'applicativo è necessario creare un file .env
 
 Aprire i file .env e modificare le variabili d'ambiente.
 
-Di seguito sono elencate le variabili d'ambiente necessarie per il corretto funzionamento dell'applicativo. 
+Di seguito sono elencate le variabili d'ambiente necessarie per il corretto funzionamento dell'applicativo.
 
 Per il microservizio #strong[Database-API] sono necessari:
 - MONGODB_URL: URL del database MongoDB;
@@ -202,7 +241,7 @@ Per creare la rete, eseguire il seguente comando:
 #[
   #show raw.where(block: true): set block(fill: rgb("#eeeeee"), inset: 1em, radius: 0.5em, width: 100%)
   ```bash
-  docker network create suppl-ai-shared-network  
+  docker network create suppl-ai-shared-network
   ```
 ]
 
@@ -266,26 +305,26 @@ Queste funzionalità permettono all’amministratore di configurare, monitorare 
 
 == Login
 #grid(
-    columns: (1fr, 1fr,1fr),
-    gutter: 2mm,
-    figure(
-      image("../imgs/screen/login_compilato.jpg", height: 50%),
-      caption: [
-        Schermata di login.
-      ],
-    ),
-    figure(
-      image("../imgs/screen/login_errore_credenziali.jpg", height: 50%),
-      caption: [
-        Schermata login con credenziali non valide.
-      ],
-    ),
-    figure(
-      image("../imgs/screen/recupero_password.jpg", height: 50%),
-      caption: [
-        Schermata recupero password.
-      ],
-    ),
+  columns: (1fr, 1fr, 1fr),
+  gutter: 2mm,
+  figure(
+    image("../imgs/screen/login_compilato.jpg", height: 50%),
+    caption: [
+      Schermata di login.
+    ],
+  ),
+  figure(
+    image("../imgs/screen/login_errore_credenziali.jpg", height: 50%),
+    caption: [
+      Schermata login con credenziali non valide.
+    ],
+  ),
+  figure(
+    image("../imgs/screen/recupero_password.jpg", height: 50%),
+    caption: [
+      Schermata recupero password.
+    ],
+  ),
 )
 
 Se l'utente possiede già un #gloss[account], può accedere all'applicazione tramite la schermata di login, inserendo le proprie credenziali (email e password) negli appositi campi, come mostrato in #emph[Figura 1].
@@ -304,24 +343,24 @@ Una volta effettuato correttamente il login, l’utente avrà accesso completo a
 === Primo Login
 Per accedere per la prima volta alla piattaforma, l'utente deve richiedere il permesso al fornitore proprietario
 dell'applicazione, il quale gli fornisce una password temporanea. L'utente inserisce il suo indirizzo e-mail e la
-password ricevuta che successivamente provvederà a cambiare  con una password personale.
+password ricevuta che successivamente provvederà a cambiare con una password personale.
 
 == Schermata home
 #grid(
-    columns: (1fr, 1fr),
-    gutter: 2mm,
-    figure(
-      image("../imgs/screen/home_admin.jpg", height: 50%),
-      caption: [
-        Schermata home utente admin.
-      ],
-    ),
-    figure(
-      image("../imgs/screen/home_user.jpg", height: 50%),
-      caption: [
-        Schermata home utente user.
-      ],
-    ),
+  columns: (1fr, 1fr),
+  gutter: 2mm,
+  figure(
+    image("../imgs/screen/home_admin.jpg", height: 50%),
+    caption: [
+      Schermata home utente admin.
+    ],
+  ),
+  figure(
+    image("../imgs/screen/home_user.jpg", height: 50%),
+    caption: [
+      Schermata home utente user.
+    ],
+  ),
 )
 Dopo aver effettuato il login, l'utente viene reindirizzato alla homepage principale della webapp. In base al tipo di utente che ha effettuato il login, la schermata principale sarà diversa. I tipi di utente sono due: admin e user.
 
@@ -334,29 +373,29 @@ La schermata home per l'utente di tipo #strong[user] (vedi #emph[Figura 4]) è c
 === Home admin
 La schermata home per l'utente di tipo #strong[admin] (vedi #emph[Figura 5]) ha le stesse funzionalità della home per l'utente di tipo user, con l'aggiunta delle seguenti funzionalità:
 - un pulsante per la gestione delle impostazioni di sistema;
-- un pulsante per la gestione dei profili utente; 
+- un pulsante per la gestione dei profili utente;
 - un pulsante per la gestione dei documenti aziendali;
 - un pulsante per la visualizzazione delle statistiche di utilizzo del chatbot.
 - un pulsante per la gestione delle FAQ.
 
 === Cronologia chat
 #grid(
-    columns: (1fr, 1fr),
-    gutter: 2mm,
-    figure(
-      image("../imgs/screen/home_senza_chat.jpg", height: 50%),
-      caption: [
-        Schermata home con cronologia chat vuota.
-      ],
-    ),
-    figure(
-      image("../imgs/screen/home_elimina_chat.jpg", height: 50%),
-      caption: [
-        Schermata home con popup eliminazione chat.
-      ],
-    ),
+  columns: (1fr, 1fr),
+  gutter: 2mm,
+  figure(
+    image("../imgs/screen/home_senza_chat.jpg", height: 50%),
+    caption: [
+      Schermata home con cronologia chat vuota.
+    ],
+  ),
+  figure(
+    image("../imgs/screen/home_elimina_chat.jpg", height: 50%),
+    caption: [
+      Schermata home con popup eliminazione chat.
+    ],
+  ),
 )
-La sezione #strong[Cronologia Chat] mostra tutte le conversazioni precedenti con il chatbot. Si può selezionare una chat per visualizzarne il contenuto. Ogni chat è identificata da un titolo che viene generato automaticamente in base al contesto della conversazione e la data di creazione. 
+La sezione #strong[Cronologia Chat] mostra tutte le conversazioni precedenti con il chatbot. Si può selezionare una chat per visualizzarne il contenuto. Ogni chat è identificata da un titolo che viene generato automaticamente in base al contesto della conversazione e la data di creazione.
 
 Se l'utente non ha mai avuto conversazioni precedenti, la sezione sarà vuota e verrà visualizzata la scritta "Ancora nessuna chat" (vedi #emph[Figura 6]).
 
@@ -366,20 +405,20 @@ Per iniziare una nuova conversazione, l'utente può cliccare sul pulsante "#stro
 
 == Schermata profilo
 #grid(
-    columns: (1fr, 1fr),
-    gutter: 2mm,
-    figure(
-      image("../imgs/screen/profilo.jpg", height: 50%),
-      caption: [
-        Schermata profilo.
-      ],
-    ),
-    figure(
-      image("../imgs/screen/cambio_password.jpg", height: 50%),
-      caption: [
-        Schermata cambio password.
-      ],
-    ),
+  columns: (1fr, 1fr),
+  gutter: 2mm,
+  figure(
+    image("../imgs/screen/profilo.jpg", height: 50%),
+    caption: [
+      Schermata profilo.
+    ],
+  ),
+  figure(
+    image("../imgs/screen/cambio_password.jpg", height: 50%),
+    caption: [
+      Schermata cambio password.
+    ],
+  ),
 )
 Nella schermata del profilo (vedi #emph[Figura 8]) l'utente può visualizzare le proprie informazioni personali, come il nome e l'indirizzo e-mail. Inoltre può modificare la password ed effettuare il logout cliccando sul pulsante "#strong[Esci dall'account]".
 
@@ -387,33 +426,33 @@ Nella schermata del profilo (vedi #emph[Figura 8]) l'utente può visualizzare le
 L'utente può cambiare la propria password cliccando sul pulsante "#strong[Cambia Password]". Si aprirà una nuova schermata (vedi #emph[Figura 9]) in cui l'utente dovrà inserire la password attuale e la nuova password. La nuova password deve essere inserita due volte per confermare che non ci siano errori di battitura. Inoltre deve avere i seguenti requisiti:
 - almeno 8 caratteri;
 - almeno una lettera maiuscola;
-- almeno una lettera minuscola; 
+- almeno una lettera minuscola;
 - almeno un numero;
 - almeno un carattere speciale (es. ! \@ \# \$ % ^ & \* ( ) ).
 Se la password attuale non è corretta o la nuova password non è stata riscritta correttamente, il cambio non andrà a buon fine.
 
 == Schermata chat
 #grid(
-    columns: (1fr, 1fr, 1fr),
-    gutter: 2mm,
-    figure(
-      image("../imgs/screen/chat.jpg", height: 50%),
-      caption: [
-        Schermata chat.
-      ],
-    ),
-    figure(
-      image("../imgs/screen/chat_invio.jpg", height: 50%),
-      caption: [
-        Schermata chat con invio domanda.
-      ],
-    ),
-    figure(
-      image("../imgs/screen/chat_ricezione.jpg", height: 50%),
-      caption: [
-        Schermata chat con ricezione risposta.
-      ],
-    ),
+  columns: (1fr, 1fr, 1fr),
+  gutter: 2mm,
+  figure(
+    image("../imgs/screen/chat.jpg", height: 50%),
+    caption: [
+      Schermata chat.
+    ],
+  ),
+  figure(
+    image("../imgs/screen/chat_invio.jpg", height: 50%),
+    caption: [
+      Schermata chat con invio domanda.
+    ],
+  ),
+  figure(
+    image("../imgs/screen/chat_ricezione.jpg", height: 50%),
+    caption: [
+      Schermata chat con ricezione risposta.
+    ],
+  ),
 )
 
 La schermata di chat (vedi #emph[Figura 10]) è composta da:
@@ -433,34 +472,34 @@ Alla ricezione della prima risposta da parte del chatbot, verrà generato un tit
 
 === Eliminazione chat
 #grid(
-    columns: (1fr, 1fr),
-    gutter: 2mm,
-    figure(
-      image("../imgs/screen/chat_tasto_elimina.jpg", height: 50%),
-      caption: [
-        Schermata chat con tasto elimina.
-      ],
-    ),
-    figure(
-      image("../imgs/screen/chat_elimina.jpg", height: 50%),
-      caption: [
-        Popup conferma eliminazione chat.
-      ],
-    ),
+  columns: (1fr, 1fr),
+  gutter: 2mm,
+  figure(
+    image("../imgs/screen/chat_tasto_elimina.jpg", height: 50%),
+    caption: [
+      Schermata chat con tasto elimina.
+    ],
+  ),
+  figure(
+    image("../imgs/screen/chat_elimina.jpg", height: 50%),
+    caption: [
+      Popup conferma eliminazione chat.
+    ],
+  ),
 )
 
 L'utente può eliminare la chat cliccando sul tasto con l'icona con i 3 punti in alto a destra e successivamente su "#strong[Elimina Chat]" presente nella schermata di chat (vedi #emph[Figura 13]). Si aprirà un popup di conferma (vedi #emph[Figura 14]) in cui l'utente dovrà confermare l'eliminazione. Una volta confermata, la chat verrà eliminata e non sarà più visibile nella cronologia.
 
 == Schermata impostazioni
 #grid(
-    columns: (1fr),
-    gutter: 2mm,
-    figure(
-      image("../imgs/screen/impostazioni.jpg", height: 50%),
-      caption: [
-        Schermata impostazioni.
-      ],
-    ),
+  columns: 1fr,
+  gutter: 2mm,
+  figure(
+    image("../imgs/screen/impostazioni.jpg", height: 50%),
+    caption: [
+      Schermata impostazioni.
+    ],
+  ),
 )
 
 Nella schermata delle impostazioni (vedi #emph[Figura 15]), accessibile solo dall'utente #strong[admin], è possibile modificare le impostazioni di sistema. In particolare si possono modificare i seguenti parametri:
@@ -477,20 +516,20 @@ Per modificare il logo, è necessario caricare due file, uno per la modalità ch
 
 == Schermata gestione clienti
 #grid(
-    columns: (1fr, 1fr),
-    gutter: 2mm,
-    figure(
-      image("../imgs/screen/clienti.jpg", height: 50%),
-      caption: [
-        Schermata clienti.
-      ],
-    ),
-    figure(
-      image("../imgs/screen/clienti_aperto.jpg", height: 50%),
-      caption: [
-        Schermata clienti con modifica ed eliminazione.
-      ],
-    ),
+  columns: (1fr, 1fr),
+  gutter: 2mm,
+  figure(
+    image("../imgs/screen/clienti.jpg", height: 50%),
+    caption: [
+      Schermata clienti.
+    ],
+  ),
+  figure(
+    image("../imgs/screen/clienti_aperto.jpg", height: 50%),
+    caption: [
+      Schermata clienti con modifica ed eliminazione.
+    ],
+  ),
 )
 
 Nella schermata #strong[gestione clienti] (vedi #emph[Figura 16]) l'utente #strong[admin] può visualizzare la lista dei clienti registrati al sistema. Per ogni cliente sono visibili le seguenti informazioni:
@@ -499,30 +538,30 @@ Nella schermata #strong[gestione clienti] (vedi #emph[Figura 16]) l'utente #stro
 - tipo di utente (admin o user);
 Per ricercare gli utenti è possibile utilizzare la barra di ricerca in basso. La ricerca avviene in tempo reale e viene effettuata sul nome, sull'email e sul tipo di utente.
 
-Su ogni cliente è presente una freccia che permette di espandere la visualizzazione mostrando il tasto per la modifica e il tasto per l'eliminazione (vedi #emph[Figura 17]). 
+Su ogni cliente è presente una freccia che permette di espandere la visualizzazione mostrando il tasto per la modifica e il tasto per l'eliminazione (vedi #emph[Figura 17]).
 
 === Operazioni sui clienti
 #grid(
-    columns: (1fr, 1fr, 1fr),
-    gutter: 2mm,
-    figure(
-      image("../imgs/screen/clienti_nuovo.jpg", height: 50%),
-      caption: [
-        Schermata clienti con popup creazione.
-      ],
-    ),
-    figure(
-      image("../imgs/screen/clienti_modifica.jpg", height: 50%),
-      caption: [
-        Schermata clienti con popup modifica.
-      ],
-    ),
-    figure(
-      image("../imgs/screen/clienti_elimina.jpg", height: 50%),
-      caption: [
-        Schermata clienti con popup eliminazione.
-      ],
-    ),
+  columns: (1fr, 1fr, 1fr),
+  gutter: 2mm,
+  figure(
+    image("../imgs/screen/clienti_nuovo.jpg", height: 50%),
+    caption: [
+      Schermata clienti con popup creazione.
+    ],
+  ),
+  figure(
+    image("../imgs/screen/clienti_modifica.jpg", height: 50%),
+    caption: [
+      Schermata clienti con popup modifica.
+    ],
+  ),
+  figure(
+    image("../imgs/screen/clienti_elimina.jpg", height: 50%),
+    caption: [
+      Schermata clienti con popup eliminazione.
+    ],
+  ),
 )
 
 ==== Creazione utente
@@ -545,20 +584,20 @@ Per eliminare un utente, l'utente #strong[admin] deve cliccare sul tasto "#stron
 
 == Schermata gestione documenti
 #grid(
-    columns: (1fr, 1fr),
-    gutter: 2mm,
-    figure(
-      image("../imgs/screen/documenti.jpg", height: 50%),
-      caption: [
-        Schermata gestione documenti.
-      ],
-    ),
-    figure(
-      image("../imgs/screen/documenti_aperto.jpg", height: 50%),
-      caption: [
-        Schermata gestione documenti con eliminazione.
-      ],
-    ),
+  columns: (1fr, 1fr),
+  gutter: 2mm,
+  figure(
+    image("../imgs/screen/documenti.jpg", height: 50%),
+    caption: [
+      Schermata gestione documenti.
+    ],
+  ),
+  figure(
+    image("../imgs/screen/documenti_aperto.jpg", height: 50%),
+    caption: [
+      Schermata gestione documenti con eliminazione.
+    ],
+  ),
 )
 
 Nella schermata #strong[gestione documenti] (vedi #emph[Figura 21]) l'utente #strong[admin] può visualizzare la lista dei documenti inseriti. Per ogni documento sono visibili le seguenti informazioni:
@@ -570,24 +609,24 @@ I file inseriti serviranno come contesto per il chatbot, in modo da fornire risp
 
 Per ricercare i documenti è possibile utilizzare la barra di ricerca in basso. La ricerca avviene in tempo reale e viene effettuata sul nome del file e sull'utente che lo ha caricato.
 
-Su ogni documento è presente una freccia che permette di espandere la visualizzazione mostrando il tasto per l'eliminazione (vedi #emph[Figura 22]). 
+Su ogni documento è presente una freccia che permette di espandere la visualizzazione mostrando il tasto per l'eliminazione (vedi #emph[Figura 22]).
 
 === Operazioni sui documenti
 #grid(
-    columns: (1fr, 1fr),
-    gutter: 2mm,
-    figure(
-      image("../imgs/screen/documenti_nuovo.jpg", height: 50%),
-      caption: [
-        Schermata documenti con popup creazione.
-      ],
-    ),
-    figure(
-      image("../imgs/screen/documenti_elimina.jpg", height: 50%),
-      caption: [
-        Schermata documenti con popup eliminazione.
-      ],
-    ),
+  columns: (1fr, 1fr),
+  gutter: 2mm,
+  figure(
+    image("../imgs/screen/documenti_nuovo.jpg", height: 50%),
+    caption: [
+      Schermata documenti con popup creazione.
+    ],
+  ),
+  figure(
+    image("../imgs/screen/documenti_elimina.jpg", height: 50%),
+    caption: [
+      Schermata documenti con popup eliminazione.
+    ],
+  ),
 )
 
 ==== Creazione documento
@@ -598,20 +637,20 @@ Per eliminare un documento, l'utente #strong[admin] deve cliccare sul tasto "#st
 
 == Schermata gestione FAQ
 #grid(
-    columns: (1fr, 1fr),
-    gutter: 2mm,
-    figure(
-      image("../imgs/screen/faq.jpg", height: 50%),
-      caption: [
-        Schermata FAQ.
-      ],
-    ),
-    figure(
-      image("../imgs/screen/faq_aperto.jpg", height: 50%),
-      caption: [
-        Schermata FAQ con modifica ed eliminazione.
-      ],
-    ),
+  columns: (1fr, 1fr),
+  gutter: 2mm,
+  figure(
+    image("../imgs/screen/faq.jpg", height: 50%),
+    caption: [
+      Schermata FAQ.
+    ],
+  ),
+  figure(
+    image("../imgs/screen/faq_aperto.jpg", height: 50%),
+    caption: [
+      Schermata FAQ con modifica ed eliminazione.
+    ],
+  ),
 )
 Nella schermata #strong[gestione FAQ] (vedi #emph[Figura 25]) l'utente #strong[admin] può visualizzare la lista delle FAQ inserite. Per ognuna sono visibili le seguenti informazioni:
 - domanda abbreviata;
@@ -626,26 +665,26 @@ Su ogni FAQ è presente una freccia che permette di espandere la visualizzazione
 
 === Operazioni sulle FAQ
 #grid(
-    columns: (1fr, 1fr, 1fr),
-    gutter: 2mm,
-    figure(
-      image("../imgs/screen/faq_nuovo.jpg", height: 50%),
-      caption: [
-        Schermata FAQ con popup aggiunta.
-      ],
-    ),
-    figure(
-      image("../imgs/screen/faq_modifica.jpg", height: 50%),
-      caption: [
-        Schermata FAQ con popup modifica.
-      ],
-    ),
-    figure(
-      image("../imgs/screen/faq_elimina.jpg", height: 50%),
-      caption: [
-        Schermata FAQ con popup eliminazione.
-      ],
-    ),
+  columns: (1fr, 1fr, 1fr),
+  gutter: 2mm,
+  figure(
+    image("../imgs/screen/faq_nuovo.jpg", height: 50%),
+    caption: [
+      Schermata FAQ con popup aggiunta.
+    ],
+  ),
+  figure(
+    image("../imgs/screen/faq_modifica.jpg", height: 50%),
+    caption: [
+      Schermata FAQ con popup modifica.
+    ],
+  ),
+  figure(
+    image("../imgs/screen/faq_elimina.jpg", height: 50%),
+    caption: [
+      Schermata FAQ con popup eliminazione.
+    ],
+  ),
 )
 
 ==== Creazione FAQ
@@ -669,26 +708,26 @@ Per eliminare una FAQ, l'utente #strong[admin] deve cliccare sul tasto "#strong[
 
 == Schermata statistiche
 #grid(
-    columns: (1fr, 1fr, 1fr),
-    gutter: 2mm,
-    figure(
-      image("../imgs/screen/statistiche.jpg", height: 50%),
-      caption: [
-        Schermata statistiche.
-      ],
-    ),
-    figure(
-      image("../imgs/screen/statistiche_data.jpg", height: 50%),
-      caption: [
-        Schermata statistiche selezione data.
-      ],
-    ),
-    figure(
-      image("../imgs/screen/statistiche_filtri.jpg", height: 50%),
-      caption: [
-        Schermata statistiche filtrate.
-      ],
-    ),
+  columns: (1fr, 1fr, 1fr),
+  gutter: 2mm,
+  figure(
+    image("../imgs/screen/statistiche.jpg", height: 50%),
+    caption: [
+      Schermata statistiche.
+    ],
+  ),
+  figure(
+    image("../imgs/screen/statistiche_data.jpg", height: 50%),
+    caption: [
+      Schermata statistiche selezione data.
+    ],
+  ),
+  figure(
+    image("../imgs/screen/statistiche_filtri.jpg", height: 50%),
+    caption: [
+      Schermata statistiche filtrate.
+    ],
+  ),
 )
 
 Nella schermata #strong[statistiche] (vedi #emph[Figura 30]) l'utente #strong[admin] può visualizzare le statistiche di utilizzo del chatbot. Fra le diverse informazioni sono visibili:
@@ -703,20 +742,20 @@ Tutti questi dati possono essere filtrati in base alla data di inizio e di fine 
 
 = Aspetto del sistema
 #grid(
-    columns: (1fr, 1fr),
-    gutter: 2mm,
-    figure(
-      image("../imgs/screen/home_light.jpg", height: 50%),
-      caption: [
-        Schermata home modalità light.
-      ],
-    ),
-    figure(
-      image("../imgs/screen/home_dark.jpg", height: 50%),
-      caption: [
-        Schermata home modalità dark.
-      ],
-    ),
+  columns: (1fr, 1fr),
+  gutter: 2mm,
+  figure(
+    image("../imgs/screen/home_light.jpg", height: 50%),
+    caption: [
+      Schermata home modalità light.
+    ],
+  ),
+  figure(
+    image("../imgs/screen/home_dark.jpg", height: 50%),
+    caption: [
+      Schermata home modalità dark.
+    ],
+  ),
 )
 == Tema chiaro e scuro
 La webapp presenta nelle schermate principali un tasto per la selezione della modalità chiara o scura. L'impostazione viene salvata nel browser dell'utente e non è visibile ad altri utenti. La modifica del tema avviene in tempo reale e non è necessario ricaricare la pagina.
