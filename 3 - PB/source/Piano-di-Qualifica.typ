@@ -20,7 +20,7 @@
   "1.2.0",
   "06/05/2025",
   "Filippo Sabbadin",
-  "Aggiunta grafici PB nel cruscotto di valutazione delle metriche",
+  "Aggiunta grafici PB nel cruscotto di valutazione delle metriche, aggiunti test unità e integrazione",
   "Luca Ribon",
   "1.1.0",
   "06/04/2025",
@@ -490,51 +490,51 @@ Per ogni test viene specificato lo *stato* di completamento, che può essere:
 Nella seguente versione del documento, dedicata all'#gloss[RTB], è prevista la definizione di Test di Sistema e Test di
 Accettazione.
 
-// === Test di Unità
-// I test di unità sono utilizzati per verificare il corretto funzionamento delle singole componenti del software. Vengono
-// scritti dai programmatori e sono eseguiti in modo automatico. Gli strumenti utilizzati per i test di unità sono `pytest` e `vitest`.
+=== Test di Unità
+I test di unità sono utilizzati per verificare il corretto funzionamento delle singole componenti del software. Vengono
+scritti dai programmatori e sono eseguiti in modo automatico. Gli strumenti utilizzati per i test di unità sono `pytest` e `vitest`.
 
-// Esempi applicati al progetto:
+Esempi applicati al progetto:
 
-// #figure(caption: [Esempi di unit test], table(
-//   columns: (auto, auto, auto),
-//   inset: 8pt,
-//   align: (x, y) => if (x == 0 and y > 0 and y < 7) { left } else { center + horizon },
-//   fill: (x, y) => if (y == 0) { luma(230) },
-//   table.header([*Codice*], [*Descrizione*], [*Stato*]),
-//   "TU-001",
-//   "Verifica del parsing delle credenziali durante il login",
-//   "Superato",
-//   "TU-002",
-//   "Test generazione risposta #gloss[LLM] con input validi/invalidi",
-//   "Non implementato",
-//   "TU-003",
-//   "Controllo formati logo supportati (PNG, JPG, SVG)",
-//   "Superato",
-// ))
+#figure(caption: [Esempi di unit test], table(
+  columns: (auto, auto, auto),
+  inset: 8pt,
+  align: (x, y) => if (x == 0 and y > 0 and y < 7) { left } else { center + horizon },
+  fill: (x, y) => if (y == 0) { luma(230) },
+  table.header([*Codice*], [*Descrizione*], [*Stato*]),
+  "TU-001",
+  "Verifica del parsing delle credenziali durante il login",
+  "Superato",
+  "TU-002",
+  "Test generazione risposta LLM con input validi/invalidi",
+  "Superato",
+  "TU-003",
+  "Controllo formati logo supportati (PNG, JPG, SVG)",
+  "Superato",
+))
 
-// === Test di Integrazione
-// I test di integrazione sono utilizzati per validare l’interazione tra moduli e servizi. Vengono scritti dai
-// programmatori e sono eseguiti in modo automatico. Lo strumento utilizzato per i test di integrazione è `Postman`.
+=== Test di Integrazione
+I test di integrazione sono utilizzati per validare l’interazione tra moduli e servizi. Vengono scritti dai
+programmatori e sono eseguiti in modo automatico. Lo strumento utilizzato per i test di integrazione è `Postman`.
 
-// Esempi applicati al progetto:
+Esempi applicati al progetto:
 
-// #figure(caption: [Esempi di test di integrazione], table(
-//   columns: (auto, auto, auto),
-//   inset: 8pt,
-//   align: (x, y) => if (x == 0 and y > 0 and y < 7) { left } else { center + horizon },
-//   fill: (x, y) => if (y == 0) { luma(230) },
-//   table.header([*Codice*], [*Descrizione*], [*Stato*]),
-//   "TI-001",
-//   "Integrazione modulo autenticazione con database utenti",
-//   "Superato",
-//   "TI-002",
-//   "Comunicazione tra #gloss[frontend] e API di generazione risposte LLM",
-//   "Superato",
-//   "TI-003",
-//   "Verifica sincronizzazione impostazioni tema (dark/light mode) su più dispositivi",
-//   "Non Implementato",
-// ))
+#figure(caption: [Esempi di test di integrazione], table(
+  columns: (auto, auto, auto),
+  inset: 8pt,
+  align: (x, y) => if (x == 0 and y > 0 and y < 7) { left } else { center + horizon },
+  fill: (x, y) => if (y == 0) { luma(230) },
+  table.header([*Codice*], [*Descrizione*], [*Stato*]),
+  "TI-001",
+  "Integrazione modulo autenticazione con database utenti",
+  "Superato",
+  "TI-002",
+  "Comunicazione tra frontend e API di generazione risposte LLM",
+  "Superato",
+  "TI-003",
+  "Verifica sincronizzazione impostazioni tema (dark/light mode) su più dispositivi",
+  "Superato",
+))
 
 === Test di Sistema
 I test di sistema sono utilizzati per verificare il comportamento del sistema rispetto ai requisiti funzionali. Vengono
@@ -562,7 +562,7 @@ Esempi applicati al progetto:
     "TS-003",
     "Verificare che il cliente debba cambiare la password al primo accesso",
     "R-03-F-O",
-    "Non implementato",
+    "Non Implementato",
     "TS-004",
     "Verificare che sia cliente che fornitore possano cambiare password",
     "R-04-F-O",
@@ -891,9 +891,11 @@ Requisiti e questo è causato dalla specificità degli argomenti trattati e dal 
 documenti l'indice Gulpease è sopra l'ottimo per la maggior parte degli sprint.
 
 === PB
-//Mettere il grafico
+#figure(image("../imgs/SwePdQGulpeasePB.png", width: 100%), caption: [
+  Stima dei valori dell'indice Gulpease per ogni documento durante i vari sprint.
+])
 Durante la fase PB, l'indice è rimasto abbastanza stabile e non vi sono stati cambiamenti sostanziali per i documenti
-già esistenti. Invece per i documenti nuovi, si può vedere una maggiore instabilità.
+già esistenti. Invece per i documenti nuovi, cioè Specifica Tecnica (ST) e Manuale Utente (MU), si può vedere una maggiore instabilità.
 
 
 == MPC-Non-Calculated-Risk
