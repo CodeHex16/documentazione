@@ -595,7 +595,7 @@ L'oggetto LLMResponseService viene importato tramite il metodo ```python LLMResp
 ====== Attributi
 - ```python +router: APIRouter```: oggetto del modulo fastapi che permette di definire le API route;
 ====== Metodi
-- ```python +generate_chat_response(question: Question, llm: LLMResponseService) -> StreamingResponse```: restituisce la risposta generata, in base al prompt fornito, tramite uno stream di dati; per ottenere la risposta generata viene chiamato il metodo ```python LLMResponseService.generate_llm_response()```;
+- ```python +generate_chat_response(question: Question) -> StreamingResponse```: restituisce la risposta generata, in base al prompt fornito, tramite uno stream di dati; per ottenere la risposta generata viene chiamato il metodo ```python LLMResponseService.generate_llm_response()```;
 - ```python +generate_chat_name(context: Context) -> str```: restituisce il nome della chat generato in base al contesto fornito; per ottenere il nome generato viene chiamato il metodo ```python LLMResponseService.generate_llm_chat_name()```;
 
 ===== FaqRouter
@@ -608,7 +608,7 @@ I metodi della classe FileManager vengono utilizzati tramite l'oggetto restituit
 ====== Attributi
 - ```python +router: APIRouter```: oggetto del modulo fastapi che permette di definire le API route;
 ====== Metodi
-- ```python +create_faq(faq: FAQBase, token: str) -> json```: chiama il metodo ```python FileManager.add_faq()```, il token viene utilizzato per verificare che l'utente che esegue la richiesta sia un admin; restituisce i dati della faq creata e l'esito della richiesta;  
+- ```python +create_faq(faq: FAQBase, token: str) -> json```: chiama il metodo ```python FileManager.add_faq()```, il token viene utilizzato per verificare che l'utente che esegue la richiesta sia un admin; restituisce i dati della faq creata e l'esito della richiesta;
 - ```python +delete_faq(faq: FAQDelete) -> json```: chiama il metodo ```python FileManager.delete_faq()```, il token viene utilizzato per verificare che l'utente che esegue la richiesta sia un admin; restituisce l'esito della richiesta;
 - ```python +update_faq(faq: FAQBase) -> json```: chiama il metodo ```python FileManager.update_faq()```, il token viene utilizzato per verificare che l'utente che esegue la richiesta sia un admin; restituisce i dati della faq aggiornata e l'esito della richiesta;
 
@@ -622,7 +622,7 @@ I metodi della classe FileManager vengono utilizzati tramite l'oggetto restituit
 ====== Attributi
 - ```python +router: APIRouter```: oggetto del modulo fastapi che permette di definire le API route;
 ====== Metodi
-- ```python +upload_file(files: List<UploadFile>, token: str) -> json```: chiama il metodo ```python FileManager.add_document()``` per ogni file contenuto nella lista files, il token viene utilizzato per verificare che l'utente che esegue la richiesta sia un admin; restituisce l'esito della richiesta;
+- ```python +upload_file(files: List[UploadFile], token: str) -> json```: chiama il metodo ```python FileManager.add_document()``` per ogni file contenuto nella lista files, il token viene utilizzato per verificare che l'utente che esegue la richiesta sia un admin; restituisce l'esito della richiesta;
 - ```python +delete_file(fileDelete: DocumentDelete) -> json```: chiama il metodo ```python FileManager.delete_document()```, il token viene utilizzato per verificare che l'utente che esegue la richiesta sia un admin; restituisce l'esito della richiesta;
 
 ===== LLMResponseService
@@ -679,16 +679,57 @@ La classe LLM è un'astrazione che rappresenta un LLM generico. Lo scopo è quel
 // )
 La classe VectorDatabaseService permette di ottenere l'istanza dell'oggetto VectorDatabase adatto ad interagire con il database vettoriale scelto dall'amministratore della piattaforma.
 ====== Metodi
-// TODO: grafico e codice non combaciano
 - ```python +get_vector_database() -> VectorDatabase```: restituisce l'oggetto VectorDatabase adatto basandosi sulla variabile d'ambiente VECTOR_DATABASE_PROVIDER;
 
 ===== VectorDatabase
-La classe VectorDatabase è un'astrazione che rappresenta un database vettoriale generico. Lo scopo è quello di inizializzare l'oggetto VectorDatabase in modo che, le funzionalità di langchain per interagire con i database vettoriali, siano utilizzabili in modo generico, quindi senza dipendere dal database scelto.
-// TODO: da rivedere ci sono un po' di cose da discutere 
+La classe VectorDatabase è un'astrazione che rappresenta un database vettoriale generico. Lo scopo è quello di inizializzare oggetti delle classi concrete, figlie di VectorDatabase, in modo che le funzionalità di langchain per interagire con i database vettoriali siano utilizzabili in modo generico, quindi senza dipendere dal database scelto.
 ====== Attributi
-- ```python -embedding: EmbeddingProvider```: oggetto della classe EmbeddingProvider che permette di accedere diverse funzioni di embedding in base all'embedding provider scelto; l'attributo viene inizializzato tramite il metodo ```python EmbeddingService.get_embedding_provider()```;
+- ```python -embedding: EmbeddingProvider```: oggetto della classe EmbeddingProvider che permette di accedere diverse funzioni di embedding in base all'embedding provider scelto; l'attributo viene inizializzato tramite il metodo ```python EmbeddingService.get_embedding_provider()``` (*Dependency Injection*);
 - ```python -persist_directory: str```: percorso della directory in cui sono memorizzati i dati vettorializzati; viene inizializzata tramite la variabile d'ambiente VECTOR_DB_DIRECTORY;
 ====== Metodi
+- ```python +__init__()```: costruttore della classe, inizializza gli oggetti embedding e persist_directory;
+- ```python -get_db()```: restituisce l'istanza del database vettoriale contenuta nell'oggetto VectorDatabase;
+- ```python +add_documents(documents: List<Document>)```: aggiunge i documenti passati al database vettoriale;
+- ```python +delete_document(document_path: str)```: elimina il documento, che si trova al percorso passato, dal database vettoriale;
+- ```python +delete_all_documents()```: elimina tutti i documenti dal database vettoriale;
+- ```python +get_all_documents() -> List[Document]```: restituisce tutti i documenti presenti nel database vettoriale;
+- ```python +search_context(query: str, results_number: int = 4) -> List[Document]```: restituisce il contesto in base alla domanda fornita;
+- ```python +is_empty() -> bool```: restituisce True se il database vettoriale è vuoto, False altrimenti;
+- ```python +count() -> int```: restituisce il numero di documenti presenti nel database vettoriale;
+
+===== ChromaDB
+// #figure(
+// image("../imgs/ChromaDB.png", width: 90%),
+// caption: "Diagramma delle classi di ChromaDB",
+// )
+La classe ChromaDB è un'implementazione concreta della classe VectorDatabase che permette di utilizzare ChromaDB come database vettoriale.
+====== Attributi
+- ```python -db: Chroma```: oggetto della classe ```python langchain_chroma.Chroma``` che permette di interagire con il database vettoriale ChromaDB;
+====== Metodi
+- ```python +__init__(persist_directory: str = settings.VECTOR_DB_DIRECTORY)```: // TODO
+
+
+
+
+===== FileManagerService
+// #figure(
+//   image("../imgs/FileManagerService.png", width: 90%),
+//   caption: "Diagramma delle classi di FileManagerService",
+// )
+La classe FileManagerService permette di ottenere l'istanza dell'oggetto FileManager adatto ad interagire con il file manager scelto dall'amministratore della piattaforma.
+====== Metodi
+- ```python +get_file_manager(file: UploadFile) -> FileManager```: restituisce l'oggetto FileManager adatto basandosi sul tipo di file passato come parametro; se non esiste un file manager per il tipo di file passato, viene sollevata un'eccezione; Se invece non viene passato un file, viene restituito lo StringManager.
+- ```python +get_file_manager_by_extension(file_extension: str) -> FileManager```: restituisce l'oggetto FileManager adatto basandosi sull'estensione del file passato come parametro; se non esiste un file manager per l'estensione passata, viene sollevata un'eccezione.
+
+===== FileManager
+// #figure(
+//   image("../imgs/FileManager.png", width: 90%),
+//   caption: "Diagramma delle classi di FileManager",
+// )
+La classe FileManager è un'astrazione che rappresenta un file manager generico. Lo scopo è quello di inizializzare oggetti delle classi concrete, figlie di FileManager, in modo che le funzionalità di langchain per interagire con i file siano utilizzabili in modo generico, quindi senza dipendere dal tipo di file scelto.
+====== Attributi
+- ```python -vector_database: VectorDatabase```: oggetto VectorDatabase che permette di interagire con il database vettoriale; l'oggetto viene istanziato al momento della costruzione del FileManager e viene ottenuto tramite il metodo ```python VectorDatabaseService.get_vector_database()``` (*Dependency Injection*);
+
 
 // TODO: descrizione delle classi
 
