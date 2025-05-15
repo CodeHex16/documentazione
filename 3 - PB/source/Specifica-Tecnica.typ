@@ -1,44 +1,7 @@
 #import "../../template/documenti.typ": *
 #import "../../template/i-figured.typ"
 
-#show: doc => documento(
-  titolo: "Specifica Tecnica",
-  data: [21/03/2025],
-  ruoli: (
-    "Matteo Bazzan",
-    "Redattore",
-    "Luca Ribon",
-    "Redattore, Verificatore",
-    "Filippo Sabbadin",
-    "Redattore",
-    "Luca Rossi",
-    "Redattore",
-  ),
-  sommario: [Specifica tecnica],
-  versioni: (
-    "0.4.0",
-    "05/05/2025",
-    "Matteo Bazzan",
-    "Grafici e parti mancanti",
-    "",
-    "0.3.0",
-    "20/04/2025",
-    "Luca Ribon",
-    "Architettura",
-    "",
-    "0.2.0",
-    "10/04/2025",
-    "Filippo Sabbadin",
-    "Stesura sezioni iniziali",
-    "Luca Ribon",
-    "0.1.0",
-    "21/03/2025",
-    "Luca Rossi",
-    "Bozza iniziale struttura",
-    "Luca Ribon",
-  ),
-  doc,
-)
+#show: doc => documento(titolo: "Specifica Tecnica", data: [21/03/2025], ruoli: ("Matteo Bazzan", "Redattore", "Luca Ribon", "Redattore, Verificatore", "Filippo Sabbadin", "Redattore", "Luca Rossi", "Redattore"), sommario: [Specifica tecnica], versioni: ("0.4.0", "05/05/2025", "Matteo Bazzan", "Grafici e parti mancanti", "", "0.3.0", "20/04/2025", "Luca Ribon", "Architettura", "", "0.2.0", "10/04/2025", "Filippo Sabbadin", "Stesura sezioni iniziali", "Luca Ribon", "0.1.0", "21/03/2025", "Luca Rossi", "Bozza iniziale struttura", "Luca Ribon"), doc)
 // spaciugo per aggiungere l'indice delle immagini
 #set page(numbering: "I")
 #counter(page).update(3)
@@ -54,32 +17,21 @@
 = Introduzione
 
 == Scopo del prodotto
-Il progetto consiste nella realizzazione di un *#gloss[chatbot]* basato su modelli linguistici (*#gloss[LLM]*) pensato
-per i *fornitori* di beni, come bevande o alimenti, da offrire ai propri clienti. Questo sistema consente ai clienti di
-ottenere in modo semplice e immediato informazioni dettagliate sui prodotti o servizi disponibili, senza la necessità di
-contattare direttamente un operatore dell'azienda.
+Il progetto consiste nella realizzazione di un *#gloss[chatbot]* basato su modelli linguistici (*#gloss[LLM]*) pensato per i *fornitori* di beni, come bevande o alimenti, da offrire ai propri clienti. Questo sistema consente ai clienti di ottenere in modo semplice e immediato informazioni dettagliate sui prodotti o servizi disponibili, senza la necessità di contattare direttamente un operatore dell'azienda.
 
 Il chatbot si integra con un'interfaccia dedicata al #gloss[fornitore], che permette di:
 
-- Gestire clienti, faq e documenti contenenti le informazioni di riferimento utilizzate dal modello linguistico per
-  generare risposte accurate e personalizzate.
-- Personalizzare graficamente la piattaforma tramite l'inserimento del logo aziendale e la selezione di una palette
-  colori.
+- Gestire clienti, faq e documenti contenenti le informazioni di riferimento utilizzate dal modello linguistico per generare risposte accurate e personalizzate.
+- Personalizzare graficamente la piattaforma tramite l'inserimento del logo aziendale e la selezione di una palette colori.
 
-Per garantire la massima compatibilità e facilità d'uso, il chatbot è accessibile tramite un'#gloss[interfaccia web], che può
-essere utilizzata su qualsiasi dispositivo su cui è installato un browser. I linguaggi principali usati nella #gloss[webapp] sono #gloss[HTML], #gloss[CSS], #gloss[JavaScript], TypeScript e
+Per garantire la massima compatibilità e facilità d'uso, il chatbot è accessibile tramite un'#gloss[interfaccia web], che può essere utilizzata su qualsiasi dispositivo su cui è installato un browser. I linguaggi principali usati nella #gloss[webapp] sono #gloss[HTML], #gloss[CSS], #gloss[JavaScript], TypeScript e
 #gloss[Python], linguaggi ampiamente supportati da molti dispositivi.
 
 == Scopo del documento
-Lo scopo del documento è fornire una panoramica dettagliata delle scelte progettuali e tecniche adottate per lo sviluppo
-del sistema. Qui verranno forniti i diagrammi UML delle classi e le scelte architetturali, oltre a una descrizione delle
-tecnologie utilizzate e delle #gloss[API] implementate.// Indicare come si colloca nel contesto del progetto.
+Lo scopo del documento è fornire una panoramica dettagliata delle scelte progettuali e tecniche adottate per lo sviluppo del sistema. Qui verranno forniti i diagrammi UML delle classi e le scelte architetturali, oltre a una descrizione delle tecnologie utilizzate e delle #gloss[API] implementate.// Indicare come si colloca nel contesto del progetto.
 
 == Glossario
-Per facilitare la comprensione di questo documento, viene fornito un glossario che chiarisce il significato dei termini
-specifici utilizzati nel contesto del progetto. Ogni termine di glossario è contrassegnato con un asterisco "\*" in
-apice e collegato direttamente alla pagina web del glossario, permettendo così di accedere immediatamente alla
-definizione completa del termine. Le definizioni sono disponibili nel documento: #link("https://github.com/CodeHex16/documentazione/tree/main/glossario/glossario.pdf")[Glossario.pdf];\
+Per facilitare la comprensione di questo documento, viene fornito un glossario che chiarisce il significato dei termini specifici utilizzati nel contesto del progetto. Ogni termine di glossario è contrassegnato con un asterisco "\*" in apice e collegato direttamente alla pagina web del glossario, permettendo così di accedere immediatamente alla definizione completa del termine. Le definizioni sono disponibili nel documento: #link("https://github.com/CodeHex16/documentazione/tree/main/glossario/glossario.pdf")[Glossario.pdf];\
 e nella seguente pagina web: #link("https://codehex16.github.io/glossario").
 
 == Riferimenti
@@ -99,17 +51,15 @@ e nella seguente pagina web: #link("https://codehex16.github.io/glossario").
 - Diagrammi delle classi (UML):\ #link("https://www.math.unipd.it/~rcardin/swea/2023/Diagrammi%20delle%20Classi.pdf");\
 
 - Slide sui pattern architetturali del prof. Cardin:\
-  - introduzione ai pattern:\ #link("https://www.math.unipd.it/~rcardin/swea/2022/Software%20Architecture%20Patterns.pdf");
-  - pattern creazionali:\ #link("https://www.math.unipd.it/~rcardin/swea/2022/Design%20Pattern%20Creazionali.pdf")
-  - pattern strutturali:\ #link("https://www.math.unipd.it/~rcardin/swea/2022/Design%20Pattern%20Strutturali.pdf")\
-  - pattern comportamentali:\ #link("https://drive.google.com/file/d/1cpi6rORMxFtC91nI6_sPrG1Xn-28z8eI/view?usp=sharing")\
-  - pattern Model View Controller:\ #link("https://www.math.unipd.it/~rcardin/sweb/2022/L02.pdf")\
+    - introduzione ai pattern:\ #link("https://www.math.unipd.it/~rcardin/swea/2022/Software%20Architecture%20Patterns.pdf");
+    - pattern creazionali:\ #link("https://www.math.unipd.it/~rcardin/swea/2022/Design%20Pattern%20Creazionali.pdf")
+    - pattern strutturali:\ #link("https://www.math.unipd.it/~rcardin/swea/2022/Design%20Pattern%20Strutturali.pdf")\
+    - pattern comportamentali:\ #link("https://drive.google.com/file/d/1cpi6rORMxFtC91nI6_sPrG1Xn-28z8eI/view?usp=sharing")\
+    - pattern Model View Controller:\ #link("https://www.math.unipd.it/~rcardin/sweb/2022/L02.pdf")\
 
 = Tecnologie
 
-In questa sezione vengono descritte le tecnologie utilizzate per lo sviluppo del sistema, suddivise in base alla loro
-funzione e al loro ambito di applicazione. Ogni tecnologia è accompagnata da una breve descrizione e dalle motivazioni
-che hanno portato alla sua scelta.
+In questa sezione vengono descritte le tecnologie utilizzate per lo sviluppo del sistema, suddivise in base alla loro funzione e al loro ambito di applicazione. Ogni tecnologia è accompagnata da una breve descrizione e dalle motivazioni che hanno portato alla sua scelta.
 
 == Tecnologie per la codifica
 //Versioni prese dalle repo github delle tecnologie
@@ -117,212 +67,108 @@ che hanno portato alla sua scelta.
 === Linguaggi
 #show figure: set block(breakable: true)
 #figure(
-  caption: "Linguaggi utilizzati",
-  table(
-    columns: (auto, 1fr, auto),
-    inset: 8pt,
-    align: (x, y) => if (y > 0) { left } else { center + horizon },
-    fill: (x, y) => if y == 0 { luma(190) } else if (y == 2 or y == 4) { luma(230) },
-    table.header([*Linguaggio*], [*Motivazione*], [*Versione*]),
-    "HTML",
-    "Utilizzato per la creazione della struttura e del contenuto delle pagine web. È il linguaggio di markup standard per la creazione di pagine web.",
-    "5",
-
-    "CSS",
-    "Utilizzato per la formattazione e lo stile delle pagine web. Permette di separare il contenuto dalla presentazione, migliorando la manutenibilità del codice.",
-    "3",
-
-    "JavaScript",
-    "Utilizzato per la creazione di interazioni dinamiche e reattive nelle pagine web.",
-    "ECMAScript 2024",
-
-    "Python",
-    "Scelto per la sua versatilità e facilità d'uso, è il linguaggio principale per lo sviluppo del back-end. Inoltre supporta e integra esaustivamente tutti i componenti esterni come gli LLM e i database vettoriali e non; inoltre la documentazione relativa a queste integrazioni è ampia e ben strutturata.",
-    "3.12",
-
-    "TypeScript",
-    "Scelto per la sua tipizzazione statica, migliora la qualità del codice e facilita la manutenzione. È utilizzato in combinazione con Svelte per lo sviluppo del front-end.",
-    "5.8.3",
-  ),
+    caption: "Linguaggi utilizzati",
+    table(
+        columns: (auto, 1fr, auto),
+        inset: 8pt,
+        align: (x, y) => if (y > 0) { left } else { center + horizon },
+        fill: (x, y) => if y == 0 { luma(190) } else if (y == 2 or y == 4) { luma(230) },
+        table.header([*Linguaggio*], [*Motivazione*], [*Versione*]),
+        "HTML", "Utilizzato per la creazione della struttura e del contenuto delle pagine web. È il linguaggio di markup standard per la creazione di pagine web.", "5",
+        "CSS", "Utilizzato per la formattazione e lo stile delle pagine web. Permette di separare il contenuto dalla presentazione, migliorando la manutenibilità del codice.", "3",
+        "JavaScript", "Utilizzato per la creazione di interazioni dinamiche e reattive nelle pagine web.", "ECMAScript 2024",
+        "Python", "Scelto per la sua versatilità e facilità d'uso, è il linguaggio principale per lo sviluppo del back-end. Inoltre supporta e integra esaustivamente tutti i componenti esterni come gli LLM e i database vettoriali e non; inoltre la documentazione relativa a queste integrazioni è ampia e ben strutturata.", "3.12",
+        "TypeScript", "Scelto per la sua tipizzazione statica, migliora la qualità del codice e facilita la manutenzione. È utilizzato in combinazione con Svelte per lo sviluppo del front-end.", "5.8.3",
+    ),
 )
 === Framework
 #figure(
-  caption: "Framework utilizzati",
-  table(
-    columns: (auto, 1fr, auto),
-    inset: 8pt,
-    align: (x, y) => if (y > 0) { left } else { center + horizon },
-    fill: (x, y) => if y == 0 { luma(190) } else if (y == 2 or y == 4) { luma(230) },
-    table.header([*Nome*], [*Motivazione*], [*Versione*]),
-    "Svelte",
-    "Scelto per la sua semplicità e leggerezza, è il framework utilizzato per il rendering delle pagine del front-end. Permette di creare UI e UX gradevoli con una struttura e semantica del codice che il gruppo ha preferito rispetto ad altri framework.",
-    "5.25.10",
-
-    "SvelteKit",
-    "Scelto per la sua integrazione con Svelte, è un framework per lo sviluppo di applicazioni web. Permette di gestire implementare funzioni come ottimizzazione delle build, routing in modo semplice.",
-    "",
-
-    "FastAPI",
-    "Framework scelto per la sua facilità nell'implementazione di API REST. È utilizzato per il back-end per far comunicare tra loro i componenti software.",
-    "0.115.12",
-  ),
+    caption: "Framework utilizzati",
+    table(
+        columns: (auto, 1fr, auto),
+        inset: 8pt,
+        align: (x, y) => if (y > 0) { left } else { center + horizon },
+        fill: (x, y) => if y == 0 { luma(190) } else if (y == 2 or y == 4) { luma(230) },
+        table.header([*Nome*], [*Motivazione*], [*Versione*]),
+        "Svelte", "Scelto per la sua semplicità e leggerezza, è il framework utilizzato per il rendering delle pagine del front-end. Permette di creare UI e UX gradevoli con una struttura e semantica del codice che il gruppo ha preferito rispetto ad altri framework.", "5.25.10",
+        "SvelteKit", "Scelto per la sua integrazione con Svelte, è un framework per lo sviluppo di applicazioni web. Permette di gestire implementare funzioni come ottimizzazione delle build, routing in modo semplice.", "",
+        "FastAPI", "Framework scelto per la sua facilità nell'implementazione di API REST. È utilizzato per il back-end per far comunicare tra loro i componenti software.", "0.115.12",
+    ),
 )
 === Librerie
 #pseudoheading("Python")
 #figure(
-  caption: "Librerie utilizzate",
-  table(
-    columns: (auto, 1fr, auto),
-    inset: 8pt,
-    align: (x, y) => if (y > 0) { left } else { center + horizon },
-    fill: (x, y) => if y == 0 { luma(190) } else if (y == 2 or y == 4) { luma(230) },
-    table.header([*Nome*], [*Motivazione*], [*Versione*]),
-    "langchain",
-    "Libreria scelta per l'integrazione tra modelli AI e database, permette di gestire documenti, contesto e query rivolte all'LLM integrato.",
-    "0.3.25",
-
-    "passlib",
-    "Libreria che implementa diversi algoritmi di hashing che sono stati utilizzati per la gestione delle password.",
-    "1.7.4",
-
-    "pydantic_core",
-    "Libreria utile per la modellazione di schemi utilizzati nella trasferimento di dati tramite chiamate API.",
-    "2.33.2",
-
-    "bcrypt",
-    "Libreria per l'hashing delle password, specificamente implementa l'algoritmo bcrypt, noto per la sua robustezza.",
-    "4.3.0",
-
-    "motor",
-    "Driver asincrono per MongoDB, permette di interagire con il database in modo non bloccante, ideale per applicazioni web moderne (es. con FastAPI).",
-    "3.7.0",
-
-    "python-jose",
-    "Libreria per la gestione di token JWT (JSON Web Tokens) e altre specifiche JOSE (Javascript Object Signing and Encryption), utile per l'autenticazione e la trasmissione sicura di informazioni.",
-    "3.4.0",
-
-    "requests",
-    "Libreria HTTP per Python, utilizzata per inviare richieste HTTP/1.1 di tutti i tipi (GET, POST, PUT, ecc.).",
-    "2.32.3",
-
-    "pymongo", "Libreria utilizzata per la manipolazione del database MongoDB.", "4.12.1",
-    "uvicorn",
-    "Server ASGI (Asynchronous Server Gateway Interface) ad alte prestazioni, comunemente utilizzato per eseguire applicazioni web asincrone Python come quelle basate su FastAPI o Starlette.",
-    "0.34.2",
-
-    "jwt",
-    "Libreria per la codifica e decodifica di JSON Web Tokens (JWT), utilizzata per l'autenticazione e lo scambio sicuro di informazioni.",
-    "1.3.1",
-
-    "fastapi-mail",
-    "Estensione per FastAPI che facilita l'invio di email, supportando l'invio asincrono e la gestione di template.",
-    "1.4.2",
-
-    "pytz", "Libreria per la gestione accurata dei fusi orari in Python, basata sul database Olson tz.", "2025.2",
-    "starlette",
-    "Framework ASGI (Asynchronous Server Gateway Interface) leggero e toolkit, su cui sono costruiti framework più completi come FastAPI. Fornisce le basi per costruire servizi web asincroni.",
-    "0.46.2",
-
-    "openai", "Libreria client ufficiale di OpenAI per interagire con le loro API", "1.77.0",
-    "chromadb",
-    "Database vettoriale open-source progettato per applicazioni AI, facilita la memorizzazione, l'interrogazione e la gestione di embedding per funzionalità come la ricerca semantica.",
-    "0.6.3",
-
-    "bson",
-    "Libreria per la codifica e decodifica di BSON (Binary JSON), il formato di serializzazione dei dati utilizzato da MongoDB.",
-    "0.5.10",
-
-    "pypdf",
-    "Libreria Python pura per la manipolazione di file PDF: permette di dividere, unire, ritagliare, crittografare, decrittografare pagine PDF e estrarre testo.",
-    "5.4.0",
-
-    "python-multipart",
-    "Libreria per il parsing di dati multipart/form-data, comunemente usata nei web framework per gestire upload di file e dati di form complessi.",
-    "0.0.20",
-
-    "fastapi",
-    "Core framework per la creazione di API RESTful, scelto per la sua velocità e semplicità d'uso.",
-    "0.115.12",
-
-    "pydantic",
-    "Libreria per la validazione dei dati e la gestione delle impostazioni, utilizzata da FastAPI.",
-    "2.11.4",
-
-    "langchain-openai", "Integrazione specifica di LangChain per utilizzare i modelli forniti da OpenAI.", "0.3.16",
-    "langchain_chroma",
-    "Integrazione specifica di LangChain per l'interazione con il database vettoriale ChromaDB.",
-    "0.2.3",
-
-    "langchain_community", "Collezione di integrazioni e componenti della comunità per LangChain.", "0.3.23",
-    "httpx",
-    "Client HTTP asincrono per Python, utilizzato per effettuare richieste HTTP in modo non bloccante.",
-    "0.28.1",
-
-    "tailwindcss",
-    "Un framework CSS utility-first per costruire rapidamente interfacce utente personalizzate direttamente nel markup HTML.",
-    "3.4.9",
-
-    "vite",
-    "Uno strumento di build per il frontend moderno che offre un'esperienza di sviluppo estremamente veloce e bundle ottimizzati per la produzione.",
-    "6.0.0",
-
-    "lucide-svelte", "Libreria di icone SVG (basate su Lucide) per componenti Svelte.", "0.468.0",
-    "marked", "Un parser Markdown per convertire Markdown in HTML.", "15.0.7",
-    "mode-watcher",
-    "Utility per Svelte per rilevare e reagire ai cambiamenti della preferenza di tema del sistema operativo (chiaro/scuro) o per gestirla manualmente.",
-    "0.5.0",
-  ),
+    caption: "Librerie utilizzate",
+    table(
+        columns: (auto, 1fr, auto),
+        inset: 8pt,
+        align: (x, y) => if (y > 0) { left } else { center + horizon },
+        fill: (x, y) => if y == 0 { luma(190) } else if (y == 2 or y == 4) { luma(230) },
+        table.header([*Nome*], [*Motivazione*], [*Versione*]),
+        "langchain", "Libreria scelta per l'integrazione tra modelli AI e database, permette di gestire documenti, contesto e query rivolte all'LLM integrato.", "0.3.25",
+        "passlib", "Libreria che implementa diversi algoritmi di hashing che sono stati utilizzati per la gestione delle password.", "1.7.4",
+        "pydantic_core", "Libreria utile per la modellazione di schemi utilizzati nella trasferimento di dati tramite chiamate API.", "2.33.2",
+        "bcrypt", "Libreria per l'hashing delle password, specificamente implementa l'algoritmo bcrypt, noto per la sua robustezza.", "4.3.0",
+        "motor", "Driver asincrono per MongoDB, permette di interagire con il database in modo non bloccante, ideale per applicazioni web moderne (es. con FastAPI).", "3.7.0",
+        "python-jose", "Libreria per la gestione di token JWT (JSON Web Tokens) e altre specifiche JOSE (Javascript Object Signing and Encryption), utile per l'autenticazione e la trasmissione sicura di informazioni.", "3.4.0",
+        "requests", "Libreria HTTP per Python, utilizzata per inviare richieste HTTP/1.1 di tutti i tipi (GET, POST, PUT, ecc.).", "2.32.3",
+        "pymongo", "Libreria utilizzata per la manipolazione del database MongoDB.", "4.12.1",
+        "uvicorn", "Server ASGI (Asynchronous Server Gateway Interface) ad alte prestazioni, comunemente utilizzato per eseguire applicazioni web asincrone Python come quelle basate su FastAPI o Starlette.", "0.34.2",
+        "jwt", "Libreria per la codifica e decodifica di JSON Web Tokens (JWT), utilizzata per l'autenticazione e lo scambio sicuro di informazioni.", "1.3.1",
+        "fastapi-mail", "Estensione per FastAPI che facilita l'invio di email, supportando l'invio asincrono e la gestione di template.", "1.4.2",
+        "pytz", "Libreria per la gestione accurata dei fusi orari in Python, basata sul database Olson tz.", "2025.2",
+        "starlette", "Framework ASGI (Asynchronous Server Gateway Interface) leggero e toolkit, su cui sono costruiti framework più completi come FastAPI. Fornisce le basi per costruire servizi web asincroni.", "0.46.2",
+        "openai", "Libreria client ufficiale di OpenAI per interagire con le loro API", "1.77.0",
+        "chromadb", "Database vettoriale open-source progettato per applicazioni AI, facilita la memorizzazione, l'interrogazione e la gestione di embedding per funzionalità come la ricerca semantica.", "0.6.3",
+        "bson", "Libreria per la codifica e decodifica di BSON (Binary JSON), il formato di serializzazione dei dati utilizzato da MongoDB.", "0.5.10",
+        "pypdf", "Libreria Python pura per la manipolazione di file PDF: permette di dividere, unire, ritagliare, crittografare, decrittografare pagine PDF e estrarre testo.", "5.4.0",
+        "python-multipart", "Libreria per il parsing di dati multipart/form-data, comunemente usata nei web framework per gestire upload di file e dati di form complessi.", "0.0.20",
+        "fastapi", "Core framework per la creazione di API RESTful, scelto per la sua velocità e semplicità d'uso.", "0.115.12",
+        "pydantic", "Libreria per la validazione dei dati e la gestione delle impostazioni, utilizzata da FastAPI.", "2.11.4",
+        "langchain-openai", "Integrazione specifica di LangChain per utilizzare i modelli forniti da OpenAI.", "0.3.16",
+        "langchain_chroma", "Integrazione specifica di LangChain per l'interazione con il database vettoriale ChromaDB.", "0.2.3",
+        "langchain_community", "Collezione di integrazioni e componenti della comunità per LangChain.", "0.3.23",
+        "httpx", "Client HTTP asincrono per Python, utilizzato per effettuare richieste HTTP in modo non bloccante.", "0.28.1",
+        "tailwindcss", "Un framework CSS utility-first per costruire rapidamente interfacce utente personalizzate direttamente nel markup HTML.", "3.4.9",
+        "vite", "Uno strumento di build per il frontend moderno che offre un'esperienza di sviluppo estremamente veloce e bundle ottimizzati per la produzione.", "6.0.0",
+        "lucide-svelte", "Libreria di icone SVG (basate su Lucide) per componenti Svelte.", "0.468.0",
+        "marked", "Un parser Markdown per convertire Markdown in HTML.", "15.0.7",
+        "mode-watcher", "Utility per Svelte per rilevare e reagire ai cambiamenti della preferenza di tema del sistema operativo (chiaro/scuro) o per gestirla manualmente.", "0.5.0",
+    ),
 )
 
 === Strumenti e servizi
 #figure(
-  caption: "Strumenti e servizi utilizzati",
-  table(
-    columns: (0.3fr, 1fr, 0.4fr),
-    inset: 8pt,
-    align: (x, y) => if (y > 0) { left } else { center + horizon },
-    fill: (x, y) => if y == 0 { luma(190) } else if (y == 2 or y == 4) { luma(230) },
-    table.header([*Strumento*], [*Motivazione*], [*Versione*]),
-    "Git",
-    "Utilizzato per il versionamento del codice sorgente, permette di tenere traccia delle modifiche e collaborare con altri membri del team",
-    "2.49.0",
-
-    "GPT-4o mini", "Il modello utilizzato per il chatbot, scelto in base al prezzo e qualità delle risposte", "-",
-    "Docker",
-    "Utilizzato per suddividere ed eseguire in container l'applicazione, rendendola facilmente distribuibile e scalabile in diversi ambienti",
-    "28.1.1",
-
-    "MongoDB",
-    "Database NoSQL utilizzato per memorizzare documenti, cronologia delle conversazioni e utenti. Scelto perché rende più facile e diretto memorizzare i file come formato json",
-    "8.0",
-
-    "ChromaDB",
-    "Database vettoriale per memorizzare e recuperare embedding dei documenti, consentendo ricerche semantiche rapide per fornire risposte contestuali. Scelto per la sua velocità e facilità d'uso, è in grado di gestire grandi volumi di dati e query complesse.",
-    "1.0.4",
-  ),
+    caption: "Strumenti e servizi utilizzati",
+    table(
+        columns: (0.3fr, 1fr, 0.4fr),
+        inset: 8pt,
+        align: (x, y) => if (y > 0) { left } else { center + horizon },
+        fill: (x, y) => if y == 0 { luma(190) } else if (y == 2 or y == 4) { luma(230) },
+        table.header([*Strumento*], [*Motivazione*], [*Versione*]),
+        "Git", "Utilizzato per il versionamento del codice sorgente, permette di tenere traccia delle modifiche e collaborare con altri membri del team", "2.49.0",
+        "GPT-4o mini", "Il modello utilizzato per il chatbot, scelto in base al prezzo e qualità delle risposte", "-",
+        "Docker", "Utilizzato per suddividere ed eseguire in container l'applicazione, rendendola facilmente distribuibile e scalabile in diversi ambienti", "28.1.1",
+        "MongoDB", "Database NoSQL utilizzato per memorizzare documenti, cronologia delle conversazioni e utenti. Scelto perché rende più facile e diretto memorizzare i file come formato json", "8.0",
+        "ChromaDB", "Database vettoriale per memorizzare e recuperare embedding dei documenti, consentendo ricerche semantiche rapide per fornire risposte contestuali. Scelto per la sua velocità e facilità d'uso, è in grado di gestire grandi volumi di dati e query complesse.", "1.0.4",
+    ),
 )
 
 == Tecnologie per i test
 #figure(
-  caption: "Tecnologie per il testing utilizzate",
-  table(
-    columns: (0.3fr, 1fr, 0.4fr),
-    inset: 8pt,
-    align: (x, y) => if (y > 0) { left } else { center + horizon },
-    fill: (x, y) => if y == 0 { luma(190) } else if (y == 2 or y == 4) { luma(230) },
-    table.header([*Tecnologia*], [*Motivazione*], [*Versione*]),
-    "Github Actions",
-    "Utilizzato per l'integrazione continua e il testing automatico del codice. Permette di eseguire test e controlli di qualità ogni volta che viene effettuata una modifica al codice sorgente o prima di un merge con un altro branch",
-    "-",
-
-    "Pytest",
-    "Utilizzato per il testing del codice Python, permette di scrivere test in modo semplice e intuitivo. È stato scelto per la sua facilità d'uso e per la sua integrazione con FastAPI",
-    "8.3.5",
-  ),
+    caption: "Tecnologie per il testing utilizzate",
+    table(
+        columns: (0.3fr, 1fr, 0.4fr),
+        inset: 8pt,
+        align: (x, y) => if (y > 0) { left } else { center + horizon },
+        fill: (x, y) => if y == 0 { luma(190) } else if (y == 2 or y == 4) { luma(230) },
+        table.header([*Tecnologia*], [*Motivazione*], [*Versione*]),
+        "Github Actions", "Utilizzato per l'integrazione continua e il testing automatico del codice. Permette di eseguire test e controlli di qualità ogni volta che viene effettuata una modifica al codice sorgente o prima di un merge con un altro branch", "-",
+        "Pytest", "Utilizzato per il testing del codice Python, permette di scrivere test in modo semplice e intuitivo. È stato scelto per la sua facilità d'uso e per la sua integrazione con FastAPI", "8.3.5",
+    ),
 )
 // ......
 // Indicare strumenti e librerie impiegati per le attività di testing e analisi del codice.
-
 
 = Architettura
 
@@ -337,24 +183,21 @@ I motivi che ci hanno portato a scegliere questa architettura sono:
 
 == Flusso del sistema
 // TODO: il giro che fanno i dati tra front llm e back
-#figure(
-  image("../imgs/flusso-dati.png", width: 85%),
-  caption: "Flusso del sistema",
-)
+#figure(image("../imgs/flusso-dati.png", width: 85%), caption: "Flusso del sistema")
 
 - *Invio contesto*: tramite il client Suppl-AI l'utente può inviare documenti e FAQ al chatbot che verranno memorizzati nel database vettoriale.
 
 - *Interazione con il chatbot*:
-  - *Richiesta generazione risposta*: l'utente invia una domanda al chatbot tramite il client _Suppl-AI_; la domanda viene inviata, insieme allo storico della chat ad _LLM-API_.
-  - *Generazione prompt*: _LLM-API_ recupera il contesto da _ChromaDB_ tramite la domanda e lo storico della chat, e genera un prompt per l'LLM. Il prompt contiene la domanda dell'utente, lo storico della chat e il contesto recuperato.
-  - *Generazione risposta*: _LLM-API_ si interfaccia con le API di _OpenAI_ per generare una risposta in base al prompt costruito. La risposta generata viene poi restituita al client _Suppl-AI_.
+    - *Richiesta generazione risposta*: l'utente invia una domanda al chatbot tramite il client _Suppl-AI_; la domanda viene inviata, insieme allo storico della chat ad _LLM-API_.
+    - *Generazione prompt*: _LLM-API_ recupera il contesto da _ChromaDB_ tramite la domanda e lo storico della chat, e genera un prompt per l'LLM. Il prompt contiene la domanda dell'utente, lo storico della chat e il contesto recuperato.
+    - *Generazione risposta*: _LLM-API_ si interfaccia con le API di _OpenAI_ per generare una risposta in base al prompt costruito. La risposta generata viene poi restituita al client _Suppl-AI_.
 
 - *Interazione con il database*:
-  - *Autenticazione*: il client può inviare le credenziali di accesso a _Database-API_ per autenticarsi. _Database-API_ verifica le credenziali e restituisce un token JWT al client, che viene utilizzato per autenticare le richieste successive.
-  - *Invio dei dati*: tramite il client, l'utente può inviare chat, documenti, FAQ e utenti al _Database-API_.
-  - *Salvataggio dei dati*: _Database-API_ riceve i dati e li manipola per salvarli correttamente nel database _MongoDB_.
-  - *Richiesta dei dati*: il client può richiedere chat, documenti, FAQ e utenti al _Database-API_.
-  - *Recupero dei dati*: _Database-API_ riceve la richiesta e recupera i dati dal database _MongoDB_ per poi restituirli al client.
+    - *Autenticazione*: il client può inviare le credenziali di accesso a _Database-API_ per autenticarsi. _Database-API_ verifica le credenziali e restituisce un token JWT al client, che viene utilizzato per autenticare le richieste successive.
+    - *Invio dei dati*: tramite il client, l'utente può inviare chat, documenti, FAQ e utenti al _Database-API_.
+    - *Salvataggio dei dati*: _Database-API_ riceve i dati e li manipola per salvarli correttamente nel database _MongoDB_.
+    - *Richiesta dei dati*: il client può richiedere chat, documenti, FAQ e utenti al _Database-API_.
+    - *Recupero dei dati*: _Database-API_ riceve la richiesta e recupera i dati dal database _MongoDB_ per poi restituirli al client.
 
 == Architettura Frontend
 
@@ -367,22 +210,18 @@ SvelteKit è un #gloss[framework] frontend che integra Svelte e consente di crea
 Ogni pagina della webapp è composta da un file Svelte `+page.svelte`, e da un file TypeScript `+page.server.ts`.
 
 ===== File Svelte
-I file `+page.svelte` contengono il codice HTML, CSS e TS, utilizzato per la gestione del layout della pagina.
-In aggiunta alla sintassi HTML, Svelte include funzionalità aggiuntive come l'uso dei costrutti `{#if}`, `{#each}` e `{#await}` per la gestione della logica di rendering condizionale, cicli e promesse; in più implementa anche un sistema di reattività che consente di aggiornare automaticamente l'interfaccia utente quando c'è un cambiamento di stato dei componenti.
+I file `+page.svelte` contengono il codice HTML, CSS e TS, utilizzato per la gestione del layout della pagina. In aggiunta alla sintassi HTML, Svelte include funzionalità aggiuntive come l'uso dei costrutti `{#if}`, `{#each}` e `{#await}` per la gestione della logica di rendering condizionale, cicli e promesse; in più implementa anche un sistema di reattività che consente di aggiornare automaticamente l'interfaccia utente quando c'è un cambiamento di stato dei componenti.
 
 Inoltre da la possibilità di creare e riutilizzare componenti, che possono essere importati in altri file `.svelte`.
 
 ===== File Typescript
-I file TypeScript `+page.server.ts` contengono la logica di gestione dei dati contenuti nella pagina; questi file sono eseguiti lato server.
-Sono responsabili anche della gestione delle chiamate API al backend.
+I file TypeScript `+page.server.ts` contengono la logica di gestione dei dati contenuti nella pagina; questi file sono eseguiti lato server. Sono responsabili anche della gestione delle chiamate API al backend.
 
 ==== Design pattern utilizzati
 ===== Model View Controller
-Ogni pagina della webapp è composta da un file `+page.svelte`, e da un file `+page.server.ts`.
-Questa struttura segue il pattern #gloss[Model-View-Controller] (MVC), in cui il file Svelte rappresenta la _View_, mentre il file TypeScript rappresenta il _Controller_, il _Model_ invece è rappresentato dalle backend API.
+Ogni pagina della webapp è composta da un file `+page.svelte`, e da un file `+page.server.ts`. Questa struttura segue il pattern #gloss[Model-View-Controller] (MVC), in cui il file Svelte rappresenta la _View_, mentre il file TypeScript rappresenta il _Controller_, il _Model_ invece è rappresentato dalle backend API.
 ===== Composite
 I file Svelte sono strutturati tramite il pattern _ composite_, in quanto sono composti da più componenti che possono essere riutilizzati in altre pagine.
-
 
 // ===== Pagina di login
 // Percorso: _/#gloss[Suppl-AI]/src/routes/login_ . \
@@ -438,12 +277,10 @@ Python è il linguaggio principale utilizzato per lo sviluppo del backend del pr
 
 FastAPI è un framework per la creazione di API RESTful, progettato per essere veloce e semplice da usare. È stato scelto perché risulta essere più essenziale con le funzionalità di cui avevamo bisogno rispetto ad altri framework.
 
-Inoltre, FastAPI supporta la tipizzazione statica delle richieste, che aiuta a prevenire errori e rende il codice più leggibile e manutenibile.
-Infine genera automaticamente la documentazione delle API, rendendo più semplice la comprensione e l'utilizzo delle stesse per tutti gli sviluppatori del progetto.
+Inoltre, FastAPI supporta la tipizzazione statica delle richieste, che aiuta a prevenire errori e rende il codice più leggibile e manutenibile. Infine genera automaticamente la documentazione delle API, rendendo più semplice la comprensione e l'utilizzo delle stesse per tutti gli sviluppatori del progetto.
 
 === Database API
-Database-API è il nome del API backend che si occupa della gestione della persistenza dei dati.
-Per l'interazione con il database *_MongoDB_* sono stata importate diverse librerie, tra cui *_motor_* e *_pymongo_*.
+Database-API è il nome del API backend che si occupa della gestione della persistenza dei dati. Per l'interazione con il database *_MongoDB_* sono stata importate diverse librerie, tra cui *_motor_* e *_pymongo_*.
 
 Motor è un driver asincrono per MongoDB, progettato per funzionare con framework asincroni come FastAPI. Permette di eseguire operazioni di database in modo non bloccante, migliorando le prestazioni e la reattività dell'applicazione.
 
@@ -462,22 +299,13 @@ I router sono responsabili della gestione delle richieste HTTP e dell'instradame
 - `user.py`;
 
 ===== Repository
-I repository sono responsabili dell'interazione con il database. Gestiscono le operazioni CRUD (Create, Read, Update, Delete) e forniscono un'interfaccia per accedere ai dati.
-I repository sono suddivisi in:
+I repository sono responsabili dell'interazione con il database. Gestiscono le operazioni CRUD (Create, Read, Update, Delete) e forniscono un'interfaccia per accedere ai dati. I repository sono suddivisi in:
 - `chat_repository.py`;
 - `document_repository.py`;
 - `faq_repository.py`;
 - `setting_repository.py`;
 - `user_repository.py`;
 
-===== Service
-I service sono delle classi che offrono funzionalità di business logic, come la gestione dell'autenticazione e l'invio di email.
-I service sono:
-- `auth_service.py`;
-- `email_service.py`;
-
-==== Diagramma delle classi
-// TODO: aggiungere diagramma delle classi di database-api
 
 ==== Design pattern utilizzati
 
@@ -490,12 +318,20 @@ Infatti le classi repository implementano le operazioni CRUD e vengono utilizzat
 Il pattern _singleton_ è stato utilizzato per garantire che ci sia una sola istanza del database in tutta l'applicazione. Questo è importante per evitare conflitti e garantire la coerenza dei dati.
 
 
-=== LLM API
-LLM-API è il nome del API backend che si occupa della gestione dell'interazione con l'LLM.
-Per l'interazione con gli LLM sono state importate diverse librerie, tra queste quella principale è *_LangChain_*.
+===== Service
+I service sono delle classi che offrono funzionalità di business logic, come la gestione dell'autenticazione e l'invio di email. I service sono:
+- `auth_service.py`;
+- `email_service.py`;
 
-LangChain è una libreria progettata per semplificare l'integrazione e l'interazione con diversi LLM. Fornisce strumenti e astrazioni per costruire applicazioni che utilizzano LLM, facilitando l'interazione con i modelli, la gestione del contesto e la generazione di prompt.
-Inoltre semplifica l'intercambiabilità tra i diversi modelli e provider.
+==== Diagramma delle classi
+#figure(image("../imgs/diagramma-database-api.png", width: 118%), caption: "Diagramma delle classi di Database-API")
+
+//TODO: da controllare il diagramma
+
+=== LLM API
+LLM-API è il nome del API backend che si occupa della gestione dell'interazione con l'LLM. Per l'interazione con gli LLM sono state importate diverse librerie, tra queste quella principale è *_LangChain_*.
+
+LangChain è una libreria progettata per semplificare l'integrazione e l'interazione con diversi LLM. Fornisce strumenti e astrazioni per costruire applicazioni che utilizzano LLM, facilitando l'interazione con i modelli, la gestione del contesto e la generazione di prompt. Inoltre semplifica l'intercambiabilità tra i diversi modelli e provider.
 
 ==== Struttura del codice
 Il codice di LLM-API è strutturato in *_router_* e *_service_*.
@@ -530,21 +366,14 @@ Il pattern *_singleton_* è un pattern creazionale che garantisce che una classe
 Abbiamo utilizzato il pattern singleton per gestire l'accesso al database vettoriale in modo che la stessa istanza del database possa essere utilizzata in tutta l'applicazione, evitando conflitti e garantendo la coerenza dei dati.
 
 ===== Dependency Injection
-Il pattern *_dependency injection_* è un pattern strutturale che consente di includere le dipendenze necessarie in una classe, invece che crearle all'interno della classe stessa.
-Questo pattern permette di ridurre l'accoppiamento tra le classi e di rendere il codice più modulare.
+Il pattern *_dependency injection_* è un pattern strutturale che consente di includere le dipendenze necessarie in una classe, invece che crearle all'interno della classe stessa. Questo pattern permette di ridurre l'accoppiamento tra le classi e di rendere il codice più modulare.
 
 ==== Diagramma delle classi
-#figure(
-  image("../imgs/diagramma-llm-api.png", width: 110%),
-  caption: "Diagramma delle classi di LLM-API",
-)
+#figure(image("../imgs/diagramma-llm-api.png", width: 110%), caption: "Diagramma delle classi di LLM-API")
 
 #set par(justify: false)
 ===== DTO
-#figure(
-  image("../imgs/DTO.png", width: 90%),
-  caption: "Diagramma delle classi dei DTO di LLM-API",
-)
+#figure(image("../imgs/DTO.png", width: 90%), caption: "Diagramma delle classi dei DTO di LLM-API")
 La classe DTO (Data Transfer Object) è un oggetto che viene utilizzato per trasferire dati tra le diverse parti del sistema. In questo caso, i DTO vengono utilizzati per trasferire i dati tra il client e il server, in modo da semplificare la comunicazione e ridurre il numero di chiamate API necessarie.
 ====== Message
 - ```python +sender: str```: rappresenta il mittente del messaggio, che può essere l'utente o il chatbot;
@@ -585,10 +414,7 @@ Generalizzazione della classe FAQBase.
 - ```python +admin_password: str```: rappresenta la password dell'utente;
 
 ===== LLMRouter
-#figure(
-  image("../imgs/LLMRouter.png", width: 90%),
-  caption: "Diagramma delle classi di LLMRouter",
-)
+#figure(image("../imgs/LLMRouter.png", width: 70%), caption: "Diagramma delle classi di LLMRouter")
 La classe LLMRouter è responsabile della gestione delle richieste HTTP relative alle query che verranno reindirizzate all'LLMResponseService.
 
 L'oggetto LLMResponseService viene importato tramite il metodo ```python LLMResponseService.get_llm_response_service()``` che restituisce l'istanza del servizio LLMResponseService (*Dependency Injection*).
@@ -599,11 +425,8 @@ L'oggetto LLMResponseService viene importato tramite il metodo ```python LLMResp
 - ```python +generate_chat_name(context: Context) -> str```: restituisce il nome della chat generato in base al contesto fornito; per ottenere il nome generato viene chiamato il metodo ```python LLMResponseService.generate_llm_chat_name()```;
 
 ===== FaqRouter
-#figure(
-  image("../imgs/FaqRouter.png", width: 50%),
-  caption: "Diagramma delle classi di FaqRouter",
-)
-La classe FaqRouter è responsabile della gestione delle richieste HTTP relative a salvataggio, modifica e cancellazione delle FAQ nel database vettoriale. \
+#figure(image("../imgs/FaqRouter.png", width: 50%), caption: "Diagramma delle classi di FaqRouter")
+La classe FaqRouter è responsabile della gestione delle richieste HTTP relative a salvataggio, modifica e cancellazione delle FAQ nel database vettoriale.\
 I metodi della classe FileManager vengono utilizzati tramite l'oggetto restituito dal metodo ```python FileManagerService.get_file_manager_by_extension()``` (*Dependency Injection*).
 ====== Attributi
 - ```python +router: APIRouter```: oggetto del modulo fastapi che permette di definire le API route;
@@ -613,11 +436,8 @@ I metodi della classe FileManager vengono utilizzati tramite l'oggetto restituit
 - ```python +update_faq(faq: FAQBase) -> json```: chiama il metodo ```python FileManager.update_faq()```, il token viene utilizzato per verificare che l'utente che esegue la richiesta sia un admin; restituisce i dati della faq aggiornata e l'esito della richiesta;
 
 ===== DocumentRouter
-#figure(
-  image("../imgs/DocumentRouter.png", width: 50%),
-  caption: "Diagramma delle classi di DocumentRouter",
-)
-La classe DocumentRouter è responsabile della gestione delle richieste HTTP relative a salvataggio, modifica e cancellazione dei documenti nel database vettoriale. \
+#figure(image("../imgs/DocumentRouter.png", width: 50%), caption: "Diagramma delle classi di DocumentRouter")
+La classe DocumentRouter è responsabile della gestione delle richieste HTTP relative a salvataggio, modifica e cancellazione dei documenti nel database vettoriale.\
 I metodi della classe FileManager vengono utilizzati tramite l'oggetto restituito dal metodo ```python FileManagerService.get_file_manager_by_extension()``` (*Dependency Injection*).
 ====== Attributi
 - ```python +router: APIRouter```: oggetto del modulo fastapi che permette di definire le API route;
@@ -626,10 +446,7 @@ I metodi della classe FileManager vengono utilizzati tramite l'oggetto restituit
 - ```python +delete_file(fileDelete: DocumentDelete) -> json```: chiama il metodo ```python FileManager.delete_document()```, il token viene utilizzato per verificare che l'utente che esegue la richiesta sia un admin; restituisce l'esito della richiesta;
 
 ===== LLMResponseService
-// #figure(
-//   image("../imgs/LLMResponseService.png", width: 90%),
-//   caption: "Diagramma delle classi di LLMResponseService",
-// )
+#figure(image("../imgs/LLMResponseServices.png", width: 80%), caption: "Diagramma delle classi di LLMResponseService")
 La classe LLMResponseService si occupa di orchestrare l'ottenimento del contesto, la preparazione della richiesta per l'LLM e, infine, il ritorno della risposta generata.
 ====== Attributi
 - ```python -vector_database: VectorDatabase```: oggetto VectorDatabase che permette di recuperare il contesto; l'oggetto viene istanziato al momento della costruzione dell'LLMResponseService e viene ottenuto tramite il metodo ```python VectorDatabaseService.get_vector_database()``` (*Dependency Injection*);
@@ -638,25 +455,18 @@ La classe LLMResponseService si occupa di orchestrare l'ottenimento del contesto
 ====== Metodi
 - ```python +__init__()```: costruttore della classe, inizializza gli oggetti vector_database, llm e il prompt iniziale;
 - ```python -get_context(question: str) -> str```: restituisce il contesto in base alla domanda fornita; per ottenere il contesto viene chiamato il metodo ```python VectorDatabase.search_context()```;
-- ```python +generate_llm_response(question: Question) -> StreamingResponse```: tramite uno stream di dati restituisce la risposta, generata in base al prompt fornito; \ per ottenere il contesto viene chiamato il metodo ```python  LLMResponseService.get_context()``` e per ottenere la risposta generata viene chiamato il metodo ```python LLM.generate_response()```;
-- ```python +generate_llm_chat_name(chat_history: str) -> str```: restituisce il nome della chat generato in base al contesto fornito; \ per ottenere il nome generato viene chiamato il metodo ```python LLM.generate_chat_name()``` a cui viene passato lo storico della chat e un prompt standard che fornisce le istruzioni per l'LLM;
+- ```python +generate_llm_response(question: Question) -> StreamingResponse```: tramite uno stream di dati restituisce la risposta, generata in base al prompt fornito;\ per ottenere il contesto viene chiamato il metodo ```python  LLMResponseService.get_context()``` e per ottenere la risposta generata viene chiamato il metodo ```python LLM.generate_response()```;
+- ```python +generate_llm_chat_name(chat_history: str) -> str```: restituisce il nome della chat generato in base al contesto fornito;\ per ottenere il nome generato viene chiamato il metodo ```python LLM.generate_chat_name()``` a cui viene passato lo storico della chat e un prompt standard che fornisce le istruzioni per l'LLM;
 - ```python +get_llm_response_service() -> LLMResponseService```: restituisce l'istanza del servizio LLMResponseService;
 
 ===== LLMService
-// #figure(
-//   image("../imgs/LLMService.png", width: 90%),
-//   caption: "Diagramma delle classi di LLMService",
-// )
+#figure(image("../imgs/LLMService.png", width: 30%), caption: "Diagramma delle classi di LLMService")
 La classe LLMService permette di ottenere l'istanza dell'oggetto LLM adatto ad interagire con l'LLM specifico scelto dall'amministratore della piattaforma.
 ====== Metodi
 - ```python +get_llm_model() -> LLM```: restituisce l'oggetto LLM adatto basandosi sulle variabili d'ambiente LLM_MODEL e LLM_PROVIDER;
 
 ===== LLM
-// TODO: grafico che include anche le classi concrete
-// #figure(
-//  image("../imgs/LLM.png", width: 90%),
-// caption: "Diagramma delle classi di LLM",
-// )
+#figure(image("../imgs/LLM.png", width: 40%), caption: "Diagramma delle classi di LLM")
 La classe LLM è un'astrazione che rappresenta un LLM generico. Lo scopo è quello di inizializzare l'oggetto LLM in modo che, le funzionalità di langchain per interagire con i modelli, siano utilizzabili in modo generico, quindi senza dipendere dall'LLM scelto.
 ====== Attributi
 - ```python -model_name: str```: nome del modello LLM;
@@ -665,30 +475,32 @@ La classe LLM è un'astrazione che rappresenta un LLM generico. Lo scopo è quel
 - ```python +__init__(model_name: str)```: costruttore della classe, inizializza gli oggetti model_name e model, il secondo viene inizializzato tramite il metodo ```python initialize_model()```; controlla che le variabili d'ambiente necessarie siano impostate correttamente tramite il metodo ```python check_environment()```;
 - ```python -check_environment()```: controlla che le variabili d'ambiente necessarie siano impostate correttamente;
 - ```python -initialize_model() -> BaseChatModel```: inizializza l'oggetto model in base al modello scelto;
-====== Ollama
+===== Ollama
+Classe concreta della classe LLM che permette di utilizzare Ollama come provider di LLM.
+====== Metodi
 - ```python -check_environment()```: controlla che le variabili d'ambiente necessarie all'utilizzo del modello scelto di Ollama siano impostate correttamente;
 - ```python -initialize_model() -> BaseChatModel```: inizializza l'oggetto model per essere utilizzato con il modello scelto di Ollama;
-====== OpenAI
+===== OpenAI
+Classe concreta della classe LLM che permette di utilizzare OpenAI come provider di LLM.
+====== Metodi
 - ```python -check_environment()```: controlla che le variabili d'ambiente necessarie all'utilizzo del modello scelto di OpenAI siano impostate correttamente;
 - ```python -initialize_model() -> BaseChatModel```: inizializza l'oggetto model per essere utilizzato con il modello scelto di OpenAI;
 
 ===== VectorDatabaseService
-// #figure(
-// image("../imgs/VectorDatabaseService.png", width: 90%),
-// caption: "Diagramma delle classi di VectorDatabaseService",
-// )
+#figure(image("../imgs/VectorDatabaseService.png", width: 50%), caption: "Diagramma delle classi di VectorDatabaseService")
 La classe VectorDatabaseService permette di ottenere l'istanza dell'oggetto VectorDatabase adatto ad interagire con il database vettoriale scelto dall'amministratore della piattaforma.
 ====== Metodi
 - ```python +get_vector_database() -> VectorDatabase```: restituisce l'oggetto VectorDatabase adatto basandosi sulla variabile d'ambiente VECTOR_DATABASE_PROVIDER;
 
 ===== VectorDatabase
-La classe VectorDatabase è un'astrazione che rappresenta un database vettoriale generico. Lo scopo è quello di inizializzare oggetti delle classi concrete, figlie di VectorDatabase, in modo che le funzionalità di langchain per interagire con i database vettoriali siano utilizzabili in modo generico, quindi senza dipendere dal database scelto.
+#figure(image("../imgs/VectorDatabase.png", width: 70%), caption: "Diagramma delle classi di VectorDatabase")
+La classe VectorDatabase è un'astrazione che rappresenta un database vettoriale generico. Lo scopo è quello di inizializzare oggetti delle classi concrete, figlie di VectorDatabase, in modo che le funzionalità di langchain per interagire con i database vettoriali siano utilizzabili in modo generico, quindi senza dipendere dal database scelto (*Strategy*).
 ====== Attributi
 - ```python -embedding: EmbeddingProvider```: oggetto della classe EmbeddingProvider che permette di accedere diverse funzioni di embedding in base all'embedding provider scelto; l'attributo viene inizializzato tramite il metodo ```python EmbeddingService.get_embedding_provider()``` (*Dependency Injection*);
 - ```python -persist_directory: str```: percorso della directory in cui sono memorizzati i dati vettorializzati; viene inizializzata tramite la variabile d'ambiente VECTOR_DB_DIRECTORY;
 ====== Metodi
 - ```python +__init__()```: costruttore della classe, inizializza gli oggetti embedding e persist_directory;
-- ```python -get_db()```: restituisce l'istanza del database vettoriale contenuta nell'oggetto VectorDatabase;
+- ```python -get_db()```: restituisce l'istanza del database vettoriale contenuta nell'oggetto VectorDatabase (*Singleton*);
 - ```python +add_documents(documents: List<Document>)```: aggiunge i documenti passati al database vettoriale;
 - ```python +delete_document(document_path: str)```: elimina il documento, che si trova al percorso passato, dal database vettoriale;
 - ```python +delete_all_documents()```: elimina tutti i documenti dal database vettoriale;
@@ -698,61 +510,100 @@ La classe VectorDatabase è un'astrazione che rappresenta un database vettoriale
 - ```python +count() -> int```: restituisce il numero di documenti presenti nel database vettoriale;
 
 ===== ChromaDB
-// #figure(
-// image("../imgs/ChromaDB.png", width: 90%),
-// caption: "Diagramma delle classi di ChromaDB",
-// )
+#figure(image("../imgs/ChromaDB.png", width: 70%), caption: "Diagramma delle classi di ChromaDB")
 La classe ChromaDB è un'implementazione concreta della classe VectorDatabase che permette di utilizzare ChromaDB come database vettoriale.
 ====== Attributi
-- ```python -db: Chroma```: oggetto della classe ```python langchain_chroma.Chroma``` che permette di interagire con il database vettoriale ChromaDB;
+- ```python -db: Chroma```: oggetto della classe ```python langchain_chroma.vectorstores.Chroma``` che permette di interagire con il database vettoriale ChromaDB;
 ====== Metodi
-- ```python +__init__(persist_directory: str = settings.VECTOR_DB_DIRECTORY)```: // TODO
+- ```python +__init__(persist_directory: str = settings.VECTOR_DB_DIRECTORY)```: inizializza gli oggetti embedding, persist_directory utilizzando la variabile d'ambiente VECTOR_DB_DIRECTORY e db; l'oggetto embedding viene inizializzato tramite il metodo ```python EmbeddingService.get_embedding_provider()``` (*Dependency Injection*);
+- ```python -get_db() -> Chroma```: restituisce l'istanza del database vettoriale ChromaDB contenuta nell'oggetto campo db della classe ChromaDB (*Singleton*);
+- ```python -generate_document_ids(documents: List[Document]) -> List[str]```: ritorna gli identificativi dei documenti da aggiungere al database vettoriale; gli identificativi vengono generati tramite il metodo ```python uuid.uuid3()``` in modo che il contenuto del documento sia univoco.
+- ```python +add_documents(documents: List[Document])```: aggiunge i documenti passati al database vettoriale ChromaDB; per ogni documento viene generato un identificativo tramite il metodo ```python ChromaDB.generate_document_ids()``` e viene aggiunto al database vettoriale tramite il metodo ```python langchain_chroma.vectorstores.Chroma.add_documents()```;
+- ```python +delete_document(document_path: str)```: elimina il documento, che si trova al percorso passato, dal database vettoriale ChromaDB; per eliminare il documento viene utilizzato il metodo ```python langchain_chroma.vectorstores.Chroma.delete()```;
+- ```python +delete_faq(faq_id: str)```: elimina la FAQ, che si trova all'interno del database vettoriale ChromaDB, con l'id passato come parametro; per eliminare la FAQ viene utilizzato il metodo ```python langchain_chroma.vectorstores.Chroma.delete()```;
+- ```python +search_context(query: str, results_number: int = 4) -> List[Document]```: restituisce il contesto in base alla domanda fornita; per ottenere il contesto viene utilizzato il metodo ```python langchain_chroma.vectorstores.Chroma.similarity_search()``` che restituisce i documenti più simili alla query passata come parametro;
+- ```python +delete_all_documents()```: elimina tutti i documenti dal database vettoriale ChromaDB; per eliminare tutti i documenti viene utilizzato il metodo ```python langchain_chroma.vectorstores.Chroma.reset_collection()```;
+- ```python +get_all_documents() -> List[Document]```: restituisce tutti i documenti presenti nel database vettoriale ChromaDB; per ottenere tutti i documenti viene utilizzato il metodo ```python langchain_chroma.vectorstores.Chroma.get()``` che restituisce tutti i documenti presenti nel database vettoriale;
+- ```python +is_empty() -> bool```: restituisce True se il database vettoriale ChromaDB è vuoto, False altrimenti;
+- ```python +count() -> int```: restituisce il numero di documenti presenti nel database vettoriale ChromaDB;
 
+===== EmbeddingService
+#figure(image("../imgs/EmbeddingService.png", width: 50%), caption: "Diagramma delle classi di EmbeddingService")
+La classe EmbeddingService permette di ottenere un'istanza del provider configurato tramite le impostazioni, semplificando l'integrazione e l'intercambiabilità tra diversi provider.
+====== Metodi
+- ```python +get_embedding_function()```: metodo astratto che restituisce la funzione di embedding fornita dal provider;
 
+===== EmbeddingProvider
+#figure(image("../imgs/EmbeddingProvider.png", width: 40%), caption: "Diagramma delle classi di EmbeddingProvider")
+La classe EmbeddingProvider è un'astrazione che rappresenta un provider di embedding generico. Lo scopo è quello di inizializzare oggetti delle classi concrete, figlie di EmbeddingProvider, in modo che le funzionalità di langchain per interagire con i provider di embedding siano utilizzabili in modo generico, quindi senza dipendere dal provider scelto (*Strategy*).
+====== Metodi
+- ```python +get_embedding_provider() -> EmbeddingProvider```: restituisce un'istanza del provider di embedding configurato;
 
+===== OpenAIEmbeddingProvider
+#figure(image("../imgs/OpenAIEmbeddingProvider.png", width: 80%), caption: "Diagramma delle classi di OpenAIEmbeddingProvider")
+La classe OpenAIEmbeddingProvider è un'implementazione concreta della classe EmbeddingProvider che utilizza le API di OpenAI per fornire funzioni di embedding.\
+Questa classe consente di utilizzare le funzioni di embedding che sfruttano modelli di OpenAI.
+====== Attributi
+- ```python -api_key: str```: chiave API utilizzata per autenticarsi con il servizio OpenAI;
+- ```python -model_name: str```: nome del modello di embedding utilizzato;
+====== Metodi
+- ```python +__init__(api_key: str, model_name: str)```: costruttore della classe, inizializza gli attributi api_key tramite la variabile d'ambiente OPENAI_API_KEY e model_name tramite la variabile d'ambiente EMBEDDING_MODEL_NAME;
+- ```python +get_embedding_function() -> OpenAIEmbeddings```: restituisce la funzione di embedding fornita da OpenAI;
 
 ===== FileManagerService
-// #figure(
-//   image("../imgs/FileManagerService.png", width: 90%),
-//   caption: "Diagramma delle classi di FileManagerService",
-// )
+#figure(image("../imgs/FileManagerService.png", width: 70%), caption: "Diagramma delle classi di FileManagerService")
 La classe FileManagerService permette di ottenere l'istanza dell'oggetto FileManager adatto ad interagire con il file manager scelto dall'amministratore della piattaforma.
 ====== Metodi
-- ```python +get_file_manager(file: UploadFile) -> FileManager```: restituisce l'oggetto FileManager adatto basandosi sul tipo di file passato come parametro; se non esiste un file manager per il tipo di file passato, viene sollevata un'eccezione; Se invece non viene passato un file, viene restituito lo StringManager.
-- ```python +get_file_manager_by_extension(file_extension: str) -> FileManager```: restituisce l'oggetto FileManager adatto basandosi sull'estensione del file passato come parametro; se non esiste un file manager per l'estensione passata, viene sollevata un'eccezione.
+- ```python +get_file_manager(file: UploadFile) -> FileManager```: restituisce l'oggetto FileManager adatto basandosi sul tipo di file passato come parametro; se non esiste un file manager per il tipo di file passato, viene sollevata un'eccezione; Se invece non viene passato un file, viene restituito lo StringManager;
+- ```python +get_file_manager_by_extension(file_extension: str) -> FileManager```: restituisce l'oggetto FileManager adatto basandosi sull'estensione del file passato come parametro; se non esiste un file manager per l'estensione passata, viene sollevata un'eccezione;
 
 ===== FileManager
-// #figure(
-//   image("../imgs/FileManager.png", width: 90%),
-//   caption: "Diagramma delle classi di FileManager",
-// )
-La classe FileManager è un'astrazione che rappresenta un file manager generico. Lo scopo è quello di inizializzare oggetti delle classi concrete, figlie di FileManager, in modo che le funzionalità di langchain per interagire con i file siano utilizzabili in modo generico, quindi senza dipendere dal tipo di file scelto.
+#figure(image("../imgs/FileManager.png", width: 80%), caption: "Diagramma delle classi di FileManager")
+La classe FileManager è un'astrazione che rappresenta un file manager generico. Lo scopo è quello di inizializzare oggetti delle classi concrete, figlie di FileManager, in modo che le funzionalità di langchain per interagire con i file siano utilizzabili in modo generico, quindi senza dipendere dal tipo di file scelto (*Pattern Strategy*).
 ====== Attributi
 - ```python -vector_database: VectorDatabase```: oggetto VectorDatabase che permette di interagire con il database vettoriale; l'oggetto viene istanziato al momento della costruzione del FileManager e viene ottenuto tramite il metodo ```python VectorDatabaseService.get_vector_database()``` (*Dependency Injection*);
+- ```python -splitter: RecursiveCharacterTextSplitter```: oggetto della classe ```python langchain_core.text_splitter.RecursiveCharacterTextSplitter``` che permette di dividere il testo in chunck di dimensioni stabilite; l'oggetto viene inizializzato al momento della costruzione del FileManager;
+====== Metodi
+- ```python +__init__()```: costruttore della classe, inizializza gli oggetti vector_database e splitter;
+- ```python -load_split_file(file_path:str) -> List[Document]```: metodo astratto che carica il file dal percorso passato come parametro, lo divide in chunck e restituisce una lista di Document;
+- ```python +get_full_path(filename:str) -> str```: restituisce il percorso completo del file passato come parametro, unendo il percorso della directory persistente e il nome del file;
+- ```python +get_documents_number() -> int```: restituisce il numero di documenti presenti nel database vettoriale;
+- ```python +get_documents() -> List[Document]```: restituisce tutti i documenti presenti nel database vettoriale;
+- ```python -save_file(file: File) -> str```: metodo astratto che salva il file passato come parametro nella directory persistente e restituisce il percorso completo del file salvato;
+- ```python +add_document(file: UploadFile, token:str) -> bool```: aggiunge il file passato come parametro al database vettoriale; per farlo, chiama il metodo ```python FileManager.save_file()``` per salvare il file nella directory persistente, chiama il metodo ```python FileManager.load_split_file()``` che suddivide il file in chunck e poi chiama il metodo ```python VectorDatabase.add_documents()``` per aggiungere i chunck al database vettoriale; poi effettua una richiesta POST a _Database-API_ per salvare le informazioni del documento nel database; restituisce True se l'operazione è andata a buon fine, False altrimenti;
+- ```python +delete_document(file_id: str, file_path:str, token:str, current_password:str) -> bool```: elimina il documento passato come parametro dal database vettoriale; per farlo, chiama il metodo ```python VectorDatabase.delete_document()```, poi effettua una richiesta DELETE a _Database-API_ per eliminare le informazioni del documento dal database; restituisce True se l'operazione è andata a buon fine, False altrimenti;
 
+===== TextFileManager
+#figure(image("../imgs/TextFileManager.png", width: 50%), caption: "Diagramma della classe TextFileManager")
 
-// TODO: descrizione delle classi
+La classe TextFileManager è un'implementazione concreta della classe FileManager che si occupa specificamente della gestione dei file di testo (.txt).\
+Questa classe utilizza il TextLoader di langchain per caricare e processare i file di testo.
 
+====== Metodi
+- ```python load_split_file(file_path: str) -> List[Document]```: implementa il metodo astratto della classe padre per caricare un file di testo dal percorso specificato; utilizza TextLoader con encoding UTF-8 per caricare il file, poi applica il text splitter per dividere il contenuto in chunk di dimensione appropriata; restituisce una lista di Document contenenti i chunk del testo;
 
-#set par(justify: true)
+===== PdfFileManager
+#figure(image("../imgs/PdfFileManager.png", width: 70%), caption: "Diagramma della classe PdfFileManager")
 
-// = API
+La classe PdfFileManager è un'implementazione concreta della classe FileManager specializzata nella gestione dei file PDF.\
+Utilizza PyPDFLoader di langchain per caricare e processare i documenti PDF.
 
-// == Endpoint di autenticazione
-// // Descrivere endpoint come login/logout, specificando metodi, parametri e formati.
+====== Metodi
+- ```python load_split_file(file_path: str) -> List[Document]```: implementa il metodo astratto della classe padre per caricare un file PDF dal percorso specificato; utilizza PyPDFLoader in modalità "single" per caricare il file PDF mantenendo il contesto tra le pagine, poi applica il text splitter per dividere il contenuto in chunk di dimensione appropriata; restituisce una lista di Document contenenti i chunk del PDF.
 
-// == Endpoint di chat
-// // Presentare endpoint relativi all’interazione con il #gloss[chatbot] (creazione, invio messaggi, #gloss[FAQ]).
+===== StringManager
+#figure(image("../imgs/StringManager.png", width: 50%), caption: "Diagramma della classe StringManager")
 
-// == Endpoint di gestione documenti
-// // Esporre endpoint per upload, visualizzazione ed eliminazione documenti.
+La classe StringManager è un'implementazione concreta della classe FileManager che, a differenza delle altre implementazioni, non gestisce file fisici ma contenuti testuali come le FAQ. È responsabile della gestione delle FAQ nel sistema, inclusa la loro aggiunta, aggiornamento ed eliminazione dal database vettoriale.
 
-// == Altri endpoint
-// // Inserire eventuali endpoint aggiuntivi.
+====== Metodi
+- ```python load_split_file(faq: FAQ) -> List[Document]```: implementa il metodo astratto della classe padre per trasformare una FAQ in un Document; crea un Document con contenuto formattato come "Domanda: {faq.question} Risposta: {faq.answer}" e con metadata che include la fonte ("faqs") e l'ID della FAQ; applica il text splitter per dividere eventualmente il contenuto in chunk; restituisce una lista di Document.
 
-// == Errori e codici di ritorno
-// // Tabella riassuntiva dei codici di stato HTTP e dei relativi significati.
+- ```python add_faq(faq: FAQBase, token: str) -> FAQ```: aggiunge una nuova FAQ al sistema; invia una richiesta POST a _Database-API_ per salvare la FAQ nel database relazionale, ottenendo indietro l'ID assegnato; crea un oggetto FAQ completo con l'ID ricevuto, chiama il metodo ```python load_split_file``` per trasformare la FAQ in Document e lo aggiunge al database vettoriale tramite ```python VectorDatabase.add_documents()```; restituisce l'oggetto FAQ completo di ID.
 
+- ```python delete_faq(faq: FAQDelete, token: str) -> None```: elimina una FAQ dal sistema; invia una richiesta DELETE a _Database-API_ per rimuovere la FAQ dal database relazionale, verificando la password dell'admin; se l'operazione ha successo, rimuove la FAQ dal database vettoriale chiamando ```python VectorDatabase.delete_faq()```.
+
+- ```python update_faq(faq: FAQ, token: str) -> None```: aggiorna una FAQ esistente; invia una richiesta PATCH a _Database-API_ per aggiornare la FAQ nel database relazionale; rimuove la vecchia versione della FAQ dal database vettoriale, poi la ricrea con il nuovo contenuto chiamando ```python load_split_file()``` e aggiunge i nuovi Document al database vettoriale.
 
 // Descrivere la suddivisione in moduli e livelli logici del sistema.
 
@@ -760,184 +611,181 @@ La classe FileManager è un'astrazione che rappresenta un file manager generico.
 // == Architettura di deployment
 // Indicare come il sistema viene distribuito (es. Docker, monolite, microservizi).
 
-== Struttura Database
-// Illustrare le scelte relative al database (es. MongoDB, Chroma), schema dei dati, e gestione allegati/FAQ.
+#set par(justify: true)
 
 = Requisiti funzionali
-Di seguito è riportata la tabella con i requisiti funzionali che erano stati stesi nel documento _Analisi dei requisiti_.
-Si ricorda che i requisiti sono stati divisi in due categorie in base alla lettera con cui finisce il codice del
-requisito:
+Di seguito è riportata la tabella con i requisiti funzionali che erano stati stesi nel documento _Analisi dei requisiti_. Si ricorda che i requisiti sono stati divisi in due categorie in base alla lettera con cui finisce il codice del requisito:
 - O: obbligatori
 - D: desiderabili
 
 == Tracciamento
-
+// TODO: aggiornare quando gli altri hanno fatto
 #show figure: set block(breakable: true)
 #figure(
-  caption: [Requisiti di funzionalità],
-  table(
-    columns: (1fr, 2fr, 1fr),
-    inset: 8pt,
-    align: center + horizon,
-    fill: (x, y) => if (y == 0) { luma(230) },
-    table.header([*ID Requisito*], [*Descrizione*], [*Stato*]),
-    // login
-    "R-01-F-O",
-    "L'utente deve poter accedere alla piattaforma",
-    "Soddisfatto",
-    // primo login fornitore
-    "R-02-F-O",
-    "Nel caso in cui il fornitore acceda per la prima volta alla piattaforma, deve aggiornare la password",
-    "",
-    // primo login cliente
-    "R-03-F-O",
-    "Nel caso in cui il cliente acceda per la prima volta alla piattaforma, deve aggiornare la password",
-    "",
-    // modifica password
-    "R-04-F-O",
-    "Sia utente che fornitore devono poter cambiare la password liberamente",
-    "",
-    // resta connesso
-    "R-05-F-D",
-    "L'utente non autenticato deve poter scegliere se reinserire le credenziali ad ogni accesso o se farle memorizzare alla piattaforma anche dopo il termine della sessione",
-    "",
-    // recupero password
-    "R-06-F-O",
-    "L'utente non autenticato deve poter recuperare la password nel caso in cui la dimentichi",
-    "",
-    // errore email
-    "R-07-F-O",
-    "L'utente non autenticato deve essere notificato in caso di errore nell'inserimento dell'e-mail",
-    "",
-    // errore password
-    "R-08-F-O",
-    "L'utente non autenticato deve essere notificato in caso di errore nell'inserimento della password o nel caso in cui la password scelta non rispetti il formato richiesto",
-    "",
-    // logout
-    "R-09-F-O",
-    "Sia cliente che fornitore devono avere la possibilità di uscire dal proprio account",
-    "",
-    // visualizzazione lista chat
-    "R-10-F-O",
-    "Sia cliente che fornitore devono avere la possibilità di vedere la lista di tutte le chat in loro possesso",
-    "",
-    // creazione nuova chat
-    "R-11-F-O",
-    "Sia cliente che fornitore devono avere la possibilità di creare una nuova chat con un contesto pulito, che verrà aggiunta alla lista di quelle già presenti",
-    "",
-    // modifica titolo di una chat
-    "R-12-F-D",
-    "Sia cliente che fornitore devono avere la possibilità di modificare il titolo di una chat già esistente",
-    "",
-    // apertura chat singola
-    "R-13-F-O",
-    "Sia cliente che fornitore devono avere la possibilità di aprire una chat singola dalla lista di tutte le chat in loro possesso",
-    "",
-    // scrittura messaggio
-    "R-14-F-O",
-    "Sia cliente che fornitore devono poter scrivere messaggi per comunicare con il chatbot",
-    "",
-    // scrittura messaggio troppo lungo
-    "R-15-F-O",
-    "L'utente che digita il messaggio deve essere avvisato nel caso in cui il messaggio scritto sia troppo lungo",
-    "",
-    // scrittura messaggio tramite FAQ
-    "R-16-F-O",
-    "Sia cliente che fornitore devono avere la possibilità di scrivere messaggi tramite FAQ preimpostate dal fornitore; se possibile il chatbot suggerirà delle FAQ utili in base al contesto",
-    "",
-    // invio messaggio
-    "R-17-F-O",
-    "Sia cliente che fornitore per comunicare con il chatbot devono poter trasmettere il messaggio scritto",
-    "",
-    // ricezione risposta
-    "R-18-F-O",
-    "Sia cliente che fornitore devono ricevere la risposta elaborata dal chatbot in seguito all'invio di un messaggio; durante l'elaborazione della risposta l'utente deve ricevere un feedback che indica l'elaborazione della risposta",
-    "",
-    // valutazione risposta
-    "R-19-F-O",
-    "Il cliente deve avere la possibilità di valutare la risposta ricevuta dal chatbot tramite l'opzione 'Pollice su/giù'",
-    "",
-    // eliminazione chat
-    "R-20-F-O",
-    "Sia cliente che fornitore devono avere la possibilità di eliminare una chat presente nella lista di tutte le chat",
-    "",
-    // dark/light mode
-    "R-21-F-D",
-    "L'utente deve avere la possibilità di scegliere tra tema scuro e tema chiaro dell'interfaccia",
-    "",
-    // modifica durata storico chat
-    "R-22-F-O",
-    "Il fornitore deve avere la possibilità di modificare la durata dello storico delle chat, ovvero il periodo di tempo massimo per cui vengono memorizzati e tenuti come contesto i messaggi per ogni chat",
-    "",
-    // caricare logo
-    "R-23-F-D",
-    "Il fornitore deve avere la possibilità di caricare il proprio logo per personalizzare la propria piattaforma fornita ai clienti",
-    "",
-    // palette colori
-    "R-24-F-D",
-    "Il fornitore deve avere la possibilità di cambiare i colori principali dell'interfaccia della propria piattaforma",
-    "",
-    // statistiche domanda risposta
-    "R-25-F-D",
-    "Il fornitore deve avere la possibilità di visualizzare le statistiche relative alle interazioni con il chatbot",
-    "",
-    // filtri visualizzazione
-    "R-26-F-D",
-    "Il fornitore deve avere la possibilità di filtrare le statistiche visualizzate",
-    "",
-    // aggiunta account cliente
-    "R-27-F-O",
-    "Il fornitore deve avere la possibilità di aggiungere gli account per i propri clienti",
-    "",
-    // inserimento account già esistente
-    "R-28-F-O",
-    "Il fornitore deve essere avvisato nel caso in cui stia aggiungendo un account cliente già esistente",
-    "",
-    // eliminazione account cliente
-    "R-29-F-O",
-    "Il fornitore deve avere la possibilità di eliminare un account cliente solo dopo aver autorizzato l'eliminazione tramite la propria password",
-    "",
-    // inserimento documenti aziendali
-    "R-30-F-O",
-    "Il fornitore deve avere la possibilità di inserire documenti aziendali in modo da fornire ulteriore contesto all'chatbot",
-    "",
-    // formato file non valido
-    "R-31-F-O",
-    "Il fornitore deve sapere quando un file caricato, sia come logo che come documento aziendale, non sia nel formato corretto",
-    "",
-    // visualizzazione documenti aziendali
-    "R-32-F-O",
-    "Il fornitore deve avere la possibilità di visualizzare la lista dei documenti aziendali caricati nella piattaforma",
-    "",
-    // eliminazione documento aziendale
-    "R-33-F-O",
-    "Il fornitore deve avere la possibilità di eliminare un documento aziendale dalla piattaforma solo dopo aver autorizzato l'eliminazione tramite la propria password",
-    "",
-    // aggiunta FAQ
-    "R-34-F-O",
-    "Il fornitore deve avere la possibilità di aggiungere delle domande preimpostate nella piattaforma",
-    "",
-    // visualizzazione FAQ
-    "R-35-F-O",
-    "Il fornitore deve avere la possibilità di visualizzare la lista delle domande preimpostate inserite nella piattaforma",
-    "",
-    // modifica FAQ
-    "R-36-F-O",
-    "Il fornitore deve avere la possibilità di modificare le domande preimpostate già inserite nella piattaforma",
-    "",
-    // eliminazione FAQ
-    "R-37-F-O",
-    "Il fornitore deve avere la possibilità di eliminare le domande preimpostate dalla piattaforma solo dopo aver autorizzato l'eliminazione tramite la propria password",
-    "",
-    // sistema non raggiungibile
-    "R-38-F-O",
-    "Un utente non autenticato o il cliente che sta utilizzando la piattaforma deve essere avvisato nel caso in cui il sistema non sia raggiungibile, possibilmente specificando il motivo del malfunzionamento",
-    "",
-    // invio richiesta con dati mancanti o errati
-    "R-39-F-O",
-    "Un utente non autenticato o il cliente che sta utilizzando la piattaforma deve essere avvisato nel caso in cui la richiesta che ha inviato contenga dati mancanti o errati; nel caso sia pertinente deve anche essere specificato il problema",
-    "",
-  ),
+    caption: [Requisiti di funzionalità],
+    table(
+        columns: (1fr, 2fr, 1fr),
+        inset: 8pt,
+        align: center + horizon,
+        fill: (x, y) => if (y == 0) { luma(230) },
+        table.header([*ID Requisito*], [*Descrizione*], [*Stato*]),
+        // login
+        "R-01-F-O",
+        "L'utente deve poter accedere alla piattaforma",
+        "Soddisfatto",
+        // primo login fornitore
+        "R-02-F-O",
+        "Nel caso in cui il fornitore acceda per la prima volta alla piattaforma, deve aggiornare la password",
+        "",
+        // primo login cliente
+        "R-03-F-O",
+        "Nel caso in cui il cliente acceda per la prima volta alla piattaforma, deve aggiornare la password",
+        "",
+        // modifica password
+        "R-04-F-O",
+        "Sia utente che fornitore devono poter cambiare la password liberamente",
+        "",
+        // resta connesso
+        "R-05-F-D",
+        "L'utente non autenticato deve poter scegliere se reinserire le credenziali ad ogni accesso o se farle memorizzare alla piattaforma anche dopo il termine della sessione",
+        "",
+        // recupero password
+        "R-06-F-O",
+        "L'utente non autenticato deve poter recuperare la password nel caso in cui la dimentichi",
+        "",
+        // errore email
+        "R-07-F-O",
+        "L'utente non autenticato deve essere notificato in caso di errore nell'inserimento dell'e-mail",
+        "",
+        // errore password
+        "R-08-F-O",
+        "L'utente non autenticato deve essere notificato in caso di errore nell'inserimento della password o nel caso in cui la password scelta non rispetti il formato richiesto",
+        "",
+        // logout
+        "R-09-F-O",
+        "Sia cliente che fornitore devono avere la possibilità di uscire dal proprio account",
+        "",
+        // visualizzazione lista chat
+        "R-10-F-O",
+        "Sia cliente che fornitore devono avere la possibilità di vedere la lista di tutte le chat in loro possesso",
+        "",
+        // creazione nuova chat
+        "R-11-F-O",
+        "Sia cliente che fornitore devono avere la possibilità di creare una nuova chat con un contesto pulito, che verrà aggiunta alla lista di quelle già presenti",
+        "",
+        // modifica titolo di una chat
+        "R-12-F-D",
+        "Sia cliente che fornitore devono avere la possibilità di modificare il titolo di una chat già esistente",
+        "",
+        // apertura chat singola
+        "R-13-F-O",
+        "Sia cliente che fornitore devono avere la possibilità di aprire una chat singola dalla lista di tutte le chat in loro possesso",
+        "",
+        // scrittura messaggio
+        "R-14-F-O",
+        "Sia cliente che fornitore devono poter scrivere messaggi per comunicare con il chatbot",
+        "",
+        // scrittura messaggio troppo lungo
+        "R-15-F-O",
+        "L'utente che digita il messaggio deve essere avvisato nel caso in cui il messaggio scritto sia troppo lungo",
+        "",
+        // scrittura messaggio tramite FAQ
+        "R-16-F-O",
+        "Sia cliente che fornitore devono avere la possibilità di scrivere messaggi tramite FAQ preimpostate dal fornitore; se possibile il chatbot suggerirà delle FAQ utili in base al contesto",
+        "",
+        // invio messaggio
+        "R-17-F-O",
+        "Sia cliente che fornitore per comunicare con il chatbot devono poter trasmettere il messaggio scritto",
+        "",
+        // ricezione risposta
+        "R-18-F-O",
+        "Sia cliente che fornitore devono ricevere la risposta elaborata dal chatbot in seguito all'invio di un messaggio; durante l'elaborazione della risposta l'utente deve ricevere un feedback che indica l'elaborazione della risposta",
+        "",
+        // valutazione risposta
+        "R-19-F-O",
+        "Il cliente deve avere la possibilità di valutare la risposta ricevuta dal chatbot tramite l'opzione 'Pollice su/giù'",
+        "",
+        // eliminazione chat
+        "R-20-F-O",
+        "Sia cliente che fornitore devono avere la possibilità di eliminare una chat presente nella lista di tutte le chat",
+        "",
+        // dark/light mode
+        "R-21-F-D",
+        "L'utente deve avere la possibilità di scegliere tra tema scuro e tema chiaro dell'interfaccia",
+        "",
+        // modifica durata storico chat
+        "R-22-F-O",
+        "Il fornitore deve avere la possibilità di modificare la durata dello storico delle chat, ovvero il periodo di tempo massimo per cui vengono memorizzati e tenuti come contesto i messaggi per ogni chat",
+        "",
+        // caricare logo
+        "R-23-F-D",
+        "Il fornitore deve avere la possibilità di caricare il proprio logo per personalizzare la propria piattaforma fornita ai clienti",
+        "",
+        // palette colori
+        "R-24-F-D",
+        "Il fornitore deve avere la possibilità di cambiare i colori principali dell'interfaccia della propria piattaforma",
+        "",
+        // statistiche domanda risposta
+        "R-25-F-D",
+        "Il fornitore deve avere la possibilità di visualizzare le statistiche relative alle interazioni con il chatbot",
+        "",
+        // filtri visualizzazione
+        "R-26-F-D",
+        "Il fornitore deve avere la possibilità di filtrare le statistiche visualizzate",
+        "",
+        // aggiunta account cliente
+        "R-27-F-O",
+        "Il fornitore deve avere la possibilità di aggiungere gli account per i propri clienti",
+        "",
+        // inserimento account già esistente
+        "R-28-F-O",
+        "Il fornitore deve essere avvisato nel caso in cui stia aggiungendo un account cliente già esistente",
+        "",
+        // eliminazione account cliente
+        "R-29-F-O",
+        "Il fornitore deve avere la possibilità di eliminare un account cliente solo dopo aver autorizzato l'eliminazione tramite la propria password",
+        "",
+        // inserimento documenti aziendali
+        "R-30-F-O",
+        "Il fornitore deve avere la possibilità di inserire documenti aziendali in modo da fornire ulteriore contesto all'chatbot",
+        "",
+        // formato file non valido
+        "R-31-F-O",
+        "Il fornitore deve sapere quando un file caricato, sia come logo che come documento aziendale, non sia nel formato corretto",
+        "",
+        // visualizzazione documenti aziendali
+        "R-32-F-O",
+        "Il fornitore deve avere la possibilità di visualizzare la lista dei documenti aziendali caricati nella piattaforma",
+        "",
+        // eliminazione documento aziendale
+        "R-33-F-O",
+        "Il fornitore deve avere la possibilità di eliminare un documento aziendale dalla piattaforma solo dopo aver autorizzato l'eliminazione tramite la propria password",
+        "",
+        // aggiunta FAQ
+        "R-34-F-O",
+        "Il fornitore deve avere la possibilità di aggiungere delle domande preimpostate nella piattaforma",
+        "",
+        // visualizzazione FAQ
+        "R-35-F-O",
+        "Il fornitore deve avere la possibilità di visualizzare la lista delle domande preimpostate inserite nella piattaforma",
+        "",
+        // modifica FAQ
+        "R-36-F-O",
+        "Il fornitore deve avere la possibilità di modificare le domande preimpostate già inserite nella piattaforma",
+        "",
+        // eliminazione FAQ
+        "R-37-F-O",
+        "Il fornitore deve avere la possibilità di eliminare le domande preimpostate dalla piattaforma solo dopo aver autorizzato l'eliminazione tramite la propria password",
+        "",
+        // sistema non raggiungibile
+        "R-38-F-O",
+        "Un utente non autenticato o il cliente che sta utilizzando la piattaforma deve essere avvisato nel caso in cui il sistema non sia raggiungibile, possibilmente specificando il motivo del malfunzionamento",
+        "",
+        // invio richiesta con dati mancanti o errati
+        "R-39-F-O",
+        "Un utente non autenticato o il cliente che sta utilizzando la piattaforma deve essere avvisato nel caso in cui la richiesta che ha inviato contenga dati mancanti o errati; nel caso sia pertinente deve anche essere specificato il problema",
+        "",
+    ),
 )
 
 == Grafico dei requisiti obbligatori soddisfatti
