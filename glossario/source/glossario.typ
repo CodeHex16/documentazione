@@ -13,7 +13,7 @@
         "Yi Hao Zhuo", "Redattore, Verificatore"
     ),
     versioni : (
-        "0.7.0","15/05/2025","Filippo Sabbadin","Aggiornamento glossario","",
+        "0.7.0","15/05/2025","Filippo Sabbadin","Aggiornamento glossario","Luca Ribon",
         "0.6.0","23/02/2025","Yi Hao Zhuo","Aggiornamento glossario","Luca Ribon",
         "0.5.1","24/01/2025","Luca Rossi","Correzioni a seguito della verifica","Ribon Luca",
         "0.5.0","18/01/2025","Luca Rossi","Aggiornamento glossario","Ribon Luca",
@@ -86,7 +86,6 @@ Sistema numerico in base 16 che utilizza i simboli 0-9 e le lettere A-F per rapp
 Il feedback è un processo di comunicazione in cui vengono fornite informazioni, opinioni o valutazioni su un determinato argomento o attività. Il feedback può essere positivo o negativo e può essere utilizzato per migliorare le prestazioni, correggere errori, rafforzare comportamenti desiderati o valutare il successo di un progetto. Il feedback è un elemento chiave nel processo di apprendimento, sviluppo e miglioramento continuo.
 == Fornitore
 Il fornitore è l'ente o l'organizzazione che fornisce beni o servizi a un committente in base a un contratto o un accordo. Il fornitore può essere un'azienda, un'istituzione, un'organizzazione non governativa o un individuo che offre prodotti o servizi specifici. Il fornitore è responsabile della realizzazione e della consegna dei beni o servizi richiesti dal committente. Nel nostro caso, il fornitore è l'ente che offre una sua versione del chatbot e dell'applicazione ai clienti.
-
 == FAQ
 Acronimo di "Frequently Asked Questions", indica una raccolta di domande e risposte frequenti su un determinato argomento.
 == Frontend
@@ -120,7 +119,6 @@ Unità di testo elaborate da un modello di intelligenza artificiale, includono p
 Un'interfaccia web è un'interfaccia utente basata su web che consente agli utenti di interagire con un'applicazione o un sistema tramite un browser web. Le interfacce web possono includere elementi come pulsanti, menu, form, tabelle e grafici per consentire agli utenti di navigare, inserire dati, visualizzare informazioni e interagire con il sistema. Le interfacce web sono progettate per essere intuitive, responsive e accessibili da diversi dispositivi e piattaforme.
 == ITS(Issue Tracking System)
 Un sistema di tracciamento delle issue è uno strumento software utilizzato per registrare, monitorare e gestire le issue all'interno di un progetto. Gli ITS consentono di creare, assegnare, commentare e risolvere le issue in modo collaborativo e organizzato. Gli ITS sono utilizzati per tenere traccia dei problemi, dei bug, delle richieste di funzionalità e delle attività all'interno di un progetto e facilitano la comunicazione e la collaborazione tra i membri del team.
-
 = J 
 == JavaScript
 Linguaggio di programmazione versatile utilizzato principalmente per sviluppare funzionalità interattive e dinamiche sulle pagine web.
@@ -130,7 +128,6 @@ Un LLM (Large Language Model) è un modello linguistico di intelligenza artifici
 = M
 == Main(Branch)
 Il branch principale è il branch principale di un repository Git, che contiene il codice sorgente stabile e funzionante del progetto. Il branch principale è spesso chiamato "main" o "master" ed è utilizzato come punto di riferimento per il codice sorgente ufficiale del progetto. Tutte le modifiche e le nuove funzionalità vengono sviluppate in branch separati e integrate nel branch principale tramite pull request.
-
 == Meeting
 Un incontro formale o informale tra due o più persone per discutere, condividere informazioni, prendere decisioni o risolvere problemi. I meeting possono essere organizzati in vari formati, come riunioni fisiche, virtuali o ibride, e hanno l'obiettivo di favorire la collaborazione e la comunicazione tra i partecipanti.
 == Memoria Locale
