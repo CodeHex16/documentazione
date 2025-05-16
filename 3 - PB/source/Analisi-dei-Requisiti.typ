@@ -175,7 +175,7 @@ nella seguente pagina web: #link("https://codehex16.github.io/glossario").
 #link("https://www.math.unipd.it/~rcardin/swea/2022/Diagrammi%20Use%20Case.pdf") _(ultima consultazione 16-05-2025)_;
 
 - Glossario:
-  - Documento: #link("https://codehex16.github.io/docs/glossario/glossario.pdf") _(versione 1.0.0)_;
+  - Documento: #link("https://codehex16.github.io/docs/glossario/glossario.pdf") _(versione 0.7.0)_;
   - Pagina web: #link("https://codehex16.github.io/glossario.html") _(ultima consultazione 16-05-2025)_;
 
 
