@@ -21,7 +21,7 @@
   "06/05/2025",
   "Filippo Sabbadin",
   "Aggiunta grafici PB nel cruscotto di valutazione delle metriche, aggiunti test unità e integrazione",
-  "Luca Ribon",
+  "",
   "1.1.0",
   "06/04/2025",
   "Filippo Sabbadin",
@@ -876,8 +876,7 @@ errori presenti erano 0, in particolare si è raggiunto un ottimo risultato negl
 ])
 Come notato nella sezione automiglioramento, è stato difficile avere un formato dei documenti omogeneo e questo ha
 portato a un aumento di diversi errori. Questo è stato risolto con l'uso di un correttore ortografico automatico e una
-maggiore comunicazione tra i membri del gruppo.
-== MPC-Indice Gulpease
+maggiore comunicazione tra i membri del gruppo.== MPC-Indice Gulpease
 === RTB
 #figure(image("../imgs/SwePdQGulpease.png", width: 100%), caption: [
   Stima dei valori dell'indice Gulpease per ogni documento durante i vari sprint.
@@ -892,7 +891,8 @@ documenti l'indice Gulpease è sopra l'ottimo per la maggior parte degli sprint.
   Stima dei valori dell'indice Gulpease per ogni documento durante i vari sprint.
 ])
 Durante la fase PB, l'indice è rimasto abbastanza stabile e non vi sono stati cambiamenti sostanziali per i documenti
-già esistenti. Invece per i documenti nuovi, cioè Specifica Tecnica (ST) e Manuale Utente (MU), si può vedere una maggiore instabilità.
+già esistenti. Invece per i documenti nuovi, cioè Specifica Tecnica (ST) e Manuale Utente (MU), si può vedere una
+maggiore instabilità.
 
 
 == MPC-Non-Calculated-Risk
