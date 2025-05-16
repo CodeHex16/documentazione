@@ -470,6 +470,97 @@ Rappresenta le statistiche di utilizzo della piattaforma.
 - ```python +positive_rating_percentage: float```: percentuale di valutazioni positive.
 - ```python +active_users: int```: numero di utenti attivi.
 
+// TODO: mancano ROUTER
+===== UserRepository
+// #figure(image("../imgs/UserRepository.png", width: 80%), caption: "Diagramma delle classi di UserRepository")
+La classe `UserRepository` è responsabile della gestione delle operazioni CRUD (Create, Read, Update, Delete) per gli utenti nel database. Interagisce con la collezione "users" in MongoDB. L'istanza del database viene ottenuta tramite _Dependency Injection_.
+
+====== Attributi
+- ```python collection: Collection```: la collezione "users" del database.
+
+====== Metodi
+- ```python +get_users() -> List[User]```: recupera tutti gli utenti presenti nel database.
+- ```python +get_by_email(user_id: str) -> User```: recupera un utente specifico in base al suo indirizzo email (che funge da `_id`).
+- ```python +create_user(user_data: schemas.User)```: inserisce un nuovo utente nel database.
+- ```python +delete_user(user_id: str)```: elimina un utente dal database in base al suo indirizzo email. Solleva un'eccezione `HTTPException` se l'utente non viene trovato o se si verifica un errore durante l'eliminazione.
+- ```python +update_user(user_id: str, user_data: schemas.UserUpdate) -> UpdateResult```: aggiorna i dati di un utente esistente. Solleva un'eccezione `HTTPException` se l'utente non viene trovato, se non vengono forniti dati per l'aggiornamento, o se i dati forniti corrispondono a quelli esistenti (nessuna modifica).
+- ```python +add_test_user()```: (Metodo di utilità) Aggiunge un utente di test predefinito al database.
+- ```python +add_test_admin()```: (Metodo di utilità) Aggiunge un utente amministratore di test predefinito al database, utilizzando variabili d'ambiente per le credenziali se disponibili.
+- ```python +get_test_user() -> User```: (Metodo di utilità) Recupera l'utente di test.
+- ```python +get_test_admin() -> User```: (Metodo di utilità) Recupera l'utente amministratore di test.
+
+
+===== ChatRepository
+// #figure(image("../imgs/ChatRepository.png", width: 80%), caption: "Diagramma delle classi di ChatRepository")
+La classe `ChatRepository` gestisce tutte le operazioni relative alle chat e ai messaggi nel database, interagendo con la collezione "chats" in MongoDB. L'istanza del database viene ottenuta tramite _Dependency Injection_.
+
+====== Attributi
+- ```python collection: Collection```: la collezione "chats" del database.
+
+====== Metodi
+- ```python +get_chat_by_user_email(user_email: str, limit: int = 100) -> List[Chat]```: recupera tutte le chat associate a un indirizzo email specifico, con un limite opzionale sul numero di chat restituite.
+- ```python +get_chat_by_id(chat_id: str, user_email: str, limit: int = 100) -> Chat```: recupera una chat specifica in base al suo ID e all'email dell'utente. È possibile specificare un limite per il numero di messaggi da includere nella chat restituita (gli ultimi `limit` messaggi).
+- ```python +initialize_chat(user_email: str) -> Chat```: crea una nuova chat per l'utente specificato, inizializzandola con un messaggio di benvenuto predefinito dal bot. Il nome della chat è impostato a "Chat senza nome" e viene registrato il timestamp di creazione.
+- ```python +delete_chat(chat_id: str, user_email: str)```: elimina una chat specifica in base al suo ID e all'email dell'utente.
+- ```python +update_chat(chat_id: str, data: dict)```: aggiorna i dati di una chat esistente.
+- ```python +add_message(chat_id: str, message: schemas.MessageCreate) -> dict```: aggiunge un nuovo messaggio a una chat esistente. Il messaggio include un ID univoco, il mittente, il contenuto, un timestamp e una valutazione iniziale (None). Restituisce i dati del messaggio aggiunto.
+- ```python +update_chat_title(chat_id: str, title: str)```: aggiorna il titolo di una chat specifica.
+- ```python +update_message_rating(chat_id: ObjectId, message_id: ObjectId, rating: bool)```: aggiorna la valutazione (positiva/negativa) di un messaggio specifico all'interno di una chat, solo se il messaggio è stato inviato dal bot.
+- ```python +get_chat_stats(start_date: Optional[str] = None, end_date: Optional[str] = None) -> Stats```: calcola e restituisce statistiche aggregate sull'utilizzo delle chat. È possibile filtrare le statistiche per un intervallo di date. Le statistiche includono: numero totale di chat, numero totale di messaggi, messaggi inviati dal chatbot, messaggi valutati, messaggi inviati dagli utenti, media messaggi per utente, media messaggi per chat, percentuale di valutazioni positive e numero di utenti attivi.
+
+
+===== DocumentRepository
+// #figure(image("../imgs/DocumentRepository.png", width: 80%), caption: "Diagramma delle classi di DocumentRepository")
+La classe `DocumentRepository` è responsabile della gestione delle operazioni CRUD per i metadati dei documenti (come titolo, percorso del file, proprietario e data di caricamento) nel database. Interagisce con la collezione "documents" in MongoDB. L'istanza del database viene ottenuta tramite _Dependency Injection_.
+
+====== Attributi
+- ```python collection: Collection```: la collezione "documents" del database.
+
+====== Metodi
+- ```python +get_documents()```: recupera tutti i documenti.
+- ```python +insert_document(owner_email: str, document: Document)```: inserisce le informazioni di un nuovo documento nel database.
+- ```python +delete_document(file_id: str)```: elimina le informazioni di un documento dal database in base al suo ID.
+
+
+===== SettingRepository
+// #figure(image("../imgs/SettingRepository.png", width: 80%), caption: "Diagramma delle classi di SettingRepository")
+La classe `SettingRepository` gestisce le impostazioni di personalizzazione globali della piattaforma. Interagisce con la collezione "settings" in MongoDB. L'istanza del database viene ottenuta tramite _Dependency Injection_. Al momento dell'inizializzazione, crea le impostazioni predefinite se non esistono.
+
+====== Attributi
+
+- ```python collection: Collection```: la collezione "settings" del database.
+
+====== Metodi
+- ```python +get_settings() -> schemas.Settings```: recupera le impostazioni globali dell'applicazione.
+- ```python +update_settings(settings: Settings)```: aggiorna le impostazioni globali dell'applicazione. Solleva un'eccezione `HTTPException` se le impostazioni non vengono trovate o se i dati forniti corrispondono a quelli esistenti.
+
+===== FaqRepository
+// #figure(image("../imgs/FaqRepository.png", width: 80%), caption: "Diagramma delle classi di FaqRepository")
+La classe `FaqRepository` è responsabile della gestione delle operazioni CRUD per le FAQ (Frequently Asked Questions) nel database. Interagisce con la collezione "faq" in MongoDB. L'istanza del database viene ottenuta tramite _Dependency Injection_.
+
+====== Attributi
+- ```python collection: Collection```: la collezione "faq" del database.
+
+====== Metodi
+- ```python +get_faqs()```: recupera tutte le FAQ presenti nel database.
+- ```python +get_faq_by_id(faq_id: ObjectId)```: recupera una FAQ specifica in base al suo ID.
+- ```python +insert_faq(faq: FAQ, author_email: str) -> ObjectId```: inserisce una nuova FAQ nel database, associandola all'email dell'autore e registrando timestamp di creazione e aggiornamento. Restituisce l'ID della FAQ inserita.
+- ```python +update_faq(faq_id: ObjectId, faq_data: FAQUpdate, author_email: str)```: aggiorna una FAQ esistente. Solleva un'eccezione `HTTPException` se la FAQ non viene trovata o se i dati forniti corrispondono a quelli esistenti. Aggiorna l'email dell'autore e il timestamp di aggiornamento.
+- ```python +delete_faq(faq_id: ObjectId)```: elimina una FAQ dal database in base al suo ID.
+
+===== EmailService
+// #figure(image("../imgs/EmailService.png", width: 80%), caption: "Diagramma delle classi di EmailService")
+La classe `EmailService` è responsabile dell'invio di email. Utilizza la libreria `fastapi-mail` e configura i parametri di connessione al server SMTP tramite variabili d'ambiente.
+
+====== Attributi
+- ```python conf: ConnectionConfig```: oggetto di configurazione per `fastapi-mail` contenente i dettagli del server SMTP.
+- ```python mail: FastMail```: istanza di `FastMail` utilizzata per inviare i messaggi.
+
+====== Metodi
+- ```python +__init__()```: costruttore della classe, inizializza `conf` leggendo le variabili d'ambiente (con valori di default) e l'oggetto `mail`.
+- ```python +send_email(to: List[str], subject: str, body: str) -> None```: invia un'email ai destinatari specificati. Solleva un'eccezione `ValueError` se la configurazione dell'email non è valida.
+- ```python +is_configuration_valid() -> bool```: controlla se le variabili d'ambiente necessarie per l'invio delle email sono state configurate.
+
 
 === LLM API
 LLM-API è il nome del API backend che si occupa della gestione dell'interazione con l'LLM. Per l'interazione con gli LLM sono state importate diverse librerie, tra queste quella principale è *_LangChain_*.
