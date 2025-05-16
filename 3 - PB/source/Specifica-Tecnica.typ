@@ -1,7 +1,14 @@
 #import "../../template/documenti.typ": *
 #import "../../template/i-figured.typ"
 
-#show: doc => documento(titolo: "Specifica Tecnica", data: [21/03/2025], ruoli: ("Matteo Bazzan", "Redattore", "Luca Ribon", "Redattore, Verificatore", "Filippo Sabbadin", "Redattore", "Luca Rossi", "Redattore"), sommario: [Specifica tecnica], versioni: ("0.5.0", "14/05/2025", "Luca Ribon, Matteo Bazzan", "Completamento parte di LLM-API", "", "0.4.0", "05/05/2025", "Matteo Bazzan", "Grafici e parti mancanti", "", "0.3.0", "20/04/2025", "Luca Ribon", "Architettura", "", "0.2.0", "10/04/2025", "Filippo Sabbadin", "Stesura sezioni iniziali", "Luca Ribon", "0.1.0", "21/03/2025", "Luca Rossi", "Bozza iniziale struttura", "Luca Ribon"), doc)
+#show: doc => documento(
+    titolo: "Specifica Tecnica",
+    data: [21/03/2025],
+    ruoli: ("Matteo Bazzan", "Redattore", "Luca Ribon", "Redattore, Verificatore", "Filippo Sabbadin", "Redattore", "Luca Rossi", "Redattore"),
+    sommario: [Specifica tecnica],
+    versioni: ("0.5.0", "14/05/2025", "Luca Ribon, Matteo Bazzan", "Completamento parte di LLM-API", "", "0.4.0", "05/05/2025", "Matteo Bazzan", "Grafici e parti mancanti", "", "0.3.0", "20/04/2025", "Luca Ribon", "Architettura", "", "0.2.0", "10/04/2025", "Filippo Sabbadin", "Stesura sezioni iniziali", "Luca Ribon", "0.1.0", "21/03/2025", "Luca Rossi", "Bozza iniziale struttura", "Luca Ribon"),
+    doc,
+)
 // spaciugo per aggiungere l'indice delle immagini
 #set page(numbering: "I")
 #counter(page).update(3)
@@ -62,8 +69,6 @@ e nella seguente pagina web: #link("https://codehex16.github.io/glossario").
 In questa sezione vengono descritte le tecnologie utilizzate per lo sviluppo del sistema, suddivise in base alla loro funzione e al loro ambito di applicazione. Ogni tecnologia è accompagnata da una breve descrizione e dalle motivazioni che hanno portato alla sua scelta.
 
 == Tecnologie per la codifica
-//Versioni prese dalle repo github delle tecnologie
-// TODO: controllare le versioni a fine progetto
 === Linguaggi
 #show figure: set block(breakable: true)
 #figure(
@@ -90,8 +95,8 @@ In questa sezione vengono descritte le tecnologie utilizzate per lo sviluppo del
         align: (x, y) => if (y > 0) { left } else { center + horizon },
         fill: (x, y) => if y == 0 { luma(190) } else if (y == 2 or y == 4) { luma(230) },
         table.header([*Nome*], [*Motivazione*], [*Versione*]),
-        "Svelte", "Scelto per la sua semplicità e leggerezza, è il framework utilizzato per il rendering delle pagine del front-end. Permette di creare UI e UX gradevoli con una struttura e semantica del codice che il gruppo ha preferito rispetto ad altri framework.", "5.25.10",
-        "SvelteKit", "Scelto per la sua integrazione con Svelte, è un framework per lo sviluppo di applicazioni web. Permette di gestire implementare funzioni come ottimizzazione delle build, routing in modo semplice.", "",
+        "Svelte", "Scelto per la sua semplicità e leggerezza, è il framework utilizzato per il rendering delle pagine del front-end. Permette di creare UI e UX gradevoli con una struttura e semantica del codice che il gruppo ha preferito rispetto ad altri framework.", "5.30.1",
+        "SvelteKit", "Scelto per la sua integrazione con Svelte, è un framework per lo sviluppo di applicazioni web. Permette di gestire implementare funzioni come ottimizzazione delle build, routing in modo semplice.", "2.21.0",
         "FastAPI", "Framework scelto per la sua facilità nell'implementazione di API REST. È utilizzato per il back-end per far comunicare tra loro i componenti software.", "0.115.12",
     ),
 )
@@ -129,13 +134,29 @@ In questa sezione vengono descritte le tecnologie utilizzate per lo sviluppo del
         "langchain_chroma", "Integrazione specifica di LangChain per l'interazione con il database vettoriale ChromaDB.", "0.2.3",
         "langchain_community", "Collezione di integrazioni e componenti della comunità per LangChain.", "0.3.23",
         "httpx", "Client HTTP asincrono per Python, utilizzato per effettuare richieste HTTP in modo non bloccante.", "0.28.1",
-        "tailwindcss", "Un framework CSS utility-first per costruire rapidamente interfacce utente personalizzate direttamente nel markup HTML.", "3.4.9",
-        "vite", "Uno strumento di build per il frontend moderno che offre un'esperienza di sviluppo estremamente veloce e bundle ottimizzati per la produzione.", "6.0.0",
-        "lucide-svelte", "Libreria di icone SVG (basate su Lucide) per componenti Svelte.", "0.468.0",
-        "marked", "Un parser Markdown per convertire Markdown in HTML.", "15.0.7",
-        "mode-watcher", "Utility per Svelte per rilevare e reagire ai cambiamenti della preferenza di tema del sistema operativo (chiaro/scuro) o per gestirla manualmente.", "0.5.0",
     ),
 )
+
+#block(breakable: false)[
+    #pseudoheading("JavaScript/TypeScript")
+    #figure(
+        caption: "Librerie JavaScript/TypeScript utilizzate",
+        table(
+            columns: (auto, 1fr, auto),
+            inset: 8pt,
+            align: (x, y) => if (y > 0) { left } else { center + horizon },
+            fill: (x, y) => if y == 0 { luma(190) } else if (y == 2 or y == 4 or y == 6) { luma(230) },
+            table.header([*Nome*], [*Motivazione*], [*Versione*]),
+            "tailwindcss", "Un framework CSS utility-first per costruire rapidamente interfacce utente personalizzate direttamente nel markup HTML.", "3.4.9",
+            "vite", "Uno strumento di build per il frontend moderno che offre un'esperienza di sviluppo estremamente veloce e bundle ottimizzati per la produzione.", "6.0.0",
+            "lucide-svelte", "Libreria di icone SVG (basate su Lucide) per componenti Svelte.", "0.468.0",
+            "marked", "Un parser Markdown per convertire Markdown in HTML.", "15.0.7",
+            "mode-watcher", "Utility per Svelte per rilevare e reagire ai cambiamenti della preferenza di tema del sistema operativo (chiaro/scuro) o per gestirla manualmente.", "0.5.0",
+            "lodash-es", "Libreria di utilità che fornisce funzioni helper modulari e performanti per la manipolazione di dati.", "4.17.21",
+            "chalk", "Libreria per la stilizzazione delle stringhe nel terminale, utile per migliorare la leggibilità degli output durante lo sviluppo.", "5.4.1",
+        ),
+    )
+]
 
 === Strumenti e servizi
 #figure(
@@ -182,7 +203,6 @@ I motivi che ci hanno portato a scegliere questa architettura sono:
 - *Principio di singola responsabilità*: ogni microservizio ha responsabilità e scopo ben definiti, facilitando la comprensione e la gestione del codice.
 
 == Flusso del sistema
-// TODO: il giro che fanno i dati tra front llm e back
 #figure(image("../imgs/flusso-dati.png", width: 85%), caption: "Flusso del sistema")
 
 - *Invio contesto*: tramite il client Suppl-AI l'utente può inviare documenti e FAQ al chatbot che verranno memorizzati nel database vettoriale.
@@ -223,52 +243,6 @@ Ogni pagina della webapp è composta da un file `+page.svelte`, e da un file `+p
 ===== Composite
 I file Svelte sono strutturati tramite il pattern _ composite_, in quanto sono composti da più componenti che possono essere riutilizzati in altre pagine.
 
-// ===== Pagina di login
-// Percorso: _/#gloss[Suppl-AI]/src/routes/login_ . \
-// La pagina di login è la prima pagina che l'utente vede quando accede alla webapp. Consente agli utenti di inserire le
-// proprie credenziali (email e password) per accedere alla piattaforma.\
-// Inoltre permette all'utente di avviare la procedura di recupero password in caso di smarrimento. \
-// Presenta una variabile costante:
-// - API_URL: contiene l'URL dell'API del database.\
-// Presenta due funzioni:
-// - _load_: controlla se l'utente è già autenticato tramite un #gloss[token] #gloss[cookie]. Se questo token esiste, reindirizza
-//   l'utente alla pagina principale.
-// - _actions_: viene eseguita quando l'utente invia il modulo di login. Prende lo username e password inseriti, e li manda
-//   attraverso una richiesta POST alla API per l'autenticazione. In caso di successo, reindirizza l'utente alla pagina
-//   principale. In caso di errore, mostra un messaggio di errore all'utente. Il cookie che mantiene l'accesso dura fino a 1
-//   settimana, finita la quale l'utente dovrà reinserire le credenziali.
-
-// ===== Homepage
-// Percorso: _/Suppl-AI/src/routes_ .\
-// La homepage è la pagina principale della webapp. Consente agli utenti di visualizzare le chat disponibili e di crearne
-// di nuove. Presenta una barra di navigazione, posta in basso per facilitarne l'utilizzo da dispositivi mobile, per accedere ad altre funzionalità della piattaforma, come la lista delle
-// chat o le informazioni del profilo.\
-// Presenta una variabile costante:
-// - API_URL: contiene l'URL dell'API del database.\
-// Presenta una funzione:
-// - _load_: controlla se l'utente è autenticato tramite un token cookie. Se questo token esiste, reindirizza l'utente alla
-//   pagina di login. Inoltre, carica le chat disponibili per l'utente autenticato e le mostra nella homepage. Ritorna il
-//   token dell'utente e la lista delle chat.
-// //da aggiungere o modificare i casi per il fornitore
-
-// ===== Pagina account utente
-// Percorso: _/Suppl-AI/src/routes/profilo_ .\
-
-// ===== Pagina chat
-// Percorso: _/Suppl-AI/src/routes/chat_ .\
-// La pagina chat mostra la conversazione tra l'utente e il chatbot. Presenta due variabili costanti:
-// - API_URL: contiene l'URL dell'API del database.
-// - LLM_URL: contiene l'URL dell'API del LLM.\
-// Presenta le seguenti funzioni:
-// - _updateChatNameIfNeeded_: se la chat inizia ad avere più di 2 messaggi, viene mandata una richiesta POST alla API
-//   dell'LLM che chiede di cambiare il titolo della chat in base al contesto. Poi viene fatta una richiesta PUT alla API del
-//   database per memorizzare il titolo.
-// - _load_: controlla se l'utente è autenticato tramite un token cookie. Se non lo è, questo viene reindirizzato alla pagina
-//   di login. La chat viene caricata tramite un metodo GET alla API del database dove vengono richiesti tutti messaggi della
-//   chat.
-// - _actions_: viene eseguita quando l'utente invia un messaggio. Viene fatta una richiesta POST alla API del LLM per
-//   elaborare il messaggio e generare una risposta. La risposta viene poi mostrata nella chat. In caso di errore, la
-//   funzione ritorna un messaggio di errore.
 
 == Architettura Backend
 Per lo sviluppo delle API backend sono stati utilizzati *_FastAPI_* e *_Python_*.
@@ -317,6 +291,9 @@ Infatti le classi repository implementano le operazioni CRUD e vengono utilizzat
 ===== Singleton
 Il pattern _singleton_ è stato utilizzato per garantire che ci sia una sola istanza del database in tutta l'applicazione. Questo è importante per evitare conflitti e garantire la coerenza dei dati.
 
+===== Dependency Injection
+Il pattern *_dependency injection_* è un pattern strutturale che consente di includere le dipendenze necessarie in una classe, invece che crearle all'interno della classe stessa. Questo pattern permette di ridurre l'accoppiamento tra le classi e di rendere il codice più modulare.
+
 
 ===== Service
 I service sono delle classi che offrono funzionalità di business logic, come la gestione dell'autenticazione e l'invio di email. I service sono:
@@ -326,240 +303,327 @@ I service sono delle classi che offrono funzionalità di business logic, come la
 ==== Diagramma delle classi
 #figure(image("../imgs/diagramma-database-api.png", width: 118%), caption: "Diagramma delle classi di Database-API")
 
-//TODO: da controllare il diagramma
 ===== DTO
-#figure(image("../imgs/DTO-database-api.png", width: 90%), caption: "Diagramma delle classi dei DTO di Database-API")
+#figure(image("../imgs/database-api/DTO.png", width: 90%), caption: "Diagramma delle classi dei DTO di Database-API")
 I DTO (Data Transfer Object) sono oggetti utilizzati per trasferire dati tra le diverse parti del sistema, in particolare tra il client e il server Database-API. Semplificano la comunicazione e la validazione dei dati.
 
 ====== User
 Rappresenta un utente nel sistema.
-- ```python +id: str```: l'indirizzo email dell'utente, utilizzato come identificativo univoco nel database.
-- ```python +name: str```: il nome dell'utente.
-- ```python +hashed_password: str```: la password dell'utente, memorizzata come hash.
-- ```python +is_initialized: bool```: indica se l'utente ha completato la configurazione iniziale (cambio password al primo accesso). Default: `False`.
-- ```python +remember_me: bool```: indica se l'utente ha scelto di essere ricordato per accessi futuri. Default: `False`.
-- ```python +scopes: List[str]```: lista dei permessi associati all'utente (es. "user", "admin"). Default: `["user"]`.
+- ```python +id: str```: l'indirizzo email dell'utente, utilizzato come identificativo univoco nel database;
+- ```python +name: str```: il nome dell'utente;
+- ```python +hashed_password: str```: la password dell'utente, memorizzata come hash
+- ```python +is_initialized: bool```: indica se l'utente ha completato la configurazione iniziale (cambio password al primo accesso). Default: `False`;
+- ```python +remember_me: bool```: indica se l'utente ha scelto di essere ricordato per accessi futuri. Default: `False`;
+- ```python +scopes: List[str]```: lista dei permessi associati all'utente (es. "user", "admin"). Default: `["user"]`;
 
 ====== UserAuth
 Utilizzato per l'autenticazione e operazioni che richiedono la password corrente.
-- ```python +current_password: str```: la password attuale dell'utente.
+- ```python +current_password: str```: la password attuale dell'utente;
 
 ====== UserUpdatePassword
 Generalizzazione della classe UserAuth. Utilizzato per l'aggiornamento della password dell'utente.
-- ```python +password: str```: la nuova password scelta dall'utente. Deve rispettare i criteri di complessità definiti.
+- ```python +password: str```: la nuova password scelta dall'utente. Deve rispettare i criteri di complessità definiti;
 
 ====== UserForgotPassword
 Utilizzato per la richiesta di recupero password.
-- ```python +email: str```: l'indirizzo email dell'utente che ha dimenticato la password.
+- ```python +email: str```: l'indirizzo email dell'utente che ha dimenticato la password;
 
 ====== UserUpdate
 Utilizzato per aggiornare i dati di un utente. Tutti i campi sono opzionali.
-- ```python +id: str```: l'identificativo dell'utente da aggiornare.
-- ```python +name: Optional[str]```: il nuovo nome dell'utente.
-- ```python +password: Optional[str]```: la nuova password dell'utente.
-- ```python +is_initialized: Optional[bool]```: il nuovo stato di inizializzazione.
-- ```python +remember_me: Optional[bool]```: il nuovo stato per "ricordami".
-- ```python +scopes: Optional[List[str]]```: la nuova lista di permessi.
-- ```python +admin_password: Optional[str]```: la password dell'amministratore, richiesta per alcune modifiche.
+- ```python +id: str```: l'identificativo dell'utente da aggiornare;
+- ```python +name: Optional[str]```: il nuovo nome dell'utente;
+- ```python +password: Optional[str]```: la nuova password dell'utente;
+- ```python +is_initialized: Optional[bool]```: il nuovo stato di inizializzazione;
+- ```python +remember_me: Optional[bool]```: il nuovo stato per "ricordami";
+- ```python +scopes: Optional[List[str]]```: la nuova lista di permessi;
+- ```python +admin_password: Optional[str]```: la password dell'amministratore, richiesta per alcune modifiche;
 
 ====== UserDelete
 Utilizzato per eliminare un utente.
-- ```python +id: str```: l'identificativo dell'utente da eliminare.
+- ```python +id: str```: l'identificativo dell'utente da eliminare;
 
 ====== UserCreate
 Utilizzato per la creazione di un nuovo utente.
-- ```python +name: str```: il nome del nuovo utente.
-- ```python +email: str```: l'indirizzo email del nuovo utente.
-- ```python +scopes: Optional[List[str]]```: la lista di permessi per il nuovo utente.
+- ```python +name: str```: il nome del nuovo utente;
+- ```python +email: str```: l'indirizzo email del nuovo utente;
+- ```python +scopes: Optional[List[str]]```: la lista di permessi per il nuovo utente;
 
 ====== Token
 Rappresenta un token di accesso JWT.
-- ```python +access_token: str```: il token JWT.
-- ```python +token_type: str```: il tipo di token (solitamente "bearer").
-- ```python +expires_in: Optional[int]```: la durata di validità del token in secondi.
+- ```python +access_token: str```: il token JWT;
+- ```python +token_type: str```: il tipo di token (solitamente "bearer");
+- ```python +expires_in: Optional[int]```: la durata di validità del token in secondi;
 
 
 ====== ChatResponse
 Rappresenta i dati di una chat restituiti in una lista.
-- ```python +id: str```: l'identificativo univoco della chat.
-- ```python +name: str```: il nome della chat.
-- ```python +user_email: str```: l'email dell'utente proprietario della chat.
-- ```python +created_at: Optional[str]```: la data e ora di creazione della chat.
+- ```python +id: str```: l'identificativo univoco della chat;
+- ```python +name: str```: il nome della chat;
+- ```python +user_email: str```: l'email dell'utente proprietario della chat;
+- ```python +created_at: Optional[str]```: la data e ora di creazione della chat;
 
 ====== ChatList
 Contiene una lista di chat.
-- ```python +chats: List[ChatResponse]```: la lista degli oggetti ChatResponse.
+- ```python +chats: List[ChatResponse]```: la lista degli oggetti ChatResponse;
 
 ====== Message
 Rappresenta un singolo messaggio all'interno di una chat.
-- ```python +id: ObjectId```: l'identificativo univoco del messaggio.
-- ```python +sender: str```: il mittente del messaggio (es. "user" o "chatbot").
-- ```python +content: str```: il contenuto testuale del messaggio.
-- ```python +timestamp: str```: la data e ora di invio del messaggio.
-- ```python +rating: Optional[bool]```: la valutazione del messaggio (True per positivo, False per negativo, None se non valutato).
+- ```python +id: ObjectId```: l'identificativo univoco del messaggio;
+- ```python +sender: str```: il mittente del messaggio (es. "user" o "chatbot");
+- ```python +content: str```: il contenuto testuale del messaggio;
+- ```python +timestamp: str```: la data e ora di invio del messaggio;
+- ```python +rating: Optional[bool]```: la valutazione del messaggio (True per positivo, False per negativo, None se non valutato);
 
 ====== ChatMessages
 Rappresenta una chat con la sua lista di messaggi.
-- ```python +name: str```: il nome della chat.
-- ```python +messages: List[Message]```: la lista dei messaggi della chat.
+- ```python +name: str```: il nome della chat;
+- ```python +messages: List[Message]```: la lista dei messaggi della chat;
 
 ====== MessageCreate
 Utilizzato per creare un nuovo messaggio.
-- ```python +content: str```: il contenuto del messaggio.
-- ```python +sender: str```: il mittente del messaggio. Default: "user".
-- ```python +rating: Optional[bool]```: la valutazione iniziale del messaggio.
+- ```python +content: str```: il contenuto del messaggio;
+- ```python +sender: str```: il mittente del messaggio. Default: "user";
+- ```python +rating: Optional[bool]```: la valutazione iniziale del messaggio;
 
 ====== MessageRatingUpdate
 Utilizzato per aggiornare la valutazione di un messaggio.
-- ```python +rating: Optional[bool]```: la nuova valutazione del messaggio.
+- ```python +rating: Optional[bool]```: la nuova valutazione del messaggio;
 
 ====== Document
 Rappresenta le informazioni base di un documento.
-- ```python +title: str```: il titolo del documento.
-- ```python +file_path: str```: il percorso del file del documento nel sistema.
+- ```python +title: str```: il titolo del documento;
+- ```python +file_path: str```: il percorso del file del documento nel sistema;
 
 
 ====== DocumentResponse
 Generalizzazione della classe Document. Rappresenta un documento con informazioni aggiuntive restituito dall'API.
-- ```python +id: ObjectId```: l'identificativo univoco del documento .
-- ```python +owner_email: EmailStr```: l'email del proprietario del documento.
-- ```python +uploaded_at: str```: la data e ora di caricamento del documento.
+- ```python +id: ObjectId```: l'identificativo univoco del documento ;
+- ```python +owner_email: EmailStr```: l'email del proprietario del documento;
+- ```python +uploaded_at: str```: la data e ora di caricamento del documento;
 
 ====== DocumentDelete
 Utilizzato per specificare l'ID di un documento da eliminare.
-- ```python +id: str```: l'identificativo del documento da eliminare.
+- ```python +id: str```: l'identificativo del documento da eliminare;
 
 ====== FAQ
 Rappresenta una singola FAQ (Frequently Asked Question).
-- ```python +title: str```: il titolo della FAQ (massimo 30 caratteri).
-- ```python +question: str```: la domanda della FAQ.
-- ```python +answer: str```: la risposta alla FAQ.
+- ```python +title: str```: il titolo della FAQ (massimo 30 caratteri);
+- ```python +question: str```: la domanda della FAQ;
+- ```python +answer: str```: la risposta alla FAQ;
 
 ====== FAQUpdate
 Utilizzato per aggiornare una FAQ esistente. Tutti i campi sono opzionali.
-- ```python +title: Optional[str]```: il nuovo titolo della FAQ (massimo 30 caratteri).
-- ```python +question: Optional[str]```: la nuova domanda della FAQ.
-- ```python +answer: Optional[str]```: la nuova risposta della FAQ.
+- ```python +title: Optional[str]```: il nuovo titolo della FAQ (massimo 30 caratteri);
+- ```python +question: Optional[str]```: la nuova domanda della FAQ;
+- ```python +answer: Optional[str]```: la nuova risposta della FAQ;
 
 ====== FAQResponse
 Generalizzazione della classe FAQ. Rappresenta una FAQ con informazioni aggiuntive restituita dall'API.
-- ```python +id: ObjectId```: l'identificativo univoco della FAQ nel database.
-- ```python +created_at: str```: la data e ora di creazione della FAQ.
-- ```python +updated_at: str```: la data e ora dell'ultimo aggiornamento della FAQ.
+- ```python +id: ObjectId```: l'identificativo univoco della FAQ nel database;
+- ```python +created_at: str```: la data e ora di creazione della FAQ;
+- ```python +updated_at: str```: la data e ora dell'ultimo aggiornamento della FAQ;
 
 ====== EmailSchema
 Utilizzato per inviare una lista di indirizzi email.
-- ```python +email: List[str]```: una lista di indirizzi email.
+- ```python +email: List[str]```: una lista di indirizzi email;
 
 ====== Settings
 Rappresenta le impostazioni di personalizzazione della piattaforma. Tutti i campi sono opzionali.
-- ```python +color_primary: Optional[str]```: il colore primario dell'interfaccia.
-- ```python +color_primary_hover: Optional[str]```: il colore primario al passaggio del mouse.
-- ```python +color_primary_text: Optional[str]```: il colore del testo per elementi con colore primario.
-- ```python +message_history: Optional[int]```: la durata (in giorni o numero di messaggi, da definire) per cui conservare lo storico dei messaggi.
+- ```python +color_primary: Optional[str]```: il colore primario dell'interfaccia;
+- ```python +color_primary_hover: Optional[str]```: il colore primario al passaggio del mouse;
+- ```python +color_primary_text: Optional[str]```: il colore del testo per elementi con colore primario;
+- ```python +message_history: Optional[int]```: la durata (in giorni o numero di messaggi, da definire) per cui conservare lo storico dei messaggi;
 
 ====== Stats
 Rappresenta le statistiche di utilizzo della piattaforma.
-- ```python +total_chats: int```: numero totale di chat.
-- ```python +total_messages: int```: numero totale di messaggi.
-- ```python +total_chatbot_messages: int```: numero totale di messaggi inviati dal chatbot.
-- ```python +total_rated_messages: int```: numero totale di messaggi valutati.
-- ```python +total_user_messages: int```: numero totale di messaggi inviati dagli utenti.
-- ```python +average_messages_per_chat: float```: media di messaggi per chat.
-- ```python +average_messages_per_user: float```: media di messaggi per utente.
-- ```python +positive_rating_percentage: float```: percentuale di valutazioni positive.
-- ```python +active_users: int```: numero di utenti attivi.
+- ```python +total_chats: int```: numero totale di chat;
+- ```python +total_messages: int```: numero totale di messaggi;
+- ```python +total_chatbot_messages: int```: numero totale di messaggi inviati dal chatbot;
+- ```python +total_rated_messages: int```: numero totale di messaggi valutati;
+- ```python +total_user_messages: int```: numero totale di messaggi inviati dagli utenti;
+- ```python +average_messages_per_chat: float```: media di messaggi per chat;
+- ```python +average_messages_per_user: float```: media di messaggi per utente;
+- ```python +positive_rating_percentage: float```: percentuale di valutazioni positive;
+- ```python +active_users: int```: numero di utenti attivi;
 
-// TODO: mancano ROUTER
-===== UserRepository
-// #figure(image("../imgs/UserRepository.png", width: 80%), caption: "Diagramma delle classi di UserRepository")
-La classe `UserRepository` è responsabile della gestione delle operazioni CRUD (Create, Read, Update, Delete) per gli utenti nel database. Interagisce con la collezione "users" in MongoDB. L'istanza del database viene ottenuta tramite _Dependency Injection_.
-
+===== AuthRouter
+#figure(image("../imgs/database-api/AuthRouter.png", width: 90%), caption: "Diagramma delle classi di AuthRouter")
+La classe `AuthRouter` gestisce le operazioni di autenticazione e autorizzazione degli utenti. Utilizza il pacchetto `fastapi.security` per implementare l'autenticazione basata su token JWT. Le operazioni principali includono la registrazione, il login, il recupero della password e la modifica della password.
+I metodi della classe UserRepository vengono utilizzati tramite l'oggetto restituito dal metodo ```python UserRepository.get_user_repository()``` (*Dependency Injection*).
 ====== Attributi
-- ```python collection: Collection```: la collezione "users" del database.
-
+- ```python router: APIRouter```: l'oggetto del modulo fastapi che permette di definire le API route;
 ====== Metodi
-- ```python +get_users() -> List[User]```: recupera tutti gli utenti presenti nel database.
-- ```python +get_by_email(user_id: str) -> User```: recupera un utente specifico in base al suo indirizzo email (che funge da `_id`).
-- ```python +create_user(user_data: schemas.User)```: inserisce un nuovo utente nel database.
-- ```python +delete_user(user_id: str)```: elimina un utente dal database in base al suo indirizzo email. Solleva un'eccezione `HTTPException` se l'utente non viene trovato o se si verifica un errore durante l'eliminazione.
-- ```python +update_user(user_id: str, user_data: schemas.UserUpdate) -> UpdateResult```: aggiorna i dati di un utente esistente. Solleva un'eccezione `HTTPException` se l'utente non viene trovato, se non vengono forniti dati per l'aggiornamento, o se i dati forniti corrispondono a quelli esistenti (nessuna modifica).
-- ```python +add_test_user()```: (Metodo di utilità) Aggiunge un utente di test predefinito al database.
-- ```python +add_test_admin()```: (Metodo di utilità) Aggiunge un utente amministratore di test predefinito al database, utilizzando variabili d'ambiente per le credenziali se disponibili.
-- ```python +get_test_user() -> User```: (Metodo di utilità) Recupera l'utente di test.
-- ```python +get_test_admin() -> User```: (Metodo di utilità) Recupera l'utente amministratore di test.
+- ```python +security_check()```: verifica se è stata impostata la SECRET_KEY_JWT utilizzata per la generazione dei token JWT;
+- ```python +authenticate_user(email: str, password: str) -> User```: autentica un utente in base all'email e alla password fornita; restituisce l'oggetto User se l'autenticazione ha successo;
+- ```python +check_user_initialized(token: str, user_repo: UserRepository) -> bool```: ritorna true se l'utente ha completato la configurazione iniziale (cambio password al primo accesso), altrimenti false;
+- ```python +create_access_token(data: dict, scopes: List[str], expires_delta: Optional[timedelta] = None) -> str```: ritorna un token di accesso JWT che contiene i dati forniti e durata uguale a expires_delta se specificata;
+- ```python +verify_token(token: str, required_scopes: List[str] = None) -> str```: verifica la validità di un token JWT e restituisce i dati contenuti nel token se valido;
+- ```python +verify_user(token: str) -> str```: verifica se il token è corretto e, se valido, restituisce il contenuto del token;
+- ```python +verify_admin(token: str) -> str```: verifica se il token è corretto e, se valido, verifica che il token contenga l'amministratore tra i ruoli; se il token è quello di un amministratore, restituisce il contenuto del token;
+- ```python +login_for_access_token(form_data: OAuth2PasswordRequestForm, remember_me: bool = False)```: metodo accessibile tramite API che verifica le credenziali dell'utente, inizializza i permessi, aggiorna la flag remember_me nel database e, se l'autenticazione ha successo, restituisce un token JWT con durata che dipende dalla flag remember_me;
+- ```python +verify_user_token(token: str)```: metodo accessibile tramite API che verifica la validità del token JWT e restituisce i permessi dell'utente se il token è valido;
+
+====== ChatRouter
+#figure(image("../imgs/database-api/ChatRouter.png", width: 80%), caption: "Diagramma delle classi di ChatRouter")
+La classe `ChatRouter` gestisce le operazioni relative alle chat, inclusa la creazione, il recupero e l'aggiornamento delle chat e dei messaggi. Le operazioni di creazione e aggiornamento richiedono l'autenticazione dell'utente (`Depends(verify_user)`), mentre le operazioni di eliminazione richiedono privilegi di amministratore (`Depends(verify_admin)`). \
+Le interazioni con il database sono demandate all'oggetto `ChatRepository` che viene ottenuto tramite il metodo ```python ChatRepository.get_chat_repository()``` (*Dependency Injection*).
+====== Attributi
+- ```python router: APIRouter```: l'oggetto del modulo `fastapi` che permette di definire le API route;
+====== Metodi
+- ```python +get_new_chat()```: crea una nuova chat, per l'utente autenticato, di cui restituisce l'id;
+- ```python +get_chats()```: ritorna la lista delle chat dell'utente autenticato;
+- ```python +change_chat_name(chat_id: str, new_name: str)```: cambia il nome della chat chat_id con il nuovo nome new_name;
+- ```python +delete_chat(chat_id: str)```: elimina la chat con l'id chat_id;
+- ```python +add_message_to_chat(chat_id: str, message: MessageCreate)```: aggiunge un nuovo messaggio alla chat con l'id chat_idl; i dati del messaggio sono forniti tramite l'oggetto message;
+- ```python +get_chat_messages(chat_id: str, limit: int)```: ritorna i messaggi della chat con l'id chat_id; se limit è definito ritorna gli ultimi n messaggi della chat, dove n è il valore di limit;
+- ```python +rate_message(chat_id: str, message_id: str, rating: MessageRatingUpdate)```: aggiorna la valutazione del messaggio con l'id message_id nella chat chat_id; la valutazione è fornita tramite l'oggetto rating, può essere True (valutazione positiva), False (valutazione negativa) o None (non valutato);
+- ```python +get_global_stats(start_data: str = None, end_date: str = None)```: ritorna le statistiche globali del sistema, come il numero totale di chat, messaggi, valutazioni; solo gli admin possono utilizzare questo metodo;
+
+===== DocumentRouter
+#figure(image("../imgs/database-api/DocumentRouter.png", width: 70%), caption: "Diagramma delle classi di DocumentRouter")
+La classe `DocumentRouter` gestisce le operazioni relative ai documenti, come il caricamento, il recupero e l'eliminazione. Le operazioni di caricamento e recupero dei documenti richiedono privilegi di amministratore (`Depends(verify_admin)`). L'eliminazione di un documento richiede privilegi di amministratore e la conferma della password dell'amministratore. Le interazioni con il database per i metadati dei documenti sono demandate a `DocumentRepository`, mentre la verifica delle credenziali dell'amministratore è gestita tramite `UserRepository` e la funzione `authenticate_user`.
+====== Attributi
+- ```python router: APIRouter```: l'oggetto del modulo `fastapi` che permette di definire le API route;
+====== Metodi
+- ```python +upload_document(document: Document)```: carica un nuovo documento. Richiede privilegi di amministratore;
+- ```python +get_documents() -> List[Document]```: restituisce una lista di tutti i documenti. Richiede privilegi di amministratore;
+- ```python +delete_document(file: DocumentDelete)```: elimina un documento specificato. Richiede privilegi di amministratore e la password dell'amministratore che esegue l'operazione;
+
+
+===== UserRouter
+#figure(image("../imgs/database-api/UserRouter.png", width: 70%), caption: "Diagramma delle classi di UserRouter")
+La classe `UserRouter` gestisce le chiamate alle operazioni relative agli utenti, inclusa la registrazione, il recupero dei dati, l'aggiornamento e l'eliminazione. Gestisce anche le funzionalità di modifica e reset della password. Molte operazioni richiedono privilegi di amministratore, verificati tramite `Depends(verify_admin)`, mentre altre richiedono solo l'autenticazione dell'utente (`Depends(verify_user)`). Le interazioni con il database sono demandate a `UserRepository`.
+====== Attributi
+- ```python router: APIRouter```: l'oggetto del modulo `fastapi` che permette di definire le API route;
+====== Metodi
+- ```python +register_user(user_data: UserCreate)```: registra un nuovo utente. Richiede privilegi di amministratore. Invia un'email con una password temporanea all'utente registrato, per farlo utilizza `EmailService`;
+- ```python +get_users() -> List[User]```: restituisce una lista di tutti gli utenti registrati. Richiede privilegi di amministratore;
+- ```python +get_user() -> User```: restituisce i dati dell'utente che effettua la richiesta (utente autenticato);
+- ```python +update_user(user_new_data: UserUpdate)```: aggiorna i dati di un utente specificato. Richiede privilegi di amministratore e la password dell'amministratore che esegue l'operazione;
+- ```python +delete_user(delete_user: UserDelete, admin: UserAuth)```: elimina un utente specificato. Richiede privilegi di amministratore e la password dell'amministratore che esegue l'operazione;
+- ```python +update_password(user_data: UserUpdatePassword)```: aggiorna la password dell'utente autenticato. Richiede la password corrente dell'utente;
+- ```python +reset_password(current_user: User)```: reimposta la password per l'utente identificato tramite email. Invia un'email con la nuova password temporanea;
+
+
+===== SettingRouter
+#figure(image("../imgs/database-api/SettingRouter.png", width: 50%), caption: "Diagramma delle classi di SettingRouter")
+La classe `SettingRouter` gestisce le operazioni relative alle impostazioni globali dell'applicazione. Permette di recuperare le impostazioni correnti e di aggiornarle. La lettura delle impostazioni è accessibile pubblicamente, mentre la modifica richiede privilegi di amministratore (`Depends(verify_admin)`). Le operazioni sui dati sono demandate a `SettingRepository`.
+====== Attributi
+- ```python router: APIRouter```: gestisce le chiamate alleggetto del modulo `fastapi` che permette di definire le API route;
+====== Metodi
+- ```python +get_settings() -> Settings```: restituisce le impostazioni correnti dell'applicazione;
+- ```python +update_settings(settings: Settings)```: aggiorna le impostazioni dell'applicazione. Richiede privilegi di amministratore;
+
+===== FAQRouter
+#figure(image("../imgs/database-api/FAQRouter.png", width: 70%), caption: "Diagramma delle classi di FaqRouter")
+La classe `FAQRouter` gestisce le chiamate alle operazioni per l'accesso, la modifica e l'eliminazione delle FAQ.
+L'accesso per la lettura delle FAQ richiede l'autenticazione dell'utente (`Depends(verify_user)`), mentre le operazioni di creazione, modifica ed eliminazione richiedono privilegi di amministratore (`Depends(verify_admin)`). Interagisce con `FaqRepository` per la persistenza dei dati e con `UserRepository` per la verifica delle credenziali dell'amministratore durante l'eliminazione.
+====== Attributi
+- ```python router: APIRouter```: l'oggetto del modulo `fastapi` che permette di definire le API route;
+====== Metodi
+- ```python +create_faq(faq: FAQ)```: crea una nuova FAQ. Richiede privilegi di amministratore;
+- ```python +get_faqs()```: restituisce una lista di tutte le FAQ. Richiede l'autenticazione dell'utente;
+- ```python +update_faq(faq_id: str, faq: FAQUpdate)```: aggiorna una FAQ esistente, identificata dal suo `faq_id`. Richiede privilegi di amministratore;
+- ```python +delete_faq(faq_id: str, admin: UserAuth)```: elimina una FAQ esistente, identificata dal suo `faq_id`. Richiede privilegi di amministratore e la password dell'amministratore che esegue l'operazione;
+
+
+
+===== UserRepository
+#figure(image("../imgs/database-api/UserRepository.png", width: 60%), caption: "Diagramma delle classi di UserRepository")
+La classe `UserRepository` è responsabile della gestione delle operazioni CRUD (Create, Read, Update, Delete) per gli utenti nel database. Interagisce con la collezione "users" in MongoDB. L'istanza del database viene ottenuta tramite _Dependency Injection_.
+====== Attributi
+- ```python collection: Collection```: la collezione "users" del database;
+====== Metodi
+- ```python +__init__(database)```: inizializza il repository con una connessione al database;
+- ```python +get_users() -> List[User]```: recupera tutti gli utenti presenti nel database;
+- ```python +get_by_email(user_id: str) -> User```: recupera un utente specifico in base al suo indirizzo email (che funge da `_id`);
+- ```python +create_user(user_data: User)```: inserisce un nuovo utente nel database;
+- ```python +delete_user(user_id: str)```: elimina un utente dal database in base al suo indirizzo email. Solleva un'eccezione `HTTPException` se l'utente non viene trovato o se si verifica un errore durante l'eliminazione;
+- ```python +update_user(user_id: str, user_data: schemas.UserUpdate) -> UpdateResult```: aggiorna i dati di un utente esistente. Solleva un'eccezione `HTTPException` se l'utente non viene trovato, se non vengono forniti dati per l'aggiornamento, o se i dati forniti corrispondono a quelli esistenti (nessuna modifica);
+- ```python +add_test_user()```: (Metodo di utilità) Aggiunge un utente di test predefinito al database;
+- ```python +add_test_admin()```: (Metodo di utilità) Aggiunge un utente amministratore di test predefinito al database, utilizzando variabili d'ambiente per le credenziali se disponibili;
+- ```python +get_test_user() -> User```: (Metodo di utilità) Recupera l'utente di test;
+- ```python +get_test_admin() -> User```: (Metodo di utilità) Recupera l'utente amministratore di test;
 
 
 ===== ChatRepository
-// #figure(image("../imgs/ChatRepository.png", width: 80%), caption: "Diagramma delle classi di ChatRepository")
+#figure(image("../imgs/database-api/ChatRepository.png", width: 80%), caption: "Diagramma delle classi di ChatRepository")
 La classe `ChatRepository` gestisce tutte le operazioni relative alle chat e ai messaggi nel database, interagendo con la collezione "chats" in MongoDB. L'istanza del database viene ottenuta tramite _Dependency Injection_.
 
 ====== Attributi
-- ```python collection: Collection```: la collezione "chats" del database.
+- ```python collection: Collection```: la collezione "chats" del database;
 
 ====== Metodi
-- ```python +get_chat_by_user_email(user_email: str, limit: int = 100) -> List[Chat]```: recupera tutte le chat associate a un indirizzo email specifico, con un limite opzionale sul numero di chat restituite.
-- ```python +get_chat_by_id(chat_id: str, user_email: str, limit: int = 100) -> Chat```: recupera una chat specifica in base al suo ID e all'email dell'utente. È possibile specificare un limite per il numero di messaggi da includere nella chat restituita (gli ultimi `limit` messaggi).
-- ```python +initialize_chat(user_email: str) -> Chat```: crea una nuova chat per l'utente specificato, inizializzandola con un messaggio di benvenuto predefinito dal bot. Il nome della chat è impostato a "Chat senza nome" e viene registrato il timestamp di creazione.
-- ```python +delete_chat(chat_id: str, user_email: str)```: elimina una chat specifica in base al suo ID e all'email dell'utente.
-- ```python +update_chat(chat_id: str, data: dict)```: aggiorna i dati di una chat esistente.
-- ```python +add_message(chat_id: str, message: schemas.MessageCreate) -> dict```: aggiunge un nuovo messaggio a una chat esistente. Il messaggio include un ID univoco, il mittente, il contenuto, un timestamp e una valutazione iniziale (None). Restituisce i dati del messaggio aggiunto.
-- ```python +update_chat_title(chat_id: str, title: str)```: aggiorna il titolo di una chat specifica.
-- ```python +update_message_rating(chat_id: ObjectId, message_id: ObjectId, rating: bool)```: aggiorna la valutazione (positiva/negativa) di un messaggio specifico all'interno di una chat, solo se il messaggio è stato inviato dal bot.
-- ```python +get_chat_stats(start_date: Optional[str] = None, end_date: Optional[str] = None) -> Stats```: calcola e restituisce statistiche aggregate sull'utilizzo delle chat. È possibile filtrare le statistiche per un intervallo di date. Le statistiche includono: numero totale di chat, numero totale di messaggi, messaggi inviati dal chatbot, messaggi valutati, messaggi inviati dagli utenti, media messaggi per utente, media messaggi per chat, percentuale di valutazioni positive e numero di utenti attivi.
+- ```python +get_chat_by_user_email(user_email: str, limit: int = 100) -> List[Chat]```: recupera tutte le chat associate a un indirizzo email specifico, con un limite opzionale sul numero di chat restituite;
+- ```python +get_chat_by_id(chat_id: str, user_email: str, limit: int = 100) -> Chat```: recupera una chat specifica in base al suo ID e all'email dell'utente. È possibile specificare un limite per il numero di messaggi da includere nella chat restituita (gli ultimi `limit` messaggi);
+- ```python +initialize_chat(user_email: str) -> Chat```: crea una nuova chat per l'utente specificato, inizializzandola con un messaggio di benvenuto predefinito dal bot. Il nome della chat è impostato a "Chat senza nome" e viene registrato il timestamp di creazione;
+- ```python +delete_chat(chat_id: str, user_email: str)```: elimina una chat specifica in base al suo ID e all'email dell'utente;
+- ```python +update_chat(chat_id: str, data: dict)```: aggiorna i dati di una chat esistente;
+- ```python +add_message(chat_id: str, message: schemas.MessageCreate) -> dict```: aggiunge un nuovo messaggio a una chat esistente. Il messaggio include un ID univoco, il mittente, il contenuto, un timestamp e una valutazione iniziale (None). Restituisce i dati del messaggio aggiunto;
+- ```python +update_chat_title(chat_id: str, title: str)```: aggiorna il titolo di una chat specifica;
+- ```python +update_message_rating(chat_id: ObjectId, message_id: ObjectId, rating: bool)```: aggiorna la valutazione (positiva/negativa) di un messaggio specifico all'interno di una chat, solo se il messaggio è stato inviato dal bot;
+- ```python +get_chat_stats(start_date: Optional[str] = None, end_date: Optional[str] = None) -> Stats```: calcola e restituisce statistiche aggregate sull'utilizzo delle chat. È possibile filtrare le statistiche per un intervallo di date. Le statistiche includono: numero totale di chat, numero totale di messaggi, messaggi inviati dal chatbot, messaggi valutati, messaggi inviati dagli utenti, media messaggi per utente, media messaggi per chat, percentuale di valutazioni positive e numero di utenti attivi;
 
 
 ===== DocumentRepository
-// #figure(image("../imgs/DocumentRepository.png", width: 80%), caption: "Diagramma delle classi di DocumentRepository")
+#figure(image("../imgs/database-api/DocumentRepository.png", width: 70%), caption: "Diagramma delle classi di DocumentRepository")
 La classe `DocumentRepository` è responsabile della gestione delle operazioni CRUD per i metadati dei documenti (come titolo, percorso del file, proprietario e data di caricamento) nel database. Interagisce con la collezione "documents" in MongoDB. L'istanza del database viene ottenuta tramite _Dependency Injection_.
 
 ====== Attributi
-- ```python collection: Collection```: la collezione "documents" del database.
+- ```python collection: Collection```: la collezione "documents" del database;
 
 ====== Metodi
-- ```python +get_documents()```: recupera tutti i documenti.
-- ```python +insert_document(owner_email: str, document: Document)```: inserisce le informazioni di un nuovo documento nel database.
-- ```python +delete_document(file_id: str)```: elimina le informazioni di un documento dal database in base al suo ID.
+- ```python +get_documents()```: recupera tutti i documenti;
+- ```python +insert_document(owner_email: str, document: Document)```: inserisce le informazioni di un nuovo documento nel database;
+- ```python +delete_document(file_id: str)```: elimina le informazioni di un documento dal database in base al suo ID;
 
 
 ===== SettingRepository
-// #figure(image("../imgs/SettingRepository.png", width: 80%), caption: "Diagramma delle classi di SettingRepository")
-La classe `SettingRepository` gestisce le impostazioni di personalizzazione globali della piattaforma. Interagisce con la collezione "settings" in MongoDB. L'istanza del database viene ottenuta tramite _Dependency Injection_. Al momento dell'inizializzazione, crea le impostazioni predefinite se non esistono.
+#figure(image("../imgs/database-api/SettingRepository.png", width: 70%), caption: "Diagramma delle classi di SettingRepository")
+La classe `SettingRepository` gestisce le impostazioni di personalizzazione globali della piattaforma. Interagisce con la collezione "settings" in MongoDB. L'istanza del database viene ottenuta tramite _Dependency Injection_. Al momento dell'inizializzazione, crea le impostazioni predefinite se non esistono;
 
 ====== Attributi
 
-- ```python collection: Collection```: la collezione "settings" del database.
+- ```python collection: Collection```: la collezione "settings" del database;
 
 ====== Metodi
-- ```python +get_settings() -> schemas.Settings```: recupera le impostazioni globali dell'applicazione.
-- ```python +update_settings(settings: Settings)```: aggiorna le impostazioni globali dell'applicazione. Solleva un'eccezione `HTTPException` se le impostazioni non vengono trovate o se i dati forniti corrispondono a quelli esistenti.
+- ```python +get_settings() -> schemas.Settings```: recupera le impostazioni globali dell'applicazione;
+- ```python +update_settings(settings: Settings)```: aggiorna le impostazioni globali dell'applicazione. Solleva un'eccezione `HTTPException` se le impostazioni non vengono trovate o se i dati forniti corrispondono a quelli esistenti;
 
 ===== FaqRepository
-// #figure(image("../imgs/FaqRepository.png", width: 80%), caption: "Diagramma delle classi di FaqRepository")
+#figure(image("../imgs/database-api/FaqRepository.png", width: 80%), caption: "Diagramma delle classi di FaqRepository")
 La classe `FaqRepository` è responsabile della gestione delle operazioni CRUD per le FAQ (Frequently Asked Questions) nel database. Interagisce con la collezione "faq" in MongoDB. L'istanza del database viene ottenuta tramite _Dependency Injection_.
 
 ====== Attributi
-- ```python collection: Collection```: la collezione "faq" del database.
+- ```python collection: Collection```: la collezione "faq" del database;
 
 ====== Metodi
-- ```python +get_faqs()```: recupera tutte le FAQ presenti nel database.
-- ```python +get_faq_by_id(faq_id: ObjectId)```: recupera una FAQ specifica in base al suo ID.
-- ```python +insert_faq(faq: FAQ, author_email: str) -> ObjectId```: inserisce una nuova FAQ nel database, associandola all'email dell'autore e registrando timestamp di creazione e aggiornamento. Restituisce l'ID della FAQ inserita.
-- ```python +update_faq(faq_id: ObjectId, faq_data: FAQUpdate, author_email: str)```: aggiorna una FAQ esistente. Solleva un'eccezione `HTTPException` se la FAQ non viene trovata o se i dati forniti corrispondono a quelli esistenti. Aggiorna l'email dell'autore e il timestamp di aggiornamento.
-- ```python +delete_faq(faq_id: ObjectId)```: elimina una FAQ dal database in base al suo ID.
+- ```python +get_faqs()```: recupera tutte le FAQ presenti nel database;
+- ```python +get_faq_by_id(faq_id: ObjectId)```: recupera una FAQ specifica in base al suo ID;
+- ```python +insert_faq(faq: FAQ, author_email: str) -> ObjectId```: inserisce una nuova FAQ nel database, associandola all'email dell'autore e registrando timestamp di creazione e aggiornamento. Restituisce l'ID della FAQ inserita;
+- ```python +update_faq(faq_id: ObjectId, faq_data: FAQUpdate, author_email: str)```: aggiorna una FAQ esistente. Solleva un'eccezione `HTTPException` se la FAQ non viene trovata o se i dati forniti corrispondono a quelli esistenti. Aggiorna l'email dell'autore e il timestamp di aggiornamento;
+- ```python +delete_faq(faq_id: ObjectId)```: elimina una FAQ dal database in base al suo ID;
 
 ===== EmailService
-// #figure(image("../imgs/EmailService.png", width: 80%), caption: "Diagramma delle classi di EmailService")
+#figure(image("../imgs/database-api/EmailService.png", width: 60%), caption: "Diagramma delle classi di EmailService")
 La classe `EmailService` è responsabile dell'invio di email. Utilizza la libreria `fastapi-mail` e configura i parametri di connessione al server SMTP tramite variabili d'ambiente.
 
 ====== Attributi
-- ```python conf: ConnectionConfig```: oggetto di configurazione per `fastapi-mail` contenente i dettagli del server SMTP.
-- ```python mail: FastMail```: istanza di `FastMail` utilizzata per inviare i messaggi.
+- ```python conf: ConnectionConfig```: oggetto di configurazione per `fastapi-mail` contenente i dettagli del server SMTP;
+- ```python mail: FastMail```: istanza di `FastMail` utilizzata per inviare i messaggi;
 
 ====== Metodi
-- ```python +__init__()```: costruttore della classe, inizializza `conf` leggendo le variabili d'ambiente (con valori di default) e l'oggetto `mail`.
-- ```python +send_email(to: List[str], subject: str, body: str) -> None```: invia un'email ai destinatari specificati. Solleva un'eccezione `ValueError` se la configurazione dell'email non è valida.
-- ```python +is_configuration_valid() -> bool```: controlla se le variabili d'ambiente necessarie per l'invio delle email sono state configurate.
+- ```python +__init__()```: costruttore della classe, inizializza `conf` leggendo le variabili d'ambiente (con valori di default) e l'oggetto `mail`;
+- ```python +send_email(to: List[str], subject: str, body: str) -> None```: invia un'email ai destinatari specificati. Solleva un'eccezione `ValueError` se la configurazione dell'email non è valida;
+- ```python +is_configuration_valid() -> bool```: controlla se le variabili d'ambiente necessarie per l'invio delle email sono state configurate;
+
+===== Database
+La classe `Database` è responsabile della gestione della connessione al database MongoDB. Utilizza il pattern Singleton per garantire che esista una singola istanza di connessione al database durante l'intero ciclo di vita dell'applicazione.
+====== Attributi
+- ```python db```: istanza della connessione al database.
+====== Metodi
+- ```python init_db()```: Inizializza la connessione al database. Questa funzione deve essere chiamata all'avvio dell'applicazione. Assegna l'istanza fornita alla variabile globale `_db`;
+- ```python get_db() -> AsyncIOMotorDatabase```: Restituisce l'istanza del database precedentemente inizializzata. Se `init_db()` non è stata ancora chiamata (e quindi `_db` è `None`), solleva una `RuntimeError` per indicare che il database non è pronto per l'uso. Questo meccanismo assicura che tutte le parti dell'applicazione accedano alla stessa istanza di connessione al database; (*Singleton*)
 
 
 === LLM API
@@ -607,7 +671,7 @@ Il pattern *_dependency injection_* è un pattern strutturale che consente di in
 
 #set par(justify: false)
 ===== DTO
-#figure(image("../imgs/DTO.png", width: 90%), caption: "Diagramma delle classi dei DTO di LLM-API")
+#figure(image("../imgs/llm-api/DTO.png", width: 90%), caption: "Diagramma delle classi dei DTO di LLM-API")
 I DTO (Data Transfer Object) sono oggetti utilizzati per trasferire dati tra le diverse parti del sistema, in particolare tra il client e il server LLM-API. Semplificano la comunicazione e la validazione dei dati.
 
 ====== Message
@@ -649,8 +713,8 @@ Generalizzazione della classe FAQBase.
 - ```python +admin_password: str```: rappresenta la password dell'utente;
 
 ===== LLMRouter
-#figure(image("../imgs/LLMRouter.png", width: 70%), caption: "Diagramma delle classi di LLMRouter")
-La classe LLMRouter è responsabile della gestione delle richieste HTTP relative alle query che verranno reindirizzate all'LLMResponseService.
+#figure(image("../imgs/llm-api/LLMRouter.png", width: 70%), caption: "Diagramma delle classi di LLMRouter")
+La classe `LLMRouter` è responsabile della gestione delle richieste HTTP relative alle query che verranno reindirizzate all'LLMResponseService.
 
 L'oggetto LLMResponseService viene importato tramite il metodo ```python LLMResponseService.get_llm_response_service()``` che restituisce l'istanza del servizio LLMResponseService (*Dependency Injection*).
 ====== Attributi
@@ -660,8 +724,8 @@ L'oggetto LLMResponseService viene importato tramite il metodo ```python LLMResp
 - ```python +generate_chat_name(context: Context) -> str```: restituisce il nome della chat generato in base al contesto fornito; per ottenere il nome generato viene chiamato il metodo ```python LLMResponseService.generate_llm_chat_name()```;
 
 ===== FaqRouter
-#figure(image("../imgs/FaqRouter.png", width: 50%), caption: "Diagramma delle classi di FaqRouter")
-La classe FaqRouter è responsabile della gestione delle richieste HTTP relative a salvataggio, modifica e cancellazione delle FAQ nel database vettoriale.\
+#figure(image("../imgs/llm-api/FaqRouter.png", width: 50%), caption: "Diagramma delle classi di FaqRouter")
+La classe `FaqRouter` è responsabile della gestione delle richieste HTTP relative a salvataggio, modifica e cancellazione delle FAQ nel database vettoriale.\
 I metodi della classe FileManager vengono utilizzati tramite l'oggetto restituito dal metodo ```python FileManagerService.get_file_manager_by_extension()``` (*Dependency Injection*).
 ====== Attributi
 - ```python +router: APIRouter```: oggetto del modulo fastapi che permette di definire le API route;
@@ -671,8 +735,8 @@ I metodi della classe FileManager vengono utilizzati tramite l'oggetto restituit
 - ```python +update_faq(faq: FAQBase) -> json```: chiama il metodo ```python FileManager.update_faq()```, il token viene utilizzato per verificare che l'utente che esegue la richiesta sia un admin; restituisce i dati della faq aggiornata e l'esito della richiesta;
 
 ===== DocumentRouter
-#figure(image("../imgs/DocumentRouter.png", width: 50%), caption: "Diagramma delle classi di DocumentRouter")
-La classe DocumentRouter è responsabile della gestione delle richieste HTTP relative a salvataggio, modifica e cancellazione dei documenti nel database vettoriale.\
+#figure(image("../imgs/llm-api/DocumentRouter.png", width: 50%), caption: "Diagramma delle classi di DocumentRouter")
+La classe `DocumentRouter` è responsabile della gestione delle richieste HTTP relative a salvataggio, modifica e cancellazione dei documenti nel database vettoriale.\
 I metodi della classe FileManager vengono utilizzati tramite l'oggetto restituito dal metodo ```python FileManagerService.get_file_manager_by_extension()``` (*Dependency Injection*).
 ====== Attributi
 - ```python +router: APIRouter```: oggetto del modulo fastapi che permette di definire le API route;
@@ -681,8 +745,8 @@ I metodi della classe FileManager vengono utilizzati tramite l'oggetto restituit
 - ```python +delete_file(fileDelete: DocumentDelete) -> json```: chiama il metodo ```python FileManager.delete_document()```, il token viene utilizzato per verificare che l'utente che esegue la richiesta sia un admin; restituisce l'esito della richiesta;
 
 ===== LLMResponseService
-#figure(image("../imgs/LLMResponseServices.png", width: 80%), caption: "Diagramma delle classi di LLMResponseService")
-La classe LLMResponseService si occupa di orchestrare l'ottenimento del contesto, la preparazione della richiesta per l'LLM e, infine, il ritorno della risposta generata.
+#figure(image("../imgs/llm-api/LLMResponseServices.png", width: 80%), caption: "Diagramma delle classi di LLMResponseService")
+La classe `LLMResponseService` si occupa di orchestrare l'ottenimento del contesto, la preparazione della richiesta per l'LLM e, infine, il ritorno della risposta generata.
 ====== Attributi
 - ```python -vector_database: VectorDatabase```: oggetto VectorDatabase che permette di recuperare il contesto; l'oggetto viene istanziato al momento della costruzione dell'LLMResponseService e viene ottenuto tramite il metodo ```python VectorDatabaseService.get_vector_database()``` (*Dependency Injection*);
 - ```python -llm: LLM```: oggetto LLM che permette di generare la risposta; l'oggetto viene istanziato al momento della costruzione dell'LLMResponseService e viene ottenuto tramite il metodo ```python LLMService.get_llm()``` (*Dependency Injection*);
@@ -695,14 +759,14 @@ La classe LLMResponseService si occupa di orchestrare l'ottenimento del contesto
 - ```python +get_llm_response_service() -> LLMResponseService```: restituisce l'istanza del servizio LLMResponseService;
 
 ===== LLMService
-#figure(image("../imgs/LLMService.png", width: 30%), caption: "Diagramma delle classi di LLMService")
-La classe LLMService permette di ottenere l'istanza dell'oggetto LLM adatto ad interagire con l'LLM specifico scelto dall'amministratore della piattaforma.
+#figure(image("../imgs/llm-api/LLMService.png", width: 30%), caption: "Diagramma delle classi di LLMService")
+La classe `LLMService` permette di ottenere l'istanza dell'oggetto LLM adatto ad interagire con l'LLM specifico scelto dall'amministratore della piattaforma.
 ====== Metodi
 - ```python +get_llm_model() -> LLM```: restituisce l'oggetto LLM adatto basandosi sulle variabili d'ambiente LLM_MODEL e LLM_PROVIDER;
 
 ===== LLM
-#figure(image("../imgs/LLM.png", width: 40%), caption: "Diagramma delle classi di LLM")
-La classe LLM è un'astrazione che rappresenta un LLM generico. Lo scopo è quello di inizializzare l'oggetto LLM in modo che, le funzionalità di langchain per interagire con i modelli, siano utilizzabili in modo generico, quindi senza dipendere dall'LLM scelto.
+#figure(image("../imgs/llm-api/LLM.png", width: 40%), caption: "Diagramma delle classi di LLM")
+La classe `LLM` è un'astrazione che rappresenta un LLM generico. Lo scopo è quello di inizializzare l'oggetto LLM in modo che, le funzionalità di langchain per interagire con i modelli, siano utilizzabili in modo generico, quindi senza dipendere dall'LLM scelto.
 ====== Attributi
 - ```python -model_name: str```: nome del modello LLM;
 - ```python -model: BaseChatModel```: oggetto della classe ```python langchain_core.language_models.chat_models.BaseChatModel``` che permette di invocare il modello LLM;
@@ -711,25 +775,25 @@ La classe LLM è un'astrazione che rappresenta un LLM generico. Lo scopo è quel
 - ```python -check_environment()```: controlla che le variabili d'ambiente necessarie siano impostate correttamente;
 - ```python -initialize_model() -> BaseChatModel```: inizializza l'oggetto model in base al modello scelto;
 ===== Ollama
-Classe concreta della classe LLM che permette di utilizzare Ollama come provider di LLM.
+Classe concreta della classe LLM che permette di utilizzare `Ollama` come provider di LLM.
 ====== Metodi
 - ```python -check_environment()```: controlla che le variabili d'ambiente necessarie all'utilizzo del modello scelto di Ollama siano impostate correttamente;
 - ```python -initialize_model() -> BaseChatModel```: inizializza l'oggetto model per essere utilizzato con il modello scelto di Ollama;
 ===== OpenAI
-Classe concreta della classe LLM che permette di utilizzare OpenAI come provider di LLM.
+Classe concreta della classe LLM che permette di utilizzare `OpenAI` come provider di LLM.
 ====== Metodi
 - ```python -check_environment()```: controlla che le variabili d'ambiente necessarie all'utilizzo del modello scelto di OpenAI siano impostate correttamente;
 - ```python -initialize_model() -> BaseChatModel```: inizializza l'oggetto model per essere utilizzato con il modello scelto di OpenAI;
 
 ===== VectorDatabaseService
-#figure(image("../imgs/VectorDatabaseService.png", width: 50%), caption: "Diagramma delle classi di VectorDatabaseService")
-La classe VectorDatabaseService permette di ottenere l'istanza dell'oggetto VectorDatabase adatto ad interagire con il database vettoriale scelto dall'amministratore della piattaforma.
+#figure(image("../imgs/llm-api/VectorDatabaseService.png", width: 50%), caption: "Diagramma delle classi di VectorDatabaseService")
+La classe `VectorDatabaseService` permette di ottenere l'istanza dell'oggetto VectorDatabase adatto ad interagire con il database vettoriale scelto dall'amministratore della piattaforma.
 ====== Metodi
 - ```python +get_vector_database() -> VectorDatabase```: restituisce l'oggetto VectorDatabase adatto basandosi sulla variabile d'ambiente VECTOR_DATABASE_PROVIDER;
 
 ===== VectorDatabase
-#figure(image("../imgs/VectorDatabase.png", width: 70%), caption: "Diagramma delle classi di VectorDatabase")
-La classe VectorDatabase è un'astrazione che rappresenta un database vettoriale generico. Lo scopo è quello di inizializzare oggetti delle classi concrete, figlie di VectorDatabase, in modo che le funzionalità di langchain per interagire con i database vettoriali siano utilizzabili in modo generico, quindi senza dipendere dal database scelto (*Strategy*).
+#figure(image("../imgs/llm-api/VectorDatabase.png", width: 70%), caption: "Diagramma delle classi di VectorDatabase")
+La classe `VectorDatabase` è un'astrazione che rappresenta un database vettoriale generico. Lo scopo è quello di inizializzare oggetti delle classi concrete, figlie di VectorDatabase, in modo che le funzionalità di langchain per interagire con i database vettoriali siano utilizzabili in modo generico, quindi senza dipendere dal database scelto (*Strategy*).
 ====== Attributi
 - ```python -embedding: EmbeddingProvider```: oggetto della classe EmbeddingProvider che permette di accedere diverse funzioni di embedding in base all'embedding provider scelto; l'attributo viene inizializzato tramite il metodo ```python EmbeddingService.get_embedding_provider()``` (*Dependency Injection*);
 - ```python -persist_directory: str```: percorso della directory in cui sono memorizzati i dati vettorializzati; viene inizializzata tramite la variabile d'ambiente VECTOR_DB_DIRECTORY;
@@ -745,8 +809,8 @@ La classe VectorDatabase è un'astrazione che rappresenta un database vettoriale
 - ```python +count() -> int```: restituisce il numero di documenti presenti nel database vettoriale;
 
 ===== ChromaDB
-#figure(image("../imgs/ChromaDB.png", width: 70%), caption: "Diagramma delle classi di ChromaDB")
-La classe ChromaDB è un'implementazione concreta della classe VectorDatabase che permette di utilizzare ChromaDB come database vettoriale.
+#figure(image("../imgs/llm-api/ChromaDB.png", width: 70%), caption: "Diagramma delle classi di ChromaDB")
+La classe `ChromaDB` è un'implementazione concreta della classe VectorDatabase che permette di utilizzare ChromaDB come database vettoriale.
 ====== Attributi
 - ```python -db: Chroma```: oggetto della classe ```python langchain_chroma.vectorstores.Chroma``` che permette di interagire con il database vettoriale ChromaDB;
 ====== Metodi
@@ -763,20 +827,20 @@ La classe ChromaDB è un'implementazione concreta della classe VectorDatabase ch
 - ```python +count() -> int```: restituisce il numero di documenti presenti nel database vettoriale ChromaDB;
 
 ===== EmbeddingService
-#figure(image("../imgs/EmbeddingService.png", width: 50%), caption: "Diagramma delle classi di EmbeddingService")
-La classe EmbeddingService permette di ottenere un'istanza del provider configurato tramite le impostazioni, semplificando l'integrazione e l'intercambiabilità tra diversi provider.
+#figure(image("../imgs/llm-api/EmbeddingService.png", width: 50%), caption: "Diagramma delle classi di EmbeddingService")
+La classe `EmbeddingService` permette di ottenere un'istanza del provider configurato tramite le impostazioni, semplificando l'integrazione e l'intercambiabilità tra diversi provider.
 ====== Metodi
 - ```python +get_embedding_function()```: metodo astratto che restituisce la funzione di embedding fornita dal provider;
 
 ===== EmbeddingProvider
-#figure(image("../imgs/EmbeddingProvider.png", width: 40%), caption: "Diagramma delle classi di EmbeddingProvider")
-La classe EmbeddingProvider è un'astrazione che rappresenta un provider di embedding generico. Lo scopo è quello di inizializzare oggetti delle classi concrete, figlie di EmbeddingProvider, in modo che le funzionalità di langchain per interagire con i provider di embedding siano utilizzabili in modo generico, quindi senza dipendere dal provider scelto (*Strategy*).
+#figure(image("../imgs/llm-api/EmbeddingProvider.png", width: 40%), caption: "Diagramma delle classi di EmbeddingProvider")
+La classe `EmbeddingProvider` è un'astrazione che rappresenta un provider di embedding generico. Lo scopo è quello di inizializzare oggetti delle classi concrete, figlie di EmbeddingProvider, in modo che le funzionalità di langchain per interagire con i provider di embedding siano utilizzabili in modo generico, quindi senza dipendere dal provider scelto (*Strategy*).
 ====== Metodi
 - ```python +get_embedding_provider() -> EmbeddingProvider```: restituisce un'istanza del provider di embedding configurato;
 
 ===== OpenAIEmbeddingProvider
-#figure(image("../imgs/OpenAIEmbeddingProvider.png", width: 80%), caption: "Diagramma delle classi di OpenAIEmbeddingProvider")
-La classe OpenAIEmbeddingProvider è un'implementazione concreta della classe EmbeddingProvider che utilizza le API di OpenAI per fornire funzioni di embedding.\
+#figure(image("../imgs/llm-api/OpenAIEmbeddingProvider.png", width: 80%), caption: "Diagramma delle classi di OpenAIEmbeddingProvider")
+La classe `OpenAIEmbeddingProvider` è un'implementazione concreta della classe EmbeddingProvider che utilizza le API di OpenAI per fornire funzioni di embedding.\
 Questa classe consente di utilizzare le funzioni di embedding che sfruttano modelli di OpenAI.
 ====== Attributi
 - ```python -api_key: str```: chiave API utilizzata per autenticarsi con il servizio OpenAI;
@@ -786,15 +850,15 @@ Questa classe consente di utilizzare le funzioni di embedding che sfruttano mode
 - ```python +get_embedding_function() -> OpenAIEmbeddings```: restituisce la funzione di embedding fornita da OpenAI;
 
 ===== FileManagerService
-#figure(image("../imgs/FileManagerService.png", width: 70%), caption: "Diagramma delle classi di FileManagerService")
-La classe FileManagerService permette di ottenere l'istanza dell'oggetto FileManager adatto ad interagire con il file manager scelto dall'amministratore della piattaforma.
+#figure(image("../imgs/llm-api/FileManagerService.png", width: 70%), caption: "Diagramma delle classi di FileManagerService")
+La classe `FileManagerService` permette di ottenere l'istanza dell'oggetto FileManager adatto ad interagire con il file manager scelto dall'amministratore della piattaforma.
 ====== Metodi
 - ```python +get_file_manager(file: UploadFile) -> FileManager```: restituisce l'oggetto FileManager adatto basandosi sul tipo di file passato come parametro; se non esiste un file manager per il tipo di file passato, viene sollevata un'eccezione; Se invece non viene passato un file, viene restituito lo StringManager;
 - ```python +get_file_manager_by_extension(file_extension: str) -> FileManager```: restituisce l'oggetto FileManager adatto basandosi sull'estensione del file passato come parametro; se non esiste un file manager per l'estensione passata, viene sollevata un'eccezione;
 
 ===== FileManager
-#figure(image("../imgs/FileManager.png", width: 80%), caption: "Diagramma delle classi di FileManager")
-La classe FileManager è un'astrazione che rappresenta un file manager generico. Lo scopo è quello di inizializzare oggetti delle classi concrete, figlie di FileManager, in modo che le funzionalità di langchain per interagire con i file siano utilizzabili in modo generico, quindi senza dipendere dal tipo di file scelto (*Pattern Strategy*).
+#figure(image("../imgs/llm-api/FileManager.png", width: 80%), caption: "Diagramma delle classi di FileManager")
+La classe `FileManager` è un'astrazione che rappresenta un file manager generico. Lo scopo è quello di inizializzare oggetti delle classi concrete, figlie di FileManager, in modo che le funzionalità di langchain per interagire con i file siano utilizzabili in modo generico, quindi senza dipendere dal tipo di file scelto (*Pattern Strategy*).
 ====== Attributi
 - ```python -vector_database: VectorDatabase```: oggetto VectorDatabase che permette di interagire con il database vettoriale; l'oggetto viene istanziato al momento della costruzione del FileManager e viene ottenuto tramite il metodo ```python VectorDatabaseService.get_vector_database()``` (*Dependency Injection*);
 - ```python -splitter: RecursiveCharacterTextSplitter```: oggetto della classe ```python langchain_core.text_splitter.RecursiveCharacterTextSplitter``` che permette di dividere il testo in chunck di dimensioni stabilite; l'oggetto viene inizializzato al momento della costruzione del FileManager;
@@ -809,42 +873,27 @@ La classe FileManager è un'astrazione che rappresenta un file manager generico.
 - ```python +delete_document(file_id: str, file_path:str, token:str, current_password:str) -> bool```: elimina il documento passato come parametro dal database vettoriale; per farlo, chiama il metodo ```python VectorDatabase.delete_document()```, poi effettua una richiesta DELETE a _Database-API_ per eliminare le informazioni del documento dal database; restituisce True se l'operazione è andata a buon fine, False altrimenti;
 
 ===== TextFileManager
-#figure(image("../imgs/TextFileManager.png", width: 50%), caption: "Diagramma della classe TextFileManager")
-
-La classe TextFileManager è un'implementazione concreta della classe FileManager che si occupa specificamente della gestione dei file di testo (.txt).\
+#figure(image("../imgs/llm-api/TextFileManager.png", width: 50%), caption: "Diagramma della classe TextFileManager")
+La classe `TextFileManager` è un'implementazione concreta della classe FileManager che si occupa specificamente della gestione dei file di testo (.txt).\
 Questa classe utilizza il TextLoader di langchain per caricare e processare i file di testo.
-
 ====== Metodi
 - ```python load_split_file(file_path: str) -> List[Document]```: implementa il metodo astratto della classe padre per caricare un file di testo dal percorso specificato; utilizza TextLoader con encoding UTF-8 per caricare il file, poi applica il text splitter per dividere il contenuto in chunk di dimensione appropriata; restituisce una lista di Document contenenti i chunk del testo;
 
 ===== PdfFileManager
-#figure(image("../imgs/PdfFileManager.png", width: 70%), caption: "Diagramma della classe PdfFileManager")
-
-La classe PdfFileManager è un'implementazione concreta della classe FileManager specializzata nella gestione dei file PDF.\
+#figure(image("../imgs/llm-api/PdfFileManager.png", width: 70%), caption: "Diagramma della classe PdfFileManager")
+La classe `PdfFileManager` è un'implementazione concreta della classe FileManager specializzata nella gestione dei file PDF.\
 Utilizza PyPDFLoader di langchain per caricare e processare i documenti PDF.
-
 ====== Metodi
 - ```python load_split_file(file_path: str) -> List[Document]```: implementa il metodo astratto della classe padre per caricare un file PDF dal percorso specificato; utilizza PyPDFLoader in modalità "single" per caricare il file PDF mantenendo il contesto tra le pagine, poi applica il text splitter per dividere il contenuto in chunk di dimensione appropriata; restituisce una lista di Document contenenti i chunk del PDF.
 
 ===== StringManager
-#figure(image("../imgs/StringManager.png", width: 50%), caption: "Diagramma della classe StringManager")
-
-La classe StringManager è un'implementazione concreta della classe FileManager che, a differenza delle altre implementazioni, non gestisce file fisici ma contenuti testuali come le FAQ. È responsabile della gestione delle FAQ nel sistema, inclusa la loro aggiunta, aggiornamento ed eliminazione dal database vettoriale.
-
+#figure(image("../imgs/llm-api/StringManager.png", width: 50%), caption: "Diagramma della classe StringManager")
+La classe `StringManager` è un'implementazione concreta della classe FileManager che, a differenza delle altre implementazioni, non gestisce file fisici ma contenuti testuali come le FAQ. È responsabile della gestione delle FAQ nel sistema, inclusa la loro aggiunta, aggiornamento ed eliminazione dal database vettoriale.
 ====== Metodi
 - ```python load_split_file(faq: FAQ) -> List[Document]```: implementa il metodo astratto della classe padre per trasformare una FAQ in un Document; crea un Document con contenuto formattato come "Domanda: {faq.question} Risposta: {faq.answer}" e con metadata che include la fonte ("faqs") e l'ID della FAQ; applica il text splitter per dividere eventualmente il contenuto in chunk; restituisce una lista di Document.
-
 - ```python add_faq(faq: FAQBase, token: str) -> FAQ```: aggiunge una nuova FAQ al sistema; invia una richiesta POST a _Database-API_ per salvare la FAQ nel database relazionale, ottenendo indietro l'ID assegnato; crea un oggetto FAQ completo con l'ID ricevuto, chiama il metodo ```python load_split_file``` per trasformare la FAQ in Document e lo aggiunge al database vettoriale tramite ```python VectorDatabase.add_documents()```; restituisce l'oggetto FAQ completo di ID.
-
 - ```python delete_faq(faq: FAQDelete, token: str) -> None```: elimina una FAQ dal sistema; invia una richiesta DELETE a _Database-API_ per rimuovere la FAQ dal database relazionale, verificando la password dell'admin; se l'operazione ha successo, rimuove la FAQ dal database vettoriale chiamando ```python VectorDatabase.delete_faq()```.
 
-- ```python update_faq(faq: FAQ, token: str) -> None```: aggiorna una FAQ esistente; invia una richiesta PATCH a _Database-API_ per aggiornare la FAQ nel database relazionale; rimuove la vecchia versione della FAQ dal database vettoriale, poi la ricrea con il nuovo contenuto chiamando ```python load_split_file()``` e aggiunge i nuovi Document al database vettoriale.
-
-// Descrivere la suddivisione in moduli e livelli logici del sistema.
-
-// TODO: capire se metterla
-// == Architettura di deployment
-// Indicare come il sistema viene distribuito (es. Docker, monolite, microservizi).
 
 #set par(justify: true)
 
@@ -1024,8 +1073,7 @@ Di seguito è riportata la tabella con i requisiti funzionali che erano stati st
 )
 
 == Grafico dei requisiti obbligatori soddisfatti
+// TODO
 
 == Grafico dei requisiti desiderabili soddisfatti
-
-= Conclusioni
-// Riassumere le scelte progettuali principali e indicare possibili evoluzioni future del sistema.
+// TODO
