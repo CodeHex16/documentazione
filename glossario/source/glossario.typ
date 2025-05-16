@@ -13,7 +13,7 @@
         "Yi Hao Zhuo", "Redattore, Verificatore"
     ),
     versioni : (
-        "0.7.0","15/05/2025","Filippo Sabbadin","Aggiornamento glossario","",
+        "1.0.0","15/05/2025","Filippo Sabbadin","Aggiornamento glossario e controllo finale","Luca Ribon",
         "0.6.0","23/02/2025","Yi Hao Zhuo","Aggiornamento glossario","Luca Ribon",
         "0.5.1","24/01/2025","Luca Rossi","Correzioni a seguito della verifica","Ribon Luca",
         "0.5.0","18/01/2025","Luca Rossi","Aggiornamento glossario","Ribon Luca",
