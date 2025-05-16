@@ -26,7 +26,7 @@
     "16/05/2025",
     "Francesco Fragonas",
     "Sistemati riferimenti",
-    "",
+    "Luca Ribon",
     "0.4.2",
     "14/05/2025",
     "Luca Ribon",
@@ -212,7 +212,7 @@ Per il microservizio #strong[Database-API] sono necessari:
 - ADMIN_EMAIL: email dell'amministratore;
 - ADMIN_PASSWORD: password dell'amministratore, che verrà utilizzata anche come password di accesso per Mongo Express;
 
-Per l'invio delle email sono necessari:
+Per il servizio di invio delle email sono configurabili:
 - MAIL_ADDRESS: indirizzo email del mittente;
 - MAIL_PASSWORD: password dell'email del mittente;
 - MAIL_USERNAME: nome utente dell'email del mittente;
