@@ -1,7 +1,7 @@
 #import "../../template/documenti.typ": *
 #import "../../template/i-figured.typ"
 
-#show: doc => documento(titolo: "Specifica Tecnica", data: [21/03/2025], ruoli: ("Matteo Bazzan", "Redattore", "Luca Ribon", "Redattore, Verificatore", "Filippo Sabbadin", "Redattore", "Luca Rossi", "Redattore"), sommario: [Specifica tecnica], versioni: ("0.4.0", "05/05/2025", "Matteo Bazzan", "Grafici e parti mancanti", "", "0.3.0", "20/04/2025", "Luca Ribon", "Architettura", "", "0.2.0", "10/04/2025", "Filippo Sabbadin", "Stesura sezioni iniziali", "Luca Ribon", "0.1.0", "21/03/2025", "Luca Rossi", "Bozza iniziale struttura", "Luca Ribon"), doc)
+#show: doc => documento(titolo: "Specifica Tecnica", data: [21/03/2025], ruoli: ("Matteo Bazzan", "Redattore", "Luca Ribon", "Redattore, Verificatore", "Filippo Sabbadin", "Redattore", "Luca Rossi", "Redattore"), sommario: [Specifica tecnica], versioni: ("0.5.0", "14/05/2025", "Luca Ribon, Matteo Bazzan", "Completamento parte di LLM-API", "", "0.4.0", "05/05/2025", "Matteo Bazzan", "Grafici e parti mancanti", "", "0.3.0", "20/04/2025", "Luca Ribon", "Architettura", "", "0.2.0", "10/04/2025", "Filippo Sabbadin", "Stesura sezioni iniziali", "Luca Ribon", "0.1.0", "21/03/2025", "Luca Rossi", "Bozza iniziale struttura", "Luca Ribon"), doc)
 // spaciugo per aggiungere l'indice delle immagini
 #set page(numbering: "I")
 #counter(page).update(3)
@@ -327,6 +327,149 @@ I service sono delle classi che offrono funzionalità di business logic, come la
 #figure(image("../imgs/diagramma-database-api.png", width: 118%), caption: "Diagramma delle classi di Database-API")
 
 //TODO: da controllare il diagramma
+===== DTO
+#figure(image("../imgs/DTO-database-api.png", width: 90%), caption: "Diagramma delle classi dei DTO di Database-API")
+I DTO (Data Transfer Object) sono oggetti utilizzati per trasferire dati tra le diverse parti del sistema, in particolare tra il client e il server Database-API. Semplificano la comunicazione e la validazione dei dati.
+
+====== User
+Rappresenta un utente nel sistema.
+- ```python +id: str```: l'indirizzo email dell'utente, utilizzato come identificativo univoco nel database.
+- ```python +name: str```: il nome dell'utente.
+- ```python +hashed_password: str```: la password dell'utente, memorizzata come hash.
+- ```python +is_initialized: bool```: indica se l'utente ha completato la configurazione iniziale (cambio password al primo accesso). Default: `False`.
+- ```python +remember_me: bool```: indica se l'utente ha scelto di essere ricordato per accessi futuri. Default: `False`.
+- ```python +scopes: List[str]```: lista dei permessi associati all'utente (es. "user", "admin"). Default: `["user"]`.
+
+====== UserAuth
+Utilizzato per l'autenticazione e operazioni che richiedono la password corrente.
+- ```python +current_password: str```: la password attuale dell'utente.
+
+====== UserUpdatePassword
+Generalizzazione della classe UserAuth. Utilizzato per l'aggiornamento della password dell'utente.
+- ```python +password: str```: la nuova password scelta dall'utente. Deve rispettare i criteri di complessità definiti.
+
+====== UserForgotPassword
+Utilizzato per la richiesta di recupero password.
+- ```python +email: str```: l'indirizzo email dell'utente che ha dimenticato la password.
+
+====== UserUpdate
+Utilizzato per aggiornare i dati di un utente. Tutti i campi sono opzionali.
+- ```python +id: str```: l'identificativo dell'utente da aggiornare.
+- ```python +name: Optional[str]```: il nuovo nome dell'utente.
+- ```python +password: Optional[str]```: la nuova password dell'utente.
+- ```python +is_initialized: Optional[bool]```: il nuovo stato di inizializzazione.
+- ```python +remember_me: Optional[bool]```: il nuovo stato per "ricordami".
+- ```python +scopes: Optional[List[str]]```: la nuova lista di permessi.
+- ```python +admin_password: Optional[str]```: la password dell'amministratore, richiesta per alcune modifiche.
+
+====== UserDelete
+Utilizzato per eliminare un utente.
+- ```python +id: str```: l'identificativo dell'utente da eliminare.
+
+====== UserCreate
+Utilizzato per la creazione di un nuovo utente.
+- ```python +name: str```: il nome del nuovo utente.
+- ```python +email: str```: l'indirizzo email del nuovo utente.
+- ```python +scopes: Optional[List[str]]```: la lista di permessi per il nuovo utente.
+
+====== Token
+Rappresenta un token di accesso JWT.
+- ```python +access_token: str```: il token JWT.
+- ```python +token_type: str```: il tipo di token (solitamente "bearer").
+- ```python +expires_in: Optional[int]```: la durata di validità del token in secondi.
+
+
+====== ChatResponse
+Rappresenta i dati di una chat restituiti in una lista.
+- ```python +id: str```: l'identificativo univoco della chat.
+- ```python +name: str```: il nome della chat.
+- ```python +user_email: str```: l'email dell'utente proprietario della chat.
+- ```python +created_at: Optional[str]```: la data e ora di creazione della chat.
+
+====== ChatList
+Contiene una lista di chat.
+- ```python +chats: List[ChatResponse]```: la lista degli oggetti ChatResponse.
+
+====== Message
+Rappresenta un singolo messaggio all'interno di una chat.
+- ```python +id: ObjectId```: l'identificativo univoco del messaggio.
+- ```python +sender: str```: il mittente del messaggio (es. "user" o "chatbot").
+- ```python +content: str```: il contenuto testuale del messaggio.
+- ```python +timestamp: str```: la data e ora di invio del messaggio.
+- ```python +rating: Optional[bool]```: la valutazione del messaggio (True per positivo, False per negativo, None se non valutato).
+
+====== ChatMessages
+Rappresenta una chat con la sua lista di messaggi.
+- ```python +name: str```: il nome della chat.
+- ```python +messages: List[Message]```: la lista dei messaggi della chat.
+
+====== MessageCreate
+Utilizzato per creare un nuovo messaggio.
+- ```python +content: str```: il contenuto del messaggio.
+- ```python +sender: str```: il mittente del messaggio. Default: "user".
+- ```python +rating: Optional[bool]```: la valutazione iniziale del messaggio.
+
+====== MessageRatingUpdate
+Utilizzato per aggiornare la valutazione di un messaggio.
+- ```python +rating: Optional[bool]```: la nuova valutazione del messaggio.
+
+====== Document
+Rappresenta le informazioni base di un documento.
+- ```python +title: str```: il titolo del documento.
+- ```python +file_path: str```: il percorso del file del documento nel sistema.
+
+
+====== DocumentResponse
+Generalizzazione della classe Document. Rappresenta un documento con informazioni aggiuntive restituito dall'API.
+- ```python +id: ObjectId```: l'identificativo univoco del documento .
+- ```python +owner_email: EmailStr```: l'email del proprietario del documento.
+- ```python +uploaded_at: str```: la data e ora di caricamento del documento.
+
+====== DocumentDelete
+Utilizzato per specificare l'ID di un documento da eliminare.
+- ```python +id: str```: l'identificativo del documento da eliminare.
+
+====== FAQ
+Rappresenta una singola FAQ (Frequently Asked Question).
+- ```python +title: str```: il titolo della FAQ (massimo 30 caratteri).
+- ```python +question: str```: la domanda della FAQ.
+- ```python +answer: str```: la risposta alla FAQ.
+
+====== FAQUpdate
+Utilizzato per aggiornare una FAQ esistente. Tutti i campi sono opzionali.
+- ```python +title: Optional[str]```: il nuovo titolo della FAQ (massimo 30 caratteri).
+- ```python +question: Optional[str]```: la nuova domanda della FAQ.
+- ```python +answer: Optional[str]```: la nuova risposta della FAQ.
+
+====== FAQResponse
+Generalizzazione della classe FAQ. Rappresenta una FAQ con informazioni aggiuntive restituita dall'API.
+- ```python +id: ObjectId```: l'identificativo univoco della FAQ nel database.
+- ```python +created_at: str```: la data e ora di creazione della FAQ.
+- ```python +updated_at: str```: la data e ora dell'ultimo aggiornamento della FAQ.
+
+====== EmailSchema
+Utilizzato per inviare una lista di indirizzi email.
+- ```python +email: List[str]```: una lista di indirizzi email.
+
+====== Settings
+Rappresenta le impostazioni di personalizzazione della piattaforma. Tutti i campi sono opzionali.
+- ```python +color_primary: Optional[str]```: il colore primario dell'interfaccia.
+- ```python +color_primary_hover: Optional[str]```: il colore primario al passaggio del mouse.
+- ```python +color_primary_text: Optional[str]```: il colore del testo per elementi con colore primario.
+- ```python +message_history: Optional[int]```: la durata (in giorni o numero di messaggi, da definire) per cui conservare lo storico dei messaggi.
+
+====== Stats
+Rappresenta le statistiche di utilizzo della piattaforma.
+- ```python +total_chats: int```: numero totale di chat.
+- ```python +total_messages: int```: numero totale di messaggi.
+- ```python +total_chatbot_messages: int```: numero totale di messaggi inviati dal chatbot.
+- ```python +total_rated_messages: int```: numero totale di messaggi valutati.
+- ```python +total_user_messages: int```: numero totale di messaggi inviati dagli utenti.
+- ```python +average_messages_per_chat: float```: media di messaggi per chat.
+- ```python +average_messages_per_user: float```: media di messaggi per utente.
+- ```python +positive_rating_percentage: float```: percentuale di valutazioni positive.
+- ```python +active_users: int```: numero di utenti attivi.
+
 
 === LLM API
 LLM-API è il nome del API backend che si occupa della gestione dell'interazione con l'LLM. Per l'interazione con gli LLM sono state importate diverse librerie, tra queste quella principale è *_LangChain_*.
@@ -374,7 +517,8 @@ Il pattern *_dependency injection_* è un pattern strutturale che consente di in
 #set par(justify: false)
 ===== DTO
 #figure(image("../imgs/DTO.png", width: 90%), caption: "Diagramma delle classi dei DTO di LLM-API")
-La classe DTO (Data Transfer Object) è un oggetto che viene utilizzato per trasferire dati tra le diverse parti del sistema. In questo caso, i DTO vengono utilizzati per trasferire i dati tra il client e il server, in modo da semplificare la comunicazione e ridurre il numero di chiamate API necessarie.
+I DTO (Data Transfer Object) sono oggetti utilizzati per trasferire dati tra le diverse parti del sistema, in particolare tra il client e il server LLM-API. Semplificano la comunicazione e la validazione dei dati.
+
 ====== Message
 - ```python +sender: str```: rappresenta il mittente del messaggio, che può essere l'utente o il chatbot;
 - ```python +content: str```: rappresenta il contenuto del messaggio;
