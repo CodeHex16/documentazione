@@ -6,7 +6,7 @@
     data: [21/03/2025],
     ruoli: ("Matteo Bazzan", "Redattore", "Luca Ribon", "Redattore, Verificatore", "Filippo Sabbadin", "Redattore", "Luca Rossi", "Redattore"),
     sommario: [Specifica tecnica],
-    versioni: ("0.5.0", "14/05/2025", "Luca Ribon, Matteo Bazzan", "Completamento parte di LLM-API", "", "0.4.0", "05/05/2025", "Matteo Bazzan", "Grafici e parti mancanti", "", "0.3.0", "20/04/2025", "Luca Ribon", "Architettura", "", "0.2.0", "10/04/2025", "Filippo Sabbadin", "Stesura sezioni iniziali", "Luca Ribon", "0.1.0", "21/03/2025", "Luca Rossi", "Bozza iniziale struttura", "Luca Ribon"),
+    versioni: ("0.6.0", "16/05/2025", "Luca Ribon, Matteo Bazzan", "Completamento parte di Database-API", "","0.5.0", "14/05/2025", "Luca Ribon, Matteo Bazzan", "Completamento parte di LLM-API", "", "0.4.0", "05/05/2025", "Matteo Bazzan", "Grafici e parti mancanti", "", "0.3.0", "20/04/2025", "Luca Ribon", "Architettura", "", "0.2.0", "10/04/2025", "Filippo Sabbadin", "Stesura sezioni iniziali", "Luca Ribon", "0.1.0", "21/03/2025", "Luca Rossi", "Bozza iniziale struttura", "Luca Ribon"),
     doc,
 )
 // spaciugo per aggiungere l'indice delle immagini
@@ -254,7 +254,7 @@ FastAPI è un framework per la creazione di API RESTful, progettato per essere v
 Inoltre, FastAPI supporta la tipizzazione statica delle richieste, che aiuta a prevenire errori e rende il codice più leggibile e manutenibile. Infine genera automaticamente la documentazione delle API, rendendo più semplice la comprensione e l'utilizzo delle stesse per tutti gli sviluppatori del progetto.
 
 === Database API
-Database-API è il nome del API backend che si occupa della gestione della persistenza dei dati. Per l'interazione con il database *_MongoDB_* sono stata importate diverse librerie, tra cui *_motor_* e *_pymongo_*.
+Database-API è il nome del API backend che si occupa della gestione della persistenza dei dati. Per l'interazione con il database *_MongoDB_* sono state importate diverse librerie, tra cui *_motor_* e *_pymongo_*.
 
 Motor è un driver asincrono per MongoDB, progettato per funzionare con framework asincroni come FastAPI. Permette di eseguire operazioni di database in modo non bloccante, migliorando le prestazioni e la reattività dell'applicazione.
 
@@ -455,12 +455,12 @@ I metodi della classe UserRepository vengono utilizzati tramite l'oggetto restit
 ====== Metodi
 - ```python +security_check()```: verifica se è stata impostata la SECRET_KEY_JWT utilizzata per la generazione dei token JWT;
 - ```python +authenticate_user(email: str, password: str) -> User```: autentica un utente in base all'email e alla password fornita; restituisce l'oggetto User se l'autenticazione ha successo;
-- ```python +check_user_initialized(token: str, user_repo: UserRepository) -> bool```: ritorna true se l'utente ha completato la configurazione iniziale (cambio password al primo accesso), altrimenti false;
+- ```python +check_user_initialized(token: str, user_repo: UserRepository) -> bool```: restituisce True se l'utente ha completato la configurazione iniziale (cambio password al primo accesso), altrimenti false;
 - ```python +create_access_token(data: dict, scopes: List[str], expires_delta: Optional[timedelta] = None) -> str```: ritorna un token di accesso JWT che contiene i dati forniti e durata uguale a expires_delta se specificata;
 - ```python +verify_token(token: str, required_scopes: List[str] = None) -> str```: verifica la validità di un token JWT e restituisce i dati contenuti nel token se valido;
 - ```python +verify_user(token: str) -> str```: verifica se il token è corretto e, se valido, restituisce il contenuto del token;
 - ```python +verify_admin(token: str) -> str```: verifica se il token è corretto e, se valido, verifica che il token contenga l'amministratore tra i ruoli; se il token è quello di un amministratore, restituisce il contenuto del token;
-- ```python +login_for_access_token(form_data: OAuth2PasswordRequestForm, remember_me: bool = False)```: metodo accessibile tramite API che verifica le credenziali dell'utente, inizializza i permessi, aggiorna la flag remember_me nel database e, se l'autenticazione ha successo, restituisce un token JWT con durata che dipende dalla flag remember_me;
+- ```python +login_for_access_token(form_data: OAuth2PasswordRequestForm, remember_me: bool = False)```: metodo accessibile tramite API che verifica le credenziali dell'utente, inizializza i permessi, aggiorna la flag `remember_me` nel database e, se l'autenticazione ha successo, restituisce un token JWT con durata che dipende dalla flag `remember_me`;
 - ```python +verify_user_token(token: str)```: metodo accessibile tramite API che verifica la validità del token JWT e restituisce i permessi dell'utente se il token è valido;
 
 ====== ChatRouter
@@ -472,11 +472,11 @@ Le interazioni con il database sono demandate all'oggetto `ChatRepository` che v
 ====== Metodi
 - ```python +get_new_chat()```: crea una nuova chat, per l'utente autenticato, di cui restituisce l'id;
 - ```python +get_chats()```: ritorna la lista delle chat dell'utente autenticato;
-- ```python +change_chat_name(chat_id: str, new_name: str)```: cambia il nome della chat chat_id con il nuovo nome new_name;
-- ```python +delete_chat(chat_id: str)```: elimina la chat con l'id chat_id;
-- ```python +add_message_to_chat(chat_id: str, message: MessageCreate)```: aggiunge un nuovo messaggio alla chat con l'id chat_idl; i dati del messaggio sono forniti tramite l'oggetto message;
-- ```python +get_chat_messages(chat_id: str, limit: int)```: ritorna i messaggi della chat con l'id chat_id; se limit è definito ritorna gli ultimi n messaggi della chat, dove n è il valore di limit;
-- ```python +rate_message(chat_id: str, message_id: str, rating: MessageRatingUpdate)```: aggiorna la valutazione del messaggio con l'id message_id nella chat chat_id; la valutazione è fornita tramite l'oggetto rating, può essere True (valutazione positiva), False (valutazione negativa) o None (non valutato);
+- ```python +change_chat_name(chat_id: str, new_name: str)```: cambia il nome della chat `chat_id` con il nuovo nome `new_name`;
+- ```python +delete_chat(chat_id: str)```: elimina la chat con l'id `chat_id`;
+- ```python +add_message_to_chat(chat_id: str, message: MessageCreate)```: aggiunge un nuovo messaggio alla chat con l'id `chat_id`; i dati del messaggio sono forniti tramite l'oggetto `message`;
+- ```python +get_chat_messages(chat_id: str, limit: int)```: ritorna i messaggi della chat con l'id `chat_id`; se `limit` è definito ritorna gli ultimi n messaggi della chat, dove n è il valore di `limit`;
+- ```python +rate_message(chat_id: str, message_id: str, rating: MessageRatingUpdate)```: aggiorna la valutazione del messaggio con l'id `message_id` nella chat `chat_id`; la valutazione è fornita tramite l'oggetto `rating`, può essere `True` (valutazione positiva), `False` (valutazione negativa) o `None` (non valutato);
 - ```python +get_global_stats(start_data: str = None, end_date: str = None)```: ritorna le statistiche globali del sistema, come il numero totale di chat, messaggi, valutazioni; solo gli admin possono utilizzare questo metodo;
 
 ===== DocumentRouter
@@ -502,14 +502,14 @@ La classe `UserRouter` gestisce le chiamate alle operazioni relative agli utenti
 - ```python +update_user(user_new_data: UserUpdate)```: aggiorna i dati di un utente specificato. Richiede privilegi di amministratore e la password dell'amministratore che esegue l'operazione;
 - ```python +delete_user(delete_user: UserDelete, admin: UserAuth)```: elimina un utente specificato. Richiede privilegi di amministratore e la password dell'amministratore che esegue l'operazione;
 - ```python +update_password(user_data: UserUpdatePassword)```: aggiorna la password dell'utente autenticato. Richiede la password corrente dell'utente;
-- ```python +reset_password(current_user: User)```: reimposta la password per l'utente identificato tramite email. Invia un'email con la nuova password temporanea;
+- ```python +reset_password(current_user: User)```: reimposta la password per l'utente identificato tramite l'email. Invia un'email con la nuova password temporanea;
 
 
 ===== SettingRouter
 #figure(image("../imgs/database-api/SettingRouter.png", width: 50%), caption: "Diagramma delle classi di SettingRouter")
 La classe `SettingRouter` gestisce le operazioni relative alle impostazioni globali dell'applicazione. Permette di recuperare le impostazioni correnti e di aggiornarle. La lettura delle impostazioni è accessibile pubblicamente, mentre la modifica richiede privilegi di amministratore (`Depends(verify_admin)`). Le operazioni sui dati sono demandate a `SettingRepository`.
 ====== Attributi
-- ```python router: APIRouter```: gestisce le chiamate alleggetto del modulo `fastapi` che permette di definire le API route;
+- ```python router: APIRouter```: gestisce le chiamate all'oggetto del modulo `fastapi` che permette di definire le API route;
 ====== Metodi
 - ```python +get_settings() -> Settings```: restituisce le impostazioni correnti dell'applicazione;
 - ```python +update_settings(settings: Settings)```: aggiorna le impostazioni dell'applicazione. Richiede privilegi di amministratore;
@@ -609,8 +609,8 @@ La classe `FaqRepository` è responsabile della gestione delle operazioni CRUD p
 La classe `EmailService` è responsabile dell'invio di email. Utilizza la libreria `fastapi-mail` e configura i parametri di connessione al server SMTP tramite variabili d'ambiente.
 
 ====== Attributi
-- ```python conf: ConnectionConfig```: oggetto di configurazione per `fastapi-mail` contenente i dettagli del server SMTP;
-- ```python mail: FastMail```: istanza di `FastMail` utilizzata per inviare i messaggi;
+- ```python -conf: ConnectionConfig```: oggetto di configurazione per `fastapi-mail` contenente i dettagli del server SMTP;
+- ```python -mail: FastMail```: istanza di `FastMail` utilizzata per inviare i messaggi;
 
 ====== Metodi
 - ```python +__init__()```: costruttore della classe, inizializza `conf` leggendo le variabili d'ambiente (con valori di default) e l'oggetto `mail`;
@@ -618,12 +618,14 @@ La classe `EmailService` è responsabile dell'invio di email. Utilizza la librer
 - ```python +is_configuration_valid() -> bool```: controlla se le variabili d'ambiente necessarie per l'invio delle email sono state configurate;
 
 ===== Database
+#figure(image("../imgs/database-api/Database.png", width: 30%), caption: "Diagramma delle classi di Database")
+
 La classe `Database` è responsabile della gestione della connessione al database MongoDB. Utilizza il pattern Singleton per garantire che esista una singola istanza di connessione al database durante l'intero ciclo di vita dell'applicazione.
 ====== Attributi
-- ```python db```: istanza della connessione al database.
+- ```python -db```: istanza della connessione al database.
 ====== Metodi
-- ```python init_db()```: Inizializza la connessione al database. Questa funzione deve essere chiamata all'avvio dell'applicazione. Assegna l'istanza fornita alla variabile globale `_db`;
-- ```python get_db() -> AsyncIOMotorDatabase```: Restituisce l'istanza del database precedentemente inizializzata. Se `init_db()` non è stata ancora chiamata (e quindi `_db` è `None`), solleva una `RuntimeError` per indicare che il database non è pronto per l'uso. Questo meccanismo assicura che tutte le parti dell'applicazione accedano alla stessa istanza di connessione al database; (*Singleton*)
+- ```python +init_db()```: Inizializza la connessione al database. Questa funzione deve essere chiamata all'avvio dell'applicazione;
+- ```python +get_db() -> AsyncIOMotorDatabase```: Restituisce l'istanza del database precedentemente inizializzata. Se `init_db()` non è stata ancora chiamata (e quindi `db` è `None`), solleva una `RuntimeError` per indicare che il database non è pronto per l'uso. Questo meccanismo assicura che tutte le parti dell'applicazione accedano alla stessa istanza di connessione al database; (*Singleton*)
 
 
 === LLM API
