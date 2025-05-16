@@ -22,6 +22,11 @@
   ),
   sommario: [Analisi dei requisiti del capitolato C7],
   versioni: (
+    "2.0.0",
+    "16/05/2025",
+    "Francesco Fragonas",
+    "Correzzione di alcuni requisiti e aggiunto Use Case 45",
+    "",
     "1.2.0",
     "23/04/2025",
     "Matteo Bazzan",
@@ -127,7 +132,9 @@ Il chatbot si integra con un'interfaccia dedicata al #gloss[fornitore], che perm
 == Utenti
 *Azienda fornitrice:* rappresenta l'azienda che fornisce beni o servizi ai propri clienti. Questo utente ha accesso a
 un'interfaccia web per la configurazione del chatbot e la gestione dei clienti oltre ad un interfaccia equivalente a
-quella del cliente per comunicare con il chatbot. *Cliente:* rappresenta il cliente finale che acquista i prodotti dal
+quella del cliente per comunicare con il chatbot. 
+
+*Cliente:* rappresenta il cliente finale che acquista i prodotti dal
 fornitore. Questo utente può interagire con il chatbot per ottenere informazioni sui prodotti o servizi offerti.
 
 == Funzionalità del prodotto
@@ -154,8 +161,8 @@ nella seguente pagina web: #link("https://codehex16.github.io/glossario").
 
 == Riferimenti
 === Riferimenti normativi:
-- #gloss[Norme di progetto] _(versione 1.0.0)_:
-#link("https://codehex16.github.io/docs/2%20-%20RTB/Norme-di-Progetto.pdf");
+- #gloss[Norme di progetto] _(versione 1.5.0)_:
+#link("https://codehex16.github.io/docs/3%20-%20PB/Norme-di-Progetto.pdf");
 
 - Capitolato C7 - #gloss[Assistente Virtuale] Ergon:
 #link("https://www.math.unipd.it/~tullio/IS-1/2024/Progetto/C7.pdf");
@@ -169,7 +176,7 @@ nella seguente pagina web: #link("https://codehex16.github.io/glossario").
 
 - Glossario:
   - Documento: #link("https://codehex16.github.io/docs/glossario/glossario.pdf") _(versione 1.0.0)_;
-  - Pagina web: #link("https://codehex16.github.io/glossario.html") _(ultima consultazione 07-03-2025)_;
+  - Pagina web: #link("https://codehex16.github.io/glossario.html") _(ultima consultazione 14-05-2025)_;
 
 
 = Use Cases
@@ -331,7 +338,7 @@ completato l'autenticazione.\
 - L'utente deve possedere le credenziali necessarie per l'accesso;
 - L'utente deve inserire le credenziali corrette;
 *Postcondizioni:*
-- È stata salvata la preferenza dell'utente relativa al salvataggio delle credenziali;
+- È stata salvata la preferenza dell'utente relativa al salvataggio delle credenziali, con la durata di 30 giorni;
 *Scenario Principale:*
 - L'utente inserisce le credenziali;
 - Il sistema mantiene in memoria la preferenza per i futuri login;
@@ -418,7 +425,7 @@ completato l'autenticazione.\
 - Le credenziali dell'utente sono state correttamente inserite nel sistema;
 - L'utente deve essersi precedentemente autenticato con le credenziali corrette;
 *Postcondizioni:*
-- Il sistema ha ricevuto la password inserite e, se questa è valida, vengono abilitate le funzionalità che necessitano dell'identificazione;
+- Il sistema ha ricevuto la password inserita e, se questa è valida, vengono abilitate le funzionalità che necessitano dell'identificazione;
 *Scenario Principale:*
 - All'utente viene mostrato un form per inserire la password corrente;
 - L'utente inserisce la password corrente;
@@ -626,7 +633,7 @@ completato l'autenticazione.\
 - L'utente ha scritto un messaggio utilizzando una delle domande preimpostate;
 *Scenario Principale:*
 - L'utente, anziché scrivere un messaggio manualmente, decide di utilizzare un messaggio tra quelli preimpostati
-  nell'applicazione; nel caso in cui l'LLM individua delle FAQ utili nel contesto della chat sarà il chatbot stesso a suggerirle all'utente;
+  nell'applicazione;
 
 == UC22 - Invio messaggio
 #figure(image("../imgs/uc22.png", width: 95%), caption: "UC22 - Invio messaggio")
@@ -660,7 +667,7 @@ completato l'autenticazione.\
 *Scenario Principale:*
 - Il sistema trasmette il messaggio al chatbot e nel frattempo l'utente riceve un feedback che indica l'elaborazione della risposta;
 - Il chatbot elabora e restituisce una risposta;
-- La contenuto della risposta viene mostrato all'utente tramite l'interfaccia della chat specifica;
+- Il contenuto della risposta viene mostrato all'utente tramite l'interfaccia della chat specifica;
 *Estensioni:*
 - Errore: Sistema non raggiungibile;
 
@@ -744,11 +751,10 @@ completato l'autenticazione.\
 - Un utente vuole modificare il tema dell'interfaccia della web-app tramite con una delle opzioni disponibili;
 *Precondizioni:*
 - L'utente deve aver effettuato il login;
-- L'utente deve accedere alle impostazioni;
 *Postcondizioni:*
 - Il sistema ha modificato l'interfaccia lato client con l'opzione scelta dall'utente;
 *Scenario Principale:*
-- L'utente sceglie una delle opzioni disponibili per il tema il tema dell'interfaccia;
+- L'utente sceglie una delle opzioni disponibili per il tema dell'interfaccia;
 - Il sistema modifica il tema dell'interfaccia lato client con l'opzione scelta dall'utente;
 *Generalizzazioni:*
 - Cambio tema chiaro;
@@ -761,7 +767,6 @@ completato l'autenticazione.\
 - Un utente vuole modificare il tema dell'interfaccia della web-app in modalità chiara;
 *Precondizioni:*
 - L'utente deve aver effettuato il login;
-- L'utente deve accedere alle impostazioni;
 *Postcondizioni:*
 - Il sistema ha impostato il tema chiaro per l'interfaccia lato client;
 *Scenario Principale:*
@@ -775,27 +780,26 @@ completato l'autenticazione.\
 - Un utente vuole modificare il tema dell'interfaccia della web-app in modalità scura;
 *Precondizioni:*
 - L'utente deve aver effettuato il login;
-- L'utente deve accedere alle impostazioni;
 *Postcondizioni:*
 - Il sistema ha impostato il tema scuro per l'interfaccia lato client;
 *Scenario Principale:*
 - L'utente seleziona l'opzione per il tema scuro;
 - Il sistema imposta il tema scuro per dell'interfaccia lato client;
 
-== UC27 - Modifica della durata dello storico delle chat
-#figure(image("../imgs/uc27.png", width: 95%), caption: "UC27 - Modifica della durata dello storico delle chat")
+== UC27 - Modifica del numero massimo di messaggi visualizzati nelle chat
+#figure(image("../imgs/uc27.png", width: 95%), caption: "UC27 - Modifica del numero massimo di messaggi visualizzati nelle chat")
 *Attori principali:*
 - Fornitore;
 *Descrizione:*
-- Il fornitore vuole cambiare limite massimo di tempo per cui viene salvato lo storico delle chat;
+- Il fornitore vuole cambiare il numero massimo di messaggi visualizzati all'interno delle chat;
 *Precondizioni:*
 - Il fornitore deve aver effettuato il login;
 - Il fornitore deve accedere alle impostazioni;
 *Postcondizioni:*
-- Viene modificato il limite di tempo di memorizzazione dello storico;
+- Viene modificato il numero massimo di messaggi visualizzati all'interno delle chat;
 *Scenario Principale:*
-- Il fornitore modifica il periodo di tempo su cui visualizzare lo storico delle chat avvenute con il chatbot e lo
-  conferma;
+- Il fornitore modifica il numero massimo di messaggi visualizzati all'interno delle chat;
+- Il fornitore salva le modifiche;
 - Il sistema memorizza la nuova impostazione;
 *Estensioni:*
 - Errore: Sistema non raggiungibile;
@@ -809,6 +813,7 @@ completato l'autenticazione.\
 *Precondizioni:*
 - Il fornitore deve aver effettuato il login;
 - Il fornitore deve accedere alle impostazioni;
+- Il fornitore deve scegliere il logo da caricare (dark mode, light mode o favicon);
 *Postcondizioni:*
 - Il sistema ha effettuato un controllo di validità del formato del logo, e se il logo è risultato valido lo ha inserito
   nell'interfaccia;
@@ -819,25 +824,22 @@ completato l'autenticazione.\
 - Errore: Formato file non valido;
 - Errore: Sistema non raggiungibile;
 
-== UC29 - Selezione palette colori
-#figure(image("../imgs/uc29.png", width: 95%), caption: "UC29 - Selezione palette colori")
+== UC29 - Selezione colore primario
+#figure(image("../imgs/uc29.png", width: 95%), caption: "UC29 - Selezione colore primario")
 *Attori principali:*
 - Fornitore;
 *Descrizione:*
-- Un fornitore vuole selezionare una semplice palette di colori di alcuni degli elementi dell'interfaccia in modo da
-  caratterizzarla;
+- Un fornitore vuole selezionare il colore primario di alcuni degli elementi dell'interfaccia in modo da caratterizzarla;
 *Precondizioni:*
 - Il fornitore deve aver effettuato il login;
 - Il fornitore deve accedere alle impostazioni;
 *Postcondizioni:*
-- Il sistema ha modificato l'interfaccia con la palette di colori scelta dal fornitore;
+- Il sistema ha modificato l'interfaccia con il colore scelto dal fornitore;
 *Scenario Principale:*
-- Il fornitore entra nella sezione "Palette colori";
-- Il fornitore sceglie l'insieme di colori che comporranno la parte di palette personalizzabile; la scelta avviene tramite
-  un #gloss[color picker] oppure inserendo i codici esadecimali dei colori, se dei colori non vengono scelti vengono
-  mantenuti i colori della palette precedente;
+- Il fornitore entra nella sezione "Colore primario";
+- Il fornitore sceglie il colore primario ; la scelta avviene tramite un #gloss[color picker] oppure inserendo il codice esadecimali del colore;
 - Il fornitore salva le scelte effettuate;
-- Il sistema modifica l'interfaccia con i colori scelti dal fornitore;
+- Il sistema modifica l'interfaccia con il colore scelto dal fornitore;
 *Estensioni*:
 - Errore: Richiesta con dati mancanti o errati;
 - Errore: Sistema non raggiungibile;
@@ -856,12 +858,13 @@ completato l'autenticazione.\
 - Vengono mostrate le statistiche relative alle interazioni tra clienti e chatbot;
 *Scenario Principale*:
 - Il fornitore accede alla sezione "Statistiche";
-- Il sistema mostra le statistiche relative alle interazioni tra clienti e chatbot, se necessario tramite grafici o tabelle; nello specifico le statistiche visualizzate riguardano:
-  - valutazioni delle risposte positive;
-  - valutazioni delle risposte negative;
-  - relazione tra valutazioni positive e negative;
+- Il sistema mostra le statistiche relative alle interazioni tra clienti e chatbot; nello specifico le statistiche visualizzate riguardano:
   - numero di messaggi inviati dal chatbot e dagli utenti;
-  - numero di messaggi inviati tramite FAQ;
+  - numero totale di chat aperte;
+  - relazione tra valutazioni positive e negative;
+  - utenti attivi;
+  - media messaggi per chat;
+  - media messaggi per utente;
 *Inclusioni*:
 - Scelta filtri di visualizzazione;
 *Estensioni*:
@@ -879,9 +882,8 @@ completato l'autenticazione.\
 - Il fornitore deve avere almeno un cliente che ha interagito con il chatbot;
 *Postcondizioni*
 - Vengono applicati i filtri scelti dall'utente tra quelli disponibili:
-  - filtro per data e ora: vengono filtrate le statistiche relative ad un determinato periodo di tempo;
-  - filtro per cliente: vengono filtrate le statistiche relative ad un determinato cliente;
-  - filtro per FAQ: vengono filtrate le statistiche relative ad una FAQ specifica;
+  - filtro per data di inizio periodo;
+  - filtro per data di fine periodo;
 *Scenario Principale*
 - Il fornitore inserisce i filtri di visualizzazione desiderati;
 - Il sistema applica i filtri alle statistiche;
@@ -899,7 +901,6 @@ completato l'autenticazione.\
 - Viene aggiunto un account per un cliente;
 *Scenario Principale:*
 - Il fornitore inserisce i dati del cliente per creare un account;
-- Viene richiesta la password del fornitore per confermare l'aggiunta;
 - Il fornitore conferma l'aggiunta dell'account;
 - Il sistema aggiunge l'account per il cliente;
 *Estensioni:*
@@ -999,6 +1000,7 @@ completato l'autenticazione.\
   campi:
   - Nome del documento;
   - Data di caricamento;
+  - Nome dell'utente che ha caricato il documento;
 *Scenario Principale:*
 - Il fornitore accede alla sezione "Gestione documenti aziendali";
 - La piattaforma visualizza la lista dei documenti aziendali caricati nella piattaforma;
@@ -1138,6 +1140,28 @@ completato l'autenticazione.\
 - L'utente invia una richiesta al sistema, ma i dati utilizzati nella richiesta sono mancanti o errati; in alcuni casi richieste come queste possono essere associate ad un utilizzo errato della piattaforma o ad un tentativo di attacco informatico;
 - Il sistema mostra un messaggio d'errore all'utente tramite il client dove spiega la causa dell'errore;
 
+== UC45 - Modifica account cliente
+#figure(image("../imgs/uc45.png", width: 95%), caption: "UC45 - Modifica account cliente")
+*Attori principali:*
+- Fornitore;
+*Descrizione:*
+- Il fornitore vuole modificare un account cliente già inserito nella piattaforma;
+*Precondizioni:*
+- Il fornitore deve aver effettuato il login;
+- Il fornitore deve essere nella pagina dedicata alla gestione dei clienti;
+*Postcondizioni:*
+- Vengono applicate le modifiche all'account cliente se queste rispettano i formati richiesti;
+*Scenario Principale:*
+- Il fornitore individua l'account del cliente da modificare e preme il bottone per modificarlo;
+- Il fornitore modifica l'account tramite dei campi appositi nell'interfaccia;
+- Viene richiesto l'inserimento della password del fornitore per confermare l'eliminazione;
+- Il sistema riceve le modifiche e, se tutti i campi modificati rispettano i formati richiesti, le applica;
+*Estensioni:*
+- Errore: Richiesta con dati mancanti o errati;
+- Errore: Sistema non raggiungibile;
+*Inclusioni:*
+- Controllo identità;
+
 = Requisiti
 In questa sezione vengono elencati i requisiti del capitolato, individuati durante la fase di analisi. Ogni #gloss[requisito] viene
 identificato da un codice, scelto in base ai seguenti parametri:
@@ -1253,7 +1277,7 @@ con:
     "UC28 - Riunioni interne, Riunioni esterne",
     // palette colori
     "R-23-F-D",
-    "Il fornitore deve avere la possibilità di cambiare i colori principali dell'interfaccia della propria piattaforma",
+    "Il fornitore deve avere la possibilità di cambiare il colore primario dell'interfaccia della propria piattaforma",
     "UC29 - Riunioni interne, Riunioni esterne",
     // statistiche domanda risposta
     "R-24-F-D",
@@ -1315,6 +1339,10 @@ con:
     "R-38-F-O",
     "Un utente non autenticato o il cliente che sta utilizzando la piattaforma deve essere avvisato nel caso in cui la richiesta che ha inviato contenga dati mancanti o errati; nel caso sia pertinente deve anche essere specificato il problema",
     "UC44 - Riunioni interne",
+    // modifica account cliente
+    "R-39-F-O",
+    "Il fornitore deve avere la possibilità di modificare gli account degli utenti già inseriti nella piattaforma",
+    "UC45 - Riunioni esterne",
   ),
 )
 
@@ -1426,6 +1454,7 @@ con:
     "R-36-F-O", "UC10, UC42 - Riunioni interne",
     "R-37-F-O", "UC43 - Riunioni interne",
     "R-38-F-O", "UC44 - Riunioni interne",
+    "R-39-F-O", "UC45 - Riunioni esterne",
     // Requisiti di qualità
     "R-01-Q-O", "Capitolato",
     "R-02-Q-O", "Capitolato",
@@ -1450,9 +1479,9 @@ con:
     align: center + horizon,
     fill: (x, y) => if (y == 0 or y == 4) { luma(230) },
     table.header([*Tipo di requisiti*], [*Obbligatori*], [*Desiderabili*], [*Totale*]),
-    "Funzionali", "31", "7", "38",
+    "Funzionali", "32", "7", "39",
     "Qualità", "6", "0", "6",
     "Vincolo", "3", "0", "3",
-    "Totale", "40", "7", "47",
+    "Totale", "41", "7", "48",
   ),
 )
