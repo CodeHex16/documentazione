@@ -25,8 +25,8 @@
     "2.0.0",
     "16/05/2025",
     "Francesco Fragonas",
-    "Correzzione di alcuni requisiti e aggiunto Use Case 45",
-    "",
+    "Correzione di alcuni requisiti e aggiunto Use Case 45",
+    "Luca Ribon",
     "1.2.0",
     "23/04/2025",
     "Matteo Bazzan",
@@ -132,7 +132,7 @@ Il chatbot si integra con un'interfaccia dedicata al #gloss[fornitore], che perm
 == Utenti
 *Azienda fornitrice:* rappresenta l'azienda che fornisce beni o servizi ai propri clienti. Questo utente ha accesso a
 un'interfaccia web per la configurazione del chatbot e la gestione dei clienti oltre ad un interfaccia equivalente a
-quella del cliente per comunicare con il chatbot. 
+quella del cliente per comunicare con il chatbot.
 
 *Cliente:* rappresenta il cliente finale che acquista i prodotti dal
 fornitore. Questo utente può interagire con il chatbot per ottenere informazioni sui prodotti o servizi offerti.
@@ -175,7 +175,7 @@ nella seguente pagina web: #link("https://codehex16.github.io/glossario").
 #link("https://www.math.unipd.it/~rcardin/swea/2022/Diagrammi%20Use%20Case.pdf") _(ultima consultazione 16-05-2025)_;
 
 - Glossario:
-  - Documento: #link("https://codehex16.github.io/docs/glossario/glossario.pdf") _(versione 0.7.0)_;
+  - Documento: #link("https://codehex16.github.io/docs/glossario/glossario.pdf") _(versione 1.0.0)_;
   - Pagina web: #link("https://codehex16.github.io/glossario.html") _(ultima consultazione 16-05-2025)_;
 
 
@@ -209,8 +209,7 @@ completato l'autenticazione.\
 *Attori principali:*
 - Utente non autenticato;
 *Descrizione:*
-- Un utente non autenticato vuole accedere alla piattaforma per la configurazione del proprio chatbot e per interagire con
-  esso;
+- Un utente non autenticato vuole accedere alla piattaforma per la configurazione del proprio chatbot o per interagire con esso;
 *Precondizioni:*
 - L'utente è in possesso delle proprie credenziali;
 - L'utente ha già effettuato il primo login e cambiato la password temporanea;
@@ -373,7 +372,7 @@ completato l'autenticazione.\
 *Descrizione:*
 - Un utente non autenticato inserisce l'e-mail associata al suo account;
 *Precondizioni:*
-- Le credenziali dell'utente sono state correttamente inserite;
+- Le credenziali dell'utente sono state correttamente inserite nel sistema;
 - L'utente deve essere in possesso della sua e-mail;
 *Postcondizioni:*
 - L'utente ha inserito la sua e-mail;
@@ -472,9 +471,9 @@ completato l'autenticazione.\
 *Precondizioni:*
 - L'utente deve aver effettuato il login;
 *Postcondizioni:*
-- L'utente visualizza la pagina dedicata alla lista delle chat;
+- L'utente visualizza la lista delle chat;
 *Scenario Principale:*
-- L'utente vede la lista di tutte le chat, se non ne ha mai creata una visualizzerà solo quella presente di default;
+- L'utente vede la lista di tutte le chat, se non ne ha mai creata una visualizzerà il messaggio "Ancora nessuna chat";
 *Estensioni:*
 - Errore: Sistema non raggiungibile;
 *Inclusioni:*
@@ -485,14 +484,14 @@ completato l'autenticazione.\
 *Attori principali:*
 - Cliente;
 *Descrizione:*
-- Nella lista della chat viene mostrato il nome della chat;
+- L'utente sta visualizzando il titolo di una chat nella lista delle chat o della chat che ha aperto;
 *Precondizioni:*
 - L'utente deve aver effettuato il login;
 - L'utente sta visualizzando la lista delle chat o una chat specifica;
 *Postcondizioni:*
 - L'utente ha visualizzato il nome della chat;
 *Scenario Principale:*
-- L'utente visualizza il nome della chat presente nella lista delle chat;
+- Viene mostrato il titolo della chat all'utente;
 
 == UC15 - Creazione di una nuova chat
 #figure(image("../imgs/uc15.png", width: 95%), caption: "UC15 - Creazione di una nuova chat")
@@ -591,7 +590,7 @@ completato l'autenticazione.\
 *Attori principali:*
 - Cliente;
 *Descrizione:*
-- Un utente vuole inviare un messaggio al chatbot;
+- Un utente vuole scrivere un messaggio da inviare al chatbot;
 *Precondizioni:*
 - L'utente deve aver effettuato il login;
 - L'utente deve aver aperto una chat specifica;
@@ -662,6 +661,7 @@ completato l'autenticazione.\
 *Precondizioni:*
 - L'utente deve aver effettuato il login;
 - L'utente deve aver inviato un messaggio al chatbot;
+- Il chatbot deve avere del contesto per poter rispondere;
 *Postcondizioni:*
 - L'utente ha visualizzato la risposta dal chatbot;
 *Scenario Principale:*
@@ -787,7 +787,10 @@ completato l'autenticazione.\
 - Il sistema imposta il tema scuro per dell'interfaccia lato client;
 
 == UC27 - Modifica del numero massimo di messaggi visualizzati nelle chat
-#figure(image("../imgs/uc27.png", width: 95%), caption: "UC27 - Modifica del numero massimo di messaggi visualizzati nelle chat")
+#figure(
+  image("../imgs/uc27.png", width: 95%),
+  caption: "UC27 - Modifica del numero massimo di messaggi visualizzati nelle chat",
+)
 *Attori principali:*
 - Fornitore;
 *Descrizione:*
@@ -837,7 +840,7 @@ completato l'autenticazione.\
 - Il sistema ha modificato l'interfaccia con il colore scelto dal fornitore;
 *Scenario Principale:*
 - Il fornitore entra nella sezione "Colore primario";
-- Il fornitore sceglie il colore primario ; la scelta avviene tramite un #gloss[color picker] oppure inserendo il codice esadecimali del colore;
+- Il fornitore sceglie il colore primario; la scelta avviene tramite il #gloss[color picker] di sistema;
 - Il fornitore salva le scelte effettuate;
 - Il sistema modifica l'interfaccia con il colore scelto dal fornitore;
 *Estensioni*:
@@ -852,13 +855,12 @@ completato l'autenticazione.\
 - Un fornitore vuole visualizzare le statistiche relative alle interazioni tra clienti e chatbot;
 *Precondizioni*:
 - Il fornitore deve aver effettuato il login;
-- Il fornitore deve accedere alle impostazioni;
 - Il fornitore deve avere almeno un cliente che ha interagito con il chatbot;
 *Postcondizioni*:
 - Vengono mostrate le statistiche relative alle interazioni tra clienti e chatbot;
 *Scenario Principale*:
 - Il fornitore accede alla sezione "Statistiche";
-- Il sistema mostra le statistiche relative alle interazioni tra clienti e chatbot; nello specifico le statistiche visualizzate riguardano:
+- Il sistema mostra le statistiche relative alle interazioni tra clienti e chatbot; nello specifico le statistiche riguardano:
   - numero di messaggi inviati dal chatbot e dagli utenti;
   - numero totale di chat aperte;
   - relazione tra valutazioni positive e negative;
@@ -939,8 +941,7 @@ completato l'autenticazione.\
 *Postcondizioni:*
 - Viene eliminato un account di un cliente;
 *Scenario Principale:*
-- Il fornitore seleziona l'account del cliente da eliminare tra una lista di quelli disponibili, oppure usa il bottone di
-  eliminazione relativo ad un account specifico tra quelli visualizzati;
+- Il fornitore usa il bottone di eliminazione relativo ad un account specifico tra quelli visualizzati;
 - Viene richiesta la password del fornitore per confermare l'eliminazione;
 - Il fornitore conferma l'eliminazione dell'account;
 - Il sistema elimina l'account del cliente;
@@ -1395,7 +1396,6 @@ con:
     fill: (x, y) => if (y == 0) { luma(230) },
     table.header([*ID Requisito*], [*Descrizione*], [*Fonte*]),
     "R-01-V-O", "L'interfaccia di configurazione del fornitore deve essere un'interfaccia web", "Capitolato",
-
     "R-02-V-O",
     "La piattaforma deve essere responsive e funzionare correttamente su dispositivi desktop, tablet e mobile con una larghezza minima di 320px",
     "Riunione interna",
