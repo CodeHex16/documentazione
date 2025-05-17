@@ -1,6 +1,6 @@
-<mxfile host="Electron" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.2.2 Chrome/134.0.6998.205 Electron/35.2.0 Safari/537.36" version="26.2.2">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36" version="27.0.5">
   <diagram name="Pagina-1" id="gL4ax_EIHKm-RJQ7dniV">
-    <mxGraphModel dx="1732" dy="1372" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0" adaptiveColors="auto">
+    <mxGraphModel dx="1291" dy="486" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0" adaptiveColors="auto">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -1153,8 +1153,8 @@
         <mxCell id="C4hJ-xICQrfYtK5iwdgE-126" value="Suppl-AI webapp" style="shape=rect;html=1;verticalAlign=top;fontStyle=1;whiteSpace=wrap;align=center;fontFamily=Inter;" parent="1" vertex="1">
           <mxGeometry x="0.5" y="10400" width="560" height="280" as="geometry" />
         </mxCell>
-        <mxCell id="C4hJ-xICQrfYtK5iwdgE-127" value="UC 27 - Modifica della durata dello storico delle chat" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Inter;" parent="1" vertex="1">
-          <mxGeometry x="35.5" y="10455" width="180" height="70" as="geometry" />
+        <mxCell id="C4hJ-xICQrfYtK5iwdgE-127" value="UC 27 - Modifica del numero massimo di messaggi visualizzati nelle chat" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Inter;" parent="1" vertex="1">
+          <mxGeometry x="20" y="10455" width="180" height="70" as="geometry" />
         </mxCell>
         <mxCell id="C4hJ-xICQrfYtK5iwdgE-128" value="UC 43 - Errore: sistema &lt;br&gt;non raggiungibile" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Inter;" parent="1" vertex="1">
           <mxGeometry x="360.5" y="10455" width="180" height="70" as="geometry" />
@@ -1255,7 +1255,7 @@
         <mxCell id="C4hJ-xICQrfYtK5iwdgE-152" value="Suppl-AI webapp" style="shape=rect;html=1;verticalAlign=top;fontStyle=1;whiteSpace=wrap;align=center;fontFamily=Inter;" parent="1" vertex="1">
           <mxGeometry x="0.5" y="11200" width="560" height="360" as="geometry" />
         </mxCell>
-        <mxCell id="C4hJ-xICQrfYtK5iwdgE-153" value="UC 29 - Selezione palette colori" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Inter;" parent="1" vertex="1">
+        <mxCell id="C4hJ-xICQrfYtK5iwdgE-153" value="UC 29 - Selezione colore primario" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Inter;" parent="1" vertex="1">
           <mxGeometry x="45.5" y="11345" width="180" height="70" as="geometry" />
         </mxCell>
         <mxCell id="C4hJ-xICQrfYtK5iwdgE-154" value="UC 43 - Errore: sistema &lt;br&gt;non raggiungibile" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Inter;" parent="1" vertex="1">
@@ -1456,631 +1456,703 @@
             <mxPoint x="14" y="12420" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-1" value="Fornitore" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontFamily=Inter;" vertex="1" parent="1">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-1" value="Fornitore" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontFamily=Inter;" parent="1" vertex="1">
           <mxGeometry x="-100.5" y="12870" width="30" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-2" value="Suppl-AI webapp" style="shape=rect;html=1;verticalAlign=top;fontStyle=1;whiteSpace=wrap;align=center;fontFamily=Inter;" vertex="1" parent="1">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-2" value="Suppl-AI webapp" style="shape=rect;html=1;verticalAlign=top;fontStyle=1;whiteSpace=wrap;align=center;fontFamily=Inter;" parent="1" vertex="1">
           <mxGeometry x="0.5" y="12720" width="609.5" height="550" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-3" value="UC 34 - Eliminazione dell’account cliente" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Inter;" vertex="1" parent="1">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-3" value="UC 34 - Eliminazione dell’account cliente" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Inter;" parent="1" vertex="1">
           <mxGeometry x="45.5" y="12865" width="180" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-4" value="UC 43 - Errore: sistema &lt;br&gt;non raggiungibile" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Inter;" vertex="1" parent="1">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-4" value="UC 43 - Errore: sistema &lt;br&gt;non raggiungibile" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Inter;" parent="1" vertex="1">
           <mxGeometry x="350.5" y="12780" width="180" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-5" value="&amp;lt;&amp;lt;extends&amp;gt;&amp;gt;" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=block;endFill=1;dashed=1;rounded=0;" edge="1" parent="1" source="tE9DJSlBf8hbRhQ8HYni-4" target="tE9DJSlBf8hbRhQ8HYni-3">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-5" value="&amp;lt;&amp;lt;extends&amp;gt;&amp;gt;" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=block;endFill=1;dashed=1;rounded=0;" parent="1" source="tE9DJSlBf8hbRhQ8HYni-4" target="tE9DJSlBf8hbRhQ8HYni-3" edge="1">
           <mxGeometry width="160" relative="1" as="geometry">
             <mxPoint x="130.5" y="12955" as="sourcePoint" />
             <mxPoint x="290.5" y="12955" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-6" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="tE9DJSlBf8hbRhQ8HYni-1" target="tE9DJSlBf8hbRhQ8HYni-3">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-6" value="" style="endArrow=none;html=1;rounded=0;" parent="1" source="tE9DJSlBf8hbRhQ8HYni-1" target="tE9DJSlBf8hbRhQ8HYni-3" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="190.5" y="13030" as="sourcePoint" />
             <mxPoint x="240.5" y="12980" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-7" value="" style="endArrow=oval;html=1;rounded=0;endFill=0;endSize=10;" edge="1" parent="1" source="tE9DJSlBf8hbRhQ8HYni-8">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-7" value="" style="endArrow=oval;html=1;rounded=0;endFill=0;endSize=10;" parent="1" source="tE9DJSlBf8hbRhQ8HYni-8" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="359.92857142857133" y="13000" as="sourcePoint" />
             <mxPoint x="340.5" y="12840" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-8" value="&lt;br&gt;Extension point: Errore: sistema non raggiungibile" style="shape=note2;boundedLbl=1;whiteSpace=wrap;html=1;size=23;verticalAlign=top;align=left;spacingLeft=5;" vertex="1" parent="1">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-8" value="&lt;br&gt;Extension point: Errore: sistema non raggiungibile" style="shape=note2;boundedLbl=1;whiteSpace=wrap;html=1;size=23;verticalAlign=top;align=left;spacingLeft=5;" parent="1" vertex="1">
           <mxGeometry x="50.5" y="12755" width="210" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-9" value="&lt;span style=&quot;text-align: center;&quot;&gt;Contition: Il sistema non è raggiungibile per diversi motivi&lt;/span&gt;" style="resizeWidth=1;part=1;strokeColor=none;fillColor=none;align=left;spacingLeft=5;whiteSpace=wrap;html=1;" vertex="1" parent="tE9DJSlBf8hbRhQ8HYni-8">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-9" value="&lt;span style=&quot;text-align: center;&quot;&gt;Contition: Il sistema non è raggiungibile per diversi motivi&lt;/span&gt;" style="resizeWidth=1;part=1;strokeColor=none;fillColor=none;align=left;spacingLeft=5;whiteSpace=wrap;html=1;" parent="tE9DJSlBf8hbRhQ8HYni-8" vertex="1">
           <mxGeometry width="210" height="40" relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="tE9DJSlBf8hbRhQ8HYni-8" source="tE9DJSlBf8hbRhQ8HYni-9" target="tE9DJSlBf8hbRhQ8HYni-9">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="tE9DJSlBf8hbRhQ8HYni-8" source="tE9DJSlBf8hbRhQ8HYni-9" target="tE9DJSlBf8hbRhQ8HYni-9" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-11" value="&lt;div&gt;UC 44 - Errore: Richiesta&lt;/div&gt;&lt;div&gt;con dati mancanti o errati&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Inter;" vertex="1" parent="1">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-11" value="&lt;div&gt;UC 44 - Errore: Richiesta&lt;/div&gt;&lt;div&gt;con dati mancanti o errati&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Inter;" parent="1" vertex="1">
           <mxGeometry x="355" y="12990" width="180" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-12" value="" style="endArrow=oval;html=1;rounded=0;endFill=0;endSize=10;" edge="1" parent="1" source="tE9DJSlBf8hbRhQ8HYni-14">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-12" value="" style="endArrow=oval;html=1;rounded=0;endFill=0;endSize=10;" parent="1" source="tE9DJSlBf8hbRhQ8HYni-14" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="323.5" y="13000" as="sourcePoint" />
             <mxPoint x="340" y="12980" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-13" value="&amp;lt;&amp;lt;extends&amp;gt;&amp;gt;" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=block;endFill=1;dashed=1;rounded=0;" edge="1" parent="1" source="tE9DJSlBf8hbRhQ8HYni-11" target="tE9DJSlBf8hbRhQ8HYni-3">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-13" value="&amp;lt;&amp;lt;extends&amp;gt;&amp;gt;" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=block;endFill=1;dashed=1;rounded=0;" parent="1" source="tE9DJSlBf8hbRhQ8HYni-11" target="tE9DJSlBf8hbRhQ8HYni-3" edge="1">
           <mxGeometry width="160" relative="1" as="geometry">
             <mxPoint x="376.5" y="12845" as="sourcePoint" />
             <mxPoint x="218.5" y="12890" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-14" value="&lt;br&gt;Extension point: Errore: Richiesta con dati mancanti o errati" style="shape=note2;boundedLbl=1;whiteSpace=wrap;html=1;size=23;verticalAlign=top;align=left;spacingLeft=5;" vertex="1" parent="1">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-14" value="&lt;br&gt;Extension point: Errore: Richiesta con dati mancanti o errati" style="shape=note2;boundedLbl=1;whiteSpace=wrap;html=1;size=23;verticalAlign=top;align=left;spacingLeft=5;" parent="1" vertex="1">
           <mxGeometry x="350.5" y="12880" width="210" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-15" value="&lt;span style=&quot;text-align: center;&quot;&gt;Contition: La richiesta presenta&lt;/span&gt;&lt;br style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;text-align: center;&quot;&gt;degli errori o dati mancanti&amp;nbsp;&amp;nbsp;&lt;/span&gt;" style="resizeWidth=1;part=1;strokeColor=none;fillColor=none;align=left;spacingLeft=5;whiteSpace=wrap;html=1;" vertex="1" parent="tE9DJSlBf8hbRhQ8HYni-14">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-15" value="&lt;span style=&quot;text-align: center;&quot;&gt;Contition: La richiesta presenta&lt;/span&gt;&lt;br style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;text-align: center;&quot;&gt;degli errori o dati mancanti&amp;nbsp;&amp;nbsp;&lt;/span&gt;" style="resizeWidth=1;part=1;strokeColor=none;fillColor=none;align=left;spacingLeft=5;whiteSpace=wrap;html=1;" parent="tE9DJSlBf8hbRhQ8HYni-14" vertex="1">
           <mxGeometry width="210" height="40" relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="tE9DJSlBf8hbRhQ8HYni-14" source="tE9DJSlBf8hbRhQ8HYni-15" target="tE9DJSlBf8hbRhQ8HYni-15">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="tE9DJSlBf8hbRhQ8HYni-14" source="tE9DJSlBf8hbRhQ8HYni-15" target="tE9DJSlBf8hbRhQ8HYni-15" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-17" value="UC 33 - Errore: Account inserito già esistente" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Inter;" vertex="1" parent="1">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-17" value="UC 33 - Errore: Account inserito già esistente" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Inter;" parent="1" vertex="1">
           <mxGeometry x="360" y="13180" width="180" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-18" value="&lt;br&gt;Extension point:&amp;nbsp;&lt;span style=&quot;font-family: Inter; text-align: center;&quot;&gt;Errore: Account inserito già esistente&lt;/span&gt;" style="shape=note2;boundedLbl=1;whiteSpace=wrap;html=1;size=23;verticalAlign=top;align=left;spacingLeft=5;" vertex="1" parent="1">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-18" value="&lt;br&gt;Extension point:&amp;nbsp;&lt;span style=&quot;font-family: Inter; text-align: center;&quot;&gt;Errore: Account inserito già esistente&lt;/span&gt;" style="shape=note2;boundedLbl=1;whiteSpace=wrap;html=1;size=23;verticalAlign=top;align=left;spacingLeft=5;" parent="1" vertex="1">
           <mxGeometry x="355" y="13080" width="210" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-19" value="&lt;span style=&quot;text-align: center;&quot;&gt;Contition: Il fornitore tenta di &lt;br&gt;inserire un account che già esistente&lt;/span&gt;&lt;span style=&quot;text-align: center;&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;/span&gt;" style="resizeWidth=1;part=1;strokeColor=none;fillColor=none;align=left;spacingLeft=5;whiteSpace=wrap;html=1;" vertex="1" parent="tE9DJSlBf8hbRhQ8HYni-18">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-19" value="&lt;span style=&quot;text-align: center;&quot;&gt;Contition: Il fornitore tenta di &lt;br&gt;inserire un account che già esistente&lt;/span&gt;&lt;span style=&quot;text-align: center;&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;/span&gt;" style="resizeWidth=1;part=1;strokeColor=none;fillColor=none;align=left;spacingLeft=5;whiteSpace=wrap;html=1;" parent="tE9DJSlBf8hbRhQ8HYni-18" vertex="1">
           <mxGeometry width="210" height="40" relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="tE9DJSlBf8hbRhQ8HYni-18" source="tE9DJSlBf8hbRhQ8HYni-19" target="tE9DJSlBf8hbRhQ8HYni-19">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="tE9DJSlBf8hbRhQ8HYni-18" source="tE9DJSlBf8hbRhQ8HYni-19" target="tE9DJSlBf8hbRhQ8HYni-19" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-21" value="&amp;lt;&amp;lt;extends&amp;gt;&amp;gt;" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=block;endFill=1;dashed=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="tE9DJSlBf8hbRhQ8HYni-17" target="tE9DJSlBf8hbRhQ8HYni-3">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-21" value="&amp;lt;&amp;lt;extends&amp;gt;&amp;gt;" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=block;endFill=1;dashed=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="tE9DJSlBf8hbRhQ8HYni-17" target="tE9DJSlBf8hbRhQ8HYni-3" edge="1">
           <mxGeometry width="160" relative="1" as="geometry">
             <mxPoint x="386" y="13001" as="sourcePoint" />
             <mxPoint x="210" y="12934" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-22" value="" style="endArrow=oval;html=1;rounded=0;endFill=0;endSize=10;" edge="1" parent="1" source="tE9DJSlBf8hbRhQ8HYni-18">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-22" value="" style="endArrow=oval;html=1;rounded=0;endFill=0;endSize=10;" parent="1" source="tE9DJSlBf8hbRhQ8HYni-18" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="389" y="12970" as="sourcePoint" />
             <mxPoint x="310" y="13150" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-23" value="UC 10 - Controllo identità" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Inter;" vertex="1" parent="1">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-23" value="UC 10 - Controllo identità" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Inter;" parent="1" vertex="1">
           <mxGeometry x="50.5" y="13140" width="180" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-24" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=block;endFill=1;dashed=1;rounded=0;" edge="1" parent="1" source="tE9DJSlBf8hbRhQ8HYni-23" target="tE9DJSlBf8hbRhQ8HYni-3">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-24" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=block;endFill=1;dashed=1;rounded=0;" parent="1" source="tE9DJSlBf8hbRhQ8HYni-23" target="tE9DJSlBf8hbRhQ8HYni-3" edge="1">
           <mxGeometry width="160" relative="1" as="geometry">
             <mxPoint x="173" y="13105" as="sourcePoint" />
             <mxPoint x="14" y="13060" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-25" value="Fornitore" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontFamily=Inter;" vertex="1" parent="1">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-25" value="Fornitore" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontFamily=Inter;" parent="1" vertex="1">
           <mxGeometry x="-100.5" y="13510" width="30" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-26" value="Suppl-AI webapp" style="shape=rect;html=1;verticalAlign=top;fontStyle=1;whiteSpace=wrap;align=center;fontFamily=Inter;" vertex="1" parent="1">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-26" value="Suppl-AI webapp" style="shape=rect;html=1;verticalAlign=top;fontStyle=1;whiteSpace=wrap;align=center;fontFamily=Inter;" parent="1" vertex="1">
           <mxGeometry x="0.5" y="13360" width="560" height="360" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-27" value="UC 35 - Inserimento &lt;br&gt;documenti aziendali" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Inter;" vertex="1" parent="1">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-27" value="UC 35 - Inserimento &lt;br&gt;documenti aziendali" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Inter;" parent="1" vertex="1">
           <mxGeometry x="45.5" y="13505" width="180" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-28" value="UC 43 - Errore: sistema &lt;br&gt;non raggiungibile" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Inter;" vertex="1" parent="1">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-28" value="UC 43 - Errore: sistema &lt;br&gt;non raggiungibile" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Inter;" parent="1" vertex="1">
           <mxGeometry x="350.5" y="13420" width="180" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-29" value="&amp;lt;&amp;lt;extends&amp;gt;&amp;gt;" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=block;endFill=1;dashed=1;rounded=0;" edge="1" parent="1" source="tE9DJSlBf8hbRhQ8HYni-28" target="tE9DJSlBf8hbRhQ8HYni-27">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-29" value="&amp;lt;&amp;lt;extends&amp;gt;&amp;gt;" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=block;endFill=1;dashed=1;rounded=0;" parent="1" source="tE9DJSlBf8hbRhQ8HYni-28" target="tE9DJSlBf8hbRhQ8HYni-27" edge="1">
           <mxGeometry width="160" relative="1" as="geometry">
             <mxPoint x="130.5" y="13595" as="sourcePoint" />
             <mxPoint x="290.5" y="13595" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-30" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="tE9DJSlBf8hbRhQ8HYni-25" target="tE9DJSlBf8hbRhQ8HYni-27">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-30" value="" style="endArrow=none;html=1;rounded=0;" parent="1" source="tE9DJSlBf8hbRhQ8HYni-25" target="tE9DJSlBf8hbRhQ8HYni-27" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="190.5" y="13670" as="sourcePoint" />
             <mxPoint x="240.5" y="13620" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-31" value="" style="endArrow=oval;html=1;rounded=0;endFill=0;endSize=10;" edge="1" parent="1" source="tE9DJSlBf8hbRhQ8HYni-32">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-31" value="" style="endArrow=oval;html=1;rounded=0;endFill=0;endSize=10;" parent="1" source="tE9DJSlBf8hbRhQ8HYni-32" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="359.92857142857133" y="13640" as="sourcePoint" />
             <mxPoint x="340.5" y="13480" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-32" value="&lt;br&gt;Extension point: Errore: sistema non raggiungibile" style="shape=note2;boundedLbl=1;whiteSpace=wrap;html=1;size=23;verticalAlign=top;align=left;spacingLeft=5;" vertex="1" parent="1">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-32" value="&lt;br&gt;Extension point: Errore: sistema non raggiungibile" style="shape=note2;boundedLbl=1;whiteSpace=wrap;html=1;size=23;verticalAlign=top;align=left;spacingLeft=5;" parent="1" vertex="1">
           <mxGeometry x="50.5" y="13395" width="210" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-33" value="&lt;span style=&quot;text-align: center;&quot;&gt;Contition: Il sistema non è raggiungibile per diversi motivi&lt;/span&gt;" style="resizeWidth=1;part=1;strokeColor=none;fillColor=none;align=left;spacingLeft=5;whiteSpace=wrap;html=1;" vertex="1" parent="tE9DJSlBf8hbRhQ8HYni-32">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-33" value="&lt;span style=&quot;text-align: center;&quot;&gt;Contition: Il sistema non è raggiungibile per diversi motivi&lt;/span&gt;" style="resizeWidth=1;part=1;strokeColor=none;fillColor=none;align=left;spacingLeft=5;whiteSpace=wrap;html=1;" parent="tE9DJSlBf8hbRhQ8HYni-32" vertex="1">
           <mxGeometry width="210" height="40" relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="tE9DJSlBf8hbRhQ8HYni-32" source="tE9DJSlBf8hbRhQ8HYni-33" target="tE9DJSlBf8hbRhQ8HYni-33">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="tE9DJSlBf8hbRhQ8HYni-32" source="tE9DJSlBf8hbRhQ8HYni-33" target="tE9DJSlBf8hbRhQ8HYni-33" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-35" value="UC 36 - Errore: Formato &lt;br&gt;file non valido" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Inter;" vertex="1" parent="1">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-35" value="UC 36 - Errore: Formato &lt;br&gt;file non valido" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Inter;" parent="1" vertex="1">
           <mxGeometry x="350.5" y="13540" width="180" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-36" value="" style="endArrow=oval;html=1;rounded=0;endFill=0;endSize=10;" edge="1" parent="1">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-36" value="" style="endArrow=oval;html=1;rounded=0;endFill=0;endSize=10;" parent="1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="233.27777777777783" y="13610" as="sourcePoint" />
             <mxPoint x="330.5" y="13560" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-37" value="&amp;lt;&amp;lt;extends&amp;gt;&amp;gt;" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=block;endFill=1;dashed=1;rounded=0;" edge="1" parent="1" source="tE9DJSlBf8hbRhQ8HYni-35" target="tE9DJSlBf8hbRhQ8HYni-27">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-37" value="&amp;lt;&amp;lt;extends&amp;gt;&amp;gt;" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=block;endFill=1;dashed=1;rounded=0;" parent="1" source="tE9DJSlBf8hbRhQ8HYni-35" target="tE9DJSlBf8hbRhQ8HYni-27" edge="1">
           <mxGeometry width="160" relative="1" as="geometry">
             <mxPoint x="376.5" y="13485" as="sourcePoint" />
             <mxPoint x="218.5" y="13530" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-41" value="&lt;br&gt;Extension point: Errore: Formato file non valido" style="shape=note2;boundedLbl=1;whiteSpace=wrap;html=1;size=23;verticalAlign=top;align=left;spacingLeft=5;" vertex="1" parent="1">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-41" value="&lt;br&gt;Extension point: Errore: Formato file non valido" style="shape=note2;boundedLbl=1;whiteSpace=wrap;html=1;size=23;verticalAlign=top;align=left;spacingLeft=5;" parent="1" vertex="1">
           <mxGeometry x="53" y="13610" width="210" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-42" value="&lt;span style=&quot;text-align: center;&quot;&gt;Contition: Il file caricato non è &lt;br&gt;in un formato supportato dall&#39;app&lt;/span&gt;" style="resizeWidth=1;part=1;strokeColor=none;fillColor=none;align=left;spacingLeft=5;whiteSpace=wrap;html=1;" vertex="1" parent="tE9DJSlBf8hbRhQ8HYni-41">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-42" value="&lt;span style=&quot;text-align: center;&quot;&gt;Contition: Il file caricato non è &lt;br&gt;in un formato supportato dall&#39;app&lt;/span&gt;" style="resizeWidth=1;part=1;strokeColor=none;fillColor=none;align=left;spacingLeft=5;whiteSpace=wrap;html=1;" parent="tE9DJSlBf8hbRhQ8HYni-41" vertex="1">
           <mxGeometry width="210" height="40" relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-43" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="tE9DJSlBf8hbRhQ8HYni-41" source="tE9DJSlBf8hbRhQ8HYni-42" target="tE9DJSlBf8hbRhQ8HYni-42">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-43" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="tE9DJSlBf8hbRhQ8HYni-41" source="tE9DJSlBf8hbRhQ8HYni-42" target="tE9DJSlBf8hbRhQ8HYni-42" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-44" value="Fornitore" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontFamily=Inter;" vertex="1" parent="1">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-44" value="Fornitore" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontFamily=Inter;" parent="1" vertex="1">
           <mxGeometry x="-101" y="13860" width="30" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-45" value="Suppl-AI webapp" style="shape=rect;html=1;verticalAlign=top;fontStyle=1;whiteSpace=wrap;align=center;fontFamily=Inter;" vertex="1" parent="1">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-45" value="Suppl-AI webapp" style="shape=rect;html=1;verticalAlign=top;fontStyle=1;whiteSpace=wrap;align=center;fontFamily=Inter;" parent="1" vertex="1">
           <mxGeometry y="13800" width="560" height="280" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-46" value="UC 37 - Visualizzazione dei documenti aziendali" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Inter;" vertex="1" parent="1">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-46" value="UC 37 - Visualizzazione dei documenti aziendali" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Inter;" parent="1" vertex="1">
           <mxGeometry x="35" y="13855" width="180" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-47" value="UC 43 - Errore: sistema &lt;br&gt;non raggiungibile" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Inter;" vertex="1" parent="1">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-47" value="UC 43 - Errore: sistema &lt;br&gt;non raggiungibile" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Inter;" parent="1" vertex="1">
           <mxGeometry x="360" y="13855" width="180" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-48" value="&amp;lt;&amp;lt;extends&amp;gt;&amp;gt;" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=block;endFill=1;dashed=1;rounded=0;" edge="1" parent="1" source="tE9DJSlBf8hbRhQ8HYni-47" target="tE9DJSlBf8hbRhQ8HYni-46">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-48" value="&amp;lt;&amp;lt;extends&amp;gt;&amp;gt;" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=block;endFill=1;dashed=1;rounded=0;" parent="1" source="tE9DJSlBf8hbRhQ8HYni-47" target="tE9DJSlBf8hbRhQ8HYni-46" edge="1">
           <mxGeometry width="160" relative="1" as="geometry">
             <mxPoint x="130" y="14035" as="sourcePoint" />
             <mxPoint x="290" y="14035" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-49" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="tE9DJSlBf8hbRhQ8HYni-44" target="tE9DJSlBf8hbRhQ8HYni-46">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-49" value="" style="endArrow=none;html=1;rounded=0;" parent="1" source="tE9DJSlBf8hbRhQ8HYni-44" target="tE9DJSlBf8hbRhQ8HYni-46" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="190" y="14110" as="sourcePoint" />
             <mxPoint x="240" y="14060" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-50" value="" style="endArrow=oval;html=1;rounded=0;endFill=0;endSize=10;" edge="1" parent="1" source="tE9DJSlBf8hbRhQ8HYni-51">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-50" value="" style="endArrow=oval;html=1;rounded=0;endFill=0;endSize=10;" parent="1" source="tE9DJSlBf8hbRhQ8HYni-51" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="359.42857142857133" y="14080" as="sourcePoint" />
             <mxPoint x="280" y="13890" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-51" value="&lt;br&gt;Extension point: Errore: sistema non raggiungibile" style="shape=note2;boundedLbl=1;whiteSpace=wrap;html=1;size=23;verticalAlign=top;align=left;spacingLeft=5;" vertex="1" parent="1">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-51" value="&lt;br&gt;Extension point: Errore: sistema non raggiungibile" style="shape=note2;boundedLbl=1;whiteSpace=wrap;html=1;size=23;verticalAlign=top;align=left;spacingLeft=5;" parent="1" vertex="1">
           <mxGeometry x="175" y="13960" width="210" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-52" value="&lt;span style=&quot;text-align: center;&quot;&gt;Contition: Il sistema non è raggiungibile per diversi motivi&lt;/span&gt;" style="resizeWidth=1;part=1;strokeColor=none;fillColor=none;align=left;spacingLeft=5;whiteSpace=wrap;html=1;" vertex="1" parent="tE9DJSlBf8hbRhQ8HYni-51">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-52" value="&lt;span style=&quot;text-align: center;&quot;&gt;Contition: Il sistema non è raggiungibile per diversi motivi&lt;/span&gt;" style="resizeWidth=1;part=1;strokeColor=none;fillColor=none;align=left;spacingLeft=5;whiteSpace=wrap;html=1;" parent="tE9DJSlBf8hbRhQ8HYni-51" vertex="1">
           <mxGeometry width="210" height="40" relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-53" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="tE9DJSlBf8hbRhQ8HYni-51" source="tE9DJSlBf8hbRhQ8HYni-52" target="tE9DJSlBf8hbRhQ8HYni-52">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-53" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="tE9DJSlBf8hbRhQ8HYni-51" source="tE9DJSlBf8hbRhQ8HYni-52" target="tE9DJSlBf8hbRhQ8HYni-52" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-70" value="Fornitore" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontFamily=Inter;" vertex="1" parent="1">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-70" value="Fornitore" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontFamily=Inter;" parent="1" vertex="1">
           <mxGeometry x="-100.5" y="14310" width="30" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-71" value="Suppl-AI webapp" style="shape=rect;html=1;verticalAlign=top;fontStyle=1;whiteSpace=wrap;align=center;fontFamily=Inter;" vertex="1" parent="1">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-71" value="Suppl-AI webapp" style="shape=rect;html=1;verticalAlign=top;fontStyle=1;whiteSpace=wrap;align=center;fontFamily=Inter;" parent="1" vertex="1">
           <mxGeometry x="0.5" y="14160" width="599.5" height="400" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-72" value="UC 38 - Eliminazione di un documento aziendale" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Inter;" vertex="1" parent="1">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-72" value="UC 38 - Eliminazione di un documento aziendale" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Inter;" parent="1" vertex="1">
           <mxGeometry x="45.5" y="14305" width="180" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-73" value="UC 43 - Errore: sistema &lt;br&gt;non raggiungibile" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Inter;" vertex="1" parent="1">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-73" value="UC 43 - Errore: sistema &lt;br&gt;non raggiungibile" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Inter;" parent="1" vertex="1">
           <mxGeometry x="350.5" y="14220" width="180" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-74" value="&amp;lt;&amp;lt;extends&amp;gt;&amp;gt;" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=block;endFill=1;dashed=1;rounded=0;" edge="1" parent="1" source="tE9DJSlBf8hbRhQ8HYni-73" target="tE9DJSlBf8hbRhQ8HYni-72">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-74" value="&amp;lt;&amp;lt;extends&amp;gt;&amp;gt;" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=block;endFill=1;dashed=1;rounded=0;" parent="1" source="tE9DJSlBf8hbRhQ8HYni-73" target="tE9DJSlBf8hbRhQ8HYni-72" edge="1">
           <mxGeometry width="160" relative="1" as="geometry">
             <mxPoint x="130.5" y="14395" as="sourcePoint" />
             <mxPoint x="290.5" y="14395" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-75" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="tE9DJSlBf8hbRhQ8HYni-70" target="tE9DJSlBf8hbRhQ8HYni-72">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-75" value="" style="endArrow=none;html=1;rounded=0;" parent="1" source="tE9DJSlBf8hbRhQ8HYni-70" target="tE9DJSlBf8hbRhQ8HYni-72" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="190.5" y="14470" as="sourcePoint" />
             <mxPoint x="240.5" y="14420" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-76" value="" style="endArrow=oval;html=1;rounded=0;endFill=0;endSize=10;" edge="1" parent="1" source="tE9DJSlBf8hbRhQ8HYni-77">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-76" value="" style="endArrow=oval;html=1;rounded=0;endFill=0;endSize=10;" parent="1" source="tE9DJSlBf8hbRhQ8HYni-77" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="359.92857142857133" y="14440" as="sourcePoint" />
             <mxPoint x="340.5" y="14280" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-77" value="&lt;br&gt;Extension point: Errore: sistema non raggiungibile" style="shape=note2;boundedLbl=1;whiteSpace=wrap;html=1;size=23;verticalAlign=top;align=left;spacingLeft=5;" vertex="1" parent="1">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-77" value="&lt;br&gt;Extension point: Errore: sistema non raggiungibile" style="shape=note2;boundedLbl=1;whiteSpace=wrap;html=1;size=23;verticalAlign=top;align=left;spacingLeft=5;" parent="1" vertex="1">
           <mxGeometry x="50.5" y="14195" width="210" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-78" value="&lt;span style=&quot;text-align: center;&quot;&gt;Contition: Il sistema non è raggiungibile per diversi motivi&lt;/span&gt;" style="resizeWidth=1;part=1;strokeColor=none;fillColor=none;align=left;spacingLeft=5;whiteSpace=wrap;html=1;" vertex="1" parent="tE9DJSlBf8hbRhQ8HYni-77">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-78" value="&lt;span style=&quot;text-align: center;&quot;&gt;Contition: Il sistema non è raggiungibile per diversi motivi&lt;/span&gt;" style="resizeWidth=1;part=1;strokeColor=none;fillColor=none;align=left;spacingLeft=5;whiteSpace=wrap;html=1;" parent="tE9DJSlBf8hbRhQ8HYni-77" vertex="1">
           <mxGeometry width="210" height="40" relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-79" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="tE9DJSlBf8hbRhQ8HYni-77" source="tE9DJSlBf8hbRhQ8HYni-78" target="tE9DJSlBf8hbRhQ8HYni-78">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-79" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="tE9DJSlBf8hbRhQ8HYni-77" source="tE9DJSlBf8hbRhQ8HYni-78" target="tE9DJSlBf8hbRhQ8HYni-78" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-80" value="&lt;div&gt;UC 44 - Errore: Richiesta&lt;/div&gt;&lt;div&gt;con dati mancanti o errati&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Inter;" vertex="1" parent="1">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-80" value="&lt;div&gt;UC 44 - Errore: Richiesta&lt;/div&gt;&lt;div&gt;con dati mancanti o errati&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Inter;" parent="1" vertex="1">
           <mxGeometry x="355" y="14430" width="180" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-81" value="" style="endArrow=oval;html=1;rounded=0;endFill=0;endSize=10;" edge="1" parent="1" source="tE9DJSlBf8hbRhQ8HYni-83">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-81" value="" style="endArrow=oval;html=1;rounded=0;endFill=0;endSize=10;" parent="1" source="tE9DJSlBf8hbRhQ8HYni-83" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="323.5" y="14440" as="sourcePoint" />
             <mxPoint x="340" y="14420" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-82" value="&amp;lt;&amp;lt;extends&amp;gt;&amp;gt;" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=block;endFill=1;dashed=1;rounded=0;" edge="1" parent="1" source="tE9DJSlBf8hbRhQ8HYni-80" target="tE9DJSlBf8hbRhQ8HYni-72">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-82" value="&amp;lt;&amp;lt;extends&amp;gt;&amp;gt;" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=block;endFill=1;dashed=1;rounded=0;" parent="1" source="tE9DJSlBf8hbRhQ8HYni-80" target="tE9DJSlBf8hbRhQ8HYni-72" edge="1">
           <mxGeometry width="160" relative="1" as="geometry">
             <mxPoint x="376.5" y="14285" as="sourcePoint" />
             <mxPoint x="218.5" y="14330" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-83" value="&lt;br&gt;Extension point: Errore: Richiesta con dati mancanti o errati" style="shape=note2;boundedLbl=1;whiteSpace=wrap;html=1;size=23;verticalAlign=top;align=left;spacingLeft=5;" vertex="1" parent="1">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-83" value="&lt;br&gt;Extension point: Errore: Richiesta con dati mancanti o errati" style="shape=note2;boundedLbl=1;whiteSpace=wrap;html=1;size=23;verticalAlign=top;align=left;spacingLeft=5;" parent="1" vertex="1">
           <mxGeometry x="350.5" y="14320" width="210" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-84" value="&lt;span style=&quot;text-align: center;&quot;&gt;Contition: La richiesta presenta&lt;/span&gt;&lt;br style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;text-align: center;&quot;&gt;degli errori o dati mancanti&amp;nbsp;&amp;nbsp;&lt;/span&gt;" style="resizeWidth=1;part=1;strokeColor=none;fillColor=none;align=left;spacingLeft=5;whiteSpace=wrap;html=1;" vertex="1" parent="tE9DJSlBf8hbRhQ8HYni-83">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-84" value="&lt;span style=&quot;text-align: center;&quot;&gt;Contition: La richiesta presenta&lt;/span&gt;&lt;br style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;text-align: center;&quot;&gt;degli errori o dati mancanti&amp;nbsp;&amp;nbsp;&lt;/span&gt;" style="resizeWidth=1;part=1;strokeColor=none;fillColor=none;align=left;spacingLeft=5;whiteSpace=wrap;html=1;" parent="tE9DJSlBf8hbRhQ8HYni-83" vertex="1">
           <mxGeometry width="210" height="40" relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-85" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="tE9DJSlBf8hbRhQ8HYni-83" source="tE9DJSlBf8hbRhQ8HYni-84" target="tE9DJSlBf8hbRhQ8HYni-84">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-85" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="tE9DJSlBf8hbRhQ8HYni-83" source="tE9DJSlBf8hbRhQ8HYni-84" target="tE9DJSlBf8hbRhQ8HYni-84" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-92" value="UC 10 - Controllo identità" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Inter;" vertex="1" parent="1">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-92" value="UC 10 - Controllo identità" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Inter;" parent="1" vertex="1">
           <mxGeometry x="50.5" y="14450" width="180" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-93" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=block;endFill=1;dashed=1;rounded=0;" edge="1" parent="1" source="tE9DJSlBf8hbRhQ8HYni-92" target="tE9DJSlBf8hbRhQ8HYni-72">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-93" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=block;endFill=1;dashed=1;rounded=0;" parent="1" source="tE9DJSlBf8hbRhQ8HYni-92" target="tE9DJSlBf8hbRhQ8HYni-72" edge="1">
           <mxGeometry width="160" relative="1" as="geometry">
             <mxPoint x="173" y="14545" as="sourcePoint" />
             <mxPoint x="14" y="14500" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-94" value="Fornitore" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontFamily=Inter;" vertex="1" parent="1">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-94" value="Fornitore" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontFamily=Inter;" parent="1" vertex="1">
           <mxGeometry x="-100.5" y="14790" width="30" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-95" value="Suppl-AI webapp" style="shape=rect;html=1;verticalAlign=top;fontStyle=1;whiteSpace=wrap;align=center;fontFamily=Inter;" vertex="1" parent="1">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-95" value="Suppl-AI webapp" style="shape=rect;html=1;verticalAlign=top;fontStyle=1;whiteSpace=wrap;align=center;fontFamily=Inter;" parent="1" vertex="1">
           <mxGeometry x="0.5" y="14640" width="560" height="360" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-96" value="UC 39 - Inserimento &lt;br&gt;di una FAQ" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Inter;" vertex="1" parent="1">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-96" value="UC 39 - Inserimento &lt;br&gt;di una FAQ" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Inter;" parent="1" vertex="1">
           <mxGeometry x="45.5" y="14785" width="180" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-97" value="UC 43 - Errore: sistema &lt;br&gt;non raggiungibile" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Inter;" vertex="1" parent="1">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-97" value="UC 43 - Errore: sistema &lt;br&gt;non raggiungibile" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Inter;" parent="1" vertex="1">
           <mxGeometry x="350.5" y="14700" width="180" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-98" value="&amp;lt;&amp;lt;extends&amp;gt;&amp;gt;" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=block;endFill=1;dashed=1;rounded=0;" edge="1" parent="1" source="tE9DJSlBf8hbRhQ8HYni-97" target="tE9DJSlBf8hbRhQ8HYni-96">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-98" value="&amp;lt;&amp;lt;extends&amp;gt;&amp;gt;" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=block;endFill=1;dashed=1;rounded=0;" parent="1" source="tE9DJSlBf8hbRhQ8HYni-97" target="tE9DJSlBf8hbRhQ8HYni-96" edge="1">
           <mxGeometry width="160" relative="1" as="geometry">
             <mxPoint x="130.5" y="14875" as="sourcePoint" />
             <mxPoint x="290.5" y="14875" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-99" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="tE9DJSlBf8hbRhQ8HYni-94" target="tE9DJSlBf8hbRhQ8HYni-96">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-99" value="" style="endArrow=none;html=1;rounded=0;" parent="1" source="tE9DJSlBf8hbRhQ8HYni-94" target="tE9DJSlBf8hbRhQ8HYni-96" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="190.5" y="14950" as="sourcePoint" />
             <mxPoint x="240.5" y="14900" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-100" value="" style="endArrow=oval;html=1;rounded=0;endFill=0;endSize=10;" edge="1" parent="1" source="tE9DJSlBf8hbRhQ8HYni-101">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-100" value="" style="endArrow=oval;html=1;rounded=0;endFill=0;endSize=10;" parent="1" source="tE9DJSlBf8hbRhQ8HYni-101" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="359.92857142857133" y="14920" as="sourcePoint" />
             <mxPoint x="340.5" y="14760" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-101" value="&lt;br&gt;Extension point: Errore: sistema non raggiungibile" style="shape=note2;boundedLbl=1;whiteSpace=wrap;html=1;size=23;verticalAlign=top;align=left;spacingLeft=5;" vertex="1" parent="1">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-101" value="&lt;br&gt;Extension point: Errore: sistema non raggiungibile" style="shape=note2;boundedLbl=1;whiteSpace=wrap;html=1;size=23;verticalAlign=top;align=left;spacingLeft=5;" parent="1" vertex="1">
           <mxGeometry x="50.5" y="14675" width="210" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-102" value="&lt;span style=&quot;text-align: center;&quot;&gt;Contition: Il sistema non è raggiungibile per diversi motivi&lt;/span&gt;" style="resizeWidth=1;part=1;strokeColor=none;fillColor=none;align=left;spacingLeft=5;whiteSpace=wrap;html=1;" vertex="1" parent="tE9DJSlBf8hbRhQ8HYni-101">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-102" value="&lt;span style=&quot;text-align: center;&quot;&gt;Contition: Il sistema non è raggiungibile per diversi motivi&lt;/span&gt;" style="resizeWidth=1;part=1;strokeColor=none;fillColor=none;align=left;spacingLeft=5;whiteSpace=wrap;html=1;" parent="tE9DJSlBf8hbRhQ8HYni-101" vertex="1">
           <mxGeometry width="210" height="40" relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-103" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="tE9DJSlBf8hbRhQ8HYni-101" source="tE9DJSlBf8hbRhQ8HYni-102" target="tE9DJSlBf8hbRhQ8HYni-102">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-103" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="tE9DJSlBf8hbRhQ8HYni-101" source="tE9DJSlBf8hbRhQ8HYni-102" target="tE9DJSlBf8hbRhQ8HYni-102" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-104" value="&lt;div&gt;UC 44 - Errore: Richiesta&lt;/div&gt;&lt;div&gt;con dati mancanti o errati&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Inter;" vertex="1" parent="1">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-104" value="&lt;div&gt;UC 44 - Errore: Richiesta&lt;/div&gt;&lt;div&gt;con dati mancanti o errati&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Inter;" parent="1" vertex="1">
           <mxGeometry x="350.5" y="14820" width="180" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-105" value="" style="endArrow=oval;html=1;rounded=0;endFill=0;endSize=10;" edge="1" parent="1">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-105" value="" style="endArrow=oval;html=1;rounded=0;endFill=0;endSize=10;" parent="1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="233.27777777777783" y="14890" as="sourcePoint" />
             <mxPoint x="330.5" y="14840" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-106" value="&amp;lt;&amp;lt;extends&amp;gt;&amp;gt;" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=block;endFill=1;dashed=1;rounded=0;" edge="1" parent="1" source="tE9DJSlBf8hbRhQ8HYni-104" target="tE9DJSlBf8hbRhQ8HYni-96">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-106" value="&amp;lt;&amp;lt;extends&amp;gt;&amp;gt;" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=block;endFill=1;dashed=1;rounded=0;" parent="1" source="tE9DJSlBf8hbRhQ8HYni-104" target="tE9DJSlBf8hbRhQ8HYni-96" edge="1">
           <mxGeometry width="160" relative="1" as="geometry">
             <mxPoint x="376.5" y="14765" as="sourcePoint" />
             <mxPoint x="218.5" y="14810" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-107" value="&lt;br&gt;Extension point: Errore: Richiesta con dati mancanti o errati" style="shape=note2;boundedLbl=1;whiteSpace=wrap;html=1;size=23;verticalAlign=top;align=left;spacingLeft=5;" vertex="1" parent="1">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-107" value="&lt;br&gt;Extension point: Errore: Richiesta con dati mancanti o errati" style="shape=note2;boundedLbl=1;whiteSpace=wrap;html=1;size=23;verticalAlign=top;align=left;spacingLeft=5;" parent="1" vertex="1">
           <mxGeometry x="53" y="14890" width="210" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-108" value="&lt;span style=&quot;text-align: center;&quot;&gt;Contition: La richiesta presenta&lt;/span&gt;&lt;br style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;text-align: center;&quot;&gt;degli errori o dati mancanti&amp;nbsp;&amp;nbsp;&lt;/span&gt;" style="resizeWidth=1;part=1;strokeColor=none;fillColor=none;align=left;spacingLeft=5;whiteSpace=wrap;html=1;" vertex="1" parent="tE9DJSlBf8hbRhQ8HYni-107">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-108" value="&lt;span style=&quot;text-align: center;&quot;&gt;Contition: La richiesta presenta&lt;/span&gt;&lt;br style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;text-align: center;&quot;&gt;degli errori o dati mancanti&amp;nbsp;&amp;nbsp;&lt;/span&gt;" style="resizeWidth=1;part=1;strokeColor=none;fillColor=none;align=left;spacingLeft=5;whiteSpace=wrap;html=1;" parent="tE9DJSlBf8hbRhQ8HYni-107" vertex="1">
           <mxGeometry width="210" height="40" relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-109" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="tE9DJSlBf8hbRhQ8HYni-107" source="tE9DJSlBf8hbRhQ8HYni-108" target="tE9DJSlBf8hbRhQ8HYni-108">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-109" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="tE9DJSlBf8hbRhQ8HYni-107" source="tE9DJSlBf8hbRhQ8HYni-108" target="tE9DJSlBf8hbRhQ8HYni-108" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-110" value="Fornitore" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontFamily=Inter;" vertex="1" parent="1">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-110" value="Fornitore" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontFamily=Inter;" parent="1" vertex="1">
           <mxGeometry x="-101" y="15140" width="30" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-111" value="Suppl-AI webapp" style="shape=rect;html=1;verticalAlign=top;fontStyle=1;whiteSpace=wrap;align=center;fontFamily=Inter;" vertex="1" parent="1">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-111" value="Suppl-AI webapp" style="shape=rect;html=1;verticalAlign=top;fontStyle=1;whiteSpace=wrap;align=center;fontFamily=Inter;" parent="1" vertex="1">
           <mxGeometry y="15080" width="560" height="280" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-112" value="UC 40 - Visualizzazione &lt;br&gt;delle FAQ" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Inter;" vertex="1" parent="1">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-112" value="UC 40 - Visualizzazione &lt;br&gt;delle FAQ" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Inter;" parent="1" vertex="1">
           <mxGeometry x="35" y="15135" width="180" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-113" value="UC 43 - Errore: sistema &lt;br&gt;non raggiungibile" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Inter;" vertex="1" parent="1">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-113" value="UC 43 - Errore: sistema &lt;br&gt;non raggiungibile" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Inter;" parent="1" vertex="1">
           <mxGeometry x="360" y="15135" width="180" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-114" value="&amp;lt;&amp;lt;extends&amp;gt;&amp;gt;" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=block;endFill=1;dashed=1;rounded=0;" edge="1" parent="1" source="tE9DJSlBf8hbRhQ8HYni-113" target="tE9DJSlBf8hbRhQ8HYni-112">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-114" value="&amp;lt;&amp;lt;extends&amp;gt;&amp;gt;" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=block;endFill=1;dashed=1;rounded=0;" parent="1" source="tE9DJSlBf8hbRhQ8HYni-113" target="tE9DJSlBf8hbRhQ8HYni-112" edge="1">
           <mxGeometry width="160" relative="1" as="geometry">
             <mxPoint x="130" y="15315" as="sourcePoint" />
             <mxPoint x="290" y="15315" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-115" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="tE9DJSlBf8hbRhQ8HYni-110" target="tE9DJSlBf8hbRhQ8HYni-112">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-115" value="" style="endArrow=none;html=1;rounded=0;" parent="1" source="tE9DJSlBf8hbRhQ8HYni-110" target="tE9DJSlBf8hbRhQ8HYni-112" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="190" y="15390" as="sourcePoint" />
             <mxPoint x="240" y="15340" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-116" value="" style="endArrow=oval;html=1;rounded=0;endFill=0;endSize=10;" edge="1" parent="1" source="tE9DJSlBf8hbRhQ8HYni-117">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-116" value="" style="endArrow=oval;html=1;rounded=0;endFill=0;endSize=10;" parent="1" source="tE9DJSlBf8hbRhQ8HYni-117" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="359.42857142857133" y="15360" as="sourcePoint" />
             <mxPoint x="280" y="15170" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-117" value="&lt;br&gt;Extension point: Errore: sistema non raggiungibile" style="shape=note2;boundedLbl=1;whiteSpace=wrap;html=1;size=23;verticalAlign=top;align=left;spacingLeft=5;" vertex="1" parent="1">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-117" value="&lt;br&gt;Extension point: Errore: sistema non raggiungibile" style="shape=note2;boundedLbl=1;whiteSpace=wrap;html=1;size=23;verticalAlign=top;align=left;spacingLeft=5;" parent="1" vertex="1">
           <mxGeometry x="175" y="15240" width="210" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-118" value="&lt;span style=&quot;text-align: center;&quot;&gt;Contition: Il sistema non è raggiungibile per diversi motivi&lt;/span&gt;" style="resizeWidth=1;part=1;strokeColor=none;fillColor=none;align=left;spacingLeft=5;whiteSpace=wrap;html=1;" vertex="1" parent="tE9DJSlBf8hbRhQ8HYni-117">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-118" value="&lt;span style=&quot;text-align: center;&quot;&gt;Contition: Il sistema non è raggiungibile per diversi motivi&lt;/span&gt;" style="resizeWidth=1;part=1;strokeColor=none;fillColor=none;align=left;spacingLeft=5;whiteSpace=wrap;html=1;" parent="tE9DJSlBf8hbRhQ8HYni-117" vertex="1">
           <mxGeometry width="210" height="40" relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-119" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="tE9DJSlBf8hbRhQ8HYni-117" source="tE9DJSlBf8hbRhQ8HYni-118" target="tE9DJSlBf8hbRhQ8HYni-118">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-119" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="tE9DJSlBf8hbRhQ8HYni-117" source="tE9DJSlBf8hbRhQ8HYni-118" target="tE9DJSlBf8hbRhQ8HYni-118" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-120" value="Fornitore" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontFamily=Inter;" vertex="1" parent="1">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-120" value="Fornitore" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontFamily=Inter;" parent="1" vertex="1">
           <mxGeometry x="-100.5" y="15590" width="30" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-121" value="Suppl-AI webapp" style="shape=rect;html=1;verticalAlign=top;fontStyle=1;whiteSpace=wrap;align=center;fontFamily=Inter;" vertex="1" parent="1">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-121" value="Suppl-AI webapp" style="shape=rect;html=1;verticalAlign=top;fontStyle=1;whiteSpace=wrap;align=center;fontFamily=Inter;" parent="1" vertex="1">
           <mxGeometry x="0.5" y="15440" width="560" height="360" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-122" value="UC 41 - Modifica di una FAQ" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Inter;" vertex="1" parent="1">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-122" value="UC 41 - Modifica di una FAQ" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Inter;" parent="1" vertex="1">
           <mxGeometry x="45.5" y="15585" width="180" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-123" value="UC 43 - Errore: sistema &lt;br&gt;non raggiungibile" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Inter;" vertex="1" parent="1">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-123" value="UC 43 - Errore: sistema &lt;br&gt;non raggiungibile" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Inter;" parent="1" vertex="1">
           <mxGeometry x="350.5" y="15500" width="180" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-124" value="&amp;lt;&amp;lt;extends&amp;gt;&amp;gt;" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=block;endFill=1;dashed=1;rounded=0;" edge="1" parent="1" source="tE9DJSlBf8hbRhQ8HYni-123" target="tE9DJSlBf8hbRhQ8HYni-122">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-124" value="&amp;lt;&amp;lt;extends&amp;gt;&amp;gt;" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=block;endFill=1;dashed=1;rounded=0;" parent="1" source="tE9DJSlBf8hbRhQ8HYni-123" target="tE9DJSlBf8hbRhQ8HYni-122" edge="1">
           <mxGeometry width="160" relative="1" as="geometry">
             <mxPoint x="130.5" y="15675" as="sourcePoint" />
             <mxPoint x="290.5" y="15675" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-125" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="tE9DJSlBf8hbRhQ8HYni-120" target="tE9DJSlBf8hbRhQ8HYni-122">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-125" value="" style="endArrow=none;html=1;rounded=0;" parent="1" source="tE9DJSlBf8hbRhQ8HYni-120" target="tE9DJSlBf8hbRhQ8HYni-122" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="190.5" y="15750" as="sourcePoint" />
             <mxPoint x="240.5" y="15700" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-126" value="" style="endArrow=oval;html=1;rounded=0;endFill=0;endSize=10;" edge="1" parent="1" source="tE9DJSlBf8hbRhQ8HYni-127">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-126" value="" style="endArrow=oval;html=1;rounded=0;endFill=0;endSize=10;" parent="1" source="tE9DJSlBf8hbRhQ8HYni-127" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="359.92857142857133" y="15720" as="sourcePoint" />
             <mxPoint x="340.5" y="15560" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-127" value="&lt;br&gt;Extension point: Errore: sistema non raggiungibile" style="shape=note2;boundedLbl=1;whiteSpace=wrap;html=1;size=23;verticalAlign=top;align=left;spacingLeft=5;" vertex="1" parent="1">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-127" value="&lt;br&gt;Extension point: Errore: sistema non raggiungibile" style="shape=note2;boundedLbl=1;whiteSpace=wrap;html=1;size=23;verticalAlign=top;align=left;spacingLeft=5;" parent="1" vertex="1">
           <mxGeometry x="50.5" y="15475" width="210" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-128" value="&lt;span style=&quot;text-align: center;&quot;&gt;Contition: Il sistema non è raggiungibile per diversi motivi&lt;/span&gt;" style="resizeWidth=1;part=1;strokeColor=none;fillColor=none;align=left;spacingLeft=5;whiteSpace=wrap;html=1;" vertex="1" parent="tE9DJSlBf8hbRhQ8HYni-127">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-128" value="&lt;span style=&quot;text-align: center;&quot;&gt;Contition: Il sistema non è raggiungibile per diversi motivi&lt;/span&gt;" style="resizeWidth=1;part=1;strokeColor=none;fillColor=none;align=left;spacingLeft=5;whiteSpace=wrap;html=1;" parent="tE9DJSlBf8hbRhQ8HYni-127" vertex="1">
           <mxGeometry width="210" height="40" relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-129" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="tE9DJSlBf8hbRhQ8HYni-127" source="tE9DJSlBf8hbRhQ8HYni-128" target="tE9DJSlBf8hbRhQ8HYni-128">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-129" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="tE9DJSlBf8hbRhQ8HYni-127" source="tE9DJSlBf8hbRhQ8HYni-128" target="tE9DJSlBf8hbRhQ8HYni-128" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-130" value="&lt;div&gt;UC 44 - Errore: Richiesta&lt;/div&gt;&lt;div&gt;con dati mancanti o errati&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Inter;" vertex="1" parent="1">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-130" value="&lt;div&gt;UC 44 - Errore: Richiesta&lt;/div&gt;&lt;div&gt;con dati mancanti o errati&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Inter;" parent="1" vertex="1">
           <mxGeometry x="350.5" y="15620" width="180" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-131" value="" style="endArrow=oval;html=1;rounded=0;endFill=0;endSize=10;" edge="1" parent="1">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-131" value="" style="endArrow=oval;html=1;rounded=0;endFill=0;endSize=10;" parent="1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="233.27777777777783" y="15690" as="sourcePoint" />
             <mxPoint x="330.5" y="15640" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-132" value="&amp;lt;&amp;lt;extends&amp;gt;&amp;gt;" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=block;endFill=1;dashed=1;rounded=0;" edge="1" parent="1" source="tE9DJSlBf8hbRhQ8HYni-130" target="tE9DJSlBf8hbRhQ8HYni-122">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-132" value="&amp;lt;&amp;lt;extends&amp;gt;&amp;gt;" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=block;endFill=1;dashed=1;rounded=0;" parent="1" source="tE9DJSlBf8hbRhQ8HYni-130" target="tE9DJSlBf8hbRhQ8HYni-122" edge="1">
           <mxGeometry width="160" relative="1" as="geometry">
             <mxPoint x="376.5" y="15565" as="sourcePoint" />
             <mxPoint x="218.5" y="15610" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-133" value="&lt;br&gt;Extension point: Errore: Richiesta con dati mancanti o errati" style="shape=note2;boundedLbl=1;whiteSpace=wrap;html=1;size=23;verticalAlign=top;align=left;spacingLeft=5;" vertex="1" parent="1">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-133" value="&lt;br&gt;Extension point: Errore: Richiesta con dati mancanti o errati" style="shape=note2;boundedLbl=1;whiteSpace=wrap;html=1;size=23;verticalAlign=top;align=left;spacingLeft=5;" parent="1" vertex="1">
           <mxGeometry x="53" y="15690" width="210" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-134" value="&lt;span style=&quot;text-align: center;&quot;&gt;Contition: La richiesta presenta&lt;/span&gt;&lt;br style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;text-align: center;&quot;&gt;degli errori o dati mancanti&amp;nbsp;&amp;nbsp;&lt;/span&gt;" style="resizeWidth=1;part=1;strokeColor=none;fillColor=none;align=left;spacingLeft=5;whiteSpace=wrap;html=1;" vertex="1" parent="tE9DJSlBf8hbRhQ8HYni-133">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-134" value="&lt;span style=&quot;text-align: center;&quot;&gt;Contition: La richiesta presenta&lt;/span&gt;&lt;br style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;text-align: center;&quot;&gt;degli errori o dati mancanti&amp;nbsp;&amp;nbsp;&lt;/span&gt;" style="resizeWidth=1;part=1;strokeColor=none;fillColor=none;align=left;spacingLeft=5;whiteSpace=wrap;html=1;" parent="tE9DJSlBf8hbRhQ8HYni-133" vertex="1">
           <mxGeometry width="210" height="40" relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-135" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="tE9DJSlBf8hbRhQ8HYni-133" source="tE9DJSlBf8hbRhQ8HYni-134" target="tE9DJSlBf8hbRhQ8HYni-134">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-135" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="tE9DJSlBf8hbRhQ8HYni-133" source="tE9DJSlBf8hbRhQ8HYni-134" target="tE9DJSlBf8hbRhQ8HYni-134" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-136" value="Fornitore" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontFamily=Inter;" vertex="1" parent="1">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-136" value="Fornitore" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontFamily=Inter;" parent="1" vertex="1">
           <mxGeometry x="-101" y="16030" width="30" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-137" value="Suppl-AI webapp" style="shape=rect;html=1;verticalAlign=top;fontStyle=1;whiteSpace=wrap;align=center;fontFamily=Inter;" vertex="1" parent="1">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-137" value="Suppl-AI webapp" style="shape=rect;html=1;verticalAlign=top;fontStyle=1;whiteSpace=wrap;align=center;fontFamily=Inter;" parent="1" vertex="1">
           <mxGeometry y="15880" width="599.5" height="400" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-138" value="UC 42 - Eliminazione di una FAQ" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Inter;" vertex="1" parent="1">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-138" value="UC 42 - Eliminazione di una FAQ" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Inter;" parent="1" vertex="1">
           <mxGeometry x="45" y="16025" width="180" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-139" value="UC 43 - Errore: sistema &lt;br&gt;non raggiungibile" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Inter;" vertex="1" parent="1">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-139" value="UC 43 - Errore: sistema &lt;br&gt;non raggiungibile" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Inter;" parent="1" vertex="1">
           <mxGeometry x="350" y="15940" width="180" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-140" value="&amp;lt;&amp;lt;extends&amp;gt;&amp;gt;" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=block;endFill=1;dashed=1;rounded=0;" edge="1" parent="1" source="tE9DJSlBf8hbRhQ8HYni-139" target="tE9DJSlBf8hbRhQ8HYni-138">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-140" value="&amp;lt;&amp;lt;extends&amp;gt;&amp;gt;" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=block;endFill=1;dashed=1;rounded=0;" parent="1" source="tE9DJSlBf8hbRhQ8HYni-139" target="tE9DJSlBf8hbRhQ8HYni-138" edge="1">
           <mxGeometry width="160" relative="1" as="geometry">
             <mxPoint x="130" y="16115" as="sourcePoint" />
             <mxPoint x="290" y="16115" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-141" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="tE9DJSlBf8hbRhQ8HYni-136" target="tE9DJSlBf8hbRhQ8HYni-138">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-141" value="" style="endArrow=none;html=1;rounded=0;" parent="1" source="tE9DJSlBf8hbRhQ8HYni-136" target="tE9DJSlBf8hbRhQ8HYni-138" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="190" y="16190" as="sourcePoint" />
             <mxPoint x="240" y="16140" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-142" value="" style="endArrow=oval;html=1;rounded=0;endFill=0;endSize=10;" edge="1" parent="1" source="tE9DJSlBf8hbRhQ8HYni-143">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-142" value="" style="endArrow=oval;html=1;rounded=0;endFill=0;endSize=10;" parent="1" source="tE9DJSlBf8hbRhQ8HYni-143" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="359.42857142857133" y="16160" as="sourcePoint" />
             <mxPoint x="340" y="16000" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-143" value="&lt;br&gt;Extension point: Errore: sistema non raggiungibile" style="shape=note2;boundedLbl=1;whiteSpace=wrap;html=1;size=23;verticalAlign=top;align=left;spacingLeft=5;" vertex="1" parent="1">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-143" value="&lt;br&gt;Extension point: Errore: sistema non raggiungibile" style="shape=note2;boundedLbl=1;whiteSpace=wrap;html=1;size=23;verticalAlign=top;align=left;spacingLeft=5;" parent="1" vertex="1">
           <mxGeometry x="50" y="15915" width="210" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-144" value="&lt;span style=&quot;text-align: center;&quot;&gt;Contition: Il sistema non è raggiungibile per diversi motivi&lt;/span&gt;" style="resizeWidth=1;part=1;strokeColor=none;fillColor=none;align=left;spacingLeft=5;whiteSpace=wrap;html=1;" vertex="1" parent="tE9DJSlBf8hbRhQ8HYni-143">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-144" value="&lt;span style=&quot;text-align: center;&quot;&gt;Contition: Il sistema non è raggiungibile per diversi motivi&lt;/span&gt;" style="resizeWidth=1;part=1;strokeColor=none;fillColor=none;align=left;spacingLeft=5;whiteSpace=wrap;html=1;" parent="tE9DJSlBf8hbRhQ8HYni-143" vertex="1">
           <mxGeometry width="210" height="40" relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-145" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="tE9DJSlBf8hbRhQ8HYni-143" source="tE9DJSlBf8hbRhQ8HYni-144" target="tE9DJSlBf8hbRhQ8HYni-144">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-145" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="tE9DJSlBf8hbRhQ8HYni-143" source="tE9DJSlBf8hbRhQ8HYni-144" target="tE9DJSlBf8hbRhQ8HYni-144" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-146" value="&lt;div&gt;UC 44 - Errore: Richiesta&lt;/div&gt;&lt;div&gt;con dati mancanti o errati&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Inter;" vertex="1" parent="1">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-146" value="&lt;div&gt;UC 44 - Errore: Richiesta&lt;/div&gt;&lt;div&gt;con dati mancanti o errati&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Inter;" parent="1" vertex="1">
           <mxGeometry x="354.5" y="16150" width="180" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-147" value="" style="endArrow=oval;html=1;rounded=0;endFill=0;endSize=10;" edge="1" parent="1" source="tE9DJSlBf8hbRhQ8HYni-149">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-147" value="" style="endArrow=oval;html=1;rounded=0;endFill=0;endSize=10;" parent="1" source="tE9DJSlBf8hbRhQ8HYni-149" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="323" y="16160" as="sourcePoint" />
             <mxPoint x="339.5" y="16140" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-148" value="&amp;lt;&amp;lt;extends&amp;gt;&amp;gt;" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=block;endFill=1;dashed=1;rounded=0;" edge="1" parent="1" source="tE9DJSlBf8hbRhQ8HYni-146" target="tE9DJSlBf8hbRhQ8HYni-138">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-148" value="&amp;lt;&amp;lt;extends&amp;gt;&amp;gt;" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=block;endFill=1;dashed=1;rounded=0;" parent="1" source="tE9DJSlBf8hbRhQ8HYni-146" target="tE9DJSlBf8hbRhQ8HYni-138" edge="1">
           <mxGeometry width="160" relative="1" as="geometry">
             <mxPoint x="376" y="16005" as="sourcePoint" />
             <mxPoint x="218" y="16050" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-149" value="&lt;br&gt;Extension point: Errore: Richiesta con dati mancanti o errati" style="shape=note2;boundedLbl=1;whiteSpace=wrap;html=1;size=23;verticalAlign=top;align=left;spacingLeft=5;" vertex="1" parent="1">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-149" value="&lt;br&gt;Extension point: Errore: Richiesta con dati mancanti o errati" style="shape=note2;boundedLbl=1;whiteSpace=wrap;html=1;size=23;verticalAlign=top;align=left;spacingLeft=5;" parent="1" vertex="1">
           <mxGeometry x="350" y="16040" width="210" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-150" value="&lt;span style=&quot;text-align: center;&quot;&gt;Contition: La richiesta presenta&lt;/span&gt;&lt;br style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;text-align: center;&quot;&gt;degli errori o dati mancanti&amp;nbsp;&amp;nbsp;&lt;/span&gt;" style="resizeWidth=1;part=1;strokeColor=none;fillColor=none;align=left;spacingLeft=5;whiteSpace=wrap;html=1;" vertex="1" parent="tE9DJSlBf8hbRhQ8HYni-149">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-150" value="&lt;span style=&quot;text-align: center;&quot;&gt;Contition: La richiesta presenta&lt;/span&gt;&lt;br style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;text-align: center;&quot;&gt;degli errori o dati mancanti&amp;nbsp;&amp;nbsp;&lt;/span&gt;" style="resizeWidth=1;part=1;strokeColor=none;fillColor=none;align=left;spacingLeft=5;whiteSpace=wrap;html=1;" parent="tE9DJSlBf8hbRhQ8HYni-149" vertex="1">
           <mxGeometry width="210" height="40" relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-151" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="tE9DJSlBf8hbRhQ8HYni-149" source="tE9DJSlBf8hbRhQ8HYni-150" target="tE9DJSlBf8hbRhQ8HYni-150">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-151" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="tE9DJSlBf8hbRhQ8HYni-149" source="tE9DJSlBf8hbRhQ8HYni-150" target="tE9DJSlBf8hbRhQ8HYni-150" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-152" value="UC 10 - Controllo identità" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Inter;" vertex="1" parent="1">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-152" value="UC 10 - Controllo identità" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Inter;" parent="1" vertex="1">
           <mxGeometry x="50" y="16170" width="180" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-153" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=block;endFill=1;dashed=1;rounded=0;" edge="1" parent="1" source="tE9DJSlBf8hbRhQ8HYni-152" target="tE9DJSlBf8hbRhQ8HYni-138">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-153" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=block;endFill=1;dashed=1;rounded=0;" parent="1" source="tE9DJSlBf8hbRhQ8HYni-152" target="tE9DJSlBf8hbRhQ8HYni-138" edge="1">
           <mxGeometry width="160" relative="1" as="geometry">
             <mxPoint x="172.5" y="16265" as="sourcePoint" />
             <mxPoint x="13.5" y="16220" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-154" value="Cliente" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontFamily=Inter;" vertex="1" parent="1">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-154" value="Cliente" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontFamily=Inter;" parent="1" vertex="1">
           <mxGeometry x="650" y="5150" width="30" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-155" value="Suppl-AI webapp" style="shape=rect;html=1;verticalAlign=top;fontStyle=1;whiteSpace=wrap;align=center;fontFamily=Inter;" vertex="1" parent="1">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-155" value="Suppl-AI webapp" style="shape=rect;html=1;verticalAlign=top;fontStyle=1;whiteSpace=wrap;align=center;fontFamily=Inter;" parent="1" vertex="1">
           <mxGeometry x="751" y="5090" width="250" height="180" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-156" value="UC 14 -&amp;nbsp;Visualizzazione&lt;br&gt;titolo della chat" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Inter;" vertex="1" parent="1">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-156" value="UC 14 -&amp;nbsp;Visualizzazione&lt;br&gt;titolo della chat" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Inter;" parent="1" vertex="1">
           <mxGeometry x="786" y="5145" width="180" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-157" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="tE9DJSlBf8hbRhQ8HYni-154" target="tE9DJSlBf8hbRhQ8HYni-156">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-157" value="" style="endArrow=none;html=1;rounded=0;" parent="1" source="tE9DJSlBf8hbRhQ8HYni-154" target="tE9DJSlBf8hbRhQ8HYni-156" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="941" y="5400" as="sourcePoint" />
             <mxPoint x="991" y="5350" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-160" value="Cliente" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontFamily=Inter;" vertex="1" parent="1">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-160" value="Cliente" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontFamily=Inter;" parent="1" vertex="1">
           <mxGeometry x="630" y="7220" width="30" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-161" value="Suppl-AI webapp" style="shape=rect;html=1;verticalAlign=top;fontStyle=1;whiteSpace=wrap;align=center;fontFamily=Inter;" vertex="1" parent="1">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-161" value="Suppl-AI webapp" style="shape=rect;html=1;verticalAlign=top;fontStyle=1;whiteSpace=wrap;align=center;fontFamily=Inter;" parent="1" vertex="1">
           <mxGeometry x="731" y="7160" width="250" height="180" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-162" value="UC 19 - Visualizzazione messaggio inviato" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Inter;" vertex="1" parent="1">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-162" value="UC 19 - Visualizzazione messaggio inviato" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Inter;" parent="1" vertex="1">
           <mxGeometry x="766" y="7215" width="180" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-163" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="tE9DJSlBf8hbRhQ8HYni-160" target="tE9DJSlBf8hbRhQ8HYni-162">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-163" value="" style="endArrow=none;html=1;rounded=0;" parent="1" source="tE9DJSlBf8hbRhQ8HYni-160" target="tE9DJSlBf8hbRhQ8HYni-162" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="921" y="7470" as="sourcePoint" />
             <mxPoint x="971" y="7420" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-164" value="Cliente" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontFamily=Inter;" vertex="1" parent="1">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-164" value="Cliente" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontFamily=Inter;" parent="1" vertex="1">
           <mxGeometry x="690" y="7690" width="30" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-165" value="Suppl-AI webapp" style="shape=rect;html=1;verticalAlign=top;fontStyle=1;whiteSpace=wrap;align=center;fontFamily=Inter;" vertex="1" parent="1">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-165" value="Suppl-AI webapp" style="shape=rect;html=1;verticalAlign=top;fontStyle=1;whiteSpace=wrap;align=center;fontFamily=Inter;" parent="1" vertex="1">
           <mxGeometry x="791" y="7630" width="250" height="180" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-166" value="UC 21 - Scrittura messaggio&lt;br&gt;tramite FAQ" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Inter;" vertex="1" parent="1">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-166" value="UC 21 - Scrittura messaggio&lt;br&gt;tramite FAQ" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Inter;" parent="1" vertex="1">
           <mxGeometry x="826" y="7685" width="180" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-167" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="tE9DJSlBf8hbRhQ8HYni-164" target="tE9DJSlBf8hbRhQ8HYni-166">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-167" value="" style="endArrow=none;html=1;rounded=0;" parent="1" source="tE9DJSlBf8hbRhQ8HYni-164" target="tE9DJSlBf8hbRhQ8HYni-166" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="981" y="7940" as="sourcePoint" />
             <mxPoint x="1031" y="7890" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-168" value="Fornitore" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontFamily=Inter;" vertex="1" parent="1">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-168" value="Fornitore" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontFamily=Inter;" parent="1" vertex="1">
           <mxGeometry x="700" y="11815" width="30" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-169" value="Suppl-AI webapp" style="shape=rect;html=1;verticalAlign=top;fontStyle=1;whiteSpace=wrap;align=center;fontFamily=Inter;" vertex="1" parent="1">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-169" value="Suppl-AI webapp" style="shape=rect;html=1;verticalAlign=top;fontStyle=1;whiteSpace=wrap;align=center;fontFamily=Inter;" parent="1" vertex="1">
           <mxGeometry x="801" y="11755" width="250" height="180" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-170" value="UC 31 -&amp;nbsp;Scelta filtri di visualizzazione" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Inter;" vertex="1" parent="1">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-170" value="UC 31 -&amp;nbsp;Scelta filtri di visualizzazione" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Inter;" parent="1" vertex="1">
           <mxGeometry x="836" y="11810" width="180" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-171" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="tE9DJSlBf8hbRhQ8HYni-168" target="tE9DJSlBf8hbRhQ8HYni-170">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-171" value="" style="endArrow=none;html=1;rounded=0;" parent="1" source="tE9DJSlBf8hbRhQ8HYni-168" target="tE9DJSlBf8hbRhQ8HYni-170" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="991" y="12065" as="sourcePoint" />
             <mxPoint x="1041" y="12015" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-172" value="Fornitore" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontFamily=Inter;" vertex="1" parent="1">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-172" value="Fornitore" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontFamily=Inter;" parent="1" vertex="1">
           <mxGeometry x="730" y="12450" width="30" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-173" value="Suppl-AI webapp" style="shape=rect;html=1;verticalAlign=top;fontStyle=1;whiteSpace=wrap;align=center;fontFamily=Inter;" vertex="1" parent="1">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-173" value="Suppl-AI webapp" style="shape=rect;html=1;verticalAlign=top;fontStyle=1;whiteSpace=wrap;align=center;fontFamily=Inter;" parent="1" vertex="1">
           <mxGeometry x="831" y="12390" width="250" height="180" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-174" value="UC 33 - Errore: Account inserito già esistente" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Inter;" vertex="1" parent="1">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-174" value="UC 33 - Errore: Account inserito già esistente" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Inter;" parent="1" vertex="1">
           <mxGeometry x="866" y="12445" width="180" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-175" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="tE9DJSlBf8hbRhQ8HYni-172" target="tE9DJSlBf8hbRhQ8HYni-174">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-175" value="" style="endArrow=none;html=1;rounded=0;" parent="1" source="tE9DJSlBf8hbRhQ8HYni-172" target="tE9DJSlBf8hbRhQ8HYni-174" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="1021" y="12700" as="sourcePoint" />
             <mxPoint x="1071" y="12650" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-176" value="Fornitore" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontFamily=Inter;" vertex="1" parent="1">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-176" value="Fornitore" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontFamily=Inter;" parent="1" vertex="1">
           <mxGeometry x="695" y="13510" width="30" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-177" value="Suppl-AI webapp" style="shape=rect;html=1;verticalAlign=top;fontStyle=1;whiteSpace=wrap;align=center;fontFamily=Inter;" vertex="1" parent="1">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-177" value="Suppl-AI webapp" style="shape=rect;html=1;verticalAlign=top;fontStyle=1;whiteSpace=wrap;align=center;fontFamily=Inter;" parent="1" vertex="1">
           <mxGeometry x="796" y="13450" width="250" height="180" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-178" value="UC 36 - Errore: Formato&lt;br&gt;file non valido" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Inter;" vertex="1" parent="1">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-178" value="UC 36 - Errore: Formato&lt;br&gt;file non valido" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Inter;" parent="1" vertex="1">
           <mxGeometry x="831" y="13505" width="180" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-179" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="tE9DJSlBf8hbRhQ8HYni-176" target="tE9DJSlBf8hbRhQ8HYni-178">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-179" value="" style="endArrow=none;html=1;rounded=0;" parent="1" source="tE9DJSlBf8hbRhQ8HYni-176" target="tE9DJSlBf8hbRhQ8HYni-178" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="986" y="13760" as="sourcePoint" />
             <mxPoint x="1036" y="13710" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-180" value="Utente &lt;br&gt;generico" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontFamily=Inter;" vertex="1" parent="1">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-180" value="Utente &lt;br&gt;generico" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontFamily=Inter;" parent="1" vertex="1">
           <mxGeometry x="-100.5" y="16420" width="30" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-181" value="Suppl-AI webapp" style="shape=rect;html=1;verticalAlign=top;fontStyle=1;whiteSpace=wrap;align=center;fontFamily=Inter;" vertex="1" parent="1">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-181" value="Suppl-AI webapp" style="shape=rect;html=1;verticalAlign=top;fontStyle=1;whiteSpace=wrap;align=center;fontFamily=Inter;" parent="1" vertex="1">
           <mxGeometry x="0.5" y="16360" width="250" height="180" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-182" value="UC 43 - Errore: Sistema &lt;br&gt;non raggiungibile" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Inter;" vertex="1" parent="1">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-182" value="UC 43 - Errore: Sistema &lt;br&gt;non raggiungibile" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Inter;" parent="1" vertex="1">
           <mxGeometry x="35.5" y="16415" width="180" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-183" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="tE9DJSlBf8hbRhQ8HYni-180" target="tE9DJSlBf8hbRhQ8HYni-182">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-183" value="" style="endArrow=none;html=1;rounded=0;" parent="1" source="tE9DJSlBf8hbRhQ8HYni-180" target="tE9DJSlBf8hbRhQ8HYni-182" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="190.5" y="16670" as="sourcePoint" />
             <mxPoint x="240.5" y="16620" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-184" value="Utente &lt;br&gt;generico" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontFamily=Inter;" vertex="1" parent="1">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-184" value="Utente &lt;br&gt;generico" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontFamily=Inter;" parent="1" vertex="1">
           <mxGeometry x="-100.5" y="16660" width="30" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-185" value="Suppl-AI webapp" style="shape=rect;html=1;verticalAlign=top;fontStyle=1;whiteSpace=wrap;align=center;fontFamily=Inter;" vertex="1" parent="1">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-185" value="Suppl-AI webapp" style="shape=rect;html=1;verticalAlign=top;fontStyle=1;whiteSpace=wrap;align=center;fontFamily=Inter;" parent="1" vertex="1">
           <mxGeometry x="0.5" y="16600" width="250" height="180" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-186" value="UC 44 - Errore: Richiesta &lt;br&gt;con dati mancanti o errati" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Inter;" vertex="1" parent="1">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-186" value="UC 44 - Errore: Richiesta &lt;br&gt;con dati mancanti o errati" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Inter;" parent="1" vertex="1">
           <mxGeometry x="35.5" y="16655" width="180" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="tE9DJSlBf8hbRhQ8HYni-187" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="tE9DJSlBf8hbRhQ8HYni-184" target="tE9DJSlBf8hbRhQ8HYni-186">
+        <mxCell id="tE9DJSlBf8hbRhQ8HYni-187" value="" style="endArrow=none;html=1;rounded=0;" parent="1" source="tE9DJSlBf8hbRhQ8HYni-184" target="tE9DJSlBf8hbRhQ8HYni-186" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="190.5" y="16910" as="sourcePoint" />
             <mxPoint x="240.5" y="16860" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cF7Z4KM578GpKRIikxbY-1" value="Fornitore" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontFamily=Inter;" vertex="1" parent="1">
+          <mxGeometry x="-101" y="16983" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cF7Z4KM578GpKRIikxbY-2" value="Suppl-AI webapp" style="shape=rect;html=1;verticalAlign=top;fontStyle=1;whiteSpace=wrap;align=center;fontFamily=Inter;" vertex="1" parent="1">
+          <mxGeometry y="16833" width="560" height="418" as="geometry" />
+        </mxCell>
+        <mxCell id="cF7Z4KM578GpKRIikxbY-3" value="UC 45 - Modifica account cliente" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Inter;" vertex="1" parent="1">
+          <mxGeometry x="45" y="16978" width="180" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="cF7Z4KM578GpKRIikxbY-4" value="UC 43 - Errore: sistema &lt;br&gt;non raggiungibile" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Inter;" vertex="1" parent="1">
+          <mxGeometry x="350" y="16893" width="180" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="cF7Z4KM578GpKRIikxbY-5" value="&amp;lt;&amp;lt;extends&amp;gt;&amp;gt;" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=block;endFill=1;dashed=1;rounded=0;" edge="1" parent="1" source="cF7Z4KM578GpKRIikxbY-4" target="cF7Z4KM578GpKRIikxbY-3">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="130" y="17068" as="sourcePoint" />
+            <mxPoint x="290" y="17068" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cF7Z4KM578GpKRIikxbY-6" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="cF7Z4KM578GpKRIikxbY-1" target="cF7Z4KM578GpKRIikxbY-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="190" y="17143" as="sourcePoint" />
+            <mxPoint x="240" y="17093" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cF7Z4KM578GpKRIikxbY-7" value="" style="endArrow=oval;html=1;rounded=0;endFill=0;endSize=10;" edge="1" parent="1" source="cF7Z4KM578GpKRIikxbY-8">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="359.42857142857133" y="17113" as="sourcePoint" />
+            <mxPoint x="340" y="16953" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cF7Z4KM578GpKRIikxbY-8" value="&lt;br&gt;Extension point: Errore: sistema non raggiungibile" style="shape=note2;boundedLbl=1;whiteSpace=wrap;html=1;size=23;verticalAlign=top;align=left;spacingLeft=5;" vertex="1" parent="1">
+          <mxGeometry x="50" y="16868" width="210" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="cF7Z4KM578GpKRIikxbY-9" value="&lt;span style=&quot;text-align: center;&quot;&gt;Contition: Il sistema non è raggiungibile per diversi motivi&lt;/span&gt;" style="resizeWidth=1;part=1;strokeColor=none;fillColor=none;align=left;spacingLeft=5;whiteSpace=wrap;html=1;" vertex="1" parent="cF7Z4KM578GpKRIikxbY-8">
+          <mxGeometry width="210" height="40" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cF7Z4KM578GpKRIikxbY-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="cF7Z4KM578GpKRIikxbY-8" source="cF7Z4KM578GpKRIikxbY-9" target="cF7Z4KM578GpKRIikxbY-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cF7Z4KM578GpKRIikxbY-11" value="&lt;div&gt;UC 44 - Errore: Richiesta&lt;/div&gt;&lt;div&gt;con dati mancanti o errati&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Inter;" vertex="1" parent="1">
+          <mxGeometry x="354.5" y="17138" width="180" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="cF7Z4KM578GpKRIikxbY-12" value="" style="endArrow=oval;html=1;rounded=0;endFill=0;endSize=10;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="cF7Z4KM578GpKRIikxbY-15">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="232.77777777777783" y="17083" as="sourcePoint" />
+            <mxPoint x="355" y="17124" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cF7Z4KM578GpKRIikxbY-13" value="&amp;lt;&amp;lt;extends&amp;gt;&amp;gt;" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=block;endFill=1;dashed=1;rounded=0;" edge="1" parent="1" source="cF7Z4KM578GpKRIikxbY-11" target="cF7Z4KM578GpKRIikxbY-3">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="376" y="16958" as="sourcePoint" />
+            <mxPoint x="218" y="17003" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cF7Z4KM578GpKRIikxbY-14" value="&lt;br&gt;Extension point: Errore: Richiesta con dati mancanti o errati" style="shape=note2;boundedLbl=1;whiteSpace=wrap;html=1;size=23;verticalAlign=top;align=left;spacingLeft=5;" vertex="1" parent="1">
+          <mxGeometry x="335" y="17009" width="210" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="cF7Z4KM578GpKRIikxbY-15" value="&lt;span style=&quot;text-align: center;&quot;&gt;Contition: La richiesta presenta&lt;/span&gt;&lt;br style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;text-align: center;&quot;&gt;degli errori o dati mancanti&amp;nbsp;&amp;nbsp;&lt;/span&gt;" style="resizeWidth=1;part=1;strokeColor=none;fillColor=none;align=left;spacingLeft=5;whiteSpace=wrap;html=1;" vertex="1" parent="cF7Z4KM578GpKRIikxbY-14">
+          <mxGeometry width="210" height="40" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cF7Z4KM578GpKRIikxbY-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="cF7Z4KM578GpKRIikxbY-14" source="cF7Z4KM578GpKRIikxbY-15" target="cF7Z4KM578GpKRIikxbY-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cF7Z4KM578GpKRIikxbY-18" value="UC 10 - Controllo identità" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Inter;" vertex="1" parent="1">
+          <mxGeometry x="45" y="17125" width="180" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="cF7Z4KM578GpKRIikxbY-20" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=block;endFill=1;dashed=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="cF7Z4KM578GpKRIikxbY-18" target="cF7Z4KM578GpKRIikxbY-3">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="330" y="17174" as="sourcePoint" />
+            <mxPoint x="129" y="17070" as="targetPoint" />
           </mxGeometry>
         </mxCell>
       </root>
