@@ -6,7 +6,7 @@
   data: [21/03/2025],
   ruoli: (
     "Matteo Bazzan",
-    "Redattore",
+    "Redattore, Verificatore",
     "Luca Ribon",
     "Redattore, Verificatore",
     "Filippo Sabbadin",
@@ -16,6 +16,11 @@
   ),
   sommario: [Specifica tecnica],
   versioni: (
+    "1.0.0",
+    "17/05/2025",
+    "Luca Ribon",
+    "Aggiornamento requisiti e revisione finale",
+    "",
     "0.6.0",
     "16/05/2025",
     "Luca Ribon, Matteo Bazzan",
@@ -82,7 +87,6 @@ Per facilitare la comprensione di questo documento, viene fornito un glossario c
 e nella seguente pagina web: #link("https://codehex16.github.io/glossario").
 
 == Riferimenti
-// TODO: controllare riferimenti
 //IMPORTANTE: i link dei documenti nostri reindirizzano sulla versione RTB, qui li ho aggiornati con PB nel link, ma potrebbero comunque non andare anche dopo il fix
 
 == Riferimenti normativi
@@ -93,7 +97,7 @@ e nella seguente pagina web: #link("https://codehex16.github.io/glossario").
 - Norme di progetto:\ #link("https://codehex16.github.io/docs/3%20-%20PB/Norme-di-Progetto.pdf")\ _(versione 2.0.0)_;
 
 == Riferimenti informativi
-- Analisi dei requisiti:\ #link("https://codehex16.github.io/docs/2%20-%20PB/Analisi-dei-Requisiti.pdf")\ _(versione 1.0.0)_;
+- Analisi dei requisiti:\ #link("https://codehex16.github.io/docs/3%20-%20PB/Analisi-dei-Requisiti.pdf")\ _(versione 2.0.0)_;
 
 - Diagrammi delle classi (UML):\ #link("https://www.math.unipd.it/~rcardin/swea/2023/Diagrammi%20delle%20Classi.pdf");\
 
@@ -1081,16 +1085,24 @@ La classe `StringManager` è un'implementazione concreta della classe FileManage
 
 #set par(justify: true)
 
-= Requisiti funzionali
-Di seguito è riportata la tabella con i requisiti funzionali che erano stati stesi nel documento _Analisi dei requisiti_. Si ricorda che i requisiti sono stati divisi in due categorie in base alla lettera con cui finisce il codice del requisito:
-- O: obbligatori
-- D: desiderabili
+= Requisiti
+Di seguito è riportata la tabella con i requisiti funzionali, presenti nel documento _Analisi dei requisiti_, in cui viene indicato se sono stati soddisfatti o meno. Si ricorda che i requisiti hanno la seguente nomenclatura:
+#align(center, [*R - [numero] - [tipo] - [priorità]*])
+con:
+- *Numero*: numero progressivo che identifica il requisito, parte da 01.
+- *Tipo*: può essere
+  - *F*: requisito funzionale, indica una funzionalità del sistema;
+  - *Q*: requisito di qualità, definisce le caratteristiche della qualità del prodotto, come un sistema deve essere o come
+    il sistema deve esibirsi, per soddisfare le esigenze dell'utente;
+  - *V*: requisito di vincolo, ovvero limiti e restrizioni imposte dal capitolato;
+- *Priorità*: può essere
+  - *O*: Obbligatorio, viene richiesto dal #gloss[proponente] ed è necessario per considerare il prodotto completo;
+  - *D*: Desiderabile, non è strettamente necessario ma è un valore aggiunto;
 
-== Tracciamento
-// TODO: aggiornare quando gli altri hanno fatto
+== Tracciamento dei requisiti
 #show figure: set block(breakable: true)
 #figure(
-  caption: [Requisiti di funzionalità],
+  caption: [Tracciamento dei requisiti],
   table(
     columns: (1fr, 2fr, 1fr),
     inset: 8pt,
@@ -1104,160 +1116,164 @@ Di seguito è riportata la tabella con i requisiti funzionali che erano stati st
     // primo login fornitore
     "R-02-F-O",
     "Nel caso in cui il fornitore acceda per la prima volta alla piattaforma, deve aggiornare la password",
-    "",
+    "Soddisfatto",
     // primo login cliente
     "R-03-F-O",
     "Nel caso in cui il cliente acceda per la prima volta alla piattaforma, deve aggiornare la password",
-    "",
+    "Soddisfatto",
     // modifica password
     "R-04-F-O",
-    "Sia utente che fornitore devono poter cambiare la password liberamente",
-    "",
+    "Sia cliente che fornitore devono poter cambiare la password liberamente",
+    "Soddisfatto",
     // resta connesso
     "R-05-F-D",
     "L'utente non autenticato deve poter scegliere se reinserire le credenziali ad ogni accesso o se farle memorizzare alla piattaforma anche dopo il termine della sessione",
-    "",
+    "Soddisfatto",
     // recupero password
     "R-06-F-O",
     "L'utente non autenticato deve poter recuperare la password nel caso in cui la dimentichi",
-    "",
-    // errore email
+    "Soddisfatto",
+    // errore credenziali
     "R-07-F-O",
-    "L'utente non autenticato deve essere notificato in caso di errore nell'inserimento dell'e-mail",
-    "",
-    // errore password
-    "R-08-F-O",
-    "L'utente non autenticato deve essere notificato in caso di errore nell'inserimento della password o nel caso in cui la password scelta non rispetti il formato richiesto",
-    "",
+    "L'utente non autenticato deve essere notificato in caso di errore nell'inserimento delle credenziali",
+    "Soddisfatto",
     // logout
-    "R-09-F-O",
+    "R-08-F-O",
     "Sia cliente che fornitore devono avere la possibilità di uscire dal proprio account",
-    "",
+    "Soddisfatto",
     // visualizzazione lista chat
-    "R-10-F-O",
-    "Sia cliente che fornitore devono avere la possibilità di vedere la lista di tutte le chat in loro possesso",
-    "",
+    "R-09-F-O",
+    "Sia cliente che fornitore devono avere la possibilità di vedere la lista di tutte le chat in loro possesso, delle quali verrà mostrato il titolo",
+    "Soddisfatto",
     // creazione nuova chat
-    "R-11-F-O",
+    "R-10-F-O",
     "Sia cliente che fornitore devono avere la possibilità di creare una nuova chat con un contesto pulito, che verrà aggiunta alla lista di quelle già presenti",
-    "",
+    "Soddisfatto",
     // modifica titolo di una chat
-    "R-12-F-D",
+    "R-11-F-D",
     "Sia cliente che fornitore devono avere la possibilità di modificare il titolo di una chat già esistente",
-    "",
+    "Non soddisfatto",
     // apertura chat singola
-    "R-13-F-O",
-    "Sia cliente che fornitore devono avere la possibilità di aprire una chat singola dalla lista di tutte le chat in loro possesso",
-    "",
+    "R-12-F-O",
+    "Sia cliente che fornitore devono avere la possibilità di aprire una chat singola dalla lista di tutte le chat in loro possesso, una volta aperta visualizzeranno il titolo della chat e i messaggi scambiati con il chatbot",
+    "Soddisfatto",
     // scrittura messaggio
-    "R-14-F-O",
+    "R-13-F-O",
     "Sia cliente che fornitore devono poter scrivere messaggi per comunicare con il chatbot",
-    "",
+    "Soddisfatto",
     // scrittura messaggio troppo lungo
-    "R-15-F-O",
+    "R-14-F-O",
     "L'utente che digita il messaggio deve essere avvisato nel caso in cui il messaggio scritto sia troppo lungo",
-    "",
+    "Soddisfatto",
     // scrittura messaggio tramite FAQ
-    "R-16-F-O",
-    "Sia cliente che fornitore devono avere la possibilità di scrivere messaggi tramite FAQ preimpostate dal fornitore; se possibile il chatbot suggerirà delle FAQ utili in base al contesto",
-    "",
+    "R-15-F-O",
+    "Sia cliente che fornitore devono avere la possibilità di scrivere messaggi tramite FAQ preimpostate dal fornitore",
+    "Soddisfatto",
     // invio messaggio
-    "R-17-F-O",
-    "Sia cliente che fornitore per comunicare con il chatbot devono poter trasmettere il messaggio scritto",
-    "",
+    "R-16-F-O",
+    "Sia cliente che fornitore per comunicare con il chatbot devono poter trasmettere il messaggio scritto, e successivamente visualizzarlo nella chat",
+    "Soddisfatto",
     // ricezione risposta
-    "R-18-F-O",
+    "R-17-F-O",
     "Sia cliente che fornitore devono ricevere la risposta elaborata dal chatbot in seguito all'invio di un messaggio; durante l'elaborazione della risposta l'utente deve ricevere un feedback che indica l'elaborazione della risposta",
-    "",
+    "Soddisfatto",
     // valutazione risposta
-    "R-19-F-O",
+    "R-18-F-O",
     "Il cliente deve avere la possibilità di valutare la risposta ricevuta dal chatbot tramite l'opzione 'Pollice su/giù'",
-    "",
+    "Soddisfatto",
     // eliminazione chat
-    "R-20-F-O",
+    "R-19-F-O",
     "Sia cliente che fornitore devono avere la possibilità di eliminare una chat presente nella lista di tutte le chat",
-    "",
+    "Soddisfatto",
     // dark/light mode
-    "R-21-F-D",
+    "R-20-F-D",
     "L'utente deve avere la possibilità di scegliere tra tema scuro e tema chiaro dell'interfaccia",
-    "",
+    "Soddisfatto",
     // modifica durata storico chat
-    "R-22-F-O",
-    "Il fornitore deve avere la possibilità di modificare la durata dello storico delle chat, ovvero il periodo di tempo massimo per cui vengono memorizzati e tenuti come contesto i messaggi per ogni chat",
-    "",
+    "R-21-F-O",
+    "Il fornitore deve avere la possibilità di modificare il numero massimo di messaggi visualizzati all'interno delle chat",
+    "Soddisfatto",
     // caricare logo
-    "R-23-F-D",
+    "R-22-F-D",
     "Il fornitore deve avere la possibilità di caricare il proprio logo per personalizzare la propria piattaforma fornita ai clienti",
-    "",
+    "Soddisfatto",
     // palette colori
-    "R-24-F-D",
-    "Il fornitore deve avere la possibilità di cambiare i colori principali dell'interfaccia della propria piattaforma",
-    "",
+    "R-23-F-D",
+    "Il fornitore deve avere la possibilità di cambiare il colore primario dell'interfaccia della propria piattaforma",
+    "Soddisfatto",
     // statistiche domanda risposta
-    "R-25-F-D",
+    "R-24-F-D",
     "Il fornitore deve avere la possibilità di visualizzare le statistiche relative alle interazioni con il chatbot",
-    "",
+    "Soddisfatto",
     // filtri visualizzazione
-    "R-26-F-D",
+    "R-25-F-D",
     "Il fornitore deve avere la possibilità di filtrare le statistiche visualizzate",
-    "",
+    "Soddisfatto",
     // aggiunta account cliente
-    "R-27-F-O",
+    "R-26-F-O",
     "Il fornitore deve avere la possibilità di aggiungere gli account per i propri clienti",
-    "",
+    "Soddisfatto",
     // inserimento account già esistente
-    "R-28-F-O",
+    "R-27-F-O",
     "Il fornitore deve essere avvisato nel caso in cui stia aggiungendo un account cliente già esistente",
-    "",
+    "Soddisfatto",
     // eliminazione account cliente
-    "R-29-F-O",
+    "R-28-F-O",
     "Il fornitore deve avere la possibilità di eliminare un account cliente solo dopo aver autorizzato l'eliminazione tramite la propria password",
-    "",
+    "Soddisfatto",
     // inserimento documenti aziendali
-    "R-30-F-O",
+    "R-29-F-O",
     "Il fornitore deve avere la possibilità di inserire documenti aziendali in modo da fornire ulteriore contesto all'chatbot",
-    "",
+    "Soddisfatto",
     // formato file non valido
-    "R-31-F-O",
-    "Il fornitore deve sapere quando un file caricato, sia come logo che come documento aziendale, non sia nel formato corretto",
-    "",
+    "R-30-F-O",
+    "Il fornitore deve sapere quando un file caricato, sia come logo che come documento aziendale, non è nel formato corretto",
+    "Soddisfatto",
     // visualizzazione documenti aziendali
-    "R-32-F-O",
+    "R-31-F-O",
     "Il fornitore deve avere la possibilità di visualizzare la lista dei documenti aziendali caricati nella piattaforma",
-    "",
+    "Soddisfatto",
     // eliminazione documento aziendale
-    "R-33-F-O",
+    "R-32-F-O",
     "Il fornitore deve avere la possibilità di eliminare un documento aziendale dalla piattaforma solo dopo aver autorizzato l'eliminazione tramite la propria password",
-    "",
+    "Soddisfatto",
     // aggiunta FAQ
-    "R-34-F-O",
+    "R-33-F-O",
     "Il fornitore deve avere la possibilità di aggiungere delle domande preimpostate nella piattaforma",
-    "",
+    "Soddisfatto",
     // visualizzazione FAQ
-    "R-35-F-O",
+    "R-34-F-O",
     "Il fornitore deve avere la possibilità di visualizzare la lista delle domande preimpostate inserite nella piattaforma",
-    "",
+    "Soddisfatto",
     // modifica FAQ
-    "R-36-F-O",
+    "R-35-F-O",
     "Il fornitore deve avere la possibilità di modificare le domande preimpostate già inserite nella piattaforma",
-    "",
+    "Soddisfatto",
     // eliminazione FAQ
-    "R-37-F-O",
+    "R-36-F-O",
     "Il fornitore deve avere la possibilità di eliminare le domande preimpostate dalla piattaforma solo dopo aver autorizzato l'eliminazione tramite la propria password",
-    "",
-    // sistema non raggiungibile
-    "R-38-F-O",
+    "Soddisfatto",
+    // Errore: Sistema non raggiungibile
+    "R-37-F-O",
     "Un utente non autenticato o il cliente che sta utilizzando la piattaforma deve essere avvisato nel caso in cui il sistema non sia raggiungibile, possibilmente specificando il motivo del malfunzionamento",
-    "",
-    // invio richiesta con dati mancanti o errati
-    "R-39-F-O",
+    "Soddisfatto",
+    // Errore: Richiesta con dati mancanti o errati
+    "R-38-F-O",
     "Un utente non autenticato o il cliente che sta utilizzando la piattaforma deve essere avvisato nel caso in cui la richiesta che ha inviato contenga dati mancanti o errati; nel caso sia pertinente deve anche essere specificato il problema",
-    "",
-  ),
+    "Soddisfatto",
+    // modifica account cliente
+    "R-39-F-O",
+    "Il fornitore deve avere la possibilità di modificare gli account degli utenti già inseriti nella piattaforma",
+    "Soddisfatto",  ),
 )
 
-== Grafico dei requisiti obbligatori soddisfatti
-// TODO
+#block(breakable: false)[
+== Resoconto
+Di seguito il grafico che rappresenta il numero di requisiti funzionali soddisfatti e non soddisfatti:
+#figure(
+  image("../imgs/grafico-requisiti-soddisfatti.png", width: 40%),
+  caption: "Grafico dei requisiti soddisfatti e non soddisfatti",
+)
 
-== Grafico dei requisiti desiderabili soddisfatti
-// TODO
+L'unico requisito funzionale non soddisfatto è il requisito R-11-F-D, un requisito desiderabile, che prevede la possibilità di modificare il titolo di una chat già esistente. Questo perché, in accordo con il proponente, si è deciso di fare generare il titolo della chat all'LLM basandosi sui messaggi inviati, rendendo quindi questo requisito non necessario.
+]
