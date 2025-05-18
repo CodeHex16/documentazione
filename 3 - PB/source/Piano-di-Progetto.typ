@@ -29,7 +29,7 @@
 
   versioni: (
 	"1.7.0",
-	"17/05/2025"
+	"17/05/2025",
 	"Aggiunto sprint 15 e rendicontazione del periodo pb",
 	"1.6.0",
     "09/05/2025",
