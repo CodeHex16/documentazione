@@ -1358,6 +1358,14 @@ dove "TIPO" sarà:
     "Inizio progetto",
     "Inizialmente venivano inserite nella branch main (principale) modifiche che presentavano errori, spesso a causa della mancanza di verifica",
     "Il problema è stato risolto attraverso l'utilizzo di branch protection, che controlla se il verificatore ha approvato le modifiche, se la tabella delle versioni è correttamente compilata e se il codice sorgente del documento compila correttamente",
+    "OPI-07",
+    "Fase PB",
+    "Durate la fase PB, soprattutto nella fase finale, alcuni membri del gruppo hanno avuto difficoltà a maturare le ore produttive necessarie per portare a completamento il progetto",
+    "Durante diversi incontri, tra cui uno con il professore Vardanega, è stata analizzata la situazione di ogni membro riguardo alle ore produttive svolte e si è stimato il tempo e il lavoro necessario per completare il progetto. Successivamente ogni membro si è impegnato a completare le ore mancanti, mantenendo comunque un buon livello di qualità",
+    "OPI-08",
+    "Fase PB",
+    "Durante la fase PB, dove la maggior parte della codifica ha luogo, si è riscontrata una difficoltà nel tenere aggiornati tutti i membri con i progressi e le scelte relative al codice prese",
+    "Per risolvere il problema si è deciso di aggiornare periodicamente tutto il gruppo riguardo progressi e scelte e di lavorare maggiormente in piccoli gruppi, in modo sincrono, soprattutto per svolgere attività dove modifiche, scelte e discussioni sono necessarie",
   ),
 )
 
