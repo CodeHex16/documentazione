@@ -690,158 +690,197 @@ Esempi applicati al progetto:
     align: (x, y) => if (x == 0 and y > 0 and y < 7) { left } else { center + horizon },
     fill: (x, y) => if (y == 0) { luma(230) },
     table.header([*Codice*], [*Descrizione*], [*ID Requisito*], [*Stato*]),
+    // login
     "TS-001",
     "Verificare che l'utente possa fare il login per accedere alla piattaforma",
     "R-01-F-O",
     "Superato",
+    // primo login fornitore
     "TS-002",
     "Verificare che il fornitore debba cambiare la password al primo accesso",
     "R-02-F-O",
     "Superato",
+    // primo login cliente
     "TS-003",
     "Verificare che il cliente debba cambiare la password al primo accesso",
     "R-03-F-O",
     "Superato",
+    // modifica password
     "TS-004",
     "Verificare che sia cliente che fornitore possano cambiare password",
     "R-04-F-O",
     "Superato",
+    // resta connesso
     "TS-005",
     "Verificare che un utente non autenticato possa scegliere se reinserire le credenziali ad ogni accesso o se rimanere autenticato",
     "R-05-F-D",
     "Superato",
+    // recupero password
     "TS-006",
     "Verificare che un utente non autenticato possa recuperare la password dimenticata",
     "R-06-F-O",
     "Superato",
+    // errore email
     "TS-007",
     "Verificare che l'utente sia notificato in caso di errore nell'inserimento dell'e-mail",
     "R-07-F-O",
     "Superato",
+    // errore password
     "TS-008",
     "Verificare che l'utente sia notificato in caso di errore nell'inserimento della password",
     "R-08-F-O",
     "Superato",
+    // logout
     "TS-009",
     "Verificare che sia cliente che fornitore possano effettuare il logout",
     "R-09-F-O",
     "Superato",
+    // visualizzazione lista chat
     "TS-010",
     "Verificare che sia cliente che fornitore possano visualizzare la lista di tutte le chat",
     "R-10-F-O",
     "Superato",
+    // creazione nuova chat
     "TS-011",
     "Verificare che sia cliente che fornitore possano creare una nuova chat",
     "R-11-F-O",
     "Superato",
+    // modifica titolo chat
     "TS-012",
     "Verificare che sia cliente che fornitore possano modificare il titolo di una chat esistente",
     "R-12-F-D",
     "Non superato",
+    // apertura chat singola
     "TS-013",
     "Verificare che sia cliente che fornitore possano aprire una chat singola dalla lista",
     "R-13-F-O",
     "Superato",
+    // scrittura messaggio
     "TS-014",
     "Verificare che sia cliente che fornitore possano scrivere messaggi al chatbot",
     "R-14-F-O",
     "Superato",
+    // scrittura messaggio troppo lungo
     "TS-015",
     "Verificare che l'utente sia avvisato quando il messaggio è troppo lungo",
     "R-15-F-O",
     "Superato",
+    // scrittura messaggio tramite FAQ
     "TS-016",
     "Verificare che sia cliente che fornitore possano utilizzare FAQ preimpostate",
     "R-16-F-O",
     "Superato",
+    // messaggio
     "TS-017",
     "Verificare che sia cliente che fornitore possano inviare i messaggi scritti al chatbot",
     "R-17-F-O",
     "Superato",
+    // ricezione risposta
     "TS-018",
     "Verificare che sia cliente che fornitore ricevano risposta dal chatbot con feedback durante l'elaborazione",
     "R-18-F-O",
     "Superato",
+    // valutazione risposta
     "TS-019",
     "Verificare che il cliente possa valutare la risposta ricevuta con pollice su/giù",
     "R-19-F-O",
     "Superato",
+    // eliminazione chat
     "TS-020",
     "Verificare che sia cliente che fornitore possano eliminare una chat esistente",
     "R-20-F-O",
     "Superato",
+    // dark/light mode
     "TS-021",
     "Verificare che l'utente possa scegliere tra tema scuro e tema chiaro dell'interfaccia",
     "R-21-F-D",
     "Superato",
+    // modifica durata storico chat
     "TS-022",
     "Verificare che il fornitore possa modificare la durata dello storico delle chat",
     "R-22-F-O",
     "Superato",
+    // caricare logo
     "TS-023",
     "Verificare che il fornitore possa caricare il proprio logo per personalizzare l'interfaccia",
     "R-23-F-D",
     "Superato",
+    // palette colori
     "TS-024",
     "Verificare che il fornitore possa cambiare i colori principali dell'interfaccia",
     "R-24-F-D",
     "Superato",
+    // statistiche domanda risposta
     "TS-025",
     "Verificare che il fornitore possa visualizzare statistiche sulle interazioni con il chatbot",
     "R-25-F-D",
     "Superato",
+    // filtri visualizzazione
     "TS-026",
     "Verificare che il fornitore possa filtrare le statistiche visualizzate",
     "R-26-F-D",
     "Non superato",
+    // aggiunta account cliente
     "TS-027",
     "Verificare che il fornitore possa aggiungere account clienti",
     "R-27-F-O",
     "Superato",
+    // inserimento account già esistente
     "TS-028",
     "Verificare che il fornitore sia avvisato se sta aggiungendo un account già esistente",
     "R-28-F-O",
     "Superato",
+    // eliminazione account già esistente
     "TS-029",
     "Verificare che il fornitore possa eliminare un account cliente previa autenticazione con password",
     "R-29-F-O",
     "Superato",
+    // inserimento documenti aziendali
     "TS-030",
     "Verificare che il fornitore possa inserire documenti aziendali per fornire contesto al chatbot",
     "R-30-F-O",
     "Superato",
+    // formato file non valido
     "TS-031",
     "Verificare che il fornitore venga avvisato se il file caricato non è in un formato valido",
     "R-31-F-O",
     "Superato",
+    // visualizzazione documenti aziendali
     "TS-032",
     "Verificare che il fornitore possa visualizzare la lista dei documenti aziendali caricati",
     "R-32-F-O",
     "Superato",
+    // eliminazione documento aziendale
     "TS-033",
     "Verificare che il fornitore possa eliminare documenti aziendali previa autenticazione con password",
     "R-33-F-O",
     "Superato",
+    // aggiunta FAQ
     "TS-034",
     "Verificare che il fornitore possa aggiungere FAQ nella piattaforma",
     "R-34-F-O",
     "Superato",
+    // visualizzazione FAQ
     "TS-035",
     "Verificare che il fornitore possa visualizzare la lista delle FAQ inserite",
     "R-35-F-O",
     "Superato",
+    // modifica FAQ
     "TS-036",
     "Verificare che il fornitore possa modificare le FAQ esistenti",
     "R-36-F-O",
     "Superato",
+    // eliminazione FAQ
     "TS-037",
     "Verificare che il fornitore possa eliminare FAQ previa autenticazione con password",
     "R-37-F-O",
     "Superato",
+    // sistema non raggiungibile
     "TS-038",
     "Verificare che l'utente sia avvisato quando il sistema non è raggiungibile",
     "R-38-F-O",
     "Superato",
+    // invio richiesta con dati mancanti o errati
     "TS-039",
     "Verificare che l'utente sia avvisato quando invia richieste con dati mancanti o errati",
     "R-39-F-O",
