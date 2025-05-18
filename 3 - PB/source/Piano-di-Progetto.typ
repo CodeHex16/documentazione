@@ -1109,3 +1109,56 @@ In questo sprint si è verificato un rallentamento dovuto alla difficoltà di al
   [Zhuo], [29.45],
   [*TOTALE*], [*81.65*],
 )
+
+=== Sprint 15
+*Intervallo temporale*: 29/04/2025 - 12/05/2025
+
+#pseudoheading[*Retrospettiva*]
+Durante lo *Sprint 15*, il gruppo ha concluso l’ultima fase di sviluppo prima della consegna, portando a termine numerose attività sia dal lato documentale che software.  
+Dal punto di vista tecnico sono state completate la gestione dello storico chat, l’integrazione delle statistiche e l’aggiunta di funzionalità mancanti, come la gestione delle preferenze dell’admin, la richiesta della password per modifiche sensibili e la visualizzazione delle FAQ nel contesto conversazionale.  
+Parallelamente è stato migliorato il testing e aggiornato il Piano di Qualifica con dettagli relativi alla copertura, alle suite e ai risultati.  
+Sul fronte documentale si è completata la stesura del *Piano di Progetto*, della *Specifica Tecnica* e del *Manuale Utente*, mentre le attività di verifica sono state suddivise equamente.  
+Lo sprint è stato ben organizzato, con un buon bilanciamento tra il carico tecnico e la chiusura dei documenti, dimostrando una maturità crescente nella gestione del progetto.
+Tutti i membri del gruppo hanno raggiunto le ore minime richieste per il progetto.
+
+#pseudoheading[*Attività svolte*]
+- *Testing e copertura*: Stesura di test unitari e generazione di report con coverage e risultati aggregati.
+- *Statistica e storico*: Completamento delle schermate statistiche frontend e backend, gestione dello storico.
+- *Bugfix e miglioramenti*: Correzione bug residuali (es. no-context), gestione della sicurezza nei form e preferenze.
+- *Finalizzazione PdP e NdP*: Completamento e verifica degli ultimi capitoli, integrazione delle metriche.
+- *Manuale Utente e Specifica Tecnica*: Completamento documenti e verifica.
+- *Verifiche finali*: Controllo incrociato di verbali, documenti e codice, aggiornamento documentazione post-merge.
+
+#pseudoheading[*Ruoli ricoperti e ore svolte*]
+
+#figure(
+  image("../imgs/sprint15-tabella.png", width: 100%),
+  caption: [
+    Suddivisione oraria per membro e ruolo.
+  ],
+)
+
+#figure(
+  image("../imgs/sprint15-grafico.png", width: 100%),
+  caption: [
+    Suddivisione oraria per ruolo con relativi costi.
+  ],
+)
+
+#table(
+  columns: (1fr, 1fr),
+  inset: 8pt,
+  align: (x, y) => if y > 0 { left } else { center + horizon },
+  fill: (x, y) => if y == 0 { luma(180) } else if (y == 2 or y == 4 or y == 6 or y == 8) { luma(230) },
+  table.header(table.cell(colspan: 2)[*Ore rimanenti per persona*]),
+  [*Membro*], [*Ore mancanti*],
+  [Ribon], [-3],
+  [Bazzan], [-3],
+  [Fragonas], [0.55],
+  [Magnelli], [0],
+  [Sabbadin], [0.1],
+  [Rossi], [5.9],
+  [Zhuo], [10.45],
+  [*TOTALE*], [*11*],
+)
+
