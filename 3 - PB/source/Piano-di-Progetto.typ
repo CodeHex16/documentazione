@@ -28,13 +28,16 @@
   sommario: [Piano di Progetto],
 
   versioni: (
-	"1.7.0",
-	"17/05/2025",
-	"Aggiunto sprint 15 e rendicontazione del periodo pb",
-	"1.6.0",
+    "1.7.0",
+    "17/05/2025",
+    "Luca Rossi",
+    "Aggiunto sprint 15 e rendicontazione del periodo pb",
+    "Gabriele Magnelli"
+    "1.6.0",
     "09/05/2025",
     "Luca Rossi",
     "Aggiunto sprint 14",
+    "Luca Ribon",
     "1.5.0",
     "05/05/2025",
     "Luca Rossi",
