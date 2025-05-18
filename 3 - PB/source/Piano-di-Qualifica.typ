@@ -7,7 +7,7 @@
   "Luca Ribon",
   "Redattore, Verificatore",
   "Francesco Fragonas",
-  "",
+  "Verificatore",
   "Gabriele Magnelli",
   "Redattore",
   "Filippo Sabbadin",
@@ -21,7 +21,7 @@
   "06/05/2025",
   "Filippo Sabbadin",
   "Aggiunta grafici PB nel cruscotto di valutazione delle metriche, aggiunti test unità",
-  "",
+  "Luca Ribon",
   "1.1.0",
   "06/04/2025",
   "Filippo Sabbadin",
@@ -94,13 +94,13 @@ comprensione e lettura.
 
 - #gloss[Norme di Progetto]
 === Riferimenti informativi
-- Slide T08 - Qualità di processo: #link("https://codehex16.github.io/resources/slides/T8.pdf") _(ultima consultazione 06-03-2025)_;
+- Slide T08 - Qualità di processo: #link("https://codehex16.github.io/resources/slides/T8.pdf") _(ultima consultazione 18-05-2025)_;
 
-- Slide T09 - Verifica e validazione #link("https://codehex16.github.io/resources/slides/T9.pdf") _(ultima consultazione 07-03-2025)_;
+- Slide T09 - Verifica e validazione #link("https://codehex16.github.io/resources/slides/T9.pdf") _(ultima consultazione 18-05-2025)_;
 
 - Glossario:
   - Documento: #link("https://codehex16.github.io/docs/glossario/glossario.pdf") _(versione 1.0.0)_;
-  - Pagina web: #link("https://codehex16.github.io/glossario.html") _(ultima consultazione 07-03-2025)_;
+  - Pagina web: #link("https://codehex16.github.io/glossario.html") _(ultima consultazione 18-05-2025)_;
 
 = Metriche di qualità
 
@@ -468,7 +468,6 @@ $ ("numero di istruzioni eseguite") / ("numero di istruzioni totali nel codice")
 
 = Metodologie di testing
 == Tipologie di test
-// TODO: sistemare lo stato di completamento dei test nelle tabelle sotto
 Per garantire la qualità del prodotto, il team CodeHex16 ha deciso di verificare il prodotto attraverso diverse
 tipologie di test.
 
@@ -494,8 +493,8 @@ Unità e Test di Regressione.
 
 === Test di Unità
 I test di unità sono utilizzati per verificare il corretto funzionamento delle singole componenti del software. Vengono
-scritti dai programmatori e sono eseguiti in modo automatico. Gli strumenti utilizzati per i test di unità sono `pytest` e `vitest`.\
-Il code coverage finale dei test di unità è stato pari al 98%.\
+scritti dai programmatori e sono eseguiti in modo automatico. Gli strumenti utilizzati per i test di unità sono `pytest` e `vitest`. \
+La code coverage finale garantita dai test di unità è pari al 93%. \
 
 Esempi applicati al progetto:
 #show figure: set block(breakable: true)
@@ -514,7 +513,7 @@ Esempi applicati al progetto:
   "Superato",
   //test_schemas.py
   "TU-003",
-  "Test che una lista di emails passi una validazione",
+  "Test che una lista di e-mail passi una validazione",
   "Superato",
   "TU-004",
   "Test che una mail non valida fallisca la validazione",
@@ -876,30 +875,7 @@ Esempi applicati al progetto:
   "Test che il servizio mail chiami il metodo coretto per inviare una mail",
   "Superato",
 ))
-/*
-=== Test di Integrazione
-I test di integrazione sono utilizzati per validare l’interazione tra moduli e servizi. Vengono scritti dai
-programmatori e sono eseguiti in modo automatico. Lo strumento utilizzato per i test di integrazione è `Postman`.
 
-Esempi applicati al progetto:
-
-#figure(caption: [Esempi di test di integrazione], table(
-  columns: (auto, auto, auto),
-  inset: 8pt,
-  align: (x, y) => if (x == 0 and y > 0 and y < 7) { left } else { center + horizon },
-  fill: (x, y) => if (y == 0) { luma(230) },
-  table.header([*Codice*], [*Descrizione*], [*Stato*]),
-  "TI-001",
-  "Integrazione modulo autenticazione con database utenti",
-  "Superato",
-  "TI-002",
-  "Comunicazione tra frontend e API di generazione risposte LLM",
-  "Superato",
-  "TI-003",
-  "Verifica sincronizzazione impostazioni tema (dark/light mode) su più dispositivi",
-  "Superato",
-))
-*/
 === Test di Sistema
 I test di sistema sono utilizzati per verificare il comportamento del sistema rispetto ai requisiti funzionali. Vengono
 scritti dagli analisti e sono eseguiti in modo automatico.
@@ -1162,20 +1138,16 @@ Esempi applicati al progetto:
 )
 
 === Test di Regressione
+Per evitare che le modifiche al codice introducano nuovi bug sono stati implementati dei test di regressione.
 
-I test di regressione sono semplicemente tutti i test che sono già stati implementati in un determinato periodo e
-vengono eseguiti ad ogni pull request tramite le Github Actions.\
-In caso di fallimento il merge viene bloccato con richiesta di modifiche da parte di un verificatore. Questi test sono
-eseguiti per tutte le parti del prodotto software, sia frontend, che backend.\
-I test di regressione sono utilizzati per verificare che le modifiche al codice non abbiano introdotto nuovi bug o non
-abbiano rotto funzionalità già esistenti. Vengono scritti dai programmatori e sono eseguiti in modo automatico.\
+In particolare, tramite le Github Actions, per ogni pull request aperta vengono rieseguiti tutti i test (anche quelli superati in pull request passate).\
+In caso di fallimento il merge viene bloccato fino a quando tutti i test vengono superati.
 
 
 = Cruscotto di valutazione delle metriche
 
 == MPC-EAC(Estimated At Completion)
 === RTB
-// TODO: probabilmente va sistemato dopo aver aggiornato le ore preventivate
 #figure(image("../imgs/SwePdQBacEac.png", width: 100%), caption: [
   Stima del costo totale durante i vari #gloss[sprint].
 ])
@@ -1192,7 +1164,6 @@ periodi in cui avevamo bisogno di ore aggiuntive per il ruolo di verificatore.
 Durante la fase PB, il costo preventivato è rimasto invariato mentre le stime del costo totale sono state più stabili. 
 
 == MPC-EV(Estimated Value) - MPC-PV(Planned Value)
-// TODO: probabilmente va sistemato dopo aver aggiornato le ore preventivate
 === RTB
 #figure(image("../imgs/SwePdQEvPv.png", width: 100%), caption: [
   Stima dei valori di PV e EV durante i vari sprint.
@@ -1211,7 +1182,6 @@ file, risolto usando la funzione dei branch di Git. Questo ha portato a un aumen
 durante il periodo di vacanze pasquali, è stato riscontrato una riduzione del lavoro rispetto a quello stimato.
 
 == MPC-AC(Actual Cost) - MPC-ETC(Estimated To Completion)
-// TODO: probabilmente va sistemato dopo aver aggiornato le ore preventivate
 === RTB
 #figure(image("../imgs/SwePdQAcEtcBac.png", width: 100%), caption: [
   Stima dei valori di AC e ETC durante i vari sprint.
@@ -1445,39 +1415,3 @@ dove "TIPO" sarà:
     "Nella nuova versione è stato modificato un tag usato per creare le tabelle nei documenti, è bastato aggiungere un altro tag insieme a quello usato",
   ),
 )
-/*
-= Cruscotto sulle misure di automiglioramento
-//presentare o grafici, screenshots o qualsiasi cosa che possa mostrare i miglioramenti ottenuti
-== OPI-01 (Pianificazione riunioni con tutti i membri)
-#figure(
-  text("grafico con numero di membri durante le riunioni,  dati si potrebbero prendere dai verbali"),
-  caption: "grafico",
-)
-== OPI-02 (Pianificazione ore di lavoro entro i limiti assegnati)
-#figure(text("grafico con ore di lavoro totali, non individuali, rispetto al limite"), caption: "grafico")
-== OPI-03 (Lavoro su documenti in parallelo)
-#figure(
-  text("grafico con numero di documenti modificati e membri che ci hanno lavorato, o qualcosa simile"),
-  caption: "grafico",
-)
-== OPI-04 (Formattazione del testo)
-#figure(text("grafico con numero di errori di formattazione o battitura"), caption: "grafico")
-== OPI-05 (Granularità delle attività assegnate)
-#figure(text("grafico con numero di attività assegnate e ore di lavoro"), caption: "grafico")
-== OPI-06 (Controllo delle modifiche)
-#figure(text("grafico con numero di modifiche e numero di errori risolti"), caption: "grafico")
-
-== RL-01 (Compiti assegnati a ciascun ruolo)
-#figure(text("grafico con numero di issue assegnati per ruolo"), caption: "grafico")
-== RL-02 (Compiti del verificatore)
-#figure(text("grafico con numero di pr ????"), caption: "grafico")
-== RL-03 (Differenza tra i ruoli di responsabile e amministratore)
-#figure(text("grafico gli issue assegnati all'amministratore e responsabile?????"), caption: "grafico")
-== STR-01 (Difficoltà con gli strumenti di git)
-#figure(text("grafico con numero di commit????"), caption: "grafico")
-== STR-02 (Difficoltà con gli strumenti di sviluppo)
-#figure(text("si potrebbe fare quanti membri lavorano come programmatori per ogni sprint"), caption: "grafico")
-== STR-03 (Problemi con Typst 0.13)
-#figure(text("grafico con numero di errori dati da typst ?????"), caption: "grafico")
-
-// Sotto il cruscotto delle metriche mettere degli effetti che ci si aspetta di vedere in futuro o che ha dato
