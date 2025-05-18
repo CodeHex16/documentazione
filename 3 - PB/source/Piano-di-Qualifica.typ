@@ -896,7 +896,7 @@ Esempi applicati al progetto:
     "Verificare che l'utente possa fare il login per accedere alla piattaforma",
     "R-01-F-O",
     "Superato",
-    // primo login fornitore
+    // primo login #gloss[fornitore]
     "TS-002",
     "Verificare che il fornitore debba cambiare la password al primo accesso",
     "R-02-F-O",
@@ -1021,7 +1021,7 @@ Esempi applicati al progetto:
     "Verificare che il fornitore possa filtrare le statistiche visualizzate",
     "R-26-F-D",
     "Non superato",
-    // aggiunta account cliente
+    // aggiunta #gloss[account] cliente
     "TS-027",
     "Verificare che il fornitore possa aggiungere account clienti",
     "R-27-F-O",
@@ -1140,7 +1140,7 @@ Esempi applicati al progetto:
 === Test di Regressione
 Per evitare che le modifiche al codice introducano nuovi bug sono stati implementati dei test di regressione.
 
-In particolare, tramite le Github Actions, per ogni pull request aperta vengono rieseguiti tutti i test (anche quelli superati in pull request passate).\
+In particolare, tramite le Github Actions, per ogni #gloss[pull request] aperta vengono rieseguiti tutti i test (anche quelli superati in pull request passate).\
 In caso di fallimento il merge viene bloccato fino a quando tutti i test vengono superati.
 
 
