@@ -21,9 +21,19 @@
   sommario: [Norme di progetto],
 
   versioni: (
+    "1.5.0",
+    "11/05/2025",
+    "Gabriele Magnelli",
+    "Sistemata sezione sviluppo",
+    "Luca Ribon",
+    "1.4.0",
+    "6/05/2025",
+    "Gabriele Magnelli",
+    "Varie migliorie e aggiornamenti",
+    "Luca Ribon",
     "1.3.0",
-    "Luca Rossi",
     "24/04/2025",
+    "Luca Rossi",
     "Aggiunte regole di sviluppo",
     "Gabriele Magnelli",
     "1.2.0",
@@ -55,7 +65,7 @@
     "12/11/2024",
     "Luca Ribon",
     "Correzione del contenuto,
-formattazione e stesura sezione Sviluppo",
+    formattazione e stesura sezione Sviluppo",
     "Luca Rossi",
     "0.4.0",
     "08/01/2025",
@@ -94,10 +104,10 @@ Questo documento ha lo scopo di delineare le principali fasi di sviluppo, i ruol
 Il documento non si limita a fornire una panoramica iniziale ma si propone come un riferimento dinamico, soggetto a revisioni e aggiornamenti continui. Tale approccio incrementale assicura che il contenuto resti sempre aggiornato rispetto alle esigenze del progetto e alle best practices emergenti, consentendo al gruppo di adattarsi rapidamente a nuovi requisiti o cambiamenti contestuali.
 
 == Scopo del prodotto
-Il progetto prevede lo sviluppo di un #gloss[Chatbot] avanzato, basato su modelli linguistici #gloss[LLM] (Large Language Models), pensato per migliorare la comunicazione tra aziende fornitrici e i loro clienti. Questo #gloss[assistente virtuale] permetterà agli utenti di ottenere rapidamente e in modo intuitivo informazioni dettagliate su prodotti o servizi offerti, eliminando la necessità di contattare direttamente l’azienda.
+Il progetto prevede lo sviluppo di un #gloss[Chatbot] avanzato, basato su modelli linguistici #gloss[LLM] (Large Language Models), pensato per migliorare la comunicazione tra aziende fornitrici e i loro clienti. Questo #gloss[assistente virtuale] permetterà agli utenti di ottenere rapidamente e in modo intuitivo informazioni dettagliate su prodotti o servizi offerti, eliminando la necessità di contattare direttamente l'azienda.
 
 
-Il sistema includerà anche un’interfaccia dedicata per le aziende fornitrici, offrendo strumenti per gestire i clienti e i documenti di riferimento che contengono le informazioni necessarie. Questi documenti saranno utilizzati dal modello linguistico per generare risposte personalizzate e accurate, garantendo un’esperienza utente ottimale. L'intero sistema sarà accessibile tramite una #gloss[Webapp], assicurando una gestione efficiente e una fruizione semplice per tutti gli utenti coinvolti.
+Il sistema includerà anche un'interfaccia dedicata per le aziende fornitrici, offrendo strumenti per gestire i clienti e i documenti di riferimento che contengono le informazioni necessarie. Questi documenti saranno utilizzati dal modello linguistico per generare risposte personalizzate e accurate, garantendo un'esperienza utente ottimale. L'intero sistema sarà accessibile tramite una #gloss[Webapp], assicurando una gestione efficiente e una fruizione semplice per tutti gli utenti coinvolti.
 
 == Glossario
 Per agevolare la comprensione del presente documento, è stato predisposto un glossario che spiega il significato dei termini specifici utilizzati nel contesto del progetto. Per facilitare la comprensione, questi termini avranno il seguente stile:
@@ -118,11 +128,11 @@ Le definizioni sono disponibili nel documento Glossario.pdf e possono essere con
 
 - Preventivo costi e impegni:\ #link("https://codehex16.github.io/docs/1%20-%20candidatura/Preventivo-Costi-e-Impegni.pdf") _(versione 0.2.0)_;
 
-- Analisi dei requisiti:\ #link("https://codehex16.github.io/docs/2%20-%20RTB/Analisi-dei-Requisiti.pdf") _(versione 0.9.0)_;
+- Analisi dei requisiti:\ #link("https://codehex16.github.io/docs/3%20-%20PB/Analisi-dei-Requisiti.pdf") _(versione 0.9.0)_;
 
-- Piano di progetto:\ #link("https://codehex16.github.io/docs/2%20-%20RTB/Piano-di-Progetto.pdf") _(versione 0.7.0)_;
+- Piano di progetto:\ #link("https://codehex16.github.io/docs/3%20-%20PB/Piano-di-Progetto.pdf") _(versione 0.7.0)_;
 
-- Piano di Qualifica:\ #link("https://codehex16.github.io/docs/2%20-%20RTB/Piano-di-Qualifica.pdf") _(versione 1.0.0)_;
+- Piano di Qualifica:\ #link("https://codehex16.github.io/docs/3%20-%20PB/Piano-di-Qualifica.pdf") _(versione 1.0.0)_;
 
 - Standard ISO/IEC 12207:1995:\ #link("https://www.math.unipd.it/~tullio/IS-1/2009/Approfondimenti/ISO_12207-1995.pdf") _(ultima consultazione 06-03-2025)_;
 
@@ -132,10 +142,10 @@ Le definizioni sono disponibili nel documento Glossario.pdf e possono essere con
 = Processi primari
 
 == Processo di fornitura
-Il processo di fornitura è strutturato in conformità agli esiti previsti dalla clausola 5.2 dello #gloss[Standard] ISO/IEC 12207:1997. Tale processo include la definizione di requisiti concordati, l’analisi dei rischi associati, e la pianificazione di tempi e costi.
+Il processo di fornitura è strutturato in conformità agli esiti previsti dalla clausola 5.2 dello #gloss[Standard] ISO/IEC 12207:1997. Tale processo include la definizione di requisiti concordati, l'analisi dei rischi associati, e la pianificazione di tempi e costi.
 
 === Scopo e descrizione
-Il processo di fornitura è finalizzato a garantire la realizzazione di un prodotto o servizio che soddisfi i requisiti concordati tra #gloss[Proponente] e #gloss[Committente]. L'accordo tra le parti deve definire in modo chiaro i requisiti, le tempistiche e i costi da rispettare. Prima di stipulare tale accordo, il #gloss[Fornitore] avrà condotto un’analisi dettagliata del progetto proposto, identificando i rischi correlati e stabilendo le linee guida necessarie per gestirli efficacemente.
+Il processo di fornitura è finalizzato a garantire la realizzazione di un prodotto o servizio che soddisfi i requisiti concordati tra #gloss[Proponente] e #gloss[Committente]. L'accordo tra le parti deve definire in modo chiaro i requisiti, le tempistiche e i costi da rispettare. Prima di stipulare tale accordo, il #gloss[Fornitore] avrà condotto un'analisi dettagliata del progetto proposto, identificando i rischi correlati e stabilendo le linee guida necessarie per gestirli efficacemente.
 
 === Attività 
 Il processo di fornitura prevede varie attività:
@@ -156,7 +166,7 @@ Il gruppo CodeHex16 manterrà un dialogo attivo e regolare con il Proponente per
 Il formato testuale è chiaro, ma ci sono metodi di comunicazione che hanno maggiore fluidità e precisione:
 
 I #gloss[Meeting] saranno organizzati con cadenza variabile e fissati tramite e-mail in base alle necessità riscontrate durante lo sviluppo del progetto. Tutti i dettagli discussi durante questi incontri saranno documentati in verbali, con particolare attenzione alle decisioni prese. I verbali saranno disponibili al seguente link:
-#link("https://github.com/CodeHex16/documentazione/tree/main/2%20-%20RTB/verbali/esterni")[Verbali esterni - https://github.com/CodeHex16/documentazione/tree/main/2%20-%20RTB/verbali/esterni]
+#link("https://github.com/CodeHex16/documentazione/tree/main/3%20-%20PB/verbali/esterni")[Verbali esterni - https://github.com/CodeHex16/documentazione/tree/main/2%20-%20RTB/verbali/esterni]
 
 === Documentazione prodotta
 In questa sezione viene illustrata la documentazione prodotta dal gruppo nel processo di fornitura, che sarà messa a disposizione del Proponente, Ergon Informatica, e dei Committenti, i professori Tullio Vardanega e Riccardo Cardin.
@@ -169,14 +179,21 @@ Nel documento #link("https://codehex16.github.io/docs/1%20-%20candidatura/Preven
 
 Probabilmente non va messa qui:
 ==== Analisi dei requisiti
-Nel documento #link("https://codehex16.github.io/docs/2%20-%20RTB/Analisi-dei-Requisiti.pdf")[Analisi dei Requisiti], il gruppo ha definito tutti gli #gloss[Use Case] e i requisiti, frutto di un’attenta analisi del capitolato e della comprensione dell’utilizzo finale del progetto. Il contenuto di questo documento è stato arricchito grazie alle riflessioni svolte con il referente dell’azienda proponente durante gli incontri svolti.
+Nel documento #link("https://codehex16.github.io/docs/3%20-%20PB/Analisi-dei-Requisiti.pdf")[Analisi dei Requisiti], il gruppo ha definito tutti gli #gloss[Use Case] e i requisiti, frutto di un'attenta analisi del capitolato e della comprensione dell'utilizzo finale del progetto. Il contenuto di questo documento è stato arricchito grazie alle riflessioni svolte con il referente dell'azienda proponente durante gli incontri svolti.
 
 ==== Piano di progetto
-Nel documento #link("https://codehex16.github.io/docs/2%20-%20RTB/Piano-di-Progetto.pdf")[Piano di Progetto] è stato pianificato l'avanzamento del progetto suddiviso nei 3 periodi chiave (Candidatura, RTB e PB) con una particolare attenzione agli #gloss[Sprint] settimanali effettuati. Per ognuno è stato descritto il lavoro svolto, il rendiconto delle ore e dei costi in base ai ruoli assegnati. \
+Nel documento #link("https://codehex16.github.io/docs/3%20-%20PB/Piano-di-Progetto.pdf")[Piano di Progetto] è stato pianificato l'avanzamento del progetto suddiviso nei 3 periodi chiave (Candidatura, RTB e PB) con una particolare attenzione agli #gloss[Sprint] settimanali effettuati. Per ognuno è stato descritto il lavoro svolto, il rendiconto delle ore e dei costi in base ai ruoli assegnati. \
 Inoltre è presente una retrospettiva per ogni periodo volto al raggiungimento di una milestone.
 
 ==== Piano di qualifica
-Nel documento #link("https://codehex16.github.io/docs/2%20-%20RTB/Piano-di-Qualifica.pdf ")[Piano di Qualifica] vengono dichiarati gli obiettivi di qualità che il gruppo si prefigge di raggiungere durante lo sviluppo del progetto. Vengono inoltre descritte le metodologie di verifica e validazione adottate per garantire la qualità del prodotto finale, indicando anche le metriche di qualità utilizzate per misurare il grado di soddisfacimento degli obiettivi prefissati.
+Nel documento #link("https://codehex16.github.io/docs/3%20-%20PB/Piano-di-Qualifica.pdf ")[Piano di Qualifica] vengono dichiarati gli obiettivi di qualità che il gruppo si prefigge di raggiungere durante lo sviluppo del progetto. Vengono inoltre descritte le metodologie di verifica e validazione adottate per garantire la qualità del prodotto finale, indicando anche le metriche di qualità utilizzate per misurare il grado di soddisfacimento degli obiettivi prefissati.
+
+==== Specifica tecnica
+Nel documento #link("https://codehex16.github.io/docs/3%20-%20PB/Specifica-Tecnica.pdf ")[Specifica Tecnica] il gruppo descrive e fornisce una panoramica dettagliata delle scelte progettuali e tecniche delle componenti del prodotto sviluppato.
+
+==== Manuale utente
+Nel documento #link("https://codehex16.github.io/docs/3%20-%20PB/Manuale-Utente.pdf ")[Manuale Utente]  il gruppo cerca di fornire una guida per l'utilizzo del prodotto, spiegandone l'installazione, i
+requisiti consigliati per garantire il corretto funzionamento dell'applicazione, le funzionalità principali e le modalità di utilizzo.
 
 === Strumenti utilizzati
 Per lo svolgimento del progetto abbiamo utilizzato i seguenti strumenti:
@@ -258,7 +275,7 @@ Nello specifico la documentazione dovrà prevedere la documentazione dedicata al
 
 Il gruppo ha definito norme precise per il processo di sviluppo del codice, volte a garantire uniformità, qualità e tracciabilità durante tutte le fasi di implementazione.
 
-===== Naming delle branch
+===== Nome delle branch per la parte di codice
 Ogni branch deve essere nominata seguendo la convenzione:
 - *oggettoDellaBranch-utente-sprint*
 dove l'oggetto rappresenta brevemente l'attività svolta, l'utente indica chi ha creato il branch, e sprint si riferisce allo sprint di appartenenza.
@@ -295,16 +312,23 @@ La verifica del software sarà suddivisa in:
   - test di integrazione;
 - *Testing manuale*, eseguito periodicamente per validare i comportamenti complessi non completamente automatizzabili.
 
-===== Stile del codice
+===== Stile e norme della codifica
 Lo stile dei sorgenti seguirà le convenzioni ufficiali delle principali guideline:
 - Per il codice *Python*, si adotterà la nomenclatura indicata in [PEP8](https://peps.python.org/pep-0008/).
 - Per il codice *TypeScript/JavaScript*, si seguiranno le convenzioni del [Google TypeScript Style Guide](https://google.github.io/styleguide/tsguide.html#naming).
 
 La coerenza nello stile favorirà la leggibilità del codice e semplificherà i processi di revisione.
 
+Per quanto riguarda le norme di codifica da seguire vi sono:
+- *Variabili*: si cerca di usare meno variabili globali possibili e i nomi scelti per le variabili devono essere identificativi;
+- *Funzioni*: si preferisce usare un numero di funzioni maggiore, ma più piccole svolgendo uno scopo ben preciso; in questo modo il codice risulta meglio manutenibile e più facilmente testabile;
+- *Indentazione*: per l'indentazione, ein generale per la struttura del codice viene usato il tool *Prettier*;
+- *Commenti*: in generale il codice deve essere scritto in modo chiaro e di facile comprensione, ma in particolare, per tutte le funzioni delle api routes sono commentate con una descrizione,i parametri usati,i valori ritornati e le eccezioni gestite.
+- *Compatibilità*: il codice scritto deve essere compatibile e quindi funzionare correttamente su diversi sistemi operativi e dispositivi;
+- *Gestione delle eccezioni*: le eccezioni e gli eventuali errori che si potrebbero verificare devono essere gestiti correttamente mostrando dove necessario messaggi d'errore;
 
 === Strumenti usati
-- *VS Code*: per la scrittura del codice;
+- *VS Code*:ambiente di sviluppo integrato (IDE) per la scrittura del codice;
 - *Draw.io*: per elaborare i diagrammi #gloss[UML] degli use case individuati durante la fase di analisi dei requisiti;
 
 = Processi di supporto
@@ -369,7 +393,6 @@ Verranno prodotti i seguenti documenti:
 - *Analisi dei Requisiti*;
 - *Piano di Qualifica*;
 - *Manuale Utente*;
-- *Manuale Sviluppatore*;
 - *#gloss[Specifica tecnica]*; 
 - *Glossario*;
 - *Verbali esterni*;
@@ -502,6 +525,11 @@ I test di regressione vengono impiegati per assicurare che la correzione o la mo
 Tali test sono necessari per garantire che le modifiche non compromettano le funzionalità già testate e funzionanti, evitando quindi la comparsa di regressioni nel sistema.
 \ \ *Test di accettazione*\ 
 I test di accettazione devono essere eseguiti insieme al committente al fine di verificare che il prodotto finale rispetti tutti i requisiti richiesti.
+Tutti i test di unità per essere descritti seguono la seguente nomenclatura: *Test_NomeMetodoTestato*.
+Invece gli altri test sono definiti come: *Test_Tipo_OggettoTestato* in cui:
+- Tipo: indica il tipo di test che può essere:
+  - Test d'integrazione;
+  - Test di regressione;
 === Validazione
 La validazione è la verifica ultima per garantire che il prodotto sia in linea con le aspettative e che rispetti i requisiti richiesti e per questo è una fase molto importante nello sviluppo del progetto.
 Questo processo segue il processo di verifica e si sofferma su alcuni aspetti quali:
@@ -588,7 +616,7 @@ Più in particolare quando viene individuato un compito da svolgere vengono eseg
   + altrimenti le issue rimangono aperte e il verificatore suggerisce dei cambiamenti e/o correzioni a carico dell'assegnatario, una volta apportate tali modifiche si torna al punto 3;
 
 === Strumenti usati
-- *Github*: per gestire tutta la documentazione e il codice per il progetto in un repository;;
+- *Github*: per gestire tutta la documentazione e il codice per il progetto in un repository;
 - *GitHub Issue* per assegnare i compiti ad ogni membro avendo un rendiconto preciso dei ruoli e delle ore svolte per ogni sprint;
 - *GitHub Project* per visualizzare in modo più ordinato le issue e i loro dettagli;
 
@@ -649,6 +677,7 @@ Le principali attività del processo di formazione sono:
 - *Github*: per gestire tutta la documentazione e il codice per il progetto in un repository;
 - *Notion*: per organizzare appunti e documenti in modo non ufficiale;
 - *Telegram*: per comunicare in modo veloce con gli altri membri del team;
+// TODO: le metriche vanno riviste, molte probabilmente non sono misurate quindi vanno rimosse
 = Metriche e standard per la qualità
 Per  migliorare e avere uno standard di qualità da cui attingere il gruppo ha deciso di utilizzare degli standard riconosciuti a livello internazionale. 
 Tra quelli disponibili è stato scelto lo standard  ISO/IEC 12207:1995 per quanto riguarda la qualità dei processi principali, organizzativi e di supporto.
@@ -730,7 +759,7 @@ Quindi una metrica avrà come sigla : *MPC/MPD-AcronimoMetrica*.
 - *Valore accettabile*: \u{2264} 105% EC;
 ===== Actual Cost(MPC-AC)
 - *Descrizione*: budget utilizzato fino a quel determinato momento. 
-  Indicatore utile per monitorare l’andamento del progetto e valutare se i costi rispettano le aspettative;
+  Indicatore utile per monitorare l'andamento del progetto e valutare se i costi rispettano le aspettative;
 - *Valore ottimo*: \u{2264} EAC;
 - *Valore accettabile*: \u{2265} 0%;
 ===== Earned Value(MPC-EV)
@@ -831,7 +860,7 @@ Quindi una metrica avrà come sigla : *MPC/MPD-AcronimoMetrica*.
 - *Valore accettabile*: \u{2265} 90%;
 ===== Test Superati in Percentuale(MPC-TSP)
 - *Descrizione*: Indica la proporzione di test automatizzati o manuali che sono stati eseguiti con successo rispetto al totale dei test previsti. 
-  Viene espressa come una percentuale e serve a misurare quanto dell’applicazione in fase di sviluppo è stato verificato con successo tramite i test. 
+  Viene espressa come una percentuale e serve a misurare quanto dell'applicazione in fase di sviluppo è stato verificato con successo tramite i test. 
   Una percentuale alta di test superati indica che il sistema è stabile e che la maggior parte delle funzionalità funzionano come previsto.
   Quindi indica quanti test sono stati superati;
 - *Come calcolarlo*: $"Test Superati in Percentuale" = "Numero di Test Superati" / "Numero Totale di Test" * 100$;
@@ -898,7 +927,7 @@ Quindi una metrica avrà come sigla : *MPC/MPD-AcronimoMetrica*.
 - *Valore accettabile*: \u{2265} 48h;
 ===== Disponibilità Sistema(MPD-DS)
 - *Descrizione*: indica la percentuale di tempo in cui il sistema è operativo. 
-  Un valore alto indica che il sistema è affidabile e che è disponibile per l’utente;
+  Un valore alto indica che il sistema è affidabile e che è disponibile per l'utente;
 - *Come calcolarlo*: $"Disponibilità Sistema" = "MTBF" / "(MTBF+MTTR)"$ dove:
   - *MTBF* = Mean Time Between Failure = tempo medio tra un guasto e il successivo;
   - *MTTR* = Mean Time To Repair = tempo medio di riparazione;
@@ -912,7 +941,7 @@ Quindi una metrica avrà come sigla : *MPC/MPD-AcronimoMetrica*.
 - *Valore ottimo*: \u{2264}5 min;
 - *Valore accettabile*: \u{2264}15 min (utente base);
 ===== Errori Utente/Azione(MPD-EUA)
-- *Descrizione*:indica il numero di errori commessi dagli utenti durante l’utilizzo del prodotto. 
+- *Descrizione*:indica il numero di errori commessi dagli utenti durante l'utilizzo del prodotto. 
   Un valore basso indica che il prodotto è intuitivo e facile da usare.
   Viene calcolato tramite log delle interazioni;
 - *Valore ottimo*: 0;
@@ -930,7 +959,7 @@ Quindi una metrica avrà come sigla : *MPC/MPD-AcronimoMetrica*.
 - *Valore ottimo*: \u{2264} 200 ms;
 - *Valore accettabile*: \u{2264} 500 ms;
 ===== Memoria Processo(MPD-MP)
-- *Descrizione*: indica l’utilizzo della memoria da parte del sistema.
+- *Descrizione*: indica l'utilizzo della memoria da parte del sistema.
   Un valore basso indica che il sistema utilizza in modo efficiente le risorse disponibili;
 - *Valore ottimo*: \u{2264} 256 MB;
 - *Valore accettabile*: \u{2264} 512 MB;
