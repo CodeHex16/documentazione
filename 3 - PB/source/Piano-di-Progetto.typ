@@ -32,7 +32,7 @@
     "17/05/2025",
     "Luca Rossi",
     "Aggiunto sprint 15 e rendicontazione del periodo pb",
-    "Gabriele Magnelli"
+    "Gabriele Magnelli",
     "1.6.0",
     "09/05/2025",
     "Luca Rossi",
