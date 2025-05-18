@@ -28,6 +28,11 @@
   sommario: [Piano di Progetto],
 
   versioni: (
+    "1.7.0",
+    "17/05/2025",
+    "Luca Rossi",
+    "Aggiunto sprint 15 e rendicontazione del periodo pb",
+    "Gabriele Magnelli",
     "1.6.0",
     "09/05/2025",
     "Luca Rossi",
@@ -42,11 +47,10 @@
     "25/04/2025",
     "Francesco Fragonas",
     "Aggiunto sprint 12",
-    "Luca Rossi",
     "1.3.0",
     "18/04/2025",
     "Luca Rossi",
-    "Aggiornata retrospettiva",
+    "Aggiornamento della retrospettiva",
     "Francesco Fragonas",
     "1.2.0",
     "04/04/2025",
@@ -184,7 +188,8 @@ Secondo lo standard ISO/IEC 31000:2009, la gestione dei rischi si articola in ci
   [*Aggiornamento*],
   [Sprint 1: emerse criticità su rotazione dei ruoli troppo rapida. \
     Sprint 2-3: difficoltà nell'uso di GitHub e branch protection, parzialmente risolte. \
-    Sprint 9-10: definita leadership più chiara e sessioni di tutoraggio che hanno migliorato la comunicazione, pur restando margini di miglioramento con più membri in parallelo.],
+    Sprint 9-10: definita leadership più chiara e sessioni di tutoraggio che hanno migliorato la comunicazione, pur restando margini di miglioramento con più membri in parallelo. \
+    Sprint 13-15: migliorato il coordinamento interno attraverso check frequenti in chat e riunioni di allineamento pre-consegna, soprattutto per sincronizzare lo sviluppo e le verifiche.],
 )
 
 #table(
@@ -207,7 +212,8 @@ Secondo lo standard ISO/IEC 31000:2009, la gestione dei rischi si articola in ci
   [*Aggiornamento*],
   [Sprint 1-5: frequente rotazione dei ruoli e scarsa definizione delle stime hanno causato inefficienze. \
     Sprint 6-7: migliorata la durata degli sprint (due settimane) per gestire meglio i compiti. \
-    Sprint 9-10: aggiustata la pianificazione con riunioni più frequenti per rivedere stime e priorità.],
+    Sprint 9-10: aggiustata la pianificazione con riunioni più frequenti per rivedere stime e priorità. \
+    Sprint 14-15: pianificazione più accurata grazie alla consapevolezza del carico documentale e tecnico residuo. La stima delle ore è risultata più vicina alla realtà.],
 )
 
 #table(
@@ -228,7 +234,8 @@ Secondo lo standard ISO/IEC 31000:2009, la gestione dei rischi si articola in ci
   [Concordare una pianificazione flessibile basata sulle disponibilità indicate. In caso di necessità, ridistribuire le attività o posticipare #gloss[task] meno prioritarie.],
 
   [*Aggiornamento*],
-  [Sprint 5-6: festività natalizie e sessione invernale hanno rallentato alcune task. Pianificazione flessibile riduce l'impatto su scadenze.],
+  [Sprint 5-6: festività natalizie e sessione invernale hanno rallentato alcune task. Pianificazione flessibile riduce l'impatto su scadenze. \
+   Sprint 12-13: fine sessione e rientro in periodo accademico regolare hanno migliorato la disponibilità del team.],
 )
 
 #table(
@@ -249,8 +256,10 @@ Secondo lo standard ISO/IEC 31000:2009, la gestione dei rischi si articola in ci
   [Organizzare incontri di chiarimento con i referenti esterni; se necessario, definire scadenze più lunghe per le task.],
 
   [*Aggiornamento*],
-  [Sprint 9: sono emersi equivoci sulle correzioni del prof. Cardin; risolti con un incontro dedicato. Il rischio rimane attivo in PB se arrivano nuove istruzioni.],
+  [Sprint 9: sono emersi equivoci sulle correzioni del prof. Cardin; risolti con un incontro dedicato. Il rischio rimane attivo in PB se arrivano nuove istruzioni. \
+   Sprint 13: chiarito un equivoco sulle modalità di aggiornamento del Piano di Progetto durante un incontro dedicato. Il rischio rimane medio.],
 )
+
 
 == Rischi tecnici
 
@@ -272,7 +281,8 @@ Secondo lo standard ISO/IEC 31000:2009, la gestione dei rischi si articola in ci
   [*Aggiornamento*],
   [Sprint 1-4: si è notato che la rotazione dei ruoli troppo frequente aumentava la confusione. \
     Sprint 5-7: si è stabilizzato l'assegnamento in base alle competenze. \
-    Sprint 8-10: l'inesperienza è ancora un fattore critico, ma sessioni di tutoring hanno limitato i danni.],
+    Sprint 8-10: l'inesperienza è ancora un fattore critico, ma sessioni di tutoring hanno limitato i danni. \
+    Sprint 14-15: l’integrazione API è risultata stabile anche durante i test con carichi simulati.],
 )
 
 #table(
@@ -313,7 +323,8 @@ Secondo lo standard ISO/IEC 31000:2009, la gestione dei rischi si articola in ci
 
   [*Aggiornamento*],
   [Sprint 1-5: alcuni requisiti tecnici (frontend nativo vs webapp) sono stati rivisti senza grossi disagi. \
-    Dopo l'RTB, i requisiti si sono stabilizzati e non sono emersi ulteriori scostamenti.],
+    Dopo l'RTB, i requisiti si sono stabilizzati e non sono emersi ulteriori scostamenti. \
+    Sprint 13: piccolo aggiustamento nella struttura delle FAQ su richiesta del gruppo stesso, gestito senza impatti significativi.],
 )
 
 #table(
@@ -334,7 +345,9 @@ Secondo lo standard ISO/IEC 31000:2009, la gestione dei rischi si articola in ci
   [Revisione dell'architettura prima dello sviluppo avanzato, con correzioni tempestive in caso di problemi.],
 
   [*Aggiornamento*],
-  [Negli Sprint 4, 8 e 10 si è definita o aggiornata l'architettura e svolto un PoC di integrazione. Alcune difficoltà sono emerse nel collegare i moduli (LLM, DB, frontend), ma gestite con successivi refactoring.],
+  [Negli Sprint 4, 8 e 10 si è definita o aggiornata l'architettura e svolto un PoC di integrazione. Alcune difficoltà sono emerse nel collegare i moduli (LLM, DB, frontend), ma gestite con successivi refactoring. \
+  Sprint 11-13: aggiunta di nuove funzionalità (statistiche, storico, gestione preferenze) ha richiesto revisioni parziali ma non critiche all'architettura.],
+  
 )
 
 = Preventivo
@@ -467,6 +480,74 @@ Per affrontare queste criticità, il gruppo ha deciso di attuare le seguenti sol
 - organizzare sessioni periodiche di affiancamento tra membri esperti e meno esperti, al fine di colmare i gap e distribuire meglio il carico.
 
 Queste misure richiederanno uno sforzo aggiuntivo nel breve periodo, ma nel medio-lungo termine dovrebbero ridurre i colli di bottiglia e migliorare la resilienza del gruppo. L'obiettivo è una maggiore omogeneità nelle competenze e una distribuzione più equilibrata dei compiti, così da prevenire ritardi futuri e aumentare l'efficienza complessiva del lavoro.
+
+
+== Rendicontazione PB
+Le seguenti tabelle rappresentano un resoconto delle ore svolte dal gruppo con i relativi costi e delle ore svolte da ogni membro, aggiornate alla fine del periodo PB.
+
+#figure(
+  table(
+    columns: (1.2fr, 0.8fr, 0.8fr, 1fr, 1fr, 1fr),
+    inset: 8pt,
+    align: (x, y) => if (x == 0 and y > 0 and y < 7) { left } else { center + horizon },
+    fill: (x, y) => if (y == 0 or y == 7) { luma(230) },
+    table.header(
+      [*Ruolo*],
+      [*Costo/Ora*],
+      [*Ora/Ruolo*],
+      [#text(maroon)[*Ora/Ruolo Rimanenti*]],
+      [*Totale Ruolo*],
+      [#text(maroon)[*Costo attuale*]],
+    ),
+
+    "Responsabile", "30", "56", [#text(maroon)[0]], "1680", [#text(maroon)[1680]],
+    "Amministratore", "20", "77", [#text(maroon)[0]], "1540", [#text(maroon)[1540]],
+    "Analista", "25", "85,75", [#text(maroon)[3,25]], "2225", [#text(maroon)[2143,75]],
+    "Progettista", "25", "107,95", [#text(maroon)[2,05]], "2750", [#text(maroon)[2698,75]],
+    "Programmatore", "15", "199,05", [#text(maroon)[-0,05]], "2985", [#text(maroon)[2985]],
+    "Verificatore", "15", "107,25", [#text(maroon)[5,75]], "1695", [#text(maroon)[1608,75]],
+    "Totale", "", [*644 h*], [#text(maroon)[*11 h*]], [*€ 12.875*], [#text(maroon)[*€ 12.657*]],
+  ),
+  caption: [
+    Ore e costo per ciascun ruolo aggiornate al termine del periodo PB
+  ],
+)
+
+#figure(
+  table(
+    columns: (2fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr),
+    inset: 8pt,
+    align: (x, y) => if (x == 0 and y > 0) { left } else { center + horizon },
+    fill: (x, y) => if y == 0 or x == 7 { luma(230) },
+    table.header(
+      [*Membro*],
+      [*Resp.*],
+      [*Amm.*],
+      [*Anal.*],
+      [*Proget.*],
+      [*Prog.*],
+      [*Verif.*],
+      [*Totale*],
+    ),
+
+    "Ribon", "8,75", "8", "36,25", "10,2", "17,55", "14,25", "95",
+    "Bazzan", "2", "1", "13", "13,5", "56,5", "9", "95",
+    "Fragonas", "11", "8", "0", "7", "44", "18,45", "91,45",
+    "Magnelli", "9,75", "20,5", "8,5", "14,25", "21,5", "17,5", "92",
+    "Sabbadin", "6,4", "2", "22", "10", "28", "14,5", "91,9",
+    "Rossi", "10,5", "29", "3", "16", "6", "14", "86,1",
+    "Zhuo", "0", "1,5", "0", "35", "25,5", "19,55", "81,55",
+  ),
+  caption: [
+    Ore per ciascun membro del gruppo, suddivise per ruolo, aggiornate al termine del periodo PB
+  ],
+)
+
+Dall’analisi delle attività svolte nel periodo PB, il gruppo ha dimostrato una crescita nella capacità di pianificazione e distribuzione del lavoro, riuscendo a completare tutte le attività previste e rispettare quasi completamente le ore assegnate.
+La gestione condivisa della fase di verifica e il progressivo allineamento delle competenze tecniche hanno ridotto le disomogeneità osservate nel periodo precedente. La percentuale di completamento dei ruoli principali ha superato il 95% in quasi tutti i casi, con una copertura completa per ruoli chiave come Responsabile, Amministratore e Programmatore.
+Nonostante l’avvicinarsi della scadenza e l’intensificarsi delle attività, il team ha mantenuto un buon bilanciamento tra qualità, tempo e carico individuale, sfruttando efficacemente anche le ultime due settimane per colmare i piccoli gap residui.
+Nel complesso, il periodo PB ha evidenziato un miglioramento significativo dell’autonomia e dell’efficienza del gruppo rispetto alla fase RTB.
+
 
 === Aggiornamento preventivo
 Analizzando la retrospettiva del periodo RTB il gruppo ha deciso di rivedere il preventivo iniziale senza però apportare modifiche ad ore e costi totali. \
@@ -1064,11 +1145,9 @@ Sono inoltre state definite e scritte le ultime sezioni delle *Norme di Progetto
 *Intervallo temporale*: 28/04/2025 - 04/05/2025
 
 #pseudoheading[*Retrospettiva*]
-Durante lo *Sprint 14*, il gruppo ha proseguito il completamento delle ultime funzionalità software lato frontend e backend, concentrandosi sull'integrazione definitiva tra frontend e backend e sulla rifinitura dell'interfaccia.  
-Parallelamente è continuato l'aggiornamento dei documenti principali del progetto, con particolare attenzione alla retrospettiva, agli indici e alle sezioni di sviluppo.  
-Sono state completate alcune task legate alla verifica grafica, alla valutazione delle risposte del bot e al testing generale del sistema.
-
-In questo sprint si è verificato un rallentamento dovuto alla difficoltà di alcuni membri del gruppo nell'impegnarsi, per un numero di ore produttive adeguato, per il progetto. Per questo motivo è stata svolta un incontro con il prof. Vardanega dove ognuno ha dichiarato il suo impegno e disponibilità per portare a termina il progetto con una qualità che rispetti le aspettative.
+Durante lo *Sprint 14*, il gruppo ha proseguito il completamento delle ultime funzionalità software lato frontend e backend, concentrandosi sull'integrazione dei moduli e sulla rifinitura dell’interfaccia.  
+Parallelamente è continuato l’aggiornamento dei documenti principali del progetto, con particolare attenzione alla retrospettiva, agli indici e alle sezioni di sviluppo.  
+Sono state completate alcune task legate alla verifica grafica, alla valutazione delle risposte del bot e al testing generale del sistema. 
 
 #pseudoheading[*Attività svolte*]
 - *Aggiornamento documentazione*: Integrazione sezione sviluppo in NdP, aggiornamento PdP, PdQ e AdR.
@@ -1109,3 +1188,67 @@ In questo sprint si è verificato un rallentamento dovuto alla difficoltà di al
   [Zhuo], [29.45],
   [*TOTALE*], [*81.65*],
 )
+
+=== Sprint 15
+*Intervallo temporale*: 29/04/2025 - 19/05/2025
+
+#pseudoheading[*Retrospettiva*]
+Durante lo *Sprint 15*, il gruppo ha concluso l’ultima fase di sviluppo prima della consegna, portando a termine numerose attività sia dal lato documentale che software.  
+Dal punto di vista tecnico sono state completate la gestione dello storico chat, l’integrazione delle statistiche e l’aggiunta di funzionalità mancanti, come la gestione delle preferenze dell’admin, la richiesta della password per modifiche sensibili e la visualizzazione delle FAQ nel contesto conversazionale.  
+Parallelamente è stato migliorato il testing e aggiornato il Piano di Qualifica con dettagli relativi alla copertura, alle suite e ai risultati.  
+Sul fronte documentale si è completata la stesura del *Piano di Progetto*, della *Specifica Tecnica* e del *Manuale Utente*, mentre le attività di verifica sono state suddivise equamente.  
+Lo sprint è stato ben organizzato, con un buon bilanciamento tra il carico tecnico e la chiusura dei documenti, dimostrando una maturità crescente nella gestione del progetto.
+Tutti i membri del gruppo hanno raggiunto le ore minime richieste per il progetto.
+
+#pseudoheading[*Attività svolte*]
+- *Testing e copertura*: Stesura di test unitari e generazione di report con coverage e risultati aggregati.
+- *Statistica e storico*: Completamento delle schermate statistiche frontend e backend, gestione dello storico.
+- *Bugfix e miglioramenti*: Correzione bug residuali (es. no-context), gestione della sicurezza nei form e preferenze.
+- *Finalizzazione PdP e NdP*: Completamento e verifica degli ultimi capitoli, integrazione delle metriche.
+- *Manuale Utente e Specifica Tecnica*: Completamento documenti e verifica.
+- *Verifiche finali*: Controllo incrociato di verbali, documenti e codice, aggiornamento documentazione post-merge.
+
+#pseudoheading[*Ruoli ricoperti e ore svolte*]
+
+#figure(
+  image("../imgs/sprint15-tabella.png", width: 100%),
+  caption: [
+    Suddivisione oraria per membro e ruolo.
+  ],
+)
+
+#figure(
+  image("../imgs/sprint15-grafico.png", width: 100%),
+  caption: [
+    Suddivisione oraria per ruolo con relativi costi.
+  ],
+)
+
+#table(
+  columns: (1fr, 1fr),
+  inset: 8pt,
+  align: (x, y) => if y > 0 { left } else { center + horizon },
+  fill: (x, y) => if y == 0 { luma(180) } else if (y == 2 or y == 4 or y == 6 or y == 8) { luma(230) },
+  table.header(table.cell(colspan: 2)[*Ore rimanenti per persona*]),
+  [*Membro*], [*Ore mancanti*],
+  [Ribon], [-3],
+  [Bazzan], [-3],
+  [Fragonas], [0.55],
+  [Magnelli], [0],
+  [Sabbadin], [0.1],
+  [Rossi], [5.9],
+  [Zhuo], [10.45],
+  [*TOTALE*], [*11*],
+)
+
+
+// == Periodo CA
+// Le documentazione relativa al periodo PB verrà redatta dopo il superamento della RTB.
+
+// #pseudoheading[*Obiettivi principali*]
+
+// - *Validazione finale del prodotto*: Esecuzione di test conclusivi per garantire che il prodotto soddisfi tutti i requisiti.
+// - *Ottimizzazioni finali*: Correzione degli ultimi bug e miglioramento delle prestazioni.
+// - *Aggiornamento dei documenti*: Revisione e completamento della documentazione per la consegna finale.
+// - *Consegna al cliente*: Preparazione e presentazione del prodotto finale.
+// L'obiettivo principale di questo periodo è stato garantire che il prodotto fosse pronto per l'accettazione finale da parte del cliente, con particolare attenzione alla qualità e alla completezza.
