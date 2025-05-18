@@ -7,7 +7,7 @@
   "Luca Ribon",
   "Redattore, Verificatore",
   "Francesco Fragonas",
-  "",
+  "Verificatore",
   "Gabriele Magnelli",
   "Redattore",
   "Filippo Sabbadin",
@@ -17,10 +17,10 @@
   "Yi Hao Zhuo",
   "Verificatore",
 ), sommario: [Piano di qualifica], versioni: (
-  "1.2.0",
+  "2.0.0",
   "06/05/2025",
   "Filippo Sabbadin",
-  "Aggiunta grafici PB nel cruscotto di valutazione delle metriche",
+  "Aggiunta grafici PB nel cruscotto di valutazione delle metriche, aggiunti test unità",
   "Luca Ribon",
   "1.1.0",
   "06/04/2025",
@@ -94,13 +94,13 @@ comprensione e lettura.
 
 - #gloss[Norme di Progetto]
 === Riferimenti informativi
-- Slide T08 - Qualità di processo: #link("https://codehex16.github.io/resources/slides/T8.pdf") _(ultima consultazione 06-03-2025)_;
+- Slide T08 - Qualità di processo: #link("https://codehex16.github.io/resources/slides/T8.pdf") _(ultima consultazione 18-05-2025)_;
 
-- Slide T09 - Verifica e validazione #link("https://codehex16.github.io/resources/slides/T9.pdf") _(ultima consultazione 07-03-2025)_;
+- Slide T09 - Verifica e validazione #link("https://codehex16.github.io/resources/slides/T9.pdf") _(ultima consultazione 18-05-2025)_;
 
 - Glossario:
   - Documento: #link("https://codehex16.github.io/docs/glossario/glossario.pdf") _(versione 1.0.0)_;
-  - Pagina web: #link("https://codehex16.github.io/glossario.html") _(ultima consultazione 07-03-2025)_;
+  - Pagina web: #link("https://codehex16.github.io/glossario.html") _(ultima consultazione 18-05-2025)_;
 
 = Metriche di qualità
 
@@ -468,7 +468,6 @@ $ ("numero di istruzioni eseguite") / ("numero di istruzioni totali nel codice")
 
 = Metodologie di testing
 == Tipologie di test
-// TODO: sistemare lo stato di completamento dei test nelle tabelle sotto
 Per garantire la qualità del prodotto, il team CodeHex16 ha deciso di verificare il prodotto attraverso diverse
 tipologie di test.
 
@@ -477,9 +476,10 @@ un numero progressivo.
 
 Le tipologie di test utilizzate sono:
 - Test di Unità: TU-XXX
-- Test di Integrazione: TI-XXX
+//- Test di Integrazione: TI-XXX
 - Test di Sistema: TS-XXX
 - Test di Accettazione: TA-XXX
+- Test di Regressione
 
 Per ogni test viene specificato lo *stato* di completamento, che può essere:
 - Superato
@@ -487,54 +487,394 @@ Per ogni test viene specificato lo *stato* di completamento, che può essere:
 - Fallito
 - Non implementato
 
-Nella seguente versione del documento, dedicata all'#gloss[RTB], è prevista la definizione di Test di Sistema e Test di
-Accettazione.
+Nella versione del documento precedente, dedicata all'#gloss[RTB], era prevista la definizione di Test di Sistema e Test
+di Accettazione. Nella versione aggiornata, dedicata alla #gloss[PB], sono state aggiunte le definizioni di Test di
+Unità e Test di Regressione.
 
-// === Test di Unità
-// I test di unità sono utilizzati per verificare il corretto funzionamento delle singole componenti del software. Vengono
-// scritti dai programmatori e sono eseguiti in modo automatico. Gli strumenti utilizzati per i test di unità sono `pytest` e `vitest`.
+=== Test di Unità
+I test di unità sono utilizzati per verificare il corretto funzionamento delle singole componenti del software. Vengono
+scritti dai programmatori e sono eseguiti in modo automatico. Gli strumenti utilizzati per i test di unità sono `pytest` e `vitest`. \
+La code coverage finale garantita dai test di unità è pari al 93%. \
 
-// Esempi applicati al progetto:
-
-// #figure(caption: [Esempi di unit test], table(
-//   columns: (auto, auto, auto),
-//   inset: 8pt,
-//   align: (x, y) => if (x == 0 and y > 0 and y < 7) { left } else { center + horizon },
-//   fill: (x, y) => if (y == 0) { luma(230) },
-//   table.header([*Codice*], [*Descrizione*], [*Stato*]),
-//   "TU-001",
-//   "Verifica del parsing delle credenziali durante il login",
-//   "Superato",
-//   "TU-002",
-//   "Test generazione risposta #gloss[LLM] con input validi/invalidi",
-//   "Non implementato",
-//   "TU-003",
-//   "Controllo formati logo supportati (PNG, JPG, SVG)",
-//   "Superato",
-// ))
-
-// === Test di Integrazione
-// I test di integrazione sono utilizzati per validare l’interazione tra moduli e servizi. Vengono scritti dai
-// programmatori e sono eseguiti in modo automatico. Lo strumento utilizzato per i test di integrazione è `Postman`.
-
-// Esempi applicati al progetto:
-
-// #figure(caption: [Esempi di test di integrazione], table(
-//   columns: (auto, auto, auto),
-//   inset: 8pt,
-//   align: (x, y) => if (x == 0 and y > 0 and y < 7) { left } else { center + horizon },
-//   fill: (x, y) => if (y == 0) { luma(230) },
-//   table.header([*Codice*], [*Descrizione*], [*Stato*]),
-//   "TI-001",
-//   "Integrazione modulo autenticazione con database utenti",
-//   "Superato",
-//   "TI-002",
-//   "Comunicazione tra #gloss[frontend] e API di generazione risposte LLM",
-//   "Superato",
-//   "TI-003",
-//   "Verifica sincronizzazione impostazioni tema (dark/light mode) su più dispositivi",
-//   "Non Implementato",
-// ))
+Esempi applicati al progetto:
+#show figure: set block(breakable: true)
+#figure(caption: [Esempi di unit test], table(
+  columns: (auto, auto, auto),
+  inset: 8pt,
+  align: (x, y) => if (x == 0 and y > 0 and y < 7) { left } else { center + horizon },
+  fill: (x, y) => if (y == 0) { luma(230) },
+  table.header([*Codice*], [*Descrizione*], [*Stato*]),
+  //test_database.py
+  "TU-001",
+  "Test lancio errore se la connessione al database fallisce",
+  "Superato",
+  "TU-002",
+  "Test connessione al database in caso di successo",
+  "Superato",
+  //test_schemas.py
+  "TU-003",
+  "Test che una lista di e-mail passi una validazione",
+  "Superato",
+  "TU-004",
+  "Test che una mail non valida fallisca la validazione",
+  "Superato",
+  "TU-005",
+  "Test sull'accettazione di un'email vuota",
+  "Superato",
+  "TU-006",
+  "Test sul lancio di un errore nel caso in cui il campo di inserimento dell'email sia vuoto",
+  "Superato",
+  "TU-007",
+  "Test sul corretto aggiornamento della password",
+  "Superato",
+  "TU-008",
+  "Test sul fallimento del cambio di una password non valida",
+  "Superato",
+  "TU-009",
+  "Test sul lancio di un errore nel caso in cui il campo di inserimento della password sia vuoto",
+  "Superato",
+  "TU-010",
+  "Test su varie password valide e non valide con lo schema regex",
+  "Superato",
+  "TU-011",
+  "Test sul rifiuto di titoli FAQ troppo lunghi",
+  "Superato",
+  "TU-012",
+  "Test sulla corretta lunghezza di un titolo di una FAQ",
+  "Superato",
+  "TU-013",
+  "Test sull'aggiornamento di una FAQ",
+  "Superato",
+  "TU-014",
+  "Test sul rifiuto di aggiornamento di una FAQ nel caso il titolo sia troppo lungo",
+  "Superato",
+  //test_utils.py
+  "TU-015",
+  "Test sul corretto funzionamento dell'hashing della password",
+  "Superato",
+  "TU-016",
+  "Test sul controllo di password corrette e non corrette",
+  "Superato",
+  "TU-017",
+  "Test sulla generazione dello stesso UUID3 per lo stesso input e UUID3 diversi per input diversi",
+  "Superato",
+  "TU-018",
+  "Test sulla generazione dello stesso ObjectId per lo stesso input e ObjectId diversi per input diversi",
+  "Superato",
+  "TU-019",
+  "Test sul ritorno del fuso orario corretto",
+  "Superato",
+  //test_chat_repository.py
+  "TU-020",
+  "Test sul ritorno di una lista chat in base all'email di un utente",
+  "Superato",
+  "TU-021",
+  "Test sul ritorno di una chat in base all'ID",
+  "Superato",
+  "TU-022",
+  "Test sull'inizializzazione di una nuova chat per un utente",
+  "Superato",
+  "TU-023",
+  "Test sull'eliminazione di una chat tramite l'ID della chat e l'email dell'utente",
+  "Superato",
+  "TU-024",
+  "Test sull'aggiornamento chat tramite chat ID",
+  "Superato",
+  "TU-025",
+  "Test invio messaggio nella chat",
+  "Superato",
+  "TU-026",
+  "Test aggiornamento nome chat",
+  "Superato",
+  "TU-027",
+  "Test aggiornamento del rating di un messaggio del bot",
+  "Superato",
+  //test_document_repository.py
+  "TU-028",
+  "Test sul ritorno di tutti i documenti",
+  "Superato",
+  "TU-029",
+  "Test sull'inserimento corretto dei documenti",
+  "Superato",
+  "TU-030",
+  "Test lancio errore nell'inserimento di documenti non corretti",
+  "Superato",
+  "TU-031",
+  "Test sulla gestione corretta delle chiavi duplicate dei documenti",
+  "Superato",
+  "TU-032",
+  "Test sull'eliminazione di un documento avvenuta con successo",
+  "Superato",
+  "TU-033",
+  "Test sullla gestione corretta di errori durante l'eliminazione di un documento",
+  "Superato",
+  //test_faq_repository.py
+  "TU-034",
+  "Test sul rtiorno di tutte le FAQ",
+  "Superato",
+  "TU-035",
+  "Test sul ritorno di una FAQ in base all'ID",
+  "Superato",
+  "TU-036",
+  "Test sulla gestione di errori durante il ritorno di una FAQ",
+  "Superato",
+  "TU-037",
+  "Test sul corretto inserimento di FAQ",
+  "Superato",
+  "TU-038",
+  "Test sulla corretta gestione di chiavi duplicate durante l'inserimento di una FAQ",
+  "Superato",
+  "TU-039",
+  "Test sulla gestione di errori durante l'inserimento di una FAQ",
+  "Superato",
+  "TU-040",
+  "Test aggiornamento di una FAQ",
+  "Superato",
+  "TU-041",
+  "Test che non avvenga un aggiornamento nel caso la FAQ non venga cambiata",
+  "Superato",
+  "TU-042",
+  "Test sul lancio di un errore nel caso l'aggiornamento di una FAQ non venga trovato",
+  "Superato",
+  "TU-043",
+  "Test sul lancio di un errore nel caso la FAQ non venga modificata",
+  "Superato",
+  "TU-044",
+  "Test sulla corretta gestione di errori durante l'aggiornamento di una FAQ",
+  "Superato",
+  "TU-045",
+  "Test sull'eliminazione di una FAQ",
+  "Superato",
+  "TU-046",
+  "Test sulla corretta gestione degli errori durante l'eliminazione di una FAQ",
+  "Superato",
+  //test_user_repository.py
+  "TU-047",
+  "Test sul ritorno di tutti gli utenti",
+  "Superato",
+  "TU-048",
+  "Test sul ritorno di un utente in base all'indirizzo email",
+  "Superato",
+  "TU-049",
+  "Test creazione di un nuovo utente test",
+  "Superato",
+  "TU-050",
+  "Test sull'inserimento di un nuovo utente test",
+  "Superato",
+  "TU-051",
+  "Test sulla corretta gestione di errori durante l'inserimento di un nuovo utente",
+  "Superato",
+  "TU-052",
+  "Test aggiunta di un admin test",
+  "Superato",
+  "TU-053",
+  "Test sulla gestione errori per l'aggiunta di un admin test ",
+  "Superato",
+  "TU-054",
+  "Test sul ritorno di un utente test",
+  "Superato",
+  "TU-055",
+  "Test sul ritorno di un admin test",
+  "Superato",
+  "TU-056",
+  "Test sull'eliminazione di un utente",
+  "Superato",
+  "TU-057",
+  "Test sulla gestione errori per l'eliminazione di un utente",
+  "Superato",
+  "TU-058",
+  "Test lancio di di un errore se l'utente eliminato non esiste",
+  "Superato",
+  "TU-059",
+  "Test sul corretto aggiornamento di un utente",
+  "Superato",
+  "TU-060",
+  "Test sull'aggiornamento utente senza cambiare password",
+  "Superato",
+  "TU-061",
+  "Test sulla gestione di errori durante l'aggiornamento di un utente",
+  "Superato",
+  "TU-062",
+  "Test lancio di un errore se non vengono dati cambiamenti all'aggiornamento di un utente",
+  "Superato",
+  "TU-063",
+  "Test lancio di un errore se l'utente non viene modificato",
+  "Superato",
+  //test_auth.py
+  "TU-064",
+  "Test sull'inizializzazione dell'utente in caso di successo",
+  "Superato",
+  "TU-065",
+  "Test sulla corretta gestione di un token non valido durante l'inizializzazione utente",
+  "Superato",
+  "TU-066",
+  "Test sulla corretta gestione di errori durante l'inizializzazione utente",
+  "Superato",
+  "TU-067",
+  "Test sulla corretta gestione di errori JWT durante l'inizializzazione utente",
+  "Superato",
+  "TU-068",
+  "Test sulla creazione del token",
+  "Superato",
+  "TU-069",
+  "Test sulla creazione di token senza scadenza/expiration",
+  "Superato",
+  "TU-070",
+  "Test sulla verifica token",
+  "Superato",
+  "TU-071",
+  "Test sul lancio di un errore se il token non presenta un'email",
+  "Superato",
+  "TU-072",
+  "Test sul lancio di un errore se il token ha uno scope non sufficiente",
+  "Superato",
+  "TU-073",
+  "Test sulla corretta gestione di errori JWT durante la verifica del token",
+  "Superato",
+  "TU-074",
+  "Test sulla verifica utente in base al token",
+  "Superato",
+  "TU-075",
+  "Test sulla verifica admin in base al token",
+  "Superato",
+  "TU-076",
+  "Test login con token di accesso in caso di successo",
+  "Superato",
+  //test_chat.py
+  "TU-077",
+  "Test creazione chat",
+  "Superato",
+  "TU-078",
+  "Test lancio errore se nessun alla creazione di una chat non si ha un'email",
+  "Superato",
+  "TU-079",
+  "Test sul ritorno di una chat quando non ne esiste nessuna",
+  "Superato",
+  "TU-080",
+  "Test sul lancio di un errore se non si ha chat ed email",
+  "Superato",
+  "TU-081",
+  "Test sul cambio titolo chat",
+  "Superato",
+  "TU-082",
+  "Test sul lancio di un errore se la chat da cambiare il titolo non viene trovata",
+  "Superato",
+  "TU-083",
+  "Test sull'eliminazione di una chat",
+  "Superato",
+  "TU-084",
+  "Test sul lancio di un errore se la chat da eliminare non esiste",
+  "Superato",
+  "TU-085",
+  "Test sull'aggiunta di un messaggio alla chat",
+  "Superato",
+  "TU-086",
+  "Test sul lancio di un errore se il messaggio non viene trovato",
+  "Superato",
+  "TU-087",
+  "Test rating messaggio",
+  "Superato",
+  "TU-088",
+  "Test sul lancio di un errore se il messaggio da cambiare il rating non viene trovato",
+  "Superato",
+  //test_document.py
+  "TU-089",
+  "Test sul caricamento di un documento",
+  "Superato",
+  "TU-090",
+  "Test sulla corretta gestione di docuemnti duplicati",
+  "Superato",
+  "TU-091",
+  "Test sulla corretta gestione degli errori durante il caricamento di un documento",
+  "Superato",
+  "TU-092",
+  "Test sul ritorno dei documenti",
+  "Superato",
+  "TU-093",
+  "Test sulla cancellazione dei documenti",
+  "Superato",
+  "TU-094",
+  "Test sul lancio di un errore se l'utente che cancella il documento non è valido",
+  "Superato",
+  "TU-095",
+  "Test sul lancio di un errore se l'eliminazione del documento non va a buon fine",
+  "Superato",
+  "TU-096",
+  "Test sul lancio di un errore se il numero di documenti non è corretto",
+  "Superato",
+  "TU-097",
+  "Test sulla corretta gestione di eccezioni durante l'eliminazione di un documento",
+  "Superato",
+  //test_faq.py
+  "TU-098",
+  "Test sulla creazione di una FAQ",
+  "Superato",
+  "TU-099",
+  "Test sulla corretta gestione di FAQ duplicate",
+  "Superato",
+  "TU-100",
+  "Test sulla corretta getione di errori durante la creazione di una FAQ",
+  "Superato",
+  "TU-101",
+  "Test sul ritorno di una FAQ",
+  "Superato",
+  "TU-102",
+  "Test sul lancio di un errore se la FAQ non viene trovata",
+  "Superato",
+  "TU-103",
+  "Test sull'aggiornamento di una FAQ",
+  "Superato",
+  "TU-104",
+  "Test sulla corretta gestione di FAQ duplicate durante un aggiornamento",
+  "Superato",
+  "TU-105",
+  "Test sulla corretta gestione di errori durante l'aggiornamento di una FAQ",
+  "Superato",
+  "TU-106",
+  "Test sull'eliminazione di una chat",
+  "Superato",
+  "TU-107",
+  "Test sul lancio di un errore se l'utente non è valido per l'eliminazione di una FAQ",
+  "Superato",
+  "TU-108",
+  "Test sul lancio di un errore se l'eliminazione di una FAQ fallisce",
+  "Superato",
+  "TU-109",
+  "Test sulla corretta gestione di eccezioni durante l'eliminazione di una FAQ",
+  "Superato",
+  //test_user.py
+  "TU-110",
+  "Test sul ritoro utenti",
+  "Superato",
+  "TU-111",
+  "Test sulla corretta gestione di errori quando non esistono utenti",
+  "Superato",
+  "TU-112",
+  "Test sul ritorno dell'utente attuale",
+  "Superato",
+  "TU-113",
+  "Test sul lancio di un errore se il ritorno dell'utente attuale fallisce",
+  "Superato",
+  "TU-114",
+  "Test sull'aggiornamento di un utente",
+  "Superato",
+  "TU-115",
+  "Test sulla corretta gestione di dati utente duplicati durante l'aggiornamento utente",
+  "Superato",
+  "TU-116",
+  "Test sulla corretta gestione di errori durante l'aggiornamento di un utente",
+  "Superato",
+  "TU-117",
+  "Test sul lancio di un errore se non vengono fatte modifiche durante l'aggiornamento utente",
+  "Superato",
+  "TU-118",
+  "Test sull'eliminazione utente",
+  "Superato",
+  //test_mail_service.py
+  "TU-119",
+  "Test che il servizio mail chiami il metodo coretto per inviare una mail",
+  "Superato",
+))
 
 === Test di Sistema
 I test di sistema sono utilizzati per verificare il comportamento del sistema rispetto ai requisiti funzionali. Vengono
@@ -551,162 +891,201 @@ Esempi applicati al progetto:
     align: (x, y) => if (x == 0 and y > 0 and y < 7) { left } else { center + horizon },
     fill: (x, y) => if (y == 0) { luma(230) },
     table.header([*Codice*], [*Descrizione*], [*ID Requisito*], [*Stato*]),
+    // login
     "TS-001",
     "Verificare che l'utente possa fare il login per accedere alla piattaforma",
     "R-01-F-O",
-    "Non Implementato",
+    "Superato",
+    // primo login fornitore
     "TS-002",
     "Verificare che il fornitore debba cambiare la password al primo accesso",
     "R-02-F-O",
-    "Non Implementato",
+    "Superato",
+    // primo login cliente
     "TS-003",
     "Verificare che il cliente debba cambiare la password al primo accesso",
     "R-03-F-O",
-    "Non implementato",
+    "Superato",
+    // modifica password
     "TS-004",
     "Verificare che sia cliente che fornitore possano cambiare password",
     "R-04-F-O",
-    "Non Implementato",
+    "Superato",
+    // resta connesso
     "TS-005",
     "Verificare che un utente non autenticato possa scegliere se reinserire le credenziali ad ogni accesso o se rimanere autenticato",
     "R-05-F-D",
-    "Non Implementato",
+    "Superato",
+    // recupero password
     "TS-006",
     "Verificare che un utente non autenticato possa recuperare la password dimenticata",
     "R-06-F-O",
-    "Non Implementato",
+    "Superato",
+    // errore email
     "TS-007",
     "Verificare che l'utente sia notificato in caso di errore nell'inserimento dell'e-mail",
     "R-07-F-O",
-    "Non Implementato",
+    "Superato",
+    // errore password
     "TS-008",
     "Verificare che l'utente sia notificato in caso di errore nell'inserimento della password",
     "R-08-F-O",
-    "Non Implementato",
+    "Superato",
+    // logout
     "TS-009",
     "Verificare che sia cliente che fornitore possano effettuare il logout",
     "R-09-F-O",
-    "Non Implementato",
+    "Superato",
+    // visualizzazione lista chat
     "TS-010",
     "Verificare che sia cliente che fornitore possano visualizzare la lista di tutte le chat",
     "R-10-F-O",
-    "Non Implementato",
+    "Superato",
+    // creazione nuova chat
     "TS-011",
     "Verificare che sia cliente che fornitore possano creare una nuova chat",
     "R-11-F-O",
-    "Non Implementato",
+    "Superato",
+    // modifica titolo chat
     "TS-012",
     "Verificare che sia cliente che fornitore possano modificare il titolo di una chat esistente",
     "R-12-F-D",
-    "Non Implementato",
+    "Non superato",
+    // apertura chat singola
     "TS-013",
     "Verificare che sia cliente che fornitore possano aprire una chat singola dalla lista",
     "R-13-F-O",
-    "Non Implementato",
+    "Superato",
+    // scrittura messaggio
     "TS-014",
     "Verificare che sia cliente che fornitore possano scrivere messaggi al chatbot",
     "R-14-F-O",
-    "Non Implementato",
+    "Superato",
+    // scrittura messaggio troppo lungo
     "TS-015",
     "Verificare che l'utente sia avvisato quando il messaggio è troppo lungo",
     "R-15-F-O",
-    "Non Implementato",
+    "Superato",
+    // scrittura messaggio tramite FAQ
     "TS-016",
     "Verificare che sia cliente che fornitore possano utilizzare FAQ preimpostate",
     "R-16-F-O",
-    "Non Implementato",
+    "Superato",
+    // messaggio
     "TS-017",
     "Verificare che sia cliente che fornitore possano inviare i messaggi scritti al chatbot",
     "R-17-F-O",
-    "Non Implementato",
+    "Superato",
+    // ricezione risposta
     "TS-018",
     "Verificare che sia cliente che fornitore ricevano risposta dal chatbot con feedback durante l'elaborazione",
     "R-18-F-O",
-    "Non Implementato",
+    "Superato",
+    // valutazione risposta
     "TS-019",
     "Verificare che il cliente possa valutare la risposta ricevuta con pollice su/giù",
     "R-19-F-O",
-    "Non Implementato",
+    "Superato",
+    // eliminazione chat
     "TS-020",
     "Verificare che sia cliente che fornitore possano eliminare una chat esistente",
     "R-20-F-O",
-    "Non Implementato",
+    "Superato",
+    // dark/light mode
     "TS-021",
     "Verificare che l'utente possa scegliere tra tema scuro e tema chiaro dell'interfaccia",
     "R-21-F-D",
-    "Non Implementato",
+    "Superato",
+    // modifica durata storico chat
     "TS-022",
     "Verificare che il fornitore possa modificare la durata dello storico delle chat",
     "R-22-F-O",
-    "Non Implementato",
+    "Superato",
+    // caricare logo
     "TS-023",
     "Verificare che il fornitore possa caricare il proprio logo per personalizzare l'interfaccia",
     "R-23-F-D",
-    "Non Implementato",
+    "Superato",
+    // palette colori
     "TS-024",
     "Verificare che il fornitore possa cambiare i colori principali dell'interfaccia",
     "R-24-F-D",
-    "Non Implementato",
+    "Superato",
+    // statistiche domanda risposta
     "TS-025",
     "Verificare che il fornitore possa visualizzare statistiche sulle interazioni con il chatbot",
     "R-25-F-D",
-    "Non Implementato",
+    "Superato",
+    // filtri visualizzazione
     "TS-026",
     "Verificare che il fornitore possa filtrare le statistiche visualizzate",
     "R-26-F-D",
-    "Non Implementato",
+    "Non superato",
+    // aggiunta account cliente
     "TS-027",
     "Verificare che il fornitore possa aggiungere account clienti",
     "R-27-F-O",
-    "Non Implementato",
+    "Superato",
+    // inserimento account già esistente
     "TS-028",
     "Verificare che il fornitore sia avvisato se sta aggiungendo un account già esistente",
     "R-28-F-O",
-    "Non Implementato",
+    "Superato",
+    // eliminazione account già esistente
     "TS-029",
     "Verificare che il fornitore possa eliminare un account cliente previa autenticazione con password",
     "R-29-F-O",
-    "Non Implementato",
+    "Superato",
+    // inserimento documenti aziendali
     "TS-030",
     "Verificare che il fornitore possa inserire documenti aziendali per fornire contesto al chatbot",
     "R-30-F-O",
-    "Non Implementato",
+    "Superato",
+    // formato file non valido
     "TS-031",
     "Verificare che il fornitore venga avvisato se il file caricato non è in un formato valido",
     "R-31-F-O",
-    "Non Implementato",
+    "Superato",
+    // visualizzazione documenti aziendali
     "TS-032",
     "Verificare che il fornitore possa visualizzare la lista dei documenti aziendali caricati",
     "R-32-F-O",
-    "Non Implementato",
+    "Superato",
+    // eliminazione documento aziendale
     "TS-033",
     "Verificare che il fornitore possa eliminare documenti aziendali previa autenticazione con password",
     "R-33-F-O",
-    "Non Implementato",
+    "Superato",
+    // aggiunta FAQ
     "TS-034",
     "Verificare che il fornitore possa aggiungere FAQ nella piattaforma",
     "R-34-F-O",
-    "Non Implementato",
+    "Superato",
+    // visualizzazione FAQ
     "TS-035",
     "Verificare che il fornitore possa visualizzare la lista delle FAQ inserite",
     "R-35-F-O",
-    "Non Implementato",
+    "Superato",
+    // modifica FAQ
     "TS-036",
     "Verificare che il fornitore possa modificare le FAQ esistenti",
     "R-36-F-O",
-    "Non Implementato",
+    "Superato",
+    // eliminazione FAQ
     "TS-037",
     "Verificare che il fornitore possa eliminare FAQ previa autenticazione con password",
     "R-37-F-O",
-    "Non Implementato",
+    "Superato",
+    // sistema non raggiungibile
     "TS-038",
     "Verificare che l'utente sia avvisato quando il sistema non è raggiungibile",
     "R-38-F-O",
-    "Non Implementato",
+    "Superato",
+    // invio richiesta con dati mancanti o errati
     "TS-039",
     "Verificare che l'utente sia avvisato quando invia richieste con dati mancanti o errati",
     "R-39-F-O",
-    "Non Implementato",
+    "Superato",
   ),
 )
 
@@ -727,43 +1106,48 @@ Esempi applicati al progetto:
     table.header([*Codice*], [*Descrizione*], [*Stato*]),
     "TA-001",
     "Verificare le meccaniche di login e che distinguano gli utenti tra Cliente e Fornitore",
-    "Non Implementato",
+    "Superato",
     "TA-002",
     "Verificare la possibilità di comunicare con il chatbot tramite più chat separate tra di loro, sia come Cliente che come Fornitore",
-    "Non Implementato",
+    "Superato",
     "TA-003",
     "Verificare la possibilità di usare domande preimpostate durante la comunicazione con il chatbot",
-    "Non Implementato",
+    "Superato",
     "TA-004",
     "Verificare la possibilità di gestire le chat sia come Cliente che come Fornitore",
-    "Non Implementato",
+    "Superato",
     "TA-005",
     "Verificare la possibilità di valutare le risposte del chatbot, sia come Cliente che come Fornitore",
-    "Non Implementato",
+    "Superato",
     "TA-006",
     "Verificare che il fornitore possa personalizzare l'interfaccia della piattaforma",
-    "Non Implementato",
+    "Superato",
     "TA-007",
     "Verificare che il fornitore possa gestire gli account dei clienti",
-    "Non Implementato",
+    "Superato",
     "TA-008",
     "Verificare che il fornitore possa gestire dei documenti aziendali per fornire contesto al chatbot e le FAQ preimpostate",
-    "Non Implementato",
+    "Superato",
     "TA-009",
     "Verificare che il fornitore possa visualizzare e filtrare le statistiche sulle interazioni con il chatbot",
-    "Non Implementato",
+    "Superato",
     "TA-010",
     "Verificare che la piattaforma gestisca errori di funzionamento o utilizza da parte degli utenti in modo elegante",
-    "Non Implementato",
+    "Superato",
   ),
 )
+
+=== Test di Regressione
+Per evitare che le modifiche al codice introducano nuovi bug sono stati implementati dei test di regressione.
+
+In particolare, tramite le Github Actions, per ogni pull request aperta vengono rieseguiti tutti i test (anche quelli superati in pull request passate).\
+In caso di fallimento il merge viene bloccato fino a quando tutti i test vengono superati.
 
 
 = Cruscotto di valutazione delle metriche
 
 == MPC-EAC(Estimated At Completion)
 === RTB
-// TODO: probabilmente va sistemato dopo aver aggiornato le ore preventivate
 #figure(image("../imgs/SwePdQBacEac.png", width: 100%), caption: [
   Stima del costo totale durante i vari #gloss[sprint].
 ])
@@ -780,7 +1164,6 @@ periodi in cui avevamo bisogno di ore aggiuntive per il ruolo di verificatore.
 Durante la fase PB, il costo preventivato è rimasto invariato mentre le stime del costo totale sono state più stabili. 
 
 == MPC-EV(Estimated Value) - MPC-PV(Planned Value)
-// TODO: probabilmente va sistemato dopo aver aggiornato le ore preventivate
 === RTB
 #figure(image("../imgs/SwePdQEvPv.png", width: 100%), caption: [
   Stima dei valori di PV e EV durante i vari sprint.
@@ -799,7 +1182,6 @@ file, risolto usando la funzione dei branch di Git. Questo ha portato a un aumen
 durante il periodo di vacanze pasquali, è stato riscontrato una riduzione del lavoro rispetto a quello stimato.
 
 == MPC-AC(Actual Cost) - MPC-ETC(Estimated To Completion)
-// TODO: probabilmente va sistemato dopo aver aggiornato le ore preventivate
 === RTB
 #figure(image("../imgs/SwePdQAcEtcBac.png", width: 100%), caption: [
   Stima dei valori di AC e ETC durante i vari sprint.
@@ -891,9 +1273,12 @@ Requisiti e questo è causato dalla specificità degli argomenti trattati e dal 
 documenti l'indice Gulpease è sopra l'ottimo per la maggior parte degli sprint.
 
 === PB
-//Mettere il grafico
+#figure(image("../imgs/SwePdQGulpeasePB.png", width: 100%), caption: [
+  Stima dei valori dell'indice Gulpease per ogni documento durante i vari sprint.
+])
 Durante la fase PB, l'indice è rimasto abbastanza stabile e non vi sono stati cambiamenti sostanziali per i documenti
-già esistenti. Invece per i documenti nuovi, si può vedere una maggiore instabilità.
+già esistenti. Invece per i documenti nuovi, cioè Specifica Tecnica (ST) e Manuale Utente (MU), si può vedere una
+maggiore instabilità.
 
 
 == MPC-Non-Calculated-Risk
@@ -978,6 +1363,14 @@ dove "TIPO" sarà:
     "Inizio progetto",
     "Inizialmente venivano inserite nella branch main (principale) modifiche che presentavano errori, spesso a causa della mancanza di verifica",
     "Il problema è stato risolto attraverso l'utilizzo di branch protection, che controlla se il verificatore ha approvato le modifiche, se la tabella delle versioni è correttamente compilata e se il codice sorgente del documento compila correttamente",
+    "OPI-07",
+    "Fase PB",
+    "Durate la fase PB, soprattutto nella fase finale, alcuni membri del gruppo hanno avuto difficoltà a maturare le ore produttive necessarie per portare a completamento il progetto",
+    "Durante diversi incontri, tra cui uno con il professore Vardanega, è stata analizzata la situazione di ogni membro riguardo alle ore produttive svolte e si è stimato il tempo e il lavoro necessario per completare il progetto. Successivamente ogni membro si è impegnato a completare le ore mancanti, mantenendo comunque un buon livello di qualità",
+    "OPI-08",
+    "Fase PB",
+    "Durante la fase PB, dove la maggior parte della codifica ha luogo, si è riscontrata una difficoltà nel tenere aggiornati tutti i membri con i progressi e le scelte relative al codice prese",
+    "Per risolvere il problema si è deciso di aggiornare periodicamente tutto il gruppo riguardo progressi e scelte e di lavorare maggiormente in piccoli gruppi, in modo sincrono, soprattutto per svolgere attività dove modifiche, scelte e discussioni sono necessarie",
   ),
 )
 
@@ -1035,39 +1428,3 @@ dove "TIPO" sarà:
     "Nella nuova versione è stato modificato un tag usato per creare le tabelle nei documenti, è bastato aggiungere un altro tag insieme a quello usato",
   ),
 )
-/*
-= Cruscotto sulle misure di automiglioramento
-//presentare o grafici, screenshots o qualsiasi cosa che possa mostrare i miglioramenti ottenuti
-== OPI-01 (Pianificazione riunioni con tutti i membri)
-#figure(
-  text("grafico con numero di membri durante le riunioni,  dati si potrebbero prendere dai verbali"),
-  caption: "grafico",
-)
-== OPI-02 (Pianificazione ore di lavoro entro i limiti assegnati)
-#figure(text("grafico con ore di lavoro totali, non individuali, rispetto al limite"), caption: "grafico")
-== OPI-03 (Lavoro su documenti in parallelo)
-#figure(
-  text("grafico con numero di documenti modificati e membri che ci hanno lavorato, o qualcosa simile"),
-  caption: "grafico",
-)
-== OPI-04 (Formattazione del testo)
-#figure(text("grafico con numero di errori di formattazione o battitura"), caption: "grafico")
-== OPI-05 (Granularità delle attività assegnate)
-#figure(text("grafico con numero di attività assegnate e ore di lavoro"), caption: "grafico")
-== OPI-06 (Controllo delle modifiche)
-#figure(text("grafico con numero di modifiche e numero di errori risolti"), caption: "grafico")
-
-== RL-01 (Compiti assegnati a ciascun ruolo)
-#figure(text("grafico con numero di issue assegnati per ruolo"), caption: "grafico")
-== RL-02 (Compiti del verificatore)
-#figure(text("grafico con numero di pr ????"), caption: "grafico")
-== RL-03 (Differenza tra i ruoli di responsabile e amministratore)
-#figure(text("grafico gli issue assegnati all'amministratore e responsabile?????"), caption: "grafico")
-== STR-01 (Difficoltà con gli strumenti di git)
-#figure(text("grafico con numero di commit????"), caption: "grafico")
-== STR-02 (Difficoltà con gli strumenti di sviluppo)
-#figure(text("si potrebbe fare quanti membri lavorano come programmatori per ogni sprint"), caption: "grafico")
-== STR-03 (Problemi con Typst 0.13)
-#figure(text("grafico con numero di errori dati da typst ?????"), caption: "grafico")
-
-// Sotto il cruscotto delle metriche mettere degli effetti che ci si aspetta di vedere in futuro o che ha dato*/
