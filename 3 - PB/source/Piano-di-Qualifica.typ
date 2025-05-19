@@ -1015,7 +1015,7 @@ leggermente diminuita.
   Stima dei valori di PV e EV durante i vari sprint della fase PB.
 ])
 Come scritto nella sezione sugli automiglioramenti, il gruppo ha avuto difficoltà a lavorare in parallelo sugli stessi
-file, risolto usando la funzione dei branch di Git. Questo ha portato a un aumento del tempo di lavoro. Tuttavia,
+file, risolto usando la funzione dei #gloss[branch] di Git. Questo ha portato a un aumento del tempo di lavoro. Tuttavia,
 durante il periodo di vacanze pasquali, è stato riscontrato una riduzione del lavoro rispetto a quello stimato.
 
 == MPC-AC(Actual Cost) - MPC-ETC(Estimated To Completion)
