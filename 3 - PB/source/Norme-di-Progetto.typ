@@ -21,6 +21,11 @@
   sommario: [Norme di progetto],
 
   versioni: (
+    "2.0.0",
+    "19/05/2025",
+    "Gabriele Magnelli",
+    "Versione definitiva",
+    "",
     "1.5.0",
     "11/05/2025",
     "Gabriele Magnelli",
@@ -118,27 +123,31 @@ Le definizioni sono disponibili nel documento Glossario.pdf e possono essere con
 
 == Riferimenti
 === Riferimenti normativi
-- Capitolato C7 - Assistente Virtuale Ergon:\  #link("https://www.math.unipd.it/~tullio/IS-1/2024/Progetto/C7.pdf") _(ultima consultazione 03-03-2025)_;
+- Capitolato C7 - Assistente Virtuale Ergon:\  #link("https://www.math.unipd.it/~tullio/IS-1/2024/Progetto/C7.pdf") _(ultima consultazione 19-05-2025)_;
 === Riferimenti informativi
-- Sito del gruppo CodeHex16:\ #link("https://codehex16.github.io/") _(ultima consultazione 06-03-2025)_;
+- Sito del gruppo CodeHex16:\ #link("https://codehex16.github.io/") _(ultima consultazione 19-03-2025)_;
 
-- Repository della documentazione del progetto:\  #link("https://github.com/CodeHex16/documentazione") _(ultima consultazione 06-03-2025)_;
+- Repository della documentazione del progetto:\  #link("https://github.com/CodeHex16/documentazione") _(ultima consultazione 19-05-2025)_;
 
 - Valutazione capitolati:\ #link("https://codehex16.github.io/docs/1%20-%20candidatura/Valutazione-Capitolati.pdf") _(versione 0.3.0)_;
 
 - Preventivo costi e impegni:\ #link("https://codehex16.github.io/docs/1%20-%20candidatura/Preventivo-Costi-e-Impegni.pdf") _(versione 0.2.0)_;
 
-- Analisi dei requisiti:\ #link("https://codehex16.github.io/docs/3%20-%20PB/Analisi-dei-Requisiti.pdf") _(versione 0.9.0)_;
+- Analisi dei requisiti:\ #link("https://codehex16.github.io/docs/3%20-%20PB/Analisi-dei-Requisiti.pdf") _(versione 2.0.0)_;
 
-- Piano di progetto:\ #link("https://codehex16.github.io/docs/3%20-%20PB/Piano-di-Progetto.pdf") _(versione 0.7.0)_;
+- Piano di progetto:\ #link("https://codehex16.github.io/docs/3%20-%20PB/Piano-di-Progetto.pdf") _(versione 2.0.0)_;
 
-- Piano di Qualifica:\ #link("https://codehex16.github.io/docs/3%20-%20PB/Piano-di-Qualifica.pdf") _(versione 1.0.0)_;
+- Piano di Qualifica:\ #link("https://codehex16.github.io/docs/3%20-%20PB/Piano-di-Qualifica.pdf") _(versione 2.0.0)_;
 
-- Standard ISO/IEC 12207:1995:\ #link("https://www.math.unipd.it/~tullio/IS-1/2009/Approfondimenti/ISO_12207-1995.pdf") _(ultima consultazione 06-03-2025)_;
+- Specifica Tecnica:\ #link("https://codehex16.github.io/docs/3%20-%20PB/Specifica-Tecnica.pdf") _(versione 1.0.0)_;
+
+- Manuale Utente:\ #link("https://codehex16.github.io/docs/3%20-%20PB/Manuale-Utente.pdf") _(versione 1.0.0)_;
+
+- Standard ISO/IEC 12207:1995:\ #link("https://www.math.unipd.it/~tullio/IS-1/2009/Approfondimenti/ISO_12207-1995.pdf") _(ultima consultazione 19-05-2025)_;
 
 - Glossario:
-  - Documento: #link("https://codehex16.github.io/docs/glossario/glossario.pdf") _(versione 1.0.0)_;
-  - Pagina web: #link("https://codehex16.github.io/glossario.html") _(ultima consultazione 06-03-2025)_;
+  - Documento: #link("https://codehex16.github.io/docs/glossario/glossario.pdf") _(versione 2.0.0)_;
+  - Pagina web: #link("https://codehex16.github.io/glossario.html") _(ultima consultazione 19-05-2025)_;
 = Processi primari
 
 == Processo di fornitura
@@ -677,7 +686,7 @@ Le principali attività del processo di formazione sono:
 - *Github*: per gestire tutta la documentazione e il codice per il progetto in un repository;
 - *Notion*: per organizzare appunti e documenti in modo non ufficiale;
 - *Telegram*: per comunicare in modo veloce con gli altri membri del team;
-// TODO: le metriche vanno riviste, molte probabilmente non sono misurate quindi vanno rimosse
+
 = Metriche e standard per la qualità
 Per  migliorare e avere uno standard di qualità da cui attingere il gruppo ha deciso di utilizzare degli standard riconosciuti a livello internazionale. 
 Tra quelli disponibili è stato scelto lo standard  ISO/IEC 12207:1995 per quanto riguarda la qualità dei processi principali, organizzativi e di supporto.
@@ -739,6 +748,7 @@ In particolare vengono misurate:
 - *Testabilità*: la semplicità con cui il prodotto può essere testato;
 - *Riutilizzabilità*: le varie parti del software devono poter essere riutilizzate in progetti o ambienti differenti;
 - *Stabilità*: capacità del prodotto di continuare a funzionare senza gravi problemi a seguito di modifiche sbagliate;
+
 = Metriche di qualità
 == Nomenclatura delle metriche
 Per identificare le metriche relative ai processi e quelle relative ai prodotti vengono usate, come prefisso, le seguenti sigle:
@@ -792,12 +802,6 @@ Quindi una metrica avrà come sigla : *MPC/MPD-AcronimoMetrica*.
 - *Come calcolarlo*: Estimate To Complete = Estimate At Completion - Actual Cost;
 - *Valore ottimo*: \u{2264} EAC;
 - *Valore accettabile*: \u{2265} 0%;
-===== Schedule Performance Index(MPC-SPI)/*Da aggiungere al Piano di Qualifica*/
-- *Descrizione*: è una metrica che misura quanto il progetto sta procedendo rispetto alla sua pianificazione iniziale 
-  tramite il rapporto tra il costo preventivato del lavoro completato(EV) e il costo preventivato del lavoro ancora da svolgere(PV);
-- *Come calcolarlo*: $"Schedule Performance Index" = "Earned Value" / "Planned Value"$;
-- *Valore ottimo*: \u{2265} 1;
-- *Valore accettabile*: \u{2265} 0.8;
 ===== Schedule Variance(MPC-SV)
 - *Descrizione*: varianza rispetto a quanto previsto inteso come anticipo o ritardo sui tempi delle attività svolte e da svolgere. 
   Rappresenta la differenza tra il valore del lavoro completato e il valore del lavoro pianificato.
@@ -866,13 +870,6 @@ Quindi una metrica avrà come sigla : *MPC/MPD-AcronimoMetrica*.
 - *Come calcolarlo*: $"Test Superati in Percentuale" = "Numero di Test Superati" / "Numero Totale di Test" * 100$;
 - *Valore ottimo*: 100%;
 - *Valore accettabile*: 100%;
-=== Processi organizzativi
-==== Gestione dei processi
-===== Time Efficiency(MPC-TE)/*Da aggiungere al Piano di Qualifica*/
-- *Descrizione*: misura il rapporto tra ore utilizzate e ore produttive;
-- *Come calcolarlo*: $"Time Efficiency" = "Ore Produttive" / "Ore Totali" * 100$;
-- *Valore ottimo*: 1;
-- *Valore accettabile*: 3;
 == Metriche per il prodotto
 === Funzionalità
 ==== Copertura Requisiti Obbligatori(MPD-RO)
@@ -917,7 +914,7 @@ Quindi una metrica avrà come sigla : *MPC/MPD-AcronimoMetrica*.
 - *Come calcolarlo*: $"Failure Frequency" = "Numero di malfunzionamenti" / "Tempo totale"$;
 - *Valore ottimo*: 0;
 - *Valore accettabile*: 0;
-===== Mean Time Between Failure(MPD-MTBF)
+===== Mean Time Between Failures(MPD-MTBF)
 - *Descrizione*:  misura il tempo medio tra un guasto e il successivo. 
   Un valore alto indica che il prodotto è affidabile e presenta pochi guasti;
 - *Come calcolarlo*: $"Mean Time Between Failure" = "Tempo di attività totale" / "Numero di incidenti"$ dove:
@@ -969,7 +966,7 @@ Quindi una metrica avrà come sigla : *MPC/MPD-AcronimoMetrica*.
 - *Valore ottimo*: \u{2264} 1% batteria/min;
 - *Valore accettabile*: \u{2264} 2% batteria/min;
 === Manutenibilità
-===== Complessità Ciclomatica(MPD-CC)
+===== Complessità Ciclomatica(MPD-CCL)
 - *Descrizione*: misura la complessità del codice. 
   Un valore basso indica che il codice è semplice e facile da mantenere;
 - *Come calcolarlo*: $"Complessità Ciclomatica" = "E" - "N" + "P"$ dove:
@@ -996,12 +993,12 @@ Quindi una metrica avrà come sigla : *MPC/MPD-AcronimoMetrica*.
 - *Valore ottimo*: \u{2264} 2 ore;
 - *Valore accettabile*: \u{2264} 4 ore (critico);
 === Sicurezza
-===== Tasso di Autenticazione Fallita
+===== Tasso di Autenticazione Fallita(MPD-AF)
 - *Descrizione*: misura la percentuale di tentativi di autenticazione falliti.
   Un valore basso indica che il sistema è sicuro e che è difficile per gli utenti non autorizzati accedere al sistema;
 - *Valore ottimo*: \u{2264} 1%;
 - *Valore accettabile*: \u{2264} 5%;
-===== Crittografia Dati
+===== Crittografia Dati(MPD-CRD)
 - *Descrizione*: misura il livello di crittografia dei dati sensibili. 
   Un valore alto indica che i dati sono protetti e che è difficile per gli utenti non autorizzati accedere ai dati sensibili;
 - *Valore ottimo*: 100% dati sensibili;
