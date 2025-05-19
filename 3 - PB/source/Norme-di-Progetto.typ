@@ -8,19 +8,24 @@
     "Luca Ribon",
     "Redattore, Verificatore",
     "Francesco Fragonas",
-    "Redattore",
+    "Redattore, Verificatore",
     "Gabriele Magnelli",
     "Redattore, Verificatore",
     "Filippo Sabbadin",
     "Redattore, Verificatore",
     "Luca Rossi",
-    "Verificatore",
+    "Redattore, Verificatore",
     "Yi Hao Zhuo",
     "Verificatore",
   ),
   sommario: [Norme di progetto],
 
   versioni: (
+    "2.0.0",
+    "19/05/2025",
+    "Gabriele Magnelli",
+    "Versione definitiva",
+    "Luca Ribon",
     "1.5.0",
     "11/05/2025",
     "Gabriele Magnelli",
@@ -29,7 +34,8 @@
     "1.4.0",
     "6/05/2025",
     "Gabriele Magnelli",
-    "Varie migliorie e aggiornamenti",
+    "Varie migliorie e
+aggiornamenti",
     "Luca Ribon",
     "1.3.0",
     "24/04/2025",
@@ -118,27 +124,31 @@ Le definizioni sono disponibili nel documento Glossario.pdf e possono essere con
 
 == Riferimenti
 === Riferimenti normativi
-- Capitolato C7 - Assistente Virtuale Ergon:\  #link("https://www.math.unipd.it/~tullio/IS-1/2024/Progetto/C7.pdf") _(ultima consultazione 03-03-2025)_;
+- Capitolato C7 - Assistente Virtuale Ergon:\  #link("https://www.math.unipd.it/~tullio/IS-1/2024/Progetto/C7.pdf") _(ultima consultazione 19-05-2025)_;
 === Riferimenti informativi
-- Sito del gruppo CodeHex16:\ #link("https://codehex16.github.io/") _(ultima consultazione 06-03-2025)_;
+- Sito del gruppo CodeHex16:\ #link("https://codehex16.github.io/") _(ultima consultazione 19-03-2025)_;
 
-- Repository della documentazione del progetto:\  #link("https://github.com/CodeHex16/documentazione") _(ultima consultazione 06-03-2025)_;
+- Repository della documentazione del progetto:\  #link("https://github.com/CodeHex16/documentazione") _(ultima consultazione 19-05-2025)_;
 
 - Valutazione capitolati:\ #link("https://codehex16.github.io/docs/1%20-%20candidatura/Valutazione-Capitolati.pdf") _(versione 0.3.0)_;
 
 - Preventivo costi e impegni:\ #link("https://codehex16.github.io/docs/1%20-%20candidatura/Preventivo-Costi-e-Impegni.pdf") _(versione 0.2.0)_;
 
-- Analisi dei requisiti:\ #link("https://codehex16.github.io/docs/3%20-%20PB/Analisi-dei-Requisiti.pdf") _(versione 0.9.0)_;
+- Analisi dei requisiti:\ #link("https://codehex16.github.io/docs/3%20-%20PB/Analisi-dei-Requisiti.pdf") _(versione 2.0.0)_;
 
-- Piano di progetto:\ #link("https://codehex16.github.io/docs/3%20-%20PB/Piano-di-Progetto.pdf") _(versione 0.7.0)_;
+- Piano di progetto:\ #link("https://codehex16.github.io/docs/3%20-%20PB/Piano-di-Progetto.pdf") _(versione 2.0.0)_;
 
-- Piano di Qualifica:\ #link("https://codehex16.github.io/docs/3%20-%20PB/Piano-di-Qualifica.pdf") _(versione 1.0.0)_;
+- Piano di Qualifica:\ #link("https://codehex16.github.io/docs/3%20-%20PB/Piano-di-Qualifica.pdf") _(versione 2.0.0)_;
 
-- Standard ISO/IEC 12207:1995:\ #link("https://www.math.unipd.it/~tullio/IS-1/2009/Approfondimenti/ISO_12207-1995.pdf") _(ultima consultazione 06-03-2025)_;
+- Specifica Tecnica:\ #link("https://codehex16.github.io/docs/3%20-%20PB/Specifica-Tecnica.pdf") _(versione 1.0.0)_;
+
+- Manuale Utente:\ #link("https://codehex16.github.io/docs/3%20-%20PB/Manuale-Utente.pdf") _(versione 1.0.0)_;
+
+- Standard ISO/IEC 12207:1995:\ #link("https://www.math.unipd.it/~tullio/IS-1/2009/Approfondimenti/ISO_12207-1995.pdf") _(ultima consultazione 19-05-2025)_;
 
 - Glossario:
-  - Documento: #link("https://codehex16.github.io/docs/glossario/glossario.pdf") _(versione 1.0.0)_;
-  - Pagina web: #link("https://codehex16.github.io/glossario.html") _(ultima consultazione 06-03-2025)_;
+  - Documento: #link("https://codehex16.github.io/docs/glossario/glossario.pdf") _(versione 2.0.0)_;
+  - Pagina web: #link("https://codehex16.github.io/glossario.html") _(ultima consultazione 19-05-2025)_;
 = Processi primari
 
 == Processo di fornitura
@@ -677,7 +687,7 @@ Le principali attività del processo di formazione sono:
 - *Github*: per gestire tutta la documentazione e il codice per il progetto in un repository;
 - *Notion*: per organizzare appunti e documenti in modo non ufficiale;
 - *Telegram*: per comunicare in modo veloce con gli altri membri del team;
-// TODO: le metriche vanno riviste, molte probabilmente non sono misurate quindi vanno rimosse
+
 = Metriche e standard per la qualità
 Per  migliorare e avere uno standard di qualità da cui attingere il gruppo ha deciso di utilizzare degli standard riconosciuti a livello internazionale. 
 Tra quelli disponibili è stato scelto lo standard  ISO/IEC 12207:1995 per quanto riguarda la qualità dei processi principali, organizzativi e di supporto.
@@ -739,6 +749,7 @@ In particolare vengono misurate:
 - *Testabilità*: la semplicità con cui il prodotto può essere testato;
 - *Riutilizzabilità*: le varie parti del software devono poter essere riutilizzate in progetti o ambienti differenti;
 - *Stabilità*: capacità del prodotto di continuare a funzionare senza gravi problemi a seguito di modifiche sbagliate;
+
 = Metriche di qualità
 == Nomenclatura delle metriche
 Per identificare le metriche relative ai processi e quelle relative ai prodotti vengono usate, come prefisso, le seguenti sigle:
@@ -792,12 +803,6 @@ Quindi una metrica avrà come sigla : *MPC/MPD-AcronimoMetrica*.
 - *Come calcolarlo*: Estimate To Complete = Estimate At Completion - Actual Cost;
 - *Valore ottimo*: \u{2264} EAC;
 - *Valore accettabile*: \u{2265} 0%;
-===== Schedule Performance Index(MPC-SPI)/*Da aggiungere al Piano di Qualifica*/
-- *Descrizione*: è una metrica che misura quanto il progetto sta procedendo rispetto alla sua pianificazione iniziale 
-  tramite il rapporto tra il costo preventivato del lavoro completato(EV) e il costo preventivato del lavoro ancora da svolgere(PV);
-- *Come calcolarlo*: $"Schedule Performance Index" = "Earned Value" / "Planned Value"$;
-- *Valore ottimo*: \u{2265} 1;
-- *Valore accettabile*: \u{2265} 0.8;
 ===== Schedule Variance(MPC-SV)
 - *Descrizione*: varianza rispetto a quanto previsto inteso come anticipo o ritardo sui tempi delle attività svolte e da svolgere. 
   Rappresenta la differenza tra il valore del lavoro completato e il valore del lavoro pianificato.
@@ -866,13 +871,6 @@ Quindi una metrica avrà come sigla : *MPC/MPD-AcronimoMetrica*.
 - *Come calcolarlo*: $"Test Superati in Percentuale" = "Numero di Test Superati" / "Numero Totale di Test" * 100$;
 - *Valore ottimo*: 100%;
 - *Valore accettabile*: 100%;
-=== Processi organizzativi
-==== Gestione dei processi
-===== Time Efficiency(MPC-TE)/*Da aggiungere al Piano di Qualifica*/
-- *Descrizione*: misura il rapporto tra ore utilizzate e ore produttive;
-- *Come calcolarlo*: $"Time Efficiency" = "Ore Produttive" / "Ore Totali" * 100$;
-- *Valore ottimo*: 1;
-- *Valore accettabile*: 3;
 == Metriche per il prodotto
 === Funzionalità
 ==== Copertura Requisiti Obbligatori(MPD-RO)
@@ -894,115 +892,3 @@ Quindi una metrica avrà come sigla : *MPC/MPD-AcronimoMetrica*.
 - *Come calcolarlo*: $"Code Coverage" = "righe di codice testate" / "righe di codice totali" *100$;
 - *Valore ottimo*: 100%;
 - *Valore accettabile*: \u{2265} 80%;
-===== Branch Coverage(MPD-BC)
-- *Descrizione*: è un sottoinsieme del code coverage e misura la percentuale di rami delle condizioni che sono stati eseguiti durante i test.
-  Un valore alto indica che il codice è stato testato in modo approfondito e che è meno probabile che contenga errori;
-- *Come calcolarlo*: $"Branch Coverage" = "Branch eseguiti" / "Branch totali" * 100$;
-- *Valore ottimo*: \u{2265} 80%;
-- *Valore accettabile*: \u{2265} 50%;
-===== Statement Coverage(MPD-SC)
-- *Descrizione*: è un sottoinsieme di code coverage e misura la percentuale di istruzioni che sono state eseguite durante i test. 
-  Un valore alto indica che il codice è stato testato in modo approfondito e che è meno probabile che contenga errori;
-- *Come calcolarlo*: $"Statement Coverage" = "" / "" * 100$;
-- *Valore ottimo*: \u{2265} 80%;
-- *Valore accettabile*: \u{2265} 60%;
-===== Failure Tolerance(MPD-FT)
-- *Descrizione*: misura la capacità del prodotto di mantenere un livello di prestazioni accettabile anche in caso di guasti o malfunzionamenti. 
-  Un valore alto indica che il prodotto è in grado di gestire i guasti senza compromettere le funzionalità principali;
-- *Valore ottimo*: 100%;
-- *Valore accettabile*: 100%;
-===== Failure Frequency(MPD-FF)
-- *Descrizione*: misura la frequenza con cui si verificano guasti o malfunzionamenti nel prodotto. 
-  Un valore basso indica che il prodotto è affidabile e presenta pochi problemi; 
-- *Come calcolarlo*: $"Failure Frequency" = "Numero di malfunzionamenti" / "Tempo totale"$;
-- *Valore ottimo*: 0;
-- *Valore accettabile*: 0;
-===== Mean Time Between Failure(MPD-MTBF)
-- *Descrizione*:  misura il tempo medio tra un guasto e il successivo. 
-  Un valore alto indica che il prodotto è affidabile e presenta pochi guasti;
-- *Come calcolarlo*: $"Mean Time Between Failure" = "Tempo di attività totale" / "Numero di incidenti"$ dove:
-  - Il tempo di attività totale è il tempo totale per cui il sistema rimane in funzione senza errori;
-  - Il numero totale di guasti è il numero degli errori di sistema che si sono verificati durante il periodo specificato;
-- *Valore ottimo*: \u{2265} 72h;
-- *Valore accettabile*: \u{2265} 48h;
-===== Disponibilità Sistema(MPD-DS)
-- *Descrizione*: indica la percentuale di tempo in cui il sistema è operativo. 
-  Un valore alto indica che il sistema è affidabile e che è disponibile per l'utente;
-- *Come calcolarlo*: $"Disponibilità Sistema" = "MTBF" / "(MTBF+MTTR)"$ dove:
-  - *MTBF* = Mean Time Between Failure = tempo medio tra un guasto e il successivo;
-  - *MTTR* = Mean Time To Repair = tempo medio di riparazione;
-- *Valore ottimo*: \u{2265} 99.9%;
-- *Valore accettabile*: \u{2265} 90%;
-=== Usabilità
-===== Tempo di Apprendimento(MPD-TA)
-- *Descrizione*:  indica il tempo necessario per un utente base per apprendere come utilizzare il prodotto.
-  Un valore basso indica che il prodotto è facile da usare e richiede poco tempo per essere appreso. 
-  Viene calcolato con sessioni di test con utenti;
-- *Valore ottimo*: \u{2264}5 min;
-- *Valore accettabile*: \u{2264}15 min (utente base);
-===== Errori Utente/Azione(MPD-EUA)
-- *Descrizione*:indica il numero di errori commessi dagli utenti durante l'utilizzo del prodotto. 
-  Un valore basso indica che il prodotto è intuitivo e facile da usare.
-  Viene calcolato tramite log delle interazioni;
-- *Valore ottimo*: 0;
-- *Valore accettabile*: \u{2264}0.5 errori/azione;
-===== Task Success Rate(MPD-TSR)
-- *Descrizione*:  indica la percentuale di task completati con successo dagli utenti. 
-  Un valore alto indica che il prodotto è facile da usare e che gli utenti riescono  a  completare  le  azioni  richieste.  
-  Viene  calcolato  con  sessioni  di  test  con utenti;
-- *Valore ottimo*: 100%;
-- *Valore accettabile*: \u{2265} 75%;
-=== Efficienza
-===== Tempo Risposta API(MPD-TRA)
-- *Descrizione*: misura il tempo di risposta delle API per il 90% delle richieste. 
-  Un valore basso indica che il sistema risponde velocemente alle richieste degli utenti;
-- *Valore ottimo*: \u{2264} 200 ms;
-- *Valore accettabile*: \u{2264} 500 ms;
-===== Memoria Processo(MPD-MP)
-- *Descrizione*: indica l'utilizzo della memoria da parte del sistema.
-  Un valore basso indica che il sistema utilizza in modo efficiente le risorse disponibili;
-- *Valore ottimo*: \u{2264} 256 MB;
-- *Valore accettabile*: \u{2264} 512 MB;
-===== Consumo Energetico(MPD-CE)
-- *Descrizione*: indica il consumo energetico del sistema. 
-  Un valore basso indica che il sistema consuma poca energia;
-- *Valore ottimo*: \u{2264} 1% batteria/min;
-- *Valore accettabile*: \u{2264} 2% batteria/min;
-=== Manutenibilità
-===== Complessità Ciclomatica(MPD-CC)
-- *Descrizione*: misura la complessità del codice. 
-  Un valore basso indica che il codice è semplice e facile da mantenere;
-- *Come calcolarlo*: $"Complessità Ciclomatica" = "E" - "N" + "P"$ dove:
-  - E = numero di archi nel grafo di controllo;
-  - N = numero di nodi nel grafo di controllo;
-  - P = numero di componenti connesse da ogni arco;
-- *Valore ottimo*: \u{2264} 10;
-- *Valore accettabile*: \u{2264} 15 per modulo;
-===== Debito Tecnico(MPD-DT)
-- *Descrizione*: misura la percentuale di debito tecnico rispetto al codice totale (spesso correlato alla presenza di debito tecnico). 
-  Un valore basso indica che il codice è ben strutturato e non presenta problemi tecnici;
-- *Come calcolarlo*: $"Debito Tecnico" = "Costo di rimozione del debito" / "Costo totale di sviluppo" * 100$;
-- *Valore ottimo*: \u{2264} 5%;
-- *Valore accettabile*: \u{2264} 15%;
-===== Code Smell Density(MPD-CSD)
-- *Descrizione*: indica il numero di «code smells» (cattive pratiche di codifica) per 100 righe di codice. 
-  Un valore basso indica che il codice è ben strutturato e non presenta problemi tecnici;
-- *Valore ottimo*: 0 smell;
-- *Valore accettabile*: \u{2264} $ "5 smell" / "100 righe"$;
-===== Tempo Fix Bug(MPD-TFB)
-- *Descrizione*:  misura il tempo medio per risolvere un bug critico. 
-  Un valore basso indica che il team è in grado di risolvere i bug in modo rapido ed efficiente;
-- *Come calcolarlo*:$ "Tempo Fix Bug" = "Tempo totale di riparazione bug" / "Numero totale di bug riparati"$;
-- *Valore ottimo*: \u{2264} 2 ore;
-- *Valore accettabile*: \u{2264} 4 ore (critico);
-=== Sicurezza
-===== Tasso di Autenticazione Fallita
-- *Descrizione*: misura la percentuale di tentativi di autenticazione falliti.
-  Un valore basso indica che il sistema è sicuro e che è difficile per gli utenti non autorizzati accedere al sistema;
-- *Valore ottimo*: \u{2264} 1%;
-- *Valore accettabile*: \u{2264} 5%;
-===== Crittografia Dati
-- *Descrizione*: misura il livello di crittografia dei dati sensibili. 
-  Un valore alto indica che i dati sono protetti e che è difficile per gli utenti non autorizzati accedere ai dati sensibili;
-- *Valore ottimo*: 100% dati sensibili;
-- *Valore accettabile*: 100% dati sensibili;
