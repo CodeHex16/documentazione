@@ -291,28 +291,6 @@ In altre parole, indica quanti test sono stati superati.
 - *MPD-CC - Code coverage*: indica la percentuale di codice coperto dai test. Un valore alto indica che il codice è stato
   testato in modo approfondito e che è meno probabile che contenga errori.
 
-- *MPD-BC - #gloss[Branch] coverage*: sottoinsieme di code coverage, indica la percentuale di rami delle condizioni che
-  sono stati eseguiti durante i test. Un valore alto indica che il codice è stato testato in modo approfondito e che è
-  meno probabile che contenga errori.
-
-- *MPD-SC - Statement coverage*: sottoinsieme di code coverage, indica la percentuale di istruzioni che sono state
-  eseguite durante i test. Un valore alto indica che il codice è stato testato in modo approfondito e che è meno probabile
-  che contenga errori. Viene calcolato con la seguente formula:
-$ ("numero di istruzioni eseguite") / ("numero di istruzioni totali nel codice") *100 $
-
-- *MPD-FT - Failure Tolerance*: indica la capacità del prodotto di mantenere un livello di prestazioni accettabile anche
-  in caso di guasti o malfunzionamenti. Un valore alto indica che il prodotto è in grado di gestire i guasti senza
-  compromettere le funzionalità principali.
-
-- *MPD-FF - Failure Frequency*: indica la frequenza con cui si verificano guasti o malfunzionamenti nel prodotto. Un
-  valore basso indica che il prodotto è affidabile e presenta pochi problemi.
-
-- *MPD-MTBF - Mean Time Between Failures*: indica il tempo medio tra un guasto e il successivo. Un valore alto indica che
-  il prodotto è affidabile e presenta pochi guasti.
-
-- *MPD-DS - Disponibilità sistema*: indica la percentuale di tempo in cui il sistema è operativo. Un valore alto indica
-  che il sistema è affidabile e che è disponibile per l'utente.
-
 #figure(caption: [Valori per misurare la qualità del prodotto in termini di affidabilità], table(
   columns: (auto, auto, auto, auto),
   inset: 8pt,
@@ -323,147 +301,6 @@ $ ("numero di istruzioni eseguite") / ("numero di istruzioni totali nel codice")
   "Code coverage",
   "\u{2265}80%",
   "100%",
-  "MPD-BC",
-  "Branch coverage",
-  "\u{2265}50%",
-  "\u{2265}80%",
-  "MPD-SC",
-  "Statement coverage",
-  "\u{2265}60%",
-  "\u{2265}80%",
-  "MPD-FT",
-  "Failure Tolerance",
-  "100%",
-  "100%",
-  "MPD-FF",
-  "Failure Frequency",
-  "0",
-  "0",
-  "MPD-MTBF",
-  "Mean Time Between Failures",
-  "\u{2265}48h",
-  "\u{2265}72h",
-  "MPD-DS",
-  "Disponibilità sistema",
-  "\u{2265}90%",
-  "\u{2265}99.9%",
-))
-
-=== Usabilità
-- *MPD-TA - Tempo di apprendimento*: indica il tempo necessario per un utente base per apprendere come utilizzare il
-  prodotto. Un valore basso indica che il prodotto è facile da usare e richiede poco tempo per essere appreso. Viene
-  calcolato con sessioni di test con utenti.
-
-- *MPD-EUA - Errori utente/azione*: indica il numero di errori commessi dagli utenti durante l'utilizzo del prodotto. Un
-  valore basso indica che il prodotto è intuitivo e facile da usare. Viene calcolato tramite log delle interazioni.
-
-- *MPD-TSR - #gloss[Task] success rate*: indica la percentuale di task completati con successo dagli utenti. Un valore
-  alto indica che il prodotto è facile da usare e che gli utenti riescono a completare le azioni richieste. Viene
-  calcolato con sessioni di test con utenti.
-
-#figure(caption: [Valori per misurare la qualità del prodotto in termini di usabilità], table(
-  columns: (auto, auto, auto, auto),
-  inset: 8pt,
-  align: (x, y) => if (x == 0 and y > 0 and y < 7) { left } else { center + horizon },
-  fill: (x, y) => if (y == 0) { luma(230) },
-  table.header([*Metrica*], [*Nome*], [*Valore accettabile*], [*Valore ottimo*]),
-  "MPD-TA",
-  "Tempo di apprendimento",
-  "\u{2264}15 min (utente base)",
-  "\u{2264}5 min",
-  "MPD-EUA",
-  "Errori utente/azione",
-  "\u{2264}0.5 errori/azione",
-  "0",
-  "MPD-TSR",
-  "Task success rate",
-  "\u{2265}75%",
-  "100%",
-))
-
-=== Efficienza
-- *MPD-TRA - Tempo risposta #gloss[API]*: tempo di risposta delle API per il 90% delle richieste. Un valore basso indica
-  che il sistema risponde velocemente alle richieste degli utenti.
-- *MPD-MP - Memoria processo*: indica l'utilizzo della memoria da parte del sistema. Un valore basso indica che il sistema
-  utilizza in modo efficiente le risorse disponibili.
-- *MPD-CE - Consumo energetico*: indica il consumo energetico del sistema. Un valore basso indica che il sistema consuma
-  poca energia.
-
-#figure(caption: [Valori per misurare la qualità del prodotto in termini di efficienza], table(
-  columns: (auto, auto, auto, auto),
-  inset: 8pt,
-  align: (x, y) => if (x == 0 and y > 0 and y < 7) { left } else { center + horizon },
-  fill: (x, y) => if (y == 0) { luma(230) },
-  table.header([*Metrica*], [*Nome*], [*Valore accettabile*], [*Valore ottimo*]),
-  "MPD-TRA",
-  "Tempo risposta API",
-  "\u{2264}500 ms",
-  "\u{2264}200 ms",
-  "MPD-MP",
-  "Memoria processo",
-  "\u{2264}512 MB",
-  "\u{2264}256 MB",
-  "MPD-CE",
-  "Consumo energetico",
-  "\u{2264}2% batteria/min",
-  "\u{2264}1% batteria/min",
-))
-
-=== Manutenibilità
-- *MPD-CCL - Complessità ciclomatica*: misura la complessità del codice. Un valore basso indica che il codice è semplice e
-  facile da mantenere.
-- *MPD-DT - Debito Tecnico*: indica la percentuale di debito tecnico rispetto al codice totale. Un valore basso indica che
-  il codice è ben strutturato e non presenta problemi tecnici.
-- *MPD-CSD - Code Smell density*: indica il numero di "code smells" (cattive pratiche di codifica) per 100 righe di
-  codice. Un valore basso indica che il codice è ben strutturato e non presenta problemi tecnici.
-- *MPD-TFB - Tempo fix bug*: tempo medio per risolvere un bug critico. Un valore basso indica che il team è in grado di
-  risolvere i bug in modo rapido ed efficiente.
-
-#figure(caption: [Valori per misurare la qualità del prodotto in termini di manutenibilità], table(
-  columns: (auto, auto, auto, auto),
-  inset: 8pt,
-  align: (x, y) => if (x == 0 and y > 0 and y < 7) { left } else { center + horizon },
-  fill: (x, y) => if (y == 0) { luma(230) },
-  table.header([*Metrica*], [*Nome*], [*Valore accettabile*], [*Valore ottimo*]),
-  "MPD-CCL",
-  "Complessità ciclomatica",
-  "\u{2264}15 per modulo",
-  "\u{2264}10",
-  "MPD-DT",
-  "Debito Tecnico",
-  "\u{2264}15%",
-  "\u{2264}5%",
-  "MPD-CSD",
-  "Code Smell density",
-  "\u{2264}5 smell/100 righe",
-  "0 smell",
-  "MPD-TFB",
-  "Tempo fix bug",
-  "\u{2264}4 ore (critico)",
-  "\u{2264}2 ore",
-))
-
-=== Sicurezza
-- *MPD-AF - Tasso di autenticazione fallita*: percentuale di tentativi di autenticazione falliti. Un valore basso indica
-  che il sistema è sicuro e che è difficile per gli utenti non autorizzati accedere al sistema.
-- *MPD-CRD - Crittografia dati*: livello di crittografia dei dati sensibili. Un valore alto indica che i dati sono
-  protetti e che è difficile per gli utenti non autorizzati accedere ai dati sensibili.
-
-
-#figure(caption: [Valori per misurare la qualità del prodotto in termini di sicurezza], table(
-  columns: (auto, auto, auto, auto),
-  inset: 8pt,
-  align: (x, y) => if (x == 0 and y > 0 and y < 7) { left } else { center + horizon },
-  fill: (x, y) => if (y == 0) { luma(230) },
-  table.header([*Metrica*], [*Nome*], [*Valore accettabile*], [*Valore ottimo*]),
-  "MPD-AF",
-  "Tasso di autenticazione fallita",
-  "\u{2264}5%",
-  "\u{2264}1%",
-  "MPD-CRD",
-  "Crittografia dati",
-  "100% dati sensibili",
-  "100% dati sensibili",
 ))
 
 = Metodologie di testing
@@ -493,8 +330,8 @@ Unità e Test di Regressione.
 
 === Test di Unità
 I test di unità sono utilizzati per verificare il corretto funzionamento delle singole componenti del software. Vengono
-scritti dai programmatori e sono eseguiti in modo automatico. Gli strumenti utilizzati per i test di unità sono `pytest` e `vitest`. \
-La code coverage finale garantita dai test di unità è pari al 93%. \
+scritti dai programmatori e sono eseguiti in modo automatico. Gli strumenti utilizzati per i test di unità sono `pytest` e `vitest`.\
+La code coverage finale garantita dai test di unità è pari al 93%.\
 
 Esempi applicati al progetto:
 #show figure: set block(breakable: true)
@@ -606,11 +443,11 @@ Esempi applicati al progetto:
   "Test sull'eliminazione di un documento avvenuta con successo",
   "Superato",
   "TU-033",
-  "Test sullla gestione corretta di errori durante l'eliminazione di un documento",
+  "Test sulla gestione corretta di errori durante l'eliminazione di un documento",
   "Superato",
   //test_faq_repository.py
   "TU-034",
-  "Test sul rtiorno di tutte le FAQ",
+  "Test sul ritorno di tutte le FAQ",
   "Superato",
   "TU-035",
   "Test sul ritorno di una FAQ in base all'ID",
@@ -782,7 +619,7 @@ Esempi applicati al progetto:
   "Test sul caricamento di un documento",
   "Superato",
   "TU-090",
-  "Test sulla corretta gestione di docuemnti duplicati",
+  "Test sulla corretta gestione di documenti duplicati",
   "Superato",
   "TU-091",
   "Test sulla corretta gestione degli errori durante il caricamento di un documento",
@@ -813,7 +650,7 @@ Esempi applicati al progetto:
   "Test sulla corretta gestione di FAQ duplicate",
   "Superato",
   "TU-100",
-  "Test sulla corretta getione di errori durante la creazione di una FAQ",
+  "Test sulla corretta gestione di errori durante la creazione di una FAQ",
   "Superato",
   "TU-101",
   "Test sul ritorno di una FAQ",
@@ -844,7 +681,7 @@ Esempi applicati al progetto:
   "Superato",
   //test_user.py
   "TU-110",
-  "Test sul ritoro utenti",
+  "Test sul ritorno utenti",
   "Superato",
   "TU-111",
   "Test sulla corretta gestione di errori quando non esistono utenti",
@@ -1259,8 +1096,8 @@ errori presenti erano 0, in particolare si è raggiunto un ottimo risultato negl
 Come notato nella sezione automiglioramento, è stato difficile avere un formato dei documenti omogeneo e questo ha
 portato a un aumento di diversi errori. Questo è stato risolto con l'uso di un correttore ortografico automatico e una
 maggiore comunicazione tra i membri del gruppo. Si può notare che il numero di errori ortografici è diminuito. Unica
-eccezione sono i documenti #gloss[Specifica Tecnica] (ST) e Manuale Utente (MU) in quanto documenti nuovi la cui stesura è
-iniziata all'inizio della fase PB.
+eccezione sono i documenti #gloss[Specifica Tecnica] (ST) e Manuale Utente (MU) in quanto documenti nuovi la cui stesura
+è iniziata all'inizio della fase PB.
 
 == MPC-Indice Gulpease
 === RTB
