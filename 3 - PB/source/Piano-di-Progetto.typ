@@ -28,16 +28,18 @@
   sommario: [Piano di Progetto],
 
   versioni: (
-    "1.7.0",
-    "17/05/2025",
-    "Luca Rossi",
-    "Aggiunto sprint 15 e rendicontazione del periodo pb",
-    "Gabriele Magnelli",
-    "1.6.0",
+	"2.0.1",
+	"19/05/2025",
+	"Luca Rossi",
+	"Correzione errori nella sezione PB",
+	"2.0.0",
+	"17/05/2025",
+	"Luca Rossi",
+	"Aggiunto sprint 15 e rendicontazione del periodo pb",
+	"1.6.0",
     "09/05/2025",
     "Luca Rossi",
     "Aggiunto sprint 14",
-    "Luca Ribon",
     "1.5.0",
     "05/05/2025",
     "Luca Rossi",
@@ -458,16 +460,16 @@ Le seguenti tabelle rappresentano un resoconto delle ore svolte dal gruppo con i
       [*Totale*],
     ),
 
-    "Ribon", "7,25", "8", "31,25", "0", "3,25", "9,4", "59,15",
-    "Bazzan", "2", "1", "5", "3,5", "26,5", "8,45", "46,45",
-    "Fragonas", "11", "8", "0", "0", "17", "6,25", "42,25",
-    "Magnelli", "8,75", "11,5", "8,5", "0", "0", "8,5", "37,25",
-    "Sabbadin", "3", "0", "22", "0", "0", "10,5", "35,5",
-    "Rossi", "9,5", "1", "2", "0", "0", "5", "17,5",
-    "Zhuo", "0", "1,5", "0", "0", "9", "7,05", "17,55",
+    "Ribon", "8,75", "8", "36,25", "10,2", "17,55", "14,25", "95",
+    "Bazzan", "2", "1", "13", "13,5", "56,5", "9", "95",
+    "Fragonas", "11", "8", "3", "7", "44", "18,45", "91,45",
+    "Magnelli", "9,75", "20,5", "8,5", "14,25", "21,5", "17,5", "92",
+    "Sabbadin", "8,4", "2", "22", "10", "28", "14,5", "91,9",
+    "Rossi", "16,1", "29", "3", "16", "6", "14", "84,1",
+    "Zhuo", "0", "1,5", "0", "35", "25,5", "19,55", "81,55",
   ),
   caption: [
-    Ore per ciascun membro del gruppo, suddivise per ruolo, aggiornate al termine del periodo RTB
+    Ore per ciascun membro del gruppo, suddivise per ruolo, aggiornate al termine del periodo PB
   ],
 )
 
