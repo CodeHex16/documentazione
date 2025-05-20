@@ -28,22 +28,18 @@
   sommario: [Piano di Progetto],
 
   versioni: (
-    "2.0.1",
-    "19/05/2025",
-    "Luca Rossi",
-    "Correzione errori nella sezione PB",
-    "Luca Ribon",
-    "2.0.0",
-    "17/05/2025",
-    "Luca Rossi",
-    "Aggiunto sprint 15 e
-rendicontazione del periodo pb",
-    "Gabriele Magnelli",
-    "1.6.0",
+	"2.0.1",
+	"19/05/2025",
+	"Luca Rossi",
+	"Correzione errori nella sezione PB",
+	"2.0.0",
+	"17/05/2025",
+	"Luca Rossi",
+	"Aggiunto sprint 15 e rendicontazione del periodo pb",
+	"1.6.0",
     "09/05/2025",
     "Luca Rossi",
     "Aggiunto sprint 14",
-    "Luca Ribon",
     "1.5.0",
     "05/05/2025",
     "Luca Rossi",
@@ -53,7 +49,6 @@ rendicontazione del periodo pb",
     "25/04/2025",
     "Francesco Fragonas",
     "Aggiunto sprint 12",
-    "Luca Ribon",
     "1.3.0",
     "18/04/2025",
     "Luca Rossi",
@@ -242,7 +237,7 @@ Secondo lo standard ISO/IEC 31000:2009, la gestione dei rischi si articola in ci
 
   [*Aggiornamento*],
   [Sprint 5-6: festività natalizie e sessione invernale hanno rallentato alcune task. Pianificazione flessibile riduce l'impatto su scadenze. \
-    Sprint 12-13: fine sessione e rientro in periodo accademico regolare hanno migliorato la disponibilità del team.],
+   Sprint 12-13: fine sessione e rientro in periodo accademico regolare hanno migliorato la disponibilità del team.],
 )
 
 #table(
@@ -264,7 +259,7 @@ Secondo lo standard ISO/IEC 31000:2009, la gestione dei rischi si articola in ci
 
   [*Aggiornamento*],
   [Sprint 9: sono emersi equivoci sulle correzioni del prof. Cardin; risolti con un incontro dedicato. Il rischio rimane attivo in PB se arrivano nuove istruzioni. \
-    Sprint 13: chiarito un equivoco sulle modalità di aggiornamento del Piano di Progetto durante un incontro dedicato. Il rischio rimane medio.],
+   Sprint 13: chiarito un equivoco sulle modalità di aggiornamento del Piano di Progetto durante un incontro dedicato. Il rischio rimane medio.],
 )
 
 
@@ -353,7 +348,8 @@ Secondo lo standard ISO/IEC 31000:2009, la gestione dei rischi si articola in ci
 
   [*Aggiornamento*],
   [Negli Sprint 4, 8 e 10 si è definita o aggiornata l'architettura e svolto un PoC di integrazione. Alcune difficoltà sono emerse nel collegare i moduli (LLM, DB, frontend), ma gestite con successivi refactoring. \
-    Sprint 11-13: aggiunta di nuove funzionalità (statistiche, storico, gestione preferenze) ha richiesto revisioni parziali ma non critiche all'architettura.],
+  Sprint 11-13: aggiunta di nuove funzionalità (statistiche, storico, gestione preferenze) ha richiesto revisioni parziali ma non critiche all'architettura.],
+  
 )
 
 = Preventivo
@@ -418,7 +414,8 @@ Di seguito sono riportate tabelle riepilogative che mostrano sia il compenso tot
 *Metodo di calcolo*: i costi orari sono stati stimati sulla base di #gloss[standard] di mercato e di esperienze precedenti. Le ore totali per ogni ruolo sono state calcolate considerando il numero di attività assegnate e il livello di complessità delle stesse.
 
 == Retrospettiva RTB
-Le seguenti tabelle rappresentano un resoconto delle ore svolte dal gruppo con i relativi costi e delle ore svolte da ogni membro.
+Le seguenti tabelle rappresentano un resoconto delle ore svolte dal gruppo con i relativi costi e delle ore svolte da ogni membro, aggiornate alla fine del periodo RTB.
+
 #figure(
   table(
     columns: (1.2fr, 0.8fr, 0.8fr, 1fr, 1fr, 1fr),
@@ -464,18 +461,19 @@ Le seguenti tabelle rappresentano un resoconto delle ore svolte dal gruppo con i
       [*Totale*],
     ),
 
-    "Ribon", "8,75", "8", "36,25", "10,2", "17,55", "14,25", "95",
-    "Bazzan", "2", "1", "13", "13,5", "56,5", "9", "95",
-    "Fragonas", "11", "8", "3", "7", "44", "18,45", "91,45",
-    "Magnelli", "9,75", "20,5", "8,5", "14,25", "21,5", "17,5", "92",
-    "Sabbadin", "8,4", "2", "22", "10", "28", "14,5", "91,9",
-    "Rossi", "16,1", "29", "3", "16", "6", "14", "84,1",
-    "Zhuo", "0", "1,5", "0", "35", "25,5", "19,55", "81,55",
+    "Ribon", "7,25", "8", "31,25", "0", "3,25", "9,4", "59,15",
+    "Bazzan", "2", "1", "5", "3,5", "26,5", "8,45", "46,45",
+    "Fragonas", "11", "8", "0", "0", "17", "6,25", "42,25",
+    "Magnelli", "8,75", "11,5", "8,5", "0", "0", "8,5", "37,25",
+    "Sabbadin", "3", "0", "22", "0", "0", "10,5", "35,5",
+    "Rossi", "9,5", "1", "2", "0", "0", "5", "17,5",
+    "Zhuo", "0", "1,5", "0", "0", "9", "7,05", "17,55",
   ),
   caption: [
-    Ore per ciascun membro del gruppo, suddivise per ruolo, aggiornate al termine del periodo PB
+    Ore per ciascun membro del gruppo, suddivise per ruolo, aggiornate al termine del periodo RTB
   ],
 )
+
 
 Dall'analisi della retrospettiva del periodo RTB, il gruppo ha rilevato che l'assegnazione delle attività in base alle competenze ha portato a risultati rapidi, ma ha anche generato una disomogeneità nelle ore svolte e nella distribuzione dei ruoli, rallentando la crescita come gruppo.
 
@@ -488,7 +486,51 @@ Per affrontare queste criticità, il gruppo ha deciso di attuare le seguenti sol
 Queste misure richiederanno uno sforzo aggiuntivo nel breve periodo, ma nel medio-lungo termine dovrebbero ridurre i colli di bottiglia e migliorare la resilienza del gruppo. L'obiettivo è una maggiore omogeneità nelle competenze e una distribuzione più equilibrata dei compiti, così da prevenire ritardi futuri e aumentare l'efficienza complessiva del lavoro.
 
 
-== Rendicontazione PB
+=== Aggiornamento preventivo
+Analizzando la retrospettiva del periodo RTB il gruppo ha deciso di rivedere il preventivo iniziale senza però apportare modifiche ad ore e costi totali. \
+Infatti le modifiche apportate riguardano solo una riorganizzazione delle ore tra i vari ruoli; nella tabella seguente sono riportate le ore e i costi aggiornati a seguito della riorganizzazione e nella colonna "Variazione ore" vengono mostrate le ore aggiunte o rimosse al preventivo iniziale:
+
+#figure(
+  table(
+    columns: (1.2fr, 0.8fr, 0.8fr, 0.8fr, 1fr, 1fr),
+    inset: 8pt,
+    align: (x, y) => if (x == 0 and y > 0 and y < 7) { left } else { center + horizon },
+    fill: (x, y) => if (y == 0 or y == 7) { luma(230) },
+    table.header(
+      [*Ruolo*],
+      [*Costo/Ora*],
+      [*Ora/Ruolo*],
+      [#text(maroon)[*Variazione ore*]],
+      [#text(maroon)[*Ora/Ruolo Rimanenti*]],
+      [*Totale ruolo*],
+    ),
+
+    "Responsabile", "30", "66", [#text(maroon)[+3]], [#text(maroon)[24,5]], [#text(maroon)[1980]],
+    "Amministratore", "20", "61", [#text(maroon)[-9]], [#text(maroon)[30]], [#text(maroon)[1220]],
+    "Analista", "25", "84", [#text(maroon)[+9]], [#text(maroon)[15,25]], [#text(maroon)[2100]],
+    "Progettista", "25", "110", [#text(maroon)[-9]], [#text(maroon)[106,5]], [#text(maroon)[2750]],
+    "Programmatore", "15", "185", [#text(maroon)[+8]], [#text(maroon)[129,25]], [#text(maroon)[2775]],
+    "Verificatore", "15", "138", [#text(maroon)[-2]], [#text(maroon)[82,85]], [#text(maroon)[2070]],
+    "Totale", "", [*644 h*], [#text(maroon)[*0 h*]], [#text(maroon)[*388,35 h*]], [*€ 12.895*],
+  ),
+  caption: [
+    Ore e costi per ciascun ruolo riorganizzate al termine del periodo RTB
+  ],
+)
+La necessità di riorganizzare la distribuzione ore è stata causata da una mancanza di esperienza e competenze nella pianificazione di progetto, che ha portato a stimare in modo errato le ore necessarie per alcune delle attività svolte nel periodo di RTB.\
+Di seguito sono riportate le motivazioni che hanno guidato questa riorganizzazione:
+- per il ruolo di *Responsabile* abbiamo preferito aggiungere 3 ore che, seppur poche, ci permetteranno di avere più margine di ore lavorative in caso di necessità;
+- per il ruolo di *Amministratore* sono state rimosse 9 ore dato che buona parte della configurazione dell'ambiente di lavoro è già stata svolta; prevediamo che le ore rimanenti bastino per aggiornare i documenti associati a questo ruolo e per compiere eventuali attività di configurazione, legate allo sviluppo, che sorgeranno in futuro;
+- per il ruolo di *Analista* abbiamo ritenuto fondamentale aggiungere 9 ore per avere un buon margine in caso fosse necessario rivedere o aggiornare l'analisi dei requisiti;
+- per il ruolo di *Progettista* sono state rimosse 9 ore dato che abbiamo ritenuto le ore rimanenti eccessive per il ruolo in questione; questa sovrastima è stata causata da un errore, iniziale, di comprensione delle attività associate a questo ruolo;
+- abbiamo notato che il numero di ore impiegate per lo sviluppo del PoC è stato più alto del previsto, per questo abbiamo deciso di aggiungere 8 ore al ruolo di *Programmatore*;
+- il ruolo di *Verificatore* ha subito una riduzione di 2 ore dato che per questo ruolo non abbiamo individuato particolari necessità, quindi abbiamo ritenuto ragionevole ridurre le ore di questo ruolo per assegnarle ad altri ruoli che ne necessitano di più.
+
+
+
+
+== Retrospettiva PB
+
 Le seguenti tabelle rappresentano un resoconto delle ore svolte dal gruppo con i relativi costi e delle ore svolte da ogni membro, aggiornate alla fine del periodo PB.
 
 #figure(
@@ -549,15 +591,16 @@ Le seguenti tabelle rappresentano un resoconto delle ore svolte dal gruppo con i
   ],
 )
 
+
 Dall’analisi delle attività svolte nel periodo PB, il gruppo ha dimostrato una crescita nella capacità di pianificazione e distribuzione del lavoro, riuscendo a completare tutte le attività previste e rispettare quasi completamente le ore assegnate.
 La gestione condivisa della fase di verifica e il progressivo allineamento delle competenze tecniche hanno ridotto le disomogeneità osservate nel periodo precedente. La percentuale di completamento dei ruoli principali ha superato il 95% in quasi tutti i casi, con una copertura completa per ruoli chiave come Responsabile, Amministratore e Programmatore.
 Nonostante l’avvicinarsi della scadenza e l’intensificarsi delle attività, il team ha mantenuto un buon bilanciamento tra qualità, tempo e carico individuale, sfruttando efficacemente anche le ultime due settimane per colmare i piccoli gap residui.
 Nel complesso, il periodo PB ha evidenziato un miglioramento significativo dell’autonomia e dell’efficienza del gruppo rispetto alla fase RTB.
 
-
 === Aggiornamento preventivo
-Analizzando la retrospettiva del periodo RTB il gruppo ha deciso di rivedere il preventivo iniziale senza però apportare modifiche ad ore e costi totali. \
-Infatti le modifiche apportate riguardano solo una riorganizzazione delle ore tra i vari ruoli; nella tabella seguente sono riportate le ore e i costi aggiornati a seguito della riorganizzazione e nella colonna "Variazione ore" vengono mostrate le ore aggiunte o rimosse al preventivo iniziale:
+
+Analizzando la retrospettiva del periodo PB il gruppo ha deciso di rivedere il preventivo iniziale senza modificare il totale delle ore o dei costi. \
+L'aggiornamento ha previsto una riorganizzazione interna tra i ruoli per allineare la distribuzione alle attività effettivamente svolte fino ad ora. Nella tabella seguente vengono riportate le ore aggiornate, le variazioni rispetto al piano originario, le ore rimanenti e i costi aggiornati.
 
 #figure(
   table(
@@ -574,26 +617,30 @@ Infatti le modifiche apportate riguardano solo una riorganizzazione delle ore tr
       [*Totale ruolo*],
     ),
 
-    "Responsabile", "30", "66", [#text(maroon)[+3]], [#text(maroon)[24,5]], [#text(maroon)[1980]],
-    "Amministratore", "20", "61", [#text(maroon)[-9]], [#text(maroon)[30]], [#text(maroon)[1220]],
-    "Analista", "25", "84", [#text(maroon)[+9]], [#text(maroon)[15,25]], [#text(maroon)[2100]],
-    "Progettista", "25", "110", [#text(maroon)[-9]], [#text(maroon)[106,5]], [#text(maroon)[2750]],
-    "Programmatore", "15", "185", [#text(maroon)[+8]], [#text(maroon)[129,25]], [#text(maroon)[2775]],
-    "Verificatore", "15", "138", [#text(maroon)[-2]], [#text(maroon)[82,85]], [#text(maroon)[2070]],
-    "Totale", "", [*644 h*], [#text(maroon)[*0 h*]], [#text(maroon)[*388,35 h*]], [*€ 12.895*],
+    "Responsabile", "30", "48,4", [#text(maroon)[-7,6]], [#text(maroon)[7,6]], [#text(maroon)[1452]],
+    "Amministratore", "20", "70", [#text(maroon)[+9]], [#text(maroon)[7]], [#text(maroon)[1400]],
+    "Analista", "25", "82,75", [#text(maroon)[-6,25]], [#text(maroon)[6,25]], [#text(maroon)[2068,75]],
+    "Progettista", "25", "92,75", [#text(maroon)[-17,25]], [#text(maroon)[17,25]], [#text(maroon)[2318,75]],
+    "Programmatore", "15", "184,55", [#text(maroon)[-0,45]], [#text(maroon)[14,45]], [#text(maroon)[2768,25]],
+    "Verificatore", "15", "89,9", [#text(maroon)[-18,1]], [#text(maroon)[23,1]], [#text(maroon)[1348,5]],
+    "Totale", "", [*568,35 h*], [#text(maroon)[*–*]], [#text(maroon)[*75,65 h*]], [*€ 11.356,25*],
   ),
   caption: [
-    Ore e costi per ciascun ruolo riorganizzate al termine del periodo RTB
+    Ore e costi aggiornati a seguito della retrospettiva PB
   ],
 )
-La necessità di riorganizzare la distribuzione ore è stata causata da una mancanza di esperienza e competenze nella pianificazione di progetto, che ha portato a stimare in modo errato le ore necessarie per alcune delle attività svolte nel periodo di RTB.\
-Di seguito sono riportate le motivazioni che hanno guidato questa riorganizzazione:
-- per il ruolo di *Responsabile* abbiamo preferito aggiungere 3 ore che, seppur poche, ci permetteranno di avere più margine di ore lavorative in caso di necessità;
-- per il ruolo di *Amministratore* sono state rimosse 9 ore dato che buona parte della configurazione dell'ambiente di lavoro è già stata svolta; prevediamo che le ore rimanenti bastino per aggiornare i documenti associati a questo ruolo e per compiere eventuali attività di configurazione, legate allo sviluppo, che sorgeranno in futuro;
-- per il ruolo di *Analista* abbiamo ritenuto fondamentale aggiungere 9 ore per avere un buon margine in caso fosse necessario rivedere o aggiornare l'analisi dei requisiti;
-- per il ruolo di *Progettista* sono state rimosse 9 ore dato che abbiamo ritenuto le ore rimanenti eccessive per il ruolo in questione; questa sovrastima è stata causata da un errore, iniziale, di comprensione delle attività associate a questo ruolo;
-- abbiamo notato che il numero di ore impiegate per lo sviluppo del PoC è stato più alto del previsto, per questo abbiamo deciso di aggiungere 8 ore al ruolo di *Programmatore*;
-- il ruolo di *Verificatore* ha subito una riduzione di 2 ore dato che per questo ruolo non abbiamo individuato particolari necessità, quindi abbiamo ritenuto ragionevole ridurre le ore di questo ruolo per assegnarle ad altri ruoli che ne necessitano di più.
+
+L'aggiornamento è stato dettato da un'analisi dettagliata delle attività svolte durante gli sprint 11–15. Le principali motivazioni alla base della riorganizzazione sono:
+- il ruolo di *Responsabile* ha assorbito meno tempo del previsto, permettendo una riduzione di 7,6 ore;
+- per il ruolo di *Amministratore* è emersa una maggiore attività di aggiornamento documentale e supporto, che ha giustificato l’aggiunta di 9 ore;
+- il ruolo di *Analista* è stato rifinito, riducendo lievemente le ore grazie a una fase di stabilizzazione dei requisiti;
+- *Progettista* ha richiesto meno ore rispetto alla stima iniziale, comportando un rientro di 17,25 ore;
+- il ruolo di *Programmatore* è stato confermato quasi perfettamente, con una lieve correzione di -0,45 ore;
+- per *Verificatore* è stato deciso un ridimensionamento coerente con le esigenze residue, restituendo 18,1 ore.
+
+
+
+
 
 = Pianificazione del lavoro
 La *pianificazione del progetto* si basa su un modello iterativo e incrementale, con lo scopo di garantire un monitoraggio continuo del progresso e una gestione efficace delle attività. Abbiamo deciso di suddividere il lavoro in #gloss[sprint], ognuno dei quali inizia con un incontro per stabilire obiettivi e analizzare eventuali difficoltà, e si conclude con una retrospettiva sul lavoro svolto. Questo approccio ci ha permesso di adattarci rapidamente alle necessità del progetto, mantenendo una visione chiara delle priorità e dei risultati attesi.
@@ -1151,9 +1198,9 @@ Sono inoltre state definite e scritte le ultime sezioni delle *Norme di Progetto
 *Intervallo temporale*: 28/04/2025 - 04/05/2025
 
 #pseudoheading[*Retrospettiva*]
-Durante lo *Sprint 14*, il gruppo ha proseguito il completamento delle ultime funzionalità software lato frontend e backend, concentrandosi sull'integrazione dei moduli e sulla rifinitura dell’interfaccia.
-Parallelamente è continuato l’aggiornamento dei documenti principali del progetto, con particolare attenzione alla retrospettiva, agli indici e alle sezioni di sviluppo.
-Sono state completate alcune task legate alla verifica grafica, alla valutazione delle risposte del bot e al testing generale del sistema.
+Durante lo *Sprint 14*, il gruppo ha proseguito il completamento delle ultime funzionalità software lato frontend e backend, concentrandosi sull'integrazione dei moduli e sulla rifinitura dell’interfaccia.  
+Parallelamente è continuato l’aggiornamento dei documenti principali del progetto, con particolare attenzione alla retrospettiva, agli indici e alle sezioni di sviluppo.  
+Sono state completate alcune task legate alla verifica grafica, alla valutazione delle risposte del bot e al testing generale del sistema. 
 
 #pseudoheading[*Attività svolte*]
 - *Aggiornamento documentazione*: Integrazione sezione sviluppo in NdP, aggiornamento PdP, PdQ e AdR.
@@ -1182,9 +1229,7 @@ Sono state completate alcune task legate alla verifica grafica, alla valutazione
   columns: (1fr, 1fr),
   inset: 8pt,
   align: (x, y) => if y > 0 { left } else { center + horizon },
-  fill: (x, y) => if y == 0 { luma(180) } else if (y == 2 or y == 4 or y == 6 or y == 8 or y == 10 or y == 12) {
-    luma(230)
-  },
+  fill: (x, y) => if y == 0 { luma(180) } else if (y == 2 or y == 4 or y == 6 or y == 8 or y == 10 or y == 12) { luma(230) },
   table.header(table.cell(colspan: 2)[*Ore rimanenti per persona*]),
   [*Membro*], [*Ore mancanti*],
   [Ribon], [0.5],
@@ -1201,10 +1246,10 @@ Sono state completate alcune task legate alla verifica grafica, alla valutazione
 *Intervallo temporale*: 29/04/2025 - 19/05/2025
 
 #pseudoheading[*Retrospettiva*]
-Durante lo *Sprint 15*, il gruppo ha concluso l’ultima fase di sviluppo prima della consegna, portando a termine numerose attività sia dal lato documentale che software.
-Dal punto di vista tecnico sono state completate la gestione dello storico chat, l’integrazione delle statistiche e l’aggiunta di funzionalità mancanti, come la gestione delle preferenze dell’admin, la richiesta della password per modifiche sensibili e la visualizzazione delle FAQ nel contesto conversazionale.
-Parallelamente è stato migliorato il testing e aggiornato il Piano di Qualifica con dettagli relativi alla copertura, alle suite e ai risultati.
-Sul fronte documentale si è completata la stesura del *Piano di Progetto*, della *Specifica Tecnica* e del *Manuale Utente*, mentre le attività di verifica sono state suddivise equamente.
+Durante lo *Sprint 15*, il gruppo ha concluso l’ultima fase di sviluppo prima della consegna, portando a termine numerose attività sia dal lato documentale che software.  
+Dal punto di vista tecnico sono state completate la gestione dello storico chat, l’integrazione delle statistiche e l’aggiunta di funzionalità mancanti, come la gestione delle preferenze dell’admin, la richiesta della password per modifiche sensibili e la visualizzazione delle FAQ nel contesto conversazionale.  
+Parallelamente è stato migliorato il testing e aggiornato il Piano di Qualifica con dettagli relativi alla copertura, alle suite e ai risultati.  
+Sul fronte documentale si è completata la stesura del *Piano di Progetto*, della *Specifica Tecnica* e del *Manuale Utente*, mentre le attività di verifica sono state suddivise equamente.  
 Lo sprint è stato ben organizzato, con un buon bilanciamento tra il carico tecnico e la chiusura dei documenti, dimostrando una maturità crescente nella gestione del progetto.
 Tutti i membri del gruppo hanno raggiunto le ore minime richieste per il progetto.
 
