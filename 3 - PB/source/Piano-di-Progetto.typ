@@ -28,18 +28,22 @@
   sommario: [Piano di Progetto],
 
   versioni: (
-	"2.0.1",
-	"19/05/2025",
-	"Luca Rossi",
-	"Correzione errori nella sezione PB",
-	"2.0.0",
-	"17/05/2025",
-	"Luca Rossi",
-	"Aggiunto sprint 15 e rendicontazione del periodo pb",
-	"1.6.0",
+    "2.0.1",
+    "19/05/2025",
+    "Luca Rossi",
+    "Correzione errori nella sezione PB",
+    "Luca Ribon",
+    "2.0.0",
+    "17/05/2025",
+    "Luca Rossi",
+    "Aggiunto sprint 15 e
+rendicontazione del periodo pb",
+    "Gabriele Magnelli",
+    "1.6.0",
     "09/05/2025",
     "Luca Rossi",
     "Aggiunto sprint 14",
+    "Luca Ribon",
     "1.5.0",
     "05/05/2025",
     "Luca Rossi",
@@ -49,6 +53,7 @@
     "25/04/2025",
     "Francesco Fragonas",
     "Aggiunto sprint 12",
+    "Luca Ribon",
     "1.3.0",
     "18/04/2025",
     "Luca Rossi",
@@ -237,7 +242,7 @@ Secondo lo standard ISO/IEC 31000:2009, la gestione dei rischi si articola in ci
 
   [*Aggiornamento*],
   [Sprint 5-6: festività natalizie e sessione invernale hanno rallentato alcune task. Pianificazione flessibile riduce l'impatto su scadenze. \
-   Sprint 12-13: fine sessione e rientro in periodo accademico regolare hanno migliorato la disponibilità del team.],
+    Sprint 12-13: fine sessione e rientro in periodo accademico regolare hanno migliorato la disponibilità del team.],
 )
 
 #table(
@@ -259,7 +264,7 @@ Secondo lo standard ISO/IEC 31000:2009, la gestione dei rischi si articola in ci
 
   [*Aggiornamento*],
   [Sprint 9: sono emersi equivoci sulle correzioni del prof. Cardin; risolti con un incontro dedicato. Il rischio rimane attivo in PB se arrivano nuove istruzioni. \
-   Sprint 13: chiarito un equivoco sulle modalità di aggiornamento del Piano di Progetto durante un incontro dedicato. Il rischio rimane medio.],
+    Sprint 13: chiarito un equivoco sulle modalità di aggiornamento del Piano di Progetto durante un incontro dedicato. Il rischio rimane medio.],
 )
 
 
@@ -348,8 +353,7 @@ Secondo lo standard ISO/IEC 31000:2009, la gestione dei rischi si articola in ci
 
   [*Aggiornamento*],
   [Negli Sprint 4, 8 e 10 si è definita o aggiornata l'architettura e svolto un PoC di integrazione. Alcune difficoltà sono emerse nel collegare i moduli (LLM, DB, frontend), ma gestite con successivi refactoring. \
-  Sprint 11-13: aggiunta di nuove funzionalità (statistiche, storico, gestione preferenze) ha richiesto revisioni parziali ma non critiche all'architettura.],
-  
+    Sprint 11-13: aggiunta di nuove funzionalità (statistiche, storico, gestione preferenze) ha richiesto revisioni parziali ma non critiche all'architettura.],
 )
 
 = Preventivo
@@ -1147,9 +1151,9 @@ Sono inoltre state definite e scritte le ultime sezioni delle *Norme di Progetto
 *Intervallo temporale*: 28/04/2025 - 04/05/2025
 
 #pseudoheading[*Retrospettiva*]
-Durante lo *Sprint 14*, il gruppo ha proseguito il completamento delle ultime funzionalità software lato frontend e backend, concentrandosi sull'integrazione dei moduli e sulla rifinitura dell’interfaccia.  
-Parallelamente è continuato l’aggiornamento dei documenti principali del progetto, con particolare attenzione alla retrospettiva, agli indici e alle sezioni di sviluppo.  
-Sono state completate alcune task legate alla verifica grafica, alla valutazione delle risposte del bot e al testing generale del sistema. 
+Durante lo *Sprint 14*, il gruppo ha proseguito il completamento delle ultime funzionalità software lato frontend e backend, concentrandosi sull'integrazione dei moduli e sulla rifinitura dell’interfaccia.
+Parallelamente è continuato l’aggiornamento dei documenti principali del progetto, con particolare attenzione alla retrospettiva, agli indici e alle sezioni di sviluppo.
+Sono state completate alcune task legate alla verifica grafica, alla valutazione delle risposte del bot e al testing generale del sistema.
 
 #pseudoheading[*Attività svolte*]
 - *Aggiornamento documentazione*: Integrazione sezione sviluppo in NdP, aggiornamento PdP, PdQ e AdR.
@@ -1178,7 +1182,9 @@ Sono state completate alcune task legate alla verifica grafica, alla valutazione
   columns: (1fr, 1fr),
   inset: 8pt,
   align: (x, y) => if y > 0 { left } else { center + horizon },
-  fill: (x, y) => if y == 0 { luma(180) } else if (y == 2 or y == 4 or y == 6 or y == 8 or y == 10 or y == 12) { luma(230) },
+  fill: (x, y) => if y == 0 { luma(180) } else if (y == 2 or y == 4 or y == 6 or y == 8 or y == 10 or y == 12) {
+    luma(230)
+  },
   table.header(table.cell(colspan: 2)[*Ore rimanenti per persona*]),
   [*Membro*], [*Ore mancanti*],
   [Ribon], [0.5],
@@ -1195,10 +1201,10 @@ Sono state completate alcune task legate alla verifica grafica, alla valutazione
 *Intervallo temporale*: 29/04/2025 - 19/05/2025
 
 #pseudoheading[*Retrospettiva*]
-Durante lo *Sprint 15*, il gruppo ha concluso l’ultima fase di sviluppo prima della consegna, portando a termine numerose attività sia dal lato documentale che software.  
-Dal punto di vista tecnico sono state completate la gestione dello storico chat, l’integrazione delle statistiche e l’aggiunta di funzionalità mancanti, come la gestione delle preferenze dell’admin, la richiesta della password per modifiche sensibili e la visualizzazione delle FAQ nel contesto conversazionale.  
-Parallelamente è stato migliorato il testing e aggiornato il Piano di Qualifica con dettagli relativi alla copertura, alle suite e ai risultati.  
-Sul fronte documentale si è completata la stesura del *Piano di Progetto*, della *Specifica Tecnica* e del *Manuale Utente*, mentre le attività di verifica sono state suddivise equamente.  
+Durante lo *Sprint 15*, il gruppo ha concluso l’ultima fase di sviluppo prima della consegna, portando a termine numerose attività sia dal lato documentale che software.
+Dal punto di vista tecnico sono state completate la gestione dello storico chat, l’integrazione delle statistiche e l’aggiunta di funzionalità mancanti, come la gestione delle preferenze dell’admin, la richiesta della password per modifiche sensibili e la visualizzazione delle FAQ nel contesto conversazionale.
+Parallelamente è stato migliorato il testing e aggiornato il Piano di Qualifica con dettagli relativi alla copertura, alle suite e ai risultati.
+Sul fronte documentale si è completata la stesura del *Piano di Progetto*, della *Specifica Tecnica* e del *Manuale Utente*, mentre le attività di verifica sono state suddivise equamente.
 Lo sprint è stato ben organizzato, con un buon bilanciamento tra il carico tecnico e la chiusura dei documenti, dimostrando una maturità crescente nella gestione del progetto.
 Tutti i membri del gruppo hanno raggiunto le ore minime richieste per il progetto.
 
