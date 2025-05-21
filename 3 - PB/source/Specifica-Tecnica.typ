@@ -433,6 +433,10 @@ I repository sono responsabili dell'interazione con il database. Gestiscono le o
 - `setting_repository.py`;
 - `user_repository.py`;
 
+===== Service
+I service sono delle classi che offrono funzionalità di business logic, come la gestione dell'autenticazione e l'invio di email. I service sono:
+- `auth_service.py`;
+- `email_service.py`;
 
 ==== Design pattern utilizzati
 
@@ -446,12 +450,6 @@ Il pattern _singleton_ è stato utilizzato per garantire che ci sia una sola ist
 
 ===== Dependency Injection
 Il pattern *_dependency injection_* è un pattern strutturale che consente di includere le dipendenze necessarie in una classe, invece che crearle all'interno della classe stessa. Questo pattern permette di ridurre l'accoppiamento tra le classi e di rendere il codice più modulare.
-
-
-===== Service
-I service sono delle classi che offrono funzionalità di business logic, come la gestione dell'autenticazione e l'invio di email. I service sono:
-- `auth_service.py`;
-- `email_service.py`;
 
 ==== Diagramma delle classi
 #figure(image("../imgs/diagramma-database-api.png", width: 118%), caption: "Diagramma delle classi di Database-API")
