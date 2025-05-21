@@ -434,8 +434,7 @@ I repository sono responsabili dell'interazione con il database. Gestiscono le o
 - `user_repository.py`;
 
 ===== Service
-I service sono delle classi che offrono funzionalità di business logic, come la gestione dell'autenticazione e l'invio di email. I service sono:
-- `auth_service.py`;
+I service sono delle classi che offrono funzionalità di business logic, come l'invio di email. Il service implementato è:
 - `email_service.py`;
 
 ==== Design pattern utilizzati
