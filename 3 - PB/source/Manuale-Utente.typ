@@ -22,6 +22,11 @@
   ),
   sommario: [Manuale utente],
   versioni: (
+    "1.0.0",
+    "16/05/2025",
+    "Francesco Fragonas",
+    "Sistemati riferimenti",
+    "Luca Ribon",
     "0.4.2",
     "14/05/2025",
     "Luca Ribon",
@@ -90,19 +95,19 @@ e nella seguente pagina web: #link("https://codehex16.github.io/glossario").
 == Riferimenti
 
 === Riferimenti normativi
-- Capitolato C7 - Assistente Virtuale Ergon:\ #link("https://www.math.unipd.it/~tullio/IS-1/2024/Progetto/C7.pdf")\ _(ultima consultazione: 12-05-2025)_; //da tenere aggiornato
+- Capitolato C7 - Assistente Virtuale Ergon:\ #link("https://www.math.unipd.it/~tullio/IS-1/2024/Progetto/C7.pdf")\ _(ultima consultazione: 16-05-2025)_; //da tenere aggiornato
 
-- Regolamento del progetto didattico:\ #link("https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/PD1.pdf")\\ _(ultima consultazione: 12-05-2025)_
+- Regolamento del progetto didattico:\ #link("https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/PD1.pdf")\ _(ultima consultazione: 16-05-2025)_
 
-- Norme di progetto:\ #link("https://codehex16.github.io/docs/2%20-%20RTB/Norme-di-Progetto.pdf")\ _(versione 2.0.0)_;
+- Norme di progetto:\ #link("https://codehex16.github.io/docs/3%20-%20PB/Norme-di-Progetto.pdf")\ _(versione 1.5.0)_;
 
 === Riferimenti informativi
-- Sito del gruppo CodeHex16:\ #link("https://codehex16.github.io/")\ _(ultima consultazione: 12-05-2025)_;
+- Sito del gruppo CodeHex16:\ #link("https://codehex16.github.io/")\ _(ultima consultazione: 16-05-2025)_;
 //da tenere aggiornato
 
 - Glossario:
-  - Documento: #link("https://codehex16.github.io/docs/glossario/glossario.pdf") _(versione 1.0.0)_;
-  - Pagina web: #link("https://codehex16.github.io/glossario.html") _(ultima consultazione 12-05-2025)_;
+  - Documento: #link("https://codehex16.github.io/docs/glossario/glossario.pdf") _(versione 0.7.0)_;
+  - Pagina web: #link("https://codehex16.github.io/glossario.html") _(ultima consultazione 16-05-2025)_;
 
 = Requisiti consigliati
 
@@ -206,7 +211,7 @@ Per il microservizio #strong[Database-API] sono necessari:
 - ADMIN_EMAIL: email dell'amministratore;
 - ADMIN_PASSWORD: password dell'amministratore, che verrà utilizzata anche come password di accesso per Mongo Express;
 
-Per l'invio delle email sono necessari:
+Per il servizio di invio delle email sono configurabili:
 - MAIL_ADDRESS: indirizzo email del mittente;
 - MAIL_PASSWORD: password dell'email del mittente;
 - MAIL_USERNAME: nome utente dell'email del mittente;
