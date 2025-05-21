@@ -166,7 +166,6 @@ L'unico requisito fondamentale è la presenza di un browser web aggiornato che s
 L'utilizzo di browser obsoleti o non aggiornati potrebbe compromettere la corretta visualizzazione e il funzionamento dell'applicativo.
 
 
-// TODO: probabilmente l'installazione non serve perché è gestita dall'amministratore
 = Installazione
 Questa sezione descrive tutti i passaggi necessari per l'installazione dell'applicativo a partire dal #gloss[codice sorgente] presente nella repository.
 

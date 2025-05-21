@@ -1246,7 +1246,7 @@ con:
     "UC20.1 - Riunioni interne",
     // scrittura messaggio tramite FAQ
     "R-15-F-O",
-    "Sia cliente che fornitore devono avere la possibilità di scrivere messaggi tramite FAQ preimpostate dal fornitore; se possibile il chatbot suggerirà delle FAQ utili in base al contesto",
+    "Sia cliente che fornitore devono avere la possibilità di scrivere messaggi tramite FAQ preimpostate dal fornitore",
     "UC21 - Capitolato, Riunioni esterne",
     // invio messaggio
     "R-16-F-O",
@@ -1270,7 +1270,7 @@ con:
     "UC26, UC26.1, UC26.2 - Riunioni interne",
     // modifica durata storico chat
     "R-21-F-O",
-    "Il fornitore deve avere la possibilità di modificare la durata dello storico delle chat, ovvero il periodo di tempo massimo per cui vengono memorizzati e tenuti come contesto i messaggi per ogni chat",
+    "Il fornitore deve avere la possibilità di modificare il numero massimo di messaggi visualizzati all'interno delle chat",
     "UC27 - Riunioni esterne",
     // caricare logo
     "R-22-F-D",

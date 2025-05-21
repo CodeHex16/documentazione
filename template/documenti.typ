@@ -16,7 +16,7 @@
   contenuto,
 ) = {
   set text(font: "Noto Sans")
-  set text(size: 12pt)
+  set text(size: 11pt)
 	set text(lang: "it")
   set par(justify: true, linebreaks: "optimized",first-line-indent:0em)
   show link : set text(font:"Jetbrains Mono");
@@ -142,14 +142,24 @@
   set page(numbering: "1")
   set align(left)
   set heading(numbering: "1.")
-  show heading.where(level: 1): it => {
+  show heading.where(level: 1): it => {   
     pagebreak(weak: true)
-    align(center, it)
+    align(center)[
+      #text(size: 20pt)[#it]
+    ]
   }
   show heading : it => [
     #it
     #v(1em)
   ] 
+
+  show heading.where(level: 2): set text(size: 18pt)
+  show heading.where(level: 3): set text(size: 16pt)
+  show heading.where(level: 4): set text(size: 14pt)
+  show heading.where(level: 5): set text(size: 13pt)
+  show heading.where(level: 6): set text(size: 12pt)
+  show heading.where(level: 7): set text(size: 11pt)
+
   
   counter(page).update(1)
   contenuto
