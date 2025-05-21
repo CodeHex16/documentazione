@@ -73,14 +73,14 @@ Il progetto consiste nella realizzazione di un *#gloss[chatbot]* basato su model
 
 Il chatbot si integra con un'interfaccia dedicata al #gloss[fornitore], che permette di:
 
-- Gestire clienti, faq e documenti contenenti le informazioni di riferimento utilizzate dal modello linguistico per generare risposte accurate e personalizzate.
+- Gestire clienti, #gloss[faq] e documenti contenenti le informazioni di riferimento utilizzate dal modello linguistico per generare risposte accurate e personalizzate.
 - Personalizzare graficamente la piattaforma tramite l'inserimento del logo aziendale e la selezione di una palette colori.
 
-Per garantire la massima compatibilità e facilità d'uso, il chatbot è accessibile tramite un'#gloss[interfaccia web], che può essere utilizzata su qualsiasi dispositivo su cui è installato un browser. I linguaggi principali usati nella #gloss[webapp] sono #gloss[HTML], #gloss[CSS], #gloss[JavaScript], TypeScript e
+Per garantire la massima compatibilità e facilità d'uso, il chatbot è accessibile tramite un'#gloss[interfaccia web], che può essere utilizzata su qualsiasi dispositivo su cui è installato un browser. I linguaggi principali usati nella #gloss[webapp] sono #gloss[HTML], #gloss[CSS], #gloss[JavaScript], #gloss[TypeScript] e
 #gloss[Python], linguaggi ampiamente supportati da molti dispositivi.
 
 == Scopo del documento
-Lo scopo del documento è fornire una panoramica dettagliata delle scelte progettuali e tecniche adottate per lo sviluppo del sistema. Qui verranno forniti i diagrammi UML delle classi e le scelte architetturali, oltre a una descrizione delle tecnologie utilizzate e delle #gloss[API] implementate.// Indicare come si colloca nel contesto del progetto.
+Lo scopo del documento è fornire una panoramica dettagliata delle scelte progettuali e tecniche adottate per lo sviluppo del sistema. Qui verranno forniti i diagrammi #gloss[UML] delle classi e le scelte architetturali, oltre a una descrizione delle tecnologie utilizzate e delle #gloss[API] implementate.// Indicare come si colloca nel contesto del progetto.
 
 == Glossario
 Per facilitare la comprensione di questo documento, viene fornito un glossario che chiarisce il significato dei termini specifici utilizzati nel contesto del progetto. Ogni termine di glossario è contrassegnato con un asterisco "\*" in apice e collegato direttamente alla pagina web del glossario, permettendo così di accedere immediatamente alla definizione completa del termine. Le definizioni sono disponibili nel documento: #link("https://github.com/CodeHex16/documentazione/tree/main/glossario/glossario.pdf")[Glossario.pdf];\
@@ -352,13 +352,13 @@ Il sistema adotta un'*architettura a microservizi*, composta da un frontend (_Su
 
 I motivi che ci hanno portato a scegliere questa architettura sono:
 - *Modularità*: ogni microservizio è responsabile di una funzionalità specifica, facilitando la manutenzione e l'evoluzione del sistema; infatti eventuali sviluppi futuri considerabili dal proponente, come un'applicazione mobile nativa, vengono semplificati dalla struttura a microservizi.
-- *Diversità delle tecnologie*: ogni microservizio può essere sviluppato utilizzando tecnologie diverse. Infatti, utilizzando SvelteKit per il frontend siamo riusciti a separare il codice Svelte/TypeScript da quello Python utilizzato dai servizi backend.
+- *Diversità delle tecnologie*: ogni microservizio può essere sviluppato utilizzando tecnologie diverse. Infatti, utilizzando SvelteKit per il frontend siamo riusciti a separare il codice Svelte/TypeScript da quello Python utilizzato dai servizi #gloss[backend].
 - *Principio di singola responsabilità*: ogni microservizio ha responsabilità e scopo ben definiti, facilitando la comprensione e la gestione del codice.
 
 == Flusso del sistema
 #figure(image("../imgs/flusso-dati.png", width: 85%), caption: "Flusso del sistema")
 
-- *Invio contesto*: tramite il client Suppl-AI l'utente può inviare documenti e FAQ al chatbot che verranno memorizzati nel database vettoriale.
+- *Invio contesto*: tramite il client #gloss[Suppl-AI] l'utente può inviare documenti e FAQ al chatbot che verranno memorizzati nel database vettoriale.
 
 - *Interazione con il chatbot*:
   - *Richiesta generazione risposta*: l'utente invia una domanda al chatbot tramite il client _Suppl-AI_; la domanda viene inviata, insieme allo storico della chat ad _LLM-API_.

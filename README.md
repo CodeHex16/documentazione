@@ -34,6 +34,8 @@ documentazione/
 |        └── 📄 *.pdf
 ├── 📁 3 - PB
 |  ├── 📁 imgs
+|  |  ├── 📁 database-api
+|  |  ├── 📁 llm-api
 |  |  └── 📁 screen
 |  ├── 📁 presentazioni
 |  ├── 📁 source
