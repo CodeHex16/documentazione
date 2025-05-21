@@ -36,7 +36,7 @@ dove è possibile trovare i seguenti documenti:
 - #link("https://codehex16.github.io/docs/3%20-%20PB/Piano-di-Qualifica.pdf")[#underline("Piano di Qualifica")];
 - #link("https://codehex16.github.io/docs/3%20-%20PB/Norme-di-Progetto.pdf")[#underline("Norme di Progetto")];
 - #link("https://codehex16.github.io/docs/glossario/glossario.pdf")[#underline("Glossario")] (consultabile anche dal #link("https://codehex16.github.io/glossario.html")[#underline("sito web")] del gruppo);
-Inoltre, viene fornito il codice sorgente del *Minimum Viable Product (MVP)*, presentato e accettato dall'azienda proponente in data 21/05/2025 come descritto nel verbale esterno #link("")[#underline("LINK VERBALE ESTERNO DA INSERIRE !!!")] \
+Inoltre, viene fornito il codice sorgente del *Minimum Viable Product (MVP)*, presentato e accettato dall'azienda proponente in data 21/05/2025 come descritto nel verbale esterno #link("https://codehex16.github.io/docs/3%20-%20PB/verbali/esterni/2025-05-21_Presentazione-MVP_firmato.pdf")[#underline("Presentazione MVP")] \
 #align(center, link("https://github.com/CodeHex16/MVP"))
 
 Il gruppo infine comunica che il costo totale per la realizzazione del progetto è sceso a *€12.657* rispetto a €12.895 dichiarati in fase di candidatura e che la data di consegna è stata posticipata dal 28/04/2025 al *21/05/2025*. \
