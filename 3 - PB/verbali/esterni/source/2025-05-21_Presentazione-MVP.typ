@@ -45,5 +45,5 @@ Successivamente è stata data un'introduzione riguardo al contenuto del *manuale
 Il referente aziendale ha espresso soddisfazione per il lavoro svolto e ha confermato che il prodotto è conforme alle aspettative; con questo verbale si attesta quindi che il *Minimum Viable Product* è stato presentato e *approvato dal referente aziendale*.
 
 Si procederà quindi con:
-- presentazione della PB al prof. Cardin;
+- presentazione della #gloss[PB] al prof. Cardin;
 - presentazione della PB al prof. Vardanega;
